@@ -10,7 +10,7 @@
     "server",
     "server-side"
   ],
-  "author": "Michael Hart <michael.hart.au@gmail.com>",
+  "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
     "css-loader": "^0.9.0",
@@ -18,11 +18,10 @@
     "jsx-loader": "^0.12.0",
     "html-loader": "0.2.3",
     "file-loader": "^0.8.1",
+    "json-loader": "^0.5.1",
     "webpack": "^1.4.5",
-    "react-style-webpack-plugin": "git+https://github.com/js-next/react-style-webpack-plugin.git",
-    "extract-text-webpack-plugin": "git+https://github.com/SanderSpies/extract-text-webpack-plugin.git",
     "react": "^0.12.0",
     "react-style": "^0.3.0",
-    "node-jsx":"^0.12.4"
+    "clean": "~4.0.1"
   }
 }

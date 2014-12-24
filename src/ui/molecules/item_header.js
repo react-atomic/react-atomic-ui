@@ -1,15 +1,15 @@
 var React = require('react'),
-    AtomI = require('../atoms/i'),
+    AtomDiv = require('../atoms/div'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
   mixins: [Classable],
 
   render: function() {
-    var { name, ...other } = this.props,
-    classes = this.getClasses('icon '+name);
+    var { ...other } = this.props,
+    classes = this.getClasses('header');
     return (
-      <AtomI {...other} className={classes}></AtomI>
+      <AtomDiv {...other} className={classes}>{this.props.children}</AtomDiv>
     );
   }
 

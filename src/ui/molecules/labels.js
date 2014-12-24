@@ -1,6 +1,7 @@
 var React = require('react'),
     AtomDiv = require('../atoms/div'),
-    Item = require('./item'),
+    Label = require('../molecules/label'),
+    Icon = require('../molecules/icon'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
@@ -8,19 +9,24 @@ module.exports = React.createClass({
 
   render: function() {
     var { ...other } = this.props,
-    classes = this.getClasses('ui items');
+    classes = this.getClasses('ui segment');
     return (
       <AtomDiv {...other} className={classes}>
-         {this.getItems()}
+        {this.getLabels()}
       </AtomDiv>
     );
   },
-  getItems: function(){
-    var children=[],name;
+  getLabels: function(){
+    var children=[],name,icon;
     for (var i=0; i < this.props.list.length; i++) {
-        name = this.props.list[i];
+        item = this.props.list[i];
+        if(item.icon){
+            icon= <Icon name="global" />;
+        }else{
+            icon='';
+        }
         itemComponent = (
-            <Item name={name} />
+            <Label>{icon}{item.name}</Label>
         );
         children.push(itemComponent);
     }
