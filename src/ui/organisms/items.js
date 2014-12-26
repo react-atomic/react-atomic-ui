@@ -20,7 +20,7 @@ module.exports = React.createClass({
     for (var i=0; i < this.props.list.length; i++) {
         name = this.props.list[i];
         itemComponent = (
-            <Item name={name} />
+            <Item key={i} name={name} />
         );
         children.push(itemComponent);
     }

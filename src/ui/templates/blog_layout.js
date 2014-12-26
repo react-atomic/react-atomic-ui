@@ -1,7 +1,7 @@
 var React = require('react'),
     AtomDiv = require('../atoms/div'),
-    Title = require('../molecules/blog_title'),
-    SubTitle = require('../molecules/blog_subtitle'),
+    Title = require('../organisms/blog_title'),
+    SubTitle = require('../organisms/blog_subtitle'),
     Items = require('../organisms/items'),
     Profile = require('../organisms/profile'),
     Classable = require('../mixins/classable.js');

@@ -26,7 +26,7 @@ module.exports = React.createClass({
             icon='';
         }
         itemComponent = (
-            <Label>{icon}{item.name}</Label>
+            <Label key={i}>{icon}{item.name}</Label>
         );
         children.push(itemComponent);
     }
