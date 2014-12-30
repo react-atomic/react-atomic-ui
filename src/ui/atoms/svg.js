@@ -1,13 +1,14 @@
 var React = require('react');
 
-var Span = React.createClass({
+var SVG = React.createClass({
 
   render: function() {
     var { ...other } = this.props;
     return (
-      <span {...other} >{this.props.children}</span>
+      <svg {...other}>{this.props.children}</svg>
     );
   }
 
 });
-module.exports = Span;
+
+module.exports = SVG;

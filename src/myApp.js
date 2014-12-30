@@ -1,7 +1,7 @@
 var React = require('react'),
     DOM = React.DOM,
     div = DOM.div, button = DOM.button, ul = DOM.ul, li = DOM.li
-var Layout = require('./ui/templates/blog_layout');
+var App = require('./doc/index');
 
 
 
@@ -35,7 +35,7 @@ var DocumentationApplicationView = React.createClass({
   // when everything has loaded
   render: function() {
     return (
-        <Layout item="../organisms/items" />
+        <App />
     )
   },
 });

@@ -1,13 +1,14 @@
 var React = require('react');
 
-var Span = React.createClass({
+var Nav = React.createClass({
 
   render: function() {
     var { ...other } = this.props;
     return (
-      <span {...other} >{this.props.children}</span>
+      <nav {...other}>{this.props.children}</nav>
     );
   }
 
 });
-module.exports = Span;
+
+module.exports = Nav;

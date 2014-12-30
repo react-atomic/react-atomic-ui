@@ -1,5 +1,5 @@
 var React = require('react'),
-    SemanticUI = require('../molecules/semantic_ui'),
+    Label = require('../molecules/label'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
@@ -7,9 +7,9 @@ module.exports = React.createClass({
 
   render: function() {
     var { ...other } = this.props,
-    classes = this.getClasses('button');
+    classes = this.getClasses('ribbon');
     return (
-      <SemanticUI {...other} className={classes}>{this.props.children}</SemanticUI>
+      <Label {...other} className={classes}>{this.props.children}</Label>
     );
   }
 

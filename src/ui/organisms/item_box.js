@@ -1,7 +1,7 @@
 var React = require('react'),
     ReactStyle = require('react-style'),
-    AtomDiv = require('../atoms/div'),
     AtomSpan = require('../atoms/span'),
+    Item = require('../molecules/item'),
     CircularImg = require('../molecules/circular_img'),
     Button = require('../molecules/button'),
     Labels = require('../molecules/labels'),
@@ -17,13 +17,9 @@ module.exports = React.createClass({
 
   render: function() {
     var { name,...other } = this.props,
-    classes = this.getClasses('item');
-    var styles = ReactStyle({
-      color: 'red',
-        backgroundColor: 'white'
-        });
+    classes = this.getClasses('');
     return (
-      <AtomDiv {...other} className={classes} style={{backgroundColor:'#fff',border:'1px solid #e7e7e7',padding:'40px 30px 35px 30px'}}>
+      <Item {...other} className={classes} style={{backgroundColor:'#fff',border:'1px solid #e7e7e7',padding:'40px 30px 35px 30px'}}>
         <Info style={{textAlign:'center'}}> 
             <CircularImg src="http://semantic-ui.com/images/wireframe/image.png" />
             <Button style={{marginTop:'10px'}}>Hire {name}</Button>
@@ -40,7 +36,7 @@ module.exports = React.createClass({
             </Description>
             <Labels className="extra" list={[{name:'IMAX'},{name:'Additional Languages',icon:'global'}]} /> 
         </Content>
-      </AtomDiv>
+      </Item>
     );
   }
 

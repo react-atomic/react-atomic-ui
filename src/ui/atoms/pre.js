@@ -1,13 +1,13 @@
 var React = require('react');
 
-var Span = React.createClass({
+module.exports = React.createClass({
 
   render: function() {
     var { ...other } = this.props;
     return (
-      <span {...other} >{this.props.children}</span>
+      <pre {...other} >{this.props.children}</pre>
     );
   }
 
 });
-module.exports = Span;
+

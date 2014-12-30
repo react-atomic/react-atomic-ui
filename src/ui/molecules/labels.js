@@ -9,7 +9,7 @@ module.exports = React.createClass({
 
   render: function() {
     var { ...other } = this.props,
-    classes = this.getClasses('ui segment');
+    classes = this.getClasses('');
     return (
       <AtomDiv {...other} className={classes}>
         {this.getLabels()}

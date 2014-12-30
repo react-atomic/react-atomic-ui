@@ -1,9 +1,7 @@
 'use strict';
 
-
-
 module.exports = {
-	devtool: 'sourcemap',
+//	devtool: 'sourcemap',
 	entry: "./src/entry.js",
 	output: {
 		filename: "bundle.js",

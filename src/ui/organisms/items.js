@@ -1,6 +1,6 @@
 var React = require('react'),
     AtomDiv = require('../atoms/div'),
-    Item = require('./item'),
+    Item = require('./item_box'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
