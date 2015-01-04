@@ -18,8 +18,8 @@ module.exports = React.createClass({
                 <DivingHeader style={{marginBottom:'10px'}}>
                     {title}
                 </DivingHeader>
-                <Ribbon>Example</Ribbon>
-                <AtomDiv>
+                <Ribbon style={{marginBottom:'10px'}}>Example</Ribbon>
+                <AtomDiv style={{marginBottom:'10px'}}>
                         {this.props.children}
                 </AtomDiv>
                 <Ribbon>Source Code</Ribbon>

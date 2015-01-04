@@ -1,11 +1,8 @@
-var React = require('react/addons'),
-  classSet = React.addons.classSet;
+require(['react/addons'],function(React){
+  var classSet = React.addons.classSet;
 
 module.exports = {
 
-  propTypes: {
-    className: React.PropTypes.string
-  },
 
   getClasses: function(initialClasses, additionalClassObj) {
     var classString = '';
@@ -40,3 +37,4 @@ module.exports = {
   }
 
 }
+});

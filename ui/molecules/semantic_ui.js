@@ -8,13 +8,20 @@ var React = require('react'),
 
 var  Semantic = React.createClass({
   mixins: [Classable],
-
+  getDefaultProps: function() {
+    return ({
+        ui:true
+    });
+  },
   render: function() {
     var SemanticUI;
     
-    var { ...other } = this.props,
+    var { ui, ...other } = this.props,
         SemanticUI,
-        classes = ['ui'];
+        classes = [];
+    if(ui){
+        classes.push('ui');
+    }
     switch (this.props.atom){
         case 'h2':
             SemanticUI = AtomH2;

@@ -1,16 +1,39 @@
 var React = require('react'),
+    ReactStyle = require('react-style'),
     AtomDiv = require('../atoms/div'),
     AtomNav = require('../atoms/nav'),
     Dimmer  = require('../molecules/dimmer'),
-    Hamburg = require('../molecules/hamburg_button'),
+    Hamburger = require('../molecules/hamburger_button2'),
     SideNavigation = require('../molecules/side_navigation'),
-    List = require('../molecules/list'),
     Item = require('../molecules/item'),
+    Title = require('../molecules/title'),
     NavLink = require('flux-router-component').NavLink, 
     RouterMixin = require('flux-router-component').RouterMixin,
     Classable = require('../mixins/classable.js');
 
-
+    var Styles={
+        nav: ReactStyle({
+            backgroundColor:'#5677fc',
+            minHeight:'80px',
+        }),
+        side: ReactStyle({
+            paddingTop:"60px"
+        }),
+        hamburger: ReactStyle({
+            marginLeft:"24px",
+            position:'absolute',
+            top:'5px',
+            zIndex:'1002',
+        }),
+        content: ReactStyle({
+            position: 'fixed'
+        }),
+        initTitle: ReactStyle({
+            fontSize: '56px',
+            color: '#fff',
+            margin: '0 100px',
+        }),
+    };
 
 var SidebarLayout = React.createClass({
   mixins: [Classable,RouterMixin],
@@ -23,16 +46,23 @@ var SidebarLayout = React.createClass({
   render: function() {
     var { pages,context,  ...other } = this.props,
         state = this.state,
+        content = [],
         classes = this.getClasses('ui segment');
-    var self=this;
+    if(state.showSideNavigation){
+        content.push(Styles.content);
+    }
     return (
       <AtomDiv id="layout">
-          <AtomNav style={{backgroundColor:'#5677fc'}}>
-            <Hamburg onClick={this.onNavButtonClick} color="#fff" />
+          <AtomNav styles={[Styles.nav]}>
+            <Hamburger on={state.showSideNavigation} onTap={this.onNavButtonClick} color="#fff" styles={[Styles.hamburger]} />
+            <Title styles={[Styles.initTitle]}>{this.props.title}</Title>
           </AtomNav>
-          <Dimmer show={state.showSideNavigation} onClick={this.onDimmerClick}/>
-          <SideNavigation show={state.showSideNavigation}>
-            <List>
+          <Dimmer show={state.showSideNavigation} zIndex="2" opacity=".5" onClick={this.onDimmerClick}/>
+          <SideNavigation 
+                styles={[Styles.side]} 
+                show={state.showSideNavigation}
+                className="vertical"
+          >
                {
                 pages.map(function(page){
                      return(
@@ -44,9 +74,10 @@ var SidebarLayout = React.createClass({
                      ); 
                 })
                } 
-            </List>
           </SideNavigation>
-          {this.props.view}
+          <AtomDiv styles={content}>
+            {this.props.view}
+          </AtomDiv>
       </AtomDiv>
     );
   },
@@ -56,7 +87,8 @@ var SidebarLayout = React.createClass({
   onDimmerClick: function(){
     this.setState({showSideNavigation: false});
   },
-  onNavButtonClick: function() {
+  onNavButtonClick: function(e) {
+    e.preventDefault();
     this.setState({showSideNavigation: !this.state.showSideNavigation});
   }
 });

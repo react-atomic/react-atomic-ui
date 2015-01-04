@@ -1,12 +1,18 @@
 'use strict';
+var webpack = require('webpack');
+var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 module.exports = {
 //	devtool: 'sourcemap',
-	entry: "./src/entry.js",
+	entry: {
+           main: "./src/entry.js",
+           vendor: ['react','react/addons']
+        },
 	output: {
 		filename: "bundle.js",
-		path: __dirname + "/assets",
-		publicPath: "assets/"
+		path: __dirname + "/assets" ,
+		publicPath: "/react/assets/",
+                chunkFilename: "[id].[hash].bundle.js"
 	},
         node: {
           fs: "empty"
@@ -21,5 +27,9 @@ module.exports = {
 	    ]
 	},
 	plugins: [
+            new CommonsChunkPlugin(
+                /* chunkName= */"vendor", 
+                /* filename= */"vendor.bundle.js"
+            ),
 	]
 };

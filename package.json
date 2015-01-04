@@ -1,8 +1,8 @@
 {
   "name": "react-atomic-ui",
   "version": "0.0.0",
-  "description": "A very simple implementation of server-side React rendering",
-  "main": "server.js",
+  "description": "Atomic design in React",
+  "main": "./src/index.js",
   "repository": "pmvc/react-atomic-ui",
   "keywords": [
     "react",
