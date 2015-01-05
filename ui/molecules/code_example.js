@@ -6,6 +6,7 @@ var React = require('react'),
     CodeBlock = require('../molecules/code_block');
 
 module.exports = React.createClass({
+   displayName: 'CodeExample',
 
     propTypes: {
       code: React.PropTypes.string.isRequired

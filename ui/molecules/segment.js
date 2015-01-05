@@ -3,13 +3,14 @@ var React = require('react'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
+  displayName: 'Segment',
+
   mixins: [Classable],
 
   render: function() {
-    var { ...other } = this.props,
-    classes = this.getClasses('segment');
+    var classes = this.getClasses('segment');
     return (
-      <SemanticUI {...other} className={classes}>{this.props.children}</SemanticUI>
+      <SemanticUI {...this.props} className={classes}>{this.props.children}</SemanticUI>
     );
   }
 

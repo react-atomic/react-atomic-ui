@@ -5,6 +5,7 @@ var React = require('react'),
 module.exports = React.createClass({
   mixins: [Classable],
 
+  displayName: 'Button',
   render: function() {
     var { ...other } = this.props,
     classes = this.getClasses('button');

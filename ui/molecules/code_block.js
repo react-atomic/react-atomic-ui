@@ -3,6 +3,7 @@ var React = require('react'),
     AtomCode = require('../atoms/code');
 
 module.exports = React.createClass({
+    displayName: 'CodeBlock',
     render: function() {
         return (
             <AtomPre className="code-block">

@@ -3,6 +3,7 @@ var React = require('react'),
     Classable = require('../mixins/classable.js');
 
 module.exports = React.createClass({
+  displayName: 'Ribbon',
   mixins: [Classable],
 
   render: function() {

@@ -1,6 +1,6 @@
 {
   "name": "react-atomic-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Atomic design in React",
   "main": "./src/index.js",
   "repository": "pmvc/react-atomic-ui",

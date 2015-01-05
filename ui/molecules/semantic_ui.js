@@ -1,12 +1,8 @@
 var React = require('react'),
-    AtomDiv=require('../atoms/div'),
-    AtomImg=require('../atoms/img'),
-    AtomOl=require('../atoms/ol'),
-    AtomUl=require('../atoms/ul'),
-    AtomH2 = require('../atoms/h2'),
-    Classable = require('../mixins/classable.js');
+    Classable = require('../mixins/classable');
 
-var  Semantic = React.createClass({
+module.exports = React.createClass({
+  displayName: 'SemanticUI',
   mixins: [Classable],
   getDefaultProps: function() {
     return ({
@@ -24,26 +20,26 @@ var  Semantic = React.createClass({
     }
     switch (this.props.atom){
         case 'h2':
-            SemanticUI = AtomH2;
+            SemanticUI = require('../atoms/h2');
             break;
         case 'ol':
-            SemanticUI = AtomOl;
+            SemanticUI = require('../atoms/ol');
             break;
         case 'ul':
-            SemanticUI = AtomUl;
+            SemanticUI = require('../atoms/ul');
             break;
         case 'img':
-            SemanticUI = AtomImg;
+            SemanticUI = require('../atoms/img');
             classes.push('image');
             break;
         default:
-            SemanticUI = AtomDiv;
+            SemanticUI = require('../atoms/div');
             break;
     }
     return (
-      <SemanticUI {...other} className={this.getClasses(classes.join(' '))}>{this.props.children}</SemanticUI>
+      <SemanticUI {...other} className={this.getClasses(classes.join(' '))}>
+        {this.props.children}
+      </SemanticUI>
     );
   }
-
 });
-module.exports=Semantic;

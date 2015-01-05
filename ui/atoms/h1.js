@@ -1,14 +1,9 @@
 var React = require('react');
-
-var Div = React.createClass({
-
+module.exports = React.createClass({
+  displayName: 'H1',
   render: function() {
-    var { ...other } = this.props;
     return (
-      <h1 {...other}>{this.props.children}</h1>
+      <h1 {...this.props}>{this.props.children}</h1>
     );
   }
-
 });
-
-module.exports = Div;

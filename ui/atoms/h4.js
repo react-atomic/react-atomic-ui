@@ -1,11 +1,9 @@
 var React = require('react');
-
 module.exports = React.createClass({
-  displayName: 'Pre',
+  displayName: 'H4',
   render: function() {
     return (
-      <pre {...this.props} >{this.props.children}</pre>
+      <h4 {...this.props}>{this.props.children}</h4>
     );
   }
 });
-

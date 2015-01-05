@@ -7,12 +7,4 @@ require(['react','react-style','./doc/index'],function(React,ReactStyle,MyApp){
     }else{
       //window.app=MyApp;
     }
-var httpinvoke = require('httpinvoke');
-
-httpinvoke('http://tw.yahoo.com', 'GET', function(err, body, statusCode, headers) {
-    if(err) {
-        return console.log('Failure', err);
-    }
-    console.log('Success', body, statusCode, headers);
-});
 });
