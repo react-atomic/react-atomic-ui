@@ -7,9 +7,9 @@ var React = require('react'),
     SideNavigation = require('../molecules/side_navigation'),
     Item = require('../molecules/item'),
     Title = require('../molecules/title'),
+    Classable = require('../mixins/classable'),
     NavLink = require('flux-router-component').NavLink, 
-    RouterMixin = require('flux-router-component').RouterMixin,
-    Classable = require('../mixins/classable.js');
+    RouterMixin = require('flux-router-component').RouterMixin;
 
     var Styles={
         nav: ReactStyle({
@@ -35,7 +35,8 @@ var React = require('react'),
         }),
     };
 
-var SidebarLayout = React.createClass({
+module.exports = React.createClass({
+  displayName: 'SidebarLayout',
   mixins: [Classable,RouterMixin],
   getInitialState: function(){
     return {
@@ -92,4 +93,3 @@ var SidebarLayout = React.createClass({
     this.setState({showSideNavigation: !this.state.showSideNavigation});
   }
 });
-module.exports=SidebarLayout;

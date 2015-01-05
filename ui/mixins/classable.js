@@ -1,5 +1,5 @@
-require(['react/addons'],function(React){
-  var classSet = React.addons.classSet;
+var React = require('react/addons');
+var classSet = React.addons.classSet;
 
 module.exports = {
 
@@ -37,4 +37,4 @@ module.exports = {
   }
 
 }
-});
+
