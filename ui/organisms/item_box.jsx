@@ -1,6 +1,5 @@
+/* jshint esnext: true */
 var React = require('react'),
-    ReactStyle = require('react-style'),
-    AtomSpan = require('../atoms/span'),
     Item = require('../molecules/item'),
     CircularImg = require('../molecules/circular_img'),
     Button = require('../molecules/button'),

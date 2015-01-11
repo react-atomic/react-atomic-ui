@@ -1,5 +1,5 @@
+/* jshint esnext: true */
 var React = require('react'),
-    ReactStyle = require('react-style'),
     AtomDiv = require('../atoms/div'),
     CircularImg = require('../molecules/circular_img'),
     Button = require('../molecules/button'),
@@ -17,12 +17,8 @@ module.exports = React.createClass({
   mixins: [Classable],
 
   render: function() {
-    var { name,...other } = this.props,
-    classes = this.getClasses('item');
-    var styles = ReactStyle({
-      color: 'red',
-        backgroundColor: 'white'
-        });
+    var { name,...other } = this.props;
+    var classes = this.getClasses('item');
     return (
       <AtomDiv className="ui items" style={{backgroundColor:'#fff',border:'1px solid #e7e7e7',padding:'40px 30px 35px 30px'}} >
           <AtomDiv {...other} className={classes} >

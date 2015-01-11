@@ -7,16 +7,17 @@ module.exports = React.createClass({
   mixins: [Classable],
 
   render: function() {
-    var { ...other } = this.props,
-    classes = this.getClasses('ui items');
+    var classes = this.getClasses('ui items');
     return (
-      <AtomDiv {...other} className={classes}>
+      <AtomDiv {...this.props} className={classes}>
          {this.getItems()}
       </AtomDiv>
     );
   },
   getItems: function(){
-    var children=[],name;
+    var children=[];
+    var name;
+    var itemComponent;
     for (var i=0; i < this.props.list.length; i++) {
         name = this.props.list[i];
         itemComponent = (
