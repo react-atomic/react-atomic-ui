@@ -4,16 +4,7 @@ var ReactStyle = require('react-style');
 var SemanticUI = require('../molecules/semantic_ui.jsx');
 var AtomInput = require('../atoms/input.jsx');
 var Classable = require('../mixins/classable');
-var Config = require('../mixins/config');
 
-if(Config.semanticCss){
-    var Styles = {
-        inputbox:{
-            margin:0
-
-        }
-    };
-}
 
 module.exports = React.createClass({
   displayName: 'InputBox',
