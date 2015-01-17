@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactStyle = require('react-style');
-var Classable = require('../mixins/classable.jsx');
+var Classable = require('../mixins/classable');
 var SemanticUI = require('../molecules/semantic_ui.jsx');
 var _blockMouseEvents;
 
