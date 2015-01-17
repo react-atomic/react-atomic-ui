@@ -5,7 +5,7 @@ var AtomLi = require('../atoms/li.jsx');
 var Classable = require('../mixins/classable');
 
 module.exports = React.createClass({
-    displayName: 'Dimmer',
+    displayName: 'Item',
     mixins: [Classable],
     render: function() {
         var Item=AtomDiv,
@@ -16,9 +16,7 @@ module.exports = React.createClass({
                 break;
         }
         return (
-            <Item {...this.props} className={classes}>
-                {this.props.children}
-            </Item>
+            <Item {...this.props} className={classes}>{this.props.children}</Item>
         );
     }
 });
