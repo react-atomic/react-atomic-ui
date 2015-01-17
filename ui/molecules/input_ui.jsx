@@ -8,7 +8,7 @@ module.exports = React.createClass({
   render: function() {
     var classes = this.getClasses('input action D-tb');
     return (
-      <SemanticUI className={classes}>
+      <SemanticUI {...this.props} className={classes}>
         {this.props.children}
       </SemanticUI>
     );
