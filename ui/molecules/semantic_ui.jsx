@@ -9,11 +9,13 @@ module.exports = React.createClass({
   mixins: [Classable,ReactStyle],
   getDefaultProps: function() {
     return ({
-        ui:true
+        ui:true,
+        renderChildren:true
     });
   },
   render: function() {
     var ui=this.props.ui;
+    var renderChildren=this.props.renderChildren;
     var SemanticUI;
     var classes = [];
     if(ui){
@@ -50,6 +52,13 @@ module.exports = React.createClass({
         case 'button':
             SemanticUI = require('../atoms/button.jsx');
             break;
+        case 'form':
+            SemanticUI = require('../atoms/form.jsx');
+            break;
+        case 'input':
+            SemanticUI = require('../atoms/input.jsx');
+            renderChildren=false;
+            break;
         case 'img':
             SemanticUI = require('../atoms/img.jsx');
             classes.push('image');
@@ -69,10 +78,13 @@ module.exports = React.createClass({
         style=this.injectStyle();
     }
     return (
-      <SemanticUI {...this.props} className={this.getClasses(classes.join(' '))}>{(style)?style:null}{this.renderChildren()}</SemanticUI>
+        <SemanticUI {...this.props} className={this.getClasses(classes.join(' '))}>{(style)?style:null}{this.renderChildren()}</SemanticUI>
     );
   },
-  renderChildren:function(){
+  renderChildren:function(render){
+        if(!render){
+            return null;
+        }
         return React.Children.map(
             this.props.children,
             function (child) {
