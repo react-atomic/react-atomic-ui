@@ -8,7 +8,6 @@ function Style(style, className, selector) {
   this.selector = selector;
 }
 
-
 Style.prototype.isCompiled = function() {
     var registry = Store.styles;
     return registry && registry[this.className];

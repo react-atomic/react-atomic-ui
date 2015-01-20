@@ -78,7 +78,7 @@ module.exports = React.createClass({
         style=this.injectStyle();
     }
     return (
-        <SemanticUI {...this.props} className={this.getClasses(classes.join(' '))}>{(style)?style:null}{this.renderChildren()}</SemanticUI>
+        <SemanticUI {...this.props} className={this.getClasses(classes.join(' '))}>{(style)?style:null}{this.renderChildren(renderChildren)}</SemanticUI>
     );
   },
   renderChildren:function(render){
