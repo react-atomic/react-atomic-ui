@@ -8,8 +8,8 @@ var React = require('react'),
     Item = require('../molecules/item'),
     Title = require('../molecules/title'),
     Classable = require('../mixins/classable'),
-    NavLink = require('flux-router-component').NavLink, 
-    RouterMixin = require('flux-router-component').RouterMixin;
+    NavLink = require('flux-router-component').NavLink;
+var Fluxible = require('../organisms/fluxible.jsx');
 
     var Styles={
         nav: ReactStyle({
@@ -37,7 +37,7 @@ var React = require('react'),
 
 module.exports = React.createClass({
   displayName: 'SidebarLayout',
-  mixins: [Classable,RouterMixin],
+  mixins: [Classable],
   getInitialState: function(){
     return {
       showSideNavigation: false,
@@ -53,7 +53,7 @@ module.exports = React.createClass({
         content.push(Styles.content);
     }
     return (
-      <AtomDiv id="layout">
+      <Fluxible {...this.props} id="layout">
           <AtomNav styles={[Styles.nav]}>
             <Hamburger on={state.showSideNavigation} onTap={this.onNavButtonClick} color="#fff" styles={[Styles.hamburger]} />
             <Title styles={[Styles.initTitle]}>{this.props.title}</Title>
@@ -79,11 +79,11 @@ module.exports = React.createClass({
           <AtomDiv styles={content}>
             {this.props.view}
           </AtomDiv>
-      </AtomDiv>
+      </Fluxible>
     );
   },
   componentWillReceiveProps: function(nextProps) {
-    this.setState({showSideNavigation: false, route:nextProps.route});
+    this.setState({showSideNavigation: false});
   },
   onDimmerClick: function(){
     this.setState({showSideNavigation: false});
