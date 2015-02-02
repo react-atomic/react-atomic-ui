@@ -15,7 +15,7 @@ module.exports = React.createClass({
         return React.Children.map(
             this.props.children,
             function (child) {
-                return React.addons.cloneWithProps(child,assign(this.props,child.props));
+                return React.addons.cloneWithProps(child,assign({},this.props,{children:null},child.props));
             }.bind(this));
     },
     componentWillReceiveProps: function(nextProps) {
