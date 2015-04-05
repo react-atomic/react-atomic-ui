@@ -7,7 +7,7 @@ var Colors = require('../pages/style/Colors');
 var Classable = require('../mixins/classable');
 var React = require('react');
 var Menu = require('../molecules/menu');
-var ReactStyle = require('react-style');
+var ReactStyle = require('../mixins/styles/index');
 
 
 var SideNavigationStyles = {

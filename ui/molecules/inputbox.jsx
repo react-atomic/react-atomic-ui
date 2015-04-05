@@ -27,7 +27,7 @@ var Classable = require('../mixins/classable');
 module.exports = React.createClass({
   displayName: 'InputBox',
 
-  mixins: [Classable,ReactStyle],
+  mixins: [Classable],
 
   getDefaultProps: function() {
     return ({

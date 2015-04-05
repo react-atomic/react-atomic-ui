@@ -9,7 +9,7 @@ function Style(style, className, selector) {
 }
 
 Style.prototype.isCompiled = function() {
-    var registry = Store.styles;
+    var registry = Store.registry;
     return registry && registry[this.className];
 };
 

@@ -1,5 +1,5 @@
 var React = require('react'),
-    ReactStyle = require('react-style'),
+    ReactStyle = require('../mixins/styles/index'),
     AtomDiv = require('../atoms/div'),
     AtomNav = require('../atoms/nav'),
     Dimmer  = require('../molecules/dimmer'),

@@ -1,6 +1,6 @@
 /* jshint esnext: true */
 var React = require('react');
-var ReactStyle = require('react-style');
+var ReactStyle = require('../mixins/styles/index');
 var SemanticUI = require('../molecules/semantic_ui.jsx');
 var Classable = require('../mixins/classable');
 

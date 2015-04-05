@@ -1,3 +1,5 @@
 module.exports={
-    styles:[]
+    styles:[],
+    registry:[],
+    newStyles:[]
 };

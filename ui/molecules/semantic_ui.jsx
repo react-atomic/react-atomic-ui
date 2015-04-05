@@ -1,12 +1,14 @@
 /* jshint esnext: true */
 var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
+var ReactStyleMixin = require('../mixins/styles/mixin');
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 var Classable = require('../mixins/classable');
+var assign = require("react/lib/Object.assign");
 
 module.exports = React.createClass({
   displayName: 'SemanticUI',
-  mixins: [Classable,ReactStyle],
+  mixins: [Classable,ReactStyleMixin],
   getDefaultProps: function() {
     return ({
         ui:true,
@@ -66,11 +68,15 @@ module.exports = React.createClass({
         case 'a':
             SemanticUI = require('../atoms/a.jsx');
             break;
+        case 'svg':
+            SemanticUI = require('../atoms/svg.jsx');
+            break;
         default:
             SemanticUI = require('../atoms/div.jsx');
             break;
     }
-    this.buildStyles(this.props);
+    var newProps=this.bindStyles(this.props);
+    newProps=assign({},this.props,newProps);
     var style;
     if(ExecutionEnvironment.canUseDOM){
         this.injectStyle();
@@ -78,7 +84,7 @@ module.exports = React.createClass({
         style=this.injectStyle();
     }
     return (
-        <SemanticUI {...this.props} className={this.getClasses(classes.join(' '))}>{(style)?style:null}{this.renderChildren(renderChildren)}</SemanticUI>
+        <SemanticUI {...newProps}>{(style)?style:null}{this.renderChildren(renderChildren)}</SemanticUI>
     );
   },
   renderChildren:function(render){
@@ -88,22 +94,24 @@ module.exports = React.createClass({
         return React.Children.map(
             this.props.children,
             function (child) {
-                this.buildStyles(child.props);
+                var newProps=this.bindStyles(child.props);
+                if('undefined' !== typeof newProps ){
+                    return React.addons.cloneWithProps(
+                        child, 
+                        assign(
+                            {},
+                            child.props,
+                            {
+                                className:newProps.className,
+                                styles:newProps.styles,
+                                style:newProps.style,
+                            }
+                        )
+                    );
+                }
                 return child;
             }.bind(this)
         );
-    },
-    buildStyles: function(props){
-        if( 'undefined' !== typeof props &&
-            'undefined' !== typeof props.styles 
-        ){
-            var newProps=this.bindStyles(props);
-            if('undefined' !== typeof newProps ){
-                props.className=newProps.className;
-                props.style=newProps.style;
-                props.styles=newProps.styles;
-            }
-        }
     }
     
 });
