@@ -3,12 +3,12 @@ var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
 var ReactStyleMixin = require('../mixins/styles/mixin');
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
-var Classable = require('../mixins/classable');
 var assign = require("react/lib/Object.assign");
+var mixClass = require('classnames');
 
 module.exports = React.createClass({
   displayName: 'SemanticUI',
-  mixins: [Classable,ReactStyleMixin],
+  mixins: [ReactStyleMixin],
   getDefaultProps: function() {
     return ({
         ui:true,
@@ -76,6 +76,7 @@ module.exports = React.createClass({
             break;
     }
     var newProps=this.bindStyles(this.props);
+    newProps.className=mixClass(newProps.className,classes);
     newProps=assign({},this.props,newProps);
     var style;
     if(ExecutionEnvironment.canUseDOM){
