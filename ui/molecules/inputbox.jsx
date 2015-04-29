@@ -3,8 +3,7 @@ var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
 var SemanticUI = require('../molecules/semantic_ui.jsx');
 var AtomInput = require('../atoms/input.jsx');
-var Classable = require('../mixins/classable');
-//var Config = require('../mixins/config');
+var mixClass = require('classnames');
 
     var Styles = {
         inputbox:{
@@ -27,7 +26,6 @@ var Classable = require('../mixins/classable');
 module.exports = React.createClass({
   displayName: 'InputBox',
 
-  mixins: [Classable],
 
   getDefaultProps: function() {
     return ({
@@ -36,17 +34,11 @@ module.exports = React.createClass({
   },
   render: function() {
     var props=this.props;
-    var ui=props.ui;
-    var classes;
-    if(ui){
-        classes=this.getClasses('input');
-    }else{
-        classes=this.getClasses('D-tbc');
-    }
+    var classes=mixClass('input');
     var inputboxStyle=ReactStyle(Styles.inputbox,'.ui.input input');
     ReactStyle(Styles.myAction,'.ui.action.input:not([class*="left action"])>div input');
     return (
-      <SemanticUI ui={ui} className={classes}>
+      <SemanticUI className={classes}>
         <AtomInput className="M-0 W-100 O-0 Ta-start Lh-15 Bdrs" styles={inputboxStyle}  {...props} ui=""  />
       </SemanticUI>
     );

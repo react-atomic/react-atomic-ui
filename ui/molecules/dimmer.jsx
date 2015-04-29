@@ -2,30 +2,35 @@
 var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
 var SemanticUI = require('../molecules/semantic_ui.jsx');
-var Classable = require('../mixins/classable');
-
+var mixClass = require('classnames');
 module.exports = React.createClass({
     displayName: 'Dimmer',
-    mixins: [Classable],
     render: function() {
     var { opacity, zIndex, ...other } = this.props,
-        defaultCss='dimmer transition ',
-        showCss='visible active',
-        hiddenCss='hidden',
-        Styles=[],
-        classes;
+        cssVisible,
+        cssActive,
+        cssHidden,
+        Styles=[];
         if (this.props.show) {
-            defaultCss+=showCss;
+            cssVisible=true;
+            cssActive=true;
             Styles.push(ReactStyle({
                 opacity:opacity,
                 zIndex:zIndex
-            }));
+            },'x'));
         }else{
-            defaultCss+=hiddenCss;
+            cssHidden=true;
         }
-    classes = this.getClasses(defaultCss);
+    var classes=mixClass(
+        this.props.className,
+        'dimmer',
+        'transition',
+        {visible:cssVisible},
+        {active:cssActive},
+        {hidden:cssHidden}
+    );
     return (
-      <SemanticUI styles={Styles} {...other} className={classes}>{this.props.children}</SemanticUI>
+      <SemanticUI {...other} styles={Styles}  className={classes}>{this.props.children}</SemanticUI>
     );
     }
 });

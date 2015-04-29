@@ -9,8 +9,9 @@ var COMPLEX_OVERRIDES = CSSProperty.shorthandPropertyExpansions;
 function applyStyle(props, style, order) {
   if (style === null || style === undefined || style === false) {
     return order;
-  }
-  else if (style.isCompiled() && order < 10) {
+  } 
+  
+  if (style.isCompiled() && order < 10) {
     if (!props.className) {
       props.className = '';
     }
@@ -33,8 +34,7 @@ function applyStyle(props, style, order) {
       }
     }
     return order + 1;
-  }
-  else {
+  } else {
     if (!props.style) {
       props.style = {};
     }

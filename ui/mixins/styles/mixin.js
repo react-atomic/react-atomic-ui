@@ -45,14 +45,16 @@ var ReactStyle = {
     var compiled = stylesToCSS(Store.newStyles);
     Store.newStyles=[];
     Store.registry=assign(Store.registry,compiled.classNames);
-    if(ExecutionEnvironment.canUseDOM){
-        var tag = document.createElement('style');
-        tag.innerHTML = compiled.css;
-        document.getElementsByTagName('head')[0].appendChild(tag);
-    }else{
-	return React.createElement('style', {dangerouslySetInnerHTML:{
-            __html:  compiled.css
-        }}); 
+    if(compiled.css){
+        if(ExecutionEnvironment.canUseDOM){
+            var tag = document.createElement('style');
+            tag.innerHTML = compiled.css;
+            document.getElementsByTagName('head')[0].appendChild(tag);
+        }else{
+            return React.createElement('style', {dangerouslySetInnerHTML:{
+                __html:  compiled.css
+            }}); 
+        }
     }
   }
 };

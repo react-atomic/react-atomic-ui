@@ -25,12 +25,12 @@ module.exports = React.createClass({
     var line1=[Styles.line],line2=[Styles.line],line3=[Styles.line];
     var lineColor;
     if(on){
-        line1.push(ReactStyle({transform: 'rotate(38deg)  translateX(4px) '} ));
-        line2.push(ReactStyle({transform: 'rotate(360deg) translateX(-1px) translateY(-1px)'} ));
-        line3.push(ReactStyle({transform: 'rotate(-390deg) translateX(-7px) translateY(-7px)'} ));
+        line1.push(ReactStyle({transform: 'rotate(38deg)  translateX(4px) '},'x' ));
+        line2.push(ReactStyle({transform: 'rotate(360deg) translateX(-1px) translateY(-1px)'},'x' ));
+        line3.push(ReactStyle({transform: 'rotate(-390deg) translateX(-7px) translateY(-7px)'},'x' ));
         color="#000";
     }
-    lineColor=ReactStyle({fill:color});
+    lineColor=ReactStyle({fill:color},'x');
     line1.push(lineColor);
     line2.push(lineColor);
     line3.push(lineColor);
