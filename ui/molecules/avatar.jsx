@@ -1,14 +1,16 @@
 var React = require('react');
-var SemanticUI = require('../molecules/semantic_ui.jsx');
-var Classable = require('../mixins/classable');
+var Image = require('../molecules/image.jsx');
+var mixClass = require('classnames');
 
 module.exports = React.createClass({
     displayName: 'Avatar',
-    mixins: [Classable],
     render: function() {
-        var classes = this.getClasses('avatar');
+        var classes = mixClass(
+            this.props.className,
+            'avatar'
+        );
         return (
-            <SemanticUI atom="img" {...this.props} className={classes} />
+            <Image {...this.props} className={classes} />
         );
     }
 });

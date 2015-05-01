@@ -1,14 +1,13 @@
 /* jshint esnext: true */
 var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
-var ReactStyleMixin = require('../mixins/styles/mixin');
+var mixStyle = require('../mixins/styles/mixin');
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 var assign = require("react/lib/Object.assign");
 var mixClass = require('classnames');
 
 module.exports = React.createClass({
   displayName: 'SemanticUI',
-  mixins: [ReactStyleMixin],
   getDefaultProps: function() {
     return ({
         ui:true,
@@ -63,7 +62,6 @@ module.exports = React.createClass({
             break;
         case 'img':
             SemanticUI = require('../atoms/img.jsx');
-            classes.push('image');
             break;
         case 'a':
             SemanticUI = require('../atoms/a.jsx');
@@ -75,14 +73,14 @@ module.exports = React.createClass({
             SemanticUI = require('../atoms/div.jsx');
             break;
     }
-    var newProps=this.bindStyles(this.props);
+    var newProps=mixStyle.bindStyles(this.props);
     newProps.className=mixClass(newProps.className,classes);
     newProps=assign({},this.props,newProps);
     var style;
     if(ExecutionEnvironment.canUseDOM){
-        this.injectStyle();
+        mixStyle.injectStyle();
     }else{
-        style=this.injectStyle();
+        style=mixStyle.injectStyle();
     }
     return (
         <SemanticUI {...newProps}>{(style)?style:null}{this.renderChildren(renderChildren)}</SemanticUI>
@@ -95,7 +93,7 @@ module.exports = React.createClass({
         return React.Children.map(
             this.props.children,
             function (child) {
-                var newProps=this.bindStyles(child.props);
+                var newProps=mixStyle.bindStyles(child.props);
                 if('undefined' !== typeof newProps ){
                     return React.addons.cloneWithProps(
                         child, 
