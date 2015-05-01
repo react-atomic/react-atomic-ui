@@ -1,5 +1,6 @@
 module.exports={
     styles:[],
     registry:[],
-    newStyles:[]
+    newStyles:[],
+    counter:0
 };

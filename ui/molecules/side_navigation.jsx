@@ -4,24 +4,20 @@
 'use strict';
 
 var Colors = require('../pages/style/Colors');
-var Classable = require('../mixins/classable');
+var mixClass = require('classnames');
 var React = require('react');
 var Menu = require('../molecules/menu');
 var ReactStyle = require('../mixins/styles/index');
 
 
-var SideNavigationStyles = {
+var Styles = {
 
   normalSideNavStyle: ReactStyle({
-    backgroundColor: 'white',
-    borderRight: '1px solid ' + Colors.grey.P300,
     bottom: 0,
     left: 0,
     overflow: 'auto',
     position: 'fixed',
     top: 0,
-    width: 240,
-    transform: 'translateX(-241px)',
     transition: 'transform .2s cubic-bezier(.4,0,.2,1), visibility 0s linear .21s',
     zIndex: '1001',
     visibility: 'hidden'
@@ -37,15 +33,31 @@ var SideNavigationStyles = {
 
 module.exports = React.createClass({
   displayName: 'SideNavigation',
-  mixins: [Classable],
   render: function() {
     var props = this.props;
-    var classes = this.getClasses('sidebar');
-    var styles = SideNavigationStyles;
-    var sideNavigationStyles = [styles.normalSideNavStyle, props.styles];
+    var classes = mixClass(this.props.className,'sidebar');
+    var sideNavigationStyles = [Styles.normalSideNavStyle];
     if (props.show) {
-      sideNavigationStyles.push(styles.showSideNavStyle);
+        sideNavigationStyles.push(Styles.showSideNavStyle);
     }
+    var width=(props.width || null===props.width)?props.width:'240px'; 
+    if(width){
+        sideNavigationStyles.push(ReactStyle({
+            width:width,
+            transform: 'translateX(-'+(width++)+'px)',
+        },false));
+    }
+    if(props.background){
+        sideNavigationStyles.push(ReactStyle({
+            backgroundColor: 'white',
+            borderRight: '1px solid ' + Colors.grey.P300,
+        },false));
+    }else{
+        sideNavigationStyles.push(ReactStyle({
+             boxShadow:'none'
+        },false));
+    }
+
     return ( 
     <Menu {...props} 
         className={classes}

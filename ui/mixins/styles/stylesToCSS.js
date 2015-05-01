@@ -105,7 +105,7 @@ function stylesToCSS(styles) {
 
   var result = {css: '', classNames: {}};
   for (var i = 0, len = styles.length; i < len; i++) {
-    if('x' !== styles[i].selector){
+    if(false !== styles[i].selector){
         buildStyle(result, styles[i]);
     }
   }

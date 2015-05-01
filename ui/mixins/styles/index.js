@@ -4,13 +4,9 @@
 var Style                  = require('./Style');
 var Store                  = require('./store.js');
 
-
-
-var counter = 0;
-
 function genClassName() {
-  counter += 1;
-  return 'c' + counter + '_';
+  Store.counter += 1;
+  return 'c' + Store.counter + '_';
 }
 
 function createStyle(props, selector, className) {
@@ -30,9 +26,6 @@ function createStyle(props, selector, className) {
   Store.newStyles.push(styleDecl);
   return styleDecl;
 }
-
-
-
 
 module.exports = createStyle;
 

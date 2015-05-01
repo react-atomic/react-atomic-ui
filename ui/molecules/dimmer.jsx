@@ -17,7 +17,7 @@ module.exports = React.createClass({
             Styles.push(ReactStyle({
                 opacity:opacity,
                 zIndex:zIndex
-            },'x'));
+            },false));
         }else{
             cssHidden=true;
         }
