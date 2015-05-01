@@ -9,7 +9,6 @@ var React = require('react');
 var Menu = require('../molecules/menu');
 var ReactStyle = require('../mixins/styles/index');
 
-
 var Styles = {
 
   normalSideNavStyle: ReactStyle({
@@ -57,7 +56,7 @@ module.exports = React.createClass({
              boxShadow:'none'
         },false));
     }
-
+    sideNavigationStyles=sideNavigationStyles.concat(props.styles);
     return ( 
     <Menu {...props} 
         className={classes}

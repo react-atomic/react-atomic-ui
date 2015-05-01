@@ -73,15 +73,16 @@ module.exports = React.createClass({
             SemanticUI = require('../atoms/div.jsx');
             break;
     }
-    var newProps=mixStyle.bindStyles(this.props);
-    newProps.className=mixClass(newProps.className,classes);
-    newProps=assign({},this.props,newProps);
     var style;
     if(ExecutionEnvironment.canUseDOM){
         mixStyle.injectStyle();
     }else{
         style=mixStyle.injectStyle();
     }
+    // bindStyles need after inject
+    var newProps=mixStyle.bindStyles(this.props);
+    newProps.className=mixClass(newProps.className,classes);
+    newProps=assign({},this.props,newProps);
     return (
         <SemanticUI {...newProps}>{(style)?style:null}{this.renderChildren(renderChildren)}</SemanticUI>
     );

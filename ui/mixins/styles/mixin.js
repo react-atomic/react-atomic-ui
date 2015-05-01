@@ -1,8 +1,6 @@
-
 var React                  = require('react');
 var Store                  = require('./store.js');
 var ApplyStyle             = require('./applyStyles');
-var styleComponent         = require('./styleComponent');
 var stylesToCSS            = require('./stylesToCSS');
 var ExecutionEnvironment   = require('react/lib/ExecutionEnvironment');
 var assign                 = require("react/lib/Object.assign");
@@ -33,7 +31,6 @@ function buildProps(props){
 
 var ReactStyle = {
   bindStyles: buildProps,
-  style: styleComponent,
   newStyleInject: function(){
     Store.newStyles=Store.styles;
   },

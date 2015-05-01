@@ -27,9 +27,15 @@ function buildRule(result, key, value) {
   result.css += '  ' + hyphenateStyleName(key) + ': ' + value + ';\n';
 }
 
+
 function buildRules(result, rules, selector) {
   if (Object.keys(rules).length === 0) {
     return result;
+  }
+  var bMedia=false;
+  if(Array.isArray(selector)){
+       selector = selector[0] + ' {\n' +  selector[1];
+       bMedia = true;
   }
 
   result.css += selector + ' {\n';
@@ -57,8 +63,10 @@ function buildRules(result, rules, selector) {
       buildRule(result, styleKey, value);
     }
   }
+  if(bMedia){
+       result.css += '}\n';
+  }
   result.css += '}\n';
-
   return result;
 }
 
@@ -87,13 +95,13 @@ function buildStyle(result, style, selector) {
   }
 
   if(style.selector){
-    selector=style.selector;
+      selector=style.selector;
+      if (Array.isArray(selector) && !selector[1]) {
+        selector[1] = replicateSelector('.' + style.className);
+      }
+  } else {
+      selector = replicateSelector('.' + style.className);
   }
-
-  if (!selector) {
-    selector = replicateSelector('.' + style.className);
-  }
-
   result.classNames[style.className] = counter++; //for check already inject
   buildRules(result, style.style, selector);
 }
