@@ -190,15 +190,15 @@ module.exports = React.createClass({
 	},
 	
 	onTouchEnd: function(event) {
-		if (!this._initialTouch){
-                    return;
-                }
-		this.processEvent(event);
-		var movement = this.calculateMovement(this._lastTouch);
-		if (movement.x <= this.props.moveThreshold && movement.y <= this.props.moveThreshold) {
-			this.props.onTap && this.props.onTap(event);
-		}
-		this.endTouch(event);
+            if (!this._initialTouch){
+                return;
+            }
+            this.processEvent(event);
+            var movement = this.calculateMovement(this._lastTouch);
+            if (movement.x <= this.props.moveThreshold && movement.y <= this.props.moveThreshold) {
+                this.props.onTap && this.props.onTap(event);
+            }
+            this.endTouch(event);
 	},
 	
 	endTouch: function(event) {
@@ -213,8 +213,8 @@ module.exports = React.createClass({
 	
 	onMouseDown: function(event) {
 		if (_blockMouseEvents) {
-			_blockMouseEvents = false;
-			return;
+                    _blockMouseEvents = false;
+                    return;
 		}
 		if (this.props.onMouseDown && this.props.onMouseDown(event) === false) {
                     return;

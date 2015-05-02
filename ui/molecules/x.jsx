@@ -1,9 +1,9 @@
 var React = require('react');
 var ReactStyle = require('../mixins/styles/index');
-var SemanticUI = require('../molecules/semantic_ui.jsx');
 var AtomSpan = require('../atoms/span.jsx');
 var mixClass = require('classnames');
 var assign = require("react/lib/Object.assign");
+var Touch = require('../molecules/tappable.jsx');
 
 var Common = {
     closeBeforeAfter:{
@@ -34,7 +34,7 @@ var Styles = {
             Common.closeBeforeAfter,
             {
                 transform:'rotate(-40deg)',
-                webkitTransform:'rotate(-40deg)'
+                WebkitTransform:'rotate(-40deg)'
             }
         ),
         '.icon.x:before'
@@ -44,7 +44,7 @@ var Styles = {
             Common.closeBeforeAfter,
             {
                 transform:'rotate(40deg)',
-                webkitTransform:'rotate(40deg)'
+                WebkitTransform:'rotate(40deg)'
             }
         ),
         '.icon.x:after'
@@ -61,7 +61,7 @@ module.exports = React.createClass({
             ,'x'
         );
         return (
-            <SemanticUI {...this.props} className={classes}></SemanticUI>
+            <Touch {...this.props}  className={classes}></Touch>
         );
     }
 });
