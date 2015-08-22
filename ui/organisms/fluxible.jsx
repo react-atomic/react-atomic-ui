@@ -17,7 +17,9 @@ module.exports = React.createClass({
             function (child) {
                 return React.addons.cloneWithProps(
                     child,assign(
-                        {},
+                        {
+                            replaceBrowserUrl:this.replaceBrowserUrl
+                        },
                         this.props, {
                             children:null,
                             id:null,
@@ -31,4 +33,11 @@ module.exports = React.createClass({
     componentWillReceiveProps: function(nextProps) {
         this.setState({route:nextProps.route});
     },
+    replaceBrowserUrl: function(url) {
+        var route = { 
+            url:url,
+            navigate: {type:'click'}
+        };
+        this.setState({route:route});
+    }
 });
