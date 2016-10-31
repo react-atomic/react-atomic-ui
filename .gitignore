@@ -1,6 +1,7 @@
 node_modules
-assets
 npm-debug.log
 coverage*
 .tern-port
 v8.log
+build
+.*.sw?

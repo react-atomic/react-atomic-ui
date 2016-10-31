@@ -1,10 +1,9 @@
-require(['react','react-style','./doc/index'],function(React,ReactStyle,MyApp){
-    MyApp = React.createFactory(MyApp);
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      ReactStyle.inject();
-      window.app=React.render(MyApp(), document.body);
-      window.React=React;
-    }else{
-      //window.app=MyApp;
-    }
+Object.assign = null;
+const React=require('react');
+setTimeout(()=>{
+  const ReactDOM = require('react-dom');
+  const MyApp = React.createFactory(require('../ui/pages/index'));
+  window.app=MyApp;
+  window.ReactDOM=ReactDOM;
+  ReactDOM.render(new MyApp(REACT_DATA), document.getElementById('app'));
 });

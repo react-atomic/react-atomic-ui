@@ -1,14 +1,9 @@
-# react-atomic-ui
+# react-atomic-ui-doc
 ===============
 
-Atomic design ui in react
+Documentation and some examples for react-atomic-ui
 
-GIT
-NPM
+Link
+http://react-atomic.github.io/react-atomic-ui-doc/
 
-## Example Usage
-Demo Url:
-https://dl.dropboxusercontent.com/u/3396570/list/index.html
-
-Documentation:
 
