@@ -12,7 +12,7 @@ const menus = [
 const Menu = (props) =>
 <VerticalMenu>
     {menus.map((item, key)=>(
-        <ReLink className="item" key={key} href={'#'+item}>
+        <ReLink className="item" key={key} href={'#/'+item}>
             {item}
         </ReLink>
     ))}
