@@ -11,10 +11,11 @@
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
+    "get-object-value": "*",
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react-addons-shallow-compare": "^15.3.2",
-    "reshow": ">=0.0.16",
+    "reshow": "*",
     "ricon": "*"
   },
   "devDependencies": {

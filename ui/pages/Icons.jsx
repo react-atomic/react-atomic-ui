@@ -1,5 +1,6 @@
 import React,{Component} from 'react'; 
 import Calendar from 'ricon/Calendar';
+import Code from 'ricon/Code';
 import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
 import Facebook from 'ricon/Facebook';
@@ -14,10 +15,14 @@ import Pulse from 'ricon/Pulse';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
 
+import {reactStyle} from 'react-atomic-molecule';
+
 import Doc from '../templates/Doc'; 
+
 
 const icons = [
     ['Calendar', <Calendar />],
+    ['Code', <Code />],
     ['DropDown', <DropDown />],
     ['Description', <Description />],
     ['Facebook', <Facebook />],
@@ -68,3 +73,4 @@ const Styles = {
         position: 'relative',
     }
 };
+
