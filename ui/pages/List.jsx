@@ -1,9 +1,10 @@
 import React,{Component} from 'react'; 
 import Doc from '../templates/Doc'; 
+import {RVGrid} from 'pmvc_react_list/rv'
 import Pin from 'ricon/Pin';
 
 const rows = [
-    <Pin />,
+    [<Pin />],
 ];
 
 

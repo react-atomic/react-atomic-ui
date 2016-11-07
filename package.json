@@ -15,6 +15,7 @@
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react-addons-shallow-compare": "^15.3.2",
+    "react-virtualized": "*",
     "reshow": "*",
     "ricon": "*"
   },

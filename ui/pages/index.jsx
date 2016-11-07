@@ -3,13 +3,15 @@ import Atoms from '../pages/Atoms';
 import Molecules from '../pages/Molecules';
 import Organisms from '../pages/Organisms';
 import Icons from '../pages/Icons';
+import List from '../pages/List';
 import {ClientRoute} from 'reshow'; 
 
 const themes = {
     atoms: <Atoms />,
     molecules: <Molecules />,
     organisms: <Organisms />,
-    icons: <Icons />
+    icons: <Icons />,
+    list: <List />
 };
 
 const Index = (props) => {

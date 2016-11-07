@@ -8,7 +8,8 @@ const menus = [
     'atoms',
     'molecules',
     'organisms',
-    'icons'
+    'icons',
+    'list'
 ];
 
 class Menu extends ReshowComponent

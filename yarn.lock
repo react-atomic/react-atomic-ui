@@ -1064,7 +1064,13 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@^2.1.1, debug@^2.2.0, debug@~2.2.0, debug@2:
+debug@^2.1.1, debug@^2.2.0, debug@2:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.0.tgz#3912dc55d7167fc3af17d2b85c13f93deaedaa43"
+  dependencies:
+    ms "0.7.2"
+
+debug@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
@@ -1763,6 +1769,10 @@ ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
 
+ms@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
+
 nan@^2.3.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
@@ -1971,8 +1981,8 @@ pkg-dir@^1.0.0:
     find-up "^1.0.0"
 
 pmvc_react_admin@*:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.8.tgz#4c6035ede6391c9041a2d8832e488a12f3d8fb69"
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.9.tgz#df53f4c348743c97dee2d9435ab79b84f21bd76f"
   dependencies:
     organism-react-popup "*"
     react-atomic-molecule ">=0.0.41"
@@ -1980,11 +1990,10 @@ pmvc_react_admin@*:
     reshow ">=0.0.24"
 
 pmvc_react_list@*:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.0.7.tgz#50e117c3f7e087f32b34df07881a5ea887d2e5f6"
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.0.12.tgz#a7063ffe087d13317378be6b641c06662b3ad2b0"
   dependencies:
-    react-atomic-molecule ">=0.0.42"
-    react-virtualized "*"
+    react-atomic-molecule "*"
 
 preserve@^0.2.0:
   version "0.2.0"
