@@ -1,7 +1,14 @@
 import React,{Component} from 'react'; 
-import Doc from '../templates/Doc'; 
 import {RVGrid} from 'pmvc_react_list/rv'
 import Pin from 'ricon/Pin';
+import {
+    DividingHeader,
+    SemanticUI,
+} from 'react-atomic-molecule';
+
+import Link from '../molecules/Link';
+import Doc from '../templates/Doc'; 
+
 
 const rows = [
     [<Pin />],
@@ -12,6 +19,7 @@ class List extends Component {
 
     componentDidMount()
     {
+        console.log(this.el);
         this.setState({
             width: this.el.offsetWidth
         });
@@ -25,10 +33,13 @@ class List extends Component {
             grid = <RVGrid width={state.width} autoContainerWidth={true} rows={rows} />
         }
         return (
-            <Doc>
-                <div ref={el=>this.el=el}>
+            <Doc refCb={el=>this.el=el}>
+                <DividingHeader>
+                    <Link href="https://github.com/pmvc-theme/pmvc_react_list">
+                    PMVC List
+                    </Link>
+                </DividingHeader>
                 {grid}
-                </div>
             </Doc>
         );
     }
