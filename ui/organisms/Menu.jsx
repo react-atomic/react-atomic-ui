@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { VerticalMenu } from 'pmvc_react_admin';
-import { ReLink, ReshowComponent, Container } from 'reshow';
-import {mixClass} from 'react-atomic-molecule';
+import { SideMenu } from 'organism-react-navigation';
+import { ReshowComponent, Container } from 'reshow';
 import get from 'get-object-value';
 
 const menus = [
@@ -15,30 +15,21 @@ const menus = [
 class Menu extends ReshowComponent
 {
 
-    getMenu(arrMenu)
-    {
-        let menus = arrMenu.map((item, key)=>{
-            const classes = mixClass(
-                'item',
-                {
-                    'active': get(this,['state','data','menu']) === item 
-                }
-            );
-            return (
-            <ReLink className={classes} key={key} href={'#/'+item}>
-                {item}
-            </ReLink>
-            );
-        });
-        return menus;
-    }
-
     render()
     {
+        let thisMenus = {};
+        menus.forEach((item)=>{
+            thisMenus[item] = {
+                text: item,
+                href: '#/'+item
+            };
+        });
         return (
-            <VerticalMenu>
-                {this.getMenu(menus)}
-            </VerticalMenu>
+            <SideMenu
+                menus={thisMenus}
+                active={get(this,['state','data','menu'])}
+                component={<VerticalMenu />}
+            />
         );
     }
 }
