@@ -33659,6 +33659,10 @@ webpackJsonp([0],[
 
 	var _Link2 = _interopRequireDefault(_Link);
 
+	var _HeaderLink = __webpack_require__(413);
+
+	var _HeaderLink2 = _interopRequireDefault(_HeaderLink);
+
 	var _Doc = __webpack_require__(174);
 
 	var _Doc2 = _interopRequireDefault(_Doc);
@@ -33722,9 +33726,10 @@ webpackJsonp([0],[
 	                refCb: function refCb(el) {
 	                    return _this2.el = el;
 	                }
-	            }, void 0, _jsx(_reactAtomicMolecule.DividingHeader, {}, void 0, _jsx(_Link2.default, {
+	            }, void 0, _jsx(_HeaderLink2.default, {
+	                className: 'header',
 	                href: 'https://github.com/pmvc-theme/pmvc_react_list'
-	            }, void 0, 'PMVC List')), grid);
+	            }, void 0, 'PMVC List'), grid);
 	        }
 	    }]);
 
@@ -40750,6 +40755,47 @@ webpackJsonp([0],[
 	};
 
 	exports.default = Link;
+	module.exports = exports['default'];
+
+/***/ },
+/* 413 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) {
+	    for (var i = 1; i < arguments.length; i++) {
+	        var source = arguments[i];for (var key in source) {
+	            if (Object.prototype.hasOwnProperty.call(source, key)) {
+	                target[key] = source[key];
+	            }
+	        }
+	    }return target;
+	};
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactAtomicMolecule = __webpack_require__(177);
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	var HeaderLink = function HeaderLink(props) {
+	    return _react2.default.createElement(_reactAtomicMolecule.DividingHeader, _extends({
+	        atom: 'a',
+	        target: '_blank',
+	        style: { display: 'block' }
+	    }, props));
+	};
+
+	exports.default = HeaderLink;
 	module.exports = exports['default'];
 
 /***/ }

@@ -7,6 +7,7 @@ import {
 } from 'react-atomic-molecule';
 
 import Link from '../molecules/Link';
+import HeaderLink from '../molecules/HeaderLink';
 import Doc from '../templates/Doc'; 
 
 
@@ -34,11 +35,9 @@ class List extends Component {
         }
         return (
             <Doc refCb={el=>this.el=el}>
-                <DividingHeader>
-                    <Link href="https://github.com/pmvc-theme/pmvc_react_list">
+                <HeaderLink className="header" href="https://github.com/pmvc-theme/pmvc_react_list">
                     PMVC List
-                    </Link>
-                </DividingHeader>
+                </HeaderLink>
                 {grid}
             </Doc>
         );
