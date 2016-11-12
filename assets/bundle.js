@@ -33703,7 +33703,6 @@ webpackJsonp([0],[
 	    _createClass(List, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            console.log(this.el);
 	            this.setState({
 	                width: this.el.offsetWidth
 	            });

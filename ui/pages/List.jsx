@@ -20,7 +20,6 @@ class List extends Component {
 
     componentDidMount()
     {
-        console.log(this.el);
         this.setState({
             width: this.el.offsetWidth
         });
