@@ -11,6 +11,7 @@
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
+    "class-lib": "*",
     "get-object-value": "*",
     "organism-react-navigation": "*",
     "pmvc_react_admin": "*",

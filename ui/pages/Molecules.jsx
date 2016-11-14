@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-import {dispatch} from 'reshow';
+import {navigationDispatch} from 'organism-react-navigation';
 import {
     DividingHeader,
     Form,
@@ -16,12 +16,9 @@ class Molecules extends Component
     componentDidMount()
     {
         setTimeout(()=>{
-            dispatch({
-                type: 'config/set',
+            navigationDispatch({
                 params: {
-                    data: {
-                        menu: 'molecules'
-                    }
+                    activeMenu: 'molecules'
                 }
             });
         });
@@ -29,15 +26,14 @@ class Molecules extends Component
 
     componentWillUnmount()
     {
-        dispatch({
-            type: 'config/set',
-            params: {
-                data: null
-            }
+        setTimeout(()=>{
+            navigationDispatch({
+                params: {
+                    activeMenu: null
+                }
+            });
         });
     }
-
-    component
 
     render()
     {
