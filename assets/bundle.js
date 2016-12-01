@@ -44874,8 +44874,9 @@ webpackJsonp([0],[
 
 	var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(props) {
 	    var url = 'https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md';
-	    return _jsx('div', {}, void 0, _jsx(_organismReactProgress.PageLoadProgressHandler, {}), _jsx('div', {}, void 0, _jsx(_reactAtomicMolecule.Button, {
-	        style: Styles.button,
+	    return _jsx('div', {}, void 0, _jsx(_organismReactProgress.PageLoadProgressHandler, {
+	        ajax: true
+	    }), _jsx(_reactAtomicMolecule.Button, {
 	        onClick: function onClick() {
 	            (0, _organismReactAjax.ajaxDispatch)({
 	                type: 'ajaxGet',
@@ -44887,23 +44888,17 @@ webpackJsonp([0],[
 	                }
 	            });
 	        }
-	    }, void 0, 'Call Ajax')));
+	    }, void 0, 'Call Ajax'));
 	};
 
 	exports.default = PageLoadProgressHandlerExample;
-
-	var Styles = {
-	    button: {
-	        marginBottom: 10
-	    }
-	};
 	module.exports = exports['default'];
 
 /***/ },
 /* 556 */
 /***/ function(module, exports) {
 
-	module.exports = "import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress'; \nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {\n    Button,\n} from 'react-atomic-molecule';\n\nconst PageLoadProgressHandlerExample = (props) =>\n{\n    let url = 'https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md';\n    return (\n        <div>\n\n            <PageLoadProgressHandler />\n\n            <div>\n                <Button style={Styles.button} onClick={()=>{\n                    ajaxDispatch({\n                        type: 'ajaxGet',\n                        params: {\n                            url: url,\n                            callback: (json,text,o)=>\n                            {\n                                alert(text);\n                            }\n                        }\n                    });\n                }}>Call Ajax</Button>\n            </div>\n\n        </div>\n    );\n};\n\nexport default PageLoadProgressHandlerExample;\n\nconst Styles = {\n    button: {\n        marginBottom: 10\n    }\n};\n"
+	module.exports = "import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress'; \nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {\n    Button,\n} from 'react-atomic-molecule';\n\nconst PageLoadProgressHandlerExample = (props) =>\n{\n    let url = 'https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md';\n    return (\n        <div>\n\n            <PageLoadProgressHandler ajax={true}/>\n\n            <Button onClick={()=>{\n                ajaxDispatch({\n                    type: 'ajaxGet',\n                    params: {\n                        url: url,\n                        callback: (json,text,o)=>\n                        {\n                            alert(text);\n                        }\n                    }\n                });\n            }}>\n                Call Ajax\n            </Button>\n\n        </div>\n    );\n};\n\nexport default PageLoadProgressHandlerExample;\n\n"
 
 /***/ },
 /* 557 */

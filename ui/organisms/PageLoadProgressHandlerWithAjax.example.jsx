@@ -11,22 +11,22 @@ const PageLoadProgressHandlerExample = (props) =>
     return (
         <div>
 
-            <PageLoadProgressHandler />
+            <PageLoadProgressHandler ajax={true}/>
 
-            <div>
-                <Button style={Styles.button} onClick={()=>{
-                    ajaxDispatch({
-                        type: 'ajaxGet',
-                        params: {
-                            url: url,
-                            callback: (json,text,o)=>
-                            {
-                                alert(text);
-                            }
+            <Button onClick={()=>{
+                ajaxDispatch({
+                    type: 'ajaxGet',
+                    params: {
+                        url: url,
+                        callback: (json,text,o)=>
+                        {
+                            alert(text);
                         }
-                    });
-                }}>Call Ajax</Button>
-            </div>
+                    }
+                });
+            }}>
+                Call Ajax
+            </Button>
 
         </div>
     );
@@ -34,8 +34,3 @@ const PageLoadProgressHandlerExample = (props) =>
 
 export default PageLoadProgressHandlerExample;
 
-const Styles = {
-    button: {
-        marginBottom: 10
-    }
-};
