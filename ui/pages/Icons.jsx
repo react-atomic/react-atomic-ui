@@ -5,10 +5,12 @@ import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
 import Facebook from 'ricon/Facebook';
 import FacebookMessage from 'ricon/FacebookMessage';
+import Git from 'ricon/Git';
 import Hamburger from 'ricon/Hamburger';
 import HamburgerToArrow from 'ricon/HamburgerToArrow';
 import HamburgerToX from 'ricon/HamburgerToX';
 import MyLocation from 'ricon/MyLocation';
+import Npm from 'ricon/Npm';
 import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
 import Pulse from 'ricon/Pulse';
@@ -27,6 +29,7 @@ const icons = [
     ['Description', <Description />],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
+    ['Git', <Git />],
     ['Hamburger', <Hamburger />],
     ['HamburgerToArrow', <HamburgerToArrow on={true} />],
     ['HamburgerToX', <HamburgerToX on={true} />],
@@ -34,6 +37,7 @@ const icons = [
     ['MyLocation (off)', <MyLocation type="off" />],
     ['MyLocation (on)', <MyLocation type="on" />],
     ['MyLocation (loading)', <MyLocation loading={true} type="on" />],
+    ['Npm', <Npm />],
     ['Phone', <Phone />],
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],

@@ -1,39 +1,18 @@
-import React, {Component} from 'react'; 
-import {navigationDispatch} from 'organism-react-navigation';
+import BasePage from '../pages/BasePage';
+
 import {
     DividingHeader,
     Form,
     Field,
     InputBox,
     SearchBox
-
 } from 'react-atomic-molecule';
 
 import Doc from '../templates/Doc'; 
 
-class Molecules extends Component
+class Molecules extends BasePage 
 {
-    componentDidMount()
-    {
-        setTimeout(()=>{
-            navigationDispatch({
-                params: {
-                    activeMenu: 'molecules'
-                }
-            });
-        });
-    }
-
-    componentWillUnmount()
-    {
-        setTimeout(()=>{
-            navigationDispatch({
-                params: {
-                    activeMenu: null
-                }
-            });
-        });
-    }
+    pageName = 'molecules';
 
     render()
     {
