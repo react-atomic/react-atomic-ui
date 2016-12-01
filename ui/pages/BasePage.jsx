@@ -8,7 +8,7 @@ class BasePage extends Component
         setTimeout(()=>{
             navigationDispatch({
                 params: {
-                    activeMenu: this.pageName 
+                    activeMenu: this.props.pageName 
                 }
             });
         });

@@ -1,4 +1,3 @@
-import React,{Component} from 'react'; 
 import {RVGrid} from 'pmvc_react_list/rv'
 import Pin from 'ricon/Pin';
 import {
@@ -9,6 +8,7 @@ import {
 import Link from '../molecules/Link';
 import HeaderLink from '../molecules/HeaderLink';
 import Doc from '../templates/Doc'; 
+import BasePage from '../pages/BasePage';
 
 
 const rows = [
@@ -16,10 +16,16 @@ const rows = [
 ];
 
 
-class List extends Component {
+class List extends BasePage
+{
+
+    static defaultProps = {
+        pageName: 'list' 
+    };
 
     componentDidMount()
     {
+        super.componentDidMount();
         this.setState({
             width: this.el.offsetWidth
         });

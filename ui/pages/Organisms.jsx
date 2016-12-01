@@ -10,7 +10,9 @@ import pageLoadProgressHandlerWithAjax from '!raw!../../../ui/organisms/PageLoad
 
 class Organisms extends BasePage 
 {
-    pageName = 'organisms';
+    static defaultProps = {
+        pageName: 'organisms' 
+    };
     render()
     {
         return (

@@ -1,4 +1,3 @@
-import React,{Component} from 'react'; 
 import Calendar from 'ricon/Calendar';
 import Code from 'ricon/Code';
 import Description from 'ricon/Description';
@@ -19,6 +18,7 @@ import ZoomIn from 'ricon/ZoomIn';
 
 import {reactStyle} from 'react-atomic-molecule';
 
+import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
 
 
@@ -45,22 +45,28 @@ const icons = [
     ['ZoomIn', <ZoomIn />],
 ];
 
-const Icons = (props) =>
+class Icons extends BasePage 
 {
-    return (
-        <Doc>
-        <div className="pure-g">
-        {
-            icons.map((v,k)=>
-                <div key={k} className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-5" style={Styles.grid}>
-                    <div style={Styles.icon}>{v[1]}</div>
-                    <div>{v[0]}</div>
-                </div>
-            )
-        }
-        </div>
-        </Doc>
-    );
+    static defaultProps = {
+        pageName: 'icons' 
+    };
+    render()
+    {
+        return (
+            <Doc>
+            <div className="pure-g">
+            {
+                icons.map((v,k)=>
+                    <div key={k} className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-5" style={Styles.grid}>
+                        <div style={Styles.icon}>{v[1]}</div>
+                        <div>{v[0]}</div>
+                    </div>
+                )
+            }
+            </div>
+            </Doc>
+        );
+    }
 }
 
 export default Icons;

@@ -12,8 +12,9 @@ import Doc from '../templates/Doc';
 
 class Molecules extends BasePage 
 {
-    pageName = 'molecules';
-
+    static defaultProps = {
+        pageName: 'molecules' 
+    };
     render()
     {
         return (

@@ -17146,7 +17146,7 @@ webpackJsonp([0],[
 
 	var _Atoms2 = _interopRequireDefault(_Atoms);
 
-	var _Molecules = __webpack_require__(372);
+	var _Molecules = __webpack_require__(373);
 
 	var _Molecules2 = _interopRequireDefault(_Molecules);
 
@@ -27769,47 +27769,93 @@ webpackJsonp([0],[
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _jsx = function () {
-	  var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
-	    var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
-	      props = {};
-	    }if (props && defaultProps) {
-	      for (var propName in defaultProps) {
-	        if (props[propName] === void 0) {
-	          props[propName] = defaultProps[propName];
-	        }
-	      }
-	    } else if (!props) {
-	      props = defaultProps || {};
-	    }if (childrenLength === 1) {
-	      props.children = children;
-	    } else if (childrenLength > 1) {
-	      var childArray = Array(childrenLength);for (var i = 0; i < childrenLength; i++) {
-	        childArray[i] = arguments[i + 3];
-	      }props.children = childArray;
-	    }return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null };
-	  };
+	    var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
+	        var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
+	            props = {};
+	        }if (props && defaultProps) {
+	            for (var propName in defaultProps) {
+	                if (props[propName] === void 0) {
+	                    props[propName] = defaultProps[propName];
+	                }
+	            }
+	        } else if (!props) {
+	            props = defaultProps || {};
+	        }if (childrenLength === 1) {
+	            props.children = children;
+	        } else if (childrenLength > 1) {
+	            var childArray = Array(childrenLength);for (var i = 0; i < childrenLength; i++) {
+	                childArray[i] = arguments[i + 3];
+	            }props.children = childArray;
+	        }return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null };
+	    };
 	}();
 
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
+	var _createClass = function () {
+	    function defineProperties(target, props) {
+	        for (var i = 0; i < props.length; i++) {
+	            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	        }
+	    }return function (Constructor, protoProps, staticProps) {
+	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	    };
+	}();
 
 	var _Doc = __webpack_require__(331);
 
 	var _Doc2 = _interopRequireDefault(_Doc);
 
+	var _BasePage2 = __webpack_require__(372);
+
+	var _BasePage3 = _interopRequireDefault(_BasePage2);
+
 	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
+	    return obj && obj.__esModule ? obj : { default: obj };
 	}
 
-	var Atoms = function Atoms(props) {
-	  return _jsx(_Doc2.default, {}, void 0, 'This is atom');
-	};
+	function _classCallCheck(instance, Constructor) {
+	    if (!(instance instanceof Constructor)) {
+	        throw new TypeError("Cannot call a class as a function");
+	    }
+	}
 
+	function _possibleConstructorReturn(self, call) {
+	    if (!self) {
+	        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	    }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	    if (typeof superClass !== "function" && superClass !== null) {
+	        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	var Atoms = function (_BasePage) {
+	    _inherits(Atoms, _BasePage);
+
+	    function Atoms() {
+	        _classCallCheck(this, Atoms);
+
+	        return _possibleConstructorReturn(this, (Atoms.__proto__ || Object.getPrototypeOf(Atoms)).apply(this, arguments));
+	    }
+
+	    _createClass(Atoms, [{
+	        key: 'render',
+	        value: function render() {
+	            return _jsx(_Doc2.default, {}, void 0, 'This is atom');
+	        }
+	    }]);
+
+	    return Atoms;
+	}(_BasePage3.default);
+
+	Atoms.defaultProps = {
+	    pageName: 'atoms'
+	};
 	exports.default = Atoms;
 	module.exports = exports['default'];
 
@@ -32269,112 +32315,6 @@ webpackJsonp([0],[
 	    value: true
 	});
 
-	var _jsx = function () {
-	    var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
-	        var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
-	            props = {};
-	        }if (props && defaultProps) {
-	            for (var propName in defaultProps) {
-	                if (props[propName] === void 0) {
-	                    props[propName] = defaultProps[propName];
-	                }
-	            }
-	        } else if (!props) {
-	            props = defaultProps || {};
-	        }if (childrenLength === 1) {
-	            props.children = children;
-	        } else if (childrenLength > 1) {
-	            var childArray = Array(childrenLength);for (var i = 0; i < childrenLength; i++) {
-	                childArray[i] = arguments[i + 3];
-	            }props.children = childArray;
-	        }return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null };
-	    };
-	}();
-
-	var _createClass = function () {
-	    function defineProperties(target, props) {
-	        for (var i = 0; i < props.length; i++) {
-	            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	        }
-	    }return function (Constructor, protoProps, staticProps) {
-	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	    };
-	}();
-
-	var _BasePage2 = __webpack_require__(373);
-
-	var _BasePage3 = _interopRequireDefault(_BasePage2);
-
-	var _reactAtomicMolecule = __webpack_require__(200);
-
-	var _Doc = __webpack_require__(331);
-
-	var _Doc2 = _interopRequireDefault(_Doc);
-
-	function _interopRequireDefault(obj) {
-	    return obj && obj.__esModule ? obj : { default: obj };
-	}
-
-	function _classCallCheck(instance, Constructor) {
-	    if (!(instance instanceof Constructor)) {
-	        throw new TypeError("Cannot call a class as a function");
-	    }
-	}
-
-	function _possibleConstructorReturn(self, call) {
-	    if (!self) {
-	        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	    }return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	}
-
-	function _inherits(subClass, superClass) {
-	    if (typeof superClass !== "function" && superClass !== null) {
-	        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
-
-	var Molecules = function (_BasePage) {
-	    _inherits(Molecules, _BasePage);
-
-	    function Molecules() {
-	        var _ref;
-
-	        var _temp, _this, _ret;
-
-	        _classCallCheck(this, Molecules);
-
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	            args[_key] = arguments[_key];
-	        }
-
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Molecules.__proto__ || Object.getPrototypeOf(Molecules)).call.apply(_ref, [this].concat(args))), _this), _this.pageName = 'molecules', _temp), _possibleConstructorReturn(_this, _ret);
-	    }
-
-	    _createClass(Molecules, [{
-	        key: 'render',
-	        value: function render() {
-	            return _jsx(_Doc2.default, {}, void 0, _jsx(_reactAtomicMolecule.DividingHeader, {}, void 0, 'Input box'), _jsx('div', {}, void 0, 'Inputbox'), _jsx(_reactAtomicMolecule.Form, {}, void 0, _jsx(_reactAtomicMolecule.Field, {
-	                atom: 'input'
-	            })), _jsx('div', {}, void 0, 'Inputbox with button'), _jsx(_reactAtomicMolecule.InputBox, {}), _jsx('div', {}, void 0, 'Search Box'), _jsx(_reactAtomicMolecule.SearchBox, {}));
-	        }
-	    }]);
-
-	    return Molecules;
-	}(_BasePage3.default);
-
-	exports.default = Molecules;
-	module.exports = exports['default'];
-
-/***/ },
-/* 373 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
 	var _createClass = function () {
 	    function defineProperties(target, props) {
 	        for (var i = 0; i < props.length; i++) {
@@ -32430,7 +32370,7 @@ webpackJsonp([0],[
 	            setTimeout(function () {
 	                (0, _organismReactNavigation.navigationDispatch)({
 	                    params: {
-	                        activeMenu: _this2.pageName
+	                        activeMenu: _this2.props.pageName
 	                    }
 	                });
 	            });
@@ -32452,6 +32392,107 @@ webpackJsonp([0],[
 	}(_react.Component);
 
 	exports.default = BasePage;
+	module.exports = exports['default'];
+
+/***/ },
+/* 373 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _jsx = function () {
+	    var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
+	        var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
+	            props = {};
+	        }if (props && defaultProps) {
+	            for (var propName in defaultProps) {
+	                if (props[propName] === void 0) {
+	                    props[propName] = defaultProps[propName];
+	                }
+	            }
+	        } else if (!props) {
+	            props = defaultProps || {};
+	        }if (childrenLength === 1) {
+	            props.children = children;
+	        } else if (childrenLength > 1) {
+	            var childArray = Array(childrenLength);for (var i = 0; i < childrenLength; i++) {
+	                childArray[i] = arguments[i + 3];
+	            }props.children = childArray;
+	        }return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null };
+	    };
+	}();
+
+	var _createClass = function () {
+	    function defineProperties(target, props) {
+	        for (var i = 0; i < props.length; i++) {
+	            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	        }
+	    }return function (Constructor, protoProps, staticProps) {
+	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	    };
+	}();
+
+	var _BasePage2 = __webpack_require__(372);
+
+	var _BasePage3 = _interopRequireDefault(_BasePage2);
+
+	var _reactAtomicMolecule = __webpack_require__(200);
+
+	var _Doc = __webpack_require__(331);
+
+	var _Doc2 = _interopRequireDefault(_Doc);
+
+	function _interopRequireDefault(obj) {
+	    return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	    if (!(instance instanceof Constructor)) {
+	        throw new TypeError("Cannot call a class as a function");
+	    }
+	}
+
+	function _possibleConstructorReturn(self, call) {
+	    if (!self) {
+	        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	    }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	    if (typeof superClass !== "function" && superClass !== null) {
+	        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	var Molecules = function (_BasePage) {
+	    _inherits(Molecules, _BasePage);
+
+	    function Molecules() {
+	        _classCallCheck(this, Molecules);
+
+	        return _possibleConstructorReturn(this, (Molecules.__proto__ || Object.getPrototypeOf(Molecules)).apply(this, arguments));
+	    }
+
+	    _createClass(Molecules, [{
+	        key: 'render',
+	        value: function render() {
+	            return _jsx(_Doc2.default, {}, void 0, _jsx(_reactAtomicMolecule.DividingHeader, {}, void 0, 'Input box'), _jsx('div', {}, void 0, 'Inputbox'), _jsx(_reactAtomicMolecule.Form, {}, void 0, _jsx(_reactAtomicMolecule.Field, {
+	                atom: 'input'
+	            })), _jsx('div', {}, void 0, 'Inputbox with button'), _jsx(_reactAtomicMolecule.InputBox, {}), _jsx('div', {}, void 0, 'Search Box'), _jsx(_reactAtomicMolecule.SearchBox, {}));
+	        }
+	    }]);
+
+	    return Molecules;
+	}(_BasePage3.default);
+
+	Molecules.defaultProps = {
+	    pageName: 'molecules'
+	};
+	exports.default = Molecules;
 	module.exports = exports['default'];
 
 /***/ },
@@ -32500,7 +32541,7 @@ webpackJsonp([0],[
 
 	var _organismReactCode2 = _interopRequireDefault(_organismReactCode);
 
-	var _BasePage2 = __webpack_require__(373);
+	var _BasePage2 = __webpack_require__(372);
 
 	var _BasePage3 = _interopRequireDefault(_BasePage2);
 
@@ -32550,17 +32591,9 @@ webpackJsonp([0],[
 	    _inherits(Organisms, _BasePage);
 
 	    function Organisms() {
-	        var _ref;
-
-	        var _temp, _this, _ret;
-
 	        _classCallCheck(this, Organisms);
 
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	            args[_key] = arguments[_key];
-	        }
-
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Organisms.__proto__ || Object.getPrototypeOf(Organisms)).call.apply(_ref, [this].concat(args))), _this), _this.pageName = 'organisms', _temp), _possibleConstructorReturn(_this, _ret);
+	        return _possibleConstructorReturn(this, (Organisms.__proto__ || Object.getPrototypeOf(Organisms)).apply(this, arguments));
 	    }
 
 	    _createClass(Organisms, [{
@@ -32581,6 +32614,9 @@ webpackJsonp([0],[
 	    return Organisms;
 	}(_BasePage3.default);
 
+	Organisms.defaultProps = {
+	    pageName: 'organisms'
+	};
 	exports.default = Organisms;
 	module.exports = exports['default'];
 
@@ -44879,6 +44915,16 @@ webpackJsonp([0],[
 	    value: true
 	});
 
+	var _createClass = function () {
+	    function defineProperties(target, props) {
+	        for (var i = 0; i < props.length; i++) {
+	            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	        }
+	    }return function (Constructor, protoProps, staticProps) {
+	        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	    };
+	}();
+
 	var _jsx = function () {
 	    var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
 	        var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
@@ -44900,10 +44946,6 @@ webpackJsonp([0],[
 	        }return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null };
 	    };
 	}();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
 
 	var _Calendar = __webpack_require__(558);
 
@@ -44975,12 +45017,34 @@ webpackJsonp([0],[
 
 	var _reactAtomicMolecule = __webpack_require__(200);
 
+	var _BasePage2 = __webpack_require__(372);
+
+	var _BasePage3 = _interopRequireDefault(_BasePage2);
+
 	var _Doc = __webpack_require__(331);
 
 	var _Doc2 = _interopRequireDefault(_Doc);
 
 	function _interopRequireDefault(obj) {
 	    return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	    if (!(instance instanceof Constructor)) {
+	        throw new TypeError("Cannot call a class as a function");
+	    }
+	}
+
+	function _possibleConstructorReturn(self, call) {
+	    if (!self) {
+	        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	    }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	    if (typeof superClass !== "function" && superClass !== null) {
+	        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
 	var icons = [['Calendar', _jsx(_Calendar2.default, {})], ['Code', _jsx(_Code2.default, {})], ['DropDown', _jsx(_DropDown2.default, {})], ['Description', _jsx(_Description2.default, {})], ['Facebook', _jsx(_Facebook2.default, {})], ['FacebookMessage', _jsx(_FacebookMessage2.default, {})], ['Git', _jsx(_Git2.default, {})], ['Hamburger', _jsx(_Hamburger2.default, {})], ['HamburgerToArrow', _jsx(_HamburgerToArrow2.default, {
@@ -44998,19 +45062,37 @@ webpackJsonp([0],[
 	    style: { position: 'static' }
 	})], ['ZoomIn', _jsx(_ZoomIn2.default, {})]];
 
-	var Icons = function Icons(props) {
-	    return _jsx(_Doc2.default, {}, void 0, _jsx('div', {
-	        className: 'pure-g'
-	    }, void 0, icons.map(function (v, k) {
-	        return _jsx('div', {
-	            className: 'pure-u-1 pure-u-md-1-3 pure-u-lg-1-5',
-	            style: Styles.grid
-	        }, k, _jsx('div', {
-	            style: Styles.icon
-	        }, void 0, v[1]), _jsx('div', {}, void 0, v[0]));
-	    })));
-	};
+	var Icons = function (_BasePage) {
+	    _inherits(Icons, _BasePage);
 
+	    function Icons() {
+	        _classCallCheck(this, Icons);
+
+	        return _possibleConstructorReturn(this, (Icons.__proto__ || Object.getPrototypeOf(Icons)).apply(this, arguments));
+	    }
+
+	    _createClass(Icons, [{
+	        key: 'render',
+	        value: function render() {
+	            return _jsx(_Doc2.default, {}, void 0, _jsx('div', {
+	                className: 'pure-g'
+	            }, void 0, icons.map(function (v, k) {
+	                return _jsx('div', {
+	                    className: 'pure-u-1 pure-u-md-1-3 pure-u-lg-1-5',
+	                    style: Styles.grid
+	                }, k, _jsx('div', {
+	                    style: Styles.icon
+	                }, void 0, v[1]), _jsx('div', {}, void 0, v[0]));
+	            })));
+	        }
+	    }]);
+
+	    return Icons;
+	}(_BasePage3.default);
+
+	Icons.defaultProps = {
+	    pageName: 'icons'
+	};
 	exports.default = Icons;
 
 	var Styles = {
@@ -45909,6 +45991,22 @@ webpackJsonp([0],[
 	    };
 	}();
 
+	var _get = function get(object, property, receiver) {
+	    if (object === null) object = Function.prototype;var desc = Object.getOwnPropertyDescriptor(object, property);if (desc === undefined) {
+	        var parent = Object.getPrototypeOf(object);if (parent === null) {
+	            return undefined;
+	        } else {
+	            return get(parent, property, receiver);
+	        }
+	    } else if ("value" in desc) {
+	        return desc.value;
+	    } else {
+	        var getter = desc.get;if (getter === undefined) {
+	            return undefined;
+	        }return getter.call(receiver);
+	    }
+	};
+
 	var _jsx = function () {
 	    var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7;return function createRawReactElement(type, props, key, children) {
 	        var defaultProps = type && type.defaultProps;var childrenLength = arguments.length - 3;if (!props && childrenLength !== 0) {
@@ -45931,10 +46029,6 @@ webpackJsonp([0],[
 	    };
 	}();
 
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	var _rv = __webpack_require__(569);
 
 	var _Pin = __webpack_require__(564);
@@ -45954,6 +46048,10 @@ webpackJsonp([0],[
 	var _Doc = __webpack_require__(331);
 
 	var _Doc2 = _interopRequireDefault(_Doc);
+
+	var _BasePage2 = __webpack_require__(372);
+
+	var _BasePage3 = _interopRequireDefault(_BasePage2);
 
 	function _interopRequireDefault(obj) {
 	    return obj && obj.__esModule ? obj : { default: obj };
@@ -45979,8 +46077,8 @@ webpackJsonp([0],[
 
 	var rows = [[_jsx(_Pin2.default, {})]];
 
-	var List = function (_Component) {
-	    _inherits(List, _Component);
+	var List = function (_BasePage) {
+	    _inherits(List, _BasePage);
 
 	    function List() {
 	        _classCallCheck(this, List);
@@ -45991,6 +46089,7 @@ webpackJsonp([0],[
 	    _createClass(List, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
+	            _get(List.prototype.__proto__ || Object.getPrototypeOf(List.prototype), 'componentDidMount', this).call(this);
 	            this.setState({
 	                width: this.el.offsetWidth
 	            });
@@ -46021,8 +46120,11 @@ webpackJsonp([0],[
 	    }]);
 
 	    return List;
-	}(_react.Component);
+	}(_BasePage3.default);
 
+	List.defaultProps = {
+	    pageName: 'list'
+	};
 	exports.default = List;
 	module.exports = exports['default'];
 
