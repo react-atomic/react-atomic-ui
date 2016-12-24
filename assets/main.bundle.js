@@ -50299,7 +50299,8 @@ webpackJsonp([0],[
 
 	var Styles = {
 	    container: {
-	        position: 'relative'
+	        position: 'relative',
+	        overflow: 'hidden'
 	    },
 	    svg: {
 	        fill: '#3b5998'
