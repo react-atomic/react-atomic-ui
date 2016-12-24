@@ -8,6 +8,9 @@ import pageLoadProgressHandler from '!raw!../../../ui/organisms/PageLoadProgress
 import PageLoadProgressHandlerWithAjax from '../organisms/PageLoadProgressHandlerWithAjax.example';
 import pageLoadProgressHandlerWithAjax from '!raw!../../../ui/organisms/PageLoadProgressHandlerWithAjax.example';
 
+import FBLike from '../organisms/FBLike.example';
+import fBLike from '!raw!../../../ui/organisms/FBLike.example';
+
 class Organisms extends BasePage 
 {
     static defaultProps = {
@@ -30,6 +33,14 @@ class Organisms extends BasePage
                     header="Page Load Progress With Ajax"
                 >
                     <PageLoadProgressHandlerWithAjax />
+                </CodeExample>
+                <CodeExample
+                    code={fBLike}
+                    header="Facebook Like Button"
+                    git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-facebook/"
+                    npm="organism-react-facebook"
+                >
+                    <FBLike />
                 </CodeExample>
             </Doc>
         );
