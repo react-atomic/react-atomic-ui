@@ -28481,6 +28481,8 @@ webpackJsonp([0],[
 	    _createClass(ClientRoute, [{
 	        key: 'parseUrl',
 	        value: function parseUrl(url) {
+	            var goAnchorDelay = this.props.goAnchorDelay;
+
 	            var separator = '/';
 	            var params = url.split(separator);
 	            var anchor = url.split('#')[1].split(separator)[0];
@@ -28492,7 +28494,7 @@ webpackJsonp([0],[
 	                        var pos = (0, _getoffset2.default)(dom);
 	                        (0, _smoothScrollTo2.default)(pos.top);
 	                    }
-	                }, 500);
+	                }, goAnchorDelay);
 	                return {
 	                    themePath: params[last]
 	                };
@@ -28529,7 +28531,8 @@ webpackJsonp([0],[
 	}(_Reshow2.Reshow);
 
 	ClientRoute.defaultProps = {
-	    ajax: false
+	    ajax: false,
+	    goAnchorDelay: 1000
 	};
 	exports.default = (0, _reshow2.default)(ClientRoute);
 	module.exports = exports['default'];
