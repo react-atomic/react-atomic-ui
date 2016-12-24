@@ -28492,7 +28492,7 @@ webpackJsonp([0],[
 	                        var pos = (0, _getoffset2.default)(dom);
 	                        (0, _smoothScrollTo2.default)(pos.top);
 	                    }
-	                }, 100);
+	                }, 500);
 	                return {
 	                    themePath: params[last]
 	                };

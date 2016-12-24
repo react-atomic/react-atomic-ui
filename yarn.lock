@@ -2276,8 +2276,8 @@ reshow-app@*:
     worker-loader "*"
 
 reshow@*, reshow@>=0.0.24:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.1.9.tgz#e7fd6f8ca9bfaea20efea5a457b055aeaf180905"
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.1.10.tgz#7211444c9b8db119d4edb2da4b9f997aae4bd5e3"
   dependencies:
     getoffset "*"
     organism-react-ajax "*"
