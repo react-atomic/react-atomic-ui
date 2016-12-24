@@ -1890,8 +1890,8 @@ organism-react-animate@*:
     react-atomic-molecule "*"
 
 organism-react-code@*:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.0.3.tgz#754181437e612c50be89ce7b5bb979a4eec19bfa"
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.0.4.tgz#897338339107c3a7d1ace420197bdbeeaf0e1395"
   dependencies:
     highlight.js "*"
     marked "*"
@@ -2276,11 +2276,13 @@ reshow-app@*:
     worker-loader "*"
 
 reshow@*, reshow@>=0.0.24:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.1.8.tgz#2f94ddd7ea464ce04a3e5533a4dbc87a8de90df0"
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.1.9.tgz#e7fd6f8ca9bfaea20efea5a457b055aeaf180905"
   dependencies:
+    getoffset "*"
     organism-react-ajax "*"
     reduce-flux "*"
+    smooth-scroll-to "*"
 
 ricon@*:
   version "0.0.9"

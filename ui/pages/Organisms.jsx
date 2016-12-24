@@ -39,6 +39,7 @@ class Organisms extends BasePage
                     header="Facebook Like Button"
                     git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-facebook/"
                     npm="organism-react-facebook"
+                    id="organism-react-facebook"
                 >
                     <FBLike />
                 </CodeExample>
