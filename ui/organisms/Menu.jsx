@@ -8,7 +8,8 @@ const menus = [
     'molecules',
     'organisms',
     'icons',
-    'list'
+    'list',
+    'carousel'
 ];
 
 const Menu = (props)=>

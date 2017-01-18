@@ -1,4 +1,5 @@
 import Calendar from 'ricon/Calendar';
+import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
 import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
@@ -24,6 +25,7 @@ import Doc from '../templates/Doc';
 
 const icons = [
     ['Calendar', <Calendar />],
+    ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
     ['DropDown', <DropDown />],
     ['Description', <Description />],
