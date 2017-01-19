@@ -1,6 +1,11 @@
+import CodeExample from 'organism-react-code';
+
 import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
-import {Carousel, CarouselAnimation} from 'organism-react-carousel';
+
+/*example*/
+import CarouselAnimation from '../organisms/CarouselAnimation.example';
+import carouselAnimation from '!raw!../../../ui/organisms/CarouselAnimation.example';
 
 class CarouselPage extends BasePage
 {
@@ -10,23 +15,14 @@ class CarouselPage extends BasePage
     render() {
         return (
             <Doc>
-                <CarouselAnimation 
-                    carouselAttr={{
-                        style: Styles.carousel
-                    }}
-                    style={Styles.slide}
+                <CodeExample
+                    code={carouselAnimation}
+                    header="Carousel Animation"
+                    git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
+                    npm="organism-react-carousel"
                 >
-                    <Carousel>
-                        <img
-                            style={Styles.img}
-                            src="https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
-                        />
-                    </Carousel>
-                    <Carousel>2</Carousel>
-                    <Carousel>3</Carousel>
-                    <Carousel>4</Carousel>
-                    <Carousel>5</Carousel>
-                </CarouselAnimation>
+                    <CarouselAnimation />
+                </CodeExample>
             </Doc>
         );
     }
@@ -34,17 +30,3 @@ class CarouselPage extends BasePage
 
 export default CarouselPage;
 
-const Styles = {
-    slide: {
-        margin: '0 10%'
-    },
-    carousel: {
-        width: '100%',
-        height: 300,
-        background: '#00558B'
-    },
-    img: {
-        maxWidth: '100%',
-        verticalAlign: 'bottom'
-    }
-};
