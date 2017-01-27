@@ -3,13 +3,13 @@ import CodeExample from 'organism-react-code';
 import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
 import PageLoadProgressHandler from '../organisms/PageLoadProgressHandler.example';
-import pageLoadProgressHandler from '!raw!../../../ui/organisms/PageLoadProgressHandler.example';
+import pageLoadProgressHandler from '!raw-loader!../../../ui/organisms/PageLoadProgressHandler.example';
 
 import PageLoadProgressHandlerWithAjax from '../organisms/PageLoadProgressHandlerWithAjax.example';
-import pageLoadProgressHandlerWithAjax from '!raw!../../../ui/organisms/PageLoadProgressHandlerWithAjax.example';
+import pageLoadProgressHandlerWithAjax from '!raw-loader!../../../ui/organisms/PageLoadProgressHandlerWithAjax.example';
 
 import FBLike from '../organisms/FBLike.example';
-import fBLike from '!raw!../../../ui/organisms/FBLike.example';
+import fBLike from '!raw-loader!../../../ui/organisms/FBLike.example';
 
 class Organisms extends BasePage 
 {

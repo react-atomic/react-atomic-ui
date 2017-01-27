@@ -1,14 +1,13 @@
 import React from 'react';
-import {Carousel, CarouselAnimation} from 'organism-react-carousel';
+import {Carousel, CarouselSlide} from 'organism-react-carousel';
 
-const CarouselAnimationExample = (props)=>
+const CarouselSlideExample = (props) =>
 {
-    return (
-        <CarouselAnimation 
+    return ( 
+        <CarouselSlide 
             carouselAttr={{
                 style: Styles.carousel
             }}
-            style={Styles.container}
         >
             <Carousel>
                 <img
@@ -20,23 +19,16 @@ const CarouselAnimationExample = (props)=>
             <Carousel>3</Carousel>
             <Carousel>4</Carousel>
             <Carousel>5</Carousel>
-        </CarouselAnimation>
+        </CarouselSlide>
     );
-};
+}
 
-export default CarouselAnimationExample;
+export default CarouselSlideExample;
 
 const Styles = {
-    container: {
-        margin: '0 10%'
-    },
     carousel: {
-        width: '100%',
+        width: 300,
         height: 300,
         background: '#00558B'
     },
-    img: {
-        maxWidth: '100%',
-        verticalAlign: 'bottom'
-    }
 };

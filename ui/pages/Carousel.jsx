@@ -5,7 +5,10 @@ import Doc from '../templates/Doc';
 
 /*example*/
 import CarouselAnimation from '../organisms/CarouselAnimation.example';
-import carouselAnimation from '!raw!../../../ui/organisms/CarouselAnimation.example';
+import carouselAnimation from '!raw-loader!../../../ui/organisms/CarouselAnimation.example';
+
+import CarouselSlide from '../organisms/CarouselSlide.example';
+import carouselSlide from '!raw-loader!../../../ui/organisms/CarouselSlide.example';
 
 class CarouselPage extends BasePage
 {
@@ -22,6 +25,12 @@ class CarouselPage extends BasePage
                     npm="organism-react-carousel"
                 >
                     <CarouselAnimation />
+                </CodeExample>
+                <CodeExample
+                    code={carouselSlide}
+                    header="Carousel Slide (WIP)"
+                >
+                    <CarouselSlide />
                 </CodeExample>
             </Doc>
         );
