@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 946:
+/***/ 1028:
 /***/ (function(module, exports) {
 
 /**
@@ -19,7 +19,7 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 947:
+/***/ 1029:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -39,11 +39,11 @@ if (typeof window !== 'undefined') {
   root = this;
 }
 
-var Emitter = __webpack_require__(948);
-var RequestBase = __webpack_require__(950);
-var isObject = __webpack_require__(946);
-var isFunction = __webpack_require__(949);
-var ResponseBase = __webpack_require__(951);
+var Emitter = __webpack_require__(1030);
+var RequestBase = __webpack_require__(1032);
+var isObject = __webpack_require__(1028);
+var isFunction = __webpack_require__(1031);
+var ResponseBase = __webpack_require__(1033);
 
 /**
  * Noop.
@@ -770,10 +770,15 @@ Request.prototype.end = function (fn) {
   this._setTimeouts();
 
   // initiate request
-  if (this.username && this.password) {
-    xhr.open(this.method, this.url, true, this.username, this.password);
-  } else {
-    xhr.open(this.method, this.url, true);
+  try {
+    if (this.username && this.password) {
+      xhr.open(this.method, this.url, true, this.username, this.password);
+    } else {
+      xhr.open(this.method, this.url, true);
+    }
+  } catch (err) {
+    // see #1149
+    return this.callback(err);
   }
 
   // CORS
@@ -937,7 +942,7 @@ request.put = function (url, data, fn) {
 
 /***/ }),
 
-/***/ 948:
+/***/ 1030:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1101,7 +1106,7 @@ Emitter.prototype.hasListeners = function (event) {
 
 /***/ }),
 
-/***/ 949:
+/***/ 1031:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1111,7 +1116,7 @@ Emitter.prototype.hasListeners = function (event) {
  * @return {Boolean}
  * @api private
  */
-var isObject = __webpack_require__(946);
+var isObject = __webpack_require__(1028);
 
 function isFunction(fn) {
   var tag = isObject(fn) ? Object.prototype.toString.call(fn) : '';
@@ -1122,13 +1127,13 @@ module.exports = isFunction;
 
 /***/ }),
 
-/***/ 950:
+/***/ 1032:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(946);
+var isObject = __webpack_require__(1028);
 
 /**
  * Expose `RequestBase`.
@@ -1260,7 +1265,7 @@ RequestBase.prototype.timeout = function timeout(options) {
  * Promise support
  *
  * @param {Function} resolve
- * @param {Function} reject
+ * @param {Function} [reject]
  * @return {Request}
  */
 
@@ -1414,6 +1419,10 @@ RequestBase.prototype.field = function (name, val) {
     throw new Error('.field(name, val) name can not be empty');
   }
 
+  if (this._data) {
+    console.error(".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()");
+  }
+
   if (isObject(name)) {
     for (var key in name) {
       this.field(key, name[key]);
@@ -1549,6 +1558,10 @@ RequestBase.prototype.send = function (data) {
   var isObj = isObject(data);
   var type = this._header['content-type'];
 
+  if (this._formData) {
+    console.error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
+  }
+
   if (isObj && !this._data) {
     if (Array.isArray(data)) {
       this._data = [];
@@ -1657,7 +1670,7 @@ RequestBase.prototype._setTimeouts = function () {
 
 /***/ }),
 
-/***/ 951:
+/***/ 1033:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1665,7 +1678,7 @@ RequestBase.prototype._setTimeouts = function () {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(952);
+var utils = __webpack_require__(1034);
 
 /**
  * Expose `ResponseBase`.
@@ -1794,7 +1807,7 @@ ResponseBase.prototype._setStatusProperties = function (status) {
 
 /***/ }),
 
-/***/ 952:
+/***/ 1034:
 /***/ (function(module, exports) {
 
 

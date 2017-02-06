@@ -9,7 +9,9 @@ import PageLoadProgressHandlerWithAjax from '../organisms/PageLoadProgressHandle
 import pageLoadProgressHandlerWithAjax from '!raw-loader!../../../ui/organisms/PageLoadProgressHandlerWithAjax.example';
 
 import FBLike from '../organisms/FBLike.example';
-import fBLike from '!raw-loader!../../../ui/organisms/FBLike.example';
+import fbLike from '!raw-loader!../../../ui/organisms/FBLike.example';
+import FBPage from '../organisms/FBPage.example';
+import fbPage from '!raw-loader!../../../ui/organisms/FBPage.example';
 
 class Organisms extends BasePage 
 {
@@ -35,13 +37,19 @@ class Organisms extends BasePage
                     <PageLoadProgressHandlerWithAjax />
                 </CodeExample>
                 <CodeExample
-                    code={fBLike}
+                    code={fbLike}
                     header="Facebook Like Button"
                     git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-facebook/"
                     npm="organism-react-facebook"
                     id="organism-react-facebook"
                 >
                     <FBLike />
+                </CodeExample>
+                <CodeExample
+                    code={fbPage}
+                    header="Facebook Page Plugin"
+                >
+                    <FBPage />
                 </CodeExample>
             </Doc>
         );
