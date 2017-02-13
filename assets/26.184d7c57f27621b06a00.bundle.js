@@ -1,5 +1,25 @@
-webpackChunk([0],[
-/* 0 */
+webpackJsonp([26],{
+
+/***/ 1035:
+/***/ (function(module, exports) {
+
+/**
+ * Check if `obj` is an object.
+ *
+ * @param {Object} obj
+ * @return {Boolean}
+ * @api private
+ */
+
+function isObject(obj) {
+  return null !== obj && 'object' === typeof obj;
+}
+
+module.exports = isObject;
+
+/***/ }),
+
+/***/ 1036:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -19,11 +39,12 @@ if (typeof window !== 'undefined') {
   root = this;
 }
 
-var Emitter = __webpack_require__(4);
-var RequestBase = __webpack_require__(6);
-var isObject = __webpack_require__(3);
-var isFunction = __webpack_require__(5);
-var ResponseBase = __webpack_require__(7);
+var Emitter = __webpack_require__(1037);
+var RequestBase = __webpack_require__(1039);
+var isObject = __webpack_require__(1035);
+var isFunction = __webpack_require__(1038);
+var ResponseBase = __webpack_require__(1040);
+var shouldRetry = __webpack_require__(1041);
 
 /**
  * Noop.
@@ -305,8 +326,7 @@ function isJSON(mime) {
  * @api private
  */
 
-function Response(req, options) {
-  options = options || {};
+function Response(req) {
   this.req = req;
   this.xhr = this.req.xhr;
   // responseText is accessible only if responseType is '' or 'text' and on older browsers
@@ -536,18 +556,18 @@ Request.prototype.auth = function (user, pass, options) {
 };
 
 /**
-* Add query-string `val`.
-*
-* Examples:
-*
-*   request.get('/shoes')
-*     .query('size=10')
-*     .query({ color: 'blue' })
-*
-* @param {Object|String} val
-* @return {Request} for chaining
-* @api public
-*/
+ * Add query-string `val`.
+ *
+ * Examples:
+ *
+ *   request.get('/shoes')
+ *     .query('size=10')
+ *     .query({ color: 'blue' })
+ *
+ * @param {Object|String} val
+ * @return {Request} for chaining
+ * @api public
+ */
 
 Request.prototype.query = function (val) {
   if ('string' != typeof val) val = serialize(val);
@@ -573,11 +593,13 @@ Request.prototype.query = function (val) {
  */
 
 Request.prototype.attach = function (field, file, options) {
-  if (this._data) {
-    throw Error("superagent can't mix .send() and .attach()");
-  }
+  if (file) {
+    if (this._data) {
+      throw Error("superagent can't mix .send() and .attach()");
+    }
 
-  this._getFormData().append(field, file, options || file.name);
+    this._getFormData().append(field, file, options || file.name);
+  }
   return this;
 };
 
@@ -598,10 +620,16 @@ Request.prototype._getFormData = function () {
  */
 
 Request.prototype.callback = function (err, res) {
+  // console.log(this._retries, this._maxRetries)
+  if (this._maxRetries && this._retries++ < this._maxRetries && shouldRetry(err, res)) {
+    return this._retry();
+  }
+
   var fn = this._callback;
   this.clearTimeout();
 
   if (err) {
+    if (this._maxRetries) err.retries = this._retries - 1;
     this.emit('error', err);
   }
 
@@ -685,10 +713,6 @@ Request.prototype._isHost = function _isHost(obj) {
  */
 
 Request.prototype.end = function (fn) {
-  var self = this;
-  var xhr = this.xhr = request.getXHR();
-  var data = this._formData || this._data;
-
   if (this._endCalled) {
     console.warn("Warning: .end() was called twice. This is not supported in superagent");
   }
@@ -696,6 +720,19 @@ Request.prototype.end = function (fn) {
 
   // store callback
   this._callback = fn || noop;
+
+  // querystring
+  this._appendQueryString();
+
+  return this._end();
+};
+
+Request.prototype._end = function () {
+  var self = this;
+  var xhr = this.xhr = request.getXHR();
+  var data = this._formData || this._data;
+
+  this._setTimeouts();
 
   // state change
   xhr.onreadystatechange = function () {
@@ -743,11 +780,6 @@ Request.prototype.end = function (fn) {
       // https://connect.microsoft.com/IE/feedback/details/837245/xmlhttprequest-upload-throws-invalid-argument-when-used-from-web-worker-context
     }
   }
-
-  // querystring
-  this._appendQueryString();
-
-  this._setTimeouts();
 
   // initiate request
   try {
@@ -849,16 +881,19 @@ request.options = function (url, data, fn) {
 };
 
 /**
- * DELETE `url` with optional callback `fn(res)`.
+ * DELETE `url` with optional `data` and callback `fn(res)`.
  *
  * @param {String} url
+ * @param {Mixed} [data]
  * @param {Function} [fn]
  * @return {Request}
  * @api public
  */
 
-function del(url, fn) {
+function del(url, data, fn) {
   var req = request('DELETE', url);
+  if ('function' == typeof data) fn = data, data = null;
+  if (data) req.send(data);
   if (fn) req.end(fn);
   return req;
 };
@@ -921,27 +956,8 @@ request.put = function (url, data, fn) {
 };
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports) {
 
-/**
- * Check if `obj` is an object.
- *
- * @param {Object} obj
- * @return {Boolean}
- * @api private
- */
-
-function isObject(obj) {
-  return null !== obj && 'object' === typeof obj;
-}
-
-module.exports = isObject;
-
-/***/ }),
-/* 4 */
+/***/ 1037:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1104,7 +1120,8 @@ Emitter.prototype.hasListeners = function (event) {
 };
 
 /***/ }),
-/* 5 */
+
+/***/ 1038:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1114,7 +1131,7 @@ Emitter.prototype.hasListeners = function (event) {
  * @return {Boolean}
  * @api private
  */
-var isObject = __webpack_require__(3);
+var isObject = __webpack_require__(1035);
 
 function isFunction(fn) {
   var tag = isObject(fn) ? Object.prototype.toString.call(fn) : '';
@@ -1124,13 +1141,14 @@ function isFunction(fn) {
 module.exports = isFunction;
 
 /***/ }),
-/* 6 */
+
+/***/ 1039:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(3);
+var isObject = __webpack_require__(1035);
 
 /**
  * Expose `RequestBase`.
@@ -1171,10 +1189,10 @@ function mixin(obj) {
  */
 
 RequestBase.prototype.clearTimeout = function _clearTimeout() {
-  this._timeout = 0;
-  this._responseTimeout = 0;
   clearTimeout(this._timer);
   clearTimeout(this._responseTimeoutTimer);
+  delete this._timer;
+  delete this._responseTimeoutTimer;
   return this;
 };
 
@@ -1256,6 +1274,47 @@ RequestBase.prototype.timeout = function timeout(options) {
     this._responseTimeout = options.response;
   }
   return this;
+};
+
+/**
+ * Set number of retry attempts on error.
+ *
+ * Failed requests will be retried 'count' times if timeout or err.code >= 500.
+ *
+ * @param {Number} count
+ * @return {Request} for chaining
+ * @api public
+ */
+
+RequestBase.prototype.retry = function retry(count) {
+  // Default to 1 if no count passed or true
+  if (arguments.length === 0 || count === true) count = 1;
+  if (count <= 0) count = 0;
+  this._maxRetries = count;
+  this._retries = 0;
+  return this;
+};
+
+/**
+ * Retry request
+ *
+ * @return {Request} for chaining
+ * @api private
+ */
+
+RequestBase.prototype._retry = function () {
+  this.clearTimeout();
+
+  // node
+  if (this.req) {
+    this.req = null;
+    this.req = this.request();
+  }
+
+  this._aborted = false;
+  this.timedout = false;
+
+  return this._end();
 };
 
 /**
@@ -1666,7 +1725,8 @@ RequestBase.prototype._setTimeouts = function () {
 };
 
 /***/ }),
-/* 7 */
+
+/***/ 1040:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1674,7 +1734,7 @@ RequestBase.prototype._setTimeouts = function () {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(8);
+var utils = __webpack_require__(1042);
 
 /**
  * Expose `ResponseBase`.
@@ -1802,7 +1862,31 @@ ResponseBase.prototype._setStatusProperties = function (status) {
 };
 
 /***/ }),
-/* 8 */
+
+/***/ 1041:
+/***/ (function(module, exports) {
+
+var ERROR_CODES = ['ECONNRESET', 'ETIMEDOUT', 'EADDRINFO', 'ESOCKETTIMEDOUT'];
+
+/**
+ * Determine if a request should be retried.
+ * (Borrowed from segmentio/superagent-retry)
+ *
+ * @param {Error} err
+ * @param {Response} [res]
+ * @returns {Boolean}
+ */
+module.exports = function shouldRetry(err, res) {
+  if (err && err.code && ~ERROR_CODES.indexOf(err.code)) return true;
+  if (res && res.status && res.status >= 500) return true;
+  // Superagent timeout
+  if (err && 'timeout' in err && err.code == 'ECONNABORTED') return true;
+  return false;
+};
+
+/***/ }),
+
+/***/ 1042:
 /***/ (function(module, exports) {
 
 
@@ -1875,4 +1959,5 @@ exports.cleanHeader = function (header, shouldStripCookie) {
 };
 
 /***/ })
-]);
+
+});

@@ -14,6 +14,7 @@ import Npm from 'ricon/Npm';
 import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
 import Pulse from 'ricon/Pulse';
+import ShoppingCart from 'ricon/ShoppingCart';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
 
@@ -43,6 +44,7 @@ const icons = [
     ['Phone', <Phone />],
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],
+    ['ShoppingCart', <ShoppingCart />],
     ['X',<X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
 ];
