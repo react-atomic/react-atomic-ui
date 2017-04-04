@@ -1,6 +1,6 @@
 webpackJsonp([23],{
 
-/***/ 1011:
+/***/ 1133:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20,7 +20,7 @@ var _extends = Object.assign || function (target) {
     }return target;
 };
 
-var _getObjectValue = __webpack_require__(137);
+var _getObjectValue = __webpack_require__(145);
 
 var _getObjectValue2 = _interopRequireDefault(_getObjectValue);
 
@@ -37,6 +37,8 @@ function _objectWithoutProperties(obj, keys) {
 var ws;
 var callbacks = [];
 var post;
+var isWsConnect = void 0;
+var wsUrl = void 0;
 
 try {
     post = postMessage;
@@ -83,15 +85,16 @@ var ajaxGet = function ajaxGet(_ref) {
         action = _ref.action;
 
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
-    __webpack_require__.e/* require */(26).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(1036)]; (function (req) {
+    __webpack_require__.e/* require */(26).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(1158)]; (function (req) {
         req.get(url).query(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var req = res.req,
+            var error = res.error,
+                req = res.req,
+                text = res.text,
                 xhr = res.xhr,
-                error = res.error,
-                resetRes = _objectWithoutProperties(res, ['req', 'xhr', 'error']);
+                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
             post(_extends({}, action, {
-                text: res.text,
+                text: text,
                 response: resetRes
             }));
         });
@@ -103,15 +106,16 @@ var ajaxPost = function ajaxPost(_ref2) {
         action = _ref2.action;
 
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
-    __webpack_require__.e/* require */(26/* duplicate */).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(1036)]; (function (req) {
+    __webpack_require__.e/* require */(26/* duplicate */).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(1158)]; (function (req) {
         req.post(url).send(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var req = res.req,
+            var error = res.error,
+                req = res.req,
+                text = res.text,
                 xhr = res.xhr,
-                error = res.error,
-                resetRes = _objectWithoutProperties(res, ['req', 'xhr', 'error']);
+                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
             post(_extends({}, action, {
-                text: res.text,
+                text: text,
                 response: resetRes
             }));
         });
@@ -119,12 +123,35 @@ var ajaxPost = function ajaxPost(_ref2) {
 };
 
 var initWs = function initWs(url) {
+    wsUrl = url;
     ws = new WebSocket(url);
     ws.onopen = function (e) {};
     ws.onerror = function (e) {};
     ws.onmessage = function (e) {
-        post({ type: 'ws', text: e.data });
+        isWsConnect = true;
+        switch (e.data) {
+            case 'ping':
+                break;
+            default:
+                post({ type: 'ws', text: e.data });
+                break;
+        }
     };
+    ws.onclose = function (e) {
+        isWsConnect = false;
+    };
+    wsPing();
+};
+
+var wsPing = function wsPing() {
+    setTimeout(function () {
+        if (!isWsConnect) {
+            initWs(wsUrl);
+        } else {
+            ws.send(JSON.stringify({ type: 'ping' }));
+            wsPing();
+        }
+    }, 10000);
 };
 module.exports = exports['default'];
 

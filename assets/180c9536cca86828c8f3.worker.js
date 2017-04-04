@@ -6,59 +6,59 @@
 /******/ 		while(chunkIds.length)
 /******/ 			installedChunks[chunkIds.pop()] = 1;
 /******/ 	};
-
+/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// object to store loaded chunks
 /******/ 	// "1" means "already loaded"
 /******/ 	var installedChunks = {
 /******/ 		1: 1
 /******/ 	};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
+/******/
 /******/ 	// This file contains only the entry chunk.
 /******/ 	// The chunk loading function for additional chunks
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "1" is the signal for "already loaded"
 /******/ 		if(!installedChunks[chunkId]) {
-/******/ 			importScripts("" + chunkId + "." + "93d04e284c30f190f1e2" + ".worker.js");
+/******/ 			importScripts("" + chunkId + "." + "180c9536cca86828c8f3" + ".worker.js");
 /******/ 		}
 /******/ 		return Promise.resolve();
 /******/ 	};
-
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -69,7 +69,7 @@
 /******/ 			});
 /******/ 		}
 /******/ 	};
-
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -78,13 +78,13 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-
+/******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "./assets/";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
@@ -160,6 +160,8 @@ function _objectWithoutProperties(obj, keys) {
 var ws;
 var callbacks = [];
 var post;
+var isWsConnect = void 0;
+var wsUrl = void 0;
 
 try {
     post = postMessage;
@@ -208,13 +210,14 @@ var ajaxGet = function ajaxGet(_ref) {
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
     __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(0)]; (function (req) {
         req.get(url).query(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var req = res.req,
+            var error = res.error,
+                req = res.req,
+                text = res.text,
                 xhr = res.xhr,
-                error = res.error,
-                resetRes = _objectWithoutProperties(res, ['req', 'xhr', 'error']);
+                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
             post(_extends({}, action, {
-                text: res.text,
+                text: text,
                 response: resetRes
             }));
         });
@@ -228,13 +231,14 @@ var ajaxPost = function ajaxPost(_ref2) {
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
     __webpack_require__.e/* require */(0/* duplicate */).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(0)]; (function (req) {
         req.post(url).send(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var req = res.req,
+            var error = res.error,
+                req = res.req,
+                text = res.text,
                 xhr = res.xhr,
-                error = res.error,
-                resetRes = _objectWithoutProperties(res, ['req', 'xhr', 'error']);
+                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
             post(_extends({}, action, {
-                text: res.text,
+                text: text,
                 response: resetRes
             }));
         });
@@ -242,12 +246,35 @@ var ajaxPost = function ajaxPost(_ref2) {
 };
 
 var initWs = function initWs(url) {
+    wsUrl = url;
     ws = new WebSocket(url);
     ws.onopen = function (e) {};
     ws.onerror = function (e) {};
     ws.onmessage = function (e) {
-        post({ type: 'ws', text: e.data });
+        isWsConnect = true;
+        switch (e.data) {
+            case 'ping':
+                break;
+            default:
+                post({ type: 'ws', text: e.data });
+                break;
+        }
     };
+    ws.onclose = function (e) {
+        isWsConnect = false;
+    };
+    wsPing();
+};
+
+var wsPing = function wsPing() {
+    setTimeout(function () {
+        if (!isWsConnect) {
+            initWs(wsUrl);
+        } else {
+            ws.send(JSON.stringify({ type: 'ping' }));
+            wsPing();
+        }
+    }, 10000);
 };
 module.exports = exports['default'];
 

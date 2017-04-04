@@ -9,11 +9,13 @@ import Organisms from '../pages/Organisms';
 import Icons from '../pages/Icons';
 import List from '../pages/List';
 import Carousel from '../pages/Carousel';
+import D3 from '../pages/D3';
 
 const themes = {
     atoms: Atoms,
     molecules: Molecules,
     organisms: Organisms,
+    d3: D3,
     icons: Icons,
     list: List,
     carousel: Carousel

@@ -2,6 +2,8 @@ import CodeExample from 'organism-react-code';
 
 import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
+
+// example
 import PageLoadProgressHandler from '../organisms/PageLoadProgressHandler.example';
 import pageLoadProgressHandler from '!raw-loader!../../../ui/organisms/PageLoadProgressHandler.example';
 

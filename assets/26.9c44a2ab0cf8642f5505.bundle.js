@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 1035:
+/***/ 1157:
 /***/ (function(module, exports) {
 
 /**
@@ -19,7 +19,7 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 1036:
+/***/ 1158:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -39,12 +39,12 @@ if (typeof window !== 'undefined') {
   root = this;
 }
 
-var Emitter = __webpack_require__(1037);
-var RequestBase = __webpack_require__(1039);
-var isObject = __webpack_require__(1035);
-var isFunction = __webpack_require__(1038);
-var ResponseBase = __webpack_require__(1040);
-var shouldRetry = __webpack_require__(1041);
+var Emitter = __webpack_require__(1159);
+var RequestBase = __webpack_require__(1161);
+var isObject = __webpack_require__(1157);
+var isFunction = __webpack_require__(1160);
+var ResponseBase = __webpack_require__(1162);
+var shouldRetry = __webpack_require__(1163);
 
 /**
  * Noop.
@@ -529,13 +529,17 @@ Request.prototype.accept = function (type) {
  * Set Authorization field value with `user` and `pass`.
  *
  * @param {String} user
- * @param {String} pass
- * @param {Object} options with 'type' property 'auto' or 'basic' (default 'basic')
+ * @param {String} [pass] optional in case of using 'bearer' as type
+ * @param {Object} options with 'type' property 'auto', 'basic' or 'bearer' (default 'basic')
  * @return {Request} for chaining
  * @api public
  */
 
 Request.prototype.auth = function (user, pass, options) {
+  if (typeof pass === 'object' && pass !== null) {
+    // pass is optional and can substitute for options
+    options = pass;
+  }
   if (!options) {
     options = {
       type: 'function' === typeof btoa ? 'basic' : 'auto'
@@ -550,6 +554,11 @@ Request.prototype.auth = function (user, pass, options) {
     case 'auto':
       this.username = user;
       this.password = pass;
+      break;
+
+    case 'bearer':
+      // usage would be .auth(accessToken, { type: 'bearer' })
+      this.set('Authorization', 'Bearer ' + user);
       break;
   }
   return this;
@@ -957,7 +966,7 @@ request.put = function (url, data, fn) {
 
 /***/ }),
 
-/***/ 1037:
+/***/ 1159:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1121,7 +1130,7 @@ Emitter.prototype.hasListeners = function (event) {
 
 /***/ }),
 
-/***/ 1038:
+/***/ 1160:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1131,7 +1140,7 @@ Emitter.prototype.hasListeners = function (event) {
  * @return {Boolean}
  * @api private
  */
-var isObject = __webpack_require__(1035);
+var isObject = __webpack_require__(1157);
 
 function isFunction(fn) {
   var tag = isObject(fn) ? Object.prototype.toString.call(fn) : '';
@@ -1142,13 +1151,13 @@ module.exports = isFunction;
 
 /***/ }),
 
-/***/ 1039:
+/***/ 1161:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(1035);
+var isObject = __webpack_require__(1157);
 
 /**
  * Expose `RequestBase`.
@@ -1267,11 +1276,17 @@ RequestBase.prototype.timeout = function timeout(options) {
     return this;
   }
 
-  if ('undefined' !== typeof options.deadline) {
-    this._timeout = options.deadline;
-  }
-  if ('undefined' !== typeof options.response) {
-    this._responseTimeout = options.response;
+  for (var option in options) {
+    switch (option) {
+      case 'deadline':
+        this._timeout = options.deadline;
+        break;
+      case 'response':
+        this._responseTimeout = options.response;
+        break;
+      default:
+        console.warn("Unknown timeout option", option);
+    }
   }
   return this;
 };
@@ -1533,9 +1548,10 @@ RequestBase.prototype.abort = function () {
  * @api public
  */
 
-RequestBase.prototype.withCredentials = function () {
+RequestBase.prototype.withCredentials = function (on) {
   // This is browser-only functionality. Node side is no-op.
-  this._withCredentials = true;
+  if (on == undefined) on = true;
+  this._withCredentials = on;
   return this;
 };
 
@@ -1695,13 +1711,14 @@ RequestBase.prototype.sortQuery = function (sort) {
  * @api private
  */
 
-RequestBase.prototype._timeoutError = function (reason, timeout) {
+RequestBase.prototype._timeoutError = function (reason, timeout, errno) {
   if (this._aborted) {
     return;
   }
   var err = new Error(reason + timeout + 'ms exceeded');
   err.timeout = timeout;
   err.code = 'ECONNABORTED';
+  err.errno = errno;
   this.timedout = true;
   this.abort();
   this.callback(err);
@@ -1713,20 +1730,20 @@ RequestBase.prototype._setTimeouts = function () {
   // deadline
   if (this._timeout && !this._timer) {
     this._timer = setTimeout(function () {
-      self._timeoutError('Timeout of ', self._timeout);
+      self._timeoutError('Timeout of ', self._timeout, 'ETIME');
     }, this._timeout);
   }
   // response timeout
   if (this._responseTimeout && !this._responseTimeoutTimer) {
     this._responseTimeoutTimer = setTimeout(function () {
-      self._timeoutError('Response timeout of ', self._responseTimeout);
+      self._timeoutError('Response timeout of ', self._responseTimeout, 'ETIMEDOUT');
     }, this._responseTimeout);
   }
 };
 
 /***/ }),
 
-/***/ 1040:
+/***/ 1162:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1734,7 +1751,7 @@ RequestBase.prototype._setTimeouts = function () {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(1042);
+var utils = __webpack_require__(1164);
 
 /**
  * Expose `ResponseBase`.
@@ -1863,7 +1880,7 @@ ResponseBase.prototype._setStatusProperties = function (status) {
 
 /***/ }),
 
-/***/ 1041:
+/***/ 1163:
 /***/ (function(module, exports) {
 
 var ERROR_CODES = ['ECONNRESET', 'ETIMEDOUT', 'EADDRINFO', 'ESOCKETTIMEDOUT'];
@@ -1886,7 +1903,7 @@ module.exports = function shouldRetry(err, res) {
 
 /***/ }),
 
-/***/ 1042:
+/***/ 1164:
 /***/ (function(module, exports) {
 
 
