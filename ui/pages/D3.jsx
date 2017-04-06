@@ -5,6 +5,8 @@ import Doc from '../templates/Doc';
 
 import D3PieChart from '../organisms/D3PieChart.example';
 import d3PieChart from '!raw-loader!../../../ui/organisms/D3PieChart.example';
+import D3BarChart from '../organisms/D3BarChart.example';
+import d3BarChart from '!raw-loader!../../../ui/organisms/D3BarChart.example';
 
 class D3 extends BasePage 
 {
@@ -16,6 +18,14 @@ class D3 extends BasePage
     {
         return (
             <Doc>
+
+                <CodeExample
+                    code={d3BarChart}
+                    header="D3 Bar Chart"
+                >
+                    <D3BarChart />
+                </CodeExample>
+
                 <CodeExample
                     code={d3PieChart}
                     header="D3 Pie Chart"
