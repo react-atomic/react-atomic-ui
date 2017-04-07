@@ -5,16 +5,16 @@ const D3BarChart = (props) =>
 {
     let data = [
         {
-            label: '2013-01',
-            value: 53
+            x: '2013-01',
+            y: 53
         },
         {
-            label: '2013-02',
-            value: 165 
+            x: '2013-02',
+            y: 165 
         },
         {
-            label: '2013-03',
-            value: 269 
+            x: '2013-03',
+            y: 269 
         },
     ];
     return (

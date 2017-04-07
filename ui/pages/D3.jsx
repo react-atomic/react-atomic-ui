@@ -7,6 +7,8 @@ import D3PieChart from '../organisms/D3PieChart.example';
 import d3PieChart from '!raw-loader!../../../ui/organisms/D3PieChart.example';
 import D3BarChart from '../organisms/D3BarChart.example';
 import d3BarChart from '!raw-loader!../../../ui/organisms/D3BarChart.example';
+import D3LineChart from '../organisms/D3LineChart.example';
+import d3LineChart from '!raw-loader!../../../ui/organisms/D3LineChart.example';
 
 class D3 extends BasePage 
 {
@@ -18,6 +20,13 @@ class D3 extends BasePage
     {
         return (
             <Doc>
+
+                <CodeExample
+                    code={d3LineChart}
+                    header="D3 Line Chart"
+                >
+                    <D3LineChart />
+                </CodeExample>
 
                 <CodeExample
                     code={d3BarChart}
@@ -32,6 +41,7 @@ class D3 extends BasePage
                 >
                     <D3PieChart />
                 </CodeExample>
+
             </Doc>
         );
     }
