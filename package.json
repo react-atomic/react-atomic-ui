@@ -13,7 +13,10 @@
   "dependencies": {
     "class-lib": "*",
     "get-object-value": "*",
+    "organism-react-carousel": "*",
     "organism-react-code": "*",
+    "organism-react-d3-axis-chart": "*",
+    "organism-react-d3-piechart": "*",
     "organism-react-facebook": "*",
     "organism-react-navigation": "*",
     "organism-react-progress": "*",
