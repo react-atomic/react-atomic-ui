@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 899:
+/***/ 1540:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _systemImportTransformerGlobalIdentifier = typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : {};
 
-var _getObjectValue = __webpack_require__(13);
+var _getObjectValue = __webpack_require__(31);
 
 var _getObjectValue2 = _interopRequireDefault(_getObjectValue);
 
@@ -76,18 +76,20 @@ var ajaxGet = function ajaxGet(_ref) {
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
     (typeof _systemImportTransformerGlobalIdentifier.define === 'function' && _systemImportTransformerGlobalIdentifier.define.amd ? new Promise(function (resolve, reject) {
         _systemImportTransformerGlobalIdentifier.require(['superagent'], resolve, reject);
-    }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((902))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
+    }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((1543))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
         req.get(url).query(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var error = res.error,
-                req = res.req,
-                text = res.text,
-                xhr = res.xhr,
-                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
+            if (res) {
+                var error = res.error,
+                    _req = res.req,
+                    text = res.text,
+                    xhr = res.xhr,
+                    resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
-            post(_extends({}, action, {
-                text: text,
-                response: resetRes
-            }));
+                post(_extends({}, action, {
+                    text: text,
+                    response: resetRes
+                }));
+            }
         });
     });
 };
@@ -99,18 +101,20 @@ var ajaxPost = function ajaxPost(_ref2) {
     var params = (0, _getObjectValue2.default)(action, ['params'], {});
     (typeof _systemImportTransformerGlobalIdentifier.define === 'function' && _systemImportTransformerGlobalIdentifier.define.amd ? new Promise(function (resolve, reject) {
         _systemImportTransformerGlobalIdentifier.require(['superagent'], resolve, reject);
-    }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((902))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
+    }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((1543))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
         req.post(url).send(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var error = res.error,
-                req = res.req,
-                text = res.text,
-                xhr = res.xhr,
-                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
+            if (res) {
+                var error = res.error,
+                    _req2 = res.req,
+                    text = res.text,
+                    xhr = res.xhr,
+                    resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
-            post(_extends({}, action, {
-                text: text,
-                response: resetRes
-            }));
+                post(_extends({}, action, {
+                    text: text,
+                    response: resetRes
+                }));
+            }
         });
     });
 };
@@ -144,14 +148,14 @@ var wsPing = function wsPing() {
             ws.send(JSON.stringify({ type: 'ping' }));
             wsPing();
         }
-    }, 10000);
+    }, 15000);
 };
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(84), __webpack_require__(909)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58), __webpack_require__(433)(module)))
 
 /***/ }),
 
-/***/ 901:
+/***/ 1542:
 /***/ (function(module, exports) {
 
 /**
@@ -171,7 +175,7 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 902:
+/***/ 1543:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -188,12 +192,12 @@ if (typeof window !== 'undefined') { // Browser window
   root = this;
 }
 
-var Emitter = __webpack_require__(903);
-var RequestBase = __webpack_require__(905);
-var isObject = __webpack_require__(901);
-var isFunction = __webpack_require__(904);
-var ResponseBase = __webpack_require__(906);
-var shouldRetry = __webpack_require__(907);
+var Emitter = __webpack_require__(1544);
+var RequestBase = __webpack_require__(1546);
+var isObject = __webpack_require__(1542);
+var isFunction = __webpack_require__(1545);
+var ResponseBase = __webpack_require__(1547);
+var shouldRetry = __webpack_require__(1548);
 
 /**
  * Noop.
@@ -1111,7 +1115,7 @@ request.put = function(url, data, fn){
 
 /***/ }),
 
-/***/ 903:
+/***/ 1544:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1281,7 +1285,7 @@ Emitter.prototype.hasListeners = function(event){
 
 /***/ }),
 
-/***/ 904:
+/***/ 1545:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1291,7 +1295,7 @@ Emitter.prototype.hasListeners = function(event){
  * @return {Boolean}
  * @api private
  */
-var isObject = __webpack_require__(901);
+var isObject = __webpack_require__(1542);
 
 function isFunction(fn) {
   var tag = isObject(fn) ? Object.prototype.toString.call(fn) : '';
@@ -1303,13 +1307,13 @@ module.exports = isFunction;
 
 /***/ }),
 
-/***/ 905:
+/***/ 1546:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(901);
+var isObject = __webpack_require__(1542);
 
 /**
  * Expose `RequestBase`.
@@ -1901,7 +1905,7 @@ RequestBase.prototype._setTimeouts = function() {
 
 /***/ }),
 
-/***/ 906:
+/***/ 1547:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1909,7 +1913,7 @@ RequestBase.prototype._setTimeouts = function() {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(908);
+var utils = __webpack_require__(1549);
 
 /**
  * Expose `ResponseBase`.
@@ -2041,7 +2045,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
 
 /***/ }),
 
-/***/ 907:
+/***/ 1548:
 /***/ (function(module, exports) {
 
 var ERROR_CODES = [
@@ -2071,7 +2075,7 @@ module.exports = function shouldRetry(err, res) {
 
 /***/ }),
 
-/***/ 908:
+/***/ 1549:
 /***/ (function(module, exports) {
 
 
@@ -2142,35 +2146,6 @@ exports.cleanHeader = function(header, shouldStripCookie){
   }
   return header;
 };
-
-/***/ }),
-
-/***/ 909:
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if(!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if(!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
 
 /***/ })
 

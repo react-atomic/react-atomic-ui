@@ -15,6 +15,7 @@ import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
 import Pulse from 'ricon/Pulse';
 import ShoppingCart from 'ricon/ShoppingCart';
+import Sort from 'ricon/Sort';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
 
@@ -29,6 +30,7 @@ const icons = [
     ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
     ['DropDown', <DropDown />],
+    ['DropDown (up)', <DropDown up={true} />],
     ['Description', <Description />],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
@@ -45,6 +47,7 @@ const icons = [
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],
     ['ShoppingCart', <ShoppingCart />],
+    ['Sort', <Sort />],
     ['X',<X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
 ];

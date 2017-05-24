@@ -10,6 +10,8 @@ import Icons from '../pages/Icons';
 import List from '../pages/List';
 import Carousel from '../pages/Carousel';
 import D3 from '../pages/D3';
+import Animation from '../pages/Animation';
+import Popup from '../pages/Popup';
 
 const themes = {
     atoms: Atoms,
@@ -18,7 +20,9 @@ const themes = {
     d3: D3,
     icons: Icons,
     list: List,
-    carousel: Carousel
+    carousel: Carousel,
+    animation: Animation,
+    popup: Popup 
 };
 
 const Index = (props) => {

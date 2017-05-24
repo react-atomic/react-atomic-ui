@@ -1,8 +1,9 @@
+/*Base*/
 import CodeExample from 'organism-react-code';
-
 import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
 
+/*Sample*/
 import D3PieChart from '../organisms/D3PieChart.example';
 import d3PieChart from '!raw-loader!../../../ui/organisms/D3PieChart.example';
 import D3BarChart from '../organisms/D3BarChart.example';

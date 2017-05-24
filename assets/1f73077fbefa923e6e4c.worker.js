@@ -1036,9 +1036,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 var _isArray = Array.isArray;
 
+var getDefaultValue = function getDefaultValue(v) {
+    if ('function' === typeof v) {
+        return v();
+    }
+    return v;
+};
+
 var getObjectValue = function getObjectValue(o, path, defaultValue) {
     if (null === o || 'undefined' === typeof o) {
-        return defaultValue;
+        return getDefaultValue(defaultValue);
     }
     if (!_isArray(path)) {
         return o;
@@ -1049,7 +1056,7 @@ var getObjectValue = function getObjectValue(o, path, defaultValue) {
             current = current[a];
             return true;
         } else {
-            current = defaultValue;
+            current = getDefaultValue(defaultValue);
             return false;
         }
     });
@@ -1362,16 +1369,18 @@ var ajaxGet = function ajaxGet(_ref) {
         _systemImportTransformerGlobalIdentifier.require(['superagent'], resolve, reject);
     }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((0))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
         req.get(url).query(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var error = res.error,
-                req = res.req,
-                text = res.text,
-                xhr = res.xhr,
-                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
+            if (res) {
+                var error = res.error,
+                    _req = res.req,
+                    text = res.text,
+                    xhr = res.xhr,
+                    resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
-            post(_extends({}, action, {
-                text: text,
-                response: resetRes
-            }));
+                post(_extends({}, action, {
+                    text: text,
+                    response: resetRes
+                }));
+            }
         });
     });
 };
@@ -1385,16 +1394,18 @@ var ajaxPost = function ajaxPost(_ref2) {
         _systemImportTransformerGlobalIdentifier.require(['superagent'], resolve, reject);
     }) : typeof module !== 'undefined' && module.exports && "function" !== 'undefined' || typeof module !== 'undefined' && module.component && _systemImportTransformerGlobalIdentifier.require && _systemImportTransformerGlobalIdentifier.require.loader === 'component' ? Promise.resolve(__webpack_require__((0))) : Promise.resolve(_systemImportTransformerGlobalIdentifier['superagent'])).then(function (req) {
         req.post(url).send(params.query).set('Accept', (0, _getObjectValue2.default)(params, ['accept'], 'application/json')).end(function (err, res) {
-            var error = res.error,
-                req = res.req,
-                text = res.text,
-                xhr = res.xhr,
-                resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
+            if (res) {
+                var error = res.error,
+                    _req2 = res.req,
+                    text = res.text,
+                    xhr = res.xhr,
+                    resetRes = _objectWithoutProperties(res, ['error', 'req', 'text', 'xhr']);
 
-            post(_extends({}, action, {
-                text: text,
-                response: resetRes
-            }));
+                post(_extends({}, action, {
+                    text: text,
+                    response: resetRes
+                }));
+            }
         });
     });
 };
@@ -1428,7 +1439,7 @@ var wsPing = function wsPing() {
             ws.send(JSON.stringify({ type: 'ping' }));
             wsPing();
         }
-    }, 10000);
+    }, 15000);
 };
 module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4)(module)))

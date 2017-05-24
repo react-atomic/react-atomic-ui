@@ -20,6 +20,7 @@
     "organism-react-facebook": "*",
     "organism-react-navigation": "*",
     "organism-react-progress": "*",
+    "organism-react-animate": "*",
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react": "^15.x",
