@@ -19,6 +19,10 @@ import Sort from 'ricon/Sort';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
 
+// Alert
+import Error from 'ricon/Error';
+import Warning from 'ricon/Warning';
+
 import {reactStyle} from 'react-atomic-molecule';
 
 import BasePage from '../pages/BasePage';
@@ -50,6 +54,9 @@ const icons = [
     ['Sort', <Sort />],
     ['X',<X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
+// Alert
+    ['Error',<Error />],
+    ['Warning', <Warning />],
 ];
 
 class Icons extends BasePage 
