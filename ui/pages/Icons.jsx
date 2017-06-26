@@ -9,6 +9,7 @@ import Git from 'ricon/Git';
 import Hamburger from 'ricon/Hamburger';
 import HamburgerToArrow from 'ricon/HamburgerToArrow';
 import HamburgerToX from 'ricon/HamburgerToX';
+import Link from 'ricon/Link';
 import MyLocation from 'ricon/MyLocation';
 import Npm from 'ricon/Npm';
 import Phone from 'ricon/Phone';
@@ -42,6 +43,7 @@ const icons = [
     ['Hamburger', <Hamburger />],
     ['HamburgerToArrow', <HamburgerToArrow on={true} />],
     ['HamburgerToX', <HamburgerToX on={true} />],
+    ['Link', <Link />],
     ['MyLocation (fixed)', <MyLocation />],
     ['MyLocation (off)', <MyLocation type="off" />],
     ['MyLocation (on)', <MyLocation type="on" />],
