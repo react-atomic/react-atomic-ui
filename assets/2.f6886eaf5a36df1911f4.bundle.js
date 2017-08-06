@@ -1,1 +1,0 @@
-webpackJsonp([2],{1613:function(n,r,c){n.exports=function(){return new Worker(c.p+"7cc1fbd0a1ad9b2406c9.worker.js")}}});
