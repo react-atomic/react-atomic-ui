@@ -19,6 +19,7 @@ import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
+import Shopee from 'ricon/Shopee';
 
 // Alert
 import Error from 'ricon/Error';
@@ -54,10 +55,11 @@ const icons = [
     ['Pulse',<Pulse />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
-    ['X',<X style={{position:'static'}}/>],
+    ['Shopee', <Shopee />],
+    ['X', <X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
 // Alert
-    ['Error',<Error />],
+    ['Error', <Error />],
     ['Warning', <Warning />],
 ];
 
