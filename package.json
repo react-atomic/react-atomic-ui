@@ -13,6 +13,7 @@
   "dependencies": {
     "class-lib": "*",
     "get-object-value": "*",
+    "get-scroll-info": "*",
     "organism-react-animate": "*",
     "organism-react-carousel": "*",
     "organism-react-code": "*",
