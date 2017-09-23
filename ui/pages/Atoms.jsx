@@ -1,3 +1,4 @@
+import React from 'react'; 
 import Doc from '../templates/Doc'; 
 import BasePage from '../pages/BasePage';
 

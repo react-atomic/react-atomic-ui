@@ -1,3 +1,4 @@
+import React from 'react'; 
 import Calendar from 'ricon/Calendar';
 import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';

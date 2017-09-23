@@ -1,3 +1,4 @@
+import React from 'react'; 
 import CodeExample from 'organism-react-code';
 
 import BasePage from '../pages/BasePage';

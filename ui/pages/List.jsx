@@ -1,3 +1,4 @@
+import React from 'react'; 
 import {RVGrid} from 'pmvc_react_list/rv'
 import Pin from 'ricon/Pin';
 import {

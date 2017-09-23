@@ -1,7 +1,7 @@
 #!/bin/sh
 find ./assets -name "*.js" | xargs rm -rf
 
-conf='{"assetsRoot":"./assets/"}'
+conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
 
 production(){
     echo "Production Mode";
