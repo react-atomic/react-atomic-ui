@@ -1,1 +1,30 @@
-node_modules/reshow-app/.babelrc
+{
+    "env": {
+        "build": {
+            "presets": [
+              "react",
+              "env",
+              "stage-0"
+            ],
+            "plugins": [
+              "system-import-transformer",
+              "transform-object-assign",
+              "transform-react-constant-elements",
+            ]
+        },
+        "production": {
+            "presets": [
+              "react",
+              "env",
+              "stage-0"
+            ],
+            "plugins": [
+              "system-import-transformer",
+              "transform-object-assign",
+              "transform-react-constant-elements",
+              "transform-react-pure-class-to-function",
+              "transform-react-remove-prop-types"
+            ]
+        }
+    }
+}
