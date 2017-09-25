@@ -9,6 +9,12 @@ production(){
     CONFIG=$conf NODE_ENV=production webpack -p --optimize-minimize
 }
 
+analyzer(){
+    echo "Analyzer Mode";
+    npm run build
+    CONFIG=$conf BUNDLE='{}' webpack
+}
+
 develop(){
     echo "Develop Mode";
     npm run build
@@ -18,6 +24,9 @@ develop(){
 case "$1" in
   p)
     production
+    ;;
+  a)
+    analyzer 
     ;;
   *)
     develop

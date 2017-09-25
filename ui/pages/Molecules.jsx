@@ -6,8 +6,11 @@ import {
     Form,
     Field,
     InputBox,
-    SearchBox
 } from 'react-atomic-molecule';
+
+import {
+    SearchBox
+} from 'react-atomic-organism';
 
 import Doc from '../templates/Doc'; 
 

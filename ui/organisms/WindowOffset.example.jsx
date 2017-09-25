@@ -1,12 +1,14 @@
 import React, {Component} from 'react'; 
-import getWindowOffset from 'get-window-offset';
 import { PopupHover, PopupOverlay } from 'organism-react-popup';
 
 class WindowOffsetExample extends Component
 {
     handleClick = (e) =>
     {
-        getWindowOffset(e.currentTarget);
+        const target = e.currentTarget;
+        import(/* webpackMode: "lazy" */  'get-window-offset').then((getWindowOffset)=>{
+            getWindowOffset(target);
+        });
     }
 
     render()

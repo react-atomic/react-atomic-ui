@@ -2,24 +2,24 @@
     "env": {
         "build": {
             "presets": [
+              ["env", {"modules": false}],
               "react",
-              "env",
               "stage-0"
             ],
             "plugins": [
-              "system-import-transformer",
+              "syntax-dynamic-import",
               "transform-object-assign",
               "transform-react-constant-elements",
             ]
         },
         "production": {
             "presets": [
+              ["env", {"modules": false}],
               "react",
-              "env",
               "stage-0"
             ],
             "plugins": [
-              "system-import-transformer",
+              "syntax-dynamic-import",
               "transform-object-assign",
               "transform-react-constant-elements",
               "transform-react-pure-class-to-function",

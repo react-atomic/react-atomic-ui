@@ -1,10 +1,5 @@
 import React from 'react'; 
-import {RVGrid} from 'pmvc_react_list/rv'
 import Pin from 'ricon/Pin';
-import {
-    DividingHeader,
-    SemanticUI,
-} from 'react-atomic-molecule';
 
 import Link from '../molecules/Link';
 import HeaderLink from '../molecules/HeaderLink';
@@ -15,7 +10,7 @@ import BasePage from '../pages/BasePage';
 const rows = [
     [<Pin />],
 ];
-
+let RVGrid;
 
 class List extends BasePage
 {
@@ -27,8 +22,12 @@ class List extends BasePage
     componentDidMount()
     {
         super.componentDidMount();
-        this.setState({
-            width: this.el.offsetWidth
+        let self = this;
+        import ('pmvc_react_list/rv').then(({RVGrid: rvGrid})=>{
+            RVGrid = rvGrid; 
+            this.setState({
+                width: this.el.offsetWidth,
+            });
         });
     }
 
@@ -36,7 +35,7 @@ class List extends BasePage
     {
         const state = this.state;
         let grid; 
-        if (state && state.width) {
+        if (state && state.width && RVGrid) {
             grid = <RVGrid width={state.width} autoContainerWidth={true} rows={rows} />
         }
         return (

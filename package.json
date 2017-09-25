@@ -34,7 +34,8 @@
   "devDependencies": {
     "babel-cli": "*",
     "raw-loader": "*",
-    "reshow-app": "*"
+    "reshow-app": "*",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "scripts": {
     "build": "rm -rf build && BABEL_ENV=build babel ui -d build/ui && BABEL_ENV=build babel src -d build/src",
