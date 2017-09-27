@@ -4,17 +4,24 @@ import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
 import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
+import Exit from 'ricon/Exit';
 import Facebook from 'ricon/Facebook';
 import FacebookMessage from 'ricon/FacebookMessage';
+import FeaturedPlayList from 'ricon/FeaturedPlayList';
 import Git from 'ricon/Git';
+import Help from 'ricon/Help';
 import Hamburger from 'ricon/Hamburger';
 import HamburgerToArrow from 'ricon/HamburgerToArrow';
 import HamburgerToX from 'ricon/HamburgerToX';
+import Home from 'ricon/Home';
 import Link from 'ricon/Link';
+import Monetization from 'ricon/Monetization';
 import MyLocation from 'ricon/MyLocation';
 import Npm from 'ricon/Npm';
+import PersonAdd from 'ricon/PersonAdd';
 import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
+import Play from 'ricon/Play';
 import Pulse from 'ricon/Pulse';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
@@ -39,21 +46,28 @@ const icons = [
     ['DropDown', <DropDown />],
     ['DropDown (up)', <DropDown up={true} />],
     ['Description', <Description />],
+    ['Exit', <Exit />],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
+    ['FeaturedPlayList', <FeaturedPlayList />],
     ['Git', <Git />],
+    ['Help', <Help />],
+    ['Home', <Home />],
     ['Hamburger', <Hamburger />],
     ['HamburgerToArrow', <HamburgerToArrow on={true} />],
     ['HamburgerToX', <HamburgerToX on={true} />],
     ['Link', <Link />],
+    ['Monetization', <Monetization />],
     ['MyLocation (fixed)', <MyLocation />],
     ['MyLocation (off)', <MyLocation type="off" />],
     ['MyLocation (on)', <MyLocation type="on" />],
     ['MyLocation (loading)', <MyLocation loading={true} type="on" />],
     ['Npm', <Npm />],
+    ['PersonAdd', <PersonAdd />],
     ['Phone', <Phone />],
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],
+    ['Play',<Play />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
