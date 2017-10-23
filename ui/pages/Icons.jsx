@@ -4,6 +4,7 @@ import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
 import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
+import Email from 'ricon/Email';
 import Exit from 'ricon/Exit';
 import Facebook from 'ricon/Facebook';
 import FacebookMessage from 'ricon/FacebookMessage';
@@ -25,9 +26,11 @@ import Play from 'ricon/Play';
 import Pulse from 'ricon/Pulse';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
+import Shopee from 'ricon/Shopee';
+import Video from 'ricon/Video';
+import Wifi from 'ricon/Wifi';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
-import Shopee from 'ricon/Shopee';
 
 // Alert
 import Error from 'ricon/Error';
@@ -46,6 +49,7 @@ const icons = [
     ['DropDown', <DropDown />],
     ['DropDown (up)', <DropDown up={true} />],
     ['Description', <Description />],
+    ['Email', <Email />],
     ['Exit', <Exit />],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
@@ -71,6 +75,8 @@ const icons = [
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
+    ['Video', <Video />],
+    ['Wifi', <Wifi />],
     ['X', <X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
 // Alert

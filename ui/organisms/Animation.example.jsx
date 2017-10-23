@@ -1,4 +1,4 @@
-import React,{Component} from 'react'; 
+import React,{Component, cloneElement} from 'react'; 
 
 /**
  * Production please use
@@ -14,31 +14,39 @@ class AnimationExample extends Component
     {
         super(props);
         this.state = {
-            text: hello 
+             dom: hello 
         };
     }
+
 
     render()
     {
         return (
             <div>
                 <Animate
-                    appear="fadeInLeft"
-                    enter="fadeInRight-100"
+                    appear="fadeInRight-3000"
+                    enter="fadeInRight-3000"
                     leave="fadeOutRight-1000"
+                    in={this.state.in}
                 >
-                {this.state.text}    
+                {this.state.dom}
                 </Animate>
-                <a href="#" onClick={(()=>{
-                    this.setState({
-                        text: null
-                    });
-                }).bind(this)}>leave</a>
+                <a href="#"
+                    style={{marginLeft:'10px'}}
+                    onClick={((e)=>{
+                        e.preventDefault();
+                        this.setState({
+                            dom: null 
+                        });
+                    }).bind(this)}
+                >leave</a>
+
                 <a href="#" 
                     style={{marginLeft:'10px'}}
-                    onClick={(()=>{
+                    onClick={((e)=>{
+                        e.preventDefault();
                         this.setState({
-                            text: hello 
+                           dom: hello 
                         });
                     }).bind(this)}
                 >enter</a>
