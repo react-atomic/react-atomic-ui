@@ -20,10 +20,10 @@ class WindowOffsetExample extends Component
                     <PopupHover popup="1" isKeep={true}>
                         <div style={{...Styles.col, ...Styles.col1}} onClick={this.handleClick}>1</div>
                     </PopupHover>
-                    <PopupHover popup="2">
+                    <PopupHover popup="2" isKeep={true}>
                         <div style={{...Styles.col, ...Styles.col2}} onClick={this.handleClick}>2</div>
                     </PopupHover>
-                    <PopupHover popup="3">
+                    <PopupHover popup="3" isKeep={true}>
                         <div style={{...Styles.col, ...Styles.col3}} onClick={this.handleClick}>3</div>
                     </PopupHover>
                 </div>
