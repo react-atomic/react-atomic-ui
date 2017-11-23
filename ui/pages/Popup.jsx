@@ -40,6 +40,7 @@ class Popup extends BasePage
                 <CodeExample
                     code={windowOffsetExample}
                     header="Detect Window Offset Example"
+                    id="get-window-offset"
                 >
                     <WindowOffsetExample />
                 </CodeExample>

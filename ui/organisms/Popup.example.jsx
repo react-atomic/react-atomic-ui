@@ -16,7 +16,7 @@ const PopupExample = () =>
         <PopupClick
             style={Styles.click}
             popup={()=>{
-                return <PopupModal show={true}>
+                return <PopupModal>
                     xxx
                 </PopupModal>;
             }}
