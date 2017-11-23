@@ -71,6 +71,7 @@ const icons = [
     ['Phone', <Phone />],
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],
+    ['Pulse (breath)',<Pulse animation="breath" />],
     ['Play',<Play />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],

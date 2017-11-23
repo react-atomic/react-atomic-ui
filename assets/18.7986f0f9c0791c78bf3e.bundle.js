@@ -1,6 +1,6 @@
-webpackJsonp([32],{
+webpackJsonp([18],{
 
-/***/ 713:
+/***/ 587:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -17,11 +17,11 @@ if (typeof window !== 'undefined') { // Browser window
   root = this;
 }
 
-var Emitter = __webpack_require__(756);
-var RequestBase = __webpack_require__(757);
-var isObject = __webpack_require__(714);
-var ResponseBase = __webpack_require__(758);
-var Agent = __webpack_require__(760);
+var Emitter = __webpack_require__(622);
+var RequestBase = __webpack_require__(623);
+var isObject = __webpack_require__(588);
+var ResponseBase = __webpack_require__(624);
+var Agent = __webpack_require__(626);
 
 /**
  * Noop.
@@ -925,7 +925,7 @@ request.put = function(url, data, fn) {
 
 /***/ }),
 
-/***/ 714:
+/***/ 588:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -948,7 +948,7 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 756:
+/***/ 622:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1118,7 +1118,7 @@ Emitter.prototype.hasListeners = function(event){
 
 /***/ }),
 
-/***/ 757:
+/***/ 623:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1127,7 +1127,7 @@ Emitter.prototype.hasListeners = function(event){
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(714);
+var isObject = __webpack_require__(588);
 
 /**
  * Expose `RequestBase`.
@@ -1820,7 +1820,7 @@ RequestBase.prototype._setTimeouts = function() {
 
 /***/ }),
 
-/***/ 758:
+/***/ 624:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1830,7 +1830,7 @@ RequestBase.prototype._setTimeouts = function() {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(759);
+var utils = __webpack_require__(625);
 
 /**
  * Expose `ResponseBase`.
@@ -1962,7 +1962,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
 
 /***/ }),
 
-/***/ 759:
+/***/ 625:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2025,12 +2025,14 @@ exports.parseLinks = function(str){
  * @api private
  */
 
-exports.cleanHeader = function(header, shouldStripCookie){
+exports.cleanHeader = function(header, changesOrigin){
   delete header['content-type'];
   delete header['content-length'];
   delete header['transfer-encoding'];
   delete header['host'];
-  if (shouldStripCookie) {
+  // secuirty
+  if (changesOrigin) {
+    delete header['authorization'];
     delete header['cookie'];
   }
   return header;
@@ -2039,7 +2041,7 @@ exports.cleanHeader = function(header, shouldStripCookie){
 
 /***/ }),
 
-/***/ 760:
+/***/ 626:
 /***/ (function(module, exports) {
 
 function Agent() {

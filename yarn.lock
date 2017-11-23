@@ -3496,8 +3496,8 @@ reshow@*:
     smooth-scroll-to "*"
 
 ricon@*:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.24.tgz#b152e69cd5aae93e3796773d711262e845813b66"
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.25.tgz#55e6e9d00dd5a99cc7d238cb4336d727ee8ef2d9"
   dependencies:
     keyframe-css "*"
 
