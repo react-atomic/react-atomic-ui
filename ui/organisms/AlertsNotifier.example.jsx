@@ -14,6 +14,7 @@ class AlertsNotifierExample extends Component
             style={Styles.click}
             popup={()=>
                 <AlertsNotifier 
+                    position="bottom"
                     alerts={[
                         {
                             type: 'info',
