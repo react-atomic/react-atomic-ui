@@ -8,7 +8,7 @@ import {
     PopupModal,
     PopupElement,
     PopupClick
-} from "organism-react-popup"
+} from "organism-react-popup";
 
 const PopupExample = () =>
 {

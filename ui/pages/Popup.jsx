@@ -7,6 +7,8 @@ import Doc from '../templates/Doc';
 /*Sample*/
 import PopupExample from '../organisms/Popup.example';
 import popupExample from '!raw-loader!../../../ui/organisms/Popup.example';
+import FullScreenExample from '../organisms/FullScreen.example';
+import fullScreenExample from '!raw-loader!../../../ui/organisms/FullScreen.example';
 import AlertsNotifierExample from '../organisms/AlertsNotifier.example';
 import alertsNotifierExample from '!raw-loader!../../../ui/organisms/AlertsNotifier.example';
 import WindowOffsetExample from '../organisms/WindowOffset.example';
@@ -28,6 +30,13 @@ class Popup extends BasePage
                     header="Popup Example"
                 >
                     <PopupExample />
+                </CodeExample>
+
+                <CodeExample
+                    code={fullScreenExample}
+                    header="Full Screen Example"
+                >
+                    <FullScreenExample />
                 </CodeExample>
 
                 <CodeExample
