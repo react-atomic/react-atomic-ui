@@ -9,6 +9,8 @@ import PopupExample from '../organisms/Popup.example';
 import popupExample from '!raw-loader!../../../ui/organisms/Popup.example';
 import FullScreenExample from '../organisms/FullScreen.example';
 import fullScreenExample from '!raw-loader!../../../ui/organisms/FullScreen.example';
+import SpotlightExample from '../organisms/Spotlight.example';
+import spotlightExample from '!raw-loader!../../../ui/organisms/Spotlight.example';
 import AlertsNotifierExample from '../organisms/AlertsNotifier.example';
 import alertsNotifierExample from '!raw-loader!../../../ui/organisms/AlertsNotifier.example';
 import WindowOffsetExample from '../organisms/WindowOffset.example';
@@ -52,6 +54,13 @@ class Popup extends BasePage
                     id="get-window-offset"
                 >
                     <WindowOffsetExample />
+                </CodeExample>
+
+                <CodeExample
+                    code={spotlightExample}
+                    header="Spotlight Example"
+                >
+                    <SpotlightExample />
                 </CodeExample>
             </Doc>
         );

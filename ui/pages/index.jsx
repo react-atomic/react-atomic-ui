@@ -1,6 +1,6 @@
 import React from 'react'; 
 import {ClientRoute} from 'reshow'; 
-import {PopupElement} from 'organism-react-popup';
+import {PopupPool} from 'organism-react-popup';
 import {PageLoadProgressHandler} from 'organism-react-progress'; 
 
 import Atoms from '../pages/Atoms';
@@ -40,7 +40,7 @@ const Index = (props) => {
                 themes={themes}
                 themePath={themePath}
             />
-            <PopupElement />
+            <PopupPool />
             <PageLoadProgressHandler ajax={true} />
         </div>
     );

@@ -39,8 +39,8 @@ ajv@^4.9.1:
     json-stable-stringify "^1.0.1"
 
 ajv@^5.0.0, ajv@^5.1.5:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.1.tgz#b38bb8876d9e86bee994956a04e721e88b248eb2"
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
     co "^4.6.0"
     fast-deep-equal "^1.0.0"
@@ -106,6 +106,10 @@ array-unique@^0.2.1:
 array.dedup@*:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/array.dedup/-/array.dedup-0.0.1.tgz#f46b16c2706992d5d18cfd81a1af7b63c6b66aea"
+
+array.merge@*:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/array.merge/-/array.merge-0.0.1.tgz#00ba6ac335c8e006e04a4c357f0891aa3b6ce6d1"
 
 asap@~2.0.3:
   version "2.0.6"
@@ -736,8 +740,8 @@ babel-plugin-transform-react-pure-class-to-function@*:
     babel-helper-is-react-class "^1.0.0"
 
 babel-plugin-transform-react-remove-prop-types@*:
-  version "0.4.10"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.10.tgz#3c7f3a03ad8aa6bb8c00e93fd13a433910444545"
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.12.tgz#a382c27c42d6580748c80caf8c3d5091edbb60b8"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -1089,8 +1093,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000780:
-  version "1.0.30000780"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000780.tgz#1f9095f2efd4940e0ba6c5992ab7a9b64cc35ba4"
+  version "1.0.30000783"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000783.tgz#9b5499fb1b503d2345d12aa6b8612852f4276ffd"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1144,8 +1148,8 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     safe-buffer "^5.0.1"
 
 class-lib@*:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/class-lib/-/class-lib-0.0.7.tgz#84d1c5c25342d7b8e159ed0598a6a05001db31b6"
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/class-lib/-/class-lib-0.0.9.tgz#f3a8927ba0ffead34199fcaefa62dcba22f76a72"
   dependencies:
     array.dedup "*"
 
@@ -1265,8 +1269,8 @@ core-js@^1.0.0:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
 core-js@^2.4.0, core-js@^2.5.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.1.tgz#ae6874dc66937789b80754ff5428df66819ca50b"
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -1328,6 +1332,10 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+css-query-selector@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/css-query-selector/-/css-query-selector-0.0.0.tgz#27eff80e798a3f066bbbdde08c2679d958b5baef"
 
 cyclist@~0.2.2:
   version "0.2.2"
@@ -1708,10 +1716,10 @@ enhanced-resolve@^3.4.0:
     tapable "^0.2.7"
 
 errno@^0.1.3, errno@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.4.tgz#b896e23a9e5e8ba33871fc996abd3635fc9a1c7d"
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.6.tgz#c386ce8a6283f14fc09563b71560908c9bf53026"
   dependencies:
-    prr "~0.0.0"
+    prr "~1.0.1"
 
 error-ex@^1.2.0:
   version "1.3.1"
@@ -2101,8 +2109,8 @@ get-style@*:
   resolved "https://registry.yarnpkg.com/get-style/-/get-style-0.0.0.tgz#966e37b08dea60e1994a2652437a8a5e6d7b0224"
 
 get-window-offset@*:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/get-window-offset/-/get-window-offset-0.0.20.tgz#ffcb9c848ea5e77d6c38708210659f6f97de8e97"
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/get-window-offset/-/get-window-offset-0.0.21.tgz#0f43e95a3cb17cf8ec57ad17020c0eca8e5742bf"
   dependencies:
     get-object-value "*"
     get-scroll-info "*"
@@ -2110,8 +2118,8 @@ get-window-offset@*:
     getoffset "*"
 
 getoffset@*:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/getoffset/-/getoffset-0.0.7.tgz#8a995df8712f52bb2e8edbd2696cabdc207482b4"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/getoffset/-/getoffset-0.0.8.tgz#c4addf59859e30fea177f143cae847e18f551591"
   dependencies:
     get-scroll-info "*"
 
@@ -2929,9 +2937,10 @@ organism-react-navigation@*:
     ricon "*"
 
 organism-react-popup@*:
-  version "0.1.38"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.1.38.tgz#2c8e2323073d9ffbdc0ba1e29be65409a2c784ce"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.2.2.tgz#937e45920c461a9f53920b3ecd406fa44ef5a1ec"
   dependencies:
+    array.merge "*"
     get-object-value "*"
     get-style "*"
     get-window-offset "*"
@@ -2953,6 +2962,19 @@ organism-react-progress@*:
     react-atomic-molecule "*"
     reshow-flux "*"
     setimmediate "^1.0.5"
+
+organism-react-spotlight@*:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/organism-react-spotlight/-/organism-react-spotlight-0.0.4.tgz#103debd01c90afae14f08ab628095034c03af751"
+  dependencies:
+    array.merge "*"
+    class-lib "*"
+    css-query-selector "^0.0.0"
+    get-style "*"
+    get-window-offset "*"
+    getoffset "*"
+    organism-react-popup "*"
+    react-atomic-molecule "*"
 
 os-browserify@^0.3.0:
   version "0.3.0"
@@ -3156,9 +3178,9 @@ proxy-addr@~2.0.2:
     forwarded "~0.1.2"
     ipaddr.js "1.5.2"
 
-prr@~0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/prr/-/prr-0.0.0.tgz#1a84b85908325501411853d0081ee3fa86e2926a"
+prr@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
 
 pseudomap@^1.0.2:
   version "1.0.2"
@@ -3271,8 +3293,8 @@ react-atomic-atom@*:
   resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-1.0.11.tgz#32b8f0621947351e7ecf336e1e025aeb1a142d99"
 
 react-atomic-molecule@*:
-  version "1.3.27"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-1.3.27.tgz#7b176151c1470f2502337f0eb3e984dc3fcd7b69"
+  version "1.3.28"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-1.3.28.tgz#a569ba968faadfb33ed85512091c57290e2a7e46"
   dependencies:
     class-lib "*"
     get-object-value "*"
@@ -3310,8 +3332,8 @@ react-transition-group@^2.x:
     warning "^3.0.0"
 
 react-virtualized@*:
-  version "9.13.0"
-  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.13.0.tgz#83e4d984271a37631225e5fe6faeaeada6e59f53"
+  version "9.14.1"
+  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.14.1.tgz#4d08385728e33e43205789b42c14e7a85b1cf2bd"
   dependencies:
     babel-runtime "^6.23.0"
     classnames "^2.2.3"
@@ -3373,8 +3395,8 @@ regenerator-runtime@^0.10.5:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
 
 regenerator-runtime@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.0.tgz#7e54fe5b5ccd5d6624ea6255c3473be090b802e1"
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
 regenerator-transform@^0.10.0:
   version "0.10.1"
@@ -3565,6 +3587,10 @@ send@0.16.1:
     range-parser "~1.2.0"
     statuses "~1.3.1"
 
+serialize-javascript@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.4.0.tgz#7c958514db6ac2443a8abc062dc9f7886a7f6005"
+
 serve-static@1.13.1:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.13.1.tgz#4c57d53404a761d8f2e7c1e8a18a47dbf278a719"
@@ -3628,8 +3654,8 @@ slash@^1.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
 smooth-scroll-to@*:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-to/-/smooth-scroll-to-0.0.10.tgz#eb74e62a25eef28e547ffe8ea92324606a611877"
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-to/-/smooth-scroll-to-0.0.13.tgz#cb59833c926f6669425cc0a6ff858df6d7be01c8"
   dependencies:
     get-scroll-info "*"
 
@@ -3777,8 +3803,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 superagent@^3.3.0:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.8.1.tgz#2571fd921f3fcdba43ac68c3b35c91951532701f"
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.8.2.tgz#e4a11b9d047f7d3efeb3bbe536d9ec0021d16403"
   dependencies:
     component-emitter "^1.2.0"
     cookiejar "^2.1.0"
@@ -3890,9 +3916,9 @@ ucfirst@*:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ucfirst/-/ucfirst-1.0.0.tgz#4e105b6448d05e264ecec435e0b919363c5f2f2f"
 
-uglify-es@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.1.tgz#93de0aad8a1bb629c8a316f686351bc4d6ece687"
+uglify-es@^3.2.1:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.2.tgz#15c62b7775002c81b7987a1c49ecd3f126cace73"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
@@ -3919,14 +3945,15 @@ uglifyjs-webpack-plugin@^0.4.6:
     webpack-sources "^1.0.1"
 
 uglifyjs-webpack-plugin@^1.0.0-beta:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.1.2.tgz#8a9abc238d01a33daaf86fa9a84c7ebc1e67b0f9"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.1.4.tgz#e43ad6e736c315024eb99481a7cc9362d6a066be"
   dependencies:
     cacache "^10.0.0"
     find-cache-dir "^1.0.0"
     schema-utils "^0.3.0"
+    serialize-javascript "^1.4.0"
     source-map "^0.6.1"
-    uglify-es "^3.2.0"
+    uglify-es "^3.2.1"
     webpack-sources "^1.0.1"
     worker-farm "^1.4.1"
 
@@ -4132,8 +4159,8 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 ws@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.2.tgz#96c1d08b3fefda1d5c1e33700d3bfaa9be2d5608"
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.3.tgz#f1cf84fe2d5e901ebce94efaece785f187a228f2"
   dependencies:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"

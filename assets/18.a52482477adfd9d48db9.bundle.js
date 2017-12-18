@@ -1,6 +1,6 @@
-webpackJsonp([34],{
+webpackJsonp([18],{
 
-/***/ 722:
+/***/ 602:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -17,11 +17,11 @@ if (typeof window !== 'undefined') { // Browser window
   root = this;
 }
 
-var Emitter = __webpack_require__(767);
-var RequestBase = __webpack_require__(768);
-var isObject = __webpack_require__(723);
-var ResponseBase = __webpack_require__(769);
-var Agent = __webpack_require__(771);
+var Emitter = __webpack_require__(637);
+var RequestBase = __webpack_require__(638);
+var isObject = __webpack_require__(603);
+var ResponseBase = __webpack_require__(639);
+var Agent = __webpack_require__(641);
 
 /**
  * Noop.
@@ -248,7 +248,9 @@ function parseHeader(str) {
  */
 
 function isJSON(mime) {
-  return /[\/+]json\b/.test(mime);
+  // should match /json or +json
+  // but not /json-seq
+  return /[\/+]json($|[^-\w])/.test(mime);
 }
 
 /**
@@ -925,7 +927,7 @@ request.put = function(url, data, fn) {
 
 /***/ }),
 
-/***/ 723:
+/***/ 603:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -948,7 +950,7 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 767:
+/***/ 637:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1118,7 +1120,7 @@ Emitter.prototype.hasListeners = function(event){
 
 /***/ }),
 
-/***/ 768:
+/***/ 638:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1127,7 +1129,7 @@ Emitter.prototype.hasListeners = function(event){
 /**
  * Module of mixed-in functions shared between node and client code
  */
-var isObject = __webpack_require__(723);
+var isObject = __webpack_require__(603);
 
 /**
  * Expose `RequestBase`.
@@ -1820,7 +1822,7 @@ RequestBase.prototype._setTimeouts = function() {
 
 /***/ }),
 
-/***/ 769:
+/***/ 639:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1830,7 +1832,7 @@ RequestBase.prototype._setTimeouts = function() {
  * Module dependencies.
  */
 
-var utils = __webpack_require__(770);
+var utils = __webpack_require__(640);
 
 /**
  * Expose `ResponseBase`.
@@ -1962,7 +1964,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
 
 /***/ }),
 
-/***/ 770:
+/***/ 640:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2041,7 +2043,7 @@ exports.cleanHeader = function(header, changesOrigin){
 
 /***/ }),
 
-/***/ 771:
+/***/ 641:
 /***/ (function(module, exports) {
 
 function Agent() {
