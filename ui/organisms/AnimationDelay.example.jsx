@@ -1,18 +1,18 @@
-import React,{Component, cloneElement} from 'react'; 
+import React,{PureComponent} from 'react'; 
 import Animate from "organism-react-animate"
 
-const hello = (<div>Hello world!!</div>);
+const foo = (<div>Hello</div>);
+const bar = (<div>world!!</div>);
 
-class AnimationExample extends Component
+class AnimationDelayExample extends PureComponent
 {
     constructor(props) 
     {
         super(props);
         this.state = {
-             dom: hello 
+            foo, bar 
         };
     }
-
 
     render()
     {
@@ -23,14 +23,22 @@ class AnimationExample extends Component
                     enter="fadeInRight-3000"
                     leave="fadeOutRight-1000"
                 >
-                {this.state.dom}
+                    {this.state.foo}
+                </Animate>
+                <Animate
+                    appear="fadeInRight-3000-500"
+                    enter="fadeInRight-3000-500"
+                    leave="fadeOutRight-1000-500"
+                >
+                    {this.state.bar}
                 </Animate>
                 <a href="#"
                     style={{marginLeft:'10px'}}
                     onClick={((e)=>{
                         e.preventDefault();
                         this.setState({
-                            dom: null 
+                            foo: null,
+                            bar: null
                         });
                     }).bind(this)}
                 >leave</a>
@@ -40,7 +48,8 @@ class AnimationExample extends Component
                     onClick={((e)=>{
                         e.preventDefault();
                         this.setState({
-                           dom: hello 
+                            foo,
+                            bar
                         });
                     }).bind(this)}
                 >enter</a>
@@ -49,4 +58,4 @@ class AnimationExample extends Component
     }
 }
 
-export default AnimationExample;
+export default AnimationDelayExample;

@@ -1,13 +1,13 @@
 webpackJsonp([2],{
 
-/***/ 535:
+/***/ 540:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group_Transition__ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group_Transition__ = __webpack_require__(649);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group_Transition___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_transition_group_Transition__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_class_lib__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_class_lib___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_class_lib__);
@@ -24,26 +24,39 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 
 
-var getEnterClass = function getEnterClass(classList, isAppear) {
-    var classIndex = isAppear ? 'appear' : 'enter';
-    return classList[classIndex];
+var getValue = function getValue(arr, isAppear, isExit) {
+    var index = isExit ? 'exit' : isAppear ? 'appear' : 'enter';
+    return __WEBPACK_IMPORTED_MODULE_3_get_object_value___default()(arr, [index]);
 };
 
-var handleStart = function handleStart(classList, handler, isExit, node, isAppear) {
-    if (node) {
-        var thisClass = isExit ? __WEBPACK_IMPORTED_MODULE_3_get_object_value___default()(classList, ['exit']) : getEnterClass(classList, isAppear);
+var handleStart = function handleStart(classList, handler, delay, isExit, node, isAppear) {
+    if (!node) {
+        return;
+    }
+    var thisDelay = getValue(delay, isAppear, isExit);
+    if (!thisDelay) {
+        thisDelay = 0;
+    }
+    if (!isExit) {
+        node.style.visibility = 'hidden';
+    }
+    setTimeout(function () {
+        if (!isExit) {
+            node.style.visibility = 'inherit';
+        }
+        var thisClass = getValue(classList, isAppear, isExit);
         if (thisClass) {
             node.className = Object(__WEBPACK_IMPORTED_MODULE_2_class_lib__["mixClass"])(node.className, thisClass);
         }
-    }
-    if (handler) {
-        handler(node, isAppear);
-    }
+        if (handler) {
+            handler(node, isAppear);
+        }
+    }, thisDelay);
 };
 
 var handleFinish = function handleFinish(classList, handler, isExit, node, isAppear) {
     if (node) {
-        var thisClass = isExit ? __WEBPACK_IMPORTED_MODULE_3_get_object_value___default()(classList, ['exit']) : getEnterClass(classList, isAppear);
+        var thisClass = getValue(classList, isAppear, isExit);
         if (thisClass) {
             node.className = Object(__WEBPACK_IMPORTED_MODULE_2_class_lib__["removeClass"])(node.className, thisClass);
         }
@@ -55,17 +68,18 @@ var handleFinish = function handleFinish(classList, handler, isExit, node, isApp
 
 var CSSTransition = function CSSTransition(_ref) {
     var classNames = _ref.classNames,
-        props = _objectWithoutProperties(_ref, ['classNames']);
+        delay = _ref.delay,
+        props = _objectWithoutProperties(_ref, ['classNames', 'delay']);
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_transition_group_Transition___default.a, _extends({
         'in': true,
         unmountOnExit: true
     }, props, {
-        onEnter: handleStart.bind(_this, classNames, props.onEnter, false),
-        onEntering: handleStart.bind(_this, classNames, props.onEntering, false),
+        onEnter: handleStart.bind(_this, classNames, props.onEnter, delay, false),
+        onEntering: handleStart.bind(_this, classNames, props.onEntering, delay, false),
         onEntered: handleFinish.bind(_this, classNames, props.onEntered, false),
-        onExit: handleStart.bind(_this, classNames, props.onExit, true),
-        onExiting: handleStart.bind(_this, classNames, props.onExiting, true),
+        onExit: handleStart.bind(_this, classNames, props.onExit, delay, true),
+        onExiting: handleStart.bind(_this, classNames, props.onExiting, delay, true),
         onExited: handleFinish.bind(_this, classNames, props.onExited, true)
     }));
 };
@@ -74,7 +88,7 @@ var CSSTransition = function CSSTransition(_ref) {
 
 /***/ }),
 
-/***/ 642:
+/***/ 649:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,7 +97,7 @@ var CSSTransition = function CSSTransition(_ref) {
 exports.__esModule = true;
 exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = undefined;
 
-var _propTypes = __webpack_require__(53);
+var _propTypes = __webpack_require__(55);
 
 var PropTypes = _interopRequireWildcard(_propTypes);
 
@@ -91,11 +105,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(54);
+var _reactDom = __webpack_require__(56);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _PropTypes = __webpack_require__(643);
+var _PropTypes = __webpack_require__(650);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -639,7 +653,7 @@ exports.default = Transition;
 
 /***/ }),
 
-/***/ 643:
+/***/ 650:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -649,7 +663,7 @@ exports.__esModule = true;
 exports.classNamesShape = exports.timeoutsShape = undefined;
 exports.transitionTimeout = transitionTimeout;
 
-var _propTypes = __webpack_require__(53);
+var _propTypes = __webpack_require__(55);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
