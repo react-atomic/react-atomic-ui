@@ -19,16 +19,19 @@ import Link from 'ricon/Link';
 import Monetization from 'ricon/Monetization';
 import MyLocation from 'ricon/MyLocation';
 import Npm from 'ricon/Npm';
-import PersonAdd from 'ricon/PersonAdd';
+import Person from 'ricon/Person';
 import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
 import Play from 'ricon/Play';
+import PlayListAdd from 'ricon/PlayListAdd';
 import Pulse from 'ricon/Pulse';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
 import Shopee from 'ricon/Shopee';
+import VerifiedUser from 'ricon/VerifiedUser';
 import Video from 'ricon/Video';
 import Wifi from 'ricon/Wifi';
+import Wallet from 'ricon/Wallet';
 import X from 'ricon/X';
 import ZoomIn from 'ricon/ZoomIn';
 
@@ -67,17 +70,21 @@ const icons = [
     ['MyLocation (on)', <MyLocation type="on" />],
     ['MyLocation (loading)', <MyLocation loading={true} type="on" />],
     ['Npm', <Npm />],
-    ['PersonAdd', <PersonAdd />],
+    ['Person', <Person />],
+    ['Person (add)', <Person type="add" />],
     ['Phone', <Phone />],
     ['Pin',<Pin />],
     ['Pulse',<Pulse />],
     ['Pulse (breath)',<Pulse animation="breath" />],
     ['Play',<Play />],
+    ['PlayListAdd',<PlayListAdd />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
+    ['VerifiedUser', <VerifiedUser />],
     ['Video', <Video />],
     ['Wifi', <Wifi />],
+    ['Wallet', <Wallet />],
     ['X', <X style={{position:'static'}}/>],
     ['ZoomIn', <ZoomIn />],
 // Alert
