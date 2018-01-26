@@ -19,6 +19,7 @@ import Link from 'ricon/Link';
 import Monetization from 'ricon/Monetization';
 import MyLocation from 'ricon/MyLocation';
 import Npm from 'ricon/Npm';
+import Notification from 'ricon/Notification';
 import Person from 'ricon/Person';
 import Phone from 'ricon/Phone';
 import Pin from 'ricon/Pin';
@@ -70,6 +71,11 @@ const icons = [
     ['MyLocation (on)', <MyLocation type="on" />],
     ['MyLocation (loading)', <MyLocation loading={true} type="on" />],
     ['Npm', <Npm />],
+    ['Notification', <Notification />],
+    ['Notification (active)', <Notification type="active" />],
+    ['Notification (none)', <Notification type="none" />],
+    ['Notification (off)', <Notification type="off" />],
+    ['Notification (paused)', <Notification type="paused" />],
     ['Person', <Person />],
     ['Person (add)', <Person type="add" />],
     ['Phone', <Phone />],
