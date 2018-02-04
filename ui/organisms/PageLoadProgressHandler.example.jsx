@@ -31,7 +31,8 @@ const PageLoadProgressHandlerExample = (props) =>
 
             <div>
                 <InputBox
-                    label="Pause @"
+                    leftLabel="Pause @"
+                    rightLabel="%"
                     refCb={o=>dInput=o} 
                     button={'Go'}
                     buttonProps={{
@@ -41,7 +42,7 @@ const PageLoadProgressHandlerExample = (props) =>
                         }
                     }}
                     style={Styles.input}
-                >%</InputBox>
+                />
             </div>
         </div>
     );
