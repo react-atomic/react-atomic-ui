@@ -2968,8 +2968,8 @@ organism-react-d3-piechart@*:
     react-atomic-molecule "*"
 
 organism-react-facebook@*:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/organism-react-facebook/-/organism-react-facebook-0.0.9.tgz#4832bc175b4246e9d886eaf9b9687e69b5b570c7"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/organism-react-facebook/-/organism-react-facebook-0.0.10.tgz#0039b074879fb8a72c14a8fad92ac81a4c6488f9"
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"
