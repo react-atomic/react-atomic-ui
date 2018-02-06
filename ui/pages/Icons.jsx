@@ -29,6 +29,7 @@ import Pulse from 'ricon/Pulse';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
 import Shopee from 'ricon/Shopee';
+import Timer from 'ricon/Timer';
 import VerifiedUser from 'ricon/VerifiedUser';
 import Video from 'ricon/Video';
 import Wifi from 'ricon/Wifi';
@@ -87,6 +88,8 @@ const icons = [
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
+    ['Timer', <Timer />],
+    ['Timer (off)', <Timer type="off" />],
     ['VerifiedUser', <VerifiedUser />],
     ['Video', <Video />],
     ['Wifi', <Wifi />],

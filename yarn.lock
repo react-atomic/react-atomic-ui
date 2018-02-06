@@ -1107,8 +1107,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000792:
-  version "1.0.30000792"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000792.tgz#d0cea981f8118f3961471afbb43c9a1e5bbf0332"
+  version "1.0.30000803"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000803.tgz#9939c37149d38d5f4540430490d240c03106a0f5"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1228,7 +1228,11 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2, commander@^2.11.0, commander@^2.13.0, commander@~2.13.0:
+commander@2, commander@^2.11.0, commander@^2.13.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.14.0.tgz#7b25325963e6aace20d3a9285b09379b0c2208b5"
+
+commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
 
@@ -2910,8 +2914,8 @@ opener@^1.4.3:
   resolved "https://registry.yarnpkg.com/opener/-/opener-1.4.3.tgz#5c6da2c5d7e5831e8ffa3964950f8d6674ac90b8"
 
 organism-react-ajax@*:
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.1.18.tgz#9170cf730a537a58c7ebf203687f51c1a0f33634"
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.1.19.tgz#a4848f3ac5af996ee18fb508a83e5ff082b8d21f"
   dependencies:
     es6-promise "*"
     get-object-value "*"
@@ -3584,8 +3588,8 @@ reshow@*:
     smooth-scroll-to "*"
 
 ricon@*:
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.31.tgz#a1b91dda61cbf165fa13d2bdc62d3ba8040a0810"
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.32.tgz#8ad9ca1f5d8038a456d32eb5b69f2f6c602ac6bd"
   dependencies:
     keyframe-css "*"
 
