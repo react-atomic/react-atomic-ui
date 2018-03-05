@@ -4,6 +4,8 @@ import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
 import Description from 'ricon/Description';
 import DropDown from 'ricon/DropDown';
+import Download from 'ricon/Download';
+import Delete from 'ricon/Delete';
 import Email from 'ricon/Email';
 import Exit from 'ricon/Exit';
 import Facebook from 'ricon/Facebook';
@@ -26,9 +28,11 @@ import Pin from 'ricon/Pin';
 import Play from 'ricon/Play';
 import PlayListAdd from 'ricon/PlayListAdd';
 import Pulse from 'ricon/Pulse';
+import Refresh from 'ricon/Refresh';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
 import Shopee from 'ricon/Shopee';
+import Sync from 'ricon/Sync';
 import Timer from 'ricon/Timer';
 import VerifiedUser from 'ricon/VerifiedUser';
 import Video from 'ricon/Video';
@@ -51,6 +55,11 @@ const icons = [
     ['Calendar', <Calendar />],
     ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
+    ['Delete', <Delete />],
+    ['Delete (forever)', <Delete type="forever" />],
+    ['Delete (sweep)', <Delete type="sweep" />],
+    ['Download', <Download />],
+    ['Download (file)', <Download type="file" />],
     ['DropDown', <DropDown />],
     ['DropDown (up)', <DropDown up={true} />],
     ['Description', <Description />],
@@ -85,9 +94,13 @@ const icons = [
     ['Pulse (breath)',<Pulse animation="breath" />],
     ['Play',<Play />],
     ['PlayListAdd',<PlayListAdd />],
+    ['Refresh',<Refresh />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
+    ['Sync', <Sync />],
+    ['Sync (disabled)', <Sync type="disabled" />],
+    ['Sync (problem)', <Sync type="problem" />],
     ['Timer', <Timer />],
     ['Timer (off)', <Timer type="off" />],
     ['VerifiedUser', <VerifiedUser />],
