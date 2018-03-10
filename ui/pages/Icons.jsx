@@ -9,7 +9,7 @@ import Download from 'ricon/Download';
 import Delete from 'ricon/Delete';
 import Email from 'ricon/Email';
 import Exit from 'ricon/Exit';
-import FileIcon from 'ricon/FileIcon';
+import File from 'ricon/File';
 import Facebook from 'ricon/Facebook';
 import FacebookMessage from 'ricon/FacebookMessage';
 import FeaturedPlayList from 'ricon/FeaturedPlayList';
@@ -68,7 +68,7 @@ const icons = [
     ['Description', <Description />],
     ['Email', <Email />],
     ['Exit', <Exit />],
-    ['FileIcon', <FileIcon>.js</FileIcon>],
+    ['File', <File>.js</File>],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
     ['FeaturedPlayList', <FeaturedPlayList />],
