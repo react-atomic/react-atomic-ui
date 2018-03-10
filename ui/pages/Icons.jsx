@@ -2,12 +2,14 @@ import React from 'react';
 import Calendar from 'ricon/Calendar';
 import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
+import Dashboard from 'ricon/Dashboard';
 import Description from 'ricon/Description';
-import DropDown from 'ricon/DropDown';
+import Dropdown from 'ricon/Dropdown';
 import Download from 'ricon/Download';
 import Delete from 'ricon/Delete';
 import Email from 'ricon/Email';
 import Exit from 'ricon/Exit';
+import FileIcon from 'ricon/FileIcon';
 import Facebook from 'ricon/Facebook';
 import FacebookMessage from 'ricon/FacebookMessage';
 import FeaturedPlayList from 'ricon/FeaturedPlayList';
@@ -55,16 +57,18 @@ const icons = [
     ['Calendar', <Calendar />],
     ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
+    ['Dashboard', <Dashboard />],
     ['Delete', <Delete />],
     ['Delete (forever)', <Delete type="forever" />],
     ['Delete (sweep)', <Delete type="sweep" />],
     ['Download', <Download />],
     ['Download (file)', <Download type="file" />],
-    ['DropDown', <DropDown />],
-    ['DropDown (up)', <DropDown up={true} />],
+    ['Dropdown', <Dropdown />],
+    ['Dropdown (up)', <Dropdown type="up" />],
     ['Description', <Description />],
     ['Email', <Email />],
     ['Exit', <Exit />],
+    ['FileIcon', <FileIcon>.js</FileIcon>],
     ['Facebook', <Facebook />],
     ['FacebookMessage', <FacebookMessage />],
     ['FeaturedPlayList', <FeaturedPlayList />],
