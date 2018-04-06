@@ -3393,8 +3393,8 @@ organism-react-ajax@*:
     superagent "^3.3.0"
 
 organism-react-animate@*:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.2.3.tgz#43f8c5a7c7909a73fda53d3d481ad886ddbafb20"
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.2.4.tgz#02de481a1c2497c879ed9ae55248403d0d9b4f68"
   dependencies:
     get-object-value "*"
     keyframe-css "*"
@@ -3457,8 +3457,8 @@ organism-react-navigation@*:
     ricon "*"
 
 organism-react-popup@*:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.2.6.tgz#6a9afe74b6c3930fc8acbe0f5a6dae66127d66ed"
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.3.0.tgz#7fbb27802e9b844fdf792ea4465aea337c10746e"
   dependencies:
     array.merge "*"
     get-object-value "*"
