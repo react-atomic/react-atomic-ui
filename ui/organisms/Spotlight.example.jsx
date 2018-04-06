@@ -41,7 +41,7 @@ class SpotlightExample extends PureComponent
             thisFullScreen = (
                 <FullScreen 
                     closeCallBack={()=>{
-                        this.setState({fullScreen: null});
+                        this.setState({fullScreen: null, spotlight: null});
                     }}
                 >
                     <div ref={el=>this.spot=el} style={Styles.el}>Spotlight</div> 

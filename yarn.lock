@@ -3484,8 +3484,8 @@ organism-react-progress@*:
     setimmediate "^1.0.5"
 
 organism-react-spotlight@*:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/organism-react-spotlight/-/organism-react-spotlight-0.0.4.tgz#103debd01c90afae14f08ab628095034c03af751"
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/organism-react-spotlight/-/organism-react-spotlight-0.0.6.tgz#449cbe363119d6cb4fc7e894027797e0ed925a24"
   dependencies:
     array.merge "*"
     class-lib "*"
