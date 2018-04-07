@@ -1,15 +1,16 @@
 import React, {Component} from 'react'; 
-import { DocTemplate } from 'pmvc_react_admin';
+import { getDocTemplate } from 'pmvc_react_admin';
 import Menu from '../organisms/Menu';
 
-const Doc = (props) =>
-{
-    return (
-        <DocTemplate 
-            {...props} 
-            menu={<Menu />}
-        />
-    );
-}
+const DocTemplate = getDocTemplate({}, true, {
+    sideWidth: 160
+});
+
+const Doc = ({children, ...props}) =>
+<DocTemplate 
+    {...props} 
+    body={children}
+    menu={<Menu />}
+/>
 
 export default Doc;

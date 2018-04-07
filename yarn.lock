@@ -2597,7 +2597,13 @@ hyphenate-style-name@*:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
 
-iconv-lite@0.4, iconv-lite@0.4.19, iconv-lite@~0.4.13:
+iconv-lite@0.4, iconv-lite@~0.4.13:
+  version "0.4.21"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.21.tgz#c47f8733d02171189ebc4a400f3218d348094798"
+  dependencies:
+    safer-buffer "^2.1.0"
+
+iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
@@ -3457,8 +3463,8 @@ organism-react-navigation@*:
     ricon "*"
 
 organism-react-popup@*:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.3.0.tgz#7fbb27802e9b844fdf792ea4465aea337c10746e"
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.3.2.tgz#a1f9191daa7cf07f48ea1aa8a1b74bf237204180"
   dependencies:
     array.merge "*"
     get-object-value "*"
@@ -3655,8 +3661,8 @@ pkg-dir@^2.0.0:
     find-up "^2.1.0"
 
 pmvc_react_admin@*:
-  version "0.1.31"
-  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.31.tgz#7f9e5bb0a59ef11c8a1b716fc22f2c439f2f167e"
+  version "0.1.32"
+  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.32.tgz#6989ad8a53b4215eb47fce0e5027dc2cb5e71ee3"
   dependencies:
     organism-react-navigation "*"
     organism-react-popup "*"
@@ -4139,6 +4145,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safe-regex/-/safe-regex-1.1.0.tgz#40a3669f3b077d1e943d44629e157dd48023bf2e"
   dependencies:
     ret "~0.1.10"
+
+safer-buffer@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.0.tgz#d9f653a55538c8d7829cb1a92e90bbcbc5ff5d3b"
 
 schema-utils@^0.4.0, schema-utils@^0.4.5:
   version "0.4.5"
