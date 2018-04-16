@@ -65,6 +65,8 @@ const icons = [
     ['Download (file)', <Download type="file" />],
     ['Dropdown', <Dropdown />],
     ['Dropdown (up)', <Dropdown type="up" />],
+    ['Dropdown (right)', <Dropdown type="right" />],
+    ['Dropdown (left)', <Dropdown type="left" />],
     ['Description', <Description />],
     ['Email', <Email />],
     ['Exit', <Exit />],
