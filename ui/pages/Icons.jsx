@@ -83,6 +83,7 @@ const icons = [
     ['HamburgerToX', <HamburgerToX on={true} />],
     ['Link', <Link />],
     ['Monetization', <Monetization />],
+    ['Monetization', <Monetization type="sign" />],
     ['MyLocation (fixed)', <MyLocation />],
     ['MyLocation (off)', <MyLocation type="off" />],
     ['MyLocation (on)', <MyLocation type="on" />],

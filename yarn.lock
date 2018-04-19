@@ -4091,8 +4091,8 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
 ricon@*:
-  version "0.0.47"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.47.tgz#3ae71ce76341e19b537e3a721840e720fd424142"
+  version "0.0.48"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.48.tgz#fa7d9a03d97b02d6445dc4349a1f5da8095cf988"
   dependencies:
     keyframe-css "*"
 
