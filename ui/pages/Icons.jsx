@@ -31,6 +31,7 @@ import Play from 'ricon/Play';
 import PlayListAdd from 'ricon/PlayListAdd';
 import Pulse from 'ricon/Pulse';
 import Refresh from 'ricon/Refresh';
+import Settings from 'ricon/Settings';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
 import Shopee from 'ricon/Shopee';
@@ -101,6 +102,8 @@ const icons = [
     ['Play',<Play />],
     ['PlayListAdd',<PlayListAdd />],
     ['Refresh',<Refresh />],
+    ['Settings', <Settings />],
+    ['Settings', <Settings type='square' />],
     ['ShoppingCart', <ShoppingCart />],
     ['Sort', <Sort />],
     ['Shopee', <Shopee />],
