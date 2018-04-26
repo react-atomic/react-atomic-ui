@@ -1,4 +1,6 @@
 import React from 'react'; 
+import AccessTime from 'ricon/AccessTime';
+import Build from 'ricon/Build';
 import Calendar from 'ricon/Calendar';
 import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
@@ -55,6 +57,10 @@ import Doc from '../templates/Doc';
 
 
 const icons = [
+    ['AccessTime', <AccessTime />],
+    ['AccessTime (fill)', <AccessTime type="fill" />],
+    ['AccessTime (update)', <AccessTime type="update" />],
+    ['Build', <Build />],
     ['Calendar', <Calendar />],
     ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
