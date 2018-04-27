@@ -207,8 +207,8 @@ babel-code-frame@^6.26.0:
     js-tokens "^3.0.2"
 
 babel-core@^6.26.0, babel-core@^6.x:
-  version "6.26.2"
-  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.2.tgz#b67a120521dcd6baf1a2ecceeceb595e223da06c"
+  version "6.26.3"
+  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-generator "^6.26.0"
@@ -1810,8 +1810,8 @@ ejs@^2.5.7:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.9.tgz#7ba254582a560d267437109a68354112475b0ce5"
 
 electron-to-chromium@^1.3.30:
-  version "1.3.42"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.42.tgz#95c33bf01d0cc405556aec899fe61fd4d76ea0f9"
+  version "1.3.44"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.44.tgz#ef6b150a60d523082388cadad88085ecd2fd4684"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -3236,8 +3236,8 @@ ora@2.0.0:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.3.0.tgz#9c1cf369abc9879a7553c1fbd2c33dc2e44705e6"
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.3.1.tgz#f340a359e6820b33a2d176b9304cb30d47371623"
   dependencies:
     es6-promise "*"
     get-object-value "*"
@@ -3892,8 +3892,8 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@*:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.5.5.tgz#d41c9f2c5a250982c383f8244b0c900a940bc531"
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.5.6.tgz#3a932f21d23d04ab23351d1023d733baf35c129e"
   dependencies:
     get-storage "*"
     getoffset "*"
