@@ -12,6 +12,7 @@ import Carousel from '../pages/Carousel';
 import D3 from '../pages/D3';
 import Animation from '../pages/Animation';
 import Popup from '../pages/Popup';
+import Video from '../pages/Video';
 
 const themes = {
     atoms: Atoms,
@@ -22,7 +23,8 @@ const themes = {
     list: List,
     carousel: Carousel,
     animation: Animation,
-    popup: Popup 
+    popup: Popup,
+    video: Video,
 };
 
 const Index = (props) => {
