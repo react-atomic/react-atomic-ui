@@ -11,7 +11,7 @@ import youTubeRWD from '!raw-loader!../../../ui/organisms/YouTubeRWD.example';
 class Video extends BasePage
 {
     static defaultProps = {
-        pageName: 'youtube' 
+        pageName: 'video' 
     };
 
     render()
