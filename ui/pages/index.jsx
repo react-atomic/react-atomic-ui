@@ -13,6 +13,7 @@ import D3 from '../pages/D3';
 import Animation from '../pages/Animation';
 import Popup from '../pages/Popup';
 import Video from '../pages/Video';
+import Parallax from '../pages/Parallax';
 
 const themes = {
     atoms: Atoms,
@@ -24,6 +25,7 @@ const themes = {
     carousel: Carousel,
     animation: Animation,
     popup: Popup,
+    parallax: Parallax,
     video: Video,
 };
 

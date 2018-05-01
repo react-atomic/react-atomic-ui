@@ -3315,6 +3315,17 @@ organism-react-navigation@*:
     reshow-flux "*"
     ricon "*"
 
+organism-react-parallax@*:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.0.7.tgz#835a994631c7b9a8f422ba7e5c397a21a22960ec"
+  dependencies:
+    array.merge "*"
+    easing-lib "*"
+    get-scroll-info "*"
+    getoffset "*"
+    organism-react-scroll-nav "*"
+    react-atomic-molecule "*"
+
 organism-react-popup@*:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.3.2.tgz#a1f9191daa7cf07f48ea1aa8a1b74bf237204180"
@@ -3341,6 +3352,19 @@ organism-react-progress@*:
     react-atomic-molecule "*"
     reshow-flux "*"
     setimmediate "^1.0.5"
+
+organism-react-scroll-nav@*:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.4.8.tgz#f207ce43eda274e82de9c41ff6f03b79f7dc0002"
+  dependencies:
+    get-object-value "*"
+    get-scroll-info "*"
+    get-window-offset "*"
+    getoffset "*"
+    immutable "*"
+    react-atomic-molecule "*"
+    reshow-flux "*"
+    smooth-scroll-to "*"
 
 organism-react-spotlight@*:
   version "0.0.6"
@@ -3516,8 +3540,8 @@ pkg-dir@^2.0.0:
     find-up "^2.1.0"
 
 pmvc_react_admin@*:
-  version "0.1.37"
-  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.37.tgz#685c89564af690daeeca2f2f7cbeba6d71c4933a"
+  version "0.1.38"
+  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.38.tgz#c94bc737a2a52a71f2d447e447a8a63ecfaaef97"
   dependencies:
     organism-react-navigation "*"
     organism-react-popup "*"

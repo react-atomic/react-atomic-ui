@@ -19,6 +19,7 @@
     "organism-react-d3-piechart": "*",
     "organism-react-facebook": "*",
     "organism-react-navigation": "*",
+    "organism-react-parallax": "*",
     "organism-react-progress": "*",
     "organism-react-spotlight": "*",
     "organism-react-video": "*",
