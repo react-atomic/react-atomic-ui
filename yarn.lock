@@ -3305,8 +3305,8 @@ organism-react-facebook@*:
     ricon "*"
 
 organism-react-navigation@*:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.4.tgz#70d1538d55d62a5396c9df05d796efcb6b33668d"
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.6.tgz#883e7a32bc1db7139a880d1626ba44c2ae488e93"
   dependencies:
     class-lib "*"
     get-object-value "*"
@@ -3540,8 +3540,8 @@ pkg-dir@^2.0.0:
     find-up "^2.1.0"
 
 pmvc_react_admin@*:
-  version "0.1.38"
-  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.38.tgz#c94bc737a2a52a71f2d447e447a8a63ecfaaef97"
+  version "0.1.39"
+  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.39.tgz#5cd59b054df75f5ee41837e2877cb9441ada4434"
   dependencies:
     organism-react-navigation "*"
     organism-react-popup "*"
