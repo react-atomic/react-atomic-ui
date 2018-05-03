@@ -1138,8 +1138,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000792:
-  version "1.0.30000832"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000832.tgz#22a277f1d623774cc9aea2f7c1a65cb1603c63b8"
+  version "1.0.30000833"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000833.tgz#98e84fcdb4399c6fa0b0fd41490d3217ac7802b4"
 
 center-align@^0.1.1:
   version "0.1.3"
@@ -1814,8 +1814,8 @@ ejs@^2.5.7:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.9.tgz#7ba254582a560d267437109a68354112475b0ce5"
 
 electron-to-chromium@^1.3.30:
-  version "1.3.44"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.44.tgz#ef6b150a60d523082388cadad88085ecd2fd4684"
+  version "1.3.45"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.45.tgz#458ac1b1c5c760ce8811a16d2bfbd97ec30bafb8"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -3380,8 +3380,8 @@ organism-react-spotlight@*:
     react-atomic-molecule "*"
 
 organism-react-video@*:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/organism-react-video/-/organism-react-video-0.0.1.tgz#583be990fff21c4b529e57278a3a9d950e607b0d"
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/organism-react-video/-/organism-react-video-0.0.3.tgz#e03885ba7dcb4e0a8495f2ab8782584e0b13806c"
   dependencies:
     react-atomic-molecule "*"
 
@@ -3727,8 +3727,8 @@ react-atomic-molecule@*:
     ucfirst "*"
 
 react-atomic-organism@*:
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.1.18.tgz#77950b28820b1207c39e960305fb8f68b0f38183"
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.1.20.tgz#fc08053f62c51c025f4ad11366252ab6c1b8f657"
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"
