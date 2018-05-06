@@ -3316,8 +3316,8 @@ organism-react-navigation@*:
     ricon "*"
 
 organism-react-parallax@*:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.0.9.tgz#5733014302d5bd5dbda205bbe0b144448df7d12f"
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.0.10.tgz#be3d47adae767d4f15f1cda6af7ff5e9bac5ae02"
   dependencies:
     array.merge "*"
     easing-lib "*"

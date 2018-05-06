@@ -35,6 +35,6 @@ export default Parallax;
 
 const Styles = {
     page: {
-        minHeight: '200vh'
+        padding: '100vh 0 100vh'
     }
 };
