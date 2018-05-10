@@ -3273,12 +3273,13 @@ organism-react-carousel@*:
     ricon "*"
 
 organism-react-code@*:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.0.5.tgz#17d879405764874d9eea08b53260b83ee72e749a"
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.1.1.tgz#c1d252c51d0965a423e253a033828cf4e25af469"
   dependencies:
     highlight.js "*"
     marked "*"
     organism-react-ajax "*"
+    organism-react-popup "*"
     react-atomic-molecule "*"
     ricon "*"
 
@@ -3330,8 +3331,8 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.3.2.tgz#a1f9191daa7cf07f48ea1aa8a1b74bf237204180"
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.4.2.tgz#f22f74dd9816268401339e0f1f56ee3f098cb8b0"
   dependencies:
     array.merge "*"
     get-object-value "*"
