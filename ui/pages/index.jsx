@@ -14,6 +14,7 @@ import Animation from '../pages/Animation';
 import Popup from '../pages/Popup';
 import Video from '../pages/Video';
 import Parallax from '../pages/Parallax';
+import Code from '../pages/Code';
 
 const themes = {
     atoms: Atoms,
@@ -27,6 +28,7 @@ const themes = {
     popup: Popup,
     parallax: Parallax,
     video: Video,
+    Code
 };
 
 const Index = (props) => {
