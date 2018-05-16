@@ -1,4 +1,6 @@
 import React from 'react'; 
+
+import Account from 'ricon/Account';
 import AccessTime from 'ricon/AccessTime';
 import Build from 'ricon/Build';
 import Calendar from 'ricon/Calendar';
@@ -57,6 +59,9 @@ import Doc from '../templates/Doc';
 
 
 const icons = [
+    ['Account', <Account />],
+    ['Account (circle)', <Account type="circle" />],
+    ['Account (supervisor)', <Account type="supervisor" />],
     ['AccessTime', <AccessTime />],
     ['AccessTime (fill)', <AccessTime type="fill" />],
     ['AccessTime (update)', <AccessTime type="update" />],
