@@ -5,7 +5,7 @@ const D3BarChart = (props) =>
 {
     let data = 
     { 
-        value: [
+        values: [
             {
                 x: '2013-01',
                 y: 53

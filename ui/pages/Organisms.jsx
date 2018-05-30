@@ -11,6 +11,9 @@ import pageLoadProgressHandler from '!raw-loader!../../../ui/organisms/PageLoadP
 import PageLoadProgressHandlerWithAjax from '../organisms/PageLoadProgressHandlerWithAjax.example';
 import pageLoadProgressHandlerWithAjax from '!raw-loader!../../../ui/organisms/PageLoadProgressHandlerWithAjax.example';
 
+import Dropzone from '../organisms/Dropzone.example';
+import dropzone from '!raw-loader!../../../ui/organisms/Dropzone.example';
+
 import FBLike from '../organisms/FBLike.example';
 import fbLike from '!raw-loader!../../../ui/organisms/FBLike.example';
 import FBPage from '../organisms/FBPage.example';
@@ -39,6 +42,14 @@ class Organisms extends BasePage
                 >
                     <PageLoadProgressHandlerWithAjax />
                 </CodeExample>
+                
+                <CodeExample
+                    code={dropzone}
+                    header="Dropzone"
+                >
+                    <Dropzone />
+                </CodeExample>
+
                 <CodeExample
                     code={fbLike}
                     header="Facebook Like Button"

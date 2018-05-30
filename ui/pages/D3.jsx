@@ -15,6 +15,9 @@ import d3BarChart from '!raw-loader!../../../ui/organisms/D3BarChart.example';
 import D3LineChart from '../organisms/D3LineChart.example';
 import d3LineChart from '!raw-loader!../../../ui/organisms/D3LineChart.example';
 
+import StockChart from '../organisms/StockChart.example';
+import stockChart from '!raw-loader!../../../ui/organisms/StockChart.example';
+
 class D3 extends BasePage 
 {
     static defaultProps = {
@@ -47,6 +50,12 @@ class D3 extends BasePage
                     <D3PieChart />
                 </CodeExample>
 
+                <CodeExample
+                    code={stockChart}
+                    header="Stock Chart"
+                >
+                    <StockChart />
+                </CodeExample>
             </Doc>
         );
     }
