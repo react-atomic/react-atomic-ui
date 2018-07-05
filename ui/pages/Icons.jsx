@@ -35,6 +35,7 @@ import Play from 'ricon/Play';
 import PlayListAdd from 'ricon/PlayListAdd';
 import Pulse from 'ricon/Pulse';
 import Refresh from 'ricon/Refresh';
+import Search from 'ricon/Search';
 import Settings from 'ricon/Settings';
 import ShoppingCart from 'ricon/ShoppingCart';
 import Sort from 'ricon/Sort';
@@ -114,6 +115,7 @@ const icons = [
     ['Play',<Play />],
     ['PlayListAdd',<PlayListAdd />],
     ['Refresh',<Refresh />],
+    ['Search', <Search />],
     ['Settings', <Settings />],
     ['Settings', <Settings type='square' />],
     ['ShoppingCart', <ShoppingCart />],

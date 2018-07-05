@@ -13,10 +13,6 @@ const rows = [
 
 class HtmlTableListExample extends PureComponent
 {
-    state = {
-        isLoad : false
-    }
-    
     render()
     {
         return (

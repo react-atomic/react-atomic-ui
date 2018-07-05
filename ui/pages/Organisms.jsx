@@ -19,6 +19,9 @@ import fbLike from '!raw-loader!../../../ui/organisms/FBLike.example';
 import FBPage from '../organisms/FBPage.example';
 import fbPage from '!raw-loader!../../../ui/organisms/FBPage.example';
 
+import TabView from '../organisms/TabView.example';
+import tabView from '!raw-loader!../../../ui/organisms/TabView.example';
+
 class Organisms extends BasePage 
 {
     static defaultProps = {
@@ -64,6 +67,14 @@ class Organisms extends BasePage
                     header="Facebook Page Plugin"
                 >
                     <FBPage />
+                </CodeExample>
+
+                <CodeExample
+                    code={tabView}
+                    header="Tab View"
+                    id="tab"
+                >
+                    <TabView />
                 </CodeExample>
             </Doc>
         );
