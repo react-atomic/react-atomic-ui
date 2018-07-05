@@ -3,7 +3,7 @@ import {FBPage} from 'organism-react-facebook';
 
 const FBPageExample = (props) =>
 {
-    return <FBPage page="ntd230" />;
+    return <FBPage page="react" />;
 }
 
 export default FBPageExample;

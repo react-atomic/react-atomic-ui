@@ -1,16 +1,15 @@
 import React from 'react'; 
-import Pin from 'ricon/Pin';
 
-import Link from '../molecules/Link';
-import HeaderLink from '../molecules/HeaderLink';
-import Doc from '../templates/Doc'; 
+/*Base*/
+import CodeExample from 'organism-react-code';
 import BasePage from '../pages/BasePage';
+import Doc from '../templates/Doc'; 
 
+import GridList from '../organisms/GridList.example';
+import gridList from '!raw-loader!../../../ui/organisms/GridList.example';
 
-const rows = [
-    [<Pin />],
-];
-let RVGrid;
+import HtmlTableList from '../organisms/HtmlTableList.example';
+import htmlTableList from '!raw-loader!../../../ui/organisms/HtmlTableList.example';
 
 class List extends BasePage
 {
@@ -19,31 +18,24 @@ class List extends BasePage
         pageName: 'list' 
     };
 
-    componentDidMount()
-    {
-        super.componentDidMount();
-        let self = this;
-        import ('pmvc_react_list/rv').then(({RVGrid: rvGrid})=>{
-            RVGrid = rvGrid; 
-            this.setState({
-                width: this.el.offsetWidth,
-            });
-        });
-    }
-
     render()
     {
-        const state = this.state;
-        let grid; 
-        if (state && state.width && RVGrid) {
-            grid = <RVGrid width={state.width} autoContainerWidth={true} rows={rows} />
-        }
         return (
-            <Doc refCb={el=>this.el=el}>
-                <HeaderLink className="header" href="https://github.com/pmvc-theme/pmvc_react_list">
-                    PMVC List
-                </HeaderLink>
-                {grid}
+            <Doc>
+                <CodeExample
+                    code={gridList}
+                    header="Grid List"
+                >
+                    <GridList />
+                </CodeExample>
+
+                <CodeExample
+                    code={htmlTableList}
+                    header="Html Table"
+                >
+                    <HtmlTableList />
+                </CodeExample>
+
             </Doc>
         );
     }
