@@ -17,7 +17,7 @@ class ReactVirtualizedTableListExample extends PureComponent
     render()
     {
         return (
-            <div style={{width:200}}>
+            <div style={{width:350}}>
             <Table
                 rows={rows}
                 getColWidth={()=>150}
