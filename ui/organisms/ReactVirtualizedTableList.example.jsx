@@ -1,6 +1,7 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent} from 'react'
 
-import {Table, Cell, Column} from 'pmvc_react_list';
+import {Cell, Column} from 'pmvc_react_list'
+import Table from 'pmvc_react_list/rv'
 
 const rows = [
   ['a1', 'b1', 'c1'],
@@ -11,12 +12,17 @@ const rows = [
   ['a3', 'b3', 'c3'],
 ];
 
-class HtmlTableListExample extends PureComponent
+class ReactVirtualizedTableListExample extends PureComponent
 {
     render()
     {
         return (
-            <Table rows={rows}>
+            <div style={{width:200}}>
+            <Table
+                rows={rows}
+                getColWidth={()=>150}
+                height={150}
+            >
                 <Column
                     header={<Cell>h1</Cell>}
                     cell={({rowIndex,columnIndex})=>{
@@ -36,14 +42,10 @@ class HtmlTableListExample extends PureComponent
                     }}
                 />
             </Table>
-        );
+            </div>
+        )
     }
 }
 
-export default HtmlTableListExample;
+export default ReactVirtualizedTableListExample;
 
-const Styles = {
-    col: {
-        height: 40
-    }
-};

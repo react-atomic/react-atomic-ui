@@ -11,6 +11,9 @@ import gridList from '!raw-loader!../../../ui/organisms/GridList.example';
 import HtmlTableList from '../organisms/HtmlTableList.example';
 import htmlTableList from '!raw-loader!../../../ui/organisms/HtmlTableList.example';
 
+import ReactVirtualizedTableList from '../organisms/ReactVirtualizedTableList.example';
+import reactVirtualizedTableList from '!raw-loader!../../../ui/organisms/ReactVirtualizedTableList.example';
+
 class List extends BasePage
 {
 
@@ -36,6 +39,12 @@ class List extends BasePage
                     <HtmlTableList />
                 </CodeExample>
 
+                <CodeExample
+                    code={reactVirtualizedTableList}
+                    header="React Virgualized Table"
+                >
+                    <ReactVirtualizedTableList />
+                </CodeExample>
             </Doc>
         );
     }
