@@ -3607,8 +3607,8 @@ pmvc_react_admin@*:
     reshow "*"
 
 pmvc_react_list@*:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.1.5.tgz#c8a113c5e8414cc280fc8aac303b277148ec3d06"
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.1.7.tgz#b35d7c7141059439f85c524f5fb2acb8fb3cbe6a"
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"

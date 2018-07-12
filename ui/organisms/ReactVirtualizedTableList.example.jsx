@@ -28,24 +28,24 @@ class ReactVirtualizedTableListExample extends PureComponent
             >
                 <Column
                     header={<Cell>h1</Cell>}
-                    cell={({rowIndex,columnIndex})=>
-                        <div onClick={this.handleClick(rowIndex)}>
+                    cell={({rowIndex, columnIndex, style})=>
+                        <div style={style} onClick={this.handleClick(rowIndex)}>
                             {rows[rowIndex][columnIndex]}
                         </div> 
                     }
                 />
                 <Column
                     header={<Cell>h2</Cell>}
-                    cell={({rowIndex,columnIndex})=>
-                        <div onClick={this.handleClick(rowIndex)}>
+                    cell={({rowIndex, columnIndex, style})=>
+                        <div style={style} onClick={this.handleClick(rowIndex)}>
                             {rows[rowIndex][columnIndex]}
                         </div> 
                     }
                 />
                 <Column
                     header={<Cell>h3</Cell>}
-                    cell={({rowIndex,columnIndex})=>
-                        <div onClick={this.handleClick(rowIndex)}>
+                    cell={({rowIndex, columnIndex, style})=>
+                        <div style={style} onClick={this.handleClick(rowIndex)}>
                             {rows[rowIndex][columnIndex]}
                         </div> 
                     }
