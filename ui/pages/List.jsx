@@ -14,6 +14,9 @@ import htmlTableList from '!raw-loader!../../../ui/organisms/HtmlTableList.examp
 import ReactVirtualizedTableList from '../organisms/ReactVirtualizedTableList.example';
 import reactVirtualizedTableList from '!raw-loader!../../../ui/organisms/ReactVirtualizedTableList.example';
 
+import FixedDataTableList from '../organisms/FixedDataTableList.example';
+import fixedDataTableList from '!raw-loader!../../../ui/organisms/FixedDataTableList.example';
+
 class List extends BasePage
 {
 
@@ -44,6 +47,13 @@ class List extends BasePage
                     header="React Virgualized Table"
                 >
                     <ReactVirtualizedTableList />
+                </CodeExample>
+
+                <CodeExample
+                    code={fixedDataTableList}
+                    header="Fixed Data Table"
+                >
+                    <FixedDataTableList />
                 </CodeExample>
             </Doc>
         );

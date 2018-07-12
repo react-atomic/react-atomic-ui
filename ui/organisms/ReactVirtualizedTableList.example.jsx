@@ -14,6 +14,11 @@ const rows = [
 
 class ReactVirtualizedTableListExample extends PureComponent
 {
+    handleClick = rowIndex => ev =>
+    {
+        alert(rowIndex)
+    }
+
     render()
     {
         return (
@@ -25,21 +30,27 @@ class ReactVirtualizedTableListExample extends PureComponent
             >
                 <Column
                     header={<Cell>h1</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
-                        return rows[rowIndex][columnIndex] 
-                    }}
+                    cell={({rowIndex,columnIndex})=>
+                        <div onClick={this.handleClick(rowIndex)}>
+                            {rows[rowIndex][columnIndex]}
+                        </div> 
+                    }
                 />
                 <Column
                     header={<Cell>h2</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
-                        return rows[rowIndex][columnIndex] 
-                    }}
+                    cell={({rowIndex,columnIndex})=>
+                        <div onClick={this.handleClick(rowIndex)}>
+                            {rows[rowIndex][columnIndex]}
+                        </div> 
+                    }
                 />
                 <Column
                     header={<Cell>h3</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
-                        return rows[rowIndex][2] 
-                    }}
+                    cell={({rowIndex,columnIndex})=>
+                        <div onClick={this.handleClick(rowIndex)}>
+                            {rows[rowIndex][columnIndex]}
+                        </div> 
+                    }
                 />
             </Table>
             </div>

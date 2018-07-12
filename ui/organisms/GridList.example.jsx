@@ -1,14 +1,14 @@
 import React, {PureComponent} from 'react';
-import {
-    FullScreenExample as FullScreen
-} from "organism-react-code";
-
-const Col = ({style, children, key, ...props}) => <div key={key} style={{...Styles.col, ...style}}>{children}</div>
 
 const rows = [
-    [<Col>a</Col>, <Col>b</Col>, <Col>c</Col>],
-    [<Col>d</Col>, <Col>e</Col>, <Col>f</Col>],
+  ['a1', 'b1', 'c1'],
+  ['a2', 'b2', 'c2'],
+  ['a3', 'b3', 'c3'],
+  ['a4', 'b4', 'c4'],
+  ['a5', 'b5', 'c5'],
+  ['a6', 'b6', 'c6'],
 ];
+
 let RVGrid = null;
 
 class GridListExample extends PureComponent
@@ -28,25 +28,25 @@ class GridListExample extends PureComponent
     render()
     {
         const {isLoad} = this.state;
-        let grid; 
+        let grid = null; 
         if (RVGrid && isLoad) {
             const className ='grid'; // hack for disable const element
-            grid = <RVGrid className={className}  width={150} height={40} rows={rows} />
+            grid = <RVGrid
+                className={className}
+                width={200}
+                height={100}
+                rows={rows}
+                style={Styles.container}
+            />
         }
-        return (
-            <FullScreen
-                id="full-page-html-table"
-            >
-               {grid} 
-            </FullScreen>
-        );
+        return grid;
     }
 }
 
 export default GridListExample;
 
 const Styles = {
-    col: {
-        height: 40
+    container: {
+        border: '1px solid #000'
     }
-};
+}
