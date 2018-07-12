@@ -22,11 +22,9 @@ class ReactVirtualizedTableListExample extends PureComponent
     render()
     {
         return (
-            <div style={{width:350}}>
+            <div style={{width:'40%', height:150}}>
             <Table
                 rows={rows}
-                getColWidth={()=>150}
-                height={150}
             >
                 <Column
                     header={<Cell>h1</Cell>}
