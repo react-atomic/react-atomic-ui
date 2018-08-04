@@ -25,20 +25,20 @@ class FixedDataTableListExample extends PureComponent
             >
                 <Column
                     header={<Cell>h1</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
+                    cell={({rowIndex, columnKey:columnIndex})=>{
                         return rows[rowIndex][columnIndex] 
                     }}
                 />
                 <Column
                     header={<Cell>h2</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
+                    cell={({rowIndex, columnKey:columnIndex})=>{
                         return rows[rowIndex][columnIndex] 
                     }}
                 />
                 <Column
                     header={<Cell>h3</Cell>}
-                    cell={({rowIndex,columnIndex})=>{
-                        return rows[rowIndex][2] 
+                    cell={({rowIndex, columnKey:columnIndex})=>{
+                        return rows[rowIndex][columnIndex] 
                     }}
                 />
             </Table>

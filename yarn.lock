@@ -754,8 +754,8 @@ babel-plugin-transform-react-pure-class-to-function@*:
     babel-helper-is-react-class "^1.0.0"
 
 babel-plugin-transform-react-remove-prop-types@*:
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.13.tgz#331cfc05099a808238311d78319c27460d481189"
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.14.tgz#d3bf0ab39bd491c6670e71abd8642d4e6caae919"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -1075,8 +1075,8 @@ browserslist@^3.2.6:
     electron-to-chromium "^1.3.47"
 
 buffer-from@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.0.tgz#87fcaa3a298358e0ade6e442cfce840740d1ad04"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
 
 buffer-xor@^1.0.3:
   version "1.0.3"
@@ -1143,8 +1143,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000844:
-  version "1.0.30000865"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000865.tgz#70026616e8afe6e1442f8bb4e1092987d81a2f25"
+  version "1.0.30000874"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000874.tgz#a641b1f1c420d58d9b132920ef6ba87bbdcd2223"
 
 center-align@^0.1.1:
   version "0.1.3"
@@ -1302,8 +1302,8 @@ combined-stream@1.0.6:
     delayed-stream "~1.0.0"
 
 commander@2, commander@^2.11.0, commander@^2.13.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.0.tgz#9d07b25e2a6f198b76d8b756a0e8a9604a6a1a60"
 
 commander@~2.14.1:
   version "2.14.1"
@@ -1840,8 +1840,8 @@ ejs@^2.5.7:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
 electron-to-chromium@^1.3.47:
-  version "1.3.52"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.52.tgz#d2d9f1270ba4a3b967b831c40ef71fb4d9ab5ce0"
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.55.tgz#f150e10b20b77d9d41afcca312efe0c3b1a7fdce"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -2091,8 +2091,8 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     is-extendable "^1.0.1"
 
 extend@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
 extglob@^0.3.1:
   version "0.3.2"
@@ -2558,9 +2558,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ipaddr.js@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.6.0.tgz#e3fa357b773da619f26e95f049d055c72796f86b"
+ipaddr.js@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.8.0.tgz#eaa33d6ddd7ace8f7f6fe0c9ca0440e706738b1e"
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
@@ -2967,15 +2967,15 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-mime-db@~1.33.0:
-  version "1.33.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
+mime-db@~1.35.0:
+  version "1.35.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
 
 mime-types@^2.1.12, mime-types@~2.1.18:
-  version "2.1.18"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.18.tgz#6f323f60a83d11146f831ff11fd66e2fe5503bb8"
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.19.tgz#71e464537a7ef81c15f2db9d97e913fc0ff606f0"
   dependencies:
-    mime-db "~1.33.0"
+    mime-db "~1.35.0"
 
 mime@1.4.1:
   version "1.4.1"
@@ -3161,6 +3161,10 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
+non-worker@*:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/non-worker/-/non-worker-0.0.0.tgz#4d647057ac65c3cbcd78d827985fd7400f4ec60c"
+
 nopt@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.1.tgz#d0d4685afd5415193c8c7505602d0d17cd64474d"
@@ -3188,8 +3192,8 @@ npm-bundled@^1.0.1:
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.3.tgz#7e71703d973af3370a9591bafe3a63aca0be2308"
 
 npm-packlist@^1.1.6:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.1.10.tgz#1039db9e985727e464df066f4cf0ab6ef85c398a"
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.1.11.tgz#84e8c683cbe7867d34b1d357d893ce29e28a02de"
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
@@ -3278,12 +3282,13 @@ ora@2.0.0:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.4.14.tgz#f9120f0f971fbaa1958a323f189db0f0cc18bdef"
+  version "0.4.20"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.4.20.tgz#a693ba9be9087e5d9acc4546a40a0f067f64068a"
   dependencies:
     es6-promise "4.2.4"
     get-object-value "*"
     immutable "*"
+    non-worker "*"
     reshow-flux "*"
     smooth-scroll-to "*"
     superagent "3.8.3"
@@ -3318,8 +3323,8 @@ organism-react-code@*:
     ricon "*"
 
 organism-react-d3-axis-chart@*:
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.1.17.tgz#0f504a5f26ef612b6ba1ad7acde7973ba9658ec0"
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.1.21.tgz#a644aae0379b264acd06c3b82a7f0ad92f5bbaf4"
   dependencies:
     colorlib "*"
     d3-lib "*"
@@ -3342,16 +3347,16 @@ organism-react-dropzone@*:
     ricon "*"
 
 organism-react-facebook@*:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/organism-react-facebook/-/organism-react-facebook-0.0.11.tgz#3ad06fe5ef5a7bc52ed70a8def1cea76e4ba6e97"
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/organism-react-facebook/-/organism-react-facebook-0.0.12.tgz#e5959f3aefd9534cbd3f9d83f078a3b618f5763c"
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"
     ricon "*"
 
 organism-react-navigation@*:
-  version "0.2.16"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.16.tgz#6313aba12696bb09fa40a26178f7de1d44ccc7c7"
+  version "0.2.22"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.22.tgz#580a4992c22c8756d8c19656c23fba8db36ddf97"
   dependencies:
     class-lib "*"
     get-object-value "*"
@@ -3425,8 +3430,8 @@ organism-react-spotlight@*:
     react-atomic-molecule "*"
 
 organism-react-stockcharts@*:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/organism-react-stockcharts/-/organism-react-stockcharts-0.0.10.tgz#b4235b71f9159335373be9e866c5338e47f0837b"
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/organism-react-stockcharts/-/organism-react-stockcharts-0.0.12.tgz#db5b93b7c8e9d86adade2d42ec62fc69a253953c"
   dependencies:
     array.min.max "*"
     d3fc-technical-indicator "6.1.1"
@@ -3607,8 +3612,8 @@ pmvc_react_admin@*:
     reshow "*"
 
 pmvc_react_list@*:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.1.7.tgz#b35d7c7141059439f85c524f5fb2acb8fb3cbe6a"
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.1.8.tgz#2794b9335995382cc2f02b06a48500eb2e55dc56"
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"
@@ -3651,11 +3656,11 @@ prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2:
     object-assign "^4.1.1"
 
 proxy-addr@~2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.3.tgz#355f262505a621646b3130a728eb647e22055341"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.4.tgz#ecfc733bf22ff8c6f407fa275327b9ab67e48b93"
   dependencies:
     forwarded "~0.1.2"
-    ipaddr.js "1.6.0"
+    ipaddr.js "1.8.0"
 
 prr@~1.0.1:
   version "1.0.1"
@@ -3773,12 +3778,12 @@ react-addons-shallow-compare@^15.3.2:
     object-assign "^4.1.0"
 
 react-atomic-atom@*:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-1.0.17.tgz#e40c47fd25516854c845a3537c0066e479286da4"
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-1.0.18.tgz#2f6508427ace11615c20dd272d3df6accbea2a77"
 
 react-atomic-molecule@*:
-  version "1.3.50"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-1.3.50.tgz#dc8db92277bb05979d6b63136c47951ce94684c8"
+  version "1.3.53"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-1.3.53.tgz#3c94ab933399d94130f3c3f2cd21d1244f774698"
   dependencies:
     class-lib "*"
     get-object-value "*"
@@ -3787,17 +3792,18 @@ react-atomic-molecule@*:
     ucfirst "*"
 
 react-atomic-organism@*:
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.1.23.tgz#6d291148f24cb7dae1212bfd97dbe4a90329ae6b"
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.1.27.tgz#75673cade8eff292dcb7f90491bd7a66620b7353"
   dependencies:
+    array.merge "*"
     get-object-value "*"
     react-atomic-molecule "*"
     ricon "*"
     seturl "*"
 
 react-dom@^16.x:
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.2.tgz#4afed569689f2c561d2b8da0b819669c38a0bda4"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -3829,8 +3835,8 @@ react-virtualized@*:
     react-lifecycles-compat "^3.0.4"
 
 react@^16.x:
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.2.tgz#2cd90154e3a9d9dd8da2991149fdca3c260e129f"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -3992,8 +3998,8 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@*:
-  version "0.5.14"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.5.14.tgz#61aa64c592c5c16fd15bb236968a72ae177fc906"
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.6.2.tgz#c747cc936871682ad9ae79b292d33d6d5fd6fc1d"
   dependencies:
     get-storage "*"
     getoffset "*"
@@ -4312,8 +4318,8 @@ stream-browserify@^2.0.1:
     readable-stream "^2.0.2"
 
 stream-each@^1.1.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/stream-each/-/stream-each-1.2.2.tgz#8e8c463f91da8991778765873fe4d960d8f616bd"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/stream-each/-/stream-each-1.2.3.tgz#ebe27a0c389b04fbcc233642952e10731afa9bae"
   dependencies:
     end-of-stream "^1.1.0"
     stream-shift "^1.0.0"
@@ -4419,8 +4425,8 @@ tapable@^0.2.7:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
 
 tar@^4:
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.4.tgz#ec8409fae9f665a4355cc3b4087d0820232bb8cd"
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.6.tgz#63110f09c00b4e60ac8bcfe1bf3c8660235fbc9b"
   dependencies:
     chownr "^1.0.1"
     fs-minipass "^1.2.5"
@@ -4603,10 +4609,8 @@ url@^0.11.0:
     querystring "0.2.0"
 
 use@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/use/-/use-3.1.0.tgz#14716bf03fdfefd03040aef58d8b4b85f3a7c544"
-  dependencies:
-    kind-of "^6.0.2"
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
 
 user-home@^1.1.1:
   version "1.1.1"
