@@ -15,6 +15,9 @@ import d3BarChart from '!raw-loader!../../../ui/organisms/D3BarChart.example';
 import D3LineChart from '../organisms/D3LineChart.example';
 import d3LineChart from '!raw-loader!../../../ui/organisms/D3LineChart.example';
 
+import D3Uml from '../organisms/D3Uml.example'
+import d3Uml from '!raw-loader!../../../ui/organisms/D3Uml.example';
+
 import StockChart from '../organisms/StockChart.example';
 import stockChart from '!raw-loader!../../../ui/organisms/StockChart.example';
 
@@ -48,6 +51,14 @@ class D3 extends BasePage
                     header="D3 Pie Chart"
                 >
                     <D3PieChart />
+                </CodeExample>
+
+                <CodeExample
+                    code={d3Uml}
+                    header="D3 Uml"
+                    id="d3-uml"
+                >
+                    <D3Uml />
                 </CodeExample>
 
                 <CodeExample

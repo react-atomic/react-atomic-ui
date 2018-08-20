@@ -6,6 +6,7 @@ import Build from 'ricon/Build';
 import Calendar from 'ricon/Calendar';
 import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
+import CircleLoading from 'ricon/CircleLoading';
 import Dashboard from 'ricon/Dashboard';
 import Description from 'ricon/Description';
 import Dropdown from 'ricon/Dropdown';
@@ -70,6 +71,7 @@ const icons = [
     ['Calendar', <Calendar />],
     ['ChevronRight', <ChevronRight />],
     ['Code', <Code />],
+    ['CircleLoading', <CircleLoading />],
     ['Dashboard', <Dashboard />],
     ['Delete', <Delete />],
     ['Delete (forever)', <Delete type="forever" />],
