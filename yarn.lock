@@ -754,8 +754,8 @@ babel-plugin-transform-react-pure-class-to-function@*:
     babel-helper-is-react-class "^1.0.0"
 
 babel-plugin-transform-react-remove-prop-types@*:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.14.tgz#d3bf0ab39bd491c6670e71abd8642d4e6caae919"
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.15.tgz#7ba830e77276a0e788cd58ea527b5f70396e12a7"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -1143,8 +1143,8 @@ camelcase@^4.1.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000844:
-  version "1.0.30000877"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000877.tgz#f189673b86ecc06436520e3e391de6a13ca923b4"
+  version "1.0.30000878"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000878.tgz#c644c39588dd42d3498e952234c372e5a40a4123"
 
 center-align@^0.1.1:
   version "0.1.3"
@@ -1468,8 +1468,8 @@ d3-array@1, d3-array@^1.0.0, d3-array@^1.1.1, d3-array@^1.2.0:
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-1.2.1.tgz#d1ca33de2f6ac31efadb8e050a021d7e2396d5dc"
 
 d3-axis@1:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/d3-axis/-/d3-axis-1.0.8.tgz#31a705a0b535e65759de14173a31933137f18efa"
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/d3-axis/-/d3-axis-1.0.9.tgz#72efbdf7d32c016b5109b5703389d31d842a5ef5"
 
 d3-brush@1:
   version "1.0.4"
@@ -1652,8 +1652,8 @@ d3-zoom@1:
     d3-transition "1"
 
 d3@*:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-5.5.0.tgz#948413b91b988a6597f3e4c3e941d3b530bfee63"
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-5.6.0.tgz#af9cd7720f6c09a352bd2d8bfca6dd8ec6cde61d"
   dependencies:
     d3-array "1"
     d3-axis "1"
@@ -1840,8 +1840,8 @@ ejs@^2.5.7:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
 electron-to-chromium@^1.3.47:
-  version "1.3.58"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.58.tgz#8267a4000014e93986d9d18c65a8b4022ca75188"
+  version "1.3.61"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.61.tgz#a8ac295b28d0f03d85e37326fd16b6b6b17a1795"
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -2490,8 +2490,8 @@ hyphenate-style-name@*:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
 
 iconv-lite@0.4, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
-  version "0.4.23"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
@@ -3397,8 +3397,8 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.4.10"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.4.10.tgz#15dade4e5bd51d006462a721c4aeda674c67f524"
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.5.0.tgz#a2e718fd00c99cf6f0043b9e145018aafedbe157"
   dependencies:
     array.merge "*"
     get-object-value "*"
@@ -3621,8 +3621,8 @@ pkg-dir@^2.0.0:
     find-up "^2.1.0"
 
 pmvc_react_admin@*:
-  version "0.1.43"
-  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.43.tgz#b48faeace1b66e744a2742d567f33da04e65c575"
+  version "0.1.44"
+  resolved "https://registry.yarnpkg.com/pmvc_react_admin/-/pmvc_react_admin-0.1.44.tgz#96c4b4faeaa5c732ca4085016b0f69d3e3250557"
   dependencies:
     organism-react-navigation "*"
     organism-react-popup "*"
@@ -3805,8 +3805,8 @@ react-atomic-molecule@*:
     ucfirst "*"
 
 react-atomic-organism@*:
-  version "0.1.27"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.1.27.tgz#75673cade8eff292dcb7f90491bd7a66620b7353"
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.2.0.tgz#489aa2ee726ae748583f7e5affaa3db2e5fa6a77"
   dependencies:
     array.merge "*"
     get-object-value "*"
@@ -4037,8 +4037,8 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
 ricon@*:
-  version "0.0.57"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.57.tgz#dd7341c3c56ce373a3f87c1d021554fa2c6534f5"
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.0.58.tgz#a897417e7105275c8dfc7f649a70f242686df226"
   dependencies:
     keyframe-css "*"
 

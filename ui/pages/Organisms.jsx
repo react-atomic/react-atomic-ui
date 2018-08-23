@@ -22,6 +22,9 @@ import fbPage from '!raw-loader!../../../ui/organisms/FBPage.example';
 import TabView from '../organisms/TabView.example';
 import tabView from '!raw-loader!../../../ui/organisms/TabView.example';
 
+import RadioGroup from '../organisms/RadioGroup.example';
+import radioGroup from '!raw-loader!../../../ui/organisms/RadioGroup.example';
+
 class Organisms extends BasePage 
 {
     static defaultProps = {
@@ -75,6 +78,14 @@ class Organisms extends BasePage
                     id="tab"
                 >
                     <TabView />
+                </CodeExample>
+
+                <CodeExample
+                    code={radioGroup}
+                    header="Radio Group"
+                    id="radioGroup"
+                >
+                    <RadioGroup />
                 </CodeExample>
             </Doc>
         );

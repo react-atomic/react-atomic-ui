@@ -12,6 +12,7 @@ import Description from 'ricon/Description';
 import Dropdown from 'ricon/Dropdown';
 import Download from 'ricon/Download';
 import Delete from 'ricon/Delete';
+import Edit from 'ricon/Edit';
 import Email from 'ricon/Email';
 import Exit from 'ricon/Exit';
 import File from 'ricon/File';
@@ -83,6 +84,7 @@ const icons = [
     ['Dropdown (right)', <Dropdown type="right" />],
     ['Dropdown (left)', <Dropdown type="left" />],
     ['Description', <Description />],
+    ['Edit', <Edit />],
     ['Email', <Email />],
     ['Exit', <Exit />],
     ['File', <File>.js</File>],
