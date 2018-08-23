@@ -40,7 +40,7 @@ class RadioGroupExample extends PureComponent
                 />
                 <div>Current: {value}</div>
                 <Button onClick={()=>this.setState({value: 'boy'})}>Set to Boy</Button>
-                <Button onClick={()=>this.setState({value: 'girl'})}>Set to Gril</Button>
+                <Button onClick={()=>this.setState({value: 'girl'})}>Set to Girl</Button>
             </Form>
         )
     }
