@@ -3362,8 +3362,8 @@ organism-react-d3-piechart@*:
     react-atomic-molecule "*"
 
 organism-react-d3-uml@*:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.0.6.tgz#463630b3da1381715da1162b1962c985e28b2414"
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.0.8.tgz#e1ef9a801b17418df1a7eb27bc4dc7164592b9be"
   dependencies:
     d3-lib "*"
     dagre "*"
@@ -3398,8 +3398,8 @@ organism-react-graph@*:
     react-atomic-molecule "*"
 
 organism-react-i13n@*:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/organism-react-i13n/-/organism-react-i13n-0.2.3.tgz#ff90f42e89567a9fdf022e59560ad5390e9e9f53"
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/organism-react-i13n/-/organism-react-i13n-0.2.4.tgz#e2334e60fa4b8fd0d315982d8e14006fc538dda6"
   dependencies:
     organism-react-ajax "*"
     organism-react-iframe "*"
