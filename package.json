@@ -21,6 +21,7 @@
     "organism-react-d3-uml": "*",
     "organism-react-dropzone": "*",
     "organism-react-facebook": "*",
+    "organism-react-i13n": "*",
     "organism-react-navigation": "*",
     "organism-react-parallax": "*",
     "organism-react-progress": "*",
