@@ -3398,8 +3398,8 @@ organism-react-graph@*:
     react-atomic-molecule "*"
 
 organism-react-i13n@*:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/organism-react-i13n/-/organism-react-i13n-0.2.4.tgz#e2334e60fa4b8fd0d315982d8e14006fc538dda6"
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/organism-react-i13n/-/organism-react-i13n-0.2.5.tgz#33488ac6bde07004d93e28edfebbb76085419947"
   dependencies:
     organism-react-ajax "*"
     organism-react-iframe "*"
