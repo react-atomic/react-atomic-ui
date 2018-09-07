@@ -25,6 +25,9 @@ import tabView from '!raw-loader!../../../ui/organisms/TabView.example';
 import RadioGroup from '../organisms/RadioGroup.example';
 import radioGroup from '!raw-loader!../../../ui/organisms/RadioGroup.example';
 
+import Suggestion from '../organisms/Suggestion.example';
+import suggestion from '!raw-loader!../../../ui/organisms/Suggestion.example';
+
 class Organisms extends BasePage 
 {
     static defaultProps = {
@@ -73,6 +76,14 @@ class Organisms extends BasePage
                 </CodeExample>
 
                 <CodeExample
+                    code={suggestion}
+                    header="Suggestion"
+                    id="suggestion"
+                >
+                    <Suggestion />
+                </CodeExample>
+
+                <CodeExample
                     code={tabView}
                     header="Tab View"
                     id="tab"
@@ -88,6 +99,7 @@ class Organisms extends BasePage
                 >
                     <RadioGroup />
                 </CodeExample>
+
             </Doc>
         );
     }
