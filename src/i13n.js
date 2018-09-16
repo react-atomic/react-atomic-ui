@@ -14,7 +14,9 @@ const impressionHandler = (state, action) =>
 
 const initHandler = (state, action) =>
 {
-    console.log('init')
+    console.log('init', state)
+
+    return state
 }
 
 i13nDispatch(

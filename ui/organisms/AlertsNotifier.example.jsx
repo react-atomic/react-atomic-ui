@@ -1,11 +1,11 @@
-import React, {Component} from 'react'; 
+import React, {PureComponent} from 'react'; 
 
 import {
     AlertsNotifier,
     PopupClick
 } from "organism-react-popup"
 
-class AlertsNotifierExample extends Component
+class AlertsNotifierExample extends PureComponent
 {
     render()
     {

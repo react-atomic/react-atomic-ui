@@ -5,14 +5,17 @@ import React from 'react';
  * import {...xxx} from "organism-react-popup"
  */
 import {
+    Dialog,
     PopupModal,
-    PopupElement,
     PopupClick
 } from "organism-react-popup";
+
+import {Button} from 'react-atomic-molecule'
 
 const PopupExample = () =>
 {
     return (
+      <div>
         <PopupClick
             style={Styles.click}
             popup={()=>{
@@ -22,8 +25,21 @@ const PopupExample = () =>
             }}
             container={<a />}
         >
-            show
+            show modal
         </PopupClick>
+
+        <PopupClick
+            style={{marginLeft:5}}
+            popup={(
+              <Dialog header="Test Header">
+                Test Dialog
+              </Dialog>
+            )}
+            container={<Button />}
+        >
+            show dialog 
+        </PopupClick>
+      </div>
     );
 }
 

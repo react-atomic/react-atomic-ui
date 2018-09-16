@@ -1,5 +1,5 @@
 import React from 'react'; 
-import {ClientRoute} from 'reshow'; 
+import {ClientRoute, ReshowMessage} from 'reshow'; 
 import {PopupPool} from 'organism-react-popup';
 import {PageLoadProgressHandler} from 'organism-react-progress'; 
 import {I13nElement} from 'organism-react-i13n'
@@ -50,6 +50,7 @@ const Index = (props) => {
             <PopupPool />
             <PageLoadProgressHandler ajax={true} />
             <I13nElement />
+            <ReshowMessage />
         </div>
     );
 };
