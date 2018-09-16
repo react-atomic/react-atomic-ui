@@ -19,6 +19,12 @@ class ReshowMessageExample extends PureComponent {
     });
   };
 
+  handleCleanAlert = e => {
+    dispatch('alert/reset', {
+      alerts: null,
+    });
+  };
+
   handleOpenDialog = e => {
     dispatch('dialog/start', {
       dialog: 'how are u',
@@ -31,6 +37,7 @@ class ReshowMessageExample extends PureComponent {
         <p>
           <Button onClick={this.handleAddAlert}>Add alert</Button>
           <Button onClick={this.handleResetAlert}>Reset alert</Button>
+          <Button onClick={this.handleCleanAlert}>Clean all alerts</Button>
         </p>
         <p>
           <Button onClick={this.handleOpenDialog}>Open Dialog</Button>
