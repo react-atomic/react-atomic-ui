@@ -37,7 +37,6 @@
     "ricon": "*"
   },
   "devDependencies": {
-    "babel-cli": "*",
     "raw-loader": "*",
     "reshow-app": "*"
   },

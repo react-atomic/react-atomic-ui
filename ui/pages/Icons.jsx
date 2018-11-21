@@ -4,6 +4,7 @@ import Account from 'ricon/Account';
 import AccessTime from 'ricon/AccessTime';
 import BarChart from 'ricon/BarChart';
 import Build from 'ricon/Build';
+import Blur from 'ricon/Blur';
 import Calendar from 'ricon/Calendar';
 import ChevronRight from 'ricon/ChevronRight';
 import Code from 'ricon/Code';
@@ -70,6 +71,7 @@ const icons = [
   ['AccessTime (update)', <AccessTime type="update" />],
   ['BarChart', <BarChart />],
   ['Build', <Build />],
+  ['Blur', <Blur />],
   ['Calendar', <Calendar />],
   ['ChevronRight', <ChevronRight />],
   ['Code', <Code />],

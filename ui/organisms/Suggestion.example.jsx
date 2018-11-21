@@ -1,6 +1,9 @@
 import React, {PureComponent} from 'react'
 
+import {Button, SemanticUI} from 'react-atomic-molecule'
+
 import {
+   SearchBox,
    Suggestion 
 } from 'react-atomic-organism'
 
@@ -38,14 +41,18 @@ class SuggestionExample extends PureComponent
 
   render()
   {
-    const {results} = this.state
+    const {results, myValue} = this.state
     return (
+      <SemanticUI>
       <Suggestion
         ref={el=>this.suggestion = el}
         onChange={this.handleChange}
         results={results}
         itemOnClick={this.handleItemClick}
+        value={myValue}
       />
+      <Button onClick={()=>this.setState({myValue: myValue ? myValue+1 : 123})}>set</Button>
+      </SemanticUI>
     )
   }
 }
