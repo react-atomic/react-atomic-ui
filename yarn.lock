@@ -4440,8 +4440,8 @@ organism-react-iframe@*:
     smooth-scroll-to "*"
 
 organism-react-navigation@*:
-  version "0.2.25"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.25.tgz#6dfd9cc89b746e5d4cc583e230ea4ca943aa114d"
+  version "0.2.26"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.2.26.tgz#1dc069d4d939c4c161b1fd3c9cd3aee5eaf724ca"
   dependencies:
     class-lib "*"
     css-query-selector "*"
