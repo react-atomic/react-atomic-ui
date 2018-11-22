@@ -4106,10 +4106,10 @@ node-releases@^1.0.1:
     semver "^5.3.0"
 
 node-version-matches@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/node-version-matches/-/node-version-matches-1.0.0.tgz#b56bcbd6e210659bd14ea5eb8b5e56df1d78fa29"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/node-version-matches/-/node-version-matches-1.0.1.tgz#16f30d5dddb32914151af77f45d6378f59070268"
   dependencies:
-    semver "^5.5.0"
+    semver "^5.6.0"
 
 nomnom@~1.6.2:
   version "1.6.2"
@@ -4911,8 +4911,8 @@ react-atomic-molecule@*:
     ucfirst "*"
 
 react-atomic-organism@*:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.3.6.tgz#ae96c6722d11e47b22db03cc755b3b33ebae21bf"
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.3.7.tgz#24767d1b6a2e1773dc422e4d290fc1a4ae5f63b9"
   dependencies:
     array.merge "*"
     get-object-value "*"
@@ -5335,7 +5335,7 @@ schema-utils@^0.4.0, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-"semver@2 || 3 || 4 || 5", semver@5.6.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
+"semver@2 || 3 || 4 || 5", semver@5.6.0, semver@^5.3.0, semver@^5.4.1, semver@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
 
@@ -6297,8 +6297,8 @@ y18n@^4.0.0:
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
 
 yallist@^3.0.0, yallist@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
 
 yargs-parser@^7.0.0:
   version "7.0.0"
