@@ -1,1 +1,1 @@
-{"status":"done","publicPath":"./assets/","chunks":{"main":[{"name":"main.bundle.js","publicPath":"./assets/main.bundle.js?7d20b54063519c9904de"}],"vendor":[{"name":"vendor.bundle.js","publicPath":"./assets/vendor.bundle.js?7d20b54063519c9904de"}]}}
+{"status":"done","publicPath":"./assets/","chunks":{"main":[{"name":"main.bundle.js","publicPath":"./assets/main.bundle.js?a393bca3f1f061cd83ec"}],"vendor":[{"name":"vendor.bundle.js","publicPath":"./assets/vendor.bundle.js?a393bca3f1f061cd83ec"}]}}

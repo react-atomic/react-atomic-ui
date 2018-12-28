@@ -5,6 +5,8 @@ import CodeExample from 'organism-react-code';
 import BasePage from '../pages/BasePage';
 import Doc from '../templates/Doc'; 
 
+/*Sample*/
+
 import GridList from '../organisms/GridList.example';
 import gridList from '!raw-loader!../../../ui/organisms/GridList.example';
 

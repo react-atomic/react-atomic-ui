@@ -9,11 +9,11 @@
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
-    "class-lib": "*",
     "fixed-data-table-2": "*",
     "get-object-value": "*",
     "get-scroll-info": "*",
     "organism-react-animate": "*",
+    "organism-react-asciidoc": "*",
     "organism-react-carousel": "*",
     "organism-react-code": "*",
     "organism-react-d3-axis-chart": "*",
