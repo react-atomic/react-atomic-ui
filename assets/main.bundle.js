@@ -954,122 +954,143 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 27 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mouse", function() { return mouse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toSvgXY", function() { return toSvgXY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toSvgMatrixXY", function() { return toSvgMatrixXY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unifyTouch", function() { return unifyTouch; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_scroll_info__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_get_scroll_info__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_get_object_value__ = __webpack_require__(3);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.unifyTouch = exports.toSvgMatrixXY = exports.toSvgXY = exports.mouse = undefined;
-
-var _getScrollInfo = __webpack_require__(58);
-
-var _getScrollInfo2 = _interopRequireDefault(_getScrollInfo);
-
-var _getObjectValue = __webpack_require__(3);
-
-var _getObjectValue2 = _interopRequireDefault(_getObjectValue);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var unifyTouch = function unifyTouch(e) {
-    if (!e.changedTouches) {
-        return e;
-    } else {
-        return (0, _getObjectValue2.default)(e, ['changedTouches', 0]);
-    }
+  if (!e.changedTouches) {
+    return e;
+  } else {
+    return Object(__WEBPACK_IMPORTED_MODULE_1_get_object_value__["default"])(e, ['changedTouches', 0]);
+  }
 };
 
 var mouse = function mouse(e, dom, scrollNode) {
-    if (!dom) {
-        dom = e.currentTarget;
-    }
-    e = unifyTouch(e);
-    var x = e.clientX;
-    var y = e.clientY;
-    var svgXY = toSvgXY(dom)(x, y);
-    if (false !== svgXY) {
-        return svgXY;
-    } else {
-        var domXY = getOffset(dom, scrollNode);
-        return [x - domXY.left - dom.clientLeft, y - domXY.top - dom.clientTop];
-    }
+  if (!dom) {
+    dom = e.currentTarget;
+  }
+
+  e = unifyTouch(e);
+  var x = e.clientX;
+  var y = e.clientY;
+  var svgXY = toSvgXY(dom)(x, y);
+
+  if (false !== svgXY) {
+    return svgXY;
+  } else {
+    var domXY = getOffset(dom, scrollNode);
+    return [x - domXY.left - dom.clientLeft, y - domXY.top - dom.clientTop];
+  }
 };
 
 var toSvgXY = function toSvgXY(dom) {
-    return function (x, y) {
-        var svg = dom.ownerSVGElement || dom;
-        if (svg.createSVGPoint) {
-            var point = svg.createSVGPoint();
-            point.x = x;
-            point.y = y;
-            point = point.matrixTransform(dom.getScreenCTM().inverse());
-            return [point.x, point.y];
-        } else {
-            return false;
-        }
-    };
+  return function (x, y) {
+    var svg = dom.ownerSVGElement || dom;
+
+    if (svg.createSVGPoint) {
+      var point = svg.createSVGPoint();
+      point.x = x;
+      point.y = y;
+      point = point.matrixTransform(dom.getScreenCTM().inverse());
+      return [point.x, point.y];
+    } else {
+      return false;
+    }
+  };
 };
 
 var toSvgMatrixXY = function toSvgMatrixXY(dom) {
-    return function (x, y) {
-        var svg = dom.ownerSVGElement || dom;
-        var offset = svg.getBoundingClientRect();
-        var matrix = dom.getScreenCTM();
-        return {
-            x: matrix.a * x + matrix.c * y + matrix.e - offset.left,
-            y: matrix.b * x + matrix.d * y + matrix.f - offset.top
-        };
+  return function (x, y) {
+    var svg = dom.ownerSVGElement || dom;
+    var offset = svg.getBoundingClientRect();
+    var matrix = dom.getScreenCTM();
+    return {
+      x: matrix.a * x + matrix.c * y + matrix.e - offset.left,
+      y: matrix.b * x + matrix.d * y + matrix.f - offset.top
     };
+  };
+};
+
+var getRectWithElOffset = function getRectWithElOffset(dom) {
+  var top;
+  var left;
+  var el = dom;
+
+  do {
+    var offsetTop = el.offsetTop || 0;
+    var offsetLeft = el.offsetLeft || 0;
+
+    if ('BODY' === el.nodeName) {
+      top += offsetTop;
+      left += offsetLeft;
+    } else {
+      top += offsetTop - el.scrollTop;
+      left += offsetLeft - el.scrollLeft;
+    }
+
+    el = el.offsetParent;
+  } while (el);
+
+  return {
+    top: top,
+    left: left
+  };
 };
 
 var getOffset = function getOffset(dom, scrollNode) {
-    var top = 0;
-    var left = 0;
-    var w = void 0;
-    var h = void 0;
-    if (dom instanceof SVGElement) {
-        var scrollInfo = (0, _getScrollInfo2.default)(scrollNode);
-        var rect = dom.getBoundingClientRect();
-        top = rect.top + scrollInfo.top;
-        left = rect.left + scrollInfo.left;
-        w = rect.width;
-        h = rect.height;
+  var top = 0;
+  var left = 0;
+  var w;
+  var h;
+  var scrollInfo = __WEBPACK_IMPORTED_MODULE_0_get_scroll_info___default()(scrollNode);
+
+  if (dom instanceof SVGElement) {
+    var rect = dom.getBoundingClientRect();
+    top = rect.top + scrollInfo.top;
+    left = rect.left + scrollInfo.left;
+    w = rect.width;
+    h = rect.height;
+  } else {
+    w = dom.offsetWidth;
+    h = dom.offsetHeight;
+
+    var _rect;
+
+    if (dom.getBoundingClientRect) {
+      _rect = dom.getBoundingClientRect();
+      top = _rect.top + scrollInfo.top;
+      left = _rect.left + scrollInfo.left;
     } else {
-        w = dom.offsetWidth;
-        h = dom.offsetHeight;
-        var el = dom;
-        do {
-            var offsetTop = el.offsetTop || 0;
-            var offsetLeft = el.offsetLeft || 0;
-            if ('BODY' === el.nodeName) {
-                top += offsetTop;
-                left += offsetLeft;
-            } else {
-                top += offsetTop - el.scrollTop;
-                left += offsetLeft - el.scrollLeft;
-            }
-            el = el.offsetParent;
-        } while (el);
+      _rect = getRectWithElOffset(dom);
+      top = _rect.top;
+      left = _rect.left;
     }
-    var result = {
-        w: w,
-        h: h,
-        top: top,
-        right: left + w,
-        bottom: top + h,
-        left: left
-    };
-    return result;
+  }
+
+  var result = {
+    w: w,
+    h: h,
+    top: top,
+    right: left + w,
+    bottom: top + h,
+    left: left
+  };
+  return result;
 };
 
-exports.mouse = mouse;
-exports.toSvgXY = toSvgXY;
-exports.toSvgMatrixXY = toSvgMatrixXY;
-exports.unifyTouch = unifyTouch;
-exports.default = getOffset;
+
+/* harmony default export */ __webpack_exports__["default"] = (getOffset);
 
 /***/ }),
 /* 28 */
@@ -3669,9 +3690,7 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_get_scroll_info__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_get_scroll_info__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_get_window_offset__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_get_window_offset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_get_window_offset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__scrollDispatcher__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__testForPassiveScroll__ = __webpack_require__(1014);
@@ -3829,7 +3848,7 @@ function (_ReduceStore) {
             monitorScroll = _get.monitorScroll,
             scrollMargin = _get.scrollMargin;
 
-        var pos = __WEBPACK_IMPORTED_MODULE_12_getoffset___default()(nodeEl);
+        var pos = Object(__WEBPACK_IMPORTED_MODULE_12_getoffset__["default"])(nodeEl);
 
         if (monitorScroll) {
           if (scrollTop >= pos.top && scrollTop < pos.bottom) {
@@ -4705,59 +4724,26 @@ var arrayMerge = function arrayMerge() {
 
 /***/ }),
 /* 97 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__getWindowOffset__ = __webpack_require__(197);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return __WEBPACK_IMPORTED_MODULE_0__getWindowOffset__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alignUI__ = __webpack_require__(430);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "alignUI", function() { return __WEBPACK_IMPORTED_MODULE_1__alignUI__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__getPositionString__ = __webpack_require__(435);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "getPositionString", function() { return __WEBPACK_IMPORTED_MODULE_2__getPositionString__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isOnScreen__ = __webpack_require__(198);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "isOnScreen", function() { return __WEBPACK_IMPORTED_MODULE_3__isOnScreen__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__isFixed__ = __webpack_require__(132);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "isFixed", function() { return __WEBPACK_IMPORTED_MODULE_4__isFixed__["a"]; });
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.isFixed = exports.isOnScreen = exports.getPositionString = exports.alignUI = exports.default = undefined;
 
-var _alignUI = __webpack_require__(430);
 
-Object.defineProperty(exports, 'alignUI', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_alignUI).default;
-  }
-});
 
-var _getPositionString = __webpack_require__(435);
 
-Object.defineProperty(exports, 'getPositionString', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getPositionString).default;
-  }
-});
-
-var _isOnScreen = __webpack_require__(198);
-
-Object.defineProperty(exports, 'isOnScreen', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_isOnScreen).default;
-  }
-});
-
-var _isFixed = __webpack_require__(132);
-
-Object.defineProperty(exports, 'isFixed', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_isFixed).default;
-  }
-});
-
-var _getWindowOffset = __webpack_require__(197);
-
-var _getWindowOffset2 = _interopRequireDefault(_getWindowOffset);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _getWindowOffset2.default;
 
 /***/ }),
 /* 98 */
@@ -6158,7 +6144,6 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_get_scroll_info__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_get_scroll_info__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_array_merge__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_class_lib__ = __webpack_require__(18);
@@ -6222,7 +6207,7 @@ function (_PopupOverlay) {
     Object(__WEBPACK_IMPORTED_MODULE_9_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_8_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_8_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(_this)), "reCalculate", function () {
       setImmediate(function () {
         if (_this.el) {
-          var domInfo = __WEBPACK_IMPORTED_MODULE_15_getoffset___default()(_this.el);
+          var domInfo = Object(__WEBPACK_IMPORTED_MODULE_15_getoffset__["default"])(_this.el);
 
           if (domInfo) {
             var domHalfHeight = domInfo.h / 2;
@@ -6654,69 +6639,57 @@ Object(__WEBPACK_IMPORTED_MODULE_4_reshow_runtime_es_helpers_defineProperty__["a
 
 /***/ }),
 /* 132 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_style__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_get_style__);
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getStyle = __webpack_require__(77);
-
-var _getStyle2 = _interopRequireDefault(_getStyle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var isFixed = function isFixed(node) {
-    if (!document.body.contains(node)) {
-        console.warn(['Dom not exists in body', node]);
-        return false;
-    }
-    var thisParent = node;
-    while (thisParent.nodeName != 'BODY') {
-        var position = (0, _getStyle2.default)(thisParent, 'position');
-        if ('fixed' === position) {
-            return thisParent;
-        }
-        thisParent = thisParent.parentNode;
-    }
+  if (!document.body.contains(node)) {
+    console.warn(['Dom not exists in body', node]);
     return false;
+  }
+
+  var thisParent = node;
+
+  while (thisParent.nodeName != 'BODY') {
+    var position = __WEBPACK_IMPORTED_MODULE_0_get_style___default()(thisParent, 'position');
+
+    if ('fixed' === position) {
+      return thisParent;
+    }
+
+    thisParent = thisParent.parentNode;
+  }
+
+  return false;
 };
 
-exports.default = isFixed;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (isFixed);
 
 /***/ }),
 /* 133 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var positions = {
-    TL: 'tl',
-    TC: 'tc',
-    TR: 'tr',
-    RT: 'rt',
-    RC: 'rc',
-    RB: 'rb',
-    BL: 'bl',
-    BC: 'bc',
-    BR: 'br',
-    LT: 'lt',
-    LC: 'lc',
-    LB: 'lb',
-    CC: 'cc'
+  TL: 'tl',
+  TC: 'tc',
+  TR: 'tr',
+  RT: 'rt',
+  RC: 'rc',
+  RB: 'rb',
+  BL: 'bl',
+  BC: 'bc',
+  BR: 'br',
+  LT: 'lt',
+  LC: 'lc',
+  LB: 'lb',
+  CC: 'cc'
 };
-
-exports.default = positions;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (positions);
 
 /***/ }),
 /* 134 */
@@ -9348,7 +9321,6 @@ var urlDispatch = dispatcher.dispatch;
 "use strict";
 /* unused harmony export goToAnchor */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_smooth_scroll_to__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_smooth_scroll_to___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_smooth_scroll_to__);
 
@@ -9370,7 +9342,7 @@ var goToAnchor = function goToAnchor(anchor) {
       var dom = document.body.querySelector(anchor);
 
       if (dom) {
-        var pos = __WEBPACK_IMPORTED_MODULE_0_getoffset___default()(dom);
+        var pos = Object(__WEBPACK_IMPORTED_MODULE_0_getoffset__["default"])(dom);
         __WEBPACK_IMPORTED_MODULE_1_smooth_scroll_to___default()(pos.top);
       }
     }, goAnchorDelay);
@@ -10239,175 +10211,163 @@ function (_PureComponent) {
 
 /***/ }),
 /* 197 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_objectSpread__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_get_scroll_info__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_get_scroll_info__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_getoffset__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__isOnScreen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__isFixed__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__isSetOverflow__ = __webpack_require__(199);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _getScrollInfo = __webpack_require__(58);
 
-var _getScrollInfo2 = _interopRequireDefault(_getScrollInfo);
 
-var _getoffset = __webpack_require__(27);
 
-var _getoffset2 = _interopRequireDefault(_getoffset);
-
-var _isOnScreen = __webpack_require__(198);
-
-var _isOnScreen2 = _interopRequireDefault(_isOnScreen);
-
-var _isFixed = __webpack_require__(132);
-
-var _isFixed2 = _interopRequireDefault(_isFixed);
-
-var _isSetOverflow = __webpack_require__(199);
-
-var _isSetOverflow2 = _interopRequireDefault(_isSetOverflow);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var calWindowOffset = function calWindowOffset(domInfo, scrollInfo) {
-    var _distanceFlip;
+  var _distanceFlip;
 
-    var distance = {};
-    distance.top = domInfo.top - scrollInfo.top;
-    distance.right = scrollInfo.right - domInfo.right;
-    distance.bottom = scrollInfo.bottom - domInfo.bottom;
-    distance.left = domInfo.left - scrollInfo.left;
-    var distanceFlip = (_distanceFlip = {}, _defineProperty(_distanceFlip, distance.top, 't'), _defineProperty(_distanceFlip, distance.right, 'r'), _defineProperty(_distanceFlip, distance.bottom, 'b'), _defineProperty(_distanceFlip, distance.left, 'l'), _distanceFlip);
-    var maxDistance = Math.max(distance.top, distance.right, distance.bottom, distance.left);
-    var firstKey = distanceFlip[maxDistance];
-    var secondKey = void 0;
-    var locs = [firstKey + 'c'];
-    if (firstKey === 't' || firstKey === 'b') {
-        var _distanceFlip2;
+  var distance = {};
+  distance.top = domInfo.top - scrollInfo.top;
+  distance.right = scrollInfo.right - domInfo.right;
+  distance.bottom = scrollInfo.bottom - domInfo.bottom;
+  distance.left = domInfo.left - scrollInfo.left;
+  var distanceFlip = (_distanceFlip = {}, Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip, distance.top, 't'), Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip, distance.right, 'r'), Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip, distance.bottom, 'b'), Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip, distance.left, 'l'), _distanceFlip);
+  var maxDistance = Math.max(distance.top, distance.right, distance.bottom, distance.left);
+  var firstKey = distanceFlip[maxDistance];
+  var secondKey;
+  var locs = [firstKey + 'c'];
 
-        distanceFlip = (_distanceFlip2 = {}, _defineProperty(_distanceFlip2, distance.right, 'r'), _defineProperty(_distanceFlip2, distance.left, 'l'), _distanceFlip2);
-        secondKey = distanceFlip[Math.max(distance.left, distance.right)];
-    } else {
-        var _distanceFlip3;
+  if (firstKey === 't' || firstKey === 'b') {
+    var _distanceFlip2;
 
-        distanceFlip = (_distanceFlip3 = {}, _defineProperty(_distanceFlip3, distance.top, 't'), _defineProperty(_distanceFlip3, distance.bottom, 'b'), _distanceFlip3);
-        secondKey = firstKey;
-        firstKey = distanceFlip[Math.max(distance.top, distance.bottom)];
-    }
-    locs.push(firstKey + secondKey);
-    locs.push(secondKey + firstKey);
-    var tb = firstKey;
-    var lr = secondKey;
-    return {
-        locs: locs,
-        tb: tb,
-        lr: lr
-    };
+    distanceFlip = (_distanceFlip2 = {}, Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip2, distance.right, 'r'), Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip2, distance.left, 'l'), _distanceFlip2);
+    secondKey = distanceFlip[Math.max(distance.left, distance.right)];
+  } else {
+    var _distanceFlip3;
+
+    distanceFlip = (_distanceFlip3 = {}, Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip3, distance.top, 't'), Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(_distanceFlip3, distance.bottom, 'b'), _distanceFlip3);
+    secondKey = firstKey;
+    firstKey = distanceFlip[Math.max(distance.top, distance.bottom)];
+  }
+
+  locs.push(firstKey + secondKey);
+  locs.push(secondKey + firstKey);
+  var tb = firstKey;
+  var lr = secondKey;
+  return {
+    locs: locs,
+    tb: tb,
+    lr: lr
+  };
 };
 
 var getWindowOffset = function getWindowOffset(dom) {
-    if (!dom) {
-        console.error('getWindowOffset not assign dom');
-        console.trace();
-        return false;
-    }
-    var fixedNode = (0, _isFixed2.default)(dom);
-    var scrollNode = (0, _isSetOverflow2.default)(dom);
-    var scrollInfo = (0, _getScrollInfo2.default)();
-    var cookScrollInfo = _extends({}, scrollInfo);
-    if (fixedNode) {
-        var fixedScrollInfo = (0, _getScrollInfo2.default)(fixedNode);
-        cookScrollInfo.top = fixedScrollInfo.top;
-        cookScrollInfo.right = scrollInfo.scrollNodeWidth;
-        cookScrollInfo.bottom = scrollInfo.scrollNodeHeight;
-        cookScrollInfo.left = fixedScrollInfo.left;
-    } else if (scrollNode) {
-        var scrollNodeScrollInfo = (0, _getScrollInfo2.default)(scrollNode);
-        cookScrollInfo.top += scrollNodeScrollInfo.top;
-        cookScrollInfo.right += scrollNodeScrollInfo.left;
-        cookScrollInfo.bottom += scrollNodeScrollInfo.top;
-        cookScrollInfo.left += scrollNodeScrollInfo.left;
-    }
-    var domInfo = (0, _isOnScreen2.default)((0, _getoffset2.default)(dom, fixedNode), cookScrollInfo);
-    domInfo.fixedNode = fixedNode;
-    domInfo.scrollNode = scrollNode;
-    if (!domInfo.isOnScreen) {
-        console.warn('Dom is not in screen', { dom: dom, domInfo: domInfo, scrollInfo: scrollInfo, cookScrollInfo: cookScrollInfo });
-        return false;
-    }
-    var result = _extends({ domInfo: domInfo, scrollInfo: scrollInfo }, calWindowOffset(domInfo, cookScrollInfo));
-    return result;
+  if (!dom) {
+    console.error('getWindowOffset not assign dom');
+    console.trace();
+    return false;
+  }
+
+  var fixedNode = Object(__WEBPACK_IMPORTED_MODULE_5__isFixed__["a" /* default */])(dom);
+  var scrollNode = Object(__WEBPACK_IMPORTED_MODULE_6__isSetOverflow__["a" /* default */])(dom);
+  var scrollInfo = __WEBPACK_IMPORTED_MODULE_2_get_scroll_info___default()();
+
+  var cookScrollInfo = Object(__WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_objectSpread__["a" /* default */])({}, scrollInfo);
+
+  if (fixedNode) {
+    var fixedScrollInfo = __WEBPACK_IMPORTED_MODULE_2_get_scroll_info___default()(fixedNode);
+    cookScrollInfo.top = fixedScrollInfo.top;
+    cookScrollInfo.right = scrollInfo.scrollNodeWidth;
+    cookScrollInfo.bottom = scrollInfo.scrollNodeHeight;
+    cookScrollInfo.left = fixedScrollInfo.left;
+  } else if (scrollNode) {
+    var scrollNodeScrollInfo = __WEBPACK_IMPORTED_MODULE_2_get_scroll_info___default()(scrollNode);
+    cookScrollInfo.top += scrollNodeScrollInfo.top;
+    cookScrollInfo.right += scrollNodeScrollInfo.left;
+    cookScrollInfo.bottom += scrollNodeScrollInfo.top;
+    cookScrollInfo.left += scrollNodeScrollInfo.left;
+  }
+
+  var domInfo = Object(__WEBPACK_IMPORTED_MODULE_4__isOnScreen__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_3_getoffset__["default"])(dom, fixedNode), cookScrollInfo);
+  domInfo.fixedNode = fixedNode;
+  domInfo.scrollNode = scrollNode;
+
+  if (!domInfo.isOnScreen) {
+    console.warn('Dom is not in screen', {
+      dom: dom,
+      domInfo: domInfo,
+      scrollInfo: scrollInfo,
+      cookScrollInfo: cookScrollInfo
+    });
+    return false;
+  }
+
+  var result = Object(__WEBPACK_IMPORTED_MODULE_0_reshow_runtime_es_helpers_objectSpread__["a" /* default */])({
+    domInfo: domInfo,
+    scrollInfo: scrollInfo
+  }, calWindowOffset(domInfo, cookScrollInfo));
+
+  return result;
 };
 
-exports.default = getWindowOffset;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (getWindowOffset);
 
 /***/ }),
 /* 198 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var isOnScreen = function isOnScreen(domInfo, scrollInfo) {
-    var margin = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-
-    domInfo.atTop = domInfo.bottom <= scrollInfo.top + margin;
-    domInfo.atRight = domInfo.left >= scrollInfo.right - margin;
-    domInfo.atBottom = domInfo.top >= scrollInfo.bottom - margin;
-    domInfo.atLeft = domInfo.right <= scrollInfo.left + margin;
-    domInfo.isOnScreen = !(domInfo.atTop || domInfo.atRight || domInfo.atBottom || domInfo.atLeft);
-    return domInfo;
+  var margin = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  domInfo.atTop = domInfo.bottom <= scrollInfo.top + margin;
+  domInfo.atRight = domInfo.left >= scrollInfo.right - margin;
+  domInfo.atBottom = domInfo.top >= scrollInfo.bottom - margin;
+  domInfo.atLeft = domInfo.right <= scrollInfo.left + margin;
+  domInfo.isOnScreen = !(domInfo.atTop || domInfo.atRight || domInfo.atBottom || domInfo.atLeft);
+  return domInfo;
 };
 
-exports.default = isOnScreen;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (isOnScreen);
 
 /***/ }),
 /* 199 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_style__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_get_style__);
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getStyle = __webpack_require__(77);
-
-var _getStyle2 = _interopRequireDefault(_getStyle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var isSetOverflow = function isSetOverflow(node) {
-    if (!document.body.contains(node)) {
-        console.warn(['Dom not exists in body', node]);
-        return false;
-    }
-    var thisParent = node;
-    while (thisParent.nodeName != 'BODY') {
-        var overflowX = (0, _getStyle2.default)(thisParent, 'overflow-x');
-        var overflowY = (0, _getStyle2.default)(thisParent, 'overflow-y');
-        if ('visible' !== overflowY || 'visible' !== overflowX) {
-            return thisParent;
-        }
-        thisParent = thisParent.parentNode;
-    }
+  if (!document.body.contains(node)) {
+    console.warn(['Dom not exists in body', node]);
     return false;
+  }
+
+  var thisParent = node;
+
+  while (thisParent.nodeName != 'BODY') {
+    var overflowX = __WEBPACK_IMPORTED_MODULE_0_get_style___default()(thisParent, 'overflow-x');
+    var overflowY = __WEBPACK_IMPORTED_MODULE_0_get_style___default()(thisParent, 'overflow-y');
+
+    if ('visible' !== overflowY || 'visible' !== overflowX) {
+      return thisParent;
+    }
+
+    thisParent = thisParent.parentNode;
+  }
+
+  return false;
 };
 
-exports.default = isSetOverflow;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (isSetOverflow);
 
 /***/ }),
 /* 200 */
@@ -24765,7 +24725,6 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_d3_lib__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_d3_lib___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_d3_lib__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_get_object_value__ = __webpack_require__(3);
 
 
@@ -24810,7 +24769,7 @@ var DragAndDrop = function (_PureComponent) {
                 pageX = _unifyTouch.pageX,
                 pageY = _unifyTouch.pageY;
 
-            var offset = __WEBPACK_IMPORTED_MODULE_8_getoffset___default()(_this.el);
+            var offset = Object(__WEBPACK_IMPORTED_MODULE_8_getoffset__["default"])(_this.el);
             var elAbsX = (pageX - offset.left) * 2 / zoomK;
             var elAbsY = (pageY - offset.top) * 2 / zoomK;
             _this.start = {
@@ -25471,7 +25430,6 @@ var InjectStyles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_atomic_molecule__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_organism_react_popup__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_array_merge__ = __webpack_require__(96);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -25510,7 +25468,7 @@ var LightBox = function (_PopupFloatEl) {
                 targetEl = _this$props.targetEl,
                 padding = _this$props.padding;
 
-            var pos = __WEBPACK_IMPORTED_MODULE_3_getoffset___default()(targetEl);
+            var pos = Object(__WEBPACK_IMPORTED_MODULE_3_getoffset__["default"])(targetEl);
             var width = pos.right - pos.left + padding * 2;
             var height = pos.bottom - pos.top + padding * 2;
             var top = pos.top - padding;
@@ -32471,7 +32429,6 @@ Object(__WEBPACK_IMPORTED_MODULE_7_reshow_runtime_es_helpers_defineProperty__["a
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_reshow_flux__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_react_atomic_molecule__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_get_window_offset__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_get_window_offset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_get_window_offset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__molecules_PopupOverlay__ = __webpack_require__(130);
 
 
@@ -32570,7 +32527,7 @@ function (_PopupOverlay) {
           targetEl = _this$props.targetEl,
           alignParams = _this$props.alignParams;
 
-      if (!_this.floatEl || !targetEl || !__WEBPACK_IMPORTED_MODULE_13_get_window_offset___default()(targetEl)) {
+      if (!_this.floatEl || !targetEl || !Object(__WEBPACK_IMPORTED_MODULE_13_get_window_offset__["default"])(targetEl)) {
         return false;
       }
 
@@ -32644,397 +32601,368 @@ Object(__WEBPACK_IMPORTED_MODULE_9_reshow_runtime_es_helpers_defineProperty__["a
 
 /***/ }),
 /* 430 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_getoffset__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_get_scroll_info__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_get_scroll_info__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_get_object_value__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__getAfterMove__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getWindowOffset__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__alignWith__ = __webpack_require__(432);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__isFullOnScreen__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__isSetOverflow__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__isFixed__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__positions__ = __webpack_require__(133);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 
-var _getoffset = __webpack_require__(27);
 
-var _getoffset2 = _interopRequireDefault(_getoffset);
 
-var _getScrollInfo = __webpack_require__(58);
 
-var _getScrollInfo2 = _interopRequireDefault(_getScrollInfo);
 
-var _getObjectValue = __webpack_require__(3);
 
-var _getObjectValue2 = _interopRequireDefault(_getObjectValue);
 
-var _getAfterMove = __webpack_require__(431);
 
-var _getAfterMove2 = _interopRequireDefault(_getAfterMove);
-
-var _getWindowOffset = __webpack_require__(197);
-
-var _getWindowOffset2 = _interopRequireDefault(_getWindowOffset);
-
-var _alignWith = __webpack_require__(432);
-
-var _alignWith2 = _interopRequireDefault(_alignWith);
-
-var _isFullOnScreen = __webpack_require__(434);
-
-var _isFullOnScreen2 = _interopRequireDefault(_isFullOnScreen);
-
-var _isSetOverflow = __webpack_require__(199);
-
-var _isSetOverflow2 = _interopRequireDefault(_isSetOverflow);
-
-var _isFixed = __webpack_require__(132);
-
-var _isFixed2 = _interopRequireDefault(_isFixed);
-
-var _positions = __webpack_require__(133);
-
-var _positions2 = _interopRequireDefault(_positions);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var getAlignWithLoc = function getAlignWithLoc(toLoc) {
-    var loc = void 0;
-    switch (toLoc) {
-        case _positions2.default.TL:
-            loc = _positions2.default.TR;
-            break;
-        case _positions2.default.TR:
-            loc = _positions2.default.TL;
-            break;
-        case _positions2.default.BL:
-            loc = _positions2.default.BR;
-            break;
-        case _positions2.default.BR:
-            loc = _positions2.default.BL;
-            break;
-        default:
-            loc = toLoc;
-            break;
-    }
-    return loc;
+  var loc;
+
+  switch (toLoc) {
+    case __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].TL:
+      loc = __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].TR;
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].TR:
+      loc = __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].TL;
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].BL:
+      loc = __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].BR;
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].BR:
+      loc = __WEBPACK_IMPORTED_MODULE_9__positions__["a" /* default */].BL;
+      break;
+
+    default:
+      loc = toLoc;
+      break;
+  }
+
+  return loc;
 };
 
 var fixFixedNode = function fixFixedNode(scrollInfo) {
-    return function (move) {
-        return [move[0] + scrollInfo.left, move[1] + scrollInfo.top];
-    };
+  return function (move) {
+    return [move[0] + scrollInfo.left, move[1] + scrollInfo.top];
+  };
 };
 
 var fixScrollNode = function fixScrollNode(scrollInfo) {
-    return function (move) {
-        return [move[0] - scrollInfo.left, move[1] - scrollInfo.top];
-    };
+  return function (move) {
+    return [move[0] - scrollInfo.left, move[1] - scrollInfo.top];
+  };
 };
 
 var alignUI = function alignUI(targetEl, floatEl, alignParams) {
-    var _get = (0, _getObjectValue2.default)(alignParams, null, {}),
-        toLoc = _get.toLoc,
-        disableAutoLoc = _get.disableAutoLoc;
+  var _get = Object(__WEBPACK_IMPORTED_MODULE_2_get_object_value__["default"])(alignParams, null, {}),
+      toLoc = _get.toLoc,
+      disableAutoLoc = _get.disableAutoLoc;
 
-    if (!targetEl) {
-        console.error('targetEl was empty');
-        console.trace();
+  if (!targetEl) {
+    console.error('targetEl was empty');
+    console.trace();
+    return false;
+  }
+
+  var targetInfo;
+  var winInfo;
+  var locs = [];
+
+  if (toLoc) {
+    locs.push(toLoc);
+  }
+
+  if (!disableAutoLoc) {
+    winInfo = Object(__WEBPACK_IMPORTED_MODULE_4__getWindowOffset__["a" /* default */])(targetEl);
+
+    if (!winInfo) {
+      console.error('get windows offset failed');
+    } else {
+      targetInfo = winInfo.domInfo;
+      locs = locs.concat(winInfo.locs);
+    }
+  }
+
+  if (!locs.length) {
+    console.error('Not set any locs', toLoc);
+    return;
+  }
+
+  if (!targetInfo) {
+    var targetFixedNode = Object(__WEBPACK_IMPORTED_MODULE_8__isFixed__["a" /* default */])(targetEl);
+    targetInfo = Object(__WEBPACK_IMPORTED_MODULE_0_getoffset__["default"])(targetEl, targetFixedNode);
+    targetInfo.scrollNode = Object(__WEBPACK_IMPORTED_MODULE_7__isSetOverflow__["a" /* default */])(targetEl);
+    targetInfo.fixedNode = targetFixedNode;
+  }
+
+  var floatInfo = Object(__WEBPACK_IMPORTED_MODULE_0_getoffset__["default"])(floatEl);
+  var adjustMove;
+  var scrollNode = targetInfo.scrollNode;
+  var fixedNode = targetInfo.fixedNode;
+
+  if (fixedNode) {
+    if (fixedNode.contains(floatEl)) {
+      adjustMove = fixFixedNode(__WEBPACK_IMPORTED_MODULE_1_get_scroll_info___default()(fixedNode));
+    } else {
+      if (winInfo) {
+        adjustMove = fixFixedNode(winInfo.scrollInfo);
+      } else {
+        adjustMove = fixFixedNode(__WEBPACK_IMPORTED_MODULE_1_get_scroll_info___default()());
+      }
+    }
+  } else if (scrollNode) {
+    adjustMove = fixScrollNode(__WEBPACK_IMPORTED_MODULE_1_get_scroll_info___default()(scrollNode));
+  }
+
+  var loc;
+  var move;
+  locs.some(function (locItem) {
+    toLoc = locItem;
+    loc = getAlignWithLoc(toLoc);
+    move = Object(__WEBPACK_IMPORTED_MODULE_5__alignWith__["a" /* default */])(targetInfo, floatInfo, loc);
+
+    if (adjustMove) {
+      move = adjustMove(move);
+    }
+
+    if (!winInfo) {
+      return true;
+    } else {
+      var movePos = Object(__WEBPACK_IMPORTED_MODULE_3__getAfterMove__["a" /* default */])(floatInfo, move);
+      var bFullOnScreen = Object(__WEBPACK_IMPORTED_MODULE_6__isFullOnScreen__["a" /* default */])(movePos, winInfo.scrollInfo);
+
+      if (bFullOnScreen) {
+        return true;
+      } else {
         return false;
+      }
     }
-    var targetInfo = void 0;
-    var winInfo = void 0;
-    var locs = [];
-    if (toLoc) {
-        locs.push(toLoc);
-    }
-    if (!disableAutoLoc) {
-        winInfo = (0, _getWindowOffset2.default)(targetEl);
-        if (!winInfo) {
-            console.error('get windows offset failed');
-        } else {
-            targetInfo = winInfo.domInfo;
-            locs = locs.concat(winInfo.locs);
-        }
-    }
-    if (!locs.length) {
-        console.error('Not set any locs', toLoc);
-        return;
-    }
-    if (!targetInfo) {
-        targetInfo = (0, _getoffset2.default)(targetEl);
-        targetInfo.scrollNode = (0, _isSetOverflow2.default)(targetEl);
-        targetInfo.fixedNode = (0, _isFixed2.default)(targetEl);
-    }
+  });
+  var result = {
+    loc: loc,
+    toLoc: toLoc,
+    move: move
+  }; //console.log(result);
 
-    var floatInfo = (0, _getoffset2.default)(floatEl);
-    var adjustMove = void 0;
-    var scrollNode = targetInfo.scrollNode;
-    var fixedNode = targetInfo.fixedNode;
-    if (fixedNode) {
-        if (fixedNode.contains(floatEl)) {
-            adjustMove = fixFixedNode((0, _getScrollInfo2.default)(fixedNode));
-        } else {
-            if (winInfo) {
-                adjustMove = fixFixedNode(winInfo.scrollInfo);
-            } else {
-                adjustMove = fixFixedNode((0, _getScrollInfo2.default)());
-            }
-        }
-    } else if (scrollNode) {
-        adjustMove = fixScrollNode((0, _getScrollInfo2.default)(scrollNode));
-    }
-    var loc = void 0;
-    var move = void 0;
-    locs.some(function (locItem) {
-        toLoc = locItem;
-        loc = getAlignWithLoc(toLoc);
-        move = (0, _alignWith2.default)(targetInfo, floatInfo, loc);
-        if (adjustMove) {
-            move = adjustMove(move);
-        }
-        if (!winInfo) {
-            return true;
-        } else {
-            var movePos = (0, _getAfterMove2.default)(floatInfo, move);
-            var bFullOnScreen = (0, _isFullOnScreen2.default)(movePos, winInfo.scrollInfo);
-            if (bFullOnScreen) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    });
-    var result = {
-        loc: loc,
-        toLoc: toLoc,
-        move: move
-    };
-    //console.log(result);
-    return result;
+  return result;
 };
 
-exports.default = alignUI;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (alignUI);
 
 /***/ }),
 /* 431 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
 var getAfterMove = function getAfterMove(domInfo, moveXY) {
-    var width = domInfo.right - domInfo.left;
-    var height = domInfo.bottom - domInfo.top;
-    var info = {
-        top: moveXY[1],
-        right: moveXY[0] + width,
-        bottom: moveXY[1] + height,
-        left: moveXY[0]
-    };
-    return info;
+  var width = domInfo.right - domInfo.left;
+  var height = domInfo.bottom - domInfo.top;
+  var info = {
+    top: moveXY[1],
+    right: moveXY[0] + width,
+    bottom: moveXY[1] + height,
+    left: moveXY[0]
+  };
+  return info;
 };
 
-exports.default = getAfterMove;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (getAfterMove);
 
 /***/ }),
 /* 432 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__getAlignTargetXY__ = __webpack_require__(433);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__positions__ = __webpack_require__(133);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getAlignTargetXY = __webpack_require__(433);
-
-var _getAlignTargetXY2 = _interopRequireDefault(_getAlignTargetXY);
-
-var _positions = __webpack_require__(133);
-
-var _positions2 = _interopRequireDefault(_positions);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var alignWith = function alignWith(targetInfo, floatElInfo, loc) {
-    var xy = (0, _getAlignTargetXY2.default)(targetInfo, loc);
-    var width = floatElInfo.right - floatElInfo.left;
-    var height = floatElInfo.bottom - floatElInfo.top;
-    var moveXY = void 0;
-    switch (loc) {
-        case _positions2.default.TL:
-            moveXY = [xy[0], xy[1] - height];
-            break;
-        case _positions2.default.TC:
-            moveXY = [xy[0] - Math.floor(width / 2), xy[1] - height];
-            break;
-        case _positions2.default.TR:
-            moveXY = [xy[0] - width, xy[1] - height];
-            break;
-        case _positions2.default.RT:
-            moveXY = [xy[0], xy[1]];
-            break;
-        case _positions2.default.RC:
-            moveXY = [xy[0], xy[1] - Math.floor(height / 2)];
-            break;
-        case _positions2.default.RB:
-            moveXY = [xy[0], xy[1] - height];
-            break;
-        case _positions2.default.BL:
-            moveXY = [xy[0], xy[1]];
-            break;
-        case _positions2.default.BC:
-            moveXY = [xy[0] - Math.floor(width / 2), xy[1]];
-            break;
-        case _positions2.default.BR:
-            moveXY = [xy[0] - width, xy[1]];
-            break;
-        case _positions2.default.LT:
-            moveXY = [xy[0] - width, xy[1]];
-            break;
-        case _positions2.default.LC:
-            moveXY = [xy[0] - width, xy[1] - Math.floor(height / 2)];
-            break;
-        case _positions2.default.LB:
-            moveXY = [xy[0] - width, xy[1] - height];
-            break;
-        case _positions2.default.CC:
-            moveXY = [xy[0] - Math.floor(width / 2), xy[1] - Math.floor(height / 2)];
-            break;
-        default:
-            console.error('Not support align type.');
-            break;
-    }
-    return moveXY;
+  var xy = Object(__WEBPACK_IMPORTED_MODULE_0__getAlignTargetXY__["a" /* default */])(targetInfo, loc);
+  var width = floatElInfo.right - floatElInfo.left;
+  var height = floatElInfo.bottom - floatElInfo.top;
+  var moveXY;
+
+  switch (loc) {
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].TL:
+      moveXY = [xy[0], xy[1] - height];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].TC:
+      moveXY = [xy[0] - Math.floor(width / 2), xy[1] - height];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].TR:
+      moveXY = [xy[0] - width, xy[1] - height];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].RT:
+      moveXY = [xy[0], xy[1]];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].RC:
+      moveXY = [xy[0], xy[1] - Math.floor(height / 2)];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].RB:
+      moveXY = [xy[0], xy[1] - height];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].BL:
+      moveXY = [xy[0], xy[1]];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].BC:
+      moveXY = [xy[0] - Math.floor(width / 2), xy[1]];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].BR:
+      moveXY = [xy[0] - width, xy[1]];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].LT:
+      moveXY = [xy[0] - width, xy[1]];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].LC:
+      moveXY = [xy[0] - width, xy[1] - Math.floor(height / 2)];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].LB:
+      moveXY = [xy[0] - width, xy[1] - height];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_1__positions__["a" /* default */].CC:
+      moveXY = [xy[0] - Math.floor(width / 2), xy[1] - Math.floor(height / 2)];
+      break;
+
+    default:
+      console.error('Not support align type.');
+      break;
+  }
+
+  return moveXY;
 };
 
-exports.default = alignWith;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (alignWith);
 
 /***/ }),
 /* 433 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__positions__ = __webpack_require__(133);
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _positions = __webpack_require__(133);
-
-var _positions2 = _interopRequireDefault(_positions);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var getAlignTargetXY = function getAlignTargetXY(domInfo, loc) {
-    var xy = void 0;
-    var width = domInfo.right - domInfo.left;
-    var height = domInfo.bottom - domInfo.top;
-    switch (loc) {
-        case _positions2.default.LT:
-        case _positions2.default.TL:
-            xy = [domInfo.left, domInfo.top];
-            break;
-        case _positions2.default.TC:
-            xy = [domInfo.left + Math.floor(width / 2), domInfo.top];
-            break;
-        case _positions2.default.RT:
-        case _positions2.default.TR:
-            xy = [domInfo.right, domInfo.top];
-            break;
-        case _positions2.default.LT:
-        case _positions2.default.BL:
-            xy = [domInfo.left, domInfo.bottom];
-            break;
-        case _positions2.default.BC:
-            xy = [domInfo.left + Math.floor(width / 2), domInfo.bottom];
-            break;
-        case _positions2.default.RB:
-        case _positions2.default.BR:
-            xy = [domInfo.right, domInfo.bottom];
-            break;
-        case _positions2.default.RC:
-            xy = [domInfo.right, domInfo.top + Math.floor(height / 2)];
-            break;
-        case _positions2.default.LC:
-            xy = [domInfo.left, domInfo.top + Math.floor(height / 2)];
-            break;
-        case _positions2.default.CC:
-            xy = [domInfo.left + Math.floor(width / 2), domInfo.top + Math.floor(height / 2)];
-            break;
-        default:
-            console.error('Not support align type. [' + loc + ']');
-            break;
-    }
-    return xy;
+  var xy;
+  var width = domInfo.right - domInfo.left;
+  var height = domInfo.bottom - domInfo.top;
+
+  switch (loc) {
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].LT:
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].TL:
+      xy = [domInfo.left, domInfo.top];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].TC:
+      xy = [domInfo.left + Math.floor(width / 2), domInfo.top];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].RT:
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].TR:
+      xy = [domInfo.right, domInfo.top];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].LT:
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].BL:
+      xy = [domInfo.left, domInfo.bottom];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].BC:
+      xy = [domInfo.left + Math.floor(width / 2), domInfo.bottom];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].RB:
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].BR:
+      xy = [domInfo.right, domInfo.bottom];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].RC:
+      xy = [domInfo.right, domInfo.top + Math.floor(height / 2)];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].LC:
+      xy = [domInfo.left, domInfo.top + Math.floor(height / 2)];
+      break;
+
+    case __WEBPACK_IMPORTED_MODULE_0__positions__["a" /* default */].CC:
+      xy = [domInfo.left + Math.floor(width / 2), domInfo.top + Math.floor(height / 2)];
+      break;
+
+    default:
+      console.error('Not support align type. [' + loc + ']');
+      break;
+  }
+
+  return xy;
 };
 
-exports.default = getAlignTargetXY;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (getAlignTargetXY);
 
 /***/ }),
 /* 434 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var isFullOnScreen = function isFullOnScreen(domInfo, scrollInfo) {
-    var bool = domInfo.top > scrollInfo.top && domInfo.right < scrollInfo.right && domInfo.bottom < scrollInfo.bottom && domInfo.left > scrollInfo.left;
-    return bool;
+  var bool = domInfo.top > scrollInfo.top && domInfo.right < scrollInfo.right && domInfo.bottom < scrollInfo.bottom && domInfo.left > scrollInfo.left;
+  return bool;
 };
 
-exports.default = isFullOnScreen;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (isFullOnScreen);
 
 /***/ }),
 /* 435 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _getObjectValue = __webpack_require__(3);
-
-var _getObjectValue2 = _interopRequireDefault(_getObjectValue);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_get_object_value__ = __webpack_require__(3);
 
 var position = {
-    tl: 'top left',
-    tc: 'top center',
-    tr: 'top right',
-    rt: 'right center',
-    rc: 'right center',
-    rb: 'right center',
-    bl: 'bottom left',
-    bc: 'bottom center',
-    br: 'bottom right',
-    lt: 'left center',
-    lc: 'left center',
-    lb: 'left center'
+  tl: 'top left',
+  tc: 'top center',
+  tr: 'top right',
+  rt: 'right center',
+  rc: 'right center',
+  rb: 'right center',
+  bl: 'bottom left',
+  bc: 'bottom center',
+  br: 'bottom right',
+  lt: 'left center',
+  lc: 'left center',
+  lb: 'left center'
 };
 
 var getPositionString = function getPositionString(loc) {
-    return (0, _getObjectValue2.default)(position, [loc]);
+  return Object(__WEBPACK_IMPORTED_MODULE_0_get_object_value__["default"])(position, [loc]);
 };
 
-exports.default = getPositionString;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["a"] = (getPositionString);
 
 /***/ }),
 /* 436 */
@@ -34600,7 +34528,6 @@ var Styles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_smooth_scroll_to__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_smooth_scroll_to___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_smooth_scroll_to__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_exec_script__ = __webpack_require__(449);
@@ -34708,7 +34635,7 @@ function (_PureComponent) {
           var tarDom = query.one(link.hash);
 
           if (tarDom) {
-            __WEBPACK_IMPORTED_MODULE_14_smooth_scroll_to___default()(__WEBPACK_IMPORTED_MODULE_13_getoffset___default()(tarDom).top);
+            __WEBPACK_IMPORTED_MODULE_14_smooth_scroll_to___default()(Object(__WEBPACK_IMPORTED_MODULE_13_getoffset__["default"])(tarDom).top);
             return;
           }
         }
@@ -37741,7 +37668,6 @@ var InjectStyles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_class_lib___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_class_lib__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_css_query_selector__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__src_index__ = __webpack_require__(79);
 
 
@@ -37866,7 +37792,7 @@ function (_PureComponent) {
       var _this$props2 = this.props,
           id = _this$props2.id,
           onSwitch = _this$props2.onSwitch;
-      var defaultOff = __WEBPACK_IMPORTED_MODULE_15_getoffset___default()(Object(__WEBPACK_IMPORTED_MODULE_14_css_query_selector__["b" /* queryOne */])('.sidebar .default-off'));
+      var defaultOff = Object(__WEBPACK_IMPORTED_MODULE_15_getoffset__["default"])(Object(__WEBPACK_IMPORTED_MODULE_14_css_query_selector__["b" /* queryOne */])('.sidebar .default-off'));
       var isSet = isValidStateOn || defaultOff.w && defaultOff.h;
 
       if (isSet) {
@@ -84180,7 +84106,6 @@ function (_PureComponent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_organism_react_graph___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_organism_react_graph__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__organisms_Zoom__ = __webpack_require__(943);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__organisms_BoxGroup__ = __webpack_require__(944);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__organisms_Box__ = __webpack_require__(945);
@@ -85227,7 +85152,6 @@ var Zoom = function (_PureComponent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_organism_react_graph__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_organism_react_graph___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_organism_react_graph__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_get_object_value__ = __webpack_require__(3);
@@ -85354,7 +85278,7 @@ var BoxGroup = function (_PureComponent2) {
             var _this3 = this;
 
             var el = this.el;
-            var offset = __WEBPACK_IMPORTED_MODULE_5_getoffset___default()(el);
+            var offset = Object(__WEBPACK_IMPORTED_MODULE_5_getoffset__["default"])(el);
             var w = offset.w,
                 h = offset.h;
 
@@ -85362,7 +85286,7 @@ var BoxGroup = function (_PureComponent2) {
             var boxsPos = {};
             keys(this.childrenEl).forEach(function (cKey) {
                 var cEl = _this3.childrenEl[cKey];
-                var cElOffset = __WEBPACK_IMPORTED_MODULE_5_getoffset___default()(cEl);
+                var cElOffset = Object(__WEBPACK_IMPORTED_MODULE_5_getoffset__["default"])(cEl);
                 startY += cElOffset.h;
                 boxsPos[cKey] = {
                     y: startY,
@@ -85646,7 +85570,6 @@ var Box = function (_PureComponent) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_organism_react_graph__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_organism_react_graph___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_organism_react_graph__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__DragAndDrop__ = __webpack_require__(292);
 
@@ -89147,10 +89070,8 @@ var Styles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_atomic_molecule__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_organism_react_popup__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_get_window_offset__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_get_window_offset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_get_window_offset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__molecules_LightBox__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_cleanZIndex__ = __webpack_require__(307);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_cleanClass__ = __webpack_require__(308);
@@ -89212,7 +89133,7 @@ var SpotlightEl = function (_PureComponent) {
             if (isFixedNode) {
                 thisStyles.push(injects.fixed);
             }
-            var nodePos = __WEBPACK_IMPORTED_MODULE_2_getoffset___default()(targetEl);
+            var nodePos = Object(__WEBPACK_IMPORTED_MODULE_2_getoffset__["default"])(targetEl);
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_atomic_molecule__["SemanticUI"],
                 { key: name, name: name },
@@ -90156,7 +90077,6 @@ var Styles = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_get_scroll_info__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_get_scroll_info___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_get_scroll_info__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_get_object_value__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_array_merge__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_easing_lib_easeOutQuart__ = __webpack_require__(1017);
@@ -90250,7 +90170,7 @@ var Content = function (_Component) {
 
             var offset = void 0;
             if (el) {
-                offset = __WEBPACK_IMPORTED_MODULE_4_getoffset___default()(el);
+                offset = Object(__WEBPACK_IMPORTED_MODULE_4_getoffset__["default"])(el);
             } else {
                 offset = targetInfo;
             }
@@ -90464,7 +90384,6 @@ var ScrollInfo = function ScrollInfo(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_smooth_scroll_to__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_smooth_scroll_to___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_smooth_scroll_to__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_getoffset__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_getoffset___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_getoffset__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__src_index__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__src_stores_scrollStore__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__src_stores_fastScrollStore__ = __webpack_require__(116);
@@ -90533,7 +90452,7 @@ function (_PureComponent) {
       var margin = 0;
 
       if (ref) {
-        var offset = __WEBPACK_IMPORTED_MODULE_12_getoffset___default()(ref);
+        var offset = Object(__WEBPACK_IMPORTED_MODULE_12_getoffset__["default"])(ref);
         margin = offset[scrollRefLoc];
       }
 
