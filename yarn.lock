@@ -5992,9 +5992,9 @@ rc@^1.2.7:
     strip-json-comments "~2.0.1"
 
 react-atomic-atom@*:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.0.0.tgz#bbc08eb1063abbb857bf6f3da6631a5f7bf411af"
-  integrity sha512-tHqa6OdeyCXj3A9Gm++tVgM7fVYzLcLF37juC3oSW4cQ0escsw326dMBaE/o6OWvTQi9M8/SRkT35NzLgNlwnw==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.0.1.tgz#7a9e85a4d1cd4f85b8d25bfd6af600a4fab050d8"
+  integrity sha512-7bh5Miu6bw/MVFUToh5AhlYICmKmtxaXHQFU26HcdPPB1Y/YH7PPUMH+s67ej3PeTow19kwMfiz4DQ88Cmpyrg==
   dependencies:
     reshow-runtime "*"
 
