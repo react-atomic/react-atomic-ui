@@ -28,6 +28,7 @@
     "organism-react-spotlight": "*",
     "organism-react-stockcharts": "*",
     "organism-react-video": "*",
+    "organism-react-qq-video": "*",
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react": "^16.x",
