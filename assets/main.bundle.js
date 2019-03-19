@@ -64923,6 +64923,7 @@ function (_PureComponent) {
         results = _this$state.results,
         myValue = _this$state.myValue;
     return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_react_atomic_molecule__["SemanticUI"], null, __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_atomic_organism__["f" /* Suggestion */], {
+      autoComplete: "off",
       ref: function ref(el) {
         return _this2.suggestion = el;
       },
@@ -64949,7 +64950,7 @@ function (_PureComponent) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ("import React, {PureComponent} from 'react'\n\nimport {Button, SemanticUI} from 'react-atomic-molecule'\n\nimport {\n   SearchBox,\n   Suggestion \n} from 'react-atomic-organism'\n\n\nconst data = [\n  'abc',\n  'abb',\n  'acc'\n]\n\n\nclass SuggestionExample extends PureComponent\n{\n  state = {\n    results: []\n  }\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({results: data})\n      return\n    }\n    const results = []\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v)\n      }\n    })\n    this.setState({results})\n  }\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item)\n  }\n\n  render()\n  {\n    const {results, myValue} = this.state\n    return (\n      <SemanticUI>\n      <Suggestion\n        ref={el=>this.suggestion = el}\n        onChange={this.handleChange}\n        results={results}\n        itemOnClick={this.handleItemClick}\n        value={myValue}\n      />\n      <Button onClick={()=>this.setState({myValue: myValue ? myValue+1 : 123})}>set</Button>\n      </SemanticUI>\n    )\n  }\n}\n\nexport default SuggestionExample\n");
+/* harmony default export */ __webpack_exports__["a"] = ("import React, {PureComponent} from 'react'\n\nimport {Button, SemanticUI} from 'react-atomic-molecule'\n\nimport {\n   SearchBox,\n   Suggestion \n} from 'react-atomic-organism'\n\n\nconst data = [\n  'abc',\n  'abb',\n  'acc'\n]\n\n\nclass SuggestionExample extends PureComponent\n{\n  state = {\n    results: []\n  }\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({results: data})\n      return\n    }\n    const results = []\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v)\n      }\n    })\n    this.setState({results})\n  }\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item)\n  }\n\n  render()\n  {\n    const {results, myValue} = this.state\n    return (\n      <SemanticUI>\n      <Suggestion\n        autoComplete=\"off\"\n        ref={el=>this.suggestion = el}\n        onChange={this.handleChange}\n        results={results}\n        itemOnClick={this.handleItemClick}\n        value={myValue}\n      />\n      <Button onClick={()=>this.setState({myValue: myValue ? myValue+1 : 123})}>set</Button>\n      </SemanticUI>\n    )\n  }\n}\n\nexport default SuggestionExample\n");
 
 /***/ }),
 /* 719 */

@@ -5843,9 +5843,9 @@ react-atomic-molecule@*:
     ucfirst "*"
 
 react-atomic-organism@*:
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.3.16.tgz#957616bbae2ed7571c6ed384a60bc7f2abfe5399"
-  integrity sha512-6MPDHetqtKCyQP3C3kRGaO5f/+88zSAsfPAS9RhDargByAu42gjSX+KQdxHn5S4SZvumgR/6KNxB8dvfshhaQA==
+  version "0.3.17"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.3.17.tgz#0108140471a366ddb8d94ab9e82c7ffa08cd2348"
+  integrity sha512-RnTEP/N8LpmzUDggoUbHYYRaO70lG8/OWwQ1jy2DgYclgfaAEWoC+sw+J6jThjiiuMwqaJWAsPGPw8KEkKG6/w==
   dependencies:
     array.merge "*"
     call-func "*"
