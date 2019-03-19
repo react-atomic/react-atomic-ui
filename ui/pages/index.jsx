@@ -38,16 +38,12 @@ const Index = (props) => {
     
     let {themePath, ...others} = props;
 
-    if (!themePath) {
-        themePath = 'atoms';
-    }
-
     return (
         <div>
             <ClientRoute
                 {...others}
                 themes={themes}
-                themePath={themePath}
+                defaultThemePath='atoms'
             />
             <PopupPool />
             <PageLoadProgressHandler ajax={true} />
