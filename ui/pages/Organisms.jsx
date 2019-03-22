@@ -24,6 +24,8 @@ import tabView from '!raw-loader!../../../ui/organisms/TabView.example';
 
 import RadioGroup from '../organisms/RadioGroup.example';
 import radioGroup from '!raw-loader!../../../ui/organisms/RadioGroup.example';
+import Checkbox from '../organisms/Checkbox.example';
+import checkbox from '!raw-loader!../../../ui/organisms/Checkbox.example';
 
 import Suggestion from '../organisms/Suggestion.example';
 import suggestion from '!raw-loader!../../../ui/organisms/Suggestion.example';
@@ -98,6 +100,13 @@ class Organisms extends BasePage
                     edit="https://codesandbox.io/embed/jjq8ko2krv?module=%2Fsrc%2FradioGroup.js&moduleview=1"
                 >
                     <RadioGroup />
+                </CodeExample>
+                <CodeExample
+                    code={checkbox}
+                    header="Checkbox"
+                    id="checkbox"
+                >
+                    <Checkbox />
                 </CodeExample>
 
             </Doc>
