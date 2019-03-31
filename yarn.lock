@@ -5631,9 +5631,9 @@ pmvc_react_admin@*:
     reshow "*"
 
 pmvc_react_list@*:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.1.8.tgz#2794b9335995382cc2f02b06a48500eb2e55dc56"
-  integrity sha512-WV+MOWrzyS4vT2H9qjKuTDlGylLnq5xY4x9dPdEMI8dkcsHWt2inrTP8Q8GNngwTdnNDePG3oceHiDb417CuJQ==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.2.1.tgz#8589060b1192980f57a9d8218dedc979eac572ba"
+  integrity sha512-hkHi6wLsVMhiPbsKfcKDFy+9ZgiwlvXHPBzBgKa5W4NuD8my3DVI/lryabum4YK+4mDCkCgyKNon3myvKZdH5Q==
   dependencies:
     get-object-value "*"
     react-atomic-molecule "*"
@@ -6133,9 +6133,9 @@ require-main-filename@^1.0.1:
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
 reshow-app@*:
-  version "0.7.15"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.7.15.tgz#868ac5aadf345692ed769bb117cb077efface183"
-  integrity sha512-nlo5rxT6AezzLOTKTSzzUc8EI0zITRFbklyjXZGaCilHB2lpW1hZfhsslckeSCgQYXNkOnHWLQYRpEjl7u1rLQ==
+  version "0.7.16"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.7.16.tgz#d58d901c13e6c548859a9552f92ef9701dfae942"
+  integrity sha512-EwwRg7gfftEG5f/3vsNjlj2KDPgtcY7P5jJ1BvWUB8uA+i8JrALgakXlZMVWVc6Tlzjq0aVryaPC/Ifz/56yvQ==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"
@@ -6165,6 +6165,7 @@ reshow-app@*:
     ora "2.0.0"
     organism-react-ajax "*"
     react-test-renderer "*"
+    reshow-constant "*"
     reshow-runtime "*"
     reshow-worker "*"
     sinon "*"
