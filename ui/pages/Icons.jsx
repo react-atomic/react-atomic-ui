@@ -2,6 +2,7 @@ import React from 'react';
 
 import Account from 'ricon/Account';
 import AccessTime from 'ricon/AccessTime';
+import Add from 'ricon/Add';
 import BarChart from 'ricon/BarChart';
 import Build from 'ricon/Build';
 import Blur from 'ricon/Blur';
@@ -66,6 +67,10 @@ const icons = [
   ['Account', <Account />],
   ['Account (circle)', <Account type="circle" />],
   ['Account (supervisor)', <Account type="supervisor" />],
+  ['Add', <Add />],
+  ['Add (box)', <Add type="box" />],
+  ['Add (circle)', <Add type="circle" />],
+  ['Add (circleOutline)', <Add type="circleOutline" />],
   ['AccessTime', <AccessTime />],
   ['AccessTime (fill)', <AccessTime type="fill" />],
   ['AccessTime (update)', <AccessTime type="update" />],
