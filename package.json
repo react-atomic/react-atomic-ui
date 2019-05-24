@@ -12,6 +12,7 @@
     "fixed-data-table-2": "*",
     "get-object-value": "*",
     "get-scroll-info": "*",
+    "getoffset": "0.1.6",
     "organism-react-animate": "*",
     "organism-react-asciidoc": "*",
     "organism-react-carousel": "*",

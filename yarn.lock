@@ -3293,6 +3293,15 @@ getoffset@*:
     reshow-constant "*"
     reshow-runtime "*"
 
+getoffset@0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/getoffset/-/getoffset-0.1.6.tgz#9452c7c068bef25523a3614741bc3402726e3a94"
+  integrity sha512-TEgOqsu8OY/hTt3TpIuarEiAiFCYY6c1j0YWfyqSvF0yYPBaKk9msBaS4r2YhaCjJWHLi9rC8sWOo6Mpi8fF8A==
+  dependencies:
+    get-object-value "*"
+    get-scroll-info "*"
+    reshow-constant "*"
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
