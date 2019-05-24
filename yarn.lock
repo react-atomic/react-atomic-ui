@@ -1995,11 +1995,6 @@ css-query-selector@*:
     reshow-runtime "*"
     win-doc "*"
 
-css-query-selector@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/css-query-selector/-/css-query-selector-0.0.0.tgz#27eff80e798a3f066bbbdde08c2679d958b5baef"
-  integrity sha512-vh5fHHbtQLANdIwMR7w6Dc0O9OblTqF9h7xrUJFsObRAXxQl6dQG5GRho5kOSBk2DwJ/vw9gQRNsNxtpFCnrXA==
-
 css-select@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
@@ -3292,15 +3287,6 @@ getoffset@*:
     get-scroll-info "*"
     reshow-constant "*"
     reshow-runtime "*"
-
-getoffset@0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/getoffset/-/getoffset-0.1.6.tgz#9452c7c068bef25523a3614741bc3402726e3a94"
-  integrity sha512-TEgOqsu8OY/hTt3TpIuarEiAiFCYY6c1j0YWfyqSvF0yYPBaKk9msBaS4r2YhaCjJWHLi9rC8sWOo6Mpi8fF8A==
-  dependencies:
-    get-object-value "*"
-    get-scroll-info "*"
-    reshow-constant "*"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -5237,15 +5223,21 @@ organism-react-d3-piechart@*:
     d3-lib "*"
     react-atomic-molecule "*"
 
-organism-react-d3-uml@*:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.1.4.tgz#9e1573e039f49726d3c06d678d3483418507791f"
-  integrity sha512-KTIgaNfDWbO8myrHAdYxkmHXP/9m0E6X7lVNtbj/cOkqWkfnCnLVXKB8BUea7MDB1vwmaHzV/2gBVv7Yth72Dw==
+organism-react-d3-uml@^0.2.0-beta:
+  version "0.2.0-beta.23"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.2.0-beta.23.tgz#5ad3edf2599dd305b0252b81dbd61a777bd88db6"
+  integrity sha512-zLRUyekHbjKBjwt4tHjtuzj7bqK8Tz09rhqPb3PcrZIuYWxrkm2hiytix5d+bGihrgLKhbkekfDl6TwQX6mx9g==
   dependencies:
+    array.merge "*"
     d3-lib "*"
+    get-object-value "*"
     getoffset "*"
-    organism-react-graph "*"
+    organism-react-graph "^0.1.0-beta"
     react-atomic-molecule "*"
+    reshow-constant "*"
+    set-object-value "*"
+    to-percent-js "*"
+    win-doc "*"
 
 organism-react-dropzone@*:
   version "0.0.7"
@@ -5264,16 +5256,20 @@ organism-react-facebook@*:
     react-atomic-molecule "*"
     ricon "*"
 
-organism-react-graph@*:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/organism-react-graph/-/organism-react-graph-0.0.4.tgz#8203fb87a11fe3fa7c074019803da5893a192190"
-  integrity sha512-sTuCjgyLvs1jjT5PZp+6khVM/n47NKxczKVbFENPQdW3mSoDYtxYY5QflyQR5ovJqL4pEiKtlQL9i+IvskknAQ==
+organism-react-graph@^0.1.0-beta:
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/organism-react-graph/-/organism-react-graph-0.1.0-beta.14.tgz#0d8a0c63832068d30ee87aad2b29ac499e3b9341"
+  integrity sha512-2Bgs0+S/lavZ0uLbI5vTrUqAr5GNVc3zSi79rMVIBo9lx6EGjbKd2lB5D71sw/g6be++6Wm0UGOVOAIgENGqEA==
   dependencies:
+    call-func "*"
     colorlib "*"
     d3-lib "*"
     get-object-value "*"
     getoffset "*"
     react-atomic-molecule "*"
+    reshow-constant "*"
+    to-percent-js "*"
+    win-doc "*"
 
 organism-react-i13n@*:
   version "0.3.0"
@@ -5384,13 +5380,13 @@ organism-react-scroll-nav@*:
     smooth-scroll-to "*"
 
 organism-react-spotlight@*:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/organism-react-spotlight/-/organism-react-spotlight-0.0.7.tgz#5e159d3f45c04a3449f3c6b33e743df7a63e615a"
-  integrity sha512-bJu4iGevVHsSK0DiMH3IHiEcRRyV9GjmL06xVwyD4fA4oiyoI0WRd0fGg48/0bieD9AlsyZ/p9JmA8Lk52pWIw==
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/organism-react-spotlight/-/organism-react-spotlight-0.0.8.tgz#c74d6af0645466426ea1f10ba080d71c3ec48749"
+  integrity sha512-4w2DEWCvh1lCtP2CmXCn8BkG2M8p17ljqrSMpLQGXUnR+6YCLpXUYA8kKWq6tZTzKcJLG2qVx2WFnILj0SLQbQ==
   dependencies:
     array.merge "*"
     class-lib "*"
-    css-query-selector "^0.0.0"
+    css-query-selector "*"
     get-style "*"
     get-window-offset "*"
     getoffset "*"
