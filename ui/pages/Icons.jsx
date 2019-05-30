@@ -40,6 +40,7 @@ import Play from 'ricon/Play';
 import PlayListAdd from 'ricon/PlayListAdd';
 import Pulse from 'ricon/Pulse';
 import Refresh from 'ricon/Refresh';
+import Reply from 'ricon/Reply';
 import Search from 'ricon/Search';
 import Settings from 'ricon/Settings';
 import ShoppingCart from 'ricon/ShoppingCart';
@@ -127,6 +128,8 @@ const icons = [
   ['Play', <Play />],
   ['PlayListAdd', <PlayListAdd />],
   ['Refresh', <Refresh />],
+  ['Reply', <Reply />],
+  ['Reply (right)', <Reply type="right" />],
   ['Search', <Search />],
   ['Settings', <Settings />],
   ['Settings', <Settings type="square" />],
