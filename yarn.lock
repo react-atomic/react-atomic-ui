@@ -2142,9 +2142,9 @@ d3-interpolate@1:
     d3-color "1"
 
 d3-lib@*:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/d3-lib/-/d3-lib-0.4.1.tgz#1a8c1d98147240fe16c0f0f52d4a593153e56cce"
-  integrity sha512-Jv57/EWIe0TJog/GZ7m1LcXtfQH7/1BnnToLgEyNcKpyYmD1UHeoJjcwOzDYm7jx9IAkCBxXwtjGI7PO9Kxp7A==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/d3-lib/-/d3-lib-0.4.2.tgz#d8878dabb1b029bd121eacab1d735a14bc11405b"
+  integrity sha512-LAbkUbUZWKH+AmvyelZ+CRDzrWWjzPsB/Y+6vM0BJDKALAy0NNiEYmC6RBA/dFe848vPgMj646sgykY1ZAD5OQ==
   dependencies:
     array.min.max "*"
     d3 "*"
@@ -4893,9 +4893,9 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.21:
-  version "1.1.22"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.22.tgz#d90cd5adc59ab9b0f377d4f532b09656399c88bf"
-  integrity sha512-O6XpteBuntW1j86mw6LlovBIwTe+sO2+7vi9avQffNeIW4upgnaCVm6xrBWH+KATz7mNNRNNeEpuWB7dT6Cr3w==
+  version "1.1.23"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.23.tgz#de7409f72de044a2fa59c097f436ba89c39997f0"
+  integrity sha512-uq1iL79YjfYC0WXoHbC/z28q/9pOl8kSHaXdWmAAc8No+bDwqkZbzIJz55g/MUsPgSGm9LZ7QSUbzTcH5tz47w==
   dependencies:
     semver "^5.3.0"
 
@@ -5878,9 +5878,9 @@ raw-body@2.4.0, raw-body@^2.3.3:
     unpipe "1.0.0"
 
 raw-loader@*:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-2.0.0.tgz#e2813d9e1e3f80d1bbade5ad082e809679e20c26"
-  integrity sha512-kZnO5MoIyrojfrPWqrhFNLZemIAX8edMOCp++yC5RKxzFB3m92DqKNhKlU6+FvpOhWtvyh3jOaD7J6/9tpdIKg==
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.0.0.tgz#9a660dc9cfbfb8324eede3ea3511454d2a5d0389"
+  integrity sha512-FsELYliOpX5HdPdxa7PzTmEc5OTchmLUs/r4f8oLDGCYE+xC2FjVbDXzdyLcBrdlDnvkx1x5wzphixcWpxJG5w==
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
