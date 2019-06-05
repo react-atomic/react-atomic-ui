@@ -15,6 +15,9 @@ import d3BarChart from '!raw-loader!../../../ui/organisms/D3BarChart.example';
 import D3LineChart from '../organisms/D3LineChart.example';
 import d3LineChart from '!raw-loader!../../../ui/organisms/D3LineChart.example';
 
+import D3AreaChart from '../organisms/D3AreaChart.example';
+import d3AreaChart from '!raw-loader!../../../ui/organisms/D3AreaChart.example';
+
 import D3Uml from '../organisms/D3Uml.example'
 import d3Uml from '!raw-loader!../../../ui/organisms/D3Uml.example';
 
@@ -37,6 +40,13 @@ class D3 extends BasePage
                     header="D3 Line Chart"
                 >
                     <D3LineChart />
+                </CodeExample>
+
+                <CodeExample
+                    code={d3AreaChart}
+                    header="D3 Area Chart"
+                >
+                    <D3AreaChart />
                 </CodeExample>
 
                 <CodeExample

@@ -1,7 +1,7 @@
 import React from 'react';
-import {LineChart} from 'organism-react-d3-axis-chart';
+import {AreaChart} from 'organism-react-d3-axis-chart';
 
-const D3LineChart = (props) =>
+const D3AreaChart = props =>
 {
     let data = [ 
         {
@@ -15,20 +15,18 @@ const D3LineChart = (props) =>
                     y: 450
                 },
                 {
-                    x: '2013-01',
+                    x: '2013-03',
                     y: 450
                 },
             ]
         }
     ];
     return (
-        <LineChart
+        <AreaChart
             data={data}
             style={{maxHeight: 450}}
-            hideAxis={true}
-            thresholds={[200]}
         />
     );
 }
 
-export default D3LineChart;
+export default D3AreaChart;
