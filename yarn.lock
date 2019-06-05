@@ -5205,9 +5205,9 @@ organism-react-code@*:
     ricon "*"
 
 organism-react-d3-axis-chart@*:
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.1.24.tgz#986c818c43956b05731f765afaab90737870eb88"
-  integrity sha512-TYDEedLjp8E+vh6/uMi87uds7IGnbWqX0hUglmHL5NrYUnBT+BWs74qnjvXD4y8H2PiGRmNWaa2nqIsMwXb1Iw==
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.1.25.tgz#c11feca66a7bde7001d7e31cafb05aaee835a25e"
+  integrity sha512-Rwkd8OT4+fN5I7+058SF6/3MRcM7yo49O7I/m5MENX3/Q1iwH3GVk582oqulPRNThkIR64cB5RR5DOtcrfOr/Q==
   dependencies:
     colorlib "*"
     d3-lib "*"

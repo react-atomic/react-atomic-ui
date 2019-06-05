@@ -8932,19 +8932,21 @@ function (_Component) {
     });
 
     Object(__WEBPACK_IMPORTED_MODULE_8_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_6_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(_this), "handleMouseEnter", function (e) {
-      var hideY = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(Object(__WEBPACK_IMPORTED_MODULE_6_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(_this), ['props', 'hideCrosshairY'], false);
+      var hideX = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(_this.props, ['hideCrosshairX'], false);
+      var hideY = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(_this.props, ['hideCrosshairY'], false);
 
       _this.setState({
-        hideCrosshairX: false,
+        hideCrosshairX: hideX,
         hideCrosshairY: hideY
       });
     });
 
     Object(__WEBPACK_IMPORTED_MODULE_8_reshow_runtime_es_helpers_defineProperty__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_6_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(_this), "handleMouseLeave", function (e) {
-      var hideY = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(Object(__WEBPACK_IMPORTED_MODULE_6_reshow_runtime_es_helpers_assertThisInitialized__["a" /* default */])(_this), ['props', 'hideCrosshairY'], true);
+      var hideX = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(_this.props, ['hideCrosshairX'], true);
+      var hideY = Object(__WEBPACK_IMPORTED_MODULE_11_get_object_value__["default"])(_this.props, ['hideCrosshairY'], true);
 
       _this.setState({
-        hideCrosshairX: true,
+        hideCrosshairX: hideX,
         hideCrosshairY: hideY
       });
     });
@@ -9046,10 +9048,11 @@ function (_Component) {
           crosshair = _this$props.crosshair,
           onMouseMove = _this$props.onMouseMove,
           propsCrosshairX = _this$props.crosshairX,
+          propsHideCrosshairX = _this$props.hideCrosshairX,
           propsHideCrosshairY = _this$props.hideCrosshairY,
           hideCrosshairXLabel = _this$props.hideCrosshairXLabel,
           hideCrosshairYLabel = _this$props.hideCrosshairYLabel,
-          props = Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_objectWithoutProperties__["a" /* default */])(_this$props, ["attrsLocator", "data", "children", "valuesLocator", "xValueLocator", "yValueLocator", "extraViewBox", "thresholds", "multiChart", "hideAxis", "scaleW", "scaleH", "xAxisAttr", "yAxisAttr", "color", "invertedColor", "xScale", "yScaleMore", "crosshair", "onMouseMove", "crosshairX", "hideCrosshairY", "hideCrosshairXLabel", "hideCrosshairYLabel"]);
+          props = Object(__WEBPACK_IMPORTED_MODULE_1_reshow_runtime_es_helpers_objectWithoutProperties__["a" /* default */])(_this$props, ["attrsLocator", "data", "children", "valuesLocator", "xValueLocator", "yValueLocator", "extraViewBox", "thresholds", "multiChart", "hideAxis", "scaleW", "scaleH", "xAxisAttr", "yAxisAttr", "color", "invertedColor", "xScale", "yScaleMore", "crosshair", "onMouseMove", "crosshairX", "hideCrosshairX", "hideCrosshairY", "hideCrosshairXLabel", "hideCrosshairYLabel"]);
 
       var thresholdLines = [];
       this.scaleW = scaleW;
