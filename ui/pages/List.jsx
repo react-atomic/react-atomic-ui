@@ -19,6 +19,9 @@ import reactVirtualizedTableList from '!raw-loader!../../../ui/organisms/ReactVi
 import FixedDataTableList from '../organisms/FixedDataTableList.example';
 import fixedDataTableList from '!raw-loader!../../../ui/organisms/FixedDataTableList.example';
 
+import Pagination from '../organisms/Pagination.example';
+import pagination from '!raw-loader!../../../ui/organisms/Pagination.example';
+
 class List extends BasePage
 {
 
@@ -56,6 +59,13 @@ class List extends BasePage
                     header="Fixed Data Table"
                 >
                     <FixedDataTableList />
+                </CodeExample>
+
+                <CodeExample
+                    code={pagination}
+                    header="Fixed Data Table"
+                >
+                    <Pagination />
                 </CodeExample>
             </Doc>
         );

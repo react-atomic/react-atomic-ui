@@ -11,6 +11,7 @@ const D3PieChartExample = (props) =>
     <PieChart
        data={data} 
        style={{maxWidth:300}}
+       unit=''
     />
     );
 }
