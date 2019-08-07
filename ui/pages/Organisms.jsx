@@ -30,6 +30,9 @@ import checkbox from '!raw-loader!../../../ui/organisms/Checkbox.example';
 import Suggestion from '../organisms/Suggestion.example';
 import suggestion from '!raw-loader!../../../ui/organisms/Suggestion.example';
 
+import TagInput from '../organisms/TagInput.example';
+import tagInput from '!raw-loader!../../../ui/organisms/TagInput.example';
+
 class Organisms extends BasePage 
 {
     static defaultProps = {
@@ -83,6 +86,14 @@ class Organisms extends BasePage
                     id="suggestion"
                 >
                     <Suggestion />
+                </CodeExample>
+
+                <CodeExample
+                    code={tagInput}
+                    header="Tag input"
+                    id="tag-input"
+                >
+                    <TagInput />
                 </CodeExample>
 
                 <CodeExample

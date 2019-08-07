@@ -13,7 +13,7 @@ class AsciiDocPage extends BasePage
 {
 
     static defaultProps = {
-        pageName: 'list' 
+        pageName: 'AsciiDoc' 
     };
 
     render()

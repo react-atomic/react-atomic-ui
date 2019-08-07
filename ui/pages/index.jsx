@@ -17,6 +17,7 @@ import Video from '../pages/Video';
 import Parallax from '../pages/Parallax';
 import Code from '../pages/Code';
 import AsciiDoc from '../pages/AsciiDoc';
+import GrapesJs from '../pages/GrapesJs';
 
 const themes = {
     atoms: Atoms,
@@ -31,7 +32,8 @@ const themes = {
     parallax: Parallax,
     video: Video,
     Code,
-    AsciiDoc
+    AsciiDoc,
+    GrapesJs
 };
 
 const Index = (props) => {
