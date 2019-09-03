@@ -3106,9 +3106,9 @@ find-up@^3.0.0:
     locate-path "^3.0.0"
 
 fixed-data-table-2@*:
-  version "0.8.26"
-  resolved "https://registry.yarnpkg.com/fixed-data-table-2/-/fixed-data-table-2-0.8.26.tgz#48f3f10182c3494ec8d4a6d0eff5bce1e3f36cd1"
-  integrity sha512-Bu3z6u1+vzF9wQdtZq31lIVQBB7fEKXyKRq3oP0QeZz7qgRnUudtduhicgAtVPjTPaLXExLvPZ4tA1Af/HdhVg==
+  version "0.8.27"
+  resolved "https://registry.yarnpkg.com/fixed-data-table-2/-/fixed-data-table-2-0.8.27.tgz#eb98cc49817771ac5eb7f1aa1b5223887e4a9d96"
+  integrity sha512-lECQpWQ1mmCSv6YkUgMw3fYjVPacpLxb+EK9l5NijBta3d3tr6qR0KMENQV6v6ZGXWk0DPJ3rDlMgmJtH07NOA==
   dependencies:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
@@ -5444,9 +5444,9 @@ organism-react-qq-video@*:
     organism-react-video "*"
 
 organism-react-scroll-nav@*:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.6.0.tgz#f5844a288cd131e33bb1feb38be839a0540a0cd7"
-  integrity sha512-idDHSYFjplj0Uw9BK8OS9zxl+6jRbZFPFH4yY72QK+eEM46jocilmv1sssmkWyAentmZhynQZ1uEgAcuFONWlw==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.6.1.tgz#75d5fb5374a3a234c787663a0b88d0d95af0b2c5"
+  integrity sha512-4p9HXZ9neOn1eUNO1BZ6PCqqrZuGLfYyZ1/UFT+sDTtAH8bqeXGW/tqFQ8jR2QfOuzE7NGG1zuTmu9C1vi85sg==
   dependencies:
     get-object-value "*"
     get-scroll-info "*"
