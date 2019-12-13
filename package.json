@@ -18,7 +18,7 @@
     "organism-react-code": "*",
     "organism-react-d3-axis-chart": "*",
     "organism-react-d3-piechart": "*",
-    "organism-react-d3-uml": "^0.2.0-beta",
+    "organism-react-d3-uml": "*",
     "organism-react-dropzone": "*",
     "organism-react-facebook": "*",
     "organism-react-grapesjs": "*",
