@@ -12,6 +12,7 @@ import Code from 'ricon/Code';
 import CircleLoading from 'ricon/CircleLoading';
 import Dashboard from 'ricon/Dashboard';
 import Description from 'ricon/Description';
+import Device from 'ricon/Device';
 import Dropdown from 'ricon/Dropdown';
 import Download from 'ricon/Download';
 import Delete from 'ricon/Delete';
@@ -86,6 +87,9 @@ const icons = [
   ['Delete', <Delete />],
   ['Delete (forever)', <Delete type="forever" />],
   ['Delete (sweep)', <Delete type="sweep" />],
+  ['Device (desktop)', <Device type="desktop" />],
+  ['Device (tablet)', <Device type="tablet" />],
+  ['Device (phone)', <Device type="phone" />],
   ['Download', <Download />],
   ['Download (file)', <Download type="file" />],
   ['Dropdown', <Dropdown />],
