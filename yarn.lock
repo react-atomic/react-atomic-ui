@@ -5280,9 +5280,9 @@ organism-react-ajax@^0.13.0-beta:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.3.2.tgz#fe1008a3ac0c5316037a0ace486744b9b52a4635"
-  integrity sha512-XxB8SZLTQwEqqU/lwe0pr1BGnMavdzB/GAlUaklrVFn/3rzLbrfUSfbpOAOqDr1l1cbvz5aamjqMy3VggVDxWA==
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.3.4.tgz#f22425970ef5d5adc53f00cdbda0d7a617213373"
+  integrity sha512-MGtFfPRQNdSXGiPBxr0GOD/oLSti02lD/FfkDpsLcIxhrV+LCtrhEn0EBxiu7YSnSjTOzFkKdaKdIx89RUpMxg==
   dependencies:
     call-func "*"
     get-object-value "*"
