@@ -37,7 +37,7 @@ class SuggestionExample1 extends PureComponent {
           ref={el => (this.suggestion = el)}
           onChange={this.handleChange}
           results={results}
-          itemOnClick={this.handleItemClick}
+          onItemClick={this.handleItemClick}
           value={myValue}
         />
         <Button

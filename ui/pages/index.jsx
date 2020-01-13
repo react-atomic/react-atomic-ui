@@ -1,5 +1,6 @@
 import React from 'react'; 
-import {ClientRoute, ReshowMessage} from 'reshow'; 
+import {ReshowMessage} from 'reshow'; 
+import {ClientRoute} from 'reshow-url';
 import {PopupPool} from 'organism-react-popup';
 import {PageLoadProgressHandler} from 'organism-react-progress'; 
 import {I13nElement} from 'organism-react-i13n'

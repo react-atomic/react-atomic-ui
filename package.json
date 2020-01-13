@@ -36,12 +36,13 @@
     "react": "^16.x",
     "react-dom": "^16.x",
     "react-virtualized": "*",
-    "reshow": "*",
     "ricon": "*"
   },
   "devDependencies": {
+    "organism-react-ajax": "^0.13.0-beta",
     "raw-loader": "*",
-    "reshow-app": "*"
+    "reshow-app": "^0.13.0-beta",
+    "reshow-url": "*"
   },
   "scripts": {
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
