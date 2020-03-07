@@ -16,6 +16,7 @@
     "organism-react-asciidoc": "*",
     "organism-react-carousel": "*",
     "organism-react-code": "*",
+    "organism-react-codeeditor": "*",
     "organism-react-d3-axis-chart": "*",
     "organism-react-d3-piechart": "*",
     "organism-react-d3-uml": "*",
@@ -46,7 +47,9 @@
   },
   "scripts": {
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
-    "build": "npm run clean && BABEL_ENV=build babel ui -d build/ui && BABEL_ENV=build babel src -d build/src",
+    "build:ui": "BABEL_ENV=build babel ui -d build/ui --ignore /**/__tests__",
+    "build:src": "BABEL_ENV=build babel src -d build/src --ignore /**/__tests__",
+    "build": "npm run clean && npm run build:ui && npm run build:src",
     "prepublishOnly": "npm run build"
   }
 }

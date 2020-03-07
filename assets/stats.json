@@ -1,1 +1,18 @@
-{"status":"done","publicPath":"./assets/","chunks":{"main":[{"name":"main.bundle.js","publicPath":"./assets/main.bundle.js?051d5dfd7ff150907a6d"},{"name":"main.bundle.js.map","publicPath":"./assets/main.bundle.js.map?051d5dfd7ff150907a6d"}],"vendor":[{"name":"vendor.bundle.js","publicPath":"./assets/vendor.bundle.js?051d5dfd7ff150907a6d"},{"name":"vendor.bundle.js.map","publicPath":"./assets/vendor.bundle.js.map?051d5dfd7ff150907a6d"}]}}
+{
+  "chunks": {
+    "main": [
+      {
+        "name": "main.bundle.js",
+        "publicPath": "./assets/main.bundle.js?6c36c7e896671fe11153"
+      }
+    ],
+    "vendor": [
+      {
+        "name": "vendor.bundle.js",
+        "publicPath": "./assets/vendor.bundle.js?6c36c7e896671fe11153"
+      }
+    ]
+  },
+  "publicPath": "./assets/",
+  "status": "done"
+}
