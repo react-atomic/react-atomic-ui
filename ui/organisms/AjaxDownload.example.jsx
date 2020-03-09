@@ -11,7 +11,7 @@ const AjaxDownloadExample = props => {
     <Button
       onClick={() => {
         ajaxDispatch('ajaxGet', {
-          responseType: 'blob',
+          responseType: ['blob'],
           url,
           callback: (json, text, o) => {
             download(o.body, url.split('/').splice(-1)[0]);

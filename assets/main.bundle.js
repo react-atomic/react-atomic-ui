@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "b7c26f32fe6601a022ac" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "e64d1d1bdcc9ebe543f2" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -224,6 +224,1131 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js":
+/*!********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js ***!
+  \********************************************************************************************/
+/*! exports provided: default, ajaxDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ajaxDispatch", function() { return ajaxDispatch; });
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-flux */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-flux/build/es/index.js");
+
+
+
+var instance = new reshow_flux__WEBPACK_IMPORTED_MODULE_0__["Dispatcher"]();
+/* harmony default export */ __webpack_exports__["default"] = (instance);
+var ajaxDispatch = instance.dispatch.bind(instance);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/index.js":
+/*!***********************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/src/index.js ***!
+  \***********************************************************************************/
+/*! exports provided: AjaxLink, AjaxPage, AjaxForm, ajaxStore, initAjaxWorkerEvent, ajaxDispatch, formSerialize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ui_organisms_AjaxLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/organisms/AjaxLink */ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxLink.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AjaxLink", function() { return _ui_organisms_AjaxLink__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _ui_organisms_AjaxPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/organisms/AjaxPage */ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxPage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AjaxPage", function() { return _ui_organisms_AjaxPage__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _ui_organisms_AjaxForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/organisms/AjaxForm */ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxForm.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AjaxForm", function() { return _ui_organisms_AjaxForm__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _stores_ajaxStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/ajaxStore */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ajaxStore", function() { return _stores_ajaxStore__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "initAjaxWorkerEvent", function() { return _stores_ajaxStore__WEBPACK_IMPORTED_MODULE_3__["initAjaxWorkerEvent"]; });
+
+/* harmony import */ var _ajaxDispatcher__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ajaxDispatcher */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ajaxDispatch", function() { return _ajaxDispatcher__WEBPACK_IMPORTED_MODULE_4__["ajaxDispatch"]; });
+
+/* harmony import */ var form_serialize_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! form-serialize-js */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/form-serialize-js/build/es/src/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formSerialize", function() { return form_serialize_js__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+// Organisms
+
+
+ // Stores
+
+ // Dispatch
+
+ // Util
+
+
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js":
+/*!**********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js ***!
+  \**********************************************************************************************/
+/*! exports provided: default, initAjaxWorkerEvent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(setImmediate) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAjaxWorkerEvent", function() { return initWorkerEvent; });
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var es6_promise_auto__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! es6-promise/auto */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/es6-promise/auto.js");
+/* harmony import */ var es6_promise_auto__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(es6_promise_auto__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var setimmediate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! setimmediate */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/setimmediate/setImmediate.js");
+/* harmony import */ var setimmediate__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(setimmediate__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var immutable__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! immutable */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/immutable/dist/immutable.js");
+/* harmony import */ var immutable__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(immutable__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! reshow-flux */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var smooth_scroll_to__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! smooth-scroll-to */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/smooth-scroll-to/build/es/src/index.js");
+/* harmony import */ var get_random_id__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! get-random-id */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/get-random-id/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../ajaxDispatcher */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js");
+
+
+
+
+
+
+
+
+ // [RESHOW] Need keep if use "new Promise"
+
+
+
+
+
+
+
+
+
+
+var empty = function empty() {};
+
+var keys = Object.keys;
+var wsAuth = Object(immutable__WEBPACK_IMPORTED_MODULE_10__["Map"])();
+var gWorker;
+var fakeWorker = false;
+var isWorkerReady;
+var cbIndex = 0;
+var Callbacks = [];
+
+var initWorkerEvent = function initWorkerEvent(worker) {
+  worker.addEventListener('message', function (e) {
+    var sourceType = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(e, ['data', 'type']);
+
+    switch (sourceType) {
+      case 'ready':
+        // fakeWorker will not run this
+        gWorker = worker;
+        isWorkerReady = true;
+        break;
+
+      default:
+        Object(_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__["ajaxDispatch"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_7__["default"])({}, e.data, {
+          sourceType: sourceType,
+          type: 'callback'
+        }));
+        break;
+    }
+  });
+};
+
+var initFakeWorker = function initFakeWorker() {
+  Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, /*! ../../src/worker */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/worker.js")).then(function (workerObject) {
+    fakeWorker = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["getDefault"])(workerObject);
+    initWorkerEvent(fakeWorker);
+
+    if (!gWorker) {
+      gWorker = fakeWorker;
+    }
+
+    isWorkerReady = true;
+  });
+};
+
+var handleUpdateNewUrl = function handleUpdateNewUrl(state, action, url) {
+  setImmediate(function () {
+    var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params'], {});
+
+    if (params.disableAjax && false !== params.scrollBack) {
+      Object(smooth_scroll_to__WEBPACK_IMPORTED_MODULE_13__["default"])(0);
+    }
+  });
+  var preUrl = state.get('currentLocation');
+
+  if (preUrl !== url) {
+    var onUrlChange = state.get('onUrlChange');
+    state = state.set('currentLocation', url).merge(Object(call_func__WEBPACK_IMPORTED_MODULE_15__["default"])(onUrlChange, [url]));
+  }
+
+  return state;
+};
+
+var AjaxStore = /*#__PURE__*/function (_ReduceStore) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(AjaxStore, _ReduceStore);
+
+  function AjaxStore() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AjaxStore);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(AjaxStore)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "getRawUrl", function (params) {
+      var _get = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(params, null, {}),
+          url = _get.url,
+          path = _get.path;
+
+      if (!url) {
+        if (path) {
+          var baseUrl = _this.getState().get('baseUrl');
+
+          if (!baseUrl) {
+            baseUrl = '';
+          }
+
+          url = baseUrl + path;
+        } else {
+          url = '#';
+        }
+      }
+
+      return url;
+    });
+
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AjaxStore, [{
+    key: "getInitialState",
+    value: function getInitialState() {
+      var onUrlChange = function onUrlChange(url) {
+        Object(_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__["ajaxDispatch"])({
+          type: 'ajaxGet',
+          params: {
+            url: url,
+            scrollBack: true
+          }
+        });
+      };
+
+      return Object(immutable__WEBPACK_IMPORTED_MODULE_10__["Map"])({
+        onUrlChange: onUrlChange
+      });
+    }
+  }, {
+    key: "cookAjaxUrl",
+    value: function cookAjaxUrl(params, ajaxUrl, globalHeaders) {
+      if (globalHeaders && !Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(params, ['ignoreGlobalHeaders'])) {
+        if (globalHeaders.toJS) {
+          params.globalHeaders = globalHeaders.toJS();
+        } else {
+          console.error('Global headers should be a map.', globalHeaders);
+        }
+      }
+
+      var urls = ajaxUrl.split('#');
+      var query = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(params, ['query'], {});
+
+      if (urls[1]) {
+        query['--hashState'] = urls[1];
+      } // <!-- Clean key for fixed superagent error
+
+
+      if (query) {
+        keys(query).forEach(function (key) {
+          if ('undefined' === typeof query[key]) {
+            delete query[key];
+          }
+        });
+        params.query = query;
+      } // -->
+
+
+      return urls[0];
+    }
+  }, {
+    key: "getCallback",
+    value: function getCallback(state, action, json, response) {
+      var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params'], {});
+      var callback;
+
+      if (Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(json, ['data', 'errors']) || !Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(response, ['ok'])) {
+        if (params.errorCallback) {
+          callback = Callbacks[params.errorCallback];
+          delete Callbacks[params.errorCallback];
+        }
+      }
+
+      if (json.debugs) {
+        var debugs = json.debugs;
+        var bFail = false;
+        __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ../lib/dlog */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/lib/dlog.js")).then(function (dlog) {
+          dlog = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["getDefault"])(dlog);
+          var oLog = new dlog({
+            level: 'trace'
+          });
+          debugs.forEach(function (v) {
+            var dump = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(oLog, [v[0]], function () {
+              return oLog.info;
+            });
+            dump.call(oLog, v[1]);
+          });
+        });
+        debugs.forEach(function (v) {
+          if ('error' === v[1]) {
+            bFail = true;
+          }
+        });
+
+        if (bFail) {
+          return empty;
+        }
+      }
+
+      if (!callback) {
+        if (params.callback) {
+          callback = Callbacks[params.callback];
+          delete Callbacks[params.callback];
+        } else {
+          callback = state.get('callback');
+        }
+      }
+
+      return callback;
+    }
+  }, {
+    key: "getJson",
+    value: function getJson(text) {
+      var json;
+
+      try {
+        json = JSON.parse(text);
+      } catch (e) {
+        json = {};
+      }
+
+      return json;
+    }
+  }, {
+    key: "start",
+    value: function start() {
+      setImmediate(function () {
+        Object(_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__["ajaxDispatch"])({
+          type: 'config/set',
+          params: {
+            isRunning: 1
+          }
+        });
+      });
+    }
+  }, {
+    key: "done",
+    value: function done() {
+      setImmediate(function () {
+        Object(_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__["ajaxDispatch"])({
+          type: 'config/set',
+          params: {
+            isRunning: 0
+          }
+        });
+      });
+    }
+  }, {
+    key: "storeCallback",
+    value: function storeCallback(action) {
+      var cb = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params', 'callback']);
+
+      if (cb) {
+        var cbKey = 'cb' + cbIndex;
+        Callbacks[cbKey] = cb;
+        action.params.callback = cbKey;
+        cbIndex++;
+      }
+
+      var err = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params', 'errorCallback']);
+
+      if (err) {
+        var errCbKey = 'err' + cbIndex;
+        Callbacks[errCbKey] = err;
+        action.params.errorCallback = errCbKey;
+        cbIndex++;
+      }
+
+      return action;
+    }
+  }, {
+    key: "worker",
+    value: function worker(data) {
+      if (isWorkerReady && fakeWorker) {
+        setImmediate(function () {
+          var disableWebWorker = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(data, ['action', 'params', 'disableWebWorker']);
+          var run = disableWebWorker ? fakeWorker : gWorker;
+          run.postMessage(data);
+        });
+      } else {
+        var self = this;
+
+        if (false === fakeWorker) {
+          initFakeWorker();
+          fakeWorker = null;
+        }
+
+        setTimeout(function () {
+          return self.worker(data);
+        }, 50);
+      }
+    }
+  }, {
+    key: "setWsAuth",
+    value: function setWsAuth(key, data) {
+      wsAuth = wsAuth.set(key, data);
+    }
+  }, {
+    key: "getWsAuth",
+    value: function getWsAuth(key) {
+      if (!key) {
+        return wsAuth.toJS();
+      } else {
+        return wsAuth.get(key).toJS();
+      }
+    }
+  }, {
+    key: "initWs",
+    value: function initWs(state, action) {
+      var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params'], {});
+      var url = params.url;
+
+      if (url) {
+        this.worker({
+          params: params,
+          ws: url,
+          type: 'initWs'
+        });
+      }
+
+      return state;
+    }
+  }, {
+    key: "closeWs",
+    value: function closeWs(state, action) {
+      var url = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params', 'url']);
+
+      if (url) {
+        this.worker({
+          ws: url,
+          type: 'closeWs'
+        });
+      }
+
+      return state;
+    }
+  }, {
+    key: "ajaxGet",
+    value: function ajaxGet(state, action) {
+      var self = this;
+      var params = action.params;
+      var rawUrl = self.getRawUrl(params);
+
+      if (params.updateUrl && this.urlDispatch && rawUrl !== document.URL) {
+        this.urlDispatch({
+          type: 'url',
+          url: rawUrl
+        });
+      }
+
+      if (params.disableAjax) {
+        return this.applyCallback(state, {
+          json: handleUpdateNewUrl(state, action, rawUrl)
+        });
+      }
+
+      if (!params.disableProgress) {
+        self.start();
+      }
+
+      setImmediate(function () {
+        var ajaxUrl = self.cookAjaxUrl(params, rawUrl, state.get('globalHeaders'));
+
+        if (!params.query) {
+          params.query = {};
+        }
+
+        if (!params.disableRandom) {
+          params.query['--r'] = Object(get_random_id__WEBPACK_IMPORTED_MODULE_14__["default"])();
+        } else {
+          params.query['--r'] = state.get('staticVersion');
+        }
+
+        self.worker({
+          type: 'ajaxGet',
+          url: ajaxUrl,
+          action: self.storeCallback(action)
+        });
+      });
+      return state;
+    }
+  }, {
+    key: "ajaxPost",
+    value: function ajaxPost(state, action) {
+      var self = this;
+      var params = action.params;
+
+      if (!params.disableProgress) {
+        self.start();
+      }
+
+      var rawUrl = self.getRawUrl(params);
+      var ajaxUrl = self.cookAjaxUrl(params, rawUrl, state.get('globalHeaders'));
+      self.worker({
+        type: 'ajaxPost',
+        url: ajaxUrl,
+        action: self.storeCallback(action)
+      });
+      return state;
+    }
+  }, {
+    key: "applyCallback",
+    value: function applyCallback(state, action) {
+      var _this2 = this;
+
+      var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params'], {});
+
+      if (!params.disableProgress) {
+        this.done();
+      }
+
+      var sourceType = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['sourceType']);
+      var response = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['response']);
+      var text = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['text']);
+      var json = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['json'], function () {
+        return _this2.getJson(text);
+      });
+      var callback = this.getCallback(state, action, json, response);
+      var type = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(json, ['type']);
+      var isRedirect = null;
+      var url = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['url']);
+
+      switch (type) {
+        case 'ws-auth':
+          this.setWsAuth(url, json);
+          break;
+
+        default:
+          if ('ws' === sourceType) {
+            json = {
+              '--realTimeData--': json,
+              '--realTimeUrl--': url
+            };
+          }
+
+          isRedirect = Object(call_func__WEBPACK_IMPORTED_MODULE_15__["default"])(callback, [json, text, response]);
+          break;
+      }
+
+      if (false !== isRedirect) {
+        var loc = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(json, ['clientRedirectTo']);
+
+        if (loc) {
+          switch (Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(json, ['clientRedirectType'])) {
+            case 'href':
+              location.href = loc;
+              break;
+
+            case 'replace':
+            default:
+              location.replace(loc);
+              break;
+          }
+        }
+      }
+
+      if (params.updateUrl && false !== params.scrollBack || params.scrollBack) {
+        Object(smooth_scroll_to__WEBPACK_IMPORTED_MODULE_13__["default"])(0);
+      }
+
+      return state;
+    }
+  }, {
+    key: "handleUrlChange",
+    value: function handleUrlChange(state, action) {
+      var url = Object(get_object_value__WEBPACK_IMPORTED_MODULE_12__["default"])(action, ['params', 'url'], document.URL);
+      /**
+       * "Do not change" toggleBfChange and bfApplyUrl
+       * in other place, such as ajaxGet.
+       * Because this state should only trigger with bfchange.
+       */
+
+      return this.applyCallback(state.set('toggleBfChange', !state.get('toggleBfChange')).set('bfApplyUrl', url), {
+        json: handleUpdateNewUrl(state, action, url)
+      });
+    }
+  }, {
+    key: "reduce",
+    value: function reduce(state, action) {
+      switch (action.type) {
+        case 'ws/init':
+          return this.initWs(state, action);
+
+        case 'ws/close':
+          return this.closeWs(state, action);
+
+        case 'ajaxGet':
+          return this.ajaxGet(state, action);
+
+        case 'ajaxPost':
+          return this.ajaxPost(state, action);
+
+        case 'urlChange':
+          return this.handleUrlChange(state, action);
+
+        case 'callback':
+          return this.applyCallback(state, action);
+
+        case 'config/set':
+          return state.merge(action.params);
+
+        default:
+          return state;
+      }
+    }
+  }]);
+
+  return AjaxStore;
+}(reshow_flux__WEBPACK_IMPORTED_MODULE_11__["ReduceStore"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (new AjaxStore(_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_16__["default"]));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../react-atomic-ui/node_modules/timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxBase.js":
+/*!***********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxBase.js ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/stores/ajaxStore */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js");
+
+
+
+
+
+
+
+
+var AjaxBase = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(AjaxBase, _PureComponent);
+
+  function AjaxBase() {
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AjaxBase);
+
+    return Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(AjaxBase).apply(this, arguments));
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AjaxBase, [{
+    key: "isRunAjax",
+    value: function isRunAjax() {
+      if (this.props.ajax) {
+        return this.props.ajax;
+      }
+
+      var state = _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_6__["default"].getState();
+      return state.get('ajax');
+    }
+  }]);
+
+  return AjaxBase;
+}(react__WEBPACK_IMPORTED_MODULE_5__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AjaxBase);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxForm.js":
+/*!***********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxForm.js ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var form_serialize_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! form-serialize-js */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/form-serialize-js/build/es/src/index.js");
+/* harmony import */ var _organisms_AjaxBase__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../organisms/AjaxBase */ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxBase.js");
+/* harmony import */ var _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/stores/ajaxStore */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js");
+/* harmony import */ var _src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/ajaxDispatcher */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AjaxForm = /*#__PURE__*/function (_AjaxBase) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(AjaxForm, _AjaxBase);
+
+  function AjaxForm() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, AjaxForm);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf2 = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(AjaxForm)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "handleSubmit", function (e) {
+      if (_this.props.stop) {
+        return;
+      }
+
+      e.preventDefault();
+      var _this$props = _this.props,
+          callback = _this$props.callback,
+          errorCallback = _this$props.errorCallback,
+          updateUrl = _this$props.updateUrl,
+          beforeSubmit = _this$props.beforeSubmit,
+          afterSubmit = _this$props.afterSubmit;
+      var otherParams = {};
+
+      if (beforeSubmit) {
+        otherParams = beforeSubmit(e);
+
+        if (!otherParams) {
+          otherParams = {};
+        }
+      }
+
+      if (otherParams.pause) {
+        // pause by beforeSubmit
+        return false;
+      }
+
+      var formDom = e.target;
+      var action = formDom.action;
+      var formParams = Object(form_serialize_js__WEBPACK_IMPORTED_MODULE_10__["default"])(formDom);
+      var type;
+
+      switch (formDom.method.toLowerCase()) {
+        case 'post':
+          type = 'ajaxPost';
+          break;
+
+        /**
+         * Default method
+         * https://www.w3schools.com/tags/att_form_method.asp
+         */
+
+        default:
+        case 'get':
+          type = 'ajaxGet';
+          otherParams = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, otherParams, {
+            disableAjax: !_this.isRunAjax(),
+            updateUrl: updateUrl
+          });
+          break;
+      }
+
+      Object(_src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_13__["ajaxDispatch"])({
+        type: type,
+        params: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({
+          url: action,
+          query: formParams,
+          callback: callback,
+          errorCallback: errorCallback
+        }, otherParams)
+      });
+
+      if (afterSubmit) {
+        afterSubmit(e);
+      }
+    });
+
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(AjaxForm, [{
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          action = _this$props2.action,
+          afterSubmit = _this$props2.afterSubmit,
+          beforeSubmit = _this$props2.beforeSubmit,
+          callback = _this$props2.callback,
+          component = _this$props2.component,
+          errorCallback = _this$props2.errorCallback,
+          path = _this$props2.path,
+          stop = _this$props2.stop,
+          updateUrl = _this$props2.updateUrl,
+          rest = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props2, ["action", "afterSubmit", "beforeSubmit", "callback", "component", "errorCallback", "path", "stop", "updateUrl"]);
+
+      var thisUrl = _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_12__["default"].getRawUrl({
+        url: action,
+        path: path
+      });
+      var build = Object(react__WEBPACK_IMPORTED_MODULE_9__["isValidElement"])(component) ? react__WEBPACK_IMPORTED_MODULE_9__["cloneElement"] : react__WEBPACK_IMPORTED_MODULE_9__["createElement"];
+      return build(component, Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        action: thisUrl,
+        onSubmit: this.handleSubmit
+      }, rest));
+    }
+  }]);
+
+  return AjaxForm;
+}(_organisms_AjaxBase__WEBPACK_IMPORTED_MODULE_11__["default"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(AjaxForm, "defaultProps", {
+  updateUrl: false,
+  stop: false,
+  component: 'form'
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (AjaxForm);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxLink.js":
+/*!***********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxLink.js ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _organisms_AjaxBase__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../organisms/AjaxBase */ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxBase.js");
+/* harmony import */ var _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../src/stores/ajaxStore */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/stores/ajaxStore.js");
+/* harmony import */ var _src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/ajaxDispatcher */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AjaxLink = /*#__PURE__*/function (_AjaxBase) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(AjaxLink, _AjaxBase);
+
+  function AjaxLink() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, AjaxLink);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf2 = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(AjaxLink)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "isAlreadyTouchStart", false);
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "handleClick", function (onClick) {
+      return function (type) {
+        return function (e) {
+          var target = _this.props.target;
+
+          if ('_blank' !== target) {
+            e.preventDefault();
+          }
+
+          if ('touchStart' === type) {
+            _this.isAlreadyTouchStart = true;
+          } else {
+            if (_this.isAlreadyTouchStart) {
+              _this.isAlreadyTouchStart = false;
+              return;
+            }
+          }
+
+          if ('function' === typeof onClick) {
+            onClick(e);
+          }
+
+          if ('_blank' !== target) {
+            var href = e.currentTarget.href;
+
+            _this.go(href);
+          }
+        };
+      };
+    });
+
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(AjaxLink, [{
+    key: "go",
+    value: function go(url) {
+      var _this$props = this.props,
+          callback = _this$props.callback,
+          errorCallback = _this$props.errorCallback,
+          updateUrl = _this$props.updateUrl,
+          disableRandom = _this$props.disableRandom;
+      Object(_src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_12__["ajaxDispatch"])({
+        type: 'ajaxGet',
+        params: {
+          disableAjax: !this.isRunAjax(),
+          url: url,
+          updateUrl: updateUrl,
+          disableRandom: disableRandom,
+          callback: callback,
+          errorCallback: errorCallback
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          component = _this$props2.component,
+          callback = _this$props2.callback,
+          errorCallback = _this$props2.errorCallback,
+          path = _this$props2.path,
+          href = _this$props2.href,
+          updateUrl = _this$props2.updateUrl,
+          disableRandom = _this$props2.disableRandom,
+          rest = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["component", "callback", "errorCallback", "path", "href", "updateUrl", "disableRandom"]);
+
+      var _this$props3 = this.props,
+          onClick = _this$props3.onClick,
+          onTouchStart = _this$props3.onTouchStart;
+
+      if (true === onTouchStart) {
+        onTouchStart = this.handleClick(onTouchStart)('touchStart');
+      }
+
+      var thisHref = _src_stores_ajaxStore__WEBPACK_IMPORTED_MODULE_11__["default"].getRawUrl({
+        path: path,
+        url: href
+      });
+      var build = Object(react__WEBPACK_IMPORTED_MODULE_9__["isValidElement"])(component) ? react__WEBPACK_IMPORTED_MODULE_9__["cloneElement"] : react__WEBPACK_IMPORTED_MODULE_9__["createElement"];
+      return build(component, Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rest, {
+        href: thisHref,
+        onTouchStart: onTouchStart,
+        onClick: this.handleClick(onClick)('click')
+      }));
+    }
+  }]);
+
+  return AjaxLink;
+}(_organisms_AjaxBase__WEBPACK_IMPORTED_MODULE_10__["default"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(AjaxLink, "defaultProps", {
+  updateUrl: true,
+  disableRandom: false,
+  component: 'a'
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (AjaxLink);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxPage.js":
+/*!***********************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-ajax/build/es/ui/organisms/AjaxPage.js ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(setImmediate) {/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var reshow_build__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! reshow-build */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/reshow-build/build/es/src/index.js");
+/* harmony import */ var _src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../src/ajaxDispatcher */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/ajaxDispatcher.js");
+/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! win-doc */ "../react-atomic-organism/packages/organism-react-ajax/node_modules/win-doc/build/es/src/index.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AjaxPage = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(AjaxPage, _PureComponent);
+
+  function AjaxPage(props) {
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, AjaxPage);
+
+    _this = Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(AjaxPage).call(this, props));
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "_lastThemePath", '');
+
+    var win = props.win,
+        otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(props, ["win"]);
+    /**
+     * Need put in constructor before render,
+     * else AjaxLink will not get baseUrl
+     */
+
+
+    Object(_src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_11__["ajaxDispatch"])({
+      type: 'config/set',
+      params: otherProps
+    });
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(AjaxPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      setImmediate(function () {
+        var _this2$props = _this2.props,
+            win = _this2$props.win,
+            webSocketUrl = _this2$props.webSocketUrl;
+        win = win || Object(win_doc__WEBPACK_IMPORTED_MODULE_12__["win"])();
+
+        if (win.WebSocket && webSocketUrl) {
+          Object(_src_ajaxDispatcher__WEBPACK_IMPORTED_MODULE_11__["ajaxDispatch"])({
+            type: 'ws/init',
+            params: {
+              url: webSocketUrl
+            }
+          });
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          themes = _this$props.themes,
+          themePath = _this$props.themePath,
+          fallback = _this$props.fallback;
+      var thisThemePath = themePath;
+
+      if ('undefined' === typeof themes[thisThemePath]) {
+        thisThemePath = this._lastThemePath;
+
+        if ('undefined' === typeof themes[thisThemePath]) {
+          console.error('Not find a theme for name: [' + themePath + ']', themes);
+          return null;
+        }
+      }
+
+      this._lastThemePath = thisThemePath;
+      var myTheme = themes[thisThemePath];
+      var builded = Object(reshow_build__WEBPACK_IMPORTED_MODULE_10__["default"])(myTheme)();
+
+      if (!Object(react__WEBPACK_IMPORTED_MODULE_8__["isValidElement"])(builded)) {
+        console.error('Not find a valid element for name: [' + themePath + ']', themes);
+        return null;
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8__["Suspense"], {
+          fallback: Object(reshow_build__WEBPACK_IMPORTED_MODULE_10__["default"])(fallback)()
+        }, builded);
+      }
+    }
+  }]);
+
+  return AjaxPage;
+}(react__WEBPACK_IMPORTED_MODULE_8__["PureComponent"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(AjaxPage, "defaultProps", {
+  ajax: true,
+  themes: {},
+  win: null,
+  fallback: 'div'
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (AjaxPage);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../react-atomic-ui/node_modules/timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate))
+
+/***/ }),
+
 /***/ "./build/src/client.js":
 /*!*****************************!*\
   !*** ./build/src/client.js ***!
@@ -290,7 +1415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/index.js");
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var ajax_save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ajax-save */ "./node_modules/ajax-save/build/es/src/index.js");
 
@@ -304,7 +1429,7 @@ var AjaxDownloadExample = function AjaxDownloadExample(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     onClick: function onClick() {
       Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])('ajaxGet', {
-        responseType: 'blob',
+        responseType: ['blob'],
         url: url,
         callback: function callback(json, text, o) {
           Object(ajax_save__WEBPACK_IMPORTED_MODULE_4__["download"])(o.body, url.split('/').splice(-1)[0]);
@@ -1730,7 +2855,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/index.js");
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 
 
@@ -2365,7 +3490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-ajax */ "../react-atomic-organism/packages/organism-react-ajax/build/es/src/index.js");
 
 
 
@@ -4385,7 +5510,7 @@ var Doc = function Doc(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress';\nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {Button} from 'react-atomic-molecule';\nimport {download} from 'ajax-save';\n\nconst AjaxDownloadExample = props => {\n  const url =\n    'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg';\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch('ajaxGet', {\n          responseType: 'blob',\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split('/').splice(-1)[0]);\n          },\n        });\n      }}>\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress';\nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {Button} from 'react-atomic-molecule';\nimport {download} from 'ajax-save';\n\nconst AjaxDownloadExample = props => {\n  const url =\n    'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg';\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch('ajaxGet', {\n          responseType: ['blob'],\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split('/').splice(-1)[0]);\n          },\n        });\n      }}>\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n");
 
 /***/ }),
 
