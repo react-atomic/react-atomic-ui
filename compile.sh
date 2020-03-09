@@ -21,6 +21,7 @@ analyzer(){
 
 develop(){
     echo "Develop Mode";
+    stop
     npm run build
     CONFIG=$conf $webpack
 }
