@@ -9,6 +9,7 @@
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {
+    "ajax-save": "*",
     "fixed-data-table-2": "*",
     "get-object-value": "*",
     "get-scroll-info": "*",
@@ -32,7 +33,6 @@
     "organism-react-stockcharts": "*",
     "organism-react-tag-input": "*",
     "organism-react-video": "*",
-    "ajax-save": "*",
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react": "^16.x",
