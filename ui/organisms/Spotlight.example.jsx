@@ -27,7 +27,7 @@ class SpotlightExample extends PureComponent
                 <Spotlight
                     toPool="spotlight-pool"
                     targetEl={this.spot}
-                    closeCallback={()=>{
+                    onClose={()=>{
                         this.setState({spotlight: null});
                     }}
                 />
@@ -36,7 +36,7 @@ class SpotlightExample extends PureComponent
         return ( 
             <FullScreenExample
                 button="open full screen"
-                closeCallback={()=>this.setState({spotlight: null})}
+                onClose={()=>this.setState({spotlight: null})}
             >
                 <div ref={el=>this.spot=el} style={Styles.el}>Spotlight</div> 
                 <div>
