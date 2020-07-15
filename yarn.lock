@@ -1968,9 +1968,9 @@ camelcase@^5.0.0:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001093:
-  version "1.0.30001099"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001099.tgz#540118fcc6842d1fde62f4ee5521d1ec6afdb40e"
-  integrity sha512-sdS9A+sQTk7wKoeuZBN/YMAHVztUfVnjDi4/UV3sDE8xoh7YR12hKW+pIdB3oqKGwr9XaFL2ovfzt9w8eUI5CA==
+  version "1.0.30001100"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001100.tgz#2a58615e0c01cf716ab349b20ca4d86ef944aa4e"
+  integrity sha512-0eYdp1+wFCnMlCj2oudciuQn2B9xAFq3WpgpcBIZTxk/1HNA/O2YA7rpeYhnOqsqAJq1AHUgx6i1jtafg7m2zA==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -5738,9 +5738,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 nearley@^2.7.10:
-  version "2.19.4"
-  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.19.4.tgz#7518cbdd7d0e8e08b5f82841b9edb0126239c8b1"
-  integrity sha512-oqj3m4oqwKsN77pETa9IPvxHHHLW68KrDc2KYoWMUOhDlrNUo7finubwffQMBRnwNCOXc4kRxCZO0Rvx4L6Zrw==
+  version "2.19.5"
+  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.19.5.tgz#6be78e4942eeb9a043b17c563413111d4ad849b7"
+  integrity sha512-qoh1ZXXl0Kpn40tFhmgvffUAlbpRMcjLUagNVnT1JmliUIsB4tFabmCNhD97+tkf9FZ/SLhhYzNow0V3GitzDg==
   dependencies:
     commander "^2.19.0"
     moo "^0.5.0"
@@ -6053,9 +6053,9 @@ organism-react-ajax@^0.13.0-beta:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.3.6.tgz#160d348449a6f4d222d89a309d263600c59f4e06"
-  integrity sha512-UExOOBcJPiUoo7msPvehISu8T9ovWgOENGId/hqWlPxehKsn4gbDGLrlLBLg0/aTcI5UCRR42ohcbPm21Ii22A==
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.4.0.tgz#fca2e15ad78303784cc8aabf2d990f21852892d1"
+  integrity sha512-lavySk3sXxMbqVl6CNST7JV60EQFMP5XFWIkukWgII5zi/bkw9DrV9Rk9VfANfq4PJxVQtrrdepGhVn73uf2sg==
   dependencies:
     call-func "*"
     get-object-value "*"
