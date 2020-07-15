@@ -3154,9 +3154,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.488:
-  version "1.3.497"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.497.tgz#de00f2f2f44c258c4577fbfbd5124b94c18bfa44"
-  integrity sha512-sPdW5bUDZwiFtoonuZCUwRGzsZmKzcLM0bMVhp6SMCfUG+B3faENLx3cE+o+K0Jl+MPuNA9s9cScyFjOlixZpQ==
+  version "1.3.498"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.498.tgz#fd7188c8a49d6d0b5df1df55a1f1a4bf2c177457"
+  integrity sha512-W1hGwaQEU8j9su2jeAr3aabkPuuXw+j8t73eajGAkEJWbfWiwbxBwQN/8Qmv2qCy3uCDm2rOAaZneYQM8VGC4w==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.3"
@@ -3194,9 +3194,9 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
     once "^1.4.0"
 
 enhanced-resolve@^4.1.0, enhanced-resolve@^4.1.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.2.0.tgz#5d43bda4a0fd447cb0ebbe71bef8deff8805ad0d"
-  integrity sha512-S7eiFb/erugyd1rLb6mQ3Vuq+EXHv5cpCkNqqIkYkBgN2QdFnyCZzFBleqwGEx4lgNGYij81BWnCrFNK7vxvjQ==
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.3.0.tgz#3b806f3bfafc1ec7de69551ef93cca46c1704126"
+  integrity sha512-3e87LvavsdxyoCfGusJnrZ5G8SLPOFeHSNpZI/ATL9a5leXo2k0w6MKnbqhdBad9qTobSfB20Ld7UmgoNbAZkQ==
   dependencies:
     graceful-fs "^4.1.2"
     memory-fs "^0.5.0"
@@ -6053,9 +6053,9 @@ organism-react-ajax@^0.13.0-beta:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.4.0.tgz#fca2e15ad78303784cc8aabf2d990f21852892d1"
-  integrity sha512-lavySk3sXxMbqVl6CNST7JV60EQFMP5XFWIkukWgII5zi/bkw9DrV9Rk9VfANfq4PJxVQtrrdepGhVn73uf2sg==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.4.3.tgz#24ba8a23c7b1bb0c3e3bb69364c5f9b41dc2413d"
+  integrity sha512-mkcpb7hb/HqUnP18TtaXkoJP+TzgvPK4MT3T9pDQHDNQP189EoIj88KCqpbWzCh1vubLb5TH3UY3X++AAxSf2g==
   dependencies:
     call-func "*"
     get-object-value "*"
