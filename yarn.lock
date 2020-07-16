@@ -2040,9 +2040,9 @@ chokidar@^2.0.4, chokidar@^2.1.8:
     fsevents "^1.2.7"
 
 chokidar@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
-  integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
+  integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -6251,9 +6251,9 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.9.3.tgz#f651674034c896ad4a8b4a91dbb7c719c2f7ffd6"
-  integrity sha512-sjrnmS4LFUtvwlkdheiQBmmklYLLGJJt5CWKBe/bhWB1z3t4S4uWK9vjgQ9mc5zhPUqDKqhiyWAD7RW4bjL6bQ==
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.9.7.tgz#b751e53339e0d7701550fc7cc580855e5b04832e"
+  integrity sha512-R6aGpuCznTSQ7JQdiIR9kprUIkfPIAYSscx90Co1lfamt7ANqbtEt5iDH0fWrZWsN2YkTrA3L6dFtuaIg8o4gg==
   dependencies:
     array.merge "*"
     call-func "*"
@@ -7307,9 +7307,9 @@ reshow-worker@^0.13.0-beta:
     worker-loader "*"
 
 reshow@^0.13.0-beta:
-  version "0.13.0-beta.12"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.13.0-beta.12.tgz#57495d2808863e34ebcd684a4fd3494b8cb11c4c"
-  integrity sha512-Qv+vgWNHCodzq7KtvaHqBwRnf3dZpwluRH2qVSZyrBV/kqdZGxgOrYcrCTTO/R7aQtDkEmBM5scVJJY+SMxvpA==
+  version "0.13.0-beta.13"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.13.0-beta.13.tgz#19191feff600e35cae39d274def55bbb9e1047e2"
+  integrity sha512-gWsyHIUCT+sekwLLhv8tMlkLrXLvHIxni5e0lzIfE8QmBnajzWqluX9aSMjIEkUOOBaPaqa5Hb33u/Paelw8AA==
   dependencies:
     call-func "*"
     get-storage "*"
