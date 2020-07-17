@@ -934,9 +934,9 @@
     mkdirp "^1.0.4"
 
 "@sinonjs/commons@^1", "@sinonjs/commons@^1.6.0", "@sinonjs/commons@^1.7.0", "@sinonjs/commons@^1.7.2":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.0.tgz#c8d68821a854c555bba172f3b06959a0039b236d"
-  integrity sha512-wEj54PfsZ5jGSwMX68G8ZXFawcSglQSXqCftWX3ec8MDUzQdHgcKvw97awHbY0efQEL5iKUOAmmVtoYgmrSG4Q==
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"
+  integrity sha512-892K+kWUUi3cl+LlqEWIDrhvLgdL79tECi8JZUyq6IviKy/DNhuzCRlbHUjxK89f4ypPMMaFnFuR9Ie6DoIMsw==
   dependencies:
     type-detect "4.0.8"
 
@@ -6053,9 +6053,9 @@ organism-react-ajax@^0.13.0-beta:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.5.4.tgz#cd4dc4a6c8d942482e1ce18073615df784c4069d"
-  integrity sha512-R8enkUArNzsog1s4aNVBwNjz/U+IN4MFPMe8zLFkGnMjy0tv+x6hJromkBXSitrkTr3WZ0dJIsDoBzmS/J6AQA==
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.5.5.tgz#53b7e0cb64303dd817d52d2b47aad156bf538b18"
+  integrity sha512-RRK3y6r0onxkOb9OXwwBC9jfQAe8c2H+UblJlc2sOOdPbd6DJtj6KN+rt/wct+1oqfCkK3s80oU0sw2eYu9kFQ==
   dependencies:
     call-func "*"
     get-object-value "*"
@@ -6075,9 +6075,9 @@ organism-react-asciidoc@*:
     window-onload "*"
 
 organism-react-carousel@*:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/organism-react-carousel/-/organism-react-carousel-0.2.0.tgz#c6e86034b1d7736fd1e81b07a01d88b2c42be094"
-  integrity sha512-NHGskAnGAfOc1CbYP2EGhw9a7gPBjegOHGa881oLJGBVsN6cQlZLDYaudbdHdpjAYy8xLHKsbpBbyICVfGmmsw==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/organism-react-carousel/-/organism-react-carousel-0.2.1.tgz#8dddccec51a8b84160ba1f87bb3b93dde793ac00"
+  integrity sha512-NxHe6Hs/qPloRg0iaUkTgvPlTkOTd5ngxWXlq3qLqtcP7qgbelx4kfX5BM2UVCjTxAxA2sk5lUTeagbce//D5w==
   dependencies:
     get-object-value "*"
     organism-react-animate "*"
