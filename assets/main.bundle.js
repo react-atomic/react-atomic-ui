@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "de925ab63f00c6e6b3e2" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "190279849e31e2c71942" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -645,25 +645,29 @@ var AsciidocDemo = /*#__PURE__*/function (_PureComponent) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
 
 
 
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "2");
 
-var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "3");
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+  src: "https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg"
+}));
 
-var _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "4");
+var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "3");
 
-var _ref4 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "5");
+var _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "4");
+
+var _ref4 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "5");
 
 var CarouselAnimationExample = function CarouselAnimationExample(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["CarouselAnimation"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["CarouselAnimation"], {
     carouselAttr: {
       style: Styles.carousel
     },
     style: Styles.container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     style: Styles.img,
     src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
   })), _ref, _ref2, _ref3, _ref4);
@@ -4463,7 +4467,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {Carousel, CarouselAnimation} from 'organism-react-carousel';\n\nconst CarouselAnimationExample = (props)=>\n{\n    return (\n        <CarouselAnimation \n            carouselAttr={{\n                style: Styles.carousel\n            }}\n            style={Styles.container}\n        >\n            <Carousel>\n                <img\n                    style={Styles.img}\n                    src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n                />\n            </Carousel>\n            <Carousel>2</Carousel>\n            <Carousel>3</Carousel>\n            <Carousel>4</Carousel>\n            <Carousel>5</Carousel>\n        </CarouselAnimation>\n    );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n    container: {\n        margin: '0 10%'\n    },\n    carousel: {\n        width: '100%',\n        height: 300,\n        background: '#00558B'\n    },\n    img: {\n        maxWidth: '100%',\n        verticalAlign: 'bottom'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {Image} from 'react-atomic-molecule';\nimport {Carousel, CarouselAnimation} from 'organism-react-carousel';\n\nconst CarouselAnimationExample = (props)=>\n{\n    return (\n        <CarouselAnimation \n            carouselAttr={{\n                style: Styles.carousel\n            }}\n            style={Styles.container}\n        >\n            <Carousel>\n                <img\n                    style={Styles.img}\n                    src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n                />\n            </Carousel>\n            <Carousel>\n              <Image src=\"https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg\" /> \n            </Carousel>\n            <Carousel>3</Carousel>\n            <Carousel>4</Carousel>\n            <Carousel>5</Carousel>\n        </CarouselAnimation>\n    );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n    container: {\n        margin: '0 10%'\n    },\n    carousel: {\n        width: '100%',\n        height: 300,\n        background: '#00558B'\n    },\n    img: {\n        maxWidth: '100%',\n        verticalAlign: 'bottom'\n    }\n};\n");
 
 /***/ }),
 

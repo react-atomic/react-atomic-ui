@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-atomic-molecule';
 import {Carousel, CarouselAnimation} from 'organism-react-carousel';
 
 const CarouselAnimationExample = (props)=>
@@ -16,7 +17,9 @@ const CarouselAnimationExample = (props)=>
                     src="https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
                 />
             </Carousel>
-            <Carousel>2</Carousel>
+            <Carousel>
+              <Image src="https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg" /> 
+            </Carousel>
             <Carousel>3</Carousel>
             <Carousel>4</Carousel>
             <Carousel>5</Carousel>
