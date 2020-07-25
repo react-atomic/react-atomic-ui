@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "b04b05ab04918d2d1394" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "9ec8a52113c5a3e58637" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -3799,7 +3799,7 @@ var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createEleme
   header: "Fixed Data Table"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_12__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
   code: _raw_loader_ui_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_15__["default"],
-  header: "Fixed Data Table"
+  header: "Pagination"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_14__["default"], null)));
 
 var List = /*#__PURE__*/function (_BasePage) {

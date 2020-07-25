@@ -63,7 +63,7 @@ class List extends BasePage
 
                 <CodeExample
                     code={pagination}
-                    header="Fixed Data Table"
+                    header="Pagination"
                 >
                     <Pagination />
                 </CodeExample>
