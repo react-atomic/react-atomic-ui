@@ -1968,9 +1968,9 @@ camelcase@^5.0.0:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001093:
-  version "1.0.30001105"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001105.tgz#d2cb0b31e5cf2f3ce845033b61c5c01566549abf"
-  integrity sha512-JupOe6+dGMr7E20siZHIZQwYqrllxotAhiaej96y6x00b/48rPt42o+SzOSCPbrpsDWvRja40Hwrj0g0q6LZJg==
+  version "1.0.30001106"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001106.tgz#7e2132711295ef30ffe5ee45b71936354d105d8c"
+  integrity sha512-XqSQKt9Fd3Z9BoN0cpSaITcTInKhMNGkaWtQ4rDnyQU1BJzzWDWCUi3cJflaPWk2kbrkYkfMrMrjIFzb3kd6NQ==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -6209,9 +6209,9 @@ organism-react-i13n@^0.13.0-beta:
     window-onload "*"
 
 organism-react-iframe@*:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/organism-react-iframe/-/organism-react-iframe-0.7.1.tgz#6d0433f16294d4e835550365e60175edadb34289"
-  integrity sha512-g47bHfKP5CZ2b1mrRi0SGbm1OioG743o9ZkwYDTk4V9mS7qE1HGdmXBWZszK5qHQzyxEgldZi8MHDdxSZD7nXw==
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/organism-react-iframe/-/organism-react-iframe-0.7.2.tgz#4f4a46951d6deef149beaed6d4ee836af9e953bc"
+  integrity sha512-XaM9k0uXZamGpPLkYO3UzV+DzVMCwgXpPT3Ju1IH+WTcNxtrOF1YOlOO2PXiNCE7hv30uc1CS/Gb3kYV5sNP1w==
   dependencies:
     call-func "*"
     create-el "*"
