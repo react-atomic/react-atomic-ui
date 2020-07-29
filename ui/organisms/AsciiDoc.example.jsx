@@ -25,4 +25,3 @@ class AsciidocDemo extends PureComponent {
 }
 
 export default AsciidocDemo;
-

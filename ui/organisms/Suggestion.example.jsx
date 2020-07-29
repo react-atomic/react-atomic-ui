@@ -1,10 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from "react";
 
-import {Button, SemanticUI} from 'react-atomic-molecule';
+import { Button, SemanticUI } from "react-atomic-molecule";
 
-import {Suggestion} from 'react-atomic-organism';
+import { Suggestion } from "react-atomic-organism";
 
-const data = ['abc', 'abb', 'acc'];
+const data = ["abc", "abb", "acc"];
 
 class SuggestionExample1 extends PureComponent {
   state = {
@@ -13,7 +13,7 @@ class SuggestionExample1 extends PureComponent {
 
   handleChange = (e, value) => {
     if (!value.length) {
-      this.setState({results: data});
+      this.setState({ results: data });
       return;
     }
     const results = [];
@@ -22,7 +22,7 @@ class SuggestionExample1 extends PureComponent {
         results.push(v);
       }
     });
-    this.setState({results});
+    this.setState({ results });
   };
 
   handleItemClick = (e, item) => {
@@ -30,18 +30,21 @@ class SuggestionExample1 extends PureComponent {
   };
 
   render() {
-    const {results, myValue} = this.state;
+    const { results, myValue } = this.state;
     return (
       <SemanticUI>
         <Suggestion
-          ref={el => (this.suggestion = el)}
+          ref={(el) => (this.suggestion = el)}
           onChange={this.handleChange}
           results={results}
           onItemClick={this.handleItemClick}
           value={myValue}
         />
         <Button
-          onClick={() => this.setState({myValue: myValue ? myValue + 1 : 123})}>
+          onClick={() =>
+            this.setState({ myValue: myValue ? myValue + 1 : 123 })
+          }
+        >
           set
         </Button>
       </SemanticUI>
