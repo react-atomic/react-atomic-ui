@@ -6887,14 +6887,15 @@ organism-react-ajax@^0.13.0-beta:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.6.0.tgz#a43954e3aeb3da803e5bcf26d7f707d939595ff6"
-  integrity sha512-KYwDQW2nNCO39c83gDOElypiOMCbpwdSl7NtbfAbbaCvYmtDi2iTJqbW0UIqSI35LIYJpsh7quM7r0/QEBOlPw==
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.6.1.tgz#a8b77baecacc8bf05d00277c2677621fbb61eeea"
+  integrity sha512-2Xkj3BHZGBgMznCFBfQKm9+KnEfVi2+es+LxP1tpUdK527BgerCpNhEhhwxv6PPcjF1GgpFTTnz+FjXcFk8KDw==
   dependencies:
     call-func "*"
     get-object-value "*"
     keyframe-css "*"
     react-atomic-molecule "*"
+    win-doc "*"
 
 organism-react-asciidoc@*:
   version "0.3.2"
