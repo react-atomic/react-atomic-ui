@@ -1,7 +1,7 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from "react";
 
-import {Form} from 'react-atomic-molecule';
-import {Checkbox} from 'react-atomic-organism';
+import { Form } from "react-atomic-molecule";
+import { Checkbox } from "react-atomic-organism";
 
 class CheckboxExample extends PureComponent {
   render() {

@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "620f224bb62a3ee83eaf" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "5ad1b6712bd3272e44d1" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -224,6 +224,1347 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js":
+/*!**************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js ***!
+  \**************************************************************************************/
+/*! exports provided: dataStatusKey */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataStatusKey", function() { return dataStatusKey; });
+var dataStatusKey = "data-ani-status";
+
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js":
+/*!************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var getChildMapping = function getChildMapping(children, mapFn) {
+  var mapper = function mapper(child, key) {
+    return mapFn ? mapFn(child, key) : child;
+  };
+
+  var result = {};
+
+  if (children) {
+    // map for auto assign child.key
+    react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (c) {
+      return c;
+    }).forEach(function (child) {
+      if (!child) {
+        return;
+      }
+
+      result[child.key] = mapper(child, child.key);
+    });
+  }
+
+  return result;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (getChildMapping);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js":
+/*!**************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js ***!
+  \**************************************************************************************/
+/*! exports provided: default, Image, AnimateGroup, Replace, Change */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ui_organisms_Animate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/organisms/Animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_organisms_Animate__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _ui_organisms_AnimateImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/organisms/AnimateImage */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return _ui_organisms_AnimateImage__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _ui_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/organisms/AnimateGroup */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AnimateGroup", function() { return _ui_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _ui_organisms_Replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ui/organisms/Replace */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Replace", function() { return _ui_organisms_Replace__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _ui_organisms_Change__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Change", function() { return _ui_organisms_Change__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+// Default
+
+
+
+
+
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js":
+/*!*************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var keyframe_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keyframe-css */ "../react-atomic-organism/packages/organism-react-animate/node_modules/keyframe-css/index.es.js");
+/* harmony import */ var _organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/AnimateGroup */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js");
+
+
+
+
+
+
+
+
+var inject = {};
+
+var init = function init(key, ani, timeout) {
+  if (inject[key]) {
+    return;
+  }
+
+  Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["reactStyle"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_3__["default"])({
+    animationName: [ani],
+    animationDuration: [timeout * 1 + 30 + "ms"]
+  }, Styles.linear), "." + key, key); // Need locate after reactStyle, for inject latest style in getKeyframe function
+
+  Object(keyframe_css__WEBPACK_IMPORTED_MODULE_6__["default"])(ani);
+  inject[key] = true;
+};
+
+var parseAniValue = function parseAniValue(s) {
+  var data = s.split("-");
+  var name = data[0];
+  var timeout = 500;
+  var delay = 0;
+
+  if (!isNaN(data[1])) {
+    timeout = parseInt(data[1], 10);
+  }
+
+  if (!isNaN(data[2])) {
+    delay = parseInt(data[2], 10);
+    timeout += delay;
+  }
+
+  var key = [name, timeout, delay].join("-");
+  return {
+    className: key + " " + name,
+    key: key,
+    name: name,
+    timeout: timeout,
+    delay: delay
+  };
+};
+
+var Animate = function Animate(props) {
+  var appear = props.appear,
+      enter = props.enter,
+      leave = props.leave,
+      others = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["appear", "enter", "leave"]);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+      isLoad = _useState2[0],
+      setIsLoad = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])({}),
+      _useState4 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState3, 2),
+      aniConf = _useState4[0],
+      setAniConf = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
+    var that = {};
+    var data;
+
+    if (appear) {
+      data = parseAniValue(appear);
+      that.appear = data.name;
+      that.appearKey = data.key;
+      that.appearTimeout = data.timeout;
+      that.appearDelay = data.delay;
+      that.appearClass = data.className;
+      init(that.appearKey, that.appear, that.appearTimeout);
+    }
+
+    if (enter) {
+      data = parseAniValue(enter);
+      that.enter = data.name;
+      that.enterKey = data.key;
+      that.enterTimeout = data.timeout;
+      that.enterDelay = data.delay;
+      that.enterClass = data.className;
+      init(that.enterKey, that.enter, that.enterTimeout);
+    }
+
+    if (leave) {
+      data = parseAniValue(leave);
+      that.leave = data.name;
+      that.leaveKey = data.key;
+      that.leaveTimeout = data.timeout;
+      that.leaveDelay = data.delay;
+      that.leaveClass = data.className;
+      init(that.leaveKey, that.leave, that.leaveTimeout);
+    }
+
+    setAniConf(that);
+    setTimeout(function () {
+      return setIsLoad(true);
+    });
+  }, [appear, enter, leave, isLoad]);
+  return isLoad ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_7__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    timeout: {
+      appear: aniConf.appearTimeout,
+      enter: aniConf.enterTimeout,
+      exit: aniConf.leaveTimeout
+    },
+    delay: {
+      appear: aniConf.appearDelay,
+      enter: aniConf.enterDelay,
+      exit: aniConf.leaveDelay
+    },
+    classNames: {
+      appear: aniConf.appearClass,
+      enter: aniConf.enterClass,
+      exit: aniConf.leaveClass
+    },
+    appear: !!appear,
+    enter: !!enter,
+    exit: !!leave
+  }, others)) : null;
+};
+
+Animate.defaultProps = {
+  component: react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["SemanticUI"],
+  appear: null,
+  enter: null,
+  leave: null
+};
+/* harmony default export */ __webpack_exports__["default"] = (Animate);
+var Styles = {
+  linear: {
+    animationIterationCount: [1],
+    animationTimingFunction: ["linear"]
+  }
+};
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js":
+/*!******************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-animate/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _organisms_CSSTransition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/CSSTransition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js");
+/* harmony import */ var _organisms_Transition__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../organisms/Transition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js");
+/* harmony import */ var _src_getChildMapping__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../src/getChildMapping */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js");
+/* harmony import */ var _src_const__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../src/const */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js");
+
+
+
+
+
+
+
+
+
+
+
+var keys = Object.keys;
+
+var getAniProps = function getAniProps(props, enterToAppear) {
+  var statusKey = props.statusKey,
+      timeout = props.timeout,
+      delay = props.delay,
+      classNames = props.classNames,
+      mountOnEnter = props.mountOnEnter,
+      unmountOnExit = props.unmountOnExit,
+      enter = props.enter,
+      exit = props.exit,
+      addEndListener = props.addEndListener,
+      onEnter = props.onEnter,
+      onEntering = props.onEntering,
+      onEntered = props.onEntered,
+      onExit = props.onExit,
+      onExiting = props.onExiting;
+  var appear = props.appear;
+
+  if (enterToAppear && classNames && classNames.enter) {
+    classNames.appear = classNames.enter;
+    delay.appear = delay.enter;
+    timeout.appear = timeout.enter;
+    appear = true;
+  }
+  /* not assign onExited, because call at handleExited */
+
+
+  var aniProps = {
+    statusKey: statusKey,
+    timeout: timeout,
+    delay: delay,
+    classNames: classNames,
+    mountOnEnter: mountOnEnter,
+    unmountOnExit: unmountOnExit,
+    appear: appear,
+    enter: enter,
+    exit: exit,
+    addEndListener: addEndListener,
+    onEnter: onEnter,
+    onEntering: onEntering,
+    onEntered: onEntered,
+    onExit: onExit,
+    onExiting: onExiting,
+    "in": props["in"]
+  };
+  return aniProps;
+};
+
+var buildCSSTransition = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(_organisms_CSSTransition__WEBPACK_IMPORTED_MODULE_7__["default"]);
+
+var AnimateGroup = function AnimateGroup(props) {
+  var className = props.className,
+      component = props.component,
+      lazy = props.lazy,
+      onExited = props.onExited,
+      style = props.style,
+      statusKey = props.statusKey,
+      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["className", "component", "lazy", "onExited", "style", "statusKey"]);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+      children = _useState2[0],
+      setChildren = _useState2[1];
+
+  var mount = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
+  var aniProps = getAniProps(otherProps, true);
+  keys(aniProps).forEach(function (key) {
+    return delete otherProps[key];
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["lazyInject"])(injects, InjectStyles({
+      statusKey: statusKey
+    }));
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    var _exitTimeout;
+
+    var _enterTimeout;
+
+    mount.current = true;
+
+    var handleExited = function handleExited(child) {
+      return function (node) {
+        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(onExited, [node]);
+        _exitTimeout = setTimeout(function () {
+          if (mount.current) {
+            setChildren(function (children) {
+              delete children[child.key];
+              return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, children);
+            });
+          }
+        });
+      };
+    };
+
+    var prevChildMapping = children || {};
+    var nextChildMapping = Object(_src_getChildMapping__WEBPACK_IMPORTED_MODULE_9__["default"])(otherProps.children, function (child, key) {
+      return buildCSSTransition(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, child.props, {}, aniProps, {
+        key: Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(child, ["props", "name"], key),
+        onExited: handleExited(child)
+      }), child);
+    });
+
+    var allChildMapping = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prevChildMapping, {}, nextChildMapping);
+
+    keys(allChildMapping).forEach(function (key) {
+      var child = allChildMapping[key];
+      var hasPrev = (key in prevChildMapping);
+      var hasNext = (key in nextChildMapping);
+      var prevChild = prevChildMapping[key];
+      var isLeaving = !Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(prevChild, ["props", "in"]);
+
+      if (!hasNext && hasPrev) {
+        // Will Exit
+        if (!isLeaving) {
+          allChildMapping[key] = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(child)({
+            "in": false
+          });
+        }
+      }
+    });
+
+    if (!children) {
+      _enterTimeout = setTimeout(function () {
+        return setChildren(allChildMapping);
+      }, lazy);
+    } else {
+      setChildren(allChildMapping);
+    }
+
+    return function () {
+      clearTimeout(_exitTimeout);
+      clearTimeout(_enterTimeout);
+      mount.current = false;
+    };
+  }, [props.children]);
+  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+    otherProps.style = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      overflow: "hidden"
+    }, style);
+    otherProps.className = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["mixClass"])(className, "animate-group-container");
+    return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(component)(otherProps, keys(children || {}).map(function (key) {
+      return children[key];
+    }));
+  }, [children]);
+};
+
+AnimateGroup.defaultProps = {
+  statusKey: _src_const__WEBPACK_IMPORTED_MODULE_10__["dataStatusKey"],
+  lazy: 150,
+  component: "div",
+  unmountOnExit: true,
+  "in": true
+};
+/* harmony default export */ __webpack_exports__["default"] = (AnimateGroup);
+var injects;
+
+var InjectStyles = function InjectStyles(_ref) {
+  var statusKey = _ref.statusKey;
+  return {
+    init: [{
+      visibility: "hidden"
+    }, ["[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["UNMOUNTED"], "\"]"), "[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["ENTERSTART"], "\"]")].join(",")],
+    exit: [{
+      display: "none"
+    }, "[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["EXITED"], "\"]")]
+  };
+};
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js":
+/*!******************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! win-doc */ "../react-atomic-organism/packages/organism-react-animate/node_modules/win-doc/build/es/src/index.js");
+/* harmony import */ var _organisms_Change__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
+
+
+
+
+
+
+
+
+var AnimateImageComp = function AnimateImageComp(props, ref) {
+  var src = props.src,
+      animate = props.animate,
+      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["src", "animate"]);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+      image = _useState2[0],
+      setImage = _useState2[1];
+
+  var oImg = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useImperativeHandle"])(ref, function () {
+    return {
+      getImageObject: function getImageObject() {
+        return oImg.current;
+      }
+    };
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    var oWin = Object(win_doc__WEBPACK_IMPORTED_MODULE_5__["win"])();
+
+    if (!oWin) {
+      return null;
+    }
+
+    oImg.current = new oWin.Image();
+
+    oImg.current.onload = function () {
+      setImage( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Image"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        src: src
+      }, otherProps)));
+    };
+
+    oImg.current.src = src;
+  }, [src]);
+  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_organisms_Change__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      className: "animate-image"
+    }, animate), image);
+  }, [image, animate]);
+};
+
+var AnimateImage = Object(react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(AnimateImageComp);
+AnimateImage.defaultProps = {
+  animate: {
+    enter: "fadeIn-300",
+    leave: "fadeOut-300"
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (AnimateImage);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js":
+/*!*******************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var class_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! class-lib */ "../react-atomic-organism/packages/organism-react-animate/node_modules/class-lib/build/src/index.js");
+/* harmony import */ var class_lib__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(class_lib__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-animate/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _organisms_Transition__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/Transition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js");
+
+
+
+var _this = undefined;
+
+
+
+
+
+
+var keys = Object.keys;
+
+var getIndex = function getIndex(isAppear, isExit, _ref) {
+  var exit = _ref.exit,
+      appear = _ref.appear,
+      enter = _ref.enter;
+  var index = isExit ? exit : isAppear ? appear : enter;
+  return index;
+};
+
+var getAction = function getAction(isDone, ing, _ref2) {
+  var start = _ref2.start,
+      active = _ref2.active,
+      done = _ref2.done;
+
+  if (!ing) {
+    return isDone ? done : start;
+  } else {
+    return active;
+  }
+};
+
+var getValue = function getValue(arr, index, defaultValue) {
+  return Object(get_object_value__WEBPACK_IMPORTED_MODULE_4__["default"])(arr, [index], defaultValue);
+};
+
+var getClassName = function getClassName(arr, index, action) {
+  var classes = getValue(arr, index);
+  return Object(get_object_value__WEBPACK_IMPORTED_MODULE_4__["default"])(classes, [action], classes);
+};
+
+var handleStart = function handleStart(_ref3, handler, isExit, ing, node, isAppear) {
+  var classNames = _ref3.classNames,
+      delay = _ref3.delay,
+      stepKeys = _ref3.stepKeys,
+      actionKeys = _ref3.actionKeys;
+
+  if (!node || !node.style) {
+    return;
+  }
+
+  var index = getIndex(isAppear, isExit, stepKeys);
+  var action = getAction(false, ing, actionKeys);
+
+  if (!isExit && !ing) {
+    node.style.visibility = "hidden";
+  }
+
+  var thisDelay = getValue(delay, index, 0);
+  setTimeout(function () {
+    var thisClass = getClassName(classNames, index, action);
+
+    if (thisClass) {
+      node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["mixClass"])(node.className, thisClass);
+    }
+
+    node.style.visibility = "inherit";
+    Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
+  }, thisDelay);
+};
+
+var handleFinish = function handleFinish(_ref4, handler, isExit, node, isAppear) {
+  var classNames = _ref4.classNames,
+      delay = _ref4.delay,
+      stepKeys = _ref4.stepKeys,
+      actionKeys = _ref4.actionKeys;
+
+  if (node) {
+    var index = getIndex(isAppear, isExit, stepKeys);
+    var action = getAction(true, false, actionKeys);
+    var thisClass = getClassName(classNames, index, action);
+
+    if (thisClass) {
+      node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["mixClass"])(node.className, thisClass);
+    }
+  }
+
+  Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
+};
+
+var handleReset = function handleReset(_ref5, handler, isExit, node, isAppear) {
+  var classNames = _ref5.classNames,
+      delay = _ref5.delay,
+      stepKeys = _ref5.stepKeys,
+      actionKeys = _ref5.actionKeys;
+
+  if (node) {
+    var index = getIndex(isAppear, isExit, stepKeys);
+    keys(actionKeys).forEach(function (key) {
+      var action = actionKeys[key];
+      var thisClass = getClassName(classNames, index, action);
+
+      if (thisClass) {
+        node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(node.className, thisClass);
+      }
+    });
+  }
+
+  Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
+};
+
+var CSSTransition = function CSSTransition(_ref6) {
+  var classNames = _ref6.classNames,
+      delay = _ref6.delay,
+      stepKeys = _ref6.stepKeys,
+      actionKeys = _ref6.actionKeys,
+      onEnter = _ref6.onEnter,
+      onEntering = _ref6.onEntering,
+      onEntered = _ref6.onEntered,
+      onExit = _ref6.onExit,
+      onExiting = _ref6.onExiting,
+      onExited = _ref6.onExited,
+      resetEntered = _ref6.resetEntered,
+      resetExited = _ref6.resetExited,
+      props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref6, ["classNames", "delay", "stepKeys", "actionKeys", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "resetEntered", "resetExited"]);
+
+  var options = {
+    classNames: classNames,
+    delay: delay,
+    stepKeys: stepKeys,
+    actionKeys: actionKeys
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_Transition__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    onEnter: handleStart.bind(_this, options, onEnter, false, false),
+    onEntering: handleStart.bind(_this, options, onEntering, false, true),
+    onEntered: handleFinish.bind(_this, options, onEntered, false),
+    resetEntered: handleReset.bind(_this, options, resetEntered, false),
+    onExit: handleStart.bind(_this, options, onExit, true, false),
+    onExiting: handleStart.bind(_this, options, onExiting, true, true),
+    onExited: handleFinish.bind(_this, options, onExited, true),
+    resetExited: handleReset.bind(_this, options, resetExited, true)
+  }));
+};
+
+CSSTransition.defaultProps = {
+  stepKeys: {
+    appear: "appear",
+    enter: "enter",
+    exit: "exit"
+  },
+  actionKeys: {
+    start: "",
+    active: "active",
+    done: "done"
+  },
+  "in": true
+};
+/* harmony default export */ __webpack_exports__["default"] = (CSSTransition);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js":
+/*!************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _organisms_Animate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/Animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js");
+
+
+
+
+
+
+
+var Change = function Change(props) {
+  var propsChildren = props.children,
+      onExited = props.onExited,
+      onEntered = props.onEntered,
+      keyEqualer = props.keyEqualer,
+      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["children", "onExited", "onEntered", "keyEqualer"]);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(propsChildren),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
+      children = _useState2[0],
+      setChildren = _useState2[1];
+
+  var mount = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
+  var nextChildren = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(propsChildren);
+  var isRunning = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
+  var nextCall = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
+
+  var handleExited = function handleExited(node, isAppear) {
+    if (mount.current && nextChildren.current) {
+      setChildren(nextChildren.current);
+      Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(onExited, [node, isAppear]);
+    }
+  };
+
+  var handleEntered = function handleEntered(node, isAppear) {
+    isRunning.current = false;
+
+    if (nextCall.current) {
+      Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(nextCall.current);
+    }
+
+    setTimeout(function () {
+      return mount.current && Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(onEntered, [node, isAppear]);
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    mount.current = true;
+
+    var setNext = function setNext(willChild) {
+      var reset = function reset() {
+        nextCall.current = function () {
+          return setNext(willChild);
+        };
+      };
+
+      if (nextChildren.current !== willChild && !keyEqualer(children, willChild)) {
+        if (willChild && !isRunning.current) {
+          nextChildren.current = willChild;
+          nextCall.current = false;
+          children ? setChildren(null) : setChildren(willChild);
+          isRunning.current = true;
+        } else {
+          reset();
+        }
+      } else {
+        reset();
+      }
+    };
+
+    setNext(propsChildren);
+    return function () {
+      mount.current = false;
+    };
+  }, [propsChildren]);
+  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_organisms_Animate__WEBPACK_IMPORTED_MODULE_5__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps, {
+      onExited: handleExited,
+      onEntered: handleEntered
+    }), children);
+  }, [children]);
+};
+
+Change.defaultProps = {
+  unmountOnExit: false,
+  keyEqualer: function keyEqualer(item1, item2) {
+    return (item1 === null || item1 === void 0 ? void 0 : item1.key) === (item2 === null || item2 === void 0 ? void 0 : item2.key);
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Change);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js":
+/*!*************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
+/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _organisms_Change__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
+
+
+
+
+
+
+
+
+
+function _createSuper(Derived) {
+  return function () {
+    var Super = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result);
+  };
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+
+
+
+
+var Replace = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Replace, _PureComponent);
+
+  var _super = _createSuper(Replace);
+
+  function Replace() {
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Replace);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "state", {
+      no: 0,
+      childs: {}
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "handleNext", function () {
+      if (_this._time) {
+        clearTimeout(_this._time);
+      }
+
+      var interval = _this.props.interval;
+
+      _this.setState(function (_ref) {
+        var no = _ref.no,
+            childs = _ref.childs;
+        no++;
+
+        if (no >= childs.length) {
+          no = 0;
+        }
+
+        return {
+          no: no
+        };
+      });
+
+      _this._time = setTimeout(_this.handleNext, interval);
+    });
+
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Replace, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this._time) {
+        clearTimeout(this._time);
+      }
+
+      var interval = this.props.interval;
+      this._time = setTimeout(this.handleNext, interval);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearTimeout(this._time);
+      this._time = null;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          interval = _this$props.interval,
+          props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["interval"]);
+
+      var _this$state = this.state,
+          no = _this$state.no,
+          childs = _this$state.childs;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_organisms_Change__WEBPACK_IMPORTED_MODULE_10__["default"], props, childs[no]);
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, prevState) {
+      var children = nextProps.children;
+
+      if (children === prevState.prevChildren) {
+        return null;
+      }
+
+      var childs = [];
+      react__WEBPACK_IMPORTED_MODULE_8__["Children"].map(children, function (c) {
+        return c;
+      }).forEach(function (child, key) {
+        return childs[key] = child;
+      });
+      return {
+        childs: childs,
+        prevChildren: children
+      };
+    }
+  }]);
+
+  return Replace;
+}(react__WEBPACK_IMPORTED_MODULE_8__["PureComponent"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Replace, "defaultProps", {
+  interval: 5000
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Replace);
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js":
+/*!****************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js ***!
+  \****************************************************************************************************/
+/*! exports provided: UNMOUNTED, EXITSTART, EXITING, EXITED, ENTERSTART, ENTERING, ENTERED, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNMOUNTED", function() { return UNMOUNTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITSTART", function() { return EXITSTART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITING", function() { return EXITING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITED", function() { return EXITED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERSTART", function() { return ENTERSTART; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERING", function() { return ENTERING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERED", function() { return ENTERED; });
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var _src_const__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/const */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js");
+
+
+
+
+
+
+
+
+var keys = Object.keys;
+var UNMOUNTED = "unmounted";
+var EXITSTART = "exit-start";
+var EXITING = "exiting";
+var EXITED = "exited";
+var ENTERSTART = "enter-start";
+var ENTERING = "entering";
+var ENTERED = "entered";
+
+var reducer = function reducer(state, action) {
+  keys(action).forEach(function (key) {
+    return state[key] = action[key];
+  });
+  return state;
+};
+
+var getTimeouts = function getTimeouts(timeout) {
+  var exit, enter, appear;
+  exit = enter = appear = timeout;
+
+  if (timeout != null && typeof timeout !== "number") {
+    var _timeout$appear;
+
+    exit = timeout.exit;
+    enter = timeout.enter;
+    appear = (_timeout$appear = timeout.appear) !== null && _timeout$appear !== void 0 ? _timeout$appear : enter;
+  }
+
+  return {
+    exit: exit,
+    enter: enter,
+    appear: appear
+  };
+};
+
+var setNextCallback = function setNextCallback(callback) {
+  var active = true;
+
+  var nextCallback = function nextCallback(event) {
+    if (active) {
+      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(callback, [event]);
+    }
+
+    nextCallback.reset();
+  };
+
+  nextCallback.reset = function () {
+    active = false;
+  };
+
+  return nextCallback;
+};
+
+var cancelNextCallback = function cancelNextCallback(state, dispatch) {
+  if (state.nextCallback !== null) {
+    state.nextCallback.reset();
+    dispatch({
+      nextCallback: null
+    });
+  }
+};
+
+var perform = function perform(_ref) {
+  var step1 = _ref.step1,
+      step1Cb = _ref.step1Cb,
+      step2 = _ref.step2,
+      step2Cb = _ref.step2Cb,
+      step3 = _ref.step3,
+      step3Cb = _ref.step3Cb,
+      setUp = _ref.setUp,
+      safeSetState = _ref.safeSetState,
+      onTransitionEnd = _ref.onTransitionEnd,
+      tearDown = _ref.tearDown,
+      goToLast = _ref.goToLast,
+      isAppear = _ref.isAppear,
+      node = _ref.node,
+      timeout = _ref.timeout;
+
+  var last = function last() {
+    onTransitionEnd(node, timeout, function () {
+      safeSetState(step3, function () {
+        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step3Cb, [node, isAppear]);
+        setTimeout(function () {
+          return Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(tearDown, [node, isAppear]);
+        });
+      });
+    });
+  };
+
+  Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(setUp, [node, isAppear]);
+
+  if (goToLast) {
+    last();
+  } else {
+    safeSetState(step1, function () {
+      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step1Cb, [node, isAppear]);
+      safeSetState(step2, function () {
+        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step2Cb, [node, isAppear]);
+        last();
+      });
+    });
+  }
+};
+
+var Transition = function Transition(_ref2) {
+  var component = _ref2.component,
+      children = _ref2.children,
+      mountOnEnter = _ref2.mountOnEnter,
+      unmountOnExit = _ref2.unmountOnExit,
+      appear = _ref2.appear,
+      enter = _ref2.enter,
+      exit = _ref2.exit,
+      timeout = _ref2.timeout,
+      addEndListener = _ref2.addEndListener,
+      getProps = _ref2.getProps,
+      onEnter = _ref2.onEnter,
+      onEntering = _ref2.onEntering,
+      onEntered = _ref2.onEntered,
+      onExit = _ref2.onExit,
+      onExiting = _ref2.onExiting,
+      onExited = _ref2.onExited,
+      resetEntered = _ref2.resetEntered,
+      resetExited = _ref2.resetExited,
+      statusKey = _ref2.statusKey,
+      props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref2, ["component", "children", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "getProps", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "resetEntered", "resetExited", "statusKey"]);
+
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_4__["useReducer"])(reducer, {
+    "in": null,
+    callbackWith: null,
+    nextCallback: null,
+    init: false,
+    node: false
+  }),
+      _useReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(function () {
+    var thisAppear = appear;
+    var initialStatus;
+
+    if (props["in"]) {
+      if (thisAppear) {
+        initialStatus = EXITED;
+      } else {
+        initialStatus = ENTERED;
+      }
+    } else {
+      if (unmountOnExit || mountOnEnter) {
+        initialStatus = UNMOUNTED;
+      } else {
+        initialStatus = EXITED;
+      }
+    }
+
+    return initialStatus;
+  }),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      status = _useState2[0],
+      setStatus = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
+    if (state.callbackWith === status) {
+      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(state.nextCallback, [status]);
+    }
+
+    var safeSetState = function safeSetState(nextStatus, callback) {
+      // This shouldn't be necessary, but there are weird race conditions with
+      // setState callbacks and unmounting in testing, so always make sure that
+      // we can cancel any pending setState callbacks after we unmount.
+      dispatch({
+        callbackWith: nextStatus,
+        nextCallback: callback ? setNextCallback(callback) : null
+      });
+      setStatus(nextStatus);
+    };
+
+    var onTransitionEnd = function onTransitionEnd(node, timeout, handler) {
+      if (state.timer) {
+        clearTimeout(state.timer);
+      }
+
+      var callback = setNextCallback(function () {
+        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(handler);
+        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(addEndListener, [{
+          node: node,
+          state: state,
+          status: status
+        }]);
+      });
+      dispatch({
+        nextCallback: callback,
+        timer: setTimeout(function () {
+          return Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(state.nextCallback, ["onTransitionEnd"]);
+        }, timeout || 0)
+      });
+    };
+
+    var updateStatus = function updateStatus(mounting, nextStatus) {
+      if (nextStatus !== null) {
+        // nextStatus will always be ENTERING or EXITING.
+        cancelNextCallback(state, dispatch);
+        var timeouts = getTimeouts(timeout);
+
+        if (nextStatus === ENTERING) {
+          perform({
+            step1: ENTERSTART,
+            step1Cb: onEnter,
+            step2: ENTERING,
+            step2Cb: onEntering,
+            step3: ENTERED,
+            step3Cb: onEntered,
+            setUp: resetExited,
+            tearDown: resetEntered,
+            goToLast: mounting && !appear || !mounting && !enter,
+            node: state.node,
+            safeSetState: safeSetState,
+            onTransitionEnd: onTransitionEnd,
+            isAppear: mounting,
+            timeout: mounting ? timeouts.appear : timeouts.enter
+          });
+        } else {
+          perform({
+            step1: EXITSTART,
+            step1Cb: onExit,
+            step2: EXITING,
+            step2Cb: onExiting,
+            step3: EXITED,
+            step3Cb: onExited,
+            setUp: resetEntered,
+            tearDown: resetExited,
+            goToLast: !exit,
+            node: state.node,
+            safeSetState: safeSetState,
+            onTransitionEnd: onTransitionEnd,
+            timeout: timeouts.exit
+          });
+        }
+      } else if (unmountOnExit && status === EXITED) {
+        safeSetState(UNMOUNTED);
+      }
+    };
+
+    var nextStatus = null;
+    var mounting = null;
+
+    if (state["in"] !== props["in"]) {
+      mounting = false;
+      dispatch({
+        "in": props["in"]
+      });
+
+      if (props["in"]) {
+        if (status !== ENTERING && status !== ENTERED) {
+          nextStatus = ENTERING;
+        } else if (!state.init) {
+          dispatch({
+            init: true
+          });
+
+          if (appear) {
+            nextStatus = ENTERING;
+            mounting = true;
+          }
+        }
+      } else {
+        if (status === ENTERING || status === ENTERED) {
+          nextStatus = EXITING;
+        }
+      }
+    }
+
+    updateStatus(mounting, nextStatus);
+    return function () {
+      // useEffect clean
+      if (state.timer) {
+        clearTimeout(state.timer);
+      }
+    };
+  }, [props["in"], status]);
+  return Object(react__WEBPACK_IMPORTED_MODULE_4__["useMemo"])(function () {
+    var _objectSpread2;
+
+    var myChild = undefined;
+
+    if (status !== UNMOUNTED) {
+      var nextProps = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props);
+
+      delete nextProps["in"];
+      myChild = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(children)(nextProps);
+    }
+
+    return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(component)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])((_objectSpread2 = {}, Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, statusKey, status), Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "refCb", function refCb(el) {
+      return dispatch({
+        node: el
+      });
+    }), _objectSpread2), Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(getProps, [status]) || {}), myChild);
+  }, [props]);
+};
+
+Transition.defaultProps = {
+  statusKey: _src_const__WEBPACK_IMPORTED_MODULE_7__["dataStatusKey"],
+  component: react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["SemanticUI"],
+  "in": false,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false,
+  enter: true,
+  exit: true,
+  onEnter: null,
+  onEntering: null,
+  onEntered: null,
+  onExit: null,
+  onExiting: null,
+  onExited: null
+};
+/* harmony default export */ __webpack_exports__["default"] = (Transition);
+
+/***/ }),
+
 /***/ "./build/src/client.js":
 /*!*****************************!*\
   !*** ./build/src/client.js ***!
@@ -256,21 +1597,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var actionHandler = function actionHandler(state, action) {
-  console.log('action', action);
+  console.log("action", action);
   return state;
 };
 
 var impressionHandler = function impressionHandler(state, action) {
-  console.log('view', state.get('pvid'));
+  console.log("view", state.get("pvid"));
   return state;
 };
 
 var initHandler = function initHandler(state, action) {
-  console.log('init', state);
+  console.log("init", state);
   return state;
 };
 
-Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])('config/set', {
+Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])("config/set", {
   initHandler: initHandler,
   actionHandler: actionHandler,
   impressionHandler: impressionHandler
@@ -300,14 +1641,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AjaxDownloadExample = function AjaxDownloadExample(props) {
-  var url = 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg';
+  var url = "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     onClick: function onClick() {
-      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])('ajaxGet', {
-        responseType: ['blob'],
+      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])("ajaxGet", {
+        responseType: ["blob"],
         url: url,
         callback: function callback(json, text, o) {
-          Object(ajax_save__WEBPACK_IMPORTED_MODULE_4__["download"])(o.body, url.split('/').splice(-1)[0]);
+          Object(ajax_save__WEBPACK_IMPORTED_MODULE_4__["download"])(o.body, url.split("/").splice(-1)[0]);
         }
       });
     }
@@ -353,8 +1694,8 @@ var AlertsNotifierExample = /*#__PURE__*/function (_PureComponent) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["AlertsNotifier"], {
           position: "bottom",
           alerts: [{
-            type: 'info',
-            message: 'test'
+            type: "info",
+            message: "test"
           }]
         });
       },
@@ -368,8 +1709,8 @@ var AlertsNotifierExample = /*#__PURE__*/function (_PureComponent) {
 /* harmony default export */ __webpack_exports__["default"] = (AlertsNotifierExample);
 var Styles = {
   click: {
-    color: 'blue',
-    textDecoration: 'underline'
+    color: "blue",
+    textDecoration: "underline"
   }
 };
 
@@ -387,7 +1728,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
 
 
 
@@ -418,7 +1759,7 @@ var AnimationExample = /*#__PURE__*/function (_Component) {
     }, this.state.dom), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: "#",
       style: {
-        marginLeft: '10px'
+        marginLeft: "10px"
       },
       onClick: function (e) {
         e.preventDefault();
@@ -430,7 +1771,7 @@ var AnimationExample = /*#__PURE__*/function (_Component) {
     }, "leave"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: "#",
       style: {
-        marginLeft: '10px'
+        marginLeft: "10px"
       },
       onClick: function (e) {
         e.preventDefault();
@@ -461,7 +1802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
 
 
 
@@ -498,7 +1839,7 @@ var AnimationDelayExample = /*#__PURE__*/function (_PureComponent) {
     }, this.state.bar), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: "#",
       style: {
-        marginLeft: '10px'
+        marginLeft: "10px"
       },
       onClick: function (e) {
         e.preventDefault();
@@ -511,7 +1852,7 @@ var AnimationDelayExample = /*#__PURE__*/function (_PureComponent) {
     }, "leave"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: "#",
       style: {
-        marginLeft: '10px'
+        marginLeft: "10px"
       },
       onClick: function (e) {
         e.preventDefault();
@@ -543,7 +1884,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
 
 
 /**
@@ -568,7 +1909,7 @@ var AnimationReplaceExample = /*#__PURE__*/function (_PureComponent) {
       leave: "fadeOutRight-1000",
       style: {
         minHeight: 30,
-        overflow: 'hidden'
+        overflow: "hidden"
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
@@ -645,25 +1986,29 @@ var AsciidocDemo = /*#__PURE__*/function (_PureComponent) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
 
 
 
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "2");
 
-var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "3");
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+  src: "https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg"
+}));
 
-var _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "4");
+var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "3");
 
-var _ref4 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, "5");
+var _ref3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "4");
+
+var _ref4 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, "5");
 
 var CarouselAnimationExample = function CarouselAnimationExample(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["CarouselAnimation"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["CarouselAnimation"], {
     carouselAttr: {
       style: Styles.carousel
     },
     style: Styles.container
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     style: Styles.img,
     src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
   })), _ref, _ref2, _ref3, _ref4);
@@ -672,16 +2017,16 @@ var CarouselAnimationExample = function CarouselAnimationExample(props) {
 /* harmony default export */ __webpack_exports__["default"] = (CarouselAnimationExample);
 var Styles = {
   container: {
-    margin: '0 10%'
+    margin: "0 10%"
   },
   carousel: {
-    width: '100%',
+    width: "100%",
     height: 300,
-    background: '#00558B'
+    background: "#00558B"
   },
   img: {
-    maxWidth: '100%',
-    verticalAlign: 'bottom'
+    maxWidth: "100%",
+    verticalAlign: "bottom"
   }
 };
 
@@ -726,16 +2071,16 @@ var CarouselAnimationExample = function CarouselAnimationExample(props) {
 /* harmony default export */ __webpack_exports__["default"] = (CarouselAnimationExample);
 var Styles = {
   container: {
-    margin: '0 10%'
+    margin: "0 10%"
   },
   carousel: {
-    width: '100%',
+    width: "100%",
     height: 300,
-    background: '#00558B'
+    background: "#00558B"
   },
   img: {
-    maxWidth: '100%',
-    verticalAlign: 'bottom'
+    maxWidth: "100%",
+    verticalAlign: "bottom"
   }
 };
 
@@ -780,7 +2125,7 @@ var Styles = {
   carousel: {
     width: 300,
     height: 300,
-    background: '#00558B'
+    background: "#00558B"
   }
 };
 
@@ -918,19 +2263,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var data = [{
   values: [{
-    x: '2019-01',
+    x: "2019-01",
     y: 100
   }, {
-    x: '2019-02',
+    x: "2019-02",
     y: 450
   }, {
-    x: '2019-03',
+    x: "2019-03",
     y: 450
   }, {
-    x: '2019-04',
+    x: "2019-04",
     y: 0
   }, {
-    x: '2019-05',
+    x: "2019-05",
     y: 0
   }]
 }];
@@ -966,13 +2311,13 @@ __webpack_require__.r(__webpack_exports__);
 var D3BarChart = function D3BarChart(props) {
   var data = {
     values: [{
-      x: '2013-01',
+      x: "2013-01",
       y: 53
     }, {
-      x: '2013-02',
+      x: "2013-02",
       y: 165
     }, {
-      x: '2013-03',
+      x: "2013-03",
       y: 269
     }]
   };
@@ -1006,13 +2351,13 @@ __webpack_require__.r(__webpack_exports__);
 var D3LineChart = function D3LineChart(props) {
   var data = [{
     values: [{
-      x: '2013-01',
+      x: "2013-01",
       y: 100
     }, {
-      x: '2013-02',
+      x: "2013-02",
       y: 450
     }, {
-      x: '2013-01',
+      x: "2013-01",
       y: 450
     }]
   }];
@@ -1048,10 +2393,10 @@ __webpack_require__.r(__webpack_exports__);
 var D3PieChartExample = function D3PieChartExample(props) {
   var data = [{
     value: 10,
-    label: 'xxx'
+    label: "xxx"
   }, {
     value: 30,
-    label: 'yyy'
+    label: "yyy"
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_d3_piechart__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: data,
@@ -1084,20 +2429,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var data = {
   tables: [{
-    name: 'table1',
-    cols: ['t1-col1', 't1-col2']
+    name: "table1",
+    cols: ["t1-col1", "t1-col2"]
   }, {
-    name: 'table2',
-    cols: ['t2-col1', 't2-col2']
+    name: "table2",
+    cols: ["t2-col1", "t2-col2"]
   }],
   conns: [{
     from: {
-      table: 'table1',
-      col: 't1-col1'
+      table: "table1",
+      col: "t1-col1"
     },
     to: {
-      table: 'table2',
-      col: 't2-col2'
+      table: "table2",
+      col: "t2-col2"
     }
   }]
 };
@@ -1205,7 +2550,7 @@ var DropzoneExample = /*#__PURE__*/function (_PureComponent) {
         success: function success(file) {
           _this2.setState(function (_ref) {
             var urls = _ref.urls;
-            var req = Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(file, ['xhr', 'response']);
+            var req = Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(file, ["xhr", "response"]);
 
             if (req) {
               var json = JSON.parse(req);
@@ -1310,7 +2655,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var rows = [['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3'], ['a4', 'b4', 'c4'], ['a5', 'b5', 'c5'], ['a6', 'b6', 'c6']];
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a4", "b4", "c4"], ["a5", "b5", "c5"], ["a6", "b6", "c6"]];
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], null, "h1");
 
@@ -1461,7 +2806,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var rows = [['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3'], ['a4', 'b4', 'c4'], ['a5', 'b5', 'c5'], ['a6', 'b6', 'c6']];
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a4", "b4", "c4"], ["a5", "b5", "c5"], ["a6", "b6", "c6"]];
 var RVGrid = null;
 
 var GridListExample = /*#__PURE__*/function (_PureComponent) {
@@ -1503,7 +2848,7 @@ var GridListExample = /*#__PURE__*/function (_PureComponent) {
     var grid = null;
 
     if (RVGrid && isLoad) {
-      var className = 'grid'; // hack for disable const element
+      var className = "grid"; // hack for disable const element
 
       grid = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(RVGrid, {
         className: className,
@@ -1523,7 +2868,7 @@ var GridListExample = /*#__PURE__*/function (_PureComponent) {
 /* harmony default export */ __webpack_exports__["default"] = (GridListExample);
 var Styles = {
   container: {
-    border: '1px solid #000'
+    border: "1px solid #000"
   }
 };
 
@@ -1545,7 +2890,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var rows = [['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3'], ['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3']];
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"]];
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], null, "h1");
 
@@ -1628,11 +2973,11 @@ var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createEleme
 
 var Menu = function Menu(props) {
   var thisMenus = {};
-  var themes = reshow__WEBPACK_IMPORTED_MODULE_4__["pageStore"].getMap('themes');
+  var themes = reshow__WEBPACK_IMPORTED_MODULE_4__["pageStore"].getMap("themes");
   keys(themes).forEach(function (item) {
     thisMenus[item] = {
       text: item,
-      href: '#/' + item
+      href: "#/" + item
     };
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__["SideMenu"], {
@@ -1696,7 +3041,7 @@ var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(pro
     refCb: function refCb(o) {
       return dInput = o;
     },
-    button: 'Go',
+    button: "Go",
     buttonProps: {
       onClick: function onClick() {
         oLoad.start(dInput.value);
@@ -1742,11 +3087,11 @@ var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createEleme
 });
 
 var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(props) {
-  var url = 'https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md';
+  var url = "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _ref, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     onClick: function onClick() {
       Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])({
-        type: 'ajaxGet',
+        type: "ajaxGet",
         params: {
           url: url,
           callback: function callback(json, text, o) {
@@ -1826,7 +3171,7 @@ var PaginationExample = /*#__PURE__*/function (_PureComponent) {
 /* harmony default export */ __webpack_exports__["default"] = (PaginationExample);
 var Styles = {
   container: {
-    textAlign: 'center'
+    textAlign: "center"
   }
 };
 
@@ -1858,8 +3203,8 @@ var ParallaxBackgroundImageExample = function ParallaxBackgroundImageExample() {
 var Styles = {
   container: {
     height: 300,
-    color: '#fff',
-    textAlign: 'center',
+    color: "#fff",
+    textAlign: "center",
     paddingTop: 200
   }
 };
@@ -1917,8 +3262,8 @@ var PopupExample = function PopupExample() {
 /* harmony default export */ __webpack_exports__["default"] = (PopupExample);
 var Styles = {
   click: {
-    color: 'blue',
-    textDecoration: 'underline'
+    color: "blue",
+    textDecoration: "underline"
   }
 };
 
@@ -1974,11 +3319,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var options = [{
-  label: 'Boy',
-  value: 'boy'
+  label: "Boy",
+  value: "boy"
 }, {
-  label: 'Girl',
-  value: 'girl'
+  label: "Girl",
+  value: "girl"
 }];
 
 var RadioGroupExample = /*#__PURE__*/function (_PureComponent) {
@@ -1994,7 +3339,7 @@ var RadioGroupExample = /*#__PURE__*/function (_PureComponent) {
     _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
-      value: ''
+      value: ""
     });
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleChange", function () {
@@ -2025,13 +3370,13 @@ var RadioGroupExample = /*#__PURE__*/function (_PureComponent) {
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null, "Current: ", value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       onClick: function onClick() {
         return _this2.setState({
-          value: 'boy'
+          value: "boy"
         });
       }
     }, "Set to Boy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       onClick: function onClick() {
         return _this2.setState({
-          value: 'girl'
+          value: "girl"
         });
       }
     }, "Set to Girl"));
@@ -2067,7 +3412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var rows = [['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3'], ['a1', 'b1', 'c1'], ['a2', 'b2', 'c2'], ['a3', 'b3', 'c3']];
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"]];
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Cell"], null, "h1");
 
@@ -2103,7 +3448,7 @@ var ReactVirtualizedTableListExample = /*#__PURE__*/function (_PureComponent) {
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       style: {
-        width: '40%',
+        width: "40%",
         height: 150
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(pmvc_react_list_rv__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -2176,7 +3521,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var DialogResult = function DialogResult(_ref) {
   var dialogReturn = _ref.dialogReturn;
-  return 'undefined' !== typeof dialogReturn ? 'Dialog: ' + dialogReturn : null;
+  return "undefined" !== typeof dialogReturn ? "Dialog: " + dialogReturn : null;
 };
 
 var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(DialogResult, null);
@@ -2194,26 +3539,26 @@ var ReshowMessageExample = /*#__PURE__*/function (_PureComponent) {
     _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleAddAlert", function (e) {
-      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])('alert/add', {
-        message: 'test'
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/add", {
+        message: "test"
       });
     });
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleResetAlert", function (e) {
-      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])('alert/reset', {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/reset", {
         alerts: [1, 2, 3]
       });
     });
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleCleanAlert", function (e) {
-      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])('alert/reset', {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/reset", {
         alerts: null
       });
     });
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleOpenDialog", function (e) {
-      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])('dialog/start', {
-        dialog: 'how are u'
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("dialog/start", {
+        dialog: "how are u"
       });
     });
 
@@ -2232,7 +3577,7 @@ var ReshowMessageExample = /*#__PURE__*/function (_PureComponent) {
     }, "Clean all alerts")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       onClick: this.handleOpenDialog
     }, "Open Dialog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(reshow__WEBPACK_IMPORTED_MODULE_5__["Return"], {
-      initStates: ['dialogReturn']
+      initStates: ["dialogReturn"]
     }, _ref2)));
   };
 
@@ -2305,7 +3650,7 @@ var SpotlightExample = /*#__PURE__*/function (_PureComponent) {
       thisSpotlight = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_spotlight__WEBPACK_IMPORTED_MODULE_7__["default"], {
         toPool: "spotlight-pool",
         targetEl: this.spot,
-        closeCallback: function closeCallback() {
+        onClose: function onClose() {
           _this2.setState({
             spotlight: null
           });
@@ -2315,7 +3660,7 @@ var SpotlightExample = /*#__PURE__*/function (_PureComponent) {
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_6__["FullScreenExample"], {
       button: "open full screen",
-      closeCallback: function closeCallback() {
+      onClose: function onClose() {
         return _this2.setState({
           spotlight: null
         });
@@ -2340,7 +3685,7 @@ var SpotlightExample = /*#__PURE__*/function (_PureComponent) {
 /* harmony default export */ __webpack_exports__["default"] = (SpotlightExample);
 var Styles = {
   el: {
-    display: 'inline-block',
+    display: "inline-block",
     width: 100,
     height: 200,
     margin: 10
@@ -2399,9 +3744,9 @@ var StockChartExample = /*#__PURE__*/function (_PureComponent) {
     var _this2 = this;
 
     Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["ajaxDispatch"])({
-      type: 'ajaxGet',
+      type: "ajaxGet",
       params: {
-        url: '//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json',
+        url: "//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
         callback: function callback(json) {
           _this2.setState({
             data: {
@@ -2478,7 +3823,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var data = ['abc', 'abb', 'acc'];
+var data = ["abc", "abb", "acc"];
 
 var SuggestionExample1 = /*#__PURE__*/function (_PureComponent) {
   Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(SuggestionExample1, _PureComponent);
@@ -2601,7 +3946,7 @@ var RightMenu = function RightMenu() {
     ui: false
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Item"], {
     style: {
-      boxSizing: 'border-box'
+      boxSizing: "border-box"
     }
   }, _ref));
 };
@@ -2760,36 +4105,36 @@ var WindowOffsetExample = /*#__PURE__*/function (_Component) {
       popup: "1",
       isKeep: true
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col1),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col1),
       onClick: this.handleClick
     }, "1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "2",
       isKeep: true
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col2),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col2),
       onClick: this.handleClick
     }, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "3",
       isKeep: true
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col3),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col3),
       onClick: this.handleClick
     }, "3"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       style: Styles.row
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "4"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col1),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col1),
       onClick: this.handleClick
     }, "4")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "5"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col2),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col2),
       onClick: this.handleClick
     }, "5")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "6"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col3),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col3),
       onClick: this.handleClick
     }, "6"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       style: {
@@ -2798,17 +4143,17 @@ var WindowOffsetExample = /*#__PURE__*/function (_Component) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "7"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col1),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col1),
       onClick: this.handleClick
     }, "7")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "8"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col2),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col2),
       onClick: this.handleClick
     }, "8")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_4__["PopupHover"], {
       popup: "9"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      style: _objectSpread({}, Styles.col, {}, Styles.col3),
+      style: _objectSpread(_objectSpread({}, Styles.col), Styles.col3),
       onClick: this.handleClick
     }, "9"))));
   };
@@ -2819,25 +4164,25 @@ var WindowOffsetExample = /*#__PURE__*/function (_Component) {
 /* harmony default export */ __webpack_exports__["default"] = (WindowOffsetExample);
 var Styles = {
   row: {
-    justifyContent: 'space-around',
-    display: 'flex',
+    justifyContent: "space-around",
+    display: "flex",
     marginBottom: 100
   },
   col: {
     width: 60,
     height: 60,
-    lineHeight: '60px',
-    textAlign: 'center',
-    color: '#fff'
+    lineHeight: "60px",
+    textAlign: "center",
+    color: "#fff"
   },
   col1: {
-    background: '#c00'
+    background: "#c00"
   },
   col2: {
-    background: '#095'
+    background: "#095"
   },
   col3: {
-    background: '#059'
+    background: "#059"
   }
 };
 
@@ -2937,7 +4282,7 @@ var Animation = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Animation, "defaultProps", {
-  pageName: 'animation'
+  pageName: "animation"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Animation);
@@ -2999,7 +4344,7 @@ var AsciiDocPage = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(AsciiDocPage, "defaultProps", {
-  pageName: 'AsciiDoc'
+  pageName: "AsciiDoc"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (AsciiDocPage);
@@ -3046,7 +4391,7 @@ var Atoms = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Atoms, "defaultProps", {
-  pageName: 'atoms'
+  pageName: "atoms"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Atoms);
@@ -3177,7 +4522,7 @@ var CarouselPage = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(CarouselPage, "defaultProps", {
-  pageName: 'carousel'
+  pageName: "carousel"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (CarouselPage);
@@ -3255,7 +4600,7 @@ var Code = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Code, "defaultProps", {
-  pageName: 'Code'
+  pageName: "Code"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Code);
@@ -3351,7 +4696,7 @@ var D3 = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(D3, "defaultProps", {
-  pageName: 'd3'
+  pageName: "d3"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (D3);
@@ -3413,7 +4758,7 @@ var GrapesJsPage = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(GrapesJsPage, "defaultProps", {
-  pageName: 'GrapesJs'
+  pageName: "GrapesJs"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (GrapesJsPage);
@@ -3614,79 +4959,79 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var icons = [['Account', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, null)], ['Account (circle)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, {
+var icons = [["Account", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, null)], ["Account (circle)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, {
   type: "circle"
-})], ['Account (supervisor)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, {
+})], ["Account (supervisor)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Account__WEBPACK_IMPORTED_MODULE_3___default.a, {
   type: "supervisor"
-})], ['Add', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, null)], ['Add (box)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
+})], ["Add", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, null)], ["Add (box)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
   type: "box"
-})], ['Add (circle)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
+})], ["Add (circle)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
   type: "circle"
-})], ['Add (circleOutline)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
+})], ["Add (circleOutline)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Add__WEBPACK_IMPORTED_MODULE_5___default.a, {
   type: "circleOutline"
-})], ['AccessTime', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, null)], ['AccessTime (fill)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, {
+})], ["AccessTime", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, null)], ["AccessTime (fill)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, {
   type: "fill"
-})], ['AccessTime (update)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, {
+})], ["AccessTime (update)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_4___default.a, {
   type: "update"
-})], ['BarChart', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_BarChart__WEBPACK_IMPORTED_MODULE_6___default.a, null)], ['Build', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Build__WEBPACK_IMPORTED_MODULE_7___default.a, null)], ['Blur', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Blur__WEBPACK_IMPORTED_MODULE_8___default.a, null)], ['Calendar', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Calendar__WEBPACK_IMPORTED_MODULE_9___default.a, null)], ['ChevronRight', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_10___default.a, null)], ['Code', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Code__WEBPACK_IMPORTED_MODULE_11___default.a, null)], ['CircleLoading', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_12___default.a, null)], ['Dashboard', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dashboard__WEBPACK_IMPORTED_MODULE_13___default.a, null)], ['Delete', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, null)], ['Delete (forever)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, {
+})], ["BarChart", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_BarChart__WEBPACK_IMPORTED_MODULE_6___default.a, null)], ["Build", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Build__WEBPACK_IMPORTED_MODULE_7___default.a, null)], ["Blur", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Blur__WEBPACK_IMPORTED_MODULE_8___default.a, null)], ["Calendar", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Calendar__WEBPACK_IMPORTED_MODULE_9___default.a, null)], ["ChevronRight", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_10___default.a, null)], ["Code", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Code__WEBPACK_IMPORTED_MODULE_11___default.a, null)], ["CircleLoading", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_12___default.a, null)], ["Dashboard", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dashboard__WEBPACK_IMPORTED_MODULE_13___default.a, null)], ["Delete", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, null)], ["Delete (forever)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, {
   type: "forever"
-})], ['Delete (sweep)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, {
+})], ["Delete (sweep)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Delete__WEBPACK_IMPORTED_MODULE_18___default.a, {
   type: "sweep"
-})], ['Device (desktop)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
+})], ["Device (desktop)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
   type: "desktop"
-})], ['Device (tablet)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
+})], ["Device (tablet)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
   type: "tablet"
-})], ['Device (phone)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
+})], ["Device (phone)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Device__WEBPACK_IMPORTED_MODULE_15___default.a, {
   type: "phone"
-})], ['Download', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Download__WEBPACK_IMPORTED_MODULE_17___default.a, null)], ['Download (file)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Download__WEBPACK_IMPORTED_MODULE_17___default.a, {
+})], ["Download", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Download__WEBPACK_IMPORTED_MODULE_17___default.a, null)], ["Download (file)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Download__WEBPACK_IMPORTED_MODULE_17___default.a, {
   type: "file"
-})], ['Dropdown', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, null)], ['Dropdown (up)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
+})], ["Dropdown", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, null)], ["Dropdown (up)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
   type: "up"
-})], ['Dropdown (right)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
+})], ["Dropdown (right)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
   type: "right"
-})], ['Dropdown (left)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
+})], ["Dropdown (left)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_16___default.a, {
   type: "left"
-})], ['Description', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Description__WEBPACK_IMPORTED_MODULE_14___default.a, null)], ['Edit', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Edit__WEBPACK_IMPORTED_MODULE_19___default.a, null)], ['Email', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Email__WEBPACK_IMPORTED_MODULE_20___default.a, null)], ['Exit', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Exit__WEBPACK_IMPORTED_MODULE_21___default.a, null)], ['File', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_File__WEBPACK_IMPORTED_MODULE_22___default.a, null, ".js")], ['Facebook', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Facebook__WEBPACK_IMPORTED_MODULE_23___default.a, null)], ['FacebookMessage', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_24___default.a, null)], ['FeaturedPlayList', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_25___default.a, null)], ['Git', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Git__WEBPACK_IMPORTED_MODULE_26___default.a, null)], ['Help', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Help__WEBPACK_IMPORTED_MODULE_27___default.a, null)], ['Home', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Home__WEBPACK_IMPORTED_MODULE_31___default.a, null)], ['Hamburger', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Hamburger__WEBPACK_IMPORTED_MODULE_28___default.a, null)], ['HamburgerToArrow', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_29___default.a, {
+})], ["Description", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Description__WEBPACK_IMPORTED_MODULE_14___default.a, null)], ["Edit", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Edit__WEBPACK_IMPORTED_MODULE_19___default.a, null)], ["Email", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Email__WEBPACK_IMPORTED_MODULE_20___default.a, null)], ["Exit", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Exit__WEBPACK_IMPORTED_MODULE_21___default.a, null)], ["File", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_File__WEBPACK_IMPORTED_MODULE_22___default.a, null, ".js")], ["Facebook", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Facebook__WEBPACK_IMPORTED_MODULE_23___default.a, null)], ["FacebookMessage", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_24___default.a, null)], ["FeaturedPlayList", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_25___default.a, null)], ["Git", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Git__WEBPACK_IMPORTED_MODULE_26___default.a, null)], ["Help", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Help__WEBPACK_IMPORTED_MODULE_27___default.a, null)], ["Home", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Home__WEBPACK_IMPORTED_MODULE_31___default.a, null)], ["Hamburger", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Hamburger__WEBPACK_IMPORTED_MODULE_28___default.a, null)], ["HamburgerToArrow", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_29___default.a, {
   on: true
-})], ['HamburgerToX', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_30___default.a, {
+})], ["HamburgerToX", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_30___default.a, {
   on: true
-})], ['Link', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Link__WEBPACK_IMPORTED_MODULE_32___default.a, null)], ['Monetization', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Monetization__WEBPACK_IMPORTED_MODULE_33___default.a, null)], ['Monetization', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Monetization__WEBPACK_IMPORTED_MODULE_33___default.a, {
+})], ["Link", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Link__WEBPACK_IMPORTED_MODULE_32___default.a, null)], ["Monetization", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Monetization__WEBPACK_IMPORTED_MODULE_33___default.a, null)], ["Monetization", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Monetization__WEBPACK_IMPORTED_MODULE_33___default.a, {
   type: "sign"
-})], ['MyLocation (fixed)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, null)], ['MyLocation (off)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
+})], ["MyLocation (fixed)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, null)], ["MyLocation (off)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
   type: "off"
-})], ['MyLocation (on)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
+})], ["MyLocation (on)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
   type: "on"
-})], ['MyLocation (loading)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
+})], ["MyLocation (loading)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_34___default.a, {
   loading: true,
   type: "on"
-})], ['Npm', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Npm__WEBPACK_IMPORTED_MODULE_35___default.a, null)], ['Notification', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, null)], ['Notification (active)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
+})], ["Npm", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Npm__WEBPACK_IMPORTED_MODULE_35___default.a, null)], ["Notification", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, null)], ["Notification (active)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
   type: "active"
-})], ['Notification (none)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
+})], ["Notification (none)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
   type: "none"
-})], ['Notification (off)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
+})], ["Notification (off)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
   type: "off"
-})], ['Notification (paused)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
+})], ["Notification (paused)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Notification__WEBPACK_IMPORTED_MODULE_36___default.a, {
   type: "paused"
-})], ['Person', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Person__WEBPACK_IMPORTED_MODULE_37___default.a, null)], ['Person (add)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Person__WEBPACK_IMPORTED_MODULE_37___default.a, {
+})], ["Person", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Person__WEBPACK_IMPORTED_MODULE_37___default.a, null)], ["Person (add)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Person__WEBPACK_IMPORTED_MODULE_37___default.a, {
   type: "add"
-})], ['Phone', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Phone__WEBPACK_IMPORTED_MODULE_38___default.a, null)], ['Pin', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pin__WEBPACK_IMPORTED_MODULE_39___default.a, null)], ['Pulse', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pulse__WEBPACK_IMPORTED_MODULE_42___default.a, null)], ['Pulse (breath)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pulse__WEBPACK_IMPORTED_MODULE_42___default.a, {
+})], ["Phone", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Phone__WEBPACK_IMPORTED_MODULE_38___default.a, null)], ["Pin", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pin__WEBPACK_IMPORTED_MODULE_39___default.a, null)], ["Pulse", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pulse__WEBPACK_IMPORTED_MODULE_42___default.a, null)], ["Pulse (breath)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Pulse__WEBPACK_IMPORTED_MODULE_42___default.a, {
   animation: "breath"
-})], ['Play', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Play__WEBPACK_IMPORTED_MODULE_40___default.a, null)], ['PlayListAdd', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_41___default.a, null)], ['Refresh', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Refresh__WEBPACK_IMPORTED_MODULE_43___default.a, null)], ['Reply', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Reply__WEBPACK_IMPORTED_MODULE_44___default.a, null)], ['Reply (right)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Reply__WEBPACK_IMPORTED_MODULE_44___default.a, {
+})], ["Play", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Play__WEBPACK_IMPORTED_MODULE_40___default.a, null)], ["PlayListAdd", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_41___default.a, null)], ["Refresh", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Refresh__WEBPACK_IMPORTED_MODULE_43___default.a, null)], ["Reply", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Reply__WEBPACK_IMPORTED_MODULE_44___default.a, null)], ["Reply (right)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Reply__WEBPACK_IMPORTED_MODULE_44___default.a, {
   type: "right"
-})], ['Search', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Search__WEBPACK_IMPORTED_MODULE_45___default.a, null)], ['Settings', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Settings__WEBPACK_IMPORTED_MODULE_46___default.a, null)], ['Settings', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Settings__WEBPACK_IMPORTED_MODULE_46___default.a, {
+})], ["Search", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Search__WEBPACK_IMPORTED_MODULE_45___default.a, null)], ["Settings", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Settings__WEBPACK_IMPORTED_MODULE_46___default.a, null)], ["Settings", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Settings__WEBPACK_IMPORTED_MODULE_46___default.a, {
   type: "square"
-})], ['ShoppingCart', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_47___default.a, null)], ['Sort', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sort__WEBPACK_IMPORTED_MODULE_48___default.a, null)], ['Shopee', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Shopee__WEBPACK_IMPORTED_MODULE_49___default.a, null)], ['Sync', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, null)], ['Sync (disabled)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, {
+})], ["ShoppingCart", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_47___default.a, null)], ["Sort", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sort__WEBPACK_IMPORTED_MODULE_48___default.a, null)], ["Shopee", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Shopee__WEBPACK_IMPORTED_MODULE_49___default.a, null)], ["Sync", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, null)], ["Sync (disabled)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, {
   type: "disabled"
-})], ['Sync (problem)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, {
+})], ["Sync (problem)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Sync__WEBPACK_IMPORTED_MODULE_50___default.a, {
   type: "problem"
-})], ['Timer', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, null)], ['Timer (off)', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, {
+})], ["Timer", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, null)], ["Timer (off)", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, {
   type: "off"
-})], ['VerifiedUser', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52___default.a, null)], ['Video', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Video__WEBPACK_IMPORTED_MODULE_53___default.a, null)], ['Wifi', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Wifi__WEBPACK_IMPORTED_MODULE_54___default.a, null)], ['Wallet', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Wallet__WEBPACK_IMPORTED_MODULE_55___default.a, null)], ['X', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_X__WEBPACK_IMPORTED_MODULE_56___default.a, {
+})], ["VerifiedUser", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52___default.a, null)], ["Video", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Video__WEBPACK_IMPORTED_MODULE_53___default.a, null)], ["Wifi", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Wifi__WEBPACK_IMPORTED_MODULE_54___default.a, null)], ["Wallet", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Wallet__WEBPACK_IMPORTED_MODULE_55___default.a, null)], ["X", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_X__WEBPACK_IMPORTED_MODULE_56___default.a, {
   style: {
-    position: 'static'
+    position: "static"
   }
-})], ['ZoomIn', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_57___default.a, null)], // Alert
-['Error', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Error__WEBPACK_IMPORTED_MODULE_58___default.a, null)], ['Warning', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Warning__WEBPACK_IMPORTED_MODULE_59___default.a, null)]];
+})], ["ZoomIn", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_57___default.a, null)], // Alert
+["Error", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Error__WEBPACK_IMPORTED_MODULE_58___default.a, null)], ["Warning", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ricon_Warning__WEBPACK_IMPORTED_MODULE_59___default.a, null)]];
 
 var Icons = /*#__PURE__*/function (_BasePage) {
   Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Icons, _BasePage);
@@ -3715,20 +5060,20 @@ var Icons = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_61__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Icons, "defaultProps", {
-  pageName: 'icons'
+  pageName: "icons"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Icons);
 var Styles = {
   grid: {
-    textAlign: 'center'
+    textAlign: "center"
   },
   icon: {
     maxWidth: 30,
     minHeight: 30,
     maxHeight: 30,
-    margin: '0 auto 10px',
-    position: 'relative'
+    margin: "0 auto 10px",
+    position: "relative"
   }
 };
 
@@ -3795,7 +5140,7 @@ var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createEleme
   header: "Fixed Data Table"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_12__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
   code: _raw_loader_ui_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_15__["default"],
-  header: "Fixed Data Table"
+  header: "Pagination"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_14__["default"], null)));
 
 var List = /*#__PURE__*/function (_BasePage) {
@@ -3815,7 +5160,7 @@ var List = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(List, "defaultProps", {
-  pageName: 'list'
+  pageName: "list"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (List);
@@ -3868,7 +5213,7 @@ var Molecules = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Molecules, "defaultProps", {
-  pageName: 'molecules'
+  pageName: "molecules"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Molecules);
@@ -4007,7 +5352,7 @@ var Organisms = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Organisms, "defaultProps", {
-  pageName: 'organisms'
+  pageName: "organisms"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Organisms);
@@ -4067,13 +5412,13 @@ var Parallax = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Parallax, "defaultProps", {
-  pageName: 'parallax'
+  pageName: "parallax"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Parallax);
 var Styles = {
   page: {
-    padding: '100vh 0 100vh'
+    padding: "100vh 0 100vh"
   }
 };
 
@@ -4168,7 +5513,7 @@ var Popup = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Popup, "defaultProps", {
-  pageName: 'popup'
+  pageName: "popup"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Popup);
@@ -4233,7 +5578,7 @@ var Video = /*#__PURE__*/function (_BasePage) {
 }(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(Video, "defaultProps", {
-  pageName: 'video'
+  pageName: "video"
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (Video);
@@ -4385,7 +5730,7 @@ var Doc = function Doc(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress';\nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {Button} from 'react-atomic-molecule';\nimport {download} from 'ajax-save';\n\nconst AjaxDownloadExample = props => {\n  const url =\n    'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg';\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch('ajaxGet', {\n          responseType: ['blob'],\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split('/').splice(-1)[0]);\n          },\n        });\n      }}>\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\nimport { download } from \"ajax-save\";\n\nconst AjaxDownloadExample = (props) => {\n  const url =\n    \"https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg\";\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch(\"ajaxGet\", {\n          responseType: [\"blob\"],\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split(\"/\").splice(-1)[0]);\n          },\n        });\n      }}\n    >\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n");
 
 /***/ }),
 
@@ -4398,7 +5743,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'; \n\nimport {\n    AlertsNotifier,\n    PopupClick\n} from \"organism-react-popup\"\n\nclass AlertsNotifierExample extends PureComponent\n{\n    render()\n    {\n        return (\n        <PopupClick\n            style={Styles.click}\n            popup={()=>\n                <AlertsNotifier \n                    position=\"bottom\"\n                    alerts={[\n                        {\n                            type: 'info',\n                            message: 'test'\n                        }\n                    ]}\n                />\n            }\n            container={<a />}\n        >\n            alert\n        </PopupClick>\n        );\n    }\n}\n\nexport default AlertsNotifierExample;\n\nconst Styles = {\n    click: {\n        color: 'blue',\n        textDecoration: 'underline'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { AlertsNotifier, PopupClick } from \"organism-react-popup\";\n\nclass AlertsNotifierExample extends PureComponent {\n  render() {\n    return (\n      <PopupClick\n        style={Styles.click}\n        popup={() => (\n          <AlertsNotifier\n            position=\"bottom\"\n            alerts={[\n              {\n                type: \"info\",\n                message: \"test\",\n              },\n            ]}\n          />\n        )}\n        container={<a />}\n      >\n        alert\n      </PopupClick>\n    );\n  }\n}\n\nexport default AlertsNotifierExample;\n\nconst Styles = {\n  click: {\n    color: \"blue\",\n    textDecoration: \"underline\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4411,7 +5756,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React,{Component, cloneElement} from 'react'; \nimport Animate from \"organism-react-animate\"\n\nconst hello = (<div>Hello world!!</div>);\n\nclass AnimationExample extends Component\n{\n    constructor(props) \n    {\n        super(props);\n        this.state = {\n             dom: hello \n        };\n    }\n\n\n    render()\n    {\n        return (\n            <div>\n                <Animate\n                    appear=\"fadeInRight-3000\"\n                    enter=\"fadeInRight-3000\"\n                    leave=\"fadeOutRight-1000\"\n                >\n                {this.state.dom}\n                </Animate>\n                <a href=\"#\"\n                    style={{marginLeft:'10px'}}\n                    onClick={((e)=>{\n                        e.preventDefault();\n                        this.setState({\n                            dom: null \n                        });\n                    }).bind(this)}\n                >leave</a>\n\n                <a href=\"#\" \n                    style={{marginLeft:'10px'}}\n                    onClick={((e)=>{\n                        e.preventDefault();\n                        this.setState({\n                           dom: hello \n                        });\n                    }).bind(this)}\n                >enter</a>\n            </div>\n        );\n    }\n}\n\nexport default AnimationExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { Component, cloneElement } from \"react\";\nimport Animate from \"organism-react-animate\";\n\nconst hello = <div>Hello world!!</div>;\n\nclass AnimationExample extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      dom: hello,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear=\"fadeInRight-3000\"\n          enter=\"fadeInRight-3000\"\n          leave=\"fadeOutRight-1000\"\n        >\n          {this.state.dom}\n        </Animate>\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: hello,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationExample;\n");
 
 /***/ }),
 
@@ -4424,7 +5769,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React,{PureComponent} from 'react'; \nimport Animate from \"organism-react-animate\"\n\nconst foo = (<div>Hello</div>);\nconst bar = (<div>world!!</div>);\n\nclass AnimationDelayExample extends PureComponent\n{\n    constructor(props) \n    {\n        super(props);\n        this.state = {\n            foo, bar \n        };\n    }\n\n    render()\n    {\n        return (\n            <div>\n                <Animate\n                    appear=\"fadeInRight-3000\"\n                    enter=\"fadeInRight-3000\"\n                    leave=\"fadeOutRight-1000\"\n                >\n                    {this.state.foo}\n                </Animate>\n                <Animate\n                    appear=\"fadeInRight-3000-500\"\n                    enter=\"fadeInRight-3000-500\"\n                    leave=\"fadeOutRight-1000-500\"\n                >\n                    {this.state.bar}\n                </Animate>\n                <a href=\"#\"\n                    style={{marginLeft:'10px'}}\n                    onClick={((e)=>{\n                        e.preventDefault();\n                        this.setState({\n                            foo: null,\n                            bar: null\n                        });\n                    }).bind(this)}\n                >leave</a>\n\n                <a href=\"#\" \n                    style={{marginLeft:'10px'}}\n                    onClick={((e)=>{\n                        e.preventDefault();\n                        this.setState({\n                            foo,\n                            bar\n                        });\n                    }).bind(this)}\n                >enter</a>\n            </div>\n        );\n    }\n}\n\nexport default AnimationDelayExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport Animate from \"organism-react-animate\";\n\nconst foo = <div>Hello</div>;\nconst bar = <div>world!!</div>;\n\nclass AnimationDelayExample extends PureComponent {\n  constructor(props) {\n    super(props);\n    this.state = {\n      foo,\n      bar,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear=\"fadeInRight-3000\"\n          enter=\"fadeInRight-3000\"\n          leave=\"fadeOutRight-1000\"\n        >\n          {this.state.foo}\n        </Animate>\n        <Animate\n          appear=\"fadeInRight-3000-500\"\n          enter=\"fadeInRight-3000-500\"\n          leave=\"fadeOutRight-1000-500\"\n        >\n          {this.state.bar}\n        </Animate>\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo: null,\n              bar: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo,\n              bar,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationDelayExample;\n");
 
 /***/ }),
 
@@ -4437,7 +5782,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React,{PureComponent} from 'react'; \n\n/**\n * Production please use\n * import Animate from \"organism-react-animate\"\n */\nimport {Replace} from \"organism-react-animate\"\n\nclass AnimationReplaceExample extends PureComponent\n{\n\n    render()\n    {\n        return (\n            <Replace \n                enter=\"fadeInRight-2000\"\n                leave=\"fadeOutRight-1000\"\n                style={{minHeight: 30, overflow: 'hidden'}}\n            >\n                <div style={{background:\"#f4cc70\"}}>1</div>\n                <div style={{background:\"#de7a22\"}}>2</div>\n                <div style={{background:\"#20948b\"}}>3</div>\n            </Replace>\n        );\n    }\n}\n\nexport default AnimationReplaceExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\n/**\n * Production please use\n * import Animate from \"organism-react-animate\"\n */\nimport { Replace } from \"organism-react-animate\";\n\nclass AnimationReplaceExample extends PureComponent {\n  render() {\n    return (\n      <Replace\n        enter=\"fadeInRight-2000\"\n        leave=\"fadeOutRight-1000\"\n        style={{ minHeight: 30, overflow: \"hidden\" }}\n      >\n        <div style={{ background: \"#f4cc70\" }}>1</div>\n        <div style={{ background: \"#de7a22\" }}>2</div>\n        <div style={{ background: \"#20948b\" }}>3</div>\n      </Replace>\n    );\n  }\n}\n\nexport default AnimationReplaceExample;\n");
 
 /***/ }),
 
@@ -4450,7 +5795,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport Asciidoc from \"organism-react-asciidoc\";\n\nconst adoc = `\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n`;\n\nclass AsciidocDemo extends PureComponent {\n  render() {\n    return <Asciidoc options={{ doctype: \"book\" }}>{adoc}</Asciidoc>;\n  }\n}\n\nexport default AsciidocDemo;\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport Asciidoc from \"organism-react-asciidoc\";\n\nconst adoc = `\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n`;\n\nclass AsciidocDemo extends PureComponent {\n  render() {\n    return <Asciidoc options={{ doctype: \"book\" }}>{adoc}</Asciidoc>;\n  }\n}\n\nexport default AsciidocDemo;\n");
 
 /***/ }),
 
@@ -4463,7 +5808,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {Carousel, CarouselAnimation} from 'organism-react-carousel';\n\nconst CarouselAnimationExample = (props)=>\n{\n    return (\n        <CarouselAnimation \n            carouselAttr={{\n                style: Styles.carousel\n            }}\n            style={Styles.container}\n        >\n            <Carousel>\n                <img\n                    style={Styles.img}\n                    src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n                />\n            </Carousel>\n            <Carousel>2</Carousel>\n            <Carousel>3</Carousel>\n            <Carousel>4</Carousel>\n            <Carousel>5</Carousel>\n        </CarouselAnimation>\n    );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n    container: {\n        margin: '0 10%'\n    },\n    carousel: {\n        width: '100%',\n        height: 300,\n        background: '#00558B'\n    },\n    img: {\n        maxWidth: '100%',\n        verticalAlign: 'bottom'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image src=\"https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg\" />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carousel: {\n    width: \"100%\",\n    height: 300,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4476,7 +5821,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {Carousel, CarouselAnimation} from 'organism-react-carousel';\n\nconst CarouselAnimationExample = (props)=>\n{\n    return (\n        <CarouselAnimation \n            carouselAttr={{\n                style: Styles.carousel\n            }}\n            style={Styles.container}\n            hideThumb\n        >\n            <Carousel>\n                <img\n                    style={Styles.img}\n                    src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n                />\n            </Carousel>\n            <Carousel>2</Carousel>\n            <Carousel>3</Carousel>\n            <Carousel>4</Carousel>\n            <Carousel>5</Carousel>\n        </CarouselAnimation>\n    );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n    container: {\n        margin: '0 10%'\n    },\n    carousel: {\n        width: '100%',\n        height: 300,\n        background: '#00558B'\n    },\n    img: {\n        maxWidth: '100%',\n        verticalAlign: 'bottom'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      style={Styles.container}\n      hideThumb\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carousel: {\n    width: \"100%\",\n    height: 300,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4489,7 +5834,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {Carousel, CarouselSlide} from 'organism-react-carousel';\n\nconst CarouselSlideExample = (props) =>\n{\n    return ( \n        <CarouselSlide \n            carouselAttr={{\n                style: Styles.carousel\n            }}\n        >\n            <Carousel>\n                <img\n                    style={Styles.img}\n                    src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n                />\n            </Carousel>\n            <Carousel>2</Carousel>\n            <Carousel>3</Carousel>\n            <Carousel>4</Carousel>\n            <Carousel>5</Carousel>\n        </CarouselSlide>\n    );\n}\n\nexport default CarouselSlideExample;\n\nconst Styles = {\n    carousel: {\n        width: 300,\n        height: 300,\n        background: '#00558B'\n    },\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselSlide } from \"organism-react-carousel\";\n\nconst CarouselSlideExample = (props) => {\n  return (\n    <CarouselSlide\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselSlide>\n  );\n};\n\nexport default CarouselSlideExample;\n\nconst Styles = {\n  carousel: {\n    width: 300,\n    height: 300,\n    background: \"#00558B\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4502,7 +5847,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nimport {Form} from 'react-atomic-molecule';\nimport {Checkbox} from 'react-atomic-organism';\n\nclass CheckboxExample extends PureComponent {\n  render() {\n    return (\n      <Form>\n        <Checkbox />\n        <Checkbox type=\"radio\" />\n        <Checkbox toggle />\n        <Checkbox slider />\n      </Form>\n    );\n  }\n}\n\nexport default CheckboxExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Form } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nclass CheckboxExample extends PureComponent {\n  render() {\n    return (\n      <Form>\n        <Checkbox />\n        <Checkbox type=\"radio\" />\n        <Checkbox toggle />\n        <Checkbox slider />\n      </Form>\n    );\n  }\n}\n\nexport default CheckboxExample;\n");
 
 /***/ }),
 
@@ -4515,7 +5860,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \n\nimport {\n   openCodeEditor \n} from \"organism-react-codeeditor\";\n\nconst CodeEditorExample = props => {\n  return ( \n    <button onClick={()=>openCodeEditor()}>\n      open\n    </button>\n  );\n}\n\nexport default CodeEditorExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\nimport { openCodeEditor } from \"organism-react-codeeditor\";\n\nconst CodeEditorExample = (props) => {\n  return <button onClick={() => openCodeEditor()}>open</button>;\n};\n\nexport default CodeEditorExample;\n");
 
 /***/ }),
 
@@ -4528,7 +5873,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \n\n/**\n * Production please use\n * import CodeExample from 'organism-react-code'\n */\nimport CodeExample from 'organism-react-code';\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from '!raw-loader!../../../ui/organisms/CodeExample.example';\n\nconst CodeExampleExample = props => (\n    <CodeExample\n        code={code}\n        header=\"Test Header\"\n        git=\"react-atomic/react-atomic-organism/tree/master/packages/organism-react-code/\"\n        npm=\"organism-react-code\"\n    >\n        <div>Test Demo Area</div>\n    </CodeExample>\n);\n\nexport default CodeExampleExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\n/**\n * Production please use\n * import CodeExample from 'organism-react-code'\n */\nimport CodeExample from \"organism-react-code\";\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from \"!raw-loader!../../../ui/organisms/CodeExample.example\";\n\nconst CodeExampleExample = (props) => (\n  <CodeExample\n    code={code}\n    header=\"Test Header\"\n    git=\"react-atomic/react-atomic-organism/tree/master/packages/organism-react-code/\"\n    npm=\"organism-react-code\"\n  >\n    <div>Test Demo Area</div>\n  </CodeExample>\n);\n\nexport default CodeExampleExample;\n");
 
 /***/ }),
 
@@ -4541,7 +5886,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {AreaChart} from 'organism-react-d3-axis-chart';\n\nconst data = [\n  {\n    values: [\n      {\n        x: '2019-01',\n        y: 100,\n      },\n      {\n        x: '2019-02',\n        y: 450,\n      },\n      {\n        x: '2019-03',\n        y: 450,\n      },\n      {\n        x: '2019-04',\n        y: 0,\n      },\n      {\n        x: '2019-05',\n        y: 0,\n      },\n    ],\n  },\n];\n\nconst D3AreaChart = props => {\n  return <AreaChart data={data} style={{maxHeight: 450}} />;\n};\n\nexport default D3AreaChart;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { AreaChart } from \"organism-react-d3-axis-chart\";\n\nconst data = [\n  {\n    values: [\n      {\n        x: \"2019-01\",\n        y: 100,\n      },\n      {\n        x: \"2019-02\",\n        y: 450,\n      },\n      {\n        x: \"2019-03\",\n        y: 450,\n      },\n      {\n        x: \"2019-04\",\n        y: 0,\n      },\n      {\n        x: \"2019-05\",\n        y: 0,\n      },\n    ],\n  },\n];\n\nconst D3AreaChart = (props) => {\n  return <AreaChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3AreaChart;\n");
 
 /***/ }),
 
@@ -4554,7 +5899,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {BarChart} from 'organism-react-d3-axis-chart';\n\nconst D3BarChart = (props) =>\n{\n    let data = \n    { \n        values: [\n            {\n                x: '2013-01',\n                y: 53\n            },\n            {\n                x: '2013-02',\n                y: 165 \n            },\n            {\n                x: '2013-03',\n                y: 269 \n            },\n        ]\n    };\n    \n    return (\n        <BarChart\n            data={data}\n            style={{maxHeight: 450}}\n        />\n    );\n}\n\nexport default D3BarChart;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { BarChart } from \"organism-react-d3-axis-chart\";\n\nconst D3BarChart = (props) => {\n  let data = {\n    values: [\n      {\n        x: \"2013-01\",\n        y: 53,\n      },\n      {\n        x: \"2013-02\",\n        y: 165,\n      },\n      {\n        x: \"2013-03\",\n        y: 269,\n      },\n    ],\n  };\n\n  return <BarChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3BarChart;\n");
 
 /***/ }),
 
@@ -4567,7 +5912,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {LineChart} from 'organism-react-d3-axis-chart';\n\nconst D3LineChart = (props) =>\n{\n    let data = [ \n        {\n            values: [\n                {\n                    x: '2013-01',\n                    y: 100 \n                },\n                {\n                    x: '2013-02',\n                    y: 450\n                },\n                {\n                    x: '2013-01',\n                    y: 450\n                },\n            ]\n        }\n    ];\n    return (\n        <LineChart\n            data={data}\n            style={{maxHeight: 450}}\n            hideAxis={true}\n            thresholds={[200]}\n        />\n    );\n}\n\nexport default D3LineChart;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { LineChart } from \"organism-react-d3-axis-chart\";\n\nconst D3LineChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: \"2013-01\",\n          y: 100,\n        },\n        {\n          x: \"2013-02\",\n          y: 450,\n        },\n        {\n          x: \"2013-01\",\n          y: 450,\n        },\n      ],\n    },\n  ];\n  return (\n    <LineChart\n      data={data}\n      style={{ maxHeight: 450 }}\n      hideAxis={true}\n      thresholds={[200]}\n    />\n  );\n};\n\nexport default D3LineChart;\n");
 
 /***/ }),
 
@@ -4580,7 +5925,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport PieChart from 'organism-react-d3-piechart';\n\nconst D3PieChartExample = (props) =>\n{\n    let data = [\n        {value: 10, label: 'xxx'},\n        {value: 30, label: 'yyy'},\n    ];\n    return (\n    <PieChart\n       data={data} \n       style={{maxWidth:300}}\n       unit=''\n    />\n    );\n}\n\nexport default D3PieChartExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport PieChart from \"organism-react-d3-piechart\";\n\nconst D3PieChartExample = (props) => {\n  let data = [\n    { value: 10, label: \"xxx\" },\n    { value: 30, label: \"yyy\" },\n  ];\n  return <PieChart data={data} style={{ maxWidth: 300 }} unit=\"\" />;\n};\n\nexport default D3PieChartExample;\n");
 
 /***/ }),
 
@@ -4593,7 +5938,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'\n\nimport {UMLGraph} from 'organism-react-d3-uml'\n\nconst data = {\n    tables: [\n        {\n            name: 'table1',\n            cols: [\n                't1-col1',\n                't1-col2',\n            ]\n        },\n        {\n            name: 'table2',\n            cols: [\n                't2-col1',\n                't2-col2',\n            ]\n        },\n    ],\n    conns: [\n        {\n            from: {\n                table: 'table1',\n                col: 't1-col1'\n            },\n            to: {\n                table: 'table2',\n                col: 't2-col2'\n            }\n        }\n    ]\n}\n\n\nclass D3UmlExample extends PureComponent\n{\n    render()\n    {\n        return <UMLGraph\n            data={data}\n            connsLocator={d => d.conns} \n            connFromBoxGroupLocator={d => d.from.table}\n            connFromBoxLocator={d => d.from.col}\n            connToBoxGroupLocator={d => d.to.table}\n            connToBoxLocator={d => d.to.col}\n        /> \n    }\n}\n\nexport default D3UmlExample\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { UMLGraph } from \"organism-react-d3-uml\";\n\nconst data = {\n  tables: [\n    {\n      name: \"table1\",\n      cols: [\"t1-col1\", \"t1-col2\"],\n    },\n    {\n      name: \"table2\",\n      cols: [\"t2-col1\", \"t2-col2\"],\n    },\n  ],\n  conns: [\n    {\n      from: {\n        table: \"table1\",\n        col: \"t1-col1\",\n      },\n      to: {\n        table: \"table2\",\n        col: \"t2-col2\",\n      },\n    },\n  ],\n};\n\nclass D3UmlExample extends PureComponent {\n  render() {\n    return (\n      <UMLGraph\n        data={data}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n      />\n    );\n  }\n}\n\nexport default D3UmlExample;\n");
 
 /***/ }),
 
@@ -4606,7 +5951,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'\nimport Dropzone from 'organism-react-dropzone'\nimport get from 'get-object-value'\n\nclass DropzoneExample extends PureComponent\n{\n    state = {\n        urls: []\n    }\n\n    handleClick = () => \n    {\n        this.dropzone.openDialog();\n    }\n\n    render()\n    {\n        const {urls} = this.state;\n        return (\n            <div>\n            <Dropzone \n                ref={el=>this.dropzone=el}\n                acceptedFiles=\".png, .jpg\"\n                showFiletypeIcon={true}\n                postUrl=\"https://file.io\"\n                djsConfig={{\n                    addRemoveLinks: true\n                }}\n                eventHandlers={{\n                    success: file => \n                    {\n                        this.setState(({urls})=>{\n                            const req = get(file, ['xhr', 'response']); \n                            if (req) {\n                                const json = JSON.parse(req);    \n                                urls.push(json.link);\n                            }\n                            return urls;\n                        });\n                    }\n                }}\n            />\n            <ul>\n                {\n                    urls.map( (url, key) =>\n                        <li key={key}><a href={url} target=\"_blank\">{url}</a></li>\n                    )\n                }\n            </ul>\n            <button onClick={this.handleClick}>open</button>\n            </div>\n        );\n    }\n\n}\n\nexport default DropzoneExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport Dropzone from \"organism-react-dropzone\";\nimport get from \"get-object-value\";\n\nclass DropzoneExample extends PureComponent {\n  state = {\n    urls: [],\n  };\n\n  handleClick = () => {\n    this.dropzone.openDialog();\n  };\n\n  render() {\n    const { urls } = this.state;\n    return (\n      <div>\n        <Dropzone\n          ref={(el) => (this.dropzone = el)}\n          acceptedFiles=\".png, .jpg\"\n          showFiletypeIcon={true}\n          postUrl=\"https://file.io\"\n          djsConfig={{\n            addRemoveLinks: true,\n          }}\n          eventHandlers={{\n            success: (file) => {\n              this.setState(({ urls }) => {\n                const req = get(file, [\"xhr\", \"response\"]);\n                if (req) {\n                  const json = JSON.parse(req);\n                  urls.push(json.link);\n                }\n                return urls;\n              });\n            },\n          }}\n        />\n        <ul>\n          {urls.map((url, key) => (\n            <li key={key}>\n              <a href={url} target=\"_blank\">\n                {url}\n              </a>\n            </li>\n          ))}\n        </ul>\n        <button onClick={this.handleClick}>open</button>\n      </div>\n    );\n  }\n}\n\nexport default DropzoneExample;\n");
 
 /***/ }),
 
@@ -4619,7 +5964,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {FBLike} from 'organism-react-facebook';\n\nconst FBLikeExample = props =>\n  <FBLike page=\"https://www.facebook.com/react\" />\n\nexport default FBLikeExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { FBLike } from \"organism-react-facebook\";\n\nconst FBLikeExample = (props) => (\n  <FBLike page=\"https://www.facebook.com/react\" />\n);\n\nexport default FBLikeExample;\n");
 
 /***/ }),
 
@@ -4632,7 +5977,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {FBPage} from 'organism-react-facebook';\n\nconst FBPageExample = (props) =>\n{\n    return <FBPage page=\"react\" />;\n}\n\nexport default FBPageExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { FBPage } from \"organism-react-facebook\";\n\nconst FBPageExample = (props) => {\n  return <FBPage page=\"react\" />;\n};\n\nexport default FBPageExample;\n");
 
 /***/ }),
 
@@ -4645,7 +5990,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'\n\nimport {Cell, Column} from 'pmvc_react_list'\nimport Table from 'pmvc_react_list/fixedDataTable'\n\nconst rows = [\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n  ['a4', 'b4', 'c4'],\n  ['a5', 'b5', 'c5'],\n  ['a6', 'b6', 'c6'],\n];\n\nclass FixedDataTableListExample extends PureComponent\n{\n    render()\n    {\n        return (\n            <div style={{width:350}}>\n            <Table\n                rows={rows}\n                getColWidth={()=>150}\n                height={150}\n            >\n                <Column\n                    header={<Cell>h1</Cell>}\n                    cell={({rowIndex, columnKey:columnIndex})=>{\n                        return rows[rowIndex][columnIndex] \n                    }}\n                />\n                <Column\n                    header={<Cell>h2</Cell>}\n                    cell={({rowIndex, columnKey:columnIndex})=>{\n                        return rows[rowIndex][columnIndex] \n                    }}\n                />\n                <Column\n                    header={<Cell>h3</Cell>}\n                    cell={({rowIndex, columnKey:columnIndex})=>{\n                        return rows[rowIndex][columnIndex] \n                    }}\n                />\n            </Table>\n            </div>\n        )\n    }\n}\n\nexport default FixedDataTableListExample;\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Cell, Column } from \"pmvc_react_list\";\nimport Table from \"pmvc_react_list/fixedDataTable\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a4\", \"b4\", \"c4\"],\n  [\"a5\", \"b5\", \"c5\"],\n  [\"a6\", \"b6\", \"c6\"],\n];\n\nclass FixedDataTableListExample extends PureComponent {\n  render() {\n    return (\n      <div style={{ width: 350 }}>\n        <Table rows={rows} getColWidth={() => 150} height={150}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default FixedDataTableListExample;\n");
 
 /***/ }),
 
@@ -4658,7 +6003,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React,{PureComponent} from 'react'; \nimport get from 'get-object-value';\n\nimport {\n    FullScreenExample as FullScreen\n} from \"organism-react-code\";\n\nclass FullScreenExample extends PureComponent\n{\n    render()\n    {\n        return ( \n            <FullScreen id=\"full-screen-example\" button=\"open full screen\">\n            test\n            </FullScreen>\n        );\n    }\n}\n\n\nexport default FullScreenExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport get from \"get-object-value\";\n\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\n\nclass FullScreenExample extends PureComponent {\n  render() {\n    return (\n      <FullScreen id=\"full-screen-example\" button=\"open full screen\">\n        test\n      </FullScreen>\n    );\n  }\n}\n\nexport default FullScreenExample;\n");
 
 /***/ }),
 
@@ -4671,7 +6016,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport {GrapesJsController} from 'organism-react-grapesjs';\n\nconst GrapesJsExample = () => <GrapesJsController style={Styles.container}/>\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600\n  }\n};  \n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { GrapesJsController } from \"organism-react-grapesjs\";\n\nconst GrapesJsExample = () => <GrapesJsController style={Styles.container} />;\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600,\n  },\n};\n");
 
 /***/ }),
 
@@ -4684,7 +6029,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nconst rows = [\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n  ['a4', 'b4', 'c4'],\n  ['a5', 'b5', 'c5'],\n  ['a6', 'b6', 'c6'],\n];\n\nlet RVGrid = null;\n\nclass GridListExample extends PureComponent\n{\n    state = {\n        isLoad : false\n    }\n\n    componentDidMount()\n    {\n        import ('pmvc_react_list/rv').then(({RVGrid: rvGrid})=>{\n            RVGrid = rvGrid; \n            this.setState({isLoad: true});\n        });\n    }\n    \n    render()\n    {\n        const {isLoad} = this.state;\n        let grid = null; \n        if (RVGrid && isLoad) {\n            const className ='grid'; // hack for disable const element\n            grid = <RVGrid\n                className={className}\n                width={200}\n                height={100}\n                rows={rows}\n                style={Styles.container}\n            />\n        }\n        return grid;\n    }\n}\n\nexport default GridListExample;\n\nconst Styles = {\n    container: {\n        border: '1px solid #000'\n    }\n}\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a4\", \"b4\", \"c4\"],\n  [\"a5\", \"b5\", \"c5\"],\n  [\"a6\", \"b6\", \"c6\"],\n];\n\nlet RVGrid = null;\n\nclass GridListExample extends PureComponent {\n  state = {\n    isLoad: false,\n  };\n\n  componentDidMount() {\n    import(\"pmvc_react_list/rv\").then(({ RVGrid: rvGrid }) => {\n      RVGrid = rvGrid;\n      this.setState({ isLoad: true });\n    });\n  }\n\n  render() {\n    const { isLoad } = this.state;\n    let grid = null;\n    if (RVGrid && isLoad) {\n      const className = \"grid\"; // hack for disable const element\n      grid = (\n        <RVGrid\n          className={className}\n          width={200}\n          height={100}\n          rows={rows}\n          style={Styles.container}\n        />\n      );\n    }\n    return grid;\n  }\n}\n\nexport default GridListExample;\n\nconst Styles = {\n  container: {\n    border: \"1px solid #000\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4697,7 +6042,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nimport {Table, Cell, Column} from 'pmvc_react_list';\n\nconst rows = [\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n];\n\nclass HtmlTableListExample extends PureComponent\n{\n    render()\n    {\n        return (\n            <Table rows={rows}>\n                <Column\n                    header={<Cell>h1</Cell>}\n                    cell={({rowIndex,columnIndex})=>{\n                        return rows[rowIndex][columnIndex] \n                    }}\n                />\n                <Column\n                    header={<Cell>h2</Cell>}\n                    cell={({rowIndex,columnIndex})=>{\n                        return rows[rowIndex][columnIndex] \n                    }}\n                />\n                <Column\n                    header={<Cell>h3</Cell>}\n                    cell={({rowIndex,columnIndex})=>{\n                        return rows[rowIndex][2] \n                    }}\n                />\n            </Table>\n        );\n    }\n}\n\nexport default HtmlTableListExample;\n\nconst Styles = {\n    col: {\n        height: 40\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Table, Cell, Column } from \"pmvc_react_list\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n];\n\nclass HtmlTableListExample extends PureComponent {\n  render() {\n    return (\n      <Table rows={rows}>\n        <Column\n          header={<Cell>h1</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h2</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h3</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][2];\n          }}\n        />\n      </Table>\n    );\n  }\n}\n\nexport default HtmlTableListExample;\n\nconst Styles = {\n  col: {\n    height: 40,\n  },\n};\n");
 
 /***/ }),
 
@@ -4710,7 +6055,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress'; \nimport {\n    Button,\n    InputBox\n} from 'react-atomic-molecule';\n\nconst PageLoadProgressHandlerExample = (props) =>\n{\n    let oLoad;\n    let dInput;\n    return (\n        <div>\n\n            <PageLoadProgressHandler ref={o=>oLoad=o}/>\n\n            <div>\n                <Button style={Styles.button} onClick={()=>{\n                    oLoad.start(100, 800);\n                }}>Start</Button>\n                <Button style={Styles.button} onClick={()=>{\n                    oLoad.pause();\n                }}>Pause</Button>\n                <Button style={Styles.button} onClick={()=>{\n                    oLoad.complete();\n                }}>Complete</Button>\n                <Button style={Styles.button} onClick={()=>{\n                    oLoad.reset();\n                }}>Reset</Button>\n            </div>\n\n            <div>\n                <InputBox\n                    leftLabel=\"Pause @\"\n                    rightLabel=\"%\"\n                    refCb={o=>dInput=o} \n                    button={'Go'}\n                    buttonProps={{\n                        onClick: ()=>\n                        {\n                            oLoad.start(dInput.value);\n                        }\n                    }}\n                    style={Styles.input}\n                />\n            </div>\n        </div>\n    );\n};\n\nexport default PageLoadProgressHandlerExample;\n\nconst Styles = {\n    input: {\n        width: 20\n    },\n    button: {\n        marginBottom: 10\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { Button, InputBox } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let oLoad;\n  let dInput;\n  return (\n    <div>\n      <PageLoadProgressHandler ref={(o) => (oLoad = o)} />\n\n      <div>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.start(100, 800);\n          }}\n        >\n          Start\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.pause();\n          }}\n        >\n          Pause\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.complete();\n          }}\n        >\n          Complete\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.reset();\n          }}\n        >\n          Reset\n        </Button>\n      </div>\n\n      <div>\n        <InputBox\n          leftLabel=\"Pause @\"\n          rightLabel=\"%\"\n          refCb={(o) => (dInput = o)}\n          button={\"Go\"}\n          buttonProps={{\n            onClick: () => {\n              oLoad.start(dInput.value);\n            },\n          }}\n          style={Styles.input}\n        />\n      </div>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n\nconst Styles = {\n  input: {\n    width: 20,\n  },\n  button: {\n    marginBottom: 10,\n  },\n};\n");
 
 /***/ }),
 
@@ -4723,7 +6068,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react';\nimport {PageLoadProgressHandler} from 'organism-react-progress'; \nimport {ajaxDispatch} from 'organism-react-ajax';\nimport {\n    Button,\n} from 'react-atomic-molecule';\n\nconst PageLoadProgressHandlerExample = (props) =>\n{\n    let url = 'https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md';\n    return (\n        <div>\n\n            <PageLoadProgressHandler ajax={true}/>\n\n            <Button onClick={()=>{\n                ajaxDispatch({\n                    type: 'ajaxGet',\n                    params: {\n                        url: url,\n                        callback: (json,text,o)=>\n                        {\n                            alert(text);\n                        }\n                    }\n                });\n            }}>\n                Call Ajax\n            </Button>\n\n        </div>\n    );\n};\n\nexport default PageLoadProgressHandlerExample;\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let url =\n    \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md\";\n  return (\n    <div>\n      <PageLoadProgressHandler ajax={true} />\n\n      <Button\n        onClick={() => {\n          ajaxDispatch({\n            type: \"ajaxGet\",\n            params: {\n              url: url,\n              callback: (json, text, o) => {\n                alert(text);\n              },\n            },\n          });\n        }}\n      >\n        Call Ajax\n      </Button>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n");
 
 /***/ }),
 
@@ -4736,7 +6081,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'; \n\nimport {PaginationController} from 'organism-react-navigation';\n\nclass PaginationExample extends PureComponent\n{\n\n  handlePageChange = ({begin}) => {\n    this.setState({begin});\n  }\n\n  render()\n  {\n    const {begin} = this.state || {};\n    return (\n      <PaginationController style={Styles.container} onPageChange={this.handlePageChange} total={500} begin={begin} />\n    );\n  }\n}\n\nexport default PaginationExample;\n\nconst Styles = {\n  container: {\n    textAlign: 'center'\n  }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { PaginationController } from \"organism-react-navigation\";\n\nclass PaginationExample extends PureComponent {\n  handlePageChange = ({ begin }) => {\n    this.setState({ begin });\n  };\n\n  render() {\n    const { begin } = this.state || {};\n    return (\n      <PaginationController\n        style={Styles.container}\n        onPageChange={this.handlePageChange}\n        total={500}\n        begin={begin}\n      />\n    );\n  }\n}\n\nexport default PaginationExample;\n\nconst Styles = {\n  container: {\n    textAlign: \"center\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4749,7 +6094,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \nimport {ParallaxBackgroundImage} from 'organism-react-parallax';\n\nconst ParallaxBackgroundImageExample = () =>\n<ParallaxBackgroundImage\n    style={Styles.container}\n    backgroundImage=\"https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg\"\n>\ntest\n</ParallaxBackgroundImage>\n\nexport default ParallaxBackgroundImageExample;\n\nconst Styles = {\n    container: {\n        height: 300,\n        color: '#fff',\n        textAlign: 'center',\n        paddingTop: 200,\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { ParallaxBackgroundImage } from \"organism-react-parallax\";\n\nconst ParallaxBackgroundImageExample = () => (\n  <ParallaxBackgroundImage\n    style={Styles.container}\n    backgroundImage=\"https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg\"\n  >\n    test\n  </ParallaxBackgroundImage>\n);\n\nexport default ParallaxBackgroundImageExample;\n\nconst Styles = {\n  container: {\n    height: 300,\n    color: \"#fff\",\n    textAlign: \"center\",\n    paddingTop: 200,\n  },\n};\n");
 
 /***/ }),
 
@@ -4762,7 +6107,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \n\n/**\n * Production please use\n * import {...xxx} from \"organism-react-popup\"\n */\nimport {\n    Dialog,\n    PopupModal,\n    PopupClick\n} from \"organism-react-popup\";\n\nimport {Button} from 'react-atomic-molecule'\n\nconst PopupExample = () =>\n{\n    return (\n      <div>\n        <PopupClick\n            style={Styles.click}\n            popup={()=>{\n                return <PopupModal>\n                    xxx\n                </PopupModal>;\n            }}\n            container={<a />}\n        >\n            show modal\n        </PopupClick>\n\n        <PopupClick\n            style={{marginLeft:5}}\n            popup={(\n              <Dialog header=\"Test Header\">\n                Test Dialog\n              </Dialog>\n            )}\n            container={<Button />}\n        >\n            show dialog \n        </PopupClick>\n      </div>\n    );\n}\n\nexport default PopupExample;\n\nconst Styles = {\n    click: {\n        color: 'blue',\n        textDecoration: 'underline'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\n/**\n * Production please use\n * import {...xxx} from \"organism-react-popup\"\n */\nimport { Dialog, PopupModal, PopupClick } from \"organism-react-popup\";\n\nimport { Button } from \"react-atomic-molecule\";\n\nconst PopupExample = () => {\n  return (\n    <div>\n      <PopupClick\n        style={Styles.click}\n        popup={() => {\n          return <PopupModal>xxx</PopupModal>;\n        }}\n        container={<a />}\n      >\n        show modal\n      </PopupClick>\n\n      <PopupClick\n        style={{ marginLeft: 5 }}\n        popup={<Dialog header=\"Test Header\">Test Dialog</Dialog>}\n        container={<Button />}\n      >\n        show dialog\n      </PopupClick>\n    </div>\n  );\n};\n\nexport default PopupExample;\n\nconst Styles = {\n  click: {\n    color: \"blue\",\n    textDecoration: \"underline\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4775,7 +6120,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \nimport QQVideo from 'organism-react-qq-video';\n\nconst QQVideoExample = () =>\n  <QQVideo videoId=\"j0792wzb6v8\" />\n\nexport default QQVideoExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport QQVideo from \"organism-react-qq-video\";\n\nconst QQVideoExample = () => <QQVideo videoId=\"j0792wzb6v8\" />;\n\nexport default QQVideoExample;\n");
 
 /***/ }),
 
@@ -4788,7 +6133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'; \n\nimport {Form, Button} from 'react-atomic-molecule'\nimport {RadioGroup} from 'react-atomic-organism'\n\nconst options = [\n    {\n        label: 'Boy',\n        value: 'boy'\n    },\n    {\n        label: 'Girl',\n        value: 'girl'\n    },\n]\n\nclass RadioGroupExample extends PureComponent\n{\n    state = {\n        value: ''\n    }\n    handleChange = () =>\n    {\n        this.setState({value: this.radio.getValue()})\n    }\n\n    render()\n    {\n        const {value} = this.state\n        return (\n            <Form>\n                <RadioGroup\n                    ref={el=>this.radio=el}\n                    inline={false}\n                    label=\"Sex: \"\n                    name=\"sex\"\n                    value={value}\n                    options={options}\n                    onChange={this.handleChange}\n                />\n                <div>Current: {value}</div>\n                <Button onClick={()=>this.setState({value: 'boy'})}>Set to Boy</Button>\n                <Button onClick={()=>this.setState({value: 'girl'})}>Set to Girl</Button>\n            </Form>\n        )\n    }\n}\n\nexport default RadioGroupExample\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Form, Button } from \"react-atomic-molecule\";\nimport { RadioGroup } from \"react-atomic-organism\";\n\nconst options = [\n  {\n    label: \"Boy\",\n    value: \"boy\",\n  },\n  {\n    label: \"Girl\",\n    value: \"girl\",\n  },\n];\n\nclass RadioGroupExample extends PureComponent {\n  state = {\n    value: \"\",\n  };\n  handleChange = () => {\n    this.setState({ value: this.radio.getValue() });\n  };\n\n  render() {\n    const { value } = this.state;\n    return (\n      <Form>\n        <RadioGroup\n          ref={(el) => (this.radio = el)}\n          inline={false}\n          label=\"Sex: \"\n          name=\"sex\"\n          value={value}\n          options={options}\n          onChange={this.handleChange}\n        />\n        <div>Current: {value}</div>\n        <Button onClick={() => this.setState({ value: \"boy\" })}>\n          Set to Boy\n        </Button>\n        <Button onClick={() => this.setState({ value: \"girl\" })}>\n          Set to Girl\n        </Button>\n      </Form>\n    );\n  }\n}\n\nexport default RadioGroupExample;\n");
 
 /***/ }),
 
@@ -4801,7 +6146,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react'\n\nimport {Cell, Column} from 'pmvc_react_list'\nimport Table from 'pmvc_react_list/rv'\n\nconst rows = [\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n  ['a1', 'b1', 'c1'],\n  ['a2', 'b2', 'c2'],\n  ['a3', 'b3', 'c3'],\n];\n\nclass ReactVirtualizedTableListExample extends PureComponent\n{\n    handleClick = rowIndex => ev =>\n    {\n        alert(rowIndex)\n    }\n\n    render()\n    {\n        return (\n            <div style={{width:'40%', height:150}}>\n            <Table\n                rows={rows}\n            >\n                <Column\n                    header={<Cell>h1</Cell>}\n                    cell={({rowIndex, columnIndex, style})=>\n                        <div style={style} onClick={this.handleClick(rowIndex)}>\n                            {rows[rowIndex][columnIndex]}\n                        </div> \n                    }\n                />\n                <Column\n                    header={<Cell>h2</Cell>}\n                    cell={({rowIndex, columnIndex, style})=>\n                        <div style={style} onClick={this.handleClick(rowIndex)}>\n                            {rows[rowIndex][columnIndex]}\n                        </div> \n                    }\n                />\n                <Column\n                    header={<Cell>h3</Cell>}\n                    cell={({rowIndex, columnIndex, style})=>\n                        <div style={style} onClick={this.handleClick(rowIndex)}>\n                            {rows[rowIndex][columnIndex]}\n                        </div> \n                    }\n                />\n            </Table>\n            </div>\n        )\n    }\n}\n\nexport default ReactVirtualizedTableListExample;\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Cell, Column } from \"pmvc_react_list\";\nimport Table from \"pmvc_react_list/rv\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n];\n\nclass ReactVirtualizedTableListExample extends PureComponent {\n  handleClick = (rowIndex) => (ev) => {\n    alert(rowIndex);\n  };\n\n  render() {\n    return (\n      <div style={{ width: \"40%\", height: 150 }}>\n        <Table rows={rows}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default ReactVirtualizedTableListExample;\n");
 
 /***/ }),
 
@@ -4814,7 +6159,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nimport {Button} from 'react-atomic-molecule';\nimport {dispatch, Return} from 'reshow';\n\nconst DialogResult = ({dialogReturn}) =>\n  'undefined' !== typeof dialogReturn ? 'Dialog: ' + dialogReturn : null;\n\nclass ReshowMessageExample extends PureComponent {\n  handleAddAlert = e => {\n    dispatch('alert/add', {\n      message: 'test',\n    });\n  };\n\n  handleResetAlert = e => {\n    dispatch('alert/reset', {\n      alerts: [1, 2, 3],\n    });\n  };\n\n  handleCleanAlert = e => {\n    dispatch('alert/reset', {\n      alerts: null,\n    });\n  };\n\n  handleOpenDialog = e => {\n    dispatch('dialog/start', {\n      dialog: 'how are u',\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <p>\n          <Button onClick={this.handleAddAlert}>Add alert</Button>\n          <Button onClick={this.handleResetAlert}>Reset alert</Button>\n          <Button onClick={this.handleCleanAlert}>Clean all alerts</Button>\n        </p>\n        <p>\n          <Button onClick={this.handleOpenDialog}>Open Dialog</Button>\n          <Return initStates={['dialogReturn']}>\n            <DialogResult />\n          </Return>\n        </p>\n      </div>\n    );\n  }\n}\n\nexport default ReshowMessageExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button } from \"react-atomic-molecule\";\nimport { dispatch, Return } from \"reshow\";\n\nconst DialogResult = ({ dialogReturn }) =>\n  \"undefined\" !== typeof dialogReturn ? \"Dialog: \" + dialogReturn : null;\n\nclass ReshowMessageExample extends PureComponent {\n  handleAddAlert = (e) => {\n    dispatch(\"alert/add\", {\n      message: \"test\",\n    });\n  };\n\n  handleResetAlert = (e) => {\n    dispatch(\"alert/reset\", {\n      alerts: [1, 2, 3],\n    });\n  };\n\n  handleCleanAlert = (e) => {\n    dispatch(\"alert/reset\", {\n      alerts: null,\n    });\n  };\n\n  handleOpenDialog = (e) => {\n    dispatch(\"dialog/start\", {\n      dialog: \"how are u\",\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <p>\n          <Button onClick={this.handleAddAlert}>Add alert</Button>\n          <Button onClick={this.handleResetAlert}>Reset alert</Button>\n          <Button onClick={this.handleCleanAlert}>Clean all alerts</Button>\n        </p>\n        <p>\n          <Button onClick={this.handleOpenDialog}>Open Dialog</Button>\n          <Return initStates={[\"dialogReturn\"]}>\n            <DialogResult />\n          </Return>\n        </p>\n      </div>\n    );\n  }\n}\n\nexport default ReshowMessageExample;\n");
 
 /***/ }),
 
@@ -4827,7 +6172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React,{PureComponent} from 'react'; \n\nimport { Button } from 'react-atomic-molecule';\n\nimport {\n    PopupPool\n} from \"organism-react-popup\";\n\nimport {\n    FullScreenExample\n} from \"organism-react-code\";\n\nimport Spotlight from \"organism-react-spotlight\";\n\nclass SpotlightExample extends PureComponent\n{\n    state = {\n        spotlight: false\n    };\n\n    render()\n    {\n        const {spotlight} = this.state;\n        let thisSpotlight = null;\n        if (spotlight) {\n            thisSpotlight = (\n                <Spotlight\n                    toPool=\"spotlight-pool\"\n                    targetEl={this.spot}\n                    closeCallback={()=>{\n                        this.setState({spotlight: null});\n                    }}\n                />\n            );\n        }\n        return ( \n            <FullScreenExample\n                button=\"open full screen\"\n                closeCallback={()=>this.setState({spotlight: null})}\n            >\n                <div ref={el=>this.spot=el} style={Styles.el}>Spotlight</div> \n                <div>\n                    <Button onClick={()=>{\n                        this.setState({\n                            spotlight: true \n                        });\n                    }}>Try it.</Button>\n                </div>\n                {thisSpotlight}\n                <PopupPool name=\"spotlight-pool\" />\n            </FullScreenExample>\n        );\n    }\n}\n\nexport default SpotlightExample;\n\nconst Styles = {\n    el: {\n        display: 'inline-block',\n        width: 100,\n        height: 200,\n        margin: 10\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button } from \"react-atomic-molecule\";\n\nimport { PopupPool } from \"organism-react-popup\";\n\nimport { FullScreenExample } from \"organism-react-code\";\n\nimport Spotlight from \"organism-react-spotlight\";\n\nclass SpotlightExample extends PureComponent {\n  state = {\n    spotlight: false,\n  };\n\n  render() {\n    const { spotlight } = this.state;\n    let thisSpotlight = null;\n    if (spotlight) {\n      thisSpotlight = (\n        <Spotlight\n          toPool=\"spotlight-pool\"\n          targetEl={this.spot}\n          onClose={() => {\n            this.setState({ spotlight: null });\n          }}\n        />\n      );\n    }\n    return (\n      <FullScreenExample\n        button=\"open full screen\"\n        onClose={() => this.setState({ spotlight: null })}\n      >\n        <div ref={(el) => (this.spot = el)} style={Styles.el}>\n          Spotlight\n        </div>\n        <div>\n          <Button\n            onClick={() => {\n              this.setState({\n                spotlight: true,\n              });\n            }}\n          >\n            Try it.\n          </Button>\n        </div>\n        {thisSpotlight}\n        <PopupPool name=\"spotlight-pool\" />\n      </FullScreenExample>\n    );\n  }\n}\n\nexport default SpotlightExample;\n\nconst Styles = {\n  el: {\n    display: \"inline-block\",\n    width: 100,\n    height: 200,\n    margin: 10,\n  },\n};\n");
 
 /***/ }),
 
@@ -4840,7 +6185,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\nimport {\n    FullScreenExample as FullScreen\n} from \"organism-react-code\";\nimport {\n    StockChartCompute\n} from 'organism-react-stockcharts';\nimport {\n    ajaxDispatch\n} from 'organism-react-ajax';\n\n\nclass StockChartExample extends PureComponent\n{\n    state = {\n        data: null\n    };\n\n    componentDidMount()\n    {\n        ajaxDispatch({\n            type: 'ajaxGet',\n            params: {\n                url: '//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json',\n                callback: (json) => {\n                    this.setState({data: {trades: json}});\n                }\n            }\n        });\n    }\n\n    render()\n    {\n        const {data} = this.state;\n        if (!data) {\n            return null;\n        }\n        return (\n            <FullScreen\n                id=\"full-page-stock-chart\"\n                button=\"open full screen\"\n            >\n                <StockChartCompute\n                    data={data}\n                    tradeRowsLocator={d => d.trades}\n                    tradeHighLocator={d => d.h}\n                    tradeLowLocator={d => d.l}\n                    tradeOpenLocator={d => d.o}\n                    tradeCloseLocator={d => d.c}\n                    tradeVolumeLocator={d => d.v}\n                    tradeDateLocator={d => d.t}\n                />\n            </FullScreen>\n        );\n    }\n}\n\nexport default StockChartExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\n\nclass StockChartExample extends PureComponent {\n  state = {\n    data: null,\n  };\n\n  componentDidMount() {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url:\n          \"//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          this.setState({ data: { trades: json } });\n        },\n      },\n    });\n  }\n\n  render() {\n    const { data } = this.state;\n    if (!data) {\n      return null;\n    }\n    return (\n      <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n        <StockChartCompute\n          data={data}\n          tradeRowsLocator={(d) => d.trades}\n          tradeHighLocator={(d) => d.h}\n          tradeLowLocator={(d) => d.l}\n          tradeOpenLocator={(d) => d.o}\n          tradeCloseLocator={(d) => d.c}\n          tradeVolumeLocator={(d) => d.v}\n          tradeDateLocator={(d) => d.t}\n        />\n      </FullScreen>\n    );\n  }\n}\n\nexport default StockChartExample;\n");
 
 /***/ }),
 
@@ -4853,7 +6198,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nimport {Button, SemanticUI} from 'react-atomic-molecule';\n\nimport {Suggestion} from 'react-atomic-organism';\n\nconst data = ['abc', 'abb', 'acc'];\n\nclass SuggestionExample1 extends PureComponent {\n  state = {\n    results: [],\n  };\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({results: data});\n      return;\n    }\n    const results = [];\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v);\n      }\n    });\n    this.setState({results});\n  };\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item);\n  };\n\n  render() {\n    const {results, myValue} = this.state;\n    return (\n      <SemanticUI>\n        <Suggestion\n          ref={el => (this.suggestion = el)}\n          onChange={this.handleChange}\n          results={results}\n          onItemClick={this.handleItemClick}\n          value={myValue}\n        />\n        <Button\n          onClick={() => this.setState({myValue: myValue ? myValue + 1 : 123})}>\n          set\n        </Button>\n      </SemanticUI>\n    );\n  }\n}\n\nconst SuggestionExample = () => (\n  <SemanticUI>\n    <SuggestionExample1 />\n    couldCreate: false\n    <Suggestion results={data} couldCreate={false} filter preview />\n  </SemanticUI>\n);\n\nexport default SuggestionExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button, SemanticUI } from \"react-atomic-molecule\";\n\nimport { Suggestion } from \"react-atomic-organism\";\n\nconst data = [\"abc\", \"abb\", \"acc\"];\n\nclass SuggestionExample1 extends PureComponent {\n  state = {\n    results: [],\n  };\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({ results: data });\n      return;\n    }\n    const results = [];\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v);\n      }\n    });\n    this.setState({ results });\n  };\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item);\n  };\n\n  render() {\n    const { results, myValue } = this.state;\n    return (\n      <SemanticUI>\n        <Suggestion\n          ref={(el) => (this.suggestion = el)}\n          onChange={this.handleChange}\n          results={results}\n          onItemClick={this.handleItemClick}\n          value={myValue}\n        />\n        <Button\n          onClick={() =>\n            this.setState({ myValue: myValue ? myValue + 1 : 123 })\n          }\n        >\n          set\n        </Button>\n      </SemanticUI>\n    );\n  }\n}\n\nconst SuggestionExample = () => (\n  <SemanticUI>\n    <SuggestionExample1 />\n    couldCreate: false\n    <Suggestion results={data} couldCreate={false} filter preview />\n  </SemanticUI>\n);\n\nexport default SuggestionExample;\n");
 
 /***/ }),
 
@@ -4866,7 +6211,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\n\nimport {Menu, Item, InputBox} from 'react-atomic-molecule'\nimport SearchIcon from 'ricon/Search'\n\n\nimport {TabView, Tab} from 'organism-react-navigation'\n\nconst RightMenu = () =>\n<Menu className=\"right\" ui={false}>\n    <Item style={{boxSizing: 'border-box'}}>\n        <InputBox icon={<SearchIcon />} transparent placeholder=\"Search...\" />\n    </Item>\n</Menu>\n\n\nclass TabViewExample extends PureComponent\n{\n    render()\n    {\n        return (\n            <TabView\n                rightMenu={<RightMenu />}\n            >\n                <Tab>\n                    <div>content1</div>\n                    <div>menu1</div>\n                </Tab>\n                <Tab>\n                    <div>content2</div>\n                    <div>menu2</div>\n                </Tab>\n            </TabView>\n        )\n    }\n}\n\nexport default TabViewExample\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Menu, Item, InputBox } from \"react-atomic-molecule\";\nimport SearchIcon from \"ricon/Search\";\n\nimport { TabView, Tab } from \"organism-react-navigation\";\n\nconst RightMenu = () => (\n  <Menu className=\"right\" ui={false}>\n    <Item style={{ boxSizing: \"border-box\" }}>\n      <InputBox icon={<SearchIcon />} transparent placeholder=\"Search...\" />\n    </Item>\n  </Menu>\n);\n\nclass TabViewExample extends PureComponent {\n  render() {\n    return (\n      <TabView rightMenu={<RightMenu />}>\n        <Tab>\n          <div>content1</div>\n          <div>menu1</div>\n        </Tab>\n        <Tab>\n          <div>content2</div>\n          <div>menu2</div>\n        </Tab>\n      </TabView>\n    );\n  }\n}\n\nexport default TabViewExample;\n");
 
 /***/ }),
 
@@ -4879,7 +6224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {PureComponent} from 'react';\nimport {TagsField} from 'organism-react-tag-input';\nimport {SemanticUI} from 'react-atomic-molecule';\n\nclass TagInputExample extends PureComponent {\n  render() {\n    return (\n      <SemanticUI>\n        <TagsField />\n      </SemanticUI>\n    );\n  }\n}\n\nexport default TagInputExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport { TagsField } from \"organism-react-tag-input\";\nimport { SemanticUI } from \"react-atomic-molecule\";\n\nclass TagInputExample extends PureComponent {\n  render() {\n    return (\n      <SemanticUI>\n        <TagsField />\n      </SemanticUI>\n    );\n  }\n}\n\nexport default TagInputExample;\n");
 
 /***/ }),
 
@@ -4892,7 +6237,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, {Component} from 'react'; \nimport { PopupHover, PopupOverlay } from 'organism-react-popup';\n\nclass WindowOffsetExample extends Component\n{\n    handleClick = (e) =>\n    {\n        const target = e.currentTarget;\n        import('get-window-offset').then(({default: getWindowOffset})=>{\n            const info = getWindowOffset(target);\n            console.log(info);\n        });\n    }\n\n    render()\n    {\n        return (\n            <div>\n                <div style={Styles.row}>\n                    <PopupHover popup=\"1\" isKeep={true}>\n                        <div style={{...Styles.col, ...Styles.col1}} onClick={this.handleClick}>1</div>\n                    </PopupHover>\n                    <PopupHover popup=\"2\" isKeep={true}>\n                        <div style={{...Styles.col, ...Styles.col2}} onClick={this.handleClick}>2</div>\n                    </PopupHover>\n                    <PopupHover popup=\"3\" isKeep={true}>\n                        <div style={{...Styles.col, ...Styles.col3}} onClick={this.handleClick}>3</div>\n                    </PopupHover>\n                </div>\n                <div style={Styles.row}>\n                    <PopupHover popup=\"4\">\n                        <div style={{...Styles.col, ...Styles.col1}} onClick={this.handleClick}>4</div>\n                    </PopupHover>\n                    <PopupHover popup=\"5\">\n                        <div style={{...Styles.col, ...Styles.col2}} onClick={this.handleClick}>5</div>\n                    </PopupHover>\n                    <PopupHover popup=\"6\">\n                        <div style={{...Styles.col, ...Styles.col3}} onClick={this.handleClick}>6</div>\n                    </PopupHover>\n                </div>\n                <div style={{width:60}}>\n                    <PopupHover popup=\"7\">\n                        <div style={{...Styles.col, ...Styles.col1}} onClick={this.handleClick}>7</div>\n                    </PopupHover>\n                    <PopupHover popup=\"8\">\n                        <div style={{...Styles.col, ...Styles.col2}} onClick={this.handleClick}>8</div>\n                    </PopupHover>\n                    <PopupHover popup=\"9\">\n                        <div style={{...Styles.col, ...Styles.col3}} onClick={this.handleClick}>9</div>\n                    </PopupHover>\n                </div>\n            </div>\n        );\n    }\n}\n\nexport default WindowOffsetExample;\n\nconst Styles = {\n    row: {\n        justifyContent: 'space-around',\n        display: 'flex',\n        marginBottom: 100,\n    },\n    col: {\n        width: 60,\n        height: 60,\n        lineHeight: '60px',\n        textAlign: 'center',\n        color: '#fff'\n    },\n    col1: {\n        background: '#c00'\n    },\n    col2: {\n        background: '#095'\n    },\n    col3: {\n        background: '#059'\n    }\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { Component } from \"react\";\nimport { PopupHover, PopupOverlay } from \"organism-react-popup\";\n\nclass WindowOffsetExample extends Component {\n  handleClick = (e) => {\n    const target = e.currentTarget;\n    import(\"get-window-offset\").then(({ default: getWindowOffset }) => {\n      const info = getWindowOffset(target);\n      console.log(info);\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <div style={Styles.row}>\n          <PopupHover popup=\"1\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              1\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"2\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              2\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"3\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              3\n            </div>\n          </PopupHover>\n        </div>\n        <div style={Styles.row}>\n          <PopupHover popup=\"4\">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              4\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"5\">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              5\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"6\">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              6\n            </div>\n          </PopupHover>\n        </div>\n        <div style={{ width: 60 }}>\n          <PopupHover popup=\"7\">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              7\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"8\">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              8\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"9\">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              9\n            </div>\n          </PopupHover>\n        </div>\n      </div>\n    );\n  }\n}\n\nexport default WindowOffsetExample;\n\nconst Styles = {\n  row: {\n    justifyContent: \"space-around\",\n    display: \"flex\",\n    marginBottom: 100,\n  },\n  col: {\n    width: 60,\n    height: 60,\n    lineHeight: \"60px\",\n    textAlign: \"center\",\n    color: \"#fff\",\n  },\n  col1: {\n    background: \"#c00\",\n  },\n  col2: {\n    background: \"#095\",\n  },\n  col3: {\n    background: \"#059\",\n  },\n};\n");
 
 /***/ }),
 
@@ -4905,7 +6250,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from 'react'; \nimport {YoutubeRWD} from 'organism-react-video';\n\nconst YouTubeRWDExample = () =>\n<YoutubeRWD videoId=\"_2i6CmKjN3E\" />\n\nexport default YouTubeRWDExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { YoutubeRWD } from \"organism-react-video\";\n\nconst YouTubeRWDExample = () => <YoutubeRWD videoId=\"_2i6CmKjN3E\" />;\n\nexport default YouTubeRWDExample;\n");
 
 /***/ }),
 
@@ -4913,6 +6258,28 @@ __webpack_require__.r(__webpack_exports__);
 /*!*********************************!*\
   !*** readable-stream (ignored) ***!
   \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 1:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
