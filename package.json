@@ -33,6 +33,7 @@
     "organism-react-stockcharts": "*",
     "organism-react-tag-input": "*",
     "organism-react-video": "*",
+    "organism-react-html2canvas": "*",
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "react": "^16.x",
@@ -47,6 +48,8 @@
     "reshow-url": "*"
   },
   "scripts": {
+    "start": "ws",
+    "webpackDev": "webpack-dev-server",
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
     "build:ui": "BABEL_ENV=build babel ui -d build/ui --ignore /**/__tests__",
     "build:src": "BABEL_ENV=build babel src -d build/src --ignore /**/__tests__",

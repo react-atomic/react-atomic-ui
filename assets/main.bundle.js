@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "5ad1b6712bd3272e44d1" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "c632c6d92abbda0bf9eb" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -223,1347 +223,6 @@
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js":
-/*!**************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js ***!
-  \**************************************************************************************/
-/*! exports provided: dataStatusKey */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataStatusKey", function() { return dataStatusKey; });
-var dataStatusKey = "data-ani-status";
-
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js":
-/*!************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var getChildMapping = function getChildMapping(children, mapFn) {
-  var mapper = function mapper(child, key) {
-    return mapFn ? mapFn(child, key) : child;
-  };
-
-  var result = {};
-
-  if (children) {
-    // map for auto assign child.key
-    react__WEBPACK_IMPORTED_MODULE_0__["Children"].map(children, function (c) {
-      return c;
-    }).forEach(function (child) {
-      if (!child) {
-        return;
-      }
-
-      result[child.key] = mapper(child, child.key);
-    });
-  }
-
-  return result;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (getChildMapping);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js":
-/*!**************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js ***!
-  \**************************************************************************************/
-/*! exports provided: default, Image, AnimateGroup, Replace, Change */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ui_organisms_Animate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/organisms/Animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_organisms_Animate__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _ui_organisms_AnimateImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/organisms/AnimateImage */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return _ui_organisms_AnimateImage__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _ui_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ui/organisms/AnimateGroup */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AnimateGroup", function() { return _ui_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _ui_organisms_Replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ui/organisms/Replace */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Replace", function() { return _ui_organisms_Replace__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _ui_organisms_Change__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Change", function() { return _ui_organisms_Change__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-// Default
-
-
-
-
-
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js":
-/*!*************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var keyframe_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keyframe-css */ "../react-atomic-organism/packages/organism-react-animate/node_modules/keyframe-css/index.es.js");
-/* harmony import */ var _organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/AnimateGroup */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js");
-
-
-
-
-
-
-
-
-var inject = {};
-
-var init = function init(key, ani, timeout) {
-  if (inject[key]) {
-    return;
-  }
-
-  Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["reactStyle"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_3__["default"])({
-    animationName: [ani],
-    animationDuration: [timeout * 1 + 30 + "ms"]
-  }, Styles.linear), "." + key, key); // Need locate after reactStyle, for inject latest style in getKeyframe function
-
-  Object(keyframe_css__WEBPACK_IMPORTED_MODULE_6__["default"])(ani);
-  inject[key] = true;
-};
-
-var parseAniValue = function parseAniValue(s) {
-  var data = s.split("-");
-  var name = data[0];
-  var timeout = 500;
-  var delay = 0;
-
-  if (!isNaN(data[1])) {
-    timeout = parseInt(data[1], 10);
-  }
-
-  if (!isNaN(data[2])) {
-    delay = parseInt(data[2], 10);
-    timeout += delay;
-  }
-
-  var key = [name, timeout, delay].join("-");
-  return {
-    className: key + " " + name,
-    key: key,
-    name: name,
-    timeout: timeout,
-    delay: delay
-  };
-};
-
-var Animate = function Animate(props) {
-  var appear = props.appear,
-      enter = props.enter,
-      leave = props.leave,
-      others = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["appear", "enter", "leave"]);
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
-      isLoad = _useState2[0],
-      setIsLoad = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])({}),
-      _useState4 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState3, 2),
-      aniConf = _useState4[0],
-      setAniConf = _useState4[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
-    var that = {};
-    var data;
-
-    if (appear) {
-      data = parseAniValue(appear);
-      that.appear = data.name;
-      that.appearKey = data.key;
-      that.appearTimeout = data.timeout;
-      that.appearDelay = data.delay;
-      that.appearClass = data.className;
-      init(that.appearKey, that.appear, that.appearTimeout);
-    }
-
-    if (enter) {
-      data = parseAniValue(enter);
-      that.enter = data.name;
-      that.enterKey = data.key;
-      that.enterTimeout = data.timeout;
-      that.enterDelay = data.delay;
-      that.enterClass = data.className;
-      init(that.enterKey, that.enter, that.enterTimeout);
-    }
-
-    if (leave) {
-      data = parseAniValue(leave);
-      that.leave = data.name;
-      that.leaveKey = data.key;
-      that.leaveTimeout = data.timeout;
-      that.leaveDelay = data.delay;
-      that.leaveClass = data.className;
-      init(that.leaveKey, that.leave, that.leaveTimeout);
-    }
-
-    setAniConf(that);
-    setTimeout(function () {
-      return setIsLoad(true);
-    });
-  }, [appear, enter, leave, isLoad]);
-  return isLoad ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_organisms_AnimateGroup__WEBPACK_IMPORTED_MODULE_7__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    timeout: {
-      appear: aniConf.appearTimeout,
-      enter: aniConf.enterTimeout,
-      exit: aniConf.leaveTimeout
-    },
-    delay: {
-      appear: aniConf.appearDelay,
-      enter: aniConf.enterDelay,
-      exit: aniConf.leaveDelay
-    },
-    classNames: {
-      appear: aniConf.appearClass,
-      enter: aniConf.enterClass,
-      exit: aniConf.leaveClass
-    },
-    appear: !!appear,
-    enter: !!enter,
-    exit: !!leave
-  }, others)) : null;
-};
-
-Animate.defaultProps = {
-  component: react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["SemanticUI"],
-  appear: null,
-  enter: null,
-  leave: null
-};
-/* harmony default export */ __webpack_exports__["default"] = (Animate);
-var Styles = {
-  linear: {
-    animationIterationCount: [1],
-    animationTimingFunction: ["linear"]
-  }
-};
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js":
-/*!******************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateGroup.js ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-animate/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var _organisms_CSSTransition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/CSSTransition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js");
-/* harmony import */ var _organisms_Transition__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../organisms/Transition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js");
-/* harmony import */ var _src_getChildMapping__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../src/getChildMapping */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/getChildMapping.js");
-/* harmony import */ var _src_const__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../src/const */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js");
-
-
-
-
-
-
-
-
-
-
-
-var keys = Object.keys;
-
-var getAniProps = function getAniProps(props, enterToAppear) {
-  var statusKey = props.statusKey,
-      timeout = props.timeout,
-      delay = props.delay,
-      classNames = props.classNames,
-      mountOnEnter = props.mountOnEnter,
-      unmountOnExit = props.unmountOnExit,
-      enter = props.enter,
-      exit = props.exit,
-      addEndListener = props.addEndListener,
-      onEnter = props.onEnter,
-      onEntering = props.onEntering,
-      onEntered = props.onEntered,
-      onExit = props.onExit,
-      onExiting = props.onExiting;
-  var appear = props.appear;
-
-  if (enterToAppear && classNames && classNames.enter) {
-    classNames.appear = classNames.enter;
-    delay.appear = delay.enter;
-    timeout.appear = timeout.enter;
-    appear = true;
-  }
-  /* not assign onExited, because call at handleExited */
-
-
-  var aniProps = {
-    statusKey: statusKey,
-    timeout: timeout,
-    delay: delay,
-    classNames: classNames,
-    mountOnEnter: mountOnEnter,
-    unmountOnExit: unmountOnExit,
-    appear: appear,
-    enter: enter,
-    exit: exit,
-    addEndListener: addEndListener,
-    onEnter: onEnter,
-    onEntering: onEntering,
-    onEntered: onEntered,
-    onExit: onExit,
-    onExiting: onExiting,
-    "in": props["in"]
-  };
-  return aniProps;
-};
-
-var buildCSSTransition = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(_organisms_CSSTransition__WEBPACK_IMPORTED_MODULE_7__["default"]);
-
-var AnimateGroup = function AnimateGroup(props) {
-  var className = props.className,
-      component = props.component,
-      lazy = props.lazy,
-      onExited = props.onExited,
-      style = props.style,
-      statusKey = props.statusKey,
-      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["className", "component", "lazy", "onExited", "style", "statusKey"]);
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
-      children = _useState2[0],
-      setChildren = _useState2[1];
-
-  var mount = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
-  var aniProps = getAniProps(otherProps, true);
-  keys(aniProps).forEach(function (key) {
-    return delete otherProps[key];
-  });
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
-    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["lazyInject"])(injects, InjectStyles({
-      statusKey: statusKey
-    }));
-  }, []);
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
-    var _exitTimeout;
-
-    var _enterTimeout;
-
-    mount.current = true;
-
-    var handleExited = function handleExited(child) {
-      return function (node) {
-        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(onExited, [node]);
-        _exitTimeout = setTimeout(function () {
-          if (mount.current) {
-            setChildren(function (children) {
-              delete children[child.key];
-              return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, children);
-            });
-          }
-        });
-      };
-    };
-
-    var prevChildMapping = children || {};
-    var nextChildMapping = Object(_src_getChildMapping__WEBPACK_IMPORTED_MODULE_9__["default"])(otherProps.children, function (child, key) {
-      return buildCSSTransition(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, child.props, {}, aniProps, {
-        key: Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(child, ["props", "name"], key),
-        onExited: handleExited(child)
-      }), child);
-    });
-
-    var allChildMapping = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prevChildMapping, {}, nextChildMapping);
-
-    keys(allChildMapping).forEach(function (key) {
-      var child = allChildMapping[key];
-      var hasPrev = (key in prevChildMapping);
-      var hasNext = (key in nextChildMapping);
-      var prevChild = prevChildMapping[key];
-      var isLeaving = !Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(prevChild, ["props", "in"]);
-
-      if (!hasNext && hasPrev) {
-        // Will Exit
-        if (!isLeaving) {
-          allChildMapping[key] = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(child)({
-            "in": false
-          });
-        }
-      }
-    });
-
-    if (!children) {
-      _enterTimeout = setTimeout(function () {
-        return setChildren(allChildMapping);
-      }, lazy);
-    } else {
-      setChildren(allChildMapping);
-    }
-
-    return function () {
-      clearTimeout(_exitTimeout);
-      clearTimeout(_enterTimeout);
-      mount.current = false;
-    };
-  }, [props.children]);
-  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
-    otherProps.style = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      overflow: "hidden"
-    }, style);
-    otherProps.className = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["mixClass"])(className, "animate-group-container");
-    return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(component)(otherProps, keys(children || {}).map(function (key) {
-      return children[key];
-    }));
-  }, [children]);
-};
-
-AnimateGroup.defaultProps = {
-  statusKey: _src_const__WEBPACK_IMPORTED_MODULE_10__["dataStatusKey"],
-  lazy: 150,
-  component: "div",
-  unmountOnExit: true,
-  "in": true
-};
-/* harmony default export */ __webpack_exports__["default"] = (AnimateGroup);
-var injects;
-
-var InjectStyles = function InjectStyles(_ref) {
-  var statusKey = _ref.statusKey;
-  return {
-    init: [{
-      visibility: "hidden"
-    }, ["[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["UNMOUNTED"], "\"]"), "[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["ENTERSTART"], "\"]")].join(",")],
-    exit: [{
-      display: "none"
-    }, "[".concat(statusKey, "=\"").concat(_organisms_Transition__WEBPACK_IMPORTED_MODULE_8__["EXITED"], "\"]")]
-  };
-};
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js":
-/*!******************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/AnimateImage.js ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! win-doc */ "../react-atomic-organism/packages/organism-react-animate/node_modules/win-doc/build/es/src/index.js");
-/* harmony import */ var _organisms_Change__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
-
-
-
-
-
-
-
-
-var AnimateImageComp = function AnimateImageComp(props, ref) {
-  var src = props.src,
-      animate = props.animate,
-      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["src", "animate"]);
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
-      image = _useState2[0],
-      setImage = _useState2[1];
-
-  var oImg = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])();
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useImperativeHandle"])(ref, function () {
-    return {
-      getImageObject: function getImageObject() {
-        return oImg.current;
-      }
-    };
-  });
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
-    var oWin = Object(win_doc__WEBPACK_IMPORTED_MODULE_5__["win"])();
-
-    if (!oWin) {
-      return null;
-    }
-
-    oImg.current = new oWin.Image();
-
-    oImg.current.onload = function () {
-      setImage( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Image"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        src: src
-      }, otherProps)));
-    };
-
-    oImg.current.src = src;
-  }, [src]);
-  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_organisms_Change__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      className: "animate-image"
-    }, animate), image);
-  }, [image, animate]);
-};
-
-var AnimateImage = Object(react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(AnimateImageComp);
-AnimateImage.defaultProps = {
-  animate: {
-    enter: "fadeIn-300",
-    leave: "fadeOut-300"
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (AnimateImage);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js":
-/*!*******************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/CSSTransition.js ***!
-  \*******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var class_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! class-lib */ "../react-atomic-organism/packages/organism-react-animate/node_modules/class-lib/build/src/index.js");
-/* harmony import */ var class_lib__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(class_lib__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! get-object-value */ "../react-atomic-organism/packages/organism-react-animate/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var _organisms_Transition__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/Transition */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js");
-
-
-
-var _this = undefined;
-
-
-
-
-
-
-var keys = Object.keys;
-
-var getIndex = function getIndex(isAppear, isExit, _ref) {
-  var exit = _ref.exit,
-      appear = _ref.appear,
-      enter = _ref.enter;
-  var index = isExit ? exit : isAppear ? appear : enter;
-  return index;
-};
-
-var getAction = function getAction(isDone, ing, _ref2) {
-  var start = _ref2.start,
-      active = _ref2.active,
-      done = _ref2.done;
-
-  if (!ing) {
-    return isDone ? done : start;
-  } else {
-    return active;
-  }
-};
-
-var getValue = function getValue(arr, index, defaultValue) {
-  return Object(get_object_value__WEBPACK_IMPORTED_MODULE_4__["default"])(arr, [index], defaultValue);
-};
-
-var getClassName = function getClassName(arr, index, action) {
-  var classes = getValue(arr, index);
-  return Object(get_object_value__WEBPACK_IMPORTED_MODULE_4__["default"])(classes, [action], classes);
-};
-
-var handleStart = function handleStart(_ref3, handler, isExit, ing, node, isAppear) {
-  var classNames = _ref3.classNames,
-      delay = _ref3.delay,
-      stepKeys = _ref3.stepKeys,
-      actionKeys = _ref3.actionKeys;
-
-  if (!node || !node.style) {
-    return;
-  }
-
-  var index = getIndex(isAppear, isExit, stepKeys);
-  var action = getAction(false, ing, actionKeys);
-
-  if (!isExit && !ing) {
-    node.style.visibility = "hidden";
-  }
-
-  var thisDelay = getValue(delay, index, 0);
-  setTimeout(function () {
-    var thisClass = getClassName(classNames, index, action);
-
-    if (thisClass) {
-      node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["mixClass"])(node.className, thisClass);
-    }
-
-    node.style.visibility = "inherit";
-    Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
-  }, thisDelay);
-};
-
-var handleFinish = function handleFinish(_ref4, handler, isExit, node, isAppear) {
-  var classNames = _ref4.classNames,
-      delay = _ref4.delay,
-      stepKeys = _ref4.stepKeys,
-      actionKeys = _ref4.actionKeys;
-
-  if (node) {
-    var index = getIndex(isAppear, isExit, stepKeys);
-    var action = getAction(true, false, actionKeys);
-    var thisClass = getClassName(classNames, index, action);
-
-    if (thisClass) {
-      node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["mixClass"])(node.className, thisClass);
-    }
-  }
-
-  Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
-};
-
-var handleReset = function handleReset(_ref5, handler, isExit, node, isAppear) {
-  var classNames = _ref5.classNames,
-      delay = _ref5.delay,
-      stepKeys = _ref5.stepKeys,
-      actionKeys = _ref5.actionKeys;
-
-  if (node) {
-    var index = getIndex(isAppear, isExit, stepKeys);
-    keys(actionKeys).forEach(function (key) {
-      var action = actionKeys[key];
-      var thisClass = getClassName(classNames, index, action);
-
-      if (thisClass) {
-        node.className = Object(class_lib__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(node.className, thisClass);
-      }
-    });
-  }
-
-  Object(call_func__WEBPACK_IMPORTED_MODULE_5__["default"])(handler, [node, isAppear]);
-};
-
-var CSSTransition = function CSSTransition(_ref6) {
-  var classNames = _ref6.classNames,
-      delay = _ref6.delay,
-      stepKeys = _ref6.stepKeys,
-      actionKeys = _ref6.actionKeys,
-      onEnter = _ref6.onEnter,
-      onEntering = _ref6.onEntering,
-      onEntered = _ref6.onEntered,
-      onExit = _ref6.onExit,
-      onExiting = _ref6.onExiting,
-      onExited = _ref6.onExited,
-      resetEntered = _ref6.resetEntered,
-      resetExited = _ref6.resetExited,
-      props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref6, ["classNames", "delay", "stepKeys", "actionKeys", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "resetEntered", "resetExited"]);
-
-  var options = {
-    classNames: classNames,
-    delay: delay,
-    stepKeys: stepKeys,
-    actionKeys: actionKeys
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_Transition__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    onEnter: handleStart.bind(_this, options, onEnter, false, false),
-    onEntering: handleStart.bind(_this, options, onEntering, false, true),
-    onEntered: handleFinish.bind(_this, options, onEntered, false),
-    resetEntered: handleReset.bind(_this, options, resetEntered, false),
-    onExit: handleStart.bind(_this, options, onExit, true, false),
-    onExiting: handleStart.bind(_this, options, onExiting, true, true),
-    onExited: handleFinish.bind(_this, options, onExited, true),
-    resetExited: handleReset.bind(_this, options, resetExited, true)
-  }));
-};
-
-CSSTransition.defaultProps = {
-  stepKeys: {
-    appear: "appear",
-    enter: "enter",
-    exit: "exit"
-  },
-  actionKeys: {
-    start: "",
-    active: "active",
-    done: "done"
-  },
-  "in": true
-};
-/* harmony default export */ __webpack_exports__["default"] = (CSSTransition);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js":
-/*!************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/extends */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/extends.js");
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var _organisms_Animate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/Animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Animate.js");
-
-
-
-
-
-
-
-var Change = function Change(props) {
-  var propsChildren = props.children,
-      onExited = props.onExited,
-      onEntered = props.onEntered,
-      keyEqualer = props.keyEqualer,
-      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["children", "onExited", "onEntered", "keyEqualer"]);
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(propsChildren),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState, 2),
-      children = _useState2[0],
-      setChildren = _useState2[1];
-
-  var mount = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
-  var nextChildren = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(propsChildren);
-  var isRunning = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
-  var nextCall = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
-
-  var handleExited = function handleExited(node, isAppear) {
-    if (mount.current && nextChildren.current) {
-      setChildren(nextChildren.current);
-      Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(onExited, [node, isAppear]);
-    }
-  };
-
-  var handleEntered = function handleEntered(node, isAppear) {
-    isRunning.current = false;
-
-    if (nextCall.current) {
-      Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(nextCall.current);
-    }
-
-    setTimeout(function () {
-      return mount.current && Object(call_func__WEBPACK_IMPORTED_MODULE_4__["default"])(onEntered, [node, isAppear]);
-    });
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
-    mount.current = true;
-
-    var setNext = function setNext(willChild) {
-      var reset = function reset() {
-        nextCall.current = function () {
-          return setNext(willChild);
-        };
-      };
-
-      if (nextChildren.current !== willChild && !keyEqualer(children, willChild)) {
-        if (willChild && !isRunning.current) {
-          nextChildren.current = willChild;
-          nextCall.current = false;
-          children ? setChildren(null) : setChildren(willChild);
-          isRunning.current = true;
-        } else {
-          reset();
-        }
-      } else {
-        reset();
-      }
-    };
-
-    setNext(propsChildren);
-    return function () {
-      mount.current = false;
-    };
-  }, [propsChildren]);
-  return Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_organisms_Animate__WEBPACK_IMPORTED_MODULE_5__["default"], Object(reshow_runtime_es_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps, {
-      onExited: handleExited,
-      onEntered: handleEntered
-    }), children);
-  }, [children]);
-};
-
-Change.defaultProps = {
-  unmountOnExit: false,
-  keyEqualer: function keyEqualer(item1, item2) {
-    return (item1 === null || item1 === void 0 ? void 0 : item1.key) === (item2 === null || item2 === void 0 ? void 0 : item2.key);
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (Change);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js":
-/*!*************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Replace.js ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
-/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/createClass.js");
-/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
-/* harmony import */ var reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/possibleConstructorReturn */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/possibleConstructorReturn.js");
-/* harmony import */ var reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/getPrototypeOf */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/getPrototypeOf.js");
-/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/inherits.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var _organisms_Change__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../organisms/Change */ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Change.js");
-
-
-
-
-
-
-
-
-
-function _createSuper(Derived) {
-  return function () {
-    var Super = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Derived),
-        result;
-
-    if (_isNativeReflectConstruct()) {
-      var NewTarget = Object(reshow_runtime_es_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(this).constructor;
-
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return Object(reshow_runtime_es_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, result);
-  };
-}
-
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-
-
-
-
-var Replace = /*#__PURE__*/function (_PureComponent) {
-  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Replace, _PureComponent);
-
-  var _super = _createSuper(Replace);
-
-  function Replace() {
-    var _this;
-
-    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Replace);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "state", {
-      no: 0,
-      childs: {}
-    });
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "handleNext", function () {
-      if (_this._time) {
-        clearTimeout(_this._time);
-      }
-
-      var interval = _this.props.interval;
-
-      _this.setState(function (_ref) {
-        var no = _ref.no,
-            childs = _ref.childs;
-        no++;
-
-        if (no >= childs.length) {
-          no = 0;
-        }
-
-        return {
-          no: no
-        };
-      });
-
-      _this._time = setTimeout(_this.handleNext, interval);
-    });
-
-    return _this;
-  }
-
-  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Replace, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this._time) {
-        clearTimeout(this._time);
-      }
-
-      var interval = this.props.interval;
-      this._time = setTimeout(this.handleNext, interval);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      clearTimeout(this._time);
-      this._time = null;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          interval = _this$props.interval,
-          props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["interval"]);
-
-      var _this$state = this.state,
-          no = _this$state.no,
-          childs = _this$state.childs;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_organisms_Change__WEBPACK_IMPORTED_MODULE_10__["default"], props, childs[no]);
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps, prevState) {
-      var children = nextProps.children;
-
-      if (children === prevState.prevChildren) {
-        return null;
-      }
-
-      var childs = [];
-      react__WEBPACK_IMPORTED_MODULE_8__["Children"].map(children, function (c) {
-        return c;
-      }).forEach(function (child, key) {
-        return childs[key] = child;
-      });
-      return {
-        childs: childs,
-        prevChildren: children
-      };
-    }
-  }]);
-
-  return Replace;
-}(react__WEBPACK_IMPORTED_MODULE_8__["PureComponent"]);
-
-Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Replace, "defaultProps", {
-  interval: 5000
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Replace);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js":
-/*!****************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-animate/build/es/ui/organisms/Transition.js ***!
-  \****************************************************************************************************/
-/*! exports provided: UNMOUNTED, EXITSTART, EXITING, EXITED, ENTERSTART, ENTERING, ENTERED, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNMOUNTED", function() { return UNMOUNTED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITSTART", function() { return EXITSTART; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITING", function() { return EXITING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EXITED", function() { return EXITED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERSTART", function() { return ENTERSTART; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERING", function() { return ENTERING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENTERED", function() { return ENTERED; });
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../react-atomic-organism/packages/organism-react-animate/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-animate/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-animate/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var _src_const__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/const */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/const.js");
-
-
-
-
-
-
-
-
-var keys = Object.keys;
-var UNMOUNTED = "unmounted";
-var EXITSTART = "exit-start";
-var EXITING = "exiting";
-var EXITED = "exited";
-var ENTERSTART = "enter-start";
-var ENTERING = "entering";
-var ENTERED = "entered";
-
-var reducer = function reducer(state, action) {
-  keys(action).forEach(function (key) {
-    return state[key] = action[key];
-  });
-  return state;
-};
-
-var getTimeouts = function getTimeouts(timeout) {
-  var exit, enter, appear;
-  exit = enter = appear = timeout;
-
-  if (timeout != null && typeof timeout !== "number") {
-    var _timeout$appear;
-
-    exit = timeout.exit;
-    enter = timeout.enter;
-    appear = (_timeout$appear = timeout.appear) !== null && _timeout$appear !== void 0 ? _timeout$appear : enter;
-  }
-
-  return {
-    exit: exit,
-    enter: enter,
-    appear: appear
-  };
-};
-
-var setNextCallback = function setNextCallback(callback) {
-  var active = true;
-
-  var nextCallback = function nextCallback(event) {
-    if (active) {
-      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(callback, [event]);
-    }
-
-    nextCallback.reset();
-  };
-
-  nextCallback.reset = function () {
-    active = false;
-  };
-
-  return nextCallback;
-};
-
-var cancelNextCallback = function cancelNextCallback(state, dispatch) {
-  if (state.nextCallback !== null) {
-    state.nextCallback.reset();
-    dispatch({
-      nextCallback: null
-    });
-  }
-};
-
-var perform = function perform(_ref) {
-  var step1 = _ref.step1,
-      step1Cb = _ref.step1Cb,
-      step2 = _ref.step2,
-      step2Cb = _ref.step2Cb,
-      step3 = _ref.step3,
-      step3Cb = _ref.step3Cb,
-      setUp = _ref.setUp,
-      safeSetState = _ref.safeSetState,
-      onTransitionEnd = _ref.onTransitionEnd,
-      tearDown = _ref.tearDown,
-      goToLast = _ref.goToLast,
-      isAppear = _ref.isAppear,
-      node = _ref.node,
-      timeout = _ref.timeout;
-
-  var last = function last() {
-    onTransitionEnd(node, timeout, function () {
-      safeSetState(step3, function () {
-        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step3Cb, [node, isAppear]);
-        setTimeout(function () {
-          return Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(tearDown, [node, isAppear]);
-        });
-      });
-    });
-  };
-
-  Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(setUp, [node, isAppear]);
-
-  if (goToLast) {
-    last();
-  } else {
-    safeSetState(step1, function () {
-      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step1Cb, [node, isAppear]);
-      safeSetState(step2, function () {
-        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(step2Cb, [node, isAppear]);
-        last();
-      });
-    });
-  }
-};
-
-var Transition = function Transition(_ref2) {
-  var component = _ref2.component,
-      children = _ref2.children,
-      mountOnEnter = _ref2.mountOnEnter,
-      unmountOnExit = _ref2.unmountOnExit,
-      appear = _ref2.appear,
-      enter = _ref2.enter,
-      exit = _ref2.exit,
-      timeout = _ref2.timeout,
-      addEndListener = _ref2.addEndListener,
-      getProps = _ref2.getProps,
-      onEnter = _ref2.onEnter,
-      onEntering = _ref2.onEntering,
-      onEntered = _ref2.onEntered,
-      onExit = _ref2.onExit,
-      onExiting = _ref2.onExiting,
-      onExited = _ref2.onExited,
-      resetEntered = _ref2.resetEntered,
-      resetExited = _ref2.resetExited,
-      statusKey = _ref2.statusKey,
-      props = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref2, ["component", "children", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "getProps", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "resetEntered", "resetExited", "statusKey"]);
-
-  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_4__["useReducer"])(reducer, {
-    "in": null,
-    callbackWith: null,
-    nextCallback: null,
-    init: false,
-    node: false
-  }),
-      _useReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useReducer, 2),
-      state = _useReducer2[0],
-      dispatch = _useReducer2[1];
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(function () {
-    var thisAppear = appear;
-    var initialStatus;
-
-    if (props["in"]) {
-      if (thisAppear) {
-        initialStatus = EXITED;
-      } else {
-        initialStatus = ENTERED;
-      }
-    } else {
-      if (unmountOnExit || mountOnEnter) {
-        initialStatus = UNMOUNTED;
-      } else {
-        initialStatus = EXITED;
-      }
-    }
-
-    return initialStatus;
-  }),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
-      status = _useState2[0],
-      setStatus = _useState2[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
-    if (state.callbackWith === status) {
-      Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(state.nextCallback, [status]);
-    }
-
-    var safeSetState = function safeSetState(nextStatus, callback) {
-      // This shouldn't be necessary, but there are weird race conditions with
-      // setState callbacks and unmounting in testing, so always make sure that
-      // we can cancel any pending setState callbacks after we unmount.
-      dispatch({
-        callbackWith: nextStatus,
-        nextCallback: callback ? setNextCallback(callback) : null
-      });
-      setStatus(nextStatus);
-    };
-
-    var onTransitionEnd = function onTransitionEnd(node, timeout, handler) {
-      if (state.timer) {
-        clearTimeout(state.timer);
-      }
-
-      var callback = setNextCallback(function () {
-        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(handler);
-        Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(addEndListener, [{
-          node: node,
-          state: state,
-          status: status
-        }]);
-      });
-      dispatch({
-        nextCallback: callback,
-        timer: setTimeout(function () {
-          return Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(state.nextCallback, ["onTransitionEnd"]);
-        }, timeout || 0)
-      });
-    };
-
-    var updateStatus = function updateStatus(mounting, nextStatus) {
-      if (nextStatus !== null) {
-        // nextStatus will always be ENTERING or EXITING.
-        cancelNextCallback(state, dispatch);
-        var timeouts = getTimeouts(timeout);
-
-        if (nextStatus === ENTERING) {
-          perform({
-            step1: ENTERSTART,
-            step1Cb: onEnter,
-            step2: ENTERING,
-            step2Cb: onEntering,
-            step3: ENTERED,
-            step3Cb: onEntered,
-            setUp: resetExited,
-            tearDown: resetEntered,
-            goToLast: mounting && !appear || !mounting && !enter,
-            node: state.node,
-            safeSetState: safeSetState,
-            onTransitionEnd: onTransitionEnd,
-            isAppear: mounting,
-            timeout: mounting ? timeouts.appear : timeouts.enter
-          });
-        } else {
-          perform({
-            step1: EXITSTART,
-            step1Cb: onExit,
-            step2: EXITING,
-            step2Cb: onExiting,
-            step3: EXITED,
-            step3Cb: onExited,
-            setUp: resetEntered,
-            tearDown: resetExited,
-            goToLast: !exit,
-            node: state.node,
-            safeSetState: safeSetState,
-            onTransitionEnd: onTransitionEnd,
-            timeout: timeouts.exit
-          });
-        }
-      } else if (unmountOnExit && status === EXITED) {
-        safeSetState(UNMOUNTED);
-      }
-    };
-
-    var nextStatus = null;
-    var mounting = null;
-
-    if (state["in"] !== props["in"]) {
-      mounting = false;
-      dispatch({
-        "in": props["in"]
-      });
-
-      if (props["in"]) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
-        } else if (!state.init) {
-          dispatch({
-            init: true
-          });
-
-          if (appear) {
-            nextStatus = ENTERING;
-            mounting = true;
-          }
-        }
-      } else {
-        if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
-        }
-      }
-    }
-
-    updateStatus(mounting, nextStatus);
-    return function () {
-      // useEffect clean
-      if (state.timer) {
-        clearTimeout(state.timer);
-      }
-    };
-  }, [props["in"], status]);
-  return Object(react__WEBPACK_IMPORTED_MODULE_4__["useMemo"])(function () {
-    var _objectSpread2;
-
-    var myChild = undefined;
-
-    if (status !== UNMOUNTED) {
-      var nextProps = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props);
-
-      delete nextProps["in"];
-      myChild = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(children)(nextProps);
-    }
-
-    return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(component)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_1__["default"])((_objectSpread2 = {}, Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, statusKey, status), Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_objectSpread2, "refCb", function refCb(el) {
-      return dispatch({
-        node: el
-      });
-    }), _objectSpread2), Object(call_func__WEBPACK_IMPORTED_MODULE_6__["default"])(getProps, [status]) || {}), myChild);
-  }, [props]);
-};
-
-Transition.defaultProps = {
-  statusKey: _src_const__WEBPACK_IMPORTED_MODULE_7__["dataStatusKey"],
-  component: react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["SemanticUI"],
-  "in": false,
-  mountOnEnter: false,
-  unmountOnExit: false,
-  appear: false,
-  enter: true,
-  exit: true,
-  onEnter: null,
-  onEntering: null,
-  onEntered: null,
-  onExit: null,
-  onExiting: null,
-  onExited: null
-};
-/* harmony default export */ __webpack_exports__["default"] = (Transition);
-
-/***/ }),
 
 /***/ "./build/src/client.js":
 /*!*****************************!*\
@@ -1728,7 +387,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
 
 
 
@@ -1802,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
 
 
 
@@ -1884,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "../react-atomic-organism/packages/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
 
 
 /**
@@ -2874,6 +1533,33 @@ var Styles = {
 
 /***/ }),
 
+/***/ "./build/ui/organisms/HTMLToCanvans.example.js":
+/*!*****************************************************!*\
+  !*** ./build/ui/organisms/HTMLToCanvans.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_html2canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-html2canvas */ "./node_modules/organism-react-html2canvas/build/es/src/index.js");
+
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_html2canvas__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Unsafe"], null, "\n<svg version=\"1.1\" class=\"highcharts-root\" style=\"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"484\" height=\"300\" viewBox=\"0 0 484 300\"><desc>Created with Highcharts 7.2.1</desc><defs><clipPath id=\"highcharts-m67gdx8-26-\"><rect x=\"0\" y=\"0\" width=\"464\" height=\"196\" fill=\"none\"></rect></clipPath></defs><rect fill=\"#ffffff\" class=\"highcharts-background\" x=\"0\" y=\"0\" width=\"484\" height=\"300\" rx=\"0\" ry=\"0\"></rect><rect fill=\"none\" class=\"highcharts-plot-background\" x=\"10\" y=\"89\" width=\"464\" height=\"196\"></rect><rect fill=\"none\" class=\"highcharts-plot-border\" data-z-index=\"1\" x=\"10\" y=\"89\" width=\"464\" height=\"196\"></rect><g class=\"highcharts-series-group\" data-z-index=\"3\"><g data-z-index=\"0.1\" class=\"highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker\" transform=\"translate(10,89) scale(1 1)\" style=\"cursor:pointer;\"><path fill=\"#7cb5ec\" d=\"M 231.9820767580748 10.000001825242066 A 88 88 0 0 1 319.1142738169505 110.45404742826092 L 318.12433888721245 110.31252416203068 A 87 87 0 0 0 231.98228043127853 11.000001804500684 Z\" class=\"highcharts-halo highcharts-color-0\" data-z-index=\"-1\" fill-opacity=\"0.25\" visibility=\"hidden\"></path><path fill=\"#7cb5ec\" d=\"M 231.9820767580748 10.000001825242066 A 88 88 0 0 1 319.1142738169505 110.45404742826092 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-0\"></path><path fill=\"#434348\" d=\"M 319.1017762144646 110.54115546053563 A 88 88 0 0 1 308.23656799586945 141.95435928564046 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-1\"></path><path fill=\"#90ed7d\" d=\"M 308.19257552562874 142.03057386375244 A 88 88 0 1 1 231.8777697654497 10.000084887712745 L 232 98 A 0 0 0 1 0 232 98 Z\" transform=\"translate(-9,5)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-point-select highcharts-color-2\"></path><path fill=\"#f7a35c\" d=\"M 231.96576972701047 10.00000665745246 A 88 88 0 0 1 231.8777697654497 10.000084887712745 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-3\"></path></g><g data-z-index=\"0.1\" class=\"highcharts-markers highcharts-series-0 highcharts-pie-series\" transform=\"translate(10,89) scale(1 1)\"></g></g><text x=\"242\" text-anchor=\"middle\" class=\"highcharts-subtitle\" data-z-index=\"4\" style=\"color:#666666;fill:#666666;\" y=\"46\"></text><text x=\"10\" text-anchor=\"start\" class=\"highcharts-caption\" data-z-index=\"4\" style=\"color:#666666;fill:#666666;\" y=\"297\"></text><text x=\"242\" text-anchor=\"middle\" class=\"highcharts-title\" data-z-index=\"4\" style=\"color:#333333;font-size:18px;fill:#333333;\" y=\"24\"><tspan>Revenue by Sources</tspan></text><g class=\"highcharts-legend\" data-z-index=\"7\" transform=\"translate(159,47)\"><rect fill=\"none\" class=\"highcharts-legend-box\" rx=\"0\" ry=\"0\" x=\"0\" y=\"0\" width=\"315\" height=\"30\" visibility=\"visible\"></rect><g data-z-index=\"1\"><g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-0\" data-z-index=\"1\" transform=\"translate(8,3)\"><text x=\"21\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\" y=\"19\"><tspan>facebook</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#7cb5ec\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-1\" data-z-index=\"1\" transform=\"translate(119.90625,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"><tspan>google</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#434348\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-2\" data-z-index=\"1\" transform=\"translate(214.0625,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"><tspan>web</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#90ed7d\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-3\" data-z-index=\"1\" transform=\"translate(286.375,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#f7a35c\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g></g></g></g><g class=\"highcharts-label highcharts-tooltip   highcharts-color-2\" style=\"pointer-events:none;white-space:nowrap;\" data-z-index=\"8\" transform=\"translate(194,-9999)\" opacity=\"0\" visibility=\"visible\"><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.049999999999999996\" stroke-width=\"5\" transform=\"translate(1, 1)\"></path><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.09999999999999999\" stroke-width=\"3\" transform=\"translate(1, 1)\"></path><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.15\" stroke-width=\"1\" transform=\"translate(1, 1)\"></path><path fill=\"rgba(247,247,247,0.85)\" class=\"highcharts-label-box highcharts-tooltip-box\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#90ed7d\" stroke-width=\"1\"></path><text x=\"8\" data-z-index=\"1\" style=\"font-size:12px;color:#333333;cursor:default;fill:#333333;\" y=\"20\"><tspan style=\"font-size: 10px\">web</tspan><tspan style=\"fill:#90ed7d\" x=\"8\" dy=\"15\">\u25CF</tspan><tspan dx=\"0\"> Revenue: </tspan><tspan style=\"font-weight:bold\" dx=\"0\">22</tspan></text></g></svg>\n      "));
+
+var HTMLToCanvansExample = function HTMLToCanvansExample(props) {
+  return _ref;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HTMLToCanvansExample);
+
+/***/ }),
+
 /***/ "./build/ui/organisms/HtmlTableList.example.js":
 /*!*****************************************************!*\
   !*** ./build/ui/organisms/HtmlTableList.example.js ***!
@@ -3293,6 +1979,45 @@ var QQVideoExample = function QQVideoExample() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (QQVideoExample);
+
+/***/ }),
+
+/***/ "./build/ui/organisms/QueryToJSON.js":
+/*!*******************************************!*\
+  !*** ./build/ui/organisms/QueryToJSON.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+
+
+
+
+var QueryToJSON = function QueryToJSON(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      json = _useState[0],
+      setJson = _useState[1];
+
+  var handleInput = function handleInput(e) {
+    var v = e.currentTarget.value;
+    var vArr = Array.from(new URLSearchParams(v));
+    setJson(JSON.stringify(vArr, null, "\n"));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Field"], {
+    ui: true,
+    atom: "textarea",
+    onInput: handleInput
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", null, json));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (QueryToJSON);
 
 /***/ }),
 
@@ -5079,6 +3804,66 @@ var Styles = {
 
 /***/ }),
 
+/***/ "./build/ui/pages/JSON.js":
+/*!********************************!*\
+  !*** ./build/ui/pages/JSON.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _pages_BasePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/BasePage */ "./build/ui/pages/BasePage.js");
+/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../templates/Doc */ "./build/ui/templates/Doc.js");
+/* harmony import */ var _organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/QueryToJSON */ "./build/ui/organisms/QueryToJSON.js");
+/* harmony import */ var _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! raw-loader!../../../ui/organisms/QueryToJSON */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx");
+
+
+
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_templates_Doc__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  code: _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_7__["default"],
+  header: "Query To JSON"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+
+var JSON = /*#__PURE__*/function (_BasePage) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(JSON, _BasePage);
+
+  function JSON() {
+    return _BasePage.apply(this, arguments) || this;
+  }
+
+  var _proto = JSON.prototype;
+
+  _proto.render = function render() {
+    return _ref;
+  };
+
+  return JSON;
+}(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(JSON, "defaultProps", {
+  pageName: "JSON"
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (JSON);
+
+/***/ }),
+
 /***/ "./build/ui/pages/List.js":
 /*!********************************!*\
   !*** ./build/ui/pages/List.js ***!
@@ -5359,6 +4144,66 @@ Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["de
 
 /***/ }),
 
+/***/ "./build/ui/pages/PDF.js":
+/*!*******************************!*\
+  !*** ./build/ui/pages/PDF.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _pages_BasePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/BasePage */ "./build/ui/pages/BasePage.js");
+/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../templates/Doc */ "./build/ui/templates/Doc.js");
+/* harmony import */ var _organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/HTMLToCanvans.example */ "./build/ui/organisms/HTMLToCanvans.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! raw-loader!../../../ui/organisms/HTMLToCanvans.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx");
+
+
+
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_templates_Doc__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  code: _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_7__["default"],
+  header: "PDF Example"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+
+var PDF = /*#__PURE__*/function (_BasePage) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(PDF, _BasePage);
+
+  function PDF() {
+    return _BasePage.apply(this, arguments) || this;
+  }
+
+  var _proto = PDF.prototype;
+
+  _proto.render = function render() {
+    return _ref;
+  };
+
+  return PDF;
+}(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(PDF, "defaultProps", {
+  pageName: "PDF"
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (PDF);
+
+/***/ }),
+
 /***/ "./build/ui/pages/Parallax.js":
 /*!************************************!*\
   !*** ./build/ui/pages/Parallax.js ***!
@@ -5617,6 +4462,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/Code */ "./build/ui/pages/Code.js");
 /* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/ui/pages/AsciiDoc.js");
 /* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/ui/pages/GrapesJs.js");
+/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/PDF */ "./build/ui/pages/PDF.js");
+/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/JSON */ "./build/ui/pages/JSON.js");
+
+
 
 
 
@@ -5653,7 +4502,9 @@ var themes = {
   video: _pages_Video__WEBPACK_IMPORTED_MODULE_17__["default"],
   Code: _pages_Code__WEBPACK_IMPORTED_MODULE_19__["default"],
   AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__["default"],
-  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__["default"]
+  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__["default"],
+  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_22__["default"],
+  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_23__["default"]
 };
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupPool"], null);
@@ -6033,6 +4884,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Unsafe } from \"react-atomic-molecule\";\n\nimport HTMLToCanvans from 'organism-react-html2canvas';\n\nconst HTMLToCanvansExample = (props) => {\n  return (\n    <HTMLToCanvans>\n    <Unsafe>\n    {`\n<svg version=\"1.1\" class=\"highcharts-root\" style=\"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;\" xmlns=\"http://www.w3.org/2000/svg\" width=\"484\" height=\"300\" viewBox=\"0 0 484 300\"><desc>Created with Highcharts 7.2.1</desc><defs><clipPath id=\"highcharts-m67gdx8-26-\"><rect x=\"0\" y=\"0\" width=\"464\" height=\"196\" fill=\"none\"></rect></clipPath></defs><rect fill=\"#ffffff\" class=\"highcharts-background\" x=\"0\" y=\"0\" width=\"484\" height=\"300\" rx=\"0\" ry=\"0\"></rect><rect fill=\"none\" class=\"highcharts-plot-background\" x=\"10\" y=\"89\" width=\"464\" height=\"196\"></rect><rect fill=\"none\" class=\"highcharts-plot-border\" data-z-index=\"1\" x=\"10\" y=\"89\" width=\"464\" height=\"196\"></rect><g class=\"highcharts-series-group\" data-z-index=\"3\"><g data-z-index=\"0.1\" class=\"highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker\" transform=\"translate(10,89) scale(1 1)\" style=\"cursor:pointer;\"><path fill=\"#7cb5ec\" d=\"M 231.9820767580748 10.000001825242066 A 88 88 0 0 1 319.1142738169505 110.45404742826092 L 318.12433888721245 110.31252416203068 A 87 87 0 0 0 231.98228043127853 11.000001804500684 Z\" class=\"highcharts-halo highcharts-color-0\" data-z-index=\"-1\" fill-opacity=\"0.25\" visibility=\"hidden\"></path><path fill=\"#7cb5ec\" d=\"M 231.9820767580748 10.000001825242066 A 88 88 0 0 1 319.1142738169505 110.45404742826092 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-0\"></path><path fill=\"#434348\" d=\"M 319.1017762144646 110.54115546053563 A 88 88 0 0 1 308.23656799586945 141.95435928564046 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-1\"></path><path fill=\"#90ed7d\" d=\"M 308.19257552562874 142.03057386375244 A 88 88 0 1 1 231.8777697654497 10.000084887712745 L 232 98 A 0 0 0 1 0 232 98 Z\" transform=\"translate(-9,5)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-point-select highcharts-color-2\"></path><path fill=\"#f7a35c\" d=\"M 231.96576972701047 10.00000665745246 A 88 88 0 0 1 231.8777697654497 10.000084887712745 L 232 98 A 0 0 0 0 0 232 98 Z\" transform=\"translate(0,0)\" stroke=\"#ffffff\" stroke-width=\"1\" opacity=\"1\" stroke-linejoin=\"round\" class=\"highcharts-point highcharts-color-3\"></path></g><g data-z-index=\"0.1\" class=\"highcharts-markers highcharts-series-0 highcharts-pie-series\" transform=\"translate(10,89) scale(1 1)\"></g></g><text x=\"242\" text-anchor=\"middle\" class=\"highcharts-subtitle\" data-z-index=\"4\" style=\"color:#666666;fill:#666666;\" y=\"46\"></text><text x=\"10\" text-anchor=\"start\" class=\"highcharts-caption\" data-z-index=\"4\" style=\"color:#666666;fill:#666666;\" y=\"297\"></text><text x=\"242\" text-anchor=\"middle\" class=\"highcharts-title\" data-z-index=\"4\" style=\"color:#333333;font-size:18px;fill:#333333;\" y=\"24\"><tspan>Revenue by Sources</tspan></text><g class=\"highcharts-legend\" data-z-index=\"7\" transform=\"translate(159,47)\"><rect fill=\"none\" class=\"highcharts-legend-box\" rx=\"0\" ry=\"0\" x=\"0\" y=\"0\" width=\"315\" height=\"30\" visibility=\"visible\"></rect><g data-z-index=\"1\"><g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-0\" data-z-index=\"1\" transform=\"translate(8,3)\"><text x=\"21\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\" y=\"19\"><tspan>facebook</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#7cb5ec\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-1\" data-z-index=\"1\" transform=\"translate(119.90625,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"><tspan>google</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#434348\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-2\" data-z-index=\"1\" transform=\"translate(214.0625,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"><tspan>web</tspan></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#90ed7d\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g><g class=\"highcharts-legend-item highcharts-pie-series highcharts-color-3\" data-z-index=\"1\" transform=\"translate(286.375,3)\"><text x=\"21\" y=\"19\" style=\"color:#4488ff;cursor:pointer;font-size:1rem;font-weight:normal;float:left;fill:#4488ff;\" text-anchor=\"start\" data-z-index=\"2\"></text><rect x=\"0\" y=\"4\" width=\"16\" height=\"16\" fill=\"#f7a35c\" rx=\"8\" ry=\"8\" class=\"highcharts-point\" data-z-index=\"3\"></rect></g></g></g></g><g class=\"highcharts-label highcharts-tooltip   highcharts-color-2\" style=\"pointer-events:none;white-space:nowrap;\" data-z-index=\"8\" transform=\"translate(194,-9999)\" opacity=\"0\" visibility=\"visible\"><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.049999999999999996\" stroke-width=\"5\" transform=\"translate(1, 1)\"></path><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.09999999999999999\" stroke-width=\"3\" transform=\"translate(1, 1)\"></path><path fill=\"none\" class=\"highcharts-label-box highcharts-tooltip-box highcharts-shadow\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#000000\" stroke-opacity=\"0.15\" stroke-width=\"1\" transform=\"translate(1, 1)\"></path><path fill=\"rgba(247,247,247,0.85)\" class=\"highcharts-label-box highcharts-tooltip-box\" d=\"M 3.5 0.5 L 96.5 0.5 C 99.5 0.5 99.5 0.5 99.5 3.5 L 99.5 40.5 C 99.5 43.5 99.5 43.5 96.5 43.5 L 3.5 43.5 C 0.5 43.5 0.5 43.5 0.5 40.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5\" stroke=\"#90ed7d\" stroke-width=\"1\"></path><text x=\"8\" data-z-index=\"1\" style=\"font-size:12px;color:#333333;cursor:default;fill:#333333;\" y=\"20\"><tspan style=\"font-size: 10px\">web</tspan><tspan style=\"fill:#90ed7d\" x=\"8\" dy=\"15\">●</tspan><tspan dx=\"0\"> Revenue: </tspan><tspan style=\"font-weight:bold\" dx=\"0\">22</tspan></text></g></svg>\n      `}\n    </Unsafe>\n    </HTMLToCanvans>\n  ); \n};\n\nexport default HTMLToCanvansExample;\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HtmlTableList.example.jsx":
 /*!**************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HtmlTableList.example.jsx ***!
@@ -6121,6 +4985,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport QQVideo from \"organism-react-qq-video\";\n\nconst QQVideoExample = () => <QQVideo videoId=\"j0792wzb6v8\" />;\n\nexport default QQVideoExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx":
+/*!****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\n\nimport { Field } from \"react-atomic-molecule\";\n\nimport { FormattedJSON } from \"react-atomic-organism\";\n\nconst QueryToJSON = (props) => {\n  const [json, setJson] = useState(\"\");\n\n  const handleInput = (e) => {\n    const v = e.currentTarget.value;\n    const vArr = Array.from(new URLSearchParams(v));\n    setJson(JSON.stringify(vArr, null, \"\\n\"));\n  };\n\n  return (\n    <div>\n      <Field ui atom=\"textarea\" onInput={handleInput} />\n      <pre>{json}</pre>\n    </div>\n  );\n};\n\nexport default QueryToJSON;\n");
 
 /***/ }),
 

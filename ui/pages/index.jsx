@@ -19,6 +19,8 @@ import Parallax from "../pages/Parallax";
 import Code from "../pages/Code";
 import AsciiDoc from "../pages/AsciiDoc";
 import GrapesJs from "../pages/GrapesJs";
+import PDF from "../pages/PDF";
+import JSON from "../pages/JSON";
 
 const themes = {
   atoms: Atoms,
@@ -35,6 +37,8 @@ const themes = {
   Code,
   AsciiDoc,
   GrapesJs,
+  PDF,
+  JSON,
 };
 
 const Index = (props) => {

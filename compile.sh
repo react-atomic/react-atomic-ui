@@ -5,7 +5,6 @@ conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
 PWD=`dirname $0`
 cd $PWD
 webpack='node_modules/.bin/webpack'
-webpackDev='node_modules/.bin/webpack-dev-server'
 
 production(){
     echo "Production Mode";
@@ -27,12 +26,13 @@ develop(){
 }
 
 startServer(){
+    killBy ${DIR}/node_modules/.bin/ws
     yarn
     if [ -z "$port" ] ; then
         port=3000;
     fi
     echo "Start server";
-    node_modules/.bin/ws -p $port -v 
+    npm run start -- -p $port -v
 }
 
 killBy(){
@@ -42,6 +42,7 @@ killBy(){
 stop(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
+    killBy ${DIR}/node_modules/.bin/ws
     killBy webpack 
 }
 
@@ -63,7 +64,7 @@ hot(){
     stop 
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
-    HOT_UPDATE=1 CONFIG=$conf $webpackDev &
+    HOT_UPDATE=1 CONFIG=$conf npm run webpackDev &
 }
 
 case "$1" in
