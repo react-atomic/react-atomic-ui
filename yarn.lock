@@ -7077,11 +7077,12 @@ organism-react-graph@*:
     win-doc "*"
 
 organism-react-html2canvas@*:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/organism-react-html2canvas/-/organism-react-html2canvas-0.0.0.tgz#41b2293d68561e5d79d7c1613db98c7dd4acc4cc"
-  integrity sha512-0tBgb/40RGNUOhsOjZkc1xTC1WW96EarJPsRl2VVgU8LALCb7v6SbhkDuKOXyeRZ+xbXUiVHDMZXFzTWE+/Z9A==
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/organism-react-html2canvas/-/organism-react-html2canvas-0.0.1.tgz#3d91e07d50665bf2c42b5ea27b5930ebf48344ad"
+  integrity sha512-tft/IBjNw3JMGmLdzw4OV+ghgAeuE6fvknUExbM1ierDnXNufZYhr+hah1TJePsv0w0ptbMJ9Kz9fm33Fk1q1Q==
   dependencies:
     organism-react-iframe "*"
+    ratio-js "*"
 
 organism-react-i13n@^0.13.0-beta:
   version "0.13.0-beta.1"
@@ -7855,6 +7856,14 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+
+ratio-js@*:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/ratio-js/-/ratio-js-0.0.0.tgz#18b985ac410b1f9d2e45b878544a0456f6ec52d1"
+  integrity sha512-FnSiGe1TIwNIv5DapHj/Nw3T0r7yL9mMMh17eJzkevzUFQhJwaHgS1A/XqVQjOmcBpbWsXkAOqC2TvxnOpvmug==
+  dependencies:
+    reshow-constant "*"
+    reshow-runtime "*"
 
 raw-body@2.4.0:
   version "2.4.0"
