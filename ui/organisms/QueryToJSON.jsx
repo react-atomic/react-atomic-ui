@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import prettyjson from "prettyjson";
 
-import { Field } from "react-atomic-molecule";
+import { Field, Form } from "react-atomic-molecule";
 
 import { FormattedJSON } from "react-atomic-organism";
 
@@ -9,14 +10,20 @@ const QueryToJSON = (props) => {
 
   const handleInput = (e) => {
     const v = e.currentTarget.value;
-    const vArr = Array.from(new URLSearchParams(v));
-    setJson(JSON.stringify(vArr, null, "\n"));
+    const vArr = [...new URLSearchParams(v)];
+    const nextArr = [];
+    vArr.forEach(item => {
+      nextArr.push({[item[0]]: item[1]});
+    });
+    setJson(nextArr);
   };
 
   return (
     <div>
-      <Field ui atom="textarea" onInput={handleInput} />
-      <pre>{json}</pre>
+      <Form className="equal width" style={{boxSizing: "border-box"}}>
+        <Field ui atom="textarea" onInput={handleInput} />
+        <FormattedJSON atom="div">{prettyjson.render(json)}</FormattedJSON>
+      </Form>
     </div>
   );
 };

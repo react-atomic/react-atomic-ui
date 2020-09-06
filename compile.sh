@@ -19,8 +19,8 @@ analyzer(){
 }
 
 develop(){
-    echo "Develop Mode";
     stop
+    echo "Develop Mode";
     npm run build
     CONFIG=$conf $webpack
 }
@@ -42,7 +42,6 @@ killBy(){
 stop(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
-    killBy ${DIR}/node_modules/.bin/ws
     killBy webpack 
 }
 
