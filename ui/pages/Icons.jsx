@@ -48,9 +48,12 @@ import ShoppingCart from "ricon/ShoppingCart";
 import Sort from "ricon/Sort";
 import Shopee from "ricon/Shopee";
 import Sync from "ricon/Sync";
+import TouchApp from "ricon/TouchApp";
 import Timer from "ricon/Timer";
 import VerifiedUser from "ricon/VerifiedUser";
 import Video from "ricon/Video";
+import Visibility from "ricon/Visibility";
+import ViewModule from "ricon/ViewModule";
 import Wifi from "ricon/Wifi";
 import Wallet from "ricon/Wallet";
 import X from "ricon/X";
@@ -143,10 +146,13 @@ const icons = [
   ["Sync", <Sync />],
   ["Sync (disabled)", <Sync type="disabled" />],
   ["Sync (problem)", <Sync type="problem" />],
+  ["TouchApp", <TouchApp />],
   ["Timer", <Timer />],
   ["Timer (off)", <Timer type="off" />],
   ["VerifiedUser", <VerifiedUser />],
   ["Video", <Video />],
+  ["Visibility", <Visibility />],
+  ["ViewModule", <ViewModule />],
   ["Wifi", <Wifi />],
   ["Wallet", <Wallet />],
   ["X", <X style={{ position: "static" }} />],
