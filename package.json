@@ -50,6 +50,7 @@
   },
   "scripts": {
     "start": "ws",
+    "webpack": "webpack",
     "webpackDev": "webpack-dev-server",
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
     "build:ui": "BABEL_ENV=build babel ui -d build/ui --ignore /**/__tests__",

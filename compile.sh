@@ -4,7 +4,7 @@ conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
 
 PWD=`dirname $0`
 cd $PWD
-webpack='node_modules/.bin/webpack'
+webpack='npm run webpack --'
 
 production(){
     echo "Production Mode";
@@ -26,6 +26,7 @@ develop(){
 }
 
 startServer(){
+    DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/ws
     yarn
     if [ -z "$port" ] ; then
@@ -42,7 +43,7 @@ killBy(){
 stop(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
-    killBy webpack 
+    killBy ${DIR}/node_modules/.bin/webpack 
 }
 
 watch(){
