@@ -1,6 +1,7 @@
-import React, { PureComponent } from "react";
+import React, {useRef} from "react";
 
 import { UMLGraph } from "organism-react-d3-uml";
+import { Form, Field, Button } from "react-atomic-molecule";
 
 const data = {
   tables: [
@@ -27,10 +28,26 @@ const data = {
   ],
 };
 
-class D3UmlExample extends PureComponent {
-  render() {
-    return (
+const D3UmlExample = () => {
+  const uml = useRef();
+  const handleUml = el => uml.current = el;
+  const handleUpdate = (e) => {
+    const t = e.currentTarget || {};
+    const fm = t.form;
+    uml.current.zoom.setXYK({
+      x: fm.x.value || null,
+      y: fm.y.value || null,
+      k: fm.k.value || null,
+    });
+  };
+  const handleZoom = (e) => {
+    console.log(e.zoom.getXYK());
+  }
+  return (
+    <div>
       <UMLGraph
+        onZoom={handleZoom}
+        ref={handleUml}
         data={data}
         connsLocator={(d) => d.conns}
         connFromBoxGroupLocator={(d) => d.from.table}
@@ -38,8 +55,16 @@ class D3UmlExample extends PureComponent {
         connToBoxGroupLocator={(d) => d.to.table}
         connToBoxLocator={(d) => d.to.col}
       />
-    );
-  }
-}
+      <Form style={{boxSizing: "border-box"}} className="equal width">
+        <Field>
+          <Field atom="input" label="x" name="x"/>
+          <Field atom="input" label="y" name="y"/>
+          <Field atom="input" label="k" name="k"/>
+        </Field>
+        <Button onClick={handleUpdate}>update</Button>
+      </Form>
+    </div>
+  );
+};
 
 export default D3UmlExample;
