@@ -16,7 +16,7 @@ const PopupExample = () => {
         popup={() => {
           return <PopupModal>xxx</PopupModal>;
         }}
-        container={<a />}
+        component={<a />}
       >
         show modal
       </PopupClick>
@@ -24,7 +24,7 @@ const PopupExample = () => {
       <PopupClick
         style={{ marginLeft: 5 }}
         popup={<Dialog header="Test Header">Test Dialog</Dialog>}
-        container={<Button />}
+        component={<Button />}
       >
         show dialog
       </PopupClick>

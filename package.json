@@ -49,9 +49,8 @@
     "reshow-url": "*"
   },
   "scripts": {
-    "start": "ws",
     "webpack": "webpack",
-    "webpackDev": "webpack-dev-server",
+    "start": "ws",
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
     "build:ui": "BABEL_ENV=build babel ui -d build/ui --ignore /**/__tests__",
     "build:src": "BABEL_ENV=build babel src -d build/src --ignore /**/__tests__",

@@ -18,7 +18,7 @@ class AlertsNotifierExample extends PureComponent {
             ]}
           />
         )}
-        container={<a />}
+        component={<a />}
       >
         alert
       </PopupClick>

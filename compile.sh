@@ -43,7 +43,7 @@ killBy(){
 stop(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
-    killBy ${DIR}/node_modules/.bin/webpack 
+    cat webpack.pid | xargs -I{} kill -9 {}
 }
 
 watch(){
@@ -64,7 +64,7 @@ hot(){
     stop 
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
-    HOT_UPDATE=1 CONFIG=$conf npm run webpackDev &
+    HOT_UPDATE=1 CONFIG=$conf $webpack serve &
 }
 
 case "$1" in
