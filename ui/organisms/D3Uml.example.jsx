@@ -1,7 +1,8 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 
 import { UMLGraph } from "organism-react-d3-uml";
 import { Form, Field, Button } from "react-atomic-molecule";
+import { Checkbox } from "react-atomic-organism";
 
 const data = {
   tables: [
@@ -30,7 +31,7 @@ const data = {
 
 const D3UmlExample = () => {
   const uml = useRef();
-  const handleUml = el => uml.current = el;
+  const handleUml = (el) => (uml.current = el);
   const handleUpdate = (e) => {
     const t = e.currentTarget || {};
     const fm = t.form;
@@ -41,8 +42,10 @@ const D3UmlExample = () => {
     });
   };
   const handleZoom = (e) => {
-    console.log(e.zoom.getXYK());
-  }
+  //  console.log(e.zoom.getXYK());
+  };
+  let isDisableDel;
+  let isDisableMove;
   return (
     <div>
       <UMLGraph
@@ -54,12 +57,28 @@ const D3UmlExample = () => {
         connFromBoxLocator={(d) => d.from.col}
         connToBoxGroupLocator={(d) => d.to.table}
         connToBoxLocator={(d) => d.to.col}
+        onBoxWillDrag={(e) => {
+          return !isDisableMove.getChecked().input;
+        }}
+        onLineDel={(e) => {
+          return !isDisableDel.getChecked().input;
+        }}
       />
-      <Form style={{boxSizing: "border-box"}} className="equal width">
+      <Form style={{ boxSizing: "border-box" }} className="equal width">
         <Field>
-          <Field atom="input" label="x" name="x"/>
-          <Field atom="input" label="y" name="y"/>
-          <Field atom="input" label="k" name="k"/>
+          <Field atom="input" label="x" name="x" />
+          <Field atom="input" label="y" name="y" />
+          <Field atom="input" label="k" name="k" />
+        </Field>
+        <Field>
+          <Checkbox
+            label="disable line delete"
+            ref={(el) => (isDisableDel = el)}
+          />
+          <Checkbox
+            label="disable node move"
+            ref={(el) => (isDisableMove = el)}
+          />
         </Field>
         <Button onClick={handleUpdate}>update</Button>
       </Form>
