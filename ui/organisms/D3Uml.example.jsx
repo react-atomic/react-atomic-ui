@@ -58,11 +58,11 @@ const D3UmlExample = () => {
         connToBoxGroupLocator={(d) => d.to.table}
         connToBoxLocator={(d) => d.to.col}
         onBoxWillDrag={(e) => {
-          console.log(e.boxGroup);
+          console.log({e});
           return !isDisableMove.getChecked().input;
         }}
         onLineDel={(e) => {
-          console.log(e.boxGroup);
+          console.log({e});
           return !isDisableDel.getChecked().input;
         }}
       />
