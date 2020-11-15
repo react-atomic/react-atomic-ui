@@ -9,13 +9,13 @@ webpack='npm run webpack --'
 production(){
     echo "Production Mode";
     npm run build
-    CONFIG=$conf NODE_ENV=production $webpack -p --optimize-minimize
+    CONFIG=$conf NODE_ENV=production $webpack --mode=production 
 }
 
 analyzer(){
     echo "Analyzer Mode";
     npm run build
-    CONFIG=$conf BUNDLE='{}' $webpack --display-used-exports
+    CONFIG=$conf BUNDLE='{}' $webpack --json > a.json
 }
 
 develop(){
