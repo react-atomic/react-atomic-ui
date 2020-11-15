@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "baceb4735da63685491e" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "ba7cf4c8b95271a52179" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -1490,7 +1490,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var GrapesJsExample = function GrapesJsExample() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_grapesjs__WEBPACK_IMPORTED_MODULE_1__["GrapesJsController"], {
-    style: Styles.container
+    style: Styles.container,
+    debug: true
   });
 };
 
@@ -4989,7 +4990,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { GrapesJsController } from \"organism-react-grapesjs\";\n\nconst GrapesJsExample = () => <GrapesJsController style={Styles.container} />;\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600,\n  },\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { GrapesJsController } from \"organism-react-grapesjs\";\n\nconst GrapesJsExample = () => <GrapesJsController style={Styles.container} debug />;\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600,\n  },\n};\n");
 
 /***/ }),
 
