@@ -6956,9 +6956,9 @@ organism-react-iframe@*, organism-react-iframe@>=0.8.1:
     win-doc "*"
 
 organism-react-navigation@*:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.6.4.tgz#69b2435ced46fbc0de1c0d5f828c66161b6ec388"
-  integrity sha512-2TKouDV6Fxpx9xxvLNx3fw7FXq6gnIoM3RYBQrg2kYZ12H3Kw6aTOeZoSzXwZNG6hygIP6Qud9q9goS7pmbcVA==
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.6.5.tgz#a01bb4f69fcf1f1510352facadc546409ae45735"
+  integrity sha512-8Bl4ys6Loj2F7utMsIm+mqppuTq+95SzZqHfLi+PgwaQ2KhcmiGaFgb/XBcj++X/jHrDFC/hvomNLfQu6W2rcQ==
   dependencies:
     call-func "*"
     class-lib "*"
