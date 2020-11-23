@@ -62,6 +62,7 @@ watchTest(){
 
 hot(){
     stop 
+    npm run clean
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
     HOT_UPDATE=1 CONFIG=$conf $webpack serve &

@@ -27,6 +27,7 @@ import tabView from "!raw-loader!../../../ui/organisms/TabView.example";
 
 import RadioGroup from "../organisms/RadioGroup.example";
 import radioGroup from "!raw-loader!../../../ui/organisms/RadioGroup.example";
+
 import Checkbox from "../organisms/Checkbox.example";
 import checkbox from "!raw-loader!../../../ui/organisms/Checkbox.example";
 
@@ -36,6 +37,9 @@ import suggestion from "!raw-loader!../../../ui/organisms/Suggestion.example";
 import TagInput from "../organisms/TagInput.example";
 import tagInput from "!raw-loader!../../../ui/organisms/TagInput.example";
 
+import ErrorForm from "../organisms/ErrorForm.example";
+import errorForm from "!raw-loader!../../../ui/organisms/ErrorForm.example";
+
 class Organisms extends BasePage {
   static defaultProps = {
     pageName: "organisms",
@@ -43,6 +47,10 @@ class Organisms extends BasePage {
   render() {
     return (
       <Doc>
+        <CodeExample code={errorForm} header="Error Form" id="errorForm">
+          <ErrorForm />
+        </CodeExample>
+
         <CodeExample
           code={pageLoadProgressHandler}
           header="Page Load Progress"
@@ -104,9 +112,11 @@ class Organisms extends BasePage {
         >
           <RadioGroup />
         </CodeExample>
+
         <CodeExample code={checkbox} header="Checkbox" id="checkbox">
           <Checkbox />
         </CodeExample>
+
       </Doc>
     );
   }

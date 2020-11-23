@@ -12,15 +12,15 @@ const QueryToJSON = (props) => {
     const v = e.currentTarget.value;
     const vArr = [...new URLSearchParams(v)];
     const nextArr = [];
-    vArr.forEach(item => {
-      nextArr.push({[item[0]]: item[1]});
+    vArr.forEach((item) => {
+      nextArr.push({ [item[0]]: item[1] });
     });
     setJson(nextArr);
   };
 
   return (
     <div>
-      <Form className="equal width" style={{boxSizing: "border-box"}}>
+      <Form className="equal width" style={{ boxSizing: "border-box" }}>
         <Field ui atom="textarea" onInput={handleInput} />
         <FormattedJSON atom="div">{prettyjson.render(json)}</FormattedJSON>
       </Form>

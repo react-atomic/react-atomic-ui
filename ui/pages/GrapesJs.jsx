@@ -29,10 +29,7 @@ class GrapesJsPage extends BasePage {
           <GrapesJsExample />
         </CodeExample>
 
-        <CodeExample
-          code={rteExample}
-          header="RTE Example"
-        >
+        <CodeExample code={rteExample} header="RTE Example">
           <RTEExample />
         </CodeExample>
       </Doc>

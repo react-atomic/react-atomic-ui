@@ -17,13 +17,13 @@ const HTMLToCanvansExample = (props) => {
     if (pdf && pdf.current) {
       pdf.current.download();
     }
-  }
+  };
 
-  const handlePdf = el => pdf.current = el;
+  const handlePdf = (el) => (pdf.current = el);
   return (
     <div>
       <Form className="equal width" style={{ boxSizing: "border-box" }}>
-        <Field atom="textarea" onInput={handleInput}/>
+        <Field atom="textarea" onInput={handleInput} />
         <Button onClick={handleClick}>Download</Button>
       </Form>
       <HTMLToPDF preview autoGenCanvas ref={handlePdf}>

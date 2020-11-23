@@ -1,7 +1,9 @@
 import React from "react";
 import { GrapesJsController } from "organism-react-grapesjs";
 
-const GrapesJsExample = () => <GrapesJsController style={Styles.container} debug />;
+const GrapesJsExample = () => (
+  <GrapesJsController style={Styles.container} debug />
+);
 
 export default GrapesJsExample;
 

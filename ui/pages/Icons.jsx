@@ -63,8 +63,6 @@ import ZoomIn from "ricon/ZoomIn";
 import Error from "ricon/Error";
 import Warning from "ricon/Warning";
 
-import { reactStyle } from "react-atomic-molecule";
-
 import BasePage from "../pages/BasePage";
 import Doc from "../templates/Doc";
 

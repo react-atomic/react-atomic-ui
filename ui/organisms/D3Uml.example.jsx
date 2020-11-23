@@ -42,7 +42,7 @@ const D3UmlExample = () => {
     });
   };
   const handleZoom = (e) => {
-  //  console.log(e.zoom.getXYK());
+    //  console.log(e.zoom.getXYK());
   };
   let isDisableDel;
   let isDisableMove;
@@ -58,11 +58,11 @@ const D3UmlExample = () => {
         connToBoxGroupLocator={(d) => d.to.table}
         connToBoxLocator={(d) => d.to.col}
         onBoxWillDrag={(e) => {
-          console.log({e});
+          console.log({ e });
           return !isDisableMove.getChecked().input;
         }}
         onLineDel={(e) => {
-          console.log({e});
+          console.log({ e });
           return !isDisableDel.getChecked().input;
         }}
       />
