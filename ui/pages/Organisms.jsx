@@ -47,6 +47,10 @@ class Organisms extends BasePage {
   render() {
     return (
       <Doc>
+        <CodeExample code={tagInput} header="Tag input" id="tag-input">
+          <TagInput />
+        </CodeExample>
+
         <CodeExample code={errorForm} header="Error Form" id="errorForm">
           <ErrorForm />
         </CodeExample>
@@ -94,10 +98,6 @@ class Organisms extends BasePage {
 
         <CodeExample code={suggestion} header="Suggestion" id="suggestion">
           <Suggestion />
-        </CodeExample>
-
-        <CodeExample code={tagInput} header="Tag input" id="tag-input">
-          <TagInput />
         </CodeExample>
 
         <CodeExample code={tabView} header="Tab View" id="tab">

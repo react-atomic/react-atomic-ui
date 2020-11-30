@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "1d17e4b667c988a6fbc2" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "f47ec42945540dee6f2a" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2937,33 +2937,33 @@ var TabViewExample = /*#__PURE__*/function (_PureComponent) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_tag_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-tag-input */ "./node_modules/organism-react-tag-input/build/es/src/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_tag_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-tag-input */ "./node_modules/organism-react-tag-input/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
 
 
 
 
 
-var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_tag_input__WEBPACK_IMPORTED_MODULE_2__["TagsField"], null));
+var TagInputExample = function TagInputExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDisable = _useState[0],
+      setIsDisable = _useState[1];
 
-var TagInputExample = /*#__PURE__*/function (_PureComponent) {
-  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(TagInputExample, _PureComponent);
-
-  function TagInputExample() {
-    return _PureComponent.apply(this, arguments) || this;
-  }
-
-  var _proto = TagInputExample.prototype;
-
-  _proto.render = function render() {
-    return _ref;
+  var handleDisable = function handleDisable(e) {
+    setIsDisable(e.checked ? true : false);
   };
 
-  return TagInputExample;
-}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_tag_input__WEBPACK_IMPORTED_MODULE_1__["TagsField"], {
+    disabled: isDisable
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+    label: "Disable",
+    toggle: true,
+    onChange: handleDisable
+  })));
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (TagInputExample);
 
@@ -4287,6 +4287,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_templates_Doc__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  code: _raw_loader_ui_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_27__["default"],
+  header: "Tag input",
+  id: "tag-input"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_26__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
   code: _raw_loader_ui_organisms_ErrorForm_example__WEBPACK_IMPORTED_MODULE_29__["default"],
   header: "Error Form",
   id: "errorForm"
@@ -4319,10 +4323,6 @@ var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createEleme
   header: "Suggestion",
   id: "suggestion"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_Suggestion_example__WEBPACK_IMPORTED_MODULE_24__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  code: _raw_loader_ui_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_27__["default"],
-  header: "Tag input",
-  id: "tag-input"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_26__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
   code: _raw_loader_ui_organisms_TabView_example__WEBPACK_IMPORTED_MODULE_19__["default"],
   header: "Tab View",
   id: "tab"
@@ -5344,7 +5344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport { TagsField } from \"organism-react-tag-input\";\nimport { SemanticUI } from \"react-atomic-molecule\";\n\nclass TagInputExample extends PureComponent {\n  render() {\n    return (\n      <SemanticUI>\n        <TagsField />\n      </SemanticUI>\n    );\n  }\n}\n\nexport default TagInputExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\nimport { TagsField } from \"organism-react-tag-input\";\nimport { Form, Field, SemanticUI } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst TagInputExample = (props) => {\n  const [isDisable, setIsDisable] = useState(false);\n\n  const handleDisable = (e) => {\n    setIsDisable(e.checked ? true : false);\n  };\n\n  return (\n    <Form>\n      <TagsField disabled={isDisable} />\n      <Field>\n        <Checkbox label=\"Disable\" toggle onChange={handleDisable} />\n      </Field>\n    </Form>\n  );\n};\n\nexport default TagInputExample;\n");
 
 /***/ }),
 
