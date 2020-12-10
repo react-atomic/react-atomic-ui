@@ -1,6 +1,12 @@
-import React, { PureComponent } from "react";
+import React, {useState} from "react";
 
-import { Menu, Item, InputBox } from "react-atomic-molecule";
+import {
+  SemanticUI,
+  Menu,
+  Item,
+  InputBox,
+  Button,
+} from "react-atomic-molecule";
 import SearchIcon from "ricon/Search";
 
 import { TabView, Tab } from "organism-react-navigation";
@@ -13,10 +19,11 @@ const RightMenu = () => (
   </Menu>
 );
 
-class TabViewExample extends PureComponent {
-  render() {
-    return (
-      <TabView rightMenu={<RightMenu />}>
+const TabViewExample = (props) => {
+  const [selected, setSelected] = useState();
+  return (
+    <SemanticUI>
+      <TabView selected={selected} rightMenu={<RightMenu />}>
         <Tab>
           <div>content1</div>
           <div>menu1</div>
@@ -26,8 +33,10 @@ class TabViewExample extends PureComponent {
           <div>menu2</div>
         </Tab>
       </TabView>
-    );
-  }
-}
+      <Button onClick={()=>setSelected(0)}>to tab1</Button>
+      <Button onClick={()=>setSelected(1)}>to tab2</Button>
+    </SemanticUI>
+  );
+};
 
 export default TabViewExample;
