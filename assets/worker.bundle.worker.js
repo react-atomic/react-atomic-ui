@@ -576,13 +576,13 @@ var initMap = function initMap(o) {
   };
 };
 
-var getDefaultValue = function getDefaultValue(v) {
-  return reshow_constant__WEBPACK_IMPORTED_MODULE_1__["FUNCTION"] === Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(v) ? v() : v;
+var getDefaultValue = function getDefaultValue(v, cur) {
+  return reshow_constant__WEBPACK_IMPORTED_MODULE_1__["FUNCTION"] === Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(v) ? v(cur) : v !== null && v !== void 0 ? v : cur;
 };
 
 var get = function get(o, path, defaultValue) {
   if (null == o) {
-    return getDefaultValue(defaultValue);
+    return getDefaultValue(defaultValue, o);
   }
 
   var current = toJS(o);
@@ -593,9 +593,15 @@ var get = function get(o, path, defaultValue) {
 
   try {
     path.every(function (a) {
-      if (null != current[a]) {
+      if (current && reshow_constant__WEBPACK_IMPORTED_MODULE_1__["UNDEFINED"] !== Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(current[a])) {
         current = current[a];
-        return true;
+
+        if (null == current) {
+          current = getDefaultValue(defaultValue, current);
+          return false;
+        } else {
+          return true;
+        }
       } else {
         current = getDefaultValue(defaultValue);
         return false;
