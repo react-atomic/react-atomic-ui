@@ -15,7 +15,7 @@ production(){
 analyzer(){
     echo "Analyzer Mode";
     npm run build
-    CONFIG=$conf BUNDLE='{}' $webpack --json > a.json
+    CONFIG=$conf BUNDLE='{}' $webpack
 }
 
 develop(){

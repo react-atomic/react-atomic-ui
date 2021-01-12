@@ -32,6 +32,10 @@ class D3 extends BasePage {
   render() {
     return (
       <Doc>
+        <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
+          <D3Uml />
+        </CodeExample>
+
         <CodeExample code={d3LineChart} header="D3 Line Chart">
           <D3LineChart />
         </CodeExample>
@@ -46,10 +50,6 @@ class D3 extends BasePage {
 
         <CodeExample code={d3PieChart} header="D3 Pie Chart">
           <D3PieChart />
-        </CodeExample>
-
-        <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
-          <D3Uml />
         </CodeExample>
 
         <CodeExample code={stockChart} header="Stock Chart">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { UMLGraph } from "organism-react-d3-uml";
 import { Form, Field, Button } from "react-atomic-molecule";
@@ -31,6 +31,7 @@ const data = {
 
 const D3UmlExample = () => {
   const uml = useRef();
+  const [isDisableCurve, setIsDisableCurve] = useState(false);
   const handleUml = (el) => (uml.current = el);
   const handleUpdate = (e) => {
     const t = e.currentTarget || {};
@@ -52,13 +53,13 @@ const D3UmlExample = () => {
         onZoom={handleZoom}
         ref={handleUml}
         data={data}
+        lineDefaultProps={{curve: !isDisableCurve}}
         connsLocator={(d) => d.conns}
         connFromBoxGroupLocator={(d) => d.from.table}
         connFromBoxLocator={(d) => d.from.col}
         connToBoxGroupLocator={(d) => d.to.table}
         connToBoxLocator={(d) => d.to.col}
         onBoxWillDrag={(e) => {
-          console.log({ e });
           return !isDisableMove.getChecked().input;
         }}
         onLineDel={(e) => {
@@ -73,6 +74,11 @@ const D3UmlExample = () => {
           <Field atom="input" label="k" name="k" />
         </Field>
         <Field>
+          <Checkbox
+            toggle
+            label="disable curve"
+            onChange={({checked}) => {setIsDisableCurve(checked)}}
+          />
           <Checkbox
             label="disable line delete"
             ref={(el) => (isDisableDel = el)}
