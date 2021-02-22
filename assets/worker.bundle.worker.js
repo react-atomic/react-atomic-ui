@@ -727,22 +727,22 @@ var keys = Object.keys;
 var arrWs = {};
 
 var handleMessage = function handleMessage(e) {
-  var data = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(e, ['data']);
+  var data = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(e, ["data"]);
 
   switch (data.type) {
-    case 'initWs':
+    case "initWs":
       initWs(data.ws)(data.params);
       break;
 
-    case 'closeWs':
+    case "closeWs":
       closeWs(data.ws);
       break;
 
-    case 'ajaxGet':
+    case "ajaxGet":
       ajaxGet(data);
       break;
 
-    case 'ajaxPost':
+    case "ajaxPost":
       ajaxPost(data);
       break;
   }
@@ -753,15 +753,15 @@ var post = oNonWorker.post;
 /* harmony default export */ __webpack_exports__["default"] = (oNonWorker);
 
 var cookParams = function cookParams(action, callReq) {
-  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ['params'], {});
+  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"], {});
 
-  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ['globalHeaders'], {})), Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ['headers'], {})), {}, {
-    Accept: Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ['accept'], 'application/json')
+  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {})), Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {})), {}, {
+    Accept: Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["accept"], "application/json")
   });
 
   params.cookHeaders = cookHeaders;
   var superagent = params.superagent || {};
-  var syncKeys = ['responseType'];
+  var syncKeys = ["responseType"];
   syncKeys.forEach(function (key) {
     if (params[key]) {
       superagent[key] = params[key];
@@ -799,20 +799,20 @@ var ajaxPost = function ajaxPost(_ref2) {
       action = _ref2.action;
   var callReq;
 
-  switch (Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ['params', 'method'])) {
-    case 'delete':
+  switch (Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "method"])) {
+    case "delete":
       callReq = superagent__WEBPACK_IMPORTED_MODULE_8___default.a.del(url);
       break;
 
-    case 'head':
+    case "head":
       callReq = superagent__WEBPACK_IMPORTED_MODULE_8___default.a.head(url);
       break;
 
-    case 'patch':
+    case "patch":
       callReq = superagent__WEBPACK_IMPORTED_MODULE_8___default.a.patch(url);
       break;
 
-    case 'put':
+    case "put":
       callReq = superagent__WEBPACK_IMPORTED_MODULE_8___default.a.put(url);
       break;
 
@@ -835,7 +835,7 @@ var ajaxPost = function ajaxPost(_ref2) {
   } else {
     if (null == isSendJson && query) {
       keys(query).every(function (key) {
-        if ('object' !== Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_3__["default"])(query[key])) {
+        if ("object" !== Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_3__["default"])(query[key])) {
           return true;
         }
 
@@ -846,7 +846,7 @@ var ajaxPost = function ajaxPost(_ref2) {
   }
 
   if (!isSend) {
-    callReq = callReq.type('form');
+    callReq = callReq.type("form");
   }
 
   callReq.send(query).set(cookHeaders).end(function (err, res) {
@@ -885,12 +885,12 @@ var WebSocketHelper = /*#__PURE__*/function () {
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "ping", function () {
       _this.pingTimeout = setTimeout(function () {
         if (!_this.isWsConnect) {
-          console.warn(_this.url, 'ajaxws-restore');
+          console.warn(_this.url, "ajaxws-restore");
 
           _this.open();
         } else {
           _this.ws.send(JSON.stringify({
-            type: 'ping'
+            type: "ping"
           }));
         }
 
@@ -926,7 +926,7 @@ var WebSocketHelper = /*#__PURE__*/function () {
 
         var messages = params.messages;
 
-        if (Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(messages, ['length'])) {
+        if (Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(messages, ["length"])) {
           messages.forEach(function (m) {
             return ws.send(JSON.stringify(m));
           });
@@ -939,12 +939,12 @@ var WebSocketHelper = /*#__PURE__*/function () {
 
       ws.onmessage = function (e) {
         switch (e.data) {
-          case 'pong':
+          case "pong":
             break;
 
           default:
             post({
-              type: 'ws',
+              type: "ws",
               text: e.data,
               url: url
             });
@@ -954,7 +954,7 @@ var WebSocketHelper = /*#__PURE__*/function () {
 
       ws.onclose = function (e) {
         _this2.isWsConnect = false;
-        console.warn('WS close', url);
+        console.warn("WS close", url);
       };
     }
   }, {
@@ -1019,7 +1019,7 @@ var SCRIPT = 'script';
 __webpack_require__.r(__webpack_exports__);
 function classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
+    throw new TypeError("Cannot call a class as a function");
   }
 }
 
@@ -1095,14 +1095,14 @@ var _defineProperty = function _defineProperty(obj, key, value) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-constant */ "./node_modules/reshow-constant/build/es/index.js");
 
-var types = '|number|boolean|' + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["STRING"] + '|' + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["OBJECT"] + '|' + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["FUNCTION"] + '|' + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["UNDEFINED"] + '|';
+var types = "|number|boolean|" + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["STRING"] + "|" + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["OBJECT"] + "|" + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["FUNCTION"] + "|" + reshow_constant__WEBPACK_IMPORTED_MODULE_0__["UNDEFINED"] + "|";
 /**
  * Do not use this.
  * The class name not reliable after code compress.
  */
 
 var toBase = function toBase(type, name) {
-  if (-1 === types.indexOf('|' + type + '|')) {
+  if (-1 === types.indexOf("|" + type + "|")) {
     if (!name) {
       name = type;
     }
@@ -1114,7 +1114,7 @@ var toBase = function toBase(type, name) {
 };
 
 var getTypeIs = function getTypeIs(val, name) {
-  var type = Object.prototype.toString.call(val).replace(/^\[object\s(.*)\]$/, '$1').toLowerCase();
+  var type = Object.prototype.toString.call(val).replace(/^\[object\s(.*)\]$/, "$1").toLowerCase();
   return toBase(type, name);
 };
 
