@@ -6997,9 +6997,9 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.10.7"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.10.7.tgz#23c1a24b6d858f0a1f6a78f9cb5693ff6d544a2b"
-  integrity sha512-J/gL/l3Nv/+V0VL9UvYavCLfpUPJGULDniGLhIh8kRpcPmdhn7ppI23ySM5ejKCG07EACsj3tSIluCXLf6Xj1w==
+  version "0.10.8"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.10.8.tgz#34ff307529ad8e19ccc3c70fc4f4eaff24c021f6"
+  integrity sha512-SKNoDu6jJ2LRSTHbvD8REnIpfT1cllCLEPX5N0g83lghpYpffY7F+m5hQ5ObvjREtGH6wfyXk27rMuOUpeDh8Q==
   dependencies:
     array.merge "*"
     call-func "*"
