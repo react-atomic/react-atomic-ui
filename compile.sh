@@ -44,6 +44,7 @@ stop(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
     cat webpack.pid | xargs -I{} kill -9 {}
+    npm run clean
 }
 
 watch(){
@@ -62,7 +63,6 @@ watchTest(){
 
 hot(){
     stop 
-    npm run clean
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
     HOT_UPDATE=1 CONFIG=$conf $webpack serve &

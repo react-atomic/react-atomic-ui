@@ -755,7 +755,7 @@ var post = oNonWorker.post;
 var cookParams = function cookParams(action, callReq) {
   var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"], {});
 
-  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {})), Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {})), {}, {
+  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {}), {}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {}), {
     Accept: Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["accept"], "application/json")
   });
 
@@ -786,7 +786,7 @@ var ajaxGet = function ajaxGet(_ref) {
           xhr = res.xhr,
           response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
 
-      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action), {}, {
+      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action, {
         text: text,
         response: response
       }));
@@ -857,7 +857,7 @@ var ajaxPost = function ajaxPost(_ref2) {
           xhr = res.xhr,
           response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
 
-      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action), {}, {
+      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action, {
         text: text,
         response: response
       }));
@@ -874,7 +874,9 @@ var closeWs = function closeWs(url) {
   return !arrWs[url];
 };
 
-var WebSocketHelper = /*#__PURE__*/function () {
+var WebSocketHelper =
+/*#__PURE__*/
+function () {
   function WebSocketHelper(url, params) {
     var _this = this;
 
