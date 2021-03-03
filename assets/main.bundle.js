@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "564426b14f053eaf3f19" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "9fe08c9149054280f8cf" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -1207,6 +1207,146 @@ var D3UmlExample = function D3UmlExample() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (D3UmlExample);
+
+/***/ }),
+
+/***/ "./build/ui/organisms/D3UmlPerf.example.js":
+/*!*************************************************!*\
+  !*** ./build/ui/organisms/D3UmlPerf.example.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-uml */ "./node_modules/organism-react-d3-uml/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+
+
+
+
+var data = {
+  tables: [{
+    name: "table1",
+    cols: ["t1-col1", "t1-col2"]
+  }, {
+    name: "table2",
+    cols: ["t2-col1", "t2-col2"]
+  }],
+  conns: [{
+    from: {
+      table: "table1",
+      col: "t1-col1"
+    },
+    to: {
+      table: "table2",
+      col: "t2-col2"
+    }
+  }]
+};
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+  atom: "input",
+  label: "x",
+  name: "x"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+  atom: "input",
+  label: "y",
+  name: "y"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+  atom: "input",
+  label: "k",
+  name: "k"
+}));
+
+var D3UmlPerfExample = function D3UmlPerfExample() {
+  var uml = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDisableCurve = _useState[0],
+      setIsDisableCurve = _useState[1];
+
+  var handleUml = function handleUml(el) {
+    return uml.current = el;
+  };
+
+  var handleUpdate = function handleUpdate(e) {
+    var t = e.currentTarget || {};
+    var fm = t.form;
+    uml.current.zoom.setXYK({
+      x: fm.x.value || null,
+      y: fm.y.value || null,
+      k: fm.k.value || null
+    });
+  };
+
+  var handleZoom = function handleZoom(e) {//  console.log(e.zoom.getXYK());
+  };
+
+  var isDisableDel;
+  var isDisableMove;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__["UMLGraph"], {
+    onZoom: handleZoom,
+    ref: handleUml,
+    data: data,
+    lineDefaultProps: {
+      curve: !isDisableCurve
+    },
+    connsLocator: function connsLocator(d) {
+      return d.conns;
+    },
+    connFromBoxGroupLocator: function connFromBoxGroupLocator(d) {
+      return d.from.table;
+    },
+    connFromBoxLocator: function connFromBoxLocator(d) {
+      return d.from.col;
+    },
+    connToBoxGroupLocator: function connToBoxGroupLocator(d) {
+      return d.to.table;
+    },
+    connToBoxLocator: function connToBoxLocator(d) {
+      return d.to.col;
+    },
+    onBoxWillDrag: function onBoxWillDrag(e) {
+      return !isDisableMove.getChecked().input;
+    },
+    onLineDel: function onLineDel(e) {
+      console.log({
+        e: e
+      });
+      return !isDisableDel.getChecked().input;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+    style: {
+      boxSizing: "border-box"
+    },
+    className: "equal width"
+  }, _ref, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+    toggle: true,
+    label: "disable curve",
+    onChange: function onChange(_ref2) {
+      var checked = _ref2.checked;
+      setIsDisableCurve(checked);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+    label: "disable line delete",
+    ref: function ref(el) {
+      return isDisableDel = el;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+    label: "disable node move",
+    ref: function ref(el) {
+      return isDisableMove = el;
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    onClick: handleUpdate
+  }, "update")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3UmlPerfExample);
 
 /***/ }),
 
@@ -3651,6 +3791,67 @@ Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["de
 
 /***/ }),
 
+/***/ "./build/ui/pages/D3UmlPerf.js":
+/*!*************************************!*\
+  !*** ./build/ui/pages/D3UmlPerf.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _pages_BasePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/BasePage */ "./build/ui/pages/BasePage.js");
+/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../templates/Doc */ "./build/ui/templates/Doc.js");
+/* harmony import */ var _organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../organisms/D3UmlPerf.example */ "./build/ui/organisms/D3UmlPerf.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! raw-loader!../../../ui/organisms/D3UmlPerf.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx");
+
+
+
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_templates_Doc__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  code: _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_7__["default"],
+  header: "D3 Uml",
+  id: "d3-uml"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+
+var D3UmlPerfPage = /*#__PURE__*/function (_BasePage) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(D3UmlPerfPage, _BasePage);
+
+  function D3UmlPerfPage() {
+    return _BasePage.apply(this, arguments) || this;
+  }
+
+  var _proto = D3UmlPerfPage.prototype;
+
+  _proto.render = function render() {
+    return _ref;
+  };
+
+  return D3UmlPerfPage;
+}(_pages_BasePage__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(D3UmlPerfPage, "defaultProps", {
+  pageName: "d3UmlPerf"
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (D3UmlPerfPage);
+
+/***/ }),
+
 /***/ "./build/ui/pages/GrapesJs.js":
 /*!************************************!*\
   !*** ./build/ui/pages/GrapesJs.js ***!
@@ -4700,15 +4901,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_List__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/List */ "./build/ui/pages/List.js");
 /* harmony import */ var _pages_Carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/Carousel */ "./build/ui/pages/Carousel.js");
 /* harmony import */ var _pages_D3__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/D3 */ "./build/ui/pages/D3.js");
-/* harmony import */ var _pages_Animation__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/Animation */ "./build/ui/pages/Animation.js");
-/* harmony import */ var _pages_Popup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/Popup */ "./build/ui/pages/Popup.js");
-/* harmony import */ var _pages_Video__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/Video */ "./build/ui/pages/Video.js");
-/* harmony import */ var _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/Parallax */ "./build/ui/pages/Parallax.js");
-/* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/Code */ "./build/ui/pages/Code.js");
-/* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/ui/pages/AsciiDoc.js");
-/* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/ui/pages/GrapesJs.js");
-/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/PDF */ "./build/ui/pages/PDF.js");
-/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/JSON */ "./build/ui/pages/JSON.js");
+/* harmony import */ var _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/D3UmlPerf */ "./build/ui/pages/D3UmlPerf.js");
+/* harmony import */ var _pages_Animation__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/Animation */ "./build/ui/pages/Animation.js");
+/* harmony import */ var _pages_Popup__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/Popup */ "./build/ui/pages/Popup.js");
+/* harmony import */ var _pages_Video__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/Video */ "./build/ui/pages/Video.js");
+/* harmony import */ var _pages_Parallax__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/Parallax */ "./build/ui/pages/Parallax.js");
+/* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/Code */ "./build/ui/pages/Code.js");
+/* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/ui/pages/AsciiDoc.js");
+/* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/ui/pages/GrapesJs.js");
+/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/PDF */ "./build/ui/pages/PDF.js");
+/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/JSON */ "./build/ui/pages/JSON.js");
+
 
 
 
@@ -4738,18 +4941,19 @@ var themes = {
   molecules: _pages_Molecules__WEBPACK_IMPORTED_MODULE_9__["default"],
   organisms: _pages_Organisms__WEBPACK_IMPORTED_MODULE_10__["default"],
   d3: _pages_D3__WEBPACK_IMPORTED_MODULE_14__["default"],
+  d3UrmlPerf: _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_15__["default"],
   icons: _pages_Icons__WEBPACK_IMPORTED_MODULE_11__["default"],
   list: _pages_List__WEBPACK_IMPORTED_MODULE_12__["default"],
   carousel: _pages_Carousel__WEBPACK_IMPORTED_MODULE_13__["default"],
-  animation: _pages_Animation__WEBPACK_IMPORTED_MODULE_15__["default"],
-  popup: _pages_Popup__WEBPACK_IMPORTED_MODULE_16__["default"],
-  parallax: _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__["default"],
-  video: _pages_Video__WEBPACK_IMPORTED_MODULE_17__["default"],
-  Code: _pages_Code__WEBPACK_IMPORTED_MODULE_19__["default"],
-  AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__["default"],
-  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__["default"],
-  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_22__["default"],
-  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_23__["default"]
+  animation: _pages_Animation__WEBPACK_IMPORTED_MODULE_16__["default"],
+  popup: _pages_Popup__WEBPACK_IMPORTED_MODULE_17__["default"],
+  parallax: _pages_Parallax__WEBPACK_IMPORTED_MODULE_19__["default"],
+  video: _pages_Video__WEBPACK_IMPORTED_MODULE_18__["default"],
+  Code: _pages_Code__WEBPACK_IMPORTED_MODULE_20__["default"],
+  AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_21__["default"],
+  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_22__["default"],
+  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_23__["default"],
+  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_24__["default"]
 };
 
 var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupPool"], null);
@@ -5035,6 +5239,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("import React, { useRef, useState } from \"react\";\n\nimport { UMLGraph } from \"organism-react-d3-uml\";\nimport { Form, Field, Button } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst data = {\n  tables: [\n    {\n      name: \"table1\",\n      cols: [\"t1-col1\", \"t1-col2\"],\n    },\n    {\n      name: \"table2\",\n      cols: [\"t2-col1\", \"t2-col2\"],\n    },\n  ],\n  conns: [\n    {\n      from: {\n        table: \"table1\",\n        col: \"t1-col1\",\n      },\n      to: {\n        table: \"table2\",\n        col: \"t2-col2\",\n      },\n    },\n  ],\n};\n\nconst D3UmlExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: \"border-box\" }} className=\"equal width\">\n        <Field>\n          <Field atom=\"input\" label=\"x\" name=\"x\" />\n          <Field atom=\"input\" label=\"y\" name=\"y\" />\n          <Field atom=\"input\" label=\"k\" name=\"k\" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label=\"disable curve\"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label=\"disable line delete\"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label=\"disable node move\"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useRef, useState } from \"react\";\n\nimport { UMLGraph } from \"organism-react-d3-uml\";\nimport { Form, Field, Button } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst data = {\n  tables: [\n    {\n      name: \"table1\",\n      cols: [\"t1-col1\", \"t1-col2\"],\n    },\n    {\n      name: \"table2\",\n      cols: [\"t2-col1\", \"t2-col2\"],\n    },\n  ],\n  conns: [\n    {\n      from: {\n        table: \"table1\",\n        col: \"t1-col1\",\n      },\n      to: {\n        table: \"table2\",\n        col: \"t2-col2\",\n      },\n    },\n  ],\n};\n\nconst D3UmlPerfExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: \"border-box\" }} className=\"equal width\">\n        <Field>\n          <Field atom=\"input\" label=\"x\" name=\"x\" />\n          <Field atom=\"input\" label=\"y\" name=\"y\" />\n          <Field atom=\"input\" label=\"k\" name=\"k\" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label=\"disable curve\"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label=\"disable line delete\"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label=\"disable node move\"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlPerfExample;\n");
 
 /***/ }),
 

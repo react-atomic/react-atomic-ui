@@ -12,6 +12,7 @@ import Icons from "../pages/Icons";
 import List from "../pages/List";
 import Carousel from "../pages/Carousel";
 import D3 from "../pages/D3";
+import D3UmlPerf from "../pages/D3UmlPerf";
 import Animation from "../pages/Animation";
 import Popup from "../pages/Popup";
 import Video from "../pages/Video";
@@ -27,6 +28,7 @@ const themes = {
   molecules: Molecules,
   organisms: Organisms,
   d3: D3,
+  d3UrmlPerf: D3UmlPerf,
   icons: Icons,
   list: List,
   carousel: Carousel,
