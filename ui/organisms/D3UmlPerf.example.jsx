@@ -21,7 +21,7 @@ const data = {
   ],
 };
 
-for (let i = 1; i < 500; i++) {
+for (let i = 1; i < 300; i++) {
   data.tables.push(
     {
       name: `table${i}`,
