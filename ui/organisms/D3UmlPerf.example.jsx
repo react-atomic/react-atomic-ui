@@ -6,14 +6,6 @@ import { Checkbox } from "react-atomic-organism";
 
 const data = {
   tables: [
-    {
-      name: "table1",
-      cols: ["t1-col1", "t1-col2"],
-    },
-    {
-      name: "table2",
-      cols: ["t2-col1", "t2-col2"],
-    },
   ],
   conns: [
     {
@@ -28,6 +20,15 @@ const data = {
     },
   ],
 };
+
+for (let i = 1; i < 500; i++) {
+  data.tables.push(
+    {
+      name: `table${i}`,
+      cols: [`t${i}-col1`, `t${i}-col2`],
+    },
+  );
+}
 
 const D3UmlPerfExample = () => {
   const uml = useRef();
@@ -48,7 +49,7 @@ const D3UmlPerfExample = () => {
   let isDisableDel;
   let isDisableMove;
   return (
-    <div>
+    <div style={{height: "50vh"}}>
       <UMLGraph
         onZoom={handleZoom}
         ref={handleUml}
