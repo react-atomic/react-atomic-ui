@@ -51,6 +51,7 @@ stop(){
 
 watch(){
     stop 
+    echo "Watch Mode";
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
     sleep 10 
@@ -59,12 +60,14 @@ watch(){
 
 watchTest(){
     stop 
+    echo "Watch Test";
     npm run build:test:ui -- --watch &
     npm run build:test:src -- --watch &
 }
 
 hot(){
     stop 
+    echo "Hot Mode";
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
     HOT_UPDATE=1 CONFIG=$conf $webpack serve &
