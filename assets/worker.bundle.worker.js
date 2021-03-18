@@ -721,6 +721,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _this = undefined;
+
+
 
 
 var keys = Object.keys;
@@ -749,13 +752,24 @@ var handleMessage = function handleMessage(e) {
 };
 
 var oNonWorker = new non_worker__WEBPACK_IMPORTED_MODULE_7__["default"]().onMessage(handleMessage);
-var post = oNonWorker.post;
+
+var post = function post(payload) {
+  var strWcb = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(payload, ["params", "workerCallback"]);
+
+  if (strWcb) {
+    var wcb = eval("(" + strWcb + ")");
+    payload = wcb(payload);
+  }
+
+  oNonWorker.post.call(_this, payload);
+};
+
 /* harmony default export */ __webpack_exports__["default"] = (oNonWorker);
 
 var cookParams = function cookParams(action, callReq) {
   var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"], {});
 
-  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {}), {}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {}), {
+  var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {})), Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {})), {}, {
     Accept: Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["accept"], "application/json")
   });
 
@@ -786,10 +800,11 @@ var ajaxGet = function ajaxGet(_ref) {
           xhr = res.xhr,
           response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
 
-      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action, {
+      action.params = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action.params), {}, {
         text: text,
         response: response
-      }));
+      });
+      post(action);
     }
   });
 };
@@ -857,10 +872,11 @@ var ajaxPost = function ajaxPost(_ref2) {
           xhr = res.xhr,
           response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
 
-      post(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action, {
+      action.params = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action.params), {}, {
         text: text,
         response: response
-      }));
+      });
+      post(action);
     }
   });
 };
@@ -874,29 +890,27 @@ var closeWs = function closeWs(url) {
   return !arrWs[url];
 };
 
-var WebSocketHelper =
-/*#__PURE__*/
-function () {
+var WebSocketHelper = /*#__PURE__*/function () {
   function WebSocketHelper(url, params) {
-    var _this = this;
+    var _this2 = this;
 
     Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, WebSocketHelper);
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "isWsConnect", false);
 
     Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(this, "ping", function () {
-      _this.pingTimeout = setTimeout(function () {
-        if (!_this.isWsConnect) {
-          console.warn(_this.url, "ajaxws-restore");
+      _this2.pingTimeout = setTimeout(function () {
+        if (!_this2.isWsConnect) {
+          console.warn(_this2.url, "ajaxws-restore");
 
-          _this.open();
+          _this2.open();
         } else {
-          _this.ws.send(JSON.stringify({
+          _this2.ws.send(JSON.stringify({
             type: "ping"
           }));
         }
 
-        _this.ping();
+        _this2.ping();
       }, 15000);
     });
 
@@ -910,7 +924,7 @@ function () {
   Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(WebSocketHelper, [{
     key: "open",
     value: function open() {
-      var _this2 = this;
+      var _this3 = this;
 
       if (this.isWsConnect) {
         return;
@@ -922,9 +936,9 @@ function () {
       this.ws = ws;
 
       ws.onopen = function (e) {
-        _this2.isWsConnect = true;
+        _this3.isWsConnect = true;
 
-        _this2.ping();
+        _this3.ping();
 
         var messages = params.messages;
 
@@ -936,7 +950,7 @@ function () {
       };
 
       ws.onerror = function (e) {
-        _this2.isWsConnect = false;
+        _this3.isWsConnect = false;
       };
 
       ws.onmessage = function (e) {
@@ -947,15 +961,17 @@ function () {
           default:
             post({
               type: "ws",
-              text: e.data,
-              url: url
+              params: {
+                text: e.data,
+                url: url
+              }
             });
             break;
         }
       };
 
       ws.onclose = function (e) {
-        _this2.isWsConnect = false;
+        _this3.isWsConnect = false;
         console.warn("WS close", url);
       };
     }

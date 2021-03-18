@@ -1,6 +1,10 @@
 #!/bin/sh
 
-conf='{"assetsRoot":"./assets/", "externals":{"d3": "d3"}}'
+conf='{'
+conf+='"assetsRoot":"./assets/",'
+conf+='"externals":{"d3": "d3"},'
+conf+='"devPort": "'${devPort:-8080}'"'
+conf+='}'
 
 PWD=`dirname $0`
 cd $PWD
@@ -29,9 +33,7 @@ startServer(){
     DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/ws
     yarn
-    if [ -z "$port" ] ; then
-        port=3000;
-    fi
+    port=${port-3000}
     echo "Start server";
     npm run start -- -p $port -v
 }

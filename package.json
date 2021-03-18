@@ -16,7 +16,7 @@
     "organism-react-animate": "*",
     "organism-react-asciidoc": "*",
     "organism-react-carousel": "*",
-    "organism-react-code": "^0.13.0-beta",
+    "organism-react-code": "*",
     "organism-react-codeeditor": "*",
     "organism-react-d3-axis-chart": "*",
     "organism-react-d3-piechart": "*",
@@ -25,10 +25,10 @@
     "organism-react-facebook": "*",
     "organism-react-grapesjs": "*",
     "organism-react-html2canvas": "*",
-    "organism-react-i13n": "^0.13.0-beta",
+    "organism-react-i13n": "*",
     "organism-react-navigation": "*",
     "organism-react-parallax": "*",
-    "organism-react-progress": "^0.13.0-beta",
+    "organism-react-progress": "*",
     "organism-react-qq-video": "*",
     "organism-react-spotlight": "*",
     "organism-react-stockcharts": "*",
@@ -43,9 +43,9 @@
     "ricon": "*"
   },
   "devDependencies": {
-    "organism-react-ajax": "^0.13.0-beta",
+    "organism-react-ajax": "*",
     "raw-loader": "*",
-    "reshow-app": "^0.13.0-beta",
+    "reshow-app": "*",
     "reshow-url": "*"
   },
   "scripts": {

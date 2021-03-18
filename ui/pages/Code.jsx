@@ -14,12 +14,6 @@ class Code extends BasePage {
     pageName: "Code",
   };
 
-  state = {};
-
-  componentDidMount() {
-    this.setState({ value: null });
-  }
-
   render() {
     return (
       <Doc>

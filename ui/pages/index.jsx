@@ -28,7 +28,7 @@ const themes = {
   molecules: Molecules,
   organisms: Organisms,
   d3: D3,
-  d3UrmlPerf: D3UmlPerf,
+  d3UmlPerf: D3UmlPerf,
   icons: Icons,
   list: List,
   carousel: Carousel,
