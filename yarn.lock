@@ -2231,9 +2231,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001181:
-  version "1.0.30001202"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001202.tgz#4cb3bd5e8a808e8cd89e4e66c549989bc8137201"
-  integrity sha512-ZcijQNqrcF8JNLjzvEiXqX4JUYxoZa7Pvcsd9UD8Kz4TvhTonOSNRsK+qtvpVL4l6+T1Rh4LFtLfnNWg6BGWCQ==
+  version "1.0.30001203"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001203.tgz#a7a34df21a387d9deffcd56c000b8cf5ab540580"
+  integrity sha512-/I9tvnzU/PHMH7wBPrfDMSuecDeUKerjCPX7D0xBbaJZPxoT9m+yYxt0zCTkcijCkjTdim3H56Zm0i5Adxch4w==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -3477,9 +3477,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.649:
-  version "1.3.691"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.691.tgz#a671eaf135a3ccec0915eb8d844a0952aba79f3b"
-  integrity sha512-ZqiO69KImmOGCyoH0icQPU3SndJiW93juEvf63gQngyhODO6SpQIPMTOHldtCs5DS5GMKvAkquk230E2zt2vpw==
+  version "1.3.692"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.692.tgz#4d00479055a7282cdd1b19caec09ed7779529640"
+  integrity sha512-Ix+zDUAXWZuUzqKdhkgN5dP7ZM+IwMG4yAGFGDLpGJP/3vNEEwuHG1LIhtXUfW0FFV0j38t5PUv2n/3MFSRviQ==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -4583,9 +4583,9 @@ globals@^12.1.0:
     type-fest "^0.8.1"
 
 globals@^13.6.0:
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-13.6.0.tgz#d77138e53738567bb96a3916ff6f6b487af20ef7"
-  integrity sha512-YFKCX0SiPg7l5oKYCJ2zZGxcXprVXHcSnVuvzrT3oSENQonVLqM5pf9fN5dLGZGyCjhw8TN8Btwe/jKnZ0pjvQ==
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-13.7.0.tgz#aed3bcefd80ad3ec0f0be2cf0c895110c0591795"
+  integrity sha512-Aipsz6ZKRxa/xQkZhNg0qIWXT6x6rD46f6x/PCnBomlttdIyAPak4YD9jTmKpZ72uROSMU87qJtcgpgHaVchiA==
   dependencies:
     type-fest "^0.20.2"
 
@@ -6815,9 +6815,9 @@ ora@2.0.0:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.2.tgz#b820745afc9eb3aaa2c5d5c4317943cf3146d495"
-  integrity sha512-vRsN/EH2PRSKZnTHQ6v5dxrVDkdkdJ5dhBJXEGflJE4mwn8gZ2RzXJaOXagc+h7a+iUv3AAjWlMty/v9JcR1VA==
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.3.tgz#0c1ced54e548db6b352f0e05ff32029500297a54"
+  integrity sha512-hrjEwaI+4OB5LJ8pkYWYt7Ex8U6Uy48aKnc/Y4eK3XdCkh7KqY/JXxikCXvD5llPZycQcDt2+Cj6dcUMqzhzgw==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -6917,9 +6917,9 @@ organism-react-d3-piechart@*:
     react-atomic-molecule "*"
 
 organism-react-d3-uml@*:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.6.1.tgz#603b20e2b696670822e23e8c60e72ed8c24cdba8"
-  integrity sha512-QHFzOYX9FE63Zw+8rQnl/u4rItgX5cDXVgpHLOlGcKLMKsz9cfMIBlRhHXvQGf3cRcb2BygL/+pfkC9snF6g4Q==
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.6.2.tgz#2f8aefb958f8d2c9a64b54bdd8179eb1f388b2b2"
+  integrity sha512-cIBXoCvdpF8iZeGt0sVc/a7I2nFDslxJO1zzXGOHtOtazS1aqa6lY8Poi5odvyoeK9K1oT3HFMBLgUNJ+mZbGw==
   dependencies:
     array.merge "*"
     css-query-selector "*"
@@ -6980,9 +6980,9 @@ organism-react-graph@*:
     win-doc "*"
 
 organism-react-html2canvas@*:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/organism-react-html2canvas/-/organism-react-html2canvas-0.0.3.tgz#b6323d795a0d498ab3ece1cca917fe73cc37aac2"
-  integrity sha512-9Q/sT0mP5qjNULGlwc9f8E0+9/4Z/HT1Z6bVPc0SMVm8wADZwlsFzPENkpecNCtJL8fOHflVGBGYcj9S+XohnA==
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/organism-react-html2canvas/-/organism-react-html2canvas-0.0.4.tgz#f8064c7f138be7f1488e2d1407eaed0ebf3207d2"
+  integrity sha512-NFIEjvit+MKHNWUEMifSs/LSZrM2zIA8fjEczCysiWdlagCS0wtN3tFSCgZ5lvMdmC5HKSSd9SvBK2vDlQKwQg==
   dependencies:
     organism-react-iframe "*"
     ratio-js "*"
@@ -7674,9 +7674,11 @@ qs@6.7.0:
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 qs@^6.5.2, qs@^6.9.1:
-  version "6.9.6"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
-  integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.0.tgz#8b6519121ab291c316a3e4d49cecf6d13d8c7fe5"
+  integrity sha512-yjACOWijC6L/kmPZZAsVBNY2zfHSIbpdpL977quseu56/8BZ2LoF5axK2bGhbzhVKt7V9xgWTtpyLbxwIoER0Q==
+  dependencies:
+    side-channel "^1.0.4"
 
 qs@~6.5.2:
   version "6.5.2"
@@ -8715,6 +8717,15 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+side-channel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
+  integrity sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==
+  dependencies:
+    call-bind "^1.0.0"
+    get-intrinsic "^1.0.2"
+    object-inspect "^1.9.0"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.3"
