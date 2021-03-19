@@ -3477,9 +3477,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.649:
-  version "1.3.692"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.692.tgz#4d00479055a7282cdd1b19caec09ed7779529640"
-  integrity sha512-Ix+zDUAXWZuUzqKdhkgN5dP7ZM+IwMG4yAGFGDLpGJP/3vNEEwuHG1LIhtXUfW0FFV0j38t5PUv2n/3MFSRviQ==
+  version "1.3.693"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.693.tgz#5089c506a925c31f93fcb173a003a22e341115dd"
+  integrity sha512-vUdsE8yyeu30RecppQtI+XTz2++LWLVEIYmzeCaCRLSdtKZ2eXqdJcrs85KwLiPOPVc6PELgWyXBsfqIvzGZag==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -6815,9 +6815,9 @@ ora@2.0.0:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.14.3"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.3.tgz#0c1ced54e548db6b352f0e05ff32029500297a54"
-  integrity sha512-hrjEwaI+4OB5LJ8pkYWYt7Ex8U6Uy48aKnc/Y4eK3XdCkh7KqY/JXxikCXvD5llPZycQcDt2+Cj6dcUMqzhzgw==
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.14.5.tgz#25867cec57d037347fd9800d7aec35ec2ef4292e"
+  integrity sha512-LWFrINeOWHHv67InxH50z3ESRDyyhMFIfXBalDj6VRXwxy9KVSrU4vmptiREKS514eyz36H4xhIZpVAxs/h2XQ==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -8270,9 +8270,9 @@ reshow-runtime@*:
     reshow-constant "*"
 
 reshow-url@*:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/reshow-url/-/reshow-url-0.14.1.tgz#9b2eb2270755f42d7e30e42c0007706d401e7c0f"
-  integrity sha512-ItLWbq0uxGo75MHL64foRTgiodnuorrenSvEjAN1aeNPvPo6t4oY2BwcE2CrMO8tFlMH01gcwJICDYK28NhCSg==
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/reshow-url/-/reshow-url-0.14.3.tgz#00e390e365e66ef43dd7daa8e2d5e902f674c2f0"
+  integrity sha512-SCpDq+hIhRi0yV35TMNF46KKOhGRszqJKC8fpLxGRw8ZZ4MWXt+CnOiukx6tFdG+l6igKU+qH7OiQ/U5GZdwSQ==
   dependencies:
     array.dedup "*"
     organism-react-ajax "*"
@@ -8290,9 +8290,9 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@*:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.14.0.tgz#b6d4e57c23d1ab686ae7d969c28421686df8e5b9"
-  integrity sha512-UOreukYZ1B+9cPz1PQCu29A472l735Xva3/CkmeG+Fb5wPqZek3ZmZciAF7ybtwNELPq7GBJqOgqrDALEERwvg==
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.14.3.tgz#54c071ecd9f6f0a03da0d2678551c365b4e3b88e"
+  integrity sha512-2AZ+lb4aWSx5aSdQrEqlVzhgf4rin4LiWknQVGSt4ywdd0Zz04tkr0zOtvvlmFfADtr5eaL17tqLL5Hz1BtLoQ==
   dependencies:
     call-func "*"
     get-storage "*"
