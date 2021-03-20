@@ -1410,9 +1410,9 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4, ajv@^6.12.5, ajv
     uri-js "^4.2.2"
 
 ajv@^7.0.2:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.2.1.tgz#a5ac226171912447683524fa2f1248fcf8bac83d"
-  integrity sha512-+nu0HDv7kNSOua9apAVc979qd932rrZeb3WOvoiD31A/p1mIE5/9bN2027pE2rOPYEdS3UHzsvof4hY+lM9/WQ==
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.2.3.tgz#ca78d1cf458d7d36d1c3fa0794dd143406db5772"
+  integrity sha512-idv5WZvKVXDqKralOImQgPM9v6WOdLNa0IY3B3doOjw/YxRGT8I+allIJ6kd7Uaj+SF1xZUSU+nPM5aDNBVtnw==
   dependencies:
     fast-deep-equal "^3.1.1"
     json-schema-traverse "^1.0.0"
@@ -6917,9 +6917,9 @@ organism-react-d3-piechart@*:
     react-atomic-molecule "*"
 
 organism-react-d3-uml@*:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.6.2.tgz#2f8aefb958f8d2c9a64b54bdd8179eb1f388b2b2"
-  integrity sha512-cIBXoCvdpF8iZeGt0sVc/a7I2nFDslxJO1zzXGOHtOtazS1aqa6lY8Poi5odvyoeK9K1oT3HFMBLgUNJ+mZbGw==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.6.3.tgz#649274c52655165318cf2b660dfd72d7bab704d4"
+  integrity sha512-G9dfT+1uYPoPEcNeeif8qQzj/avXucwtj5F9GSz2sPk/uHIbGf9YDv0m5xagwQEwRA9Mwr6oyp6z8L5iF594FA==
   dependencies:
     array.merge "*"
     css-query-selector "*"
