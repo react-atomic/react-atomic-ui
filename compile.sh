@@ -3,7 +3,7 @@
 conf='{'
 conf+='"assetsRoot":"./assets/",'
 conf+='"externals":{"d3": "d3"},'
-conf+='"devPort": "'${devPort:-8080}'"'
+conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
 
 PWD=`dirname $0`
