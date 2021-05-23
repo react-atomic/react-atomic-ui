@@ -1,90 +1,77 @@
 {
-    "env": {
-        "test": {
-            "presets": [
-              ["@babel/preset-env", {
-                "loose": true, 
-                "targets": ["last 2 versions", "ie >= 8"]
-              }],
-              "@babel/preset-react"
-            ],
-            "plugins": [
-              "add-module-exports",
-              "dynamic-import-node",
-              "transform-react-pure-class-to-function",
-              "reshow-object-to-json-parse",
-              ["reshow-transform-runtime", {
-                "regenerator": false,
-                "version": "7.5.0"
-                }
-              ],
-              "@babel/plugin-proposal-optional-chaining",
-              "@babel/plugin-proposal-export-default-from",
-              "@babel/plugin-syntax-dynamic-import",
-              "@babel/plugin-transform-object-assign",
-              "@babel/plugin-transform-react-constant-elements",
-              "@babel/plugin-transform-spread",
-              "@babel/plugin-proposal-class-properties",
-              "@babel/plugin-proposal-object-rest-spread"
-            ]
-        },
-        "build": {
-            "presets": [
-              ["@babel/preset-env", {
-                "loose": true, 
-                "modules": false,
-                "targets": ["last 2 versions", "ie >= 8"]
-              }],
-              "@babel/preset-react"
-            ],
-            "plugins": [
-              "transform-react-pure-class-to-function",
-              ["transform-react-remove-prop-types", {"mode": "wrap"}],
-              "reshow-object-to-json-parse",
-              ["reshow-transform-runtime", {
-                "regenerator": false,
-                "useESModules": true,
-                "version": "7.5.0"
-                }
-              ],
-              "@babel/plugin-proposal-optional-chaining",
-              "@babel/plugin-proposal-export-default-from",
-              "@babel/plugin-syntax-dynamic-import",
-              "@babel/plugin-transform-object-assign",
-              "@babel/plugin-transform-react-constant-elements",
-              "@babel/plugin-transform-spread",
-              "@babel/plugin-proposal-class-properties",
-              "@babel/plugin-proposal-object-rest-spread"
-            ]
-        },
-        "production": {
-            "presets": [
-              ["@babel/preset-env", {
-                "loose": true, 
-                "modules": false,
-                "targets": ["last 2 versions", "ie >= 8"]
-              }],
-              "@babel/preset-react"
-            ],
-            "plugins": [
-              "transform-react-pure-class-to-function",
-              ["transform-react-remove-prop-types", {"mode": "wrap"}],
-              "reshow-object-to-json-parse",
-              ["reshow-transform-runtime", {
-                "regenerator": false,
-                "useESModules": true,
-                "version": "7.5.0"
-                }
-              ],
-              "@babel/plugin-proposal-optional-chaining",
-              "@babel/plugin-proposal-export-default-from",
-              "@babel/plugin-syntax-dynamic-import",
-              "@babel/plugin-transform-object-assign",
-              "@babel/plugin-transform-react-constant-elements",
-              "@babel/plugin-transform-spread",
-              "@babel/plugin-proposal-class-properties",
-              "@babel/plugin-proposal-object-rest-spread"
-            ]
-        }
+  "env": {
+    "cjs": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "corejs": 3,
+            "useBuiltIns": "usage",
+            "loose": true,
+            "targets": ["last 2 versions", "ie >= 8"]
+          }
+        ],
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "dynamic-import-node",
+        "transform-react-pure-class-to-function",
+        "reshow-object-to-json-parse",
+        [
+          "reshow-transform-runtime",
+          {
+            "regenerator": true,
+            "version": "7.5.0"
+          }
+        ],
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-object-assign",
+        "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-transform-spread",
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-proposal-private-methods", { "loose": false }],
+        "@babel/plugin-proposal-object-rest-spread"
+      ]
+    },
+    "es": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "loose": true,
+            "modules": false,
+            "targets": ["last 2 versions", "ie >= 8"]
+          }
+        ],
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "transform-react-pure-class-to-function",
+        ["transform-react-remove-prop-types", { "mode": "wrap" }],
+        "reshow-object-to-json-parse",
+        [
+          "reshow-transform-runtime",
+          {
+            "regenerator": false,
+            "useESModules": true,
+            "version": "7.5.0"
+          }
+        ],
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-object-assign",
+        "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-transform-spread",
+        "@babel/plugin-proposal-class-properties",
+        ["@babel/plugin-proposal-private-methods", { "loose": false }],
+        "@babel/plugin-proposal-object-rest-spread"
+      ]
     }
+  }
 }

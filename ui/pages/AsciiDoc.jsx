@@ -2,12 +2,12 @@ import React from "react";
 
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 import Doc from "../templates/Doc";
 
 /*Sample*/
 import AsciiDocExample from "../organisms/AsciiDoc.example";
-import asciiDocExample from "!raw-loader!../../../ui/organisms/AsciiDoc.example";
+import asciiDocExample from "!raw-loader!../../../../ui/organisms/AsciiDoc.example";
 
 class AsciiDocPage extends BasePage {
   static defaultProps = {

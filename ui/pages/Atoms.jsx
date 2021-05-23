@@ -1,6 +1,6 @@
 import React from "react";
 import Doc from "../templates/Doc";
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 
 class Atoms extends BasePage {
   static defaultProps = {

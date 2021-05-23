@@ -63,7 +63,7 @@ import ZoomIn from "ricon/ZoomIn";
 import Error from "ricon/Error";
 import Warning from "ricon/Warning";
 
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 import Doc from "../templates/Doc";
 
 const icons = [

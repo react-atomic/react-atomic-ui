@@ -1,18 +1,18 @@
 import React from "react";
 import CodeExample from "organism-react-code";
 
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 import Doc from "../templates/Doc";
 
 /*example*/
 import CarouselAnimation from "../organisms/CarouselAnimation.example";
-import carouselAnimation from "!raw-loader!../../../ui/organisms/CarouselAnimation.example";
+import carouselAnimation from "!raw-loader!../../../../ui/organisms/CarouselAnimation.example";
 
 import CarouselAnimationHideThumb from "../organisms/CarouselAnimationHideThumb.example";
-import carouselAnimationHideThumb from "!raw-loader!../../../ui/organisms/CarouselAnimationHideThumb.example";
+import carouselAnimationHideThumb from "!raw-loader!../../../../ui/organisms/CarouselAnimationHideThumb.example";
 
 import CarouselSlide from "../organisms/CarouselSlide.example";
-import carouselSlide from "!raw-loader!../../../ui/organisms/CarouselSlide.example";
+import carouselSlide from "!raw-loader!../../../../ui/organisms/CarouselSlide.example";
 
 class CarouselPage extends BasePage {
   static defaultProps = {

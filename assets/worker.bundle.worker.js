@@ -728,6 +728,7 @@ var _this = undefined;
 
 var keys = Object.keys;
 var arrWs = {};
+var arrReq = {};
 
 var handleMessage = function handleMessage(e) {
   var data = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(e, ["data"]);
@@ -768,6 +769,15 @@ var post = function post(payload) {
 
 var cookParams = function cookParams(action, callReq) {
   var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"], {});
+  var id = params.id;
+
+  if (id) {
+    if (arrReq[id]) {
+      arrReq[id].abort();
+    }
+
+    arrReq[id] = callReq;
+  }
 
   var cookHeaders = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["globalHeaders"], {})), Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["headers"], {})), {}, {
     Accept: Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(params, ["accept"], "application/json")
@@ -791,9 +801,18 @@ var ajaxGet = function ajaxGet(_ref) {
   var url = _ref.url,
       action = _ref.action;
   var callReq = superagent__WEBPACK_IMPORTED_MODULE_8___default.a.get(url);
-  var params = cookParams(action, callReq);
-  callReq.query(params.query).set(params.cookHeaders).end(function (err, res) {
+
+  var _cookParams = cookParams(action, callReq),
+      query = _cookParams.query,
+      cookHeaders = _cookParams.cookHeaders,
+      id = _cookParams.id;
+
+  callReq.query(query).set(cookHeaders).end(function (err, res) {
     if (res) {
+      if (arrReq[id]) {
+        delete arrWs[id];
+      }
+
       var error = res.error,
           _req = res.req,
           text = res.text,
@@ -836,12 +855,13 @@ var ajaxPost = function ajaxPost(_ref2) {
       break;
   }
 
-  var _cookParams = cookParams(action, callReq),
-      query = _cookParams.query,
-      isSendJson = _cookParams.isSendJson,
-      cookHeaders = _cookParams.cookHeaders,
-      responseType = _cookParams.responseType,
-      params = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(_cookParams, ["query", "isSendJson", "cookHeaders", "responseType"]);
+  var _cookParams2 = cookParams(action, callReq),
+      id = _cookParams2.id,
+      query = _cookParams2.query,
+      isSendJson = _cookParams2.isSendJson,
+      cookHeaders = _cookParams2.cookHeaders,
+      responseType = _cookParams2.responseType,
+      params = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(_cookParams2, ["id", "query", "isSendJson", "cookHeaders", "responseType"]);
 
   var isSend = false;
 
@@ -866,6 +886,10 @@ var ajaxPost = function ajaxPost(_ref2) {
 
   callReq.send(query).set(cookHeaders).end(function (err, res) {
     if (res) {
+      if (arrReq[id]) {
+        delete arrWs[id];
+      }
+
       var error = res.error,
           _req2 = res.req,
           text = res.text,

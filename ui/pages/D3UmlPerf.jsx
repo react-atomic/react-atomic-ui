@@ -2,13 +2,13 @@ import React from "react";
 
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 import Doc from "../templates/Doc";
 
 /*Sample*/
 
 import D3UmlPerf from "../organisms/D3UmlPerf.example";
-import d3UmlPerf from "!raw-loader!../../../ui/organisms/D3UmlPerf.example";
+import d3UmlPerf from "!raw-loader!../../../../ui/organisms/D3UmlPerf.example";
 
 
 class D3UmlPerfPage extends BasePage {

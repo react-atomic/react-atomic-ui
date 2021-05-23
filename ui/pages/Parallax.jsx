@@ -2,11 +2,11 @@ import React from "react";
 
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../pages/BasePage";
+import BasePage from "../molecules/BasePage";
 import Doc from "../templates/Doc";
 
 import ParallaxBackgroundImage from "../organisms/ParallaxBackgroundImage.example";
-import parallaxBackgroundImage from "!raw-loader!../../../ui/organisms/ParallaxBackgroundImage.example";
+import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/ParallaxBackgroundImage.example";
 
 class Parallax extends BasePage {
   static defaultProps = {

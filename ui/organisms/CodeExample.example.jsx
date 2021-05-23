@@ -10,7 +10,7 @@ import CodeExample from "organism-react-code";
  * Your source code.
  * npm i raw-loader
  */
-import code from "!raw-loader!../../../ui/organisms/CodeExample.example";
+import code from "!raw-loader!../organisms/CodeExample.example";
 
 const CodeExampleExample = (props) => (
   <CodeExample

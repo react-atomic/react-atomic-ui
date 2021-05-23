@@ -47,13 +47,13 @@ const Index = (props) => {
   let { themePath, ...others } = props;
 
   return (
-    <div>
+    <>
       <ClientRoute {...others} themes={themes} defaultThemePath="atoms" />
-      <PopupPool />
       <PageLoadProgressHandler ajax={true} />
       <I13nElement />
       <ReshowMessage />
-    </div>
+      <PopupPool />
+    </>
   );
 };
 
