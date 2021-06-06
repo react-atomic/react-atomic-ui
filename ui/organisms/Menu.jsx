@@ -7,7 +7,7 @@ import { pageStore, ReLink } from "reshow";
 const keys = Object.keys;
 
 const Menu = (props) => {
-  let thisMenus = {};
+  const thisMenus = {};
   const themes = pageStore.getMap("themes");
   keys(themes).forEach((item) => {
     thisMenus[item] = {

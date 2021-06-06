@@ -10,7 +10,7 @@ import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/Parall
 
 class Parallax extends BasePage {
   static defaultProps = {
-    pageName: "parallax",
+    pageName: "Parallax",
   };
 
   render() {

@@ -26,7 +26,7 @@ import stockChart from "!raw-loader!../../../../ui/organisms/StockChart.example"
 
 class D3 extends BasePage {
   static defaultProps = {
-    pageName: "d3",
+    pageName: "D3",
   };
 
   render() {

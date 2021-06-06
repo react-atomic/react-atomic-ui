@@ -24,7 +24,7 @@ import pagination from "!raw-loader!../../../../ui/organisms/Pagination.example"
 
 class List extends BasePage {
   static defaultProps = {
-    pageName: "list",
+    pageName: "List",
   };
 
   render() {

@@ -23,7 +23,7 @@ import reshowMessageExample from "!raw-loader!../../../../ui/organisms/ReshowMes
 
 class Popup extends BasePage {
   static defaultProps = {
-    pageName: "popup",
+    pageName: "Popup",
   };
 
   render() {

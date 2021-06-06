@@ -13,7 +13,7 @@ import qQVideo from "!raw-loader!../../../../ui/organisms/QQVideo.example";
 
 class Video extends BasePage {
   static defaultProps = {
-    pageName: "video",
+    pageName: "Video",
   };
 
   render() {

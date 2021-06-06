@@ -4,7 +4,7 @@ import BasePage from "../molecules/BasePage";
 
 class Atoms extends BasePage {
   static defaultProps = {
-    pageName: "atoms",
+    pageName: "Atoms",
   };
 
   render() {

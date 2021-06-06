@@ -14,7 +14,7 @@ import animationDelayExample from "!raw-loader!../../../../ui/organisms/Animatio
 
 class Animation extends BasePage {
   static defaultProps = {
-    pageName: "animation",
+    pageName: "Animation",
   };
 
   render() {

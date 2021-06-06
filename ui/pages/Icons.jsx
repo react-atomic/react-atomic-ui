@@ -162,7 +162,7 @@ const icons = [
 
 class Icons extends BasePage {
   static defaultProps = {
-    pageName: "icons",
+    pageName: "Icons",
   };
   render() {
     return (

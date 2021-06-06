@@ -16,7 +16,7 @@ import carouselSlide from "!raw-loader!../../../../ui/organisms/CarouselSlide.ex
 
 class CarouselPage extends BasePage {
   static defaultProps = {
-    pageName: "carousel",
+    pageName: "Carousel",
   };
   render() {
     return (

@@ -22,39 +22,37 @@ import AsciiDoc from "../pages/AsciiDoc";
 import GrapesJs from "../pages/GrapesJs";
 import PDF from "../pages/PDF";
 import JSON from "../pages/JSON";
+import Tomato from "../pages/Tomato";
 
 const themes = {
-  atoms: Atoms,
-  molecules: Molecules,
-  organisms: Organisms,
-  d3: D3,
-  d3UmlPerf: D3UmlPerf,
-  icons: Icons,
-  list: List,
-  carousel: Carousel,
-  animation: Animation,
-  popup: Popup,
-  parallax: Parallax,
-  video: Video,
+  Atoms,
+  Molecules,
+  Organisms,
+  D3,
+  D3UmlPerf,
+  Icons,
+  List,
+  Carousel,
+  Animation,
+  Popup,
+  Parallax,
+  Video,
   Code,
   AsciiDoc,
   GrapesJs,
   PDF,
   JSON,
+  Tomato,
 };
 
-const Index = (props) => {
-  let { themePath, ...others } = props;
-
-  return (
-    <>
-      <ClientRoute {...others} themes={themes} defaultThemePath="atoms" />
-      <PageLoadProgressHandler ajax={true} />
-      <I13nElement />
-      <ReshowMessage />
-      <PopupPool />
-    </>
-  );
-};
+const Index = (props) => (
+  <>
+    <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
+    <PageLoadProgressHandler ajax={true} />
+    <I13nElement />
+    <ReshowMessage />
+    <PopupPool />
+  </>
+);
 
 export default Index;

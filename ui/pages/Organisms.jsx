@@ -42,7 +42,7 @@ import errorForm from "!raw-loader!../../../../ui/organisms/ErrorForm.example";
 
 class Organisms extends BasePage {
   static defaultProps = {
-    pageName: "organisms",
+    pageName: "Organisms",
   };
   render() {
     return (
