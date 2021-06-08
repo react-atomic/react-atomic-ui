@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import GrapesJsExample from "../organisms/GrapesJs.example";
@@ -19,7 +18,7 @@ class GrapesJsPage extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample
           code={grapesJsExample}
           header="GrapesJs Example"
@@ -32,7 +31,7 @@ class GrapesJsPage extends BasePage {
         <CodeExample code={rteExample} header="RTE Example">
           <RTEExample />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

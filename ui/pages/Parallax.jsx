@@ -1,9 +1,9 @@
 import React from "react";
+import { lazyInject } from "react-atomic-molecule";
 
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 import ParallaxBackgroundImage from "../organisms/ParallaxBackgroundImage.example";
 import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/ParallaxBackgroundImage.example";
@@ -11,23 +11,35 @@ import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/Parall
 class Parallax extends BasePage {
   static defaultProps = {
     pageName: "Parallax",
+    tplProps: {
+        className: "Parallax"
+    },
   };
+
+  constructor(props) {
+    super(props);
+    injects = lazyInject(injects, InjectStyles);
+  }
 
   render() {
     return (
-      <Doc style={Styles.page}>
-        <CodeExample code={parallaxBackgroundImage} header="YouTube RWD player">
+      <>
+        <CodeExample code={parallaxBackgroundImage} header="Parallax Example">
           <ParallaxBackgroundImage />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }
 
 export default Parallax;
 
-const Styles = {
-  page: {
-    padding: "100vh 0 100vh",
-  },
+let injects;
+const InjectStyles = {
+  doc: [
+    {
+      paddingBottom: "150vh !important",
+    },
+    "div#doc.Parallax",
+  ],
 };

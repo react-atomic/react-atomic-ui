@@ -5,7 +5,6 @@ import { DividingHeader, Form, Field, InputBox } from "react-atomic-molecule";
 
 import { SearchBox } from "react-atomic-organism";
 
-import Doc from "../templates/Doc";
 
 class Molecules extends BasePage {
   static defaultProps = {
@@ -13,7 +12,7 @@ class Molecules extends BasePage {
   };
   render() {
     return (
-      <Doc>
+      <>
         <DividingHeader>Input box</DividingHeader>
         <div>Inputbox</div>
         <Form>
@@ -23,7 +22,7 @@ class Molecules extends BasePage {
         <InputBox />
         <div>Search Box</div>
         <SearchBox />
-      </Doc>
+      </>
     );
   }
 }

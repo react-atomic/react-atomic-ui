@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import AsciiDocExample from "../organisms/AsciiDoc.example";
@@ -16,7 +15,7 @@ class AsciiDocPage extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample
           code={asciiDocExample}
           header="Ascii Doc"
@@ -25,7 +24,7 @@ class AsciiDocPage extends BasePage {
         >
           <AsciiDocExample />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

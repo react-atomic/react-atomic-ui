@@ -2,7 +2,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import PopupExample from "../organisms/Popup.example";
@@ -28,7 +27,7 @@ class Popup extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={popupExample} header="Popup Example">
           <PopupExample />
         </CodeExample>
@@ -62,7 +61,7 @@ class Popup extends BasePage {
         >
           <ReshowMessageExample />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

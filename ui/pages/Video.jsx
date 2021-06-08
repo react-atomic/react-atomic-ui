@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 import YouTubeRWD from "../organisms/YouTubeRWD.example";
 import youTubeRWD from "!raw-loader!../../../../ui/organisms/YouTubeRWD.example";
@@ -18,7 +17,7 @@ class Video extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={youTubeRWD} header="YouTube RWD player">
           <YouTubeRWD />
         </CodeExample>
@@ -26,7 +25,7 @@ class Video extends BasePage {
         <CodeExample code={qQVideo} header="v.qq.com player">
           <QQVideo />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

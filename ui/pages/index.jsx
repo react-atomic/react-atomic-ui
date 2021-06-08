@@ -1,9 +1,11 @@
 import React from "react";
-import { ReshowMessage } from "reshow";
+import { ReshowMessage, Return } from "reshow";
 import { ClientRoute } from "reshow-url";
 import { PopupPool } from "organism-react-popup";
 import { PageLoadProgressHandler } from "organism-react-progress";
 import { I13nElement } from "organism-react-i13n";
+
+import Doc from "../templates/Doc";
 
 import Atoms from "../pages/Atoms";
 import Molecules from "../pages/Molecules";
@@ -46,13 +48,20 @@ const themes = {
 };
 
 const Index = (props) => (
-  <>
-    <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
-    <PageLoadProgressHandler ajax={true} />
-    <I13nElement />
-    <ReshowMessage />
-    <PopupPool />
-  </>
+  <Return initStates={['tplProps']}>
+  {(props)=>{
+    const {tplProps} = props;
+    return (<Doc {...tplProps}>
+      <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
+      <PageLoadProgressHandler ajax={true} />
+      <I13nElement />
+      <ReshowMessage />
+      <PopupPool />
+    </Doc>
+    );
+    }
+  }
+  </Return>
 );
 
 export default Index;

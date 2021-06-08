@@ -2,7 +2,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import QueryToJSON from "../organisms/QueryToJSON";
@@ -15,11 +14,11 @@ class JSON extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={queryToJSON} header="Query To JSON">
           <QueryToJSON />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

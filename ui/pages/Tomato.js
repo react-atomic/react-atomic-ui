@@ -2,7 +2,6 @@ import React from "react";
 
 /*Base*/
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 
@@ -16,9 +15,7 @@ class Tomato extends BasePage {
 
   render() {
     return (
-      <Doc>
         <TomatoApp />
-      </Doc>
     );
   }
 }

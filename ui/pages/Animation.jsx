@@ -2,7 +2,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import AnimationExample from "../organisms/Animation.example";
@@ -19,7 +18,7 @@ class Animation extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={animationExample} header="Animation Sample">
           <AnimationExample />
         </CodeExample>
@@ -37,7 +36,7 @@ class Animation extends BasePage {
         >
           <AnimationDelayExample />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

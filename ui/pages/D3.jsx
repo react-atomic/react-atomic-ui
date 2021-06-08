@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 import D3PieChart from "../organisms/D3PieChart.example";
@@ -31,7 +30,7 @@ class D3 extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
           <D3Uml />
         </CodeExample>
@@ -55,7 +54,7 @@ class D3 extends BasePage {
         <CodeExample code={stockChart} header="Stock Chart">
           <StockChart />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

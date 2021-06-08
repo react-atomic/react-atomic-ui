@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 
@@ -29,7 +28,7 @@ class List extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={gridList} header="Grid List">
           <GridList />
         </CodeExample>
@@ -52,7 +51,7 @@ class List extends BasePage {
         <CodeExample code={pagination} header="Pagination">
           <Pagination />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

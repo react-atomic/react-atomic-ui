@@ -2,7 +2,6 @@ import React from "react";
 import CodeExample from "organism-react-code";
 
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 // example
 import PageLoadProgressHandler from "../organisms/PageLoadProgressHandler.example";
@@ -46,7 +45,7 @@ class Organisms extends BasePage {
   };
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={tagInput} header="Tag input" id="tag-input">
           <TagInput />
         </CodeExample>
@@ -117,7 +116,7 @@ class Organisms extends BasePage {
           <Checkbox />
         </CodeExample>
 
-      </Doc>
+      </>
     );
   }
 }

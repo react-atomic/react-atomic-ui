@@ -3,7 +3,6 @@ import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*Sample*/
 
@@ -18,11 +17,11 @@ class D3UmlPerf extends BasePage {
 
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample code={d3UmlPerfExample} header="D3 Uml" id="d3-uml">
           <D3UmlPerfExample />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

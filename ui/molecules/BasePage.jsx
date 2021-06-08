@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {dispatch} from "reshow";
 import { navigationDispatch } from "organism-react-navigation";
 
 class BasePage extends Component {
@@ -9,6 +10,10 @@ class BasePage extends Component {
           activeMenu: this.props.pageName,
         },
       });
+      if (this.props.tplProps) {
+          console.log(this.props.tplProps);
+          dispatch({tplProps: this.props.tplProps});
+      }
     });
   }
 

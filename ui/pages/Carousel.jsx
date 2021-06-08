@@ -2,7 +2,6 @@ import React from "react";
 import CodeExample from "organism-react-code";
 
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 /*example*/
 import CarouselAnimation from "../organisms/CarouselAnimation.example";
@@ -20,7 +19,7 @@ class CarouselPage extends BasePage {
   };
   render() {
     return (
-      <Doc>
+      <>
         <CodeExample
           code={carouselAnimation}
           header="Carousel Animation"
@@ -42,7 +41,7 @@ class CarouselPage extends BasePage {
         <CodeExample code={carouselSlide} header="Carousel Slide (WIP)">
           <CarouselSlide />
         </CodeExample>
-      </Doc>
+      </>
     );
   }
 }

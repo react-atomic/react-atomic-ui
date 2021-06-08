@@ -64,7 +64,6 @@ import Error from "ricon/Error";
 import Warning from "ricon/Warning";
 
 import BasePage from "../molecules/BasePage";
-import Doc from "../templates/Doc";
 
 const icons = [
   ["Account", <Account />],
@@ -166,7 +165,7 @@ class Icons extends BasePage {
   };
   render() {
     return (
-      <Doc>
+      <>
         <div className="pure-g">
           {icons.map((v, k) => (
             <div
@@ -179,7 +178,7 @@ class Icons extends BasePage {
             </div>
           ))}
         </div>
-      </Doc>
+      </>
     );
   }
 }
