@@ -35,7 +35,7 @@ startServer(){
     yarn
     port=${port-3000}
     echo "Start server";
-    npm run start -- -p $port --http2 -v
+    npm run start -- -p $port -v
 }
 
 killBy(){

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {dispatch} from "reshow";
 import { navigationDispatch } from "organism-react-navigation";
+import {ajaxDispatch} from 'organism-react-ajax';
 
 class BasePage extends Component {
   componentDidMount() {
@@ -14,6 +15,10 @@ class BasePage extends Component {
           console.log(this.props.tplProps);
           dispatch({tplProps: this.props.tplProps});
       }
+    });
+    ajaxDispatch('ajaxGet', {
+      url: '/data/.env',
+      ini: true,
     });
   }
 

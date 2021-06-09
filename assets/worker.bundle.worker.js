@@ -695,6 +695,60 @@ var NonWorker = function NonWorker() {
 
 /***/ }),
 
+/***/ "./node_modules/object-nested/build/es/src/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/object-nested/build/es/src/index.js ***!
+  \**********************************************************/
+/*! exports provided: nest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _nest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nest */ "./node_modules/object-nested/build/es/src/nest.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "nest", function() { return _nest__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/object-nested/build/es/src/nest.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/object-nested/build/es/src/nest.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var set_object_value__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! set-object-value */ "./node_modules/set-object-value/build/es/src/index.js");
+
+
+
+
+var keys = Object.keys;
+
+var nest = function nest(a, delimiter) {
+    if (!delimiter) {
+        delimiter = '.';
+    }
+    var tree = {};
+    keys(a).forEach(function (k) {
+        if (-1 === k.indexOf(delimiter)) {
+            tree[k] = a[k];
+            return;
+        }
+        var subKeys = k.split(delimiter);
+        Object(set_object_value__WEBPACK_IMPORTED_MODULE_0__["default"])(tree, subKeys, a[k]);
+    });
+    return tree;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (nest);
+
+/***/ }),
+
 /***/ "./node_modules/organism-react-ajax/build/es/src/worker.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/organism-react-ajax/build/es/src/worker.js ***!
@@ -714,14 +768,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var non_worker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! non-worker */ "./node_modules/non-worker/build/es/src/index.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var parse_ini_string__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! parse-ini-string */ "./node_modules/parse-ini-string/build/es/src/index.js");
+/* harmony import */ var object_nested__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! object-nested */ "./node_modules/object-nested/build/es/src/index.js");
 
 
 
 
 
 
+var _excluded = ["error", "req", "text", "xhr"],
+    _excluded2 = ["id", "query", "isSendJson", "cookHeaders", "responseType"],
+    _excluded3 = ["error", "req", "text", "xhr"];
 
 var _this = undefined;
+
+
 
 
 
@@ -752,10 +813,23 @@ var handleMessage = function handleMessage(e) {
   }
 };
 
+var getJson = function getJson(text) {
+  var json;
+
+  try {
+    json = JSON.parse(text);
+  } catch (e) {}
+
+  return json || {};
+};
+
 var oNonWorker = new non_worker__WEBPACK_IMPORTED_MODULE_7__["default"]().onMessage(handleMessage);
 
 var post = function post(payload) {
   var strWcb = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(payload, ["params", "workerCallback"]);
+  var parseIni = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(payload, ["params", "ini"]);
+  var text = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(payload, ["params", "text"]);
+  payload.params.json = parseIni ? Object(object_nested__WEBPACK_IMPORTED_MODULE_10__["nest"])(Object(parse_ini_string__WEBPACK_IMPORTED_MODULE_9__["default"])(text), "_") : getJson(text);
 
   if (strWcb) {
     var wcb = eval("(" + strWcb + ")");
@@ -817,7 +891,7 @@ var ajaxGet = function ajaxGet(_ref) {
           _req = res.req,
           text = res.text,
           xhr = res.xhr,
-          response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
+          response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, _excluded);
 
       action.params = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action.params), {}, {
         text: text,
@@ -861,7 +935,7 @@ var ajaxPost = function ajaxPost(_ref2) {
       isSendJson = _cookParams2.isSendJson,
       cookHeaders = _cookParams2.cookHeaders,
       responseType = _cookParams2.responseType,
-      params = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(_cookParams2, ["id", "query", "isSendJson", "cookHeaders", "responseType"]);
+      params = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(_cookParams2, _excluded2);
 
   var isSend = false;
 
@@ -894,7 +968,7 @@ var ajaxPost = function ajaxPost(_ref2) {
           _req2 = res.req,
           text = res.text,
           xhr = res.xhr,
-          response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, ["error", "req", "text", "xhr"]);
+          response = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_4__["default"])(res, _excluded3);
 
       action.params = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_5__["default"])({}, action.params), {}, {
         text: text,
@@ -1021,6 +1095,129 @@ var initWs = function initWs(url) {
     }
   };
 };
+
+/***/ }),
+
+/***/ "./node_modules/parse-ini-string/build/es/src/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/parse-ini-string/build/es/src/index.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var commentReg = /^\s*[;]/;
+var kvReg = /^\[([^\]]*)\]$|^([^=]+)(=(.*))?$/i;
+var linesReg = /[\r\n]+/g;
+var stripQuoteReg = /\\"/g;
+var isArray = Array.isArray;
+
+var isQuoted = function isQuoted(s) {
+  if (s.length <= 1) {
+    return false;
+  }
+
+  var bAndE = s.charAt(0) + "" + s.slice(-1);
+  var bAndE2 = s.charAt(0) + "" + s.slice(-2);
+  return bAndE === '""' || bAndE === "''" || bAndE2 === '"";' || bAndE2 === "'';";
+};
+
+var stripQuote = function stripQuote(s) {
+  return s.replace(stripQuoteReg, '"').substring(1, s.length - (s.slice(-1) === ";" ? 2 : 1));
+};
+
+var isMultiLine = function isMultiLine(s) {
+  var n = s.trim();
+
+  if (isQuoted(n)) {
+    return false;
+  }
+
+  return n.charAt(0) === '"' ? true : false;
+};
+
+var parse = function parse(s) {
+  var lines = s.split(linesReg);
+  var value = "";
+  var key = "";
+  var p = {};
+  lines.forEach(function (line) {
+    var isEnd = false;
+
+    if (!line || commentReg.test(line)) {
+      return;
+    }
+
+    if (!key) {
+      var match = line.match(kvReg);
+
+      if (!match) {
+        console.error("Ini Parse Fail: " + line);
+        return;
+      }
+
+      key = match[2];
+      value = match[3] ? match[4] || "" : "";
+
+      if (key.length > 2 && key.slice(-2) === "[]") {
+        key = key.substring(0, key.length - 2);
+
+        if (!p[key]) {
+          p[key] = [];
+        } else if (!isArray(p[key])) {
+          p[key] = [p[key]];
+        }
+      }
+
+      if (!isMultiLine(value)) {
+        isEnd = true;
+      }
+    } else {
+      var lineTrim = line.trim();
+
+      if (lineTrim === '"' || lineTrim === '";') {
+        isEnd = true;
+      }
+
+      if (!isEnd) {
+        value += "\n";
+      }
+
+      value += line;
+    }
+
+    if (isEnd) {
+      if (isQuoted(value)) {
+        value = stripQuote(value);
+      } else {
+        switch (value.toLowerCase()) {
+          case "true":
+          case "false":
+          case "null":
+            value = JSON.parse(value.toLowerCase());
+            break;
+        }
+      }
+
+      key = key.trim();
+
+      if (key) {
+        if (isArray(p[key])) {
+          p[key].push(value);
+        } else {
+          p[key] = value;
+        }
+      }
+
+      key = "";
+      value = "";
+    }
+  });
+  return p;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (parse);
 
 /***/ }),
 
@@ -1262,6 +1459,53 @@ var _typeof = function _typeof(o) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (_typeof);
+
+/***/ }),
+
+/***/ "./node_modules/set-object-value/build/es/src/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/set-object-value/build/es/src/index.js ***!
+  \*************************************************************/
+/*! exports provided: default, unsafeSet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unsafeSet", function() { return unsafeSet; });
+var isUnSafeKey = function isUnSafeKey(key) {
+  return key === "__proto__" || key === "constructor" || key === "prototype";
+};
+
+var replaceValue = function replaceValue(obj, arrKey, val, isAppend, unSafe) {
+  if (!unSafe && arrKey.some(isUnSafeKey)) {
+    throw "Contain un-safe key.";
+  }
+
+  var last = arrKey.pop();
+  arrKey.forEach(function (k) {
+    obj[k] = obj[k] || {};
+    obj = obj[k];
+  });
+
+  if (isAppend && (!obj[last] || !obj[last].push)) {
+    if (!obj[last]) {
+      obj[last] = [val];
+    } else {
+      obj[last] = [obj[last], val];
+    }
+  } else if (isAppend && obj[last].push) {
+    obj[last].push(val);
+  } else {
+    obj[last] = val;
+  }
+};
+
+var unsafeSet = function unsafeSet(obj, arrKey, val, isAppend) {
+  return replaceValue(obj, arrKey, val, isAppend, true);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (replaceValue);
+
 
 /***/ }),
 

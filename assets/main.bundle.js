@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "c56e15f4d6bf5ace6417" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "a7747e8be1459416cddc" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -292,6 +292,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+
 
 
 
@@ -322,6 +324,10 @@ var BasePage = /*#__PURE__*/function (_Component) {
           tplProps: _this.props.tplProps
         });
       }
+    });
+    Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_4__["ajaxDispatch"])('ajaxGet', {
+      url: '/data/.env',
+      ini: true
     });
   };
 
@@ -3183,15 +3189,132 @@ var TagInputExample = function TagInputExample(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 
+
+var _this = undefined,
+    _Tip;
+
+var _excluded = ["col1", "col2"];
+
+
+
+
+
+
+var secToMin = function secToMin(sec) {
+  var min = Math.floor(sec / 60);
+  var remainSec = sec % 60;
+  return min + ":" + (10 > remainSec ? "0" + remainSec : remainSec);
+};
+
+var Tip = function Tip() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reshow__WEBPACK_IMPORTED_MODULE_5__["Return"], {
+    initStates: ["pomodoro"]
+  }, function (_ref) {
+    var pomodoro = _ref.pomodoro;
+
+    if (!pomodoro) {
+      return null;
+    }
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+      atom: "ol"
+    }, pomodoro.tip.map(function (item, key) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Item"], {
+        key: key
+      }, item);
+    }));
+  });
+};
+
+var ActionSegment = function ActionSegment(_ref2) {
+  var col1 = _ref2.col1,
+      col2 = _ref2.col2,
+      props = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref2, _excluded);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    className: "pure-u-md-1-2"
+  }, col1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    className: "pure-u-md-1-2"
+  }, col2)));
+};
 
 var TomatoApp = function TomatoApp(props) {
-  return 'tomato';
+  var TotalSec = 25 * 60;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(TotalSec),
+      sec = _useState[0],
+      setSec = _useState[1];
+
+  var timer = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
+
+  var handleStart = function handleStart() {
+    if (!timer.current) {
+      timer.current = setInterval(function () {
+        setSec(function (v) {
+          if (v <= 0) {
+            _this.handleStop();
+
+            return 0;
+          }
+
+          return --v;
+        });
+      }, 1000);
+    } else {
+      console.warn("Timer already running");
+    }
+  };
+
+  var handleStop = function handleStop() {
+    if (timer.current) {
+      clearInterval(timer.current);
+      timer.current = null;
+    }
+  };
+
+  var handleReset = function handleReset() {
+    handleStop();
+    setSec(TotalSec);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_3__["ProgressBar"], {
+    className: "big Pomodoro",
+    percent: Object(to_percent_js__WEBPACK_IMPORTED_MODULE_4__["percent"])(sec / TotalSec),
+    barLabel: secToMin(sec)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ActionSegment, {
+    col1: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+      style: Styles.buttonList
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: handleStart
+    }, "Pomodoro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: handleStart
+    }, "Short Break"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: handleStart
+    }, "Long Break")),
+    col2: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+      style: Styles.buttonList
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: handleStop
+    }, "Stop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      onClick: handleReset
+    }, "Reset"))
+  }), _Tip || (_Tip = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tip, null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TomatoApp);
+var Styles = {
+  buttonList: {
+    textAlign: "center"
+  }
+};
 
 /***/ }),
 
