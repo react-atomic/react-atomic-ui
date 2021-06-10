@@ -77,9 +77,14 @@ const TomatoApp = (props) => {
     setSec(TotalSec);
   };
 
+  const handleClickProgressBar = () => {
+    console.log('xxx');
+  };
+
   return (
     <SemanticUI>
       <ProgressBar
+        onClick={handleClickProgressBar}
         className="big Pomodoro"
         percent={percent(sec / TotalSec)}
         barLabel={secToMin(sec)}

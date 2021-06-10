@@ -17,7 +17,7 @@ class BasePage extends Component {
       }
     });
     ajaxDispatch('ajaxGet', {
-      url: '/data/.env',
+      url: '/data/env',
       ini: true,
     });
   }

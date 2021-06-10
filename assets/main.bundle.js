@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "a7747e8be1459416cddc" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "d30eaee15fafb2ab9db9" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -326,7 +326,7 @@ var BasePage = /*#__PURE__*/function (_Component) {
       }
     });
     Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_4__["ajaxDispatch"])('ajaxGet', {
-      url: '/data/.env',
+      url: '/data/env',
       ini: true
     });
   };
@@ -3285,7 +3285,12 @@ var TomatoApp = function TomatoApp(props) {
     setSec(TotalSec);
   };
 
+  var handleClickProgressBar = function handleClickProgressBar() {
+    console.log('xxx');
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_3__["ProgressBar"], {
+    onClick: handleClickProgressBar,
     className: "big Pomodoro",
     percent: Object(to_percent_js__WEBPACK_IMPORTED_MODULE_4__["percent"])(sec / TotalSec),
     barLabel: secToMin(sec)
