@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "d30eaee15fafb2ab9db9" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "fbafc04c2ad1dc100f36" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -3196,12 +3196,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
 /* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
 /* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 
 
-var _this = undefined,
-    _Tip;
+var _a, _Tip;
 
 var _excluded = ["col1", "col2"];
+
 
 
 
@@ -3247,21 +3248,27 @@ var ActionSegment = function ActionSegment(_ref2) {
 };
 
 var TomatoApp = function TomatoApp(props) {
-  var TotalSec = 25 * 60;
+  var _Button;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["lazyInject"])(injects, InjectStyles);
+  }, []);
+  var TotalMin = 1;
+  var TotalSec = TotalMin * 60;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(TotalSec),
       sec = _useState[0],
       setSec = _useState[1];
 
   var timer = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
+  var modal = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
 
   var handleStart = function handleStart() {
     if (!timer.current) {
       timer.current = setInterval(function () {
         setSec(function (v) {
           if (v <= 0) {
-            _this.handleStop();
-
+            handleStop();
             return 0;
           }
 
@@ -3274,6 +3281,10 @@ var TomatoApp = function TomatoApp(props) {
   };
 
   var handleStop = function handleStop() {
+    if (modal.current) {
+      modal.current.close();
+    }
+
     if (timer.current) {
       clearInterval(timer.current);
       timer.current = null;
@@ -3285,16 +3296,46 @@ var TomatoApp = function TomatoApp(props) {
     setSec(TotalSec);
   };
 
-  var handleClickProgressBar = function handleClickProgressBar() {
-    console.log('xxx');
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_3__["ProgressBar"], {
-    onClick: handleClickProgressBar,
-    className: "big Pomodoro",
-    percent: Object(to_percent_js__WEBPACK_IMPORTED_MODULE_4__["percent"])(sec / TotalSec),
-    barLabel: secToMin(sec)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ActionSegment, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_6__["PopupClick"], {
+    style: Styles.click,
+    popup: function popup() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_6__["PopupModal"], {
+        basic: true,
+        ref: modal,
+        contentStyle: {
+          textAlign: "center"
+        }
+      }, _Button || (_Button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        className: "inverted",
+        onClick: handleStop
+      }, "Stop")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["InputBox"], {
+        style: Styles.resetInput,
+        defaultValue: TotalMin,
+        inputStyle: Styles.reset,
+        className: "inverted transparent",
+        leftLabel: "Resst to:",
+        rightLabel: "min",
+        button: "Reset",
+        actionProps: {
+          className: "inverted",
+          onClick: handleReset
+        }
+      }));
+    },
+    component: _a || (_a = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", null))
+  }, Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])(function () {
+    var percentNum = Object(to_percent_js__WEBPACK_IMPORTED_MODULE_4__["percent"])(sec / TotalSec);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_3__["ProgressBar"], {
+      className: "big Pomodoro",
+      percent: percentNum,
+      barLabel: secToMin(sec),
+      barLabelProps: {
+        styles: Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["reactStyle"])({
+          transform: "translate(" + (100 - percentNum) + "%, 0)"
+        }, false, false)
+      }
+    });
+  }, [sec])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ActionSegment, {
     col1: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
       style: Styles.buttonList
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -3303,14 +3344,7 @@ var TomatoApp = function TomatoApp(props) {
       onClick: handleStart
     }, "Short Break"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
       onClick: handleStart
-    }, "Long Break")),
-    col2: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
-      style: Styles.buttonList
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-      onClick: handleStop
-    }, "Stop"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-      onClick: handleReset
-    }, "Reset"))
+    }, "Long Break"))
   }), _Tip || (_Tip = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tip, null)));
 };
 
@@ -3318,7 +3352,19 @@ var TomatoApp = function TomatoApp(props) {
 var Styles = {
   buttonList: {
     textAlign: "center"
+  },
+  resetInput: {
+    marginLeft: 20
+  },
+  reset: {
+    width: 20
   }
+};
+var injects;
+var InjectStyles = {
+  barLabel: [{
+    fontSize: "7rem"
+  }, ".ui.progress.Pomodoro .bar>.progress"]
 };
 
 /***/ }),

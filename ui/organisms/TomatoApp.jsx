@@ -1,5 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import {
+  lazyInject,
+  reactStyle,
   SemanticUI,
   Button,
   Segment,
@@ -7,10 +9,12 @@ import {
   Column,
   List,
   Item,
+  InputBox,
 } from "react-atomic-molecule";
 import { ProgressBar } from "organism-react-progress";
 import { percent } from "to-percent-js";
 import { Return } from "reshow";
+import { PopupModal, PopupClick } from "organism-react-popup";
 
 const secToMin = (sec) => {
   const min = Math.floor(sec / 60);
@@ -20,14 +24,16 @@ const secToMin = (sec) => {
 
 const Tip = () => (
   <Return initStates={["pomodoro"]}>
-    {({pomodoro}) => { 
+    {({ pomodoro }) => {
       if (!pomodoro) {
         return null;
       }
       return (
-      <List atom="ol">
-      {pomodoro.tip.map((item, key)=><Item key={key}>{item}</Item>)}
-      </List>
+        <List atom="ol">
+          {pomodoro.tip.map((item, key) => (
+            <Item key={key}>{item}</Item>
+          ))}
+        </List>
       );
     }}
   </Return>
@@ -45,16 +51,21 @@ const ActionSegment = ({ col1, col2, ...props }) => {
 };
 
 const TomatoApp = (props) => {
-  const TotalSec = 25 * 60;
+  useEffect(() => {
+    injects = lazyInject(injects, InjectStyles);
+  }, []);
+  const TotalMin = 1;
+  const TotalSec = TotalMin * 60;
   const [sec, setSec] = useState(TotalSec);
   const timer = useRef();
+  const modal = useRef();
 
   const handleStart = () => {
     if (!timer.current) {
       timer.current = setInterval(() => {
         setSec((v) => {
           if (v <= 0) {
-            this.handleStop();
+            handleStop();
             return 0;
           }
           return --v;
@@ -66,6 +77,9 @@ const TomatoApp = (props) => {
   };
 
   const handleStop = () => {
+    if (modal.current) {
+      modal.current.close();
+    }
     if (timer.current) {
       clearInterval(timer.current);
       timer.current = null;
@@ -77,30 +91,62 @@ const TomatoApp = (props) => {
     setSec(TotalSec);
   };
 
-  const handleClickProgressBar = () => {
-    console.log('xxx');
-  };
-
   return (
     <SemanticUI>
-      <ProgressBar
-        onClick={handleClickProgressBar}
-        className="big Pomodoro"
-        percent={percent(sec / TotalSec)}
-        barLabel={secToMin(sec)}
-      />
+      <PopupClick
+        style={Styles.click}
+        popup={() => {
+          return (
+            <PopupModal
+              basic
+              ref={modal}
+              contentStyle={{ textAlign: "center" }}
+            >
+              <Button className="inverted" onClick={handleStop}>
+                Stop
+              </Button>
+              <InputBox
+                style={Styles.resetInput}
+                defaultValue={TotalMin}
+                inputStyle={Styles.reset}
+                className="inverted transparent"
+                leftLabel="Resst to:"
+                rightLabel="min"
+                button="Reset"
+                actionProps={{
+                  className: "inverted",
+                  onClick: handleReset,
+                }}
+              />
+            </PopupModal>
+          );
+        }}
+        component={<a />}
+      >
+        {useMemo(() => {
+          const percentNum = percent(sec / TotalSec);
+          return (
+            <ProgressBar
+              className="big Pomodoro"
+              percent={percentNum}
+              barLabel={secToMin(sec)}
+              barLabelProps={{
+                styles: reactStyle(
+                  { transform: `translate(${100 - percentNum}%, 0)` },
+                  false,
+                  false
+                ),
+              }}
+            />
+          );
+        }, [sec])}
+      </PopupClick>
       <ActionSegment
         col1={
           <List style={Styles.buttonList}>
             <Button onClick={handleStart}>Pomodoro</Button>
             <Button onClick={handleStart}>Short Break</Button>
             <Button onClick={handleStart}>Long Break</Button>
-          </List>
-        }
-        col2={
-          <List style={Styles.buttonList}>
-            <Button onClick={handleStop}>Stop</Button>
-            <Button onClick={handleReset}>Reset</Button>
           </List>
         }
       />
@@ -115,4 +161,20 @@ const Styles = {
   buttonList: {
     textAlign: "center",
   },
+  resetInput: {
+    marginLeft: 20,
+  },
+  reset: {
+    width: 20,
+  },
+};
+
+let injects;
+const InjectStyles = {
+  barLabel: [
+    {
+      fontSize: "7rem",
+    },
+    ".ui.progress.Pomodoro .bar>.progress",
+  ],
 };
