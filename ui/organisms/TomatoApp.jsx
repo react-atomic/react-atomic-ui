@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import {
+  mixClass,
   lazyInject,
   reactStyle,
   SemanticUI,
@@ -14,7 +15,14 @@ import {
 import { ProgressBar } from "organism-react-progress";
 import { percent } from "to-percent-js";
 import { Return } from "reshow";
-import { PopupModal, PopupClick } from "organism-react-popup";
+import { popupDispatch, PopupModal, PopupClick } from "organism-react-popup";
+import { getTimestamp } from "get-random-id";
+import get from "get-object-value";
+
+const POMODORO = "POMODORO";
+const SHORT_BREAK = "SHORT_BREAK";
+const LONG_BREAK = "LONG_BREAK";
+const keys = Object.keys;
 
 const secToMin = (sec) => {
   const min = Math.floor(sec / 60);
@@ -44,109 +52,204 @@ const ActionSegment = ({ col1, col2, ...props }) => {
     <Segment>
       <Row>
         <Column className="pure-u-md-1-2">{col1}</Column>
-        <Column className="pure-u-md-1-2">{col2}</Column>
       </Row>
     </Segment>
   );
 };
 
+const useTomato = (countdown) => {
+  const TotalMin = useRef(25);
+  const TotalSec = TotalMin.current * 60;
+  const [sec, setSec] = useState(TotalSec);
+  const [preview, setPreview] = useState();
+  const [active, setActive] = useState();
+  const [activeType, setActiveType] = useState(POMODORO);
+  const timer = useRef();
+  const modal = useRef();
+  const resetInput = useRef();
+  const lastActive = useRef();
+  const resetState = useRef();
+
+  useEffect(() => {
+    lastActive.current = { active, activeType };
+  }, [active, activeType]);
+
+  const updateClockSec = (setToMinute) => {
+    if (setToMinute) {
+      const totalSec = setToMinute * 60;
+      setSec(totalSec);
+      TotalMin.current = setToMinute;
+    }
+  };
+
+  const handler = {
+    btnMouseIn: (e) => {
+      if (!resetState.current) {
+        resetState.current = { ...lastActive.current };
+      }
+      const id = e?.currentTarget?.id;
+      setActiveType(id);
+      setPreview(true);
+      const setToMinute = countdown[id]?.minute;
+      updateClockSec(setToMinute);
+    },
+    btnMouseOut: (e) => {
+      const target = e.currentTarget;
+      const id = e?.currentTarget?.id;
+      setActiveType(resetState.current.activeType);
+      setPreview(false);
+    },
+    clickProgress: (getModal) => () => {
+      if (lastActive.current.active) {
+        popupDispatch("dom/update", {
+          popup: getModal(countdown[activeType]?.minute),
+        });
+      } else {
+        handler.start(lastActive.current.activeType)();
+      }
+    },
+    start: (countdownKey, getModal) => () => {
+      const setToMinute = countdown[countdownKey]?.minute;
+      if (!timer.current) {
+        if (lastActive.current.activeType !== countdownKey) {
+          updateClockSec(setToMinute);
+        }
+        setActive(true);
+        setActiveType(countdownKey);
+        resetState.current = { ...lastActive.current };
+        timer.current = setInterval(() => {
+          const now = getTimestamp();
+          setSec((v) => {
+            if (v <= 0) {
+              handler.stop();
+              return 0;
+            }
+            const lastTime = get(lastActive.current, ["lastTime", "now"]);
+            if (!lastTime) {
+              lastActive.current.lastTime = {
+                sec: v,
+                now,
+              };
+            } else {
+              const queue = now - lastTime;
+              if (queue > 1000) {
+                const queueSec = Math.floor(queue / 1000);
+                v -= queueSec;
+                lastActive.current.lastTime = {
+                  sec: v,
+                  now,
+                };
+              }
+            }
+            return v;
+          });
+        }, 100);
+      } else {
+        console.warn("Timer already running");
+        popupDispatch("dom/update", {
+          popup: getModal(setToMinute),
+        });
+      }
+    },
+    stop: () => {
+      if (modal.current) {
+        modal.current.close();
+      }
+      if (timer.current) {
+        clearInterval(timer.current);
+        timer.current = null;
+        setActive(false);
+      }
+    },
+    reset: () => {
+      handler.stop();
+      updateClockSec(resetInput.current.value);
+    },
+  };
+
+  return { sec, active, preview, activeType, TotalSec, handler, modal, resetInput };
+};
+
 const TomatoApp = (props) => {
+  const { countdown, useTomato } = props;
   useEffect(() => {
     injects = lazyInject(injects, InjectStyles);
   }, []);
-  const TotalMin = 1;
-  const TotalSec = TotalMin * 60;
-  const [sec, setSec] = useState(TotalSec);
-  const timer = useRef();
-  const modal = useRef();
 
-  const handleStart = () => {
-    if (!timer.current) {
-      timer.current = setInterval(() => {
-        setSec((v) => {
-          if (v <= 0) {
-            handleStop();
-            return 0;
-          }
-          return --v;
-        });
-      }, 1000);
-    } else {
-      console.warn("Timer already running");
-    }
-  };
+  const { sec, active, preview, activeType, handler, modal, resetInput, TotalSec } =
+    useTomato(countdown);
 
-  const handleStop = () => {
-    if (modal.current) {
-      modal.current.close();
-    }
-    if (timer.current) {
-      clearInterval(timer.current);
-      timer.current = null;
-    }
-  };
-
-  const handleReset = () => {
-    handleStop();
-    setSec(TotalSec);
+  const getModal = (defaultValue) => {
+    return (
+      <PopupModal basic ref={modal} contentStyle={{ textAlign: "center" }}>
+        <Button className="inverted" onClick={handler.stop}>
+          Pause
+        </Button>
+        <InputBox
+          refCb={resetInput}
+          style={Styles.resetInput}
+          defaultValue={defaultValue}
+          inputStyle={Styles.reset}
+          className="inverted transparent"
+          leftLabel="Resst to:"
+          rightLabel="min"
+          button="Reset"
+          actionProps={{
+            className: "inverted",
+            onClick: handler.reset,
+          }}
+        />
+      </PopupModal>
+    );
   };
 
   return (
     <SemanticUI>
-      <PopupClick
-        style={Styles.click}
-        popup={() => {
-          return (
-            <PopupModal
-              basic
-              ref={modal}
-              contentStyle={{ textAlign: "center" }}
-            >
-              <Button className="inverted" onClick={handleStop}>
-                Stop
-              </Button>
-              <InputBox
-                style={Styles.resetInput}
-                defaultValue={TotalMin}
-                inputStyle={Styles.reset}
-                className="inverted transparent"
-                leftLabel="Resst to:"
-                rightLabel="min"
-                button="Reset"
-                actionProps={{
-                  className: "inverted",
-                  onClick: handleReset,
-                }}
-              />
-            </PopupModal>
-          );
-        }}
-        component={<a />}
-      >
-        {useMemo(() => {
-          const percentNum = percent(sec / TotalSec);
-          return (
-            <ProgressBar
-              className="big Pomodoro"
-              percent={percentNum}
-              barLabel={secToMin(sec)}
-              barLabelProps={{
-                styles: reactStyle(
-                  { transform: `translate(${100 - percentNum}%, 0)` },
-                  false,
-                  false
-                ),
-              }}
-            />
-          );
-        }, [sec])}
-      </PopupClick>
+      {useMemo(() => {
+        const percentNum = percent(sec / TotalSec);
+        const classes = mixClass("big Pomodoro", {
+          [countdown[activeType].colorName]: active || preview,
+        });
+        return (
+          <ProgressBar
+            onClick={handler.clickProgress(getModal)}
+            className={classes}
+            style={Styles.progress}
+            percent={percentNum}
+            barLabel={secToMin(sec)}
+            barLabelProps={{
+              styles: reactStyle(
+                { transform: `translate(${100 - percentNum}%, 0)` },
+                false,
+                false
+              ),
+            }}
+          />
+        );
+      }, [sec, active, preview])}
       <ActionSegment
         col1={
           <List style={Styles.buttonList}>
-            <Button onClick={handleStart}>Pomodoro</Button>
-            <Button onClick={handleStart}>Short Break</Button>
-            <Button onClick={handleStart}>Long Break</Button>
+            {keys(countdown).map((key) => {
+              const count = countdown[key];
+              let thisClass = null;
+              if (key === activeType) {
+                thisClass = count.colorName;
+              }
+              const handleStart = handler.start(key, getModal);
+              return (
+                <Button
+                  key={key}
+                  id={key}
+                  className={thisClass}
+                  onClick={handleStart}
+                  onMouseEnter={handler.btnMouseIn}
+                  onMouseLeave={handler.btnMouseOut}
+                >
+                  {count.label}
+                </Button>
+              );
+            })}
           </List>
         }
       />
@@ -155,9 +258,33 @@ const TomatoApp = (props) => {
   );
 };
 
+TomatoApp.defaultProps = {
+  countdown: {
+    POMODORO: {
+      minute: 25,
+      label: "Pomodoro",
+      colorName: "red",
+    },
+    SHORT_BREAK: {
+      minute: 5,
+      label: "Short Break",
+      colorName: "teal",
+    },
+    LONG_BREAK: {
+      minute: 15,
+      label: "Long Break",
+      colorName: "blue",
+    },
+  },
+  useTomato,
+};
+
 export default TomatoApp;
 
 const Styles = {
+  progress: {
+    cursor: "pointer",
+  },
   buttonList: {
     textAlign: "center",
   },

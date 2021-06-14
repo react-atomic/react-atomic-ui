@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "fbafc04c2ad1dc100f36" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "778ebb98d0a3a834c74f" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -3189,17 +3189,21 @@ var TagInputExample = function TagInputExample(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
-/* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
-/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var get_random_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! get-random-id */ "./node_modules/get-random-id/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
 
 
-var _a, _Tip;
+
+var _Tip;
 
 var _excluded = ["col1", "col2"];
 
@@ -3209,6 +3213,12 @@ var _excluded = ["col1", "col2"];
 
 
 
+
+var POMODORO = "POMODORO";
+var SHORT_BREAK = "SHORT_BREAK";
+var LONG_BREAK = "LONG_BREAK";
+var keys = Object.keys;
+
 var secToMin = function secToMin(sec) {
   var min = Math.floor(sec / 60);
   var remainSec = sec % 60;
@@ -3216,7 +3226,7 @@ var secToMin = function secToMin(sec) {
 };
 
 var Tip = function Tip() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reshow__WEBPACK_IMPORTED_MODULE_5__["Return"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reshow__WEBPACK_IMPORTED_MODULE_6__["Return"], {
     initStates: ["pomodoro"]
   }, function (_ref) {
     var pomodoro = _ref.pomodoro;
@@ -3225,10 +3235,10 @@ var Tip = function Tip() {
       return null;
     }
 
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["List"], {
       atom: "ol"
     }, pomodoro.tip.map(function (item, key) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Item"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Item"], {
         key: key
       }, item);
     }));
@@ -3238,118 +3248,278 @@ var Tip = function Tip() {
 var ActionSegment = function ActionSegment(_ref2) {
   var col1 = _ref2.col1,
       col2 = _ref2.col2,
-      props = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref2, _excluded);
+      props = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, _excluded);
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Segment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Column"], {
     className: "pure-u-md-1-2"
-  }, col1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    className: "pure-u-md-1-2"
-  }, col2)));
+  }, col1)));
 };
 
-var TomatoApp = function TomatoApp(props) {
-  var _Button;
+var useTomato = function useTomato(countdown) {
+  var TotalMin = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(25);
+  var TotalSec = TotalMin.current * 60;
 
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["lazyInject"])(injects, InjectStyles);
-  }, []);
-  var TotalMin = 1;
-  var TotalSec = TotalMin * 60;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(TotalSec),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(TotalSec),
       sec = _useState[0],
       setSec = _useState[1];
 
-  var timer = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
-  var modal = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      preview = _useState2[0],
+      setPreview = _useState2[1];
 
-  var handleStart = function handleStart() {
-    if (!timer.current) {
-      timer.current = setInterval(function () {
-        setSec(function (v) {
-          if (v <= 0) {
-            handleStop();
-            return 0;
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      active = _useState3[0],
+      setActive = _useState3[1];
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(POMODORO),
+      activeType = _useState4[0],
+      setActiveType = _useState4[1];
+
+  var timer = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var modal = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var resetInput = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var lastActive = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var resetState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    lastActive.current = {
+      active: active,
+      activeType: activeType
+    };
+  }, [active, activeType]);
+
+  var updateClockSec = function updateClockSec(setToMinute) {
+    if (setToMinute) {
+      var totalSec = setToMinute * 60;
+      setSec(totalSec);
+      TotalMin.current = setToMinute;
+    }
+  };
+
+  var handler = {
+    btnMouseIn: function btnMouseIn(e) {
+      var _e$currentTarget, _countdown$id;
+
+      if (!resetState.current) {
+        resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+      }
+
+      var id = e === null || e === void 0 ? void 0 : (_e$currentTarget = e.currentTarget) === null || _e$currentTarget === void 0 ? void 0 : _e$currentTarget.id;
+      setActiveType(id);
+      setPreview(true);
+      var setToMinute = (_countdown$id = countdown[id]) === null || _countdown$id === void 0 ? void 0 : _countdown$id.minute;
+      updateClockSec(setToMinute);
+    },
+    btnMouseOut: function btnMouseOut(e) {
+      var _e$currentTarget2;
+
+      var target = e.currentTarget;
+      var id = e === null || e === void 0 ? void 0 : (_e$currentTarget2 = e.currentTarget) === null || _e$currentTarget2 === void 0 ? void 0 : _e$currentTarget2.id;
+      setActiveType(resetState.current.activeType);
+      setPreview(false);
+    },
+    clickProgress: function clickProgress(getModal) {
+      return function () {
+        if (lastActive.current.active) {
+          var _countdown$activeType;
+
+          Object(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["popupDispatch"])("dom/update", {
+            popup: getModal((_countdown$activeType = countdown[activeType]) === null || _countdown$activeType === void 0 ? void 0 : _countdown$activeType.minute)
+          });
+        } else {
+          handler.start(lastActive.current.activeType)();
+        }
+      };
+    },
+    start: function start(countdownKey, getModal) {
+      return function () {
+        var _countdown$countdownK;
+
+        var setToMinute = (_countdown$countdownK = countdown[countdownKey]) === null || _countdown$countdownK === void 0 ? void 0 : _countdown$countdownK.minute;
+
+        if (!timer.current) {
+          if (lastActive.current.activeType !== countdownKey) {
+            updateClockSec(setToMinute);
           }
 
-          return --v;
-        });
-      }, 1000);
-    } else {
-      console.warn("Timer already running");
-    }
-  };
+          setActive(true);
+          setActiveType(countdownKey);
+          resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+          timer.current = setInterval(function () {
+            var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
+            setSec(function (v) {
+              if (v <= 0) {
+                handler.stop();
+                return 0;
+              }
 
-  var handleStop = function handleStop() {
-    if (modal.current) {
-      modal.current.close();
-    }
+              var lastTime = Object(get_object_value__WEBPACK_IMPORTED_MODULE_9__["default"])(lastActive.current, ["lastTime", "now"]);
 
-    if (timer.current) {
-      clearInterval(timer.current);
-      timer.current = null;
-    }
-  };
+              if (!lastTime) {
+                lastActive.current.lastTime = {
+                  sec: v,
+                  now: now
+                };
+              } else {
+                var queue = now - lastTime;
 
-  var handleReset = function handleReset() {
-    handleStop();
-    setSec(TotalSec);
-  };
+                if (queue > 1000) {
+                  var queueSec = Math.floor(queue / 1000);
+                  v -= queueSec;
+                  lastActive.current.lastTime = {
+                    sec: v,
+                    now: now
+                  };
+                }
+              }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_6__["PopupClick"], {
-    style: Styles.click,
-    popup: function popup() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_6__["PopupModal"], {
-        basic: true,
-        ref: modal,
-        contentStyle: {
-          textAlign: "center"
+              return v;
+            });
+          }, 100);
+        } else {
+          console.warn("Timer already running");
+          Object(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["popupDispatch"])("dom/update", {
+            popup: getModal(setToMinute)
+          });
         }
-      }, _Button || (_Button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-        className: "inverted",
-        onClick: handleStop
-      }, "Stop")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["InputBox"], {
-        style: Styles.resetInput,
-        defaultValue: TotalMin,
-        inputStyle: Styles.reset,
-        className: "inverted transparent",
-        leftLabel: "Resst to:",
-        rightLabel: "min",
-        button: "Reset",
-        actionProps: {
-          className: "inverted",
-          onClick: handleReset
-        }
-      }));
+      };
     },
-    component: _a || (_a = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", null))
-  }, Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])(function () {
-    var percentNum = Object(to_percent_js__WEBPACK_IMPORTED_MODULE_4__["percent"])(sec / TotalSec);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_3__["ProgressBar"], {
-      className: "big Pomodoro",
+    stop: function stop() {
+      if (modal.current) {
+        modal.current.close();
+      }
+
+      if (timer.current) {
+        clearInterval(timer.current);
+        timer.current = null;
+        setActive(false);
+      }
+    },
+    reset: function reset() {
+      handler.stop();
+      updateClockSec(resetInput.current.value);
+    }
+  };
+  return {
+    sec: sec,
+    active: active,
+    preview: preview,
+    activeType: activeType,
+    TotalSec: TotalSec,
+    handler: handler,
+    modal: modal,
+    resetInput: resetInput
+  };
+};
+
+var TomatoApp = function TomatoApp(props) {
+  var countdown = props.countdown,
+      useTomato = props.useTomato;
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["lazyInject"])(injects, InjectStyles);
+  }, []);
+
+  var _useTomato = useTomato(countdown),
+      sec = _useTomato.sec,
+      active = _useTomato.active,
+      preview = _useTomato.preview,
+      activeType = _useTomato.activeType,
+      handler = _useTomato.handler,
+      modal = _useTomato.modal,
+      resetInput = _useTomato.resetInput,
+      TotalSec = _useTomato.TotalSec;
+
+  var getModal = function getModal(defaultValue) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["PopupModal"], {
+      basic: true,
+      ref: modal,
+      contentStyle: {
+        textAlign: "center"
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+      className: "inverted",
+      onClick: handler.stop
+    }, "Pause"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["InputBox"], {
+      refCb: resetInput,
+      style: Styles.resetInput,
+      defaultValue: defaultValue,
+      inputStyle: Styles.reset,
+      className: "inverted transparent",
+      leftLabel: "Resst to:",
+      rightLabel: "min",
+      button: "Reset",
+      actionProps: {
+        className: "inverted",
+        onClick: handler.reset
+      }
+    }));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["SemanticUI"], null, Object(react__WEBPACK_IMPORTED_MODULE_2__["useMemo"])(function () {
+    var _mixClass;
+
+    var percentNum = Object(to_percent_js__WEBPACK_IMPORTED_MODULE_5__["percent"])(sec / TotalSec);
+    var classes = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["mixClass"])("big Pomodoro", (_mixClass = {}, _mixClass[countdown[activeType].colorName] = active || preview, _mixClass));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["ProgressBar"], {
+      onClick: handler.clickProgress(getModal),
+      className: classes,
+      style: Styles.progress,
       percent: percentNum,
       barLabel: secToMin(sec),
       barLabelProps: {
-        styles: Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["reactStyle"])({
+        styles: Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["reactStyle"])({
           transform: "translate(" + (100 - percentNum) + "%, 0)"
         }, false, false)
       }
     });
-  }, [sec])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ActionSegment, {
-    col1: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+  }, [sec, active, preview]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ActionSegment, {
+    col1: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["List"], {
       style: Styles.buttonList
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-      onClick: handleStart
-    }, "Pomodoro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-      onClick: handleStart
-    }, "Short Break"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-      onClick: handleStart
-    }, "Long Break"))
-  }), _Tip || (_Tip = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tip, null)));
+    }, keys(countdown).map(function (key) {
+      var count = countdown[key];
+      var thisClass = null;
+
+      if (key === activeType) {
+        thisClass = count.colorName;
+      }
+
+      var handleStart = handler.start(key, getModal);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        key: key,
+        id: key,
+        className: thisClass,
+        onClick: handleStart,
+        onMouseEnter: handler.btnMouseIn,
+        onMouseLeave: handler.btnMouseOut
+      }, count.label);
+    }))
+  }), _Tip || (_Tip = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Tip, null)));
 };
 
+TomatoApp.defaultProps = {
+  countdown: {
+    POMODORO: {
+      minute: 25,
+      label: "Pomodoro",
+      colorName: "red"
+    },
+    SHORT_BREAK: {
+      minute: 5,
+      label: "Short Break",
+      colorName: "teal"
+    },
+    LONG_BREAK: {
+      minute: 15,
+      label: "Long Break",
+      colorName: "blue"
+    }
+  },
+  useTomato: useTomato
+};
 /* harmony default export */ __webpack_exports__["default"] = (TomatoApp);
 var Styles = {
+  progress: {
+    cursor: "pointer"
+  },
   buttonList: {
     textAlign: "center"
   },
