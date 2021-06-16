@@ -71,12 +71,12 @@ const useTomato = (countdown) => {
   const resetState = useRef();
 
   useEffect(() => {
-    lastActive.current = { active, activeType };
+    lastActive.current = { ...lastActive.current, active, activeType };
   }, [active, activeType]);
 
-  const updateClockSec = (setToMinute) => {
+  const updateClock = (setToMinute, totalSec) => {
     if (setToMinute) {
-      const totalSec = setToMinute * 60;
+      totalSec = totalSec ?? setToMinute * 60;
       setSec(totalSec);
       TotalMin.current = setToMinute;
     }
@@ -87,23 +87,43 @@ const useTomato = (countdown) => {
       if (!resetState.current) {
         resetState.current = { ...lastActive.current };
       }
+      if (lastActive.current.active) {
+        return;
+      }
       const id = e?.currentTarget?.id;
       setActiveType(id);
       setPreview(true);
       const setToMinute = countdown[id]?.minute;
-      updateClockSec(setToMinute);
+      if (id === resetState.current.activeType) {
+        updateClock(setToMinute, resetState.current.lastTime?.sec);
+      } else {
+        updateClock(setToMinute);
+      }
     },
     btnMouseOut: (e) => {
+      if (lastActive.current.active) {
+        return;
+      }
       const target = e.currentTarget;
       const id = e?.currentTarget?.id;
-      setActiveType(resetState.current.activeType);
+      const origActiveType = resetState.current.activeType;
+      setActiveType(origActiveType);
       setPreview(false);
+      if (origActiveType) {
+        if (resetState.current.lastTime?.sec) {
+          updateClock(
+            countdown[origActiveType].minute,
+            resetState.current.lastTime.sec
+          );
+        } else {
+          updateClock(countdown[origActiveType].minute);
+        }
+      }
     },
-    clickProgress: (getModal) => () => {
+    clickProgress: () => {
       if (lastActive.current.active) {
-        popupDispatch("dom/update", {
-          popup: getModal(countdown[activeType]?.minute),
-        });
+        handler.stop();
+        resetState.current = { ...lastActive.current };
       } else {
         handler.start(lastActive.current.activeType)();
       }
@@ -111,8 +131,13 @@ const useTomato = (countdown) => {
     start: (countdownKey, getModal) => () => {
       const setToMinute = countdown[countdownKey]?.minute;
       if (!timer.current) {
-        if (lastActive.current.activeType !== countdownKey) {
-          updateClockSec(setToMinute);
+        lastActive.current.lastTime = null;
+        if (resetState.current?.activeType === countdownKey) {
+          if (resetState.current.lastTime?.sec) {
+            updateClock(setToMinute, resetState.current.lastTime.sec);
+          }
+        } else {
+          updateClock(setToMinute);
         }
         setActive(true);
         setActiveType(countdownKey);
@@ -146,12 +171,15 @@ const useTomato = (countdown) => {
         }, 100);
       } else {
         console.warn("Timer already running");
-        popupDispatch("dom/update", {
-          popup: getModal(setToMinute),
-        });
+        if (getModal) {
+          popupDispatch("dom/update", {
+            popup: getModal(setToMinute),
+          });
+        }
       }
     },
     stop: () => {
+      resetState.current = null;
       if (modal.current) {
         modal.current.close();
       }
@@ -162,12 +190,22 @@ const useTomato = (countdown) => {
       }
     },
     reset: () => {
+      lastActive.current = null;
       handler.stop();
-      updateClockSec(resetInput.current.value);
+      updateClock(resetInput.current.value);
     },
   };
 
-  return { sec, active, preview, activeType, TotalSec, handler, modal, resetInput };
+  return {
+    sec,
+    active,
+    preview,
+    activeType,
+    TotalSec,
+    handler,
+    modal,
+    resetInput,
+  };
 };
 
 const TomatoApp = (props) => {
@@ -176,8 +214,16 @@ const TomatoApp = (props) => {
     injects = lazyInject(injects, InjectStyles);
   }, []);
 
-  const { sec, active, preview, activeType, handler, modal, resetInput, TotalSec } =
-    useTomato(countdown);
+  const {
+    sec,
+    active,
+    preview,
+    activeType,
+    handler,
+    modal,
+    resetInput,
+    TotalSec,
+  } = useTomato(countdown);
 
   const getModal = (defaultValue) => {
     return (
@@ -212,7 +258,7 @@ const TomatoApp = (props) => {
         });
         return (
           <ProgressBar
-            onClick={handler.clickProgress(getModal)}
+            onClick={handler.clickProgress}
             className={classes}
             style={Styles.progress}
             percent={percentNum}
@@ -235,6 +281,10 @@ const TomatoApp = (props) => {
               let thisClass = null;
               if (key === activeType) {
                 thisClass = count.colorName;
+              } else {
+                if (active) {
+                  return null;
+                }
               }
               const handleStart = handler.start(key, getModal);
               return (
