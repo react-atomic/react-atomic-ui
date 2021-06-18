@@ -60,10 +60,8 @@ const ActionSegment = ({ col1, col2, ...props }) => {
 const useTomato = (countdown) => {
   const TotalMin = useRef(25);
   const TotalSec = TotalMin.current * 60;
-  const [sec, setSec] = useState(TotalSec);
-  const [preview, setPreview] = useState();
-  const [active, setActive] = useState();
-  const [activeType, setActiveType] = useState(POMODORO);
+  const [state, setState] = useState({ activeType: POMODORO, sec: TotalSec });
+  const { sec, preview, active, activeType } = state;
   const timer = useRef();
   const modal = useRef();
   const resetInput = useRef();
@@ -71,59 +69,65 @@ const useTomato = (countdown) => {
   const resetState = useRef();
 
   useEffect(() => {
-    lastActive.current = { ...lastActive.current, active, activeType };
-  }, [active, activeType]);
+    const now = getTimestamp();
+    lastActive.current = { active, activeType, now, sec };
+  }, [active, activeType, sec]);
 
-  const updateClock = (setToMinute, totalSec) => {
+  const updateClock = (setToMinute, totalSec, more) => {
     if (setToMinute) {
       totalSec = totalSec ?? setToMinute * 60;
-      setSec(totalSec);
+      setState((prev) => ({ ...prev, ...more, sec: totalSec }));
       TotalMin.current = setToMinute;
+    }
+  };
+
+  const updateAndRestore = (countdownKey, nextMinute, more) => {
+    if (resetState.current?.activeType === countdownKey) {
+      if (resetState.current.sec) {
+        updateClock(nextMinute, resetState.current.sec, more);
+      } else {
+        updateClock(nextMinute, null, more);
+      }
+    } else {
+      updateClock(nextMinute, null, more);
     }
   };
 
   const handler = {
     btnMouseIn: (e) => {
+      if (lastActive.current?.active) {
+        return;
+      }
       if (!resetState.current) {
         resetState.current = { ...lastActive.current };
       }
-      if (lastActive.current.active) {
-        return;
-      }
       const id = e?.currentTarget?.id;
-      setActiveType(id);
-      setPreview(true);
       const setToMinute = countdown[id]?.minute;
-      if (id === resetState.current.activeType) {
-        updateClock(setToMinute, resetState.current.lastTime?.sec);
-      } else {
-        updateClock(setToMinute);
-      }
+      updateAndRestore(id, setToMinute, { activeType: id, preview: true });
     },
     btnMouseOut: (e) => {
-      if (lastActive.current.active) {
+      if (lastActive.current?.active) {
         return;
       }
       const target = e.currentTarget;
       const id = e?.currentTarget?.id;
       const origActiveType = resetState.current.activeType;
-      setActiveType(origActiveType);
-      setPreview(false);
       if (origActiveType) {
-        if (resetState.current.lastTime?.sec) {
-          updateClock(
-            countdown[origActiveType].minute,
-            resetState.current.lastTime.sec
-          );
-        } else {
-          updateClock(countdown[origActiveType].minute);
-        }
+        updateAndRestore(origActiveType, countdown[origActiveType].minute, {
+          activeType: origActiveType,
+          preview: false,
+        });
+      } else {
+        setState((prev) => ({
+          ...prev,
+          activeType: origActiveType,
+          preview: false,
+        }));
       }
     },
     clickProgress: () => {
       if (lastActive.current.active) {
         handler.stop();
-        resetState.current = { ...lastActive.current };
       } else {
         handler.start(lastActive.current.activeType)();
       }
@@ -131,42 +135,28 @@ const useTomato = (countdown) => {
     start: (countdownKey, getModal) => () => {
       const setToMinute = countdown[countdownKey]?.minute;
       if (!timer.current) {
-        lastActive.current.lastTime = null;
-        if (resetState.current?.activeType === countdownKey) {
-          if (resetState.current.lastTime?.sec) {
-            updateClock(setToMinute, resetState.current.lastTime.sec);
-          }
-        } else {
-          updateClock(setToMinute);
-        }
-        setActive(true);
-        setActiveType(countdownKey);
-        resetState.current = { ...lastActive.current };
+        lastActive.current = null;
+        updateAndRestore(countdownKey, setToMinute, {
+          active: true,
+          activeType: countdownKey,
+        });
+        setTimeout(() => (resetState.current = { ...lastActive.current }));
         timer.current = setInterval(() => {
-          const now = getTimestamp();
-          setSec((v) => {
-            if (v <= 0) {
+          setState(({ sec, ...prev }) => {
+            if (sec <= 0) {
               handler.stop();
               return 0;
             }
-            const lastTime = get(lastActive.current, ["lastTime", "now"]);
-            if (!lastTime) {
-              lastActive.current.lastTime = {
-                sec: v,
-                now,
-              };
-            } else {
+            const lastTime = get(lastActive.current, ["now"]);
+            if (lastTime) {
+              const now = getTimestamp();
               const queue = now - lastTime;
               if (queue > 1000) {
                 const queueSec = Math.floor(queue / 1000);
-                v -= queueSec;
-                lastActive.current.lastTime = {
-                  sec: v,
-                  now,
-                };
+                sec -= queueSec;
               }
             }
-            return v;
+            return { ...prev, sec };
           });
         }, 100);
       } else {
@@ -179,15 +169,15 @@ const useTomato = (countdown) => {
       }
     },
     stop: () => {
-      resetState.current = null;
+      resetState.current = { ...lastActive.current };
       if (modal.current) {
         modal.current.close();
       }
       if (timer.current) {
         clearInterval(timer.current);
         timer.current = null;
-        setActive(false);
       }
+      setState((prev) => ({ ...prev, active: false, preview: false }));
     },
     reset: () => {
       lastActive.current = null;
@@ -254,7 +244,7 @@ const TomatoApp = (props) => {
       {useMemo(() => {
         const percentNum = percent(sec / TotalSec);
         const classes = mixClass("big Pomodoro", {
-          [countdown[activeType].colorName]: active || preview,
+          [countdown[activeType]?.colorName]: active || preview,
         });
         return (
           <ProgressBar

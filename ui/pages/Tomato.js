@@ -6,6 +6,7 @@ import BasePage from "../molecules/BasePage";
 /*Sample*/
 
 import TomatoApp from "../organisms/TomatoApp";
+import Sortable from "../organisms/Sortable";
 
 
 class Tomato extends BasePage {
@@ -15,7 +16,10 @@ class Tomato extends BasePage {
 
   render() {
     return (
+        <>
         <TomatoApp />
+        <Sortable />
+        </>
     );
   }
 }
