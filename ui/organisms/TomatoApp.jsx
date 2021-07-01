@@ -68,6 +68,13 @@ const useTomato = (countdown) => {
   const lastActive = useRef();
   const resetState = useRef();
 
+  useEffect(
+    () => () => {
+      handler.stop();
+    },
+    []
+  );
+
   useEffect(() => {
     const now = getTimestamp();
     lastActive.current = { active, activeType, now, sec };
@@ -82,7 +89,8 @@ const useTomato = (countdown) => {
   };
 
   const updateAndRestore = (countdownKey, nextMinute, more) => {
-    if (resetState.current?.activeType === countdownKey) {
+    const activeType = resetState.current?.activeType;
+    if (countdownKey && activeType === countdownKey) {
       if (resetState.current.sec) {
         updateClock(nextMinute, resetState.current.sec, more);
       } else {
@@ -126,48 +134,58 @@ const useTomato = (countdown) => {
       }
     },
     clickProgress: () => {
-      if (lastActive.current.active) {
-        handler.stop();
-      } else {
-        handler.start(lastActive.current.activeType)();
-      }
-    },
-    start: (countdownKey, getModal) => () => {
-      const setToMinute = countdown[countdownKey]?.minute;
-      if (!timer.current) {
-        lastActive.current = null;
-        updateAndRestore(countdownKey, setToMinute, {
-          active: true,
-          activeType: countdownKey,
-        });
-        setTimeout(() => (resetState.current = { ...lastActive.current }));
-        timer.current = setInterval(() => {
-          setState(({ sec, ...prev }) => {
-            if (sec <= 0) {
-              handler.stop();
-              return 0;
-            }
-            const lastTime = get(lastActive.current, ["now"]);
-            if (lastTime) {
-              const now = getTimestamp();
-              const queue = now - lastTime;
-              if (queue > 1000) {
-                const queueSec = Math.floor(queue / 1000);
-                sec -= queueSec;
-              }
-            }
-            return { ...prev, sec };
-          });
-        }, 100);
-      } else {
-        console.warn("Timer already running");
-        if (getModal) {
-          popupDispatch("dom/update", {
-            popup: getModal(setToMinute),
-          });
+      if (lastActive.current) {
+        if (lastActive.current.active) {
+          handler.stop();
+        } else {
+          const countdownKey = lastActive.current.activeType;
+          if (countdownKey) {
+            handler.start({ countdownKey })();
+          }
         }
       }
     },
+    start:
+      ({ countdownKey, getModal } = {}) =>
+      (e) => {
+        countdownKey = e?.currentTarget.id || countdownKey;
+        const setToMinute = countdown[countdownKey]?.minute;
+        if (!timer.current) {
+          lastActive.current = null;
+          updateAndRestore(countdownKey, setToMinute, {
+            active: true,
+            activeType: countdownKey,
+          });
+          setTimeout(() => {
+            resetState.current = { ...lastActive.current };
+            timer.current = setInterval(() => {
+              setState(({ sec, ...prev }) => {
+                const lastTime = get(lastActive.current, ["now"]);
+                if (lastTime) {
+                  const now = getTimestamp();
+                  const queue = now - lastTime;
+                  if (queue > 1000) {
+                    const queueSec = Math.floor(queue / 1000);
+                    sec -= queueSec;
+                  }
+                }
+                if (sec <= 0 || isNaN(sec)) {
+                  handler.stop();
+                  sec = 0;
+                }
+                return { ...prev, sec };
+              });
+            }, 100);
+          }, 200);
+        } else {
+          console.warn("Timer already running");
+          if (getModal) {
+            popupDispatch("dom/update", {
+              popup: getModal(setToMinute),
+            });
+          }
+        }
+      },
     stop: () => {
       resetState.current = { ...lastActive.current };
       if (modal.current) {
@@ -276,7 +294,7 @@ const TomatoApp = (props) => {
                   return null;
                 }
               }
-              const handleStart = handler.start(key, getModal);
+              const handleStart = handler.start({ getModal });
               return (
                 <Button
                   key={key}
