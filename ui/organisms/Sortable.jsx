@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { DragAndDrop } from "organism-react-graph";
-import { SemanticUI } from "react-atomic-molecule";
+import { SemanticUI, List, Item } from "react-atomic-molecule";
 
 const useSortable = (props) => {
-  const [state, setState] = useState(()=>({
+  const [state, setState] = useState(() => ({
     absX: 0,
     absY: 0,
+    isDraging: false,
   }));
 
-  const { absX, absY, startPoint } = state;
+  const { absX, absY, startPoint, isDraging } = state;
 
   const _mount = useRef(true);
   const dnd = useRef();
@@ -20,9 +21,10 @@ const useSortable = (props) => {
     if (_mount.current) {
       setState((prev) => ({
         ...prev,
+        isDraging: true,
         absX,
         absY,
-        startPoint
+        startPoint,
       }));
     }
   };
@@ -31,34 +33,48 @@ const useSortable = (props) => {
     drag: ({ absX, absY, startPoint }) => {
       move({ absX, absY, startPoint });
     },
-    dragEnd: () => {},
+    dragEnd: () => {
+      setState((prev) => ({
+        ...prev,
+        isDraging: false,
+      }));
+    },
     getEl: () => {},
   };
-  return { handler, absX, absY, startPoint, dnd, comp };
+  return { handler, absX, absY, startPoint, dnd, comp, isDraging };
 };
 
 const Sortable = (props) => {
-  const { handler, absX, absY, startPoint, dnd, comp } =
+  const { handler, absX, absY, startPoint, dnd, comp, isDraging } =
     useSortable(props);
-  const moveStyle =  {
-    transform: (absX || absY) ?`translate(${absX}px, ${absY}px)`: null,
-    left: startPoint?.elStartX,
-    top: startPoint?.elStartY,
-  };
+  const moveStyle = isDraging
+    ? {
+        ...Styles.move,
+        transform: absX || absY ? `translate(${absX}px, ${absY}px)` : null,
+        left: startPoint?.elStartX,
+        top: startPoint?.elStartY,
+      }
+    : {};
 
   return (
-    <div style={{  padding: "2rem" }}>
+    <div style={{ padding: "2rem" }}>
       some thing
-      <DragAndDrop
-        ref={dnd}
-        onDrag={handler.drag}
-        onDragEnd={handler.dragEnd}
-        component={
-          <SemanticUI refCb={(el) => (comp.current = el)} style={{...Styles.move, ...moveStyle}}>
-            sort
-          </SemanticUI>
-        }
-      />
+      <List>
+        <Item>
+          <DragAndDrop
+            ref={dnd}
+            onDrag={handler.drag}
+            onDragEnd={handler.dragEnd}
+            component={
+              <SemanticUI refCb={(el) => (comp.current = el)} style={moveStyle}>
+                sort
+              </SemanticUI>
+            }
+          />
+        </Item>
+        <Item>list 1</Item>
+        <Item>list 2</Item>
+      </List>
     </div>
   );
 };

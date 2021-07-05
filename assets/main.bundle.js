@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "ae2302feaf8d8d514d10" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "e194e1859cf2ef2b5eb7" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2769,6 +2769,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 
 
+var _Item, _Item2;
+
+
 
 
 
@@ -2776,7 +2779,8 @@ var useSortable = function useSortable(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(function () {
     return {
       absX: 0,
-      absY: 0
+      absY: 0,
+      isDraging: false
     };
   }),
       state = _useState[0],
@@ -2784,7 +2788,8 @@ var useSortable = function useSortable(props) {
 
   var absX = state.absX,
       absY = state.absY,
-      startPoint = state.startPoint;
+      startPoint = state.startPoint,
+      isDraging = state.isDraging;
 
   var _mount = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(true);
 
@@ -2804,6 +2809,7 @@ var useSortable = function useSortable(props) {
     if (_mount.current) {
       setState(function (prev) {
         return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+          isDraging: true,
           absX: absX,
           absY: absY,
           startPoint: startPoint
@@ -2823,7 +2829,13 @@ var useSortable = function useSortable(props) {
         startPoint: startPoint
       });
     },
-    dragEnd: function dragEnd() {},
+    dragEnd: function dragEnd() {
+      setState(function (prev) {
+        return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+          isDraging: false
+        });
+      });
+    },
     getEl: function getEl() {}
   };
   return {
@@ -2832,7 +2844,8 @@ var useSortable = function useSortable(props) {
     absY: absY,
     startPoint: startPoint,
     dnd: dnd,
-    comp: comp
+    comp: comp,
+    isDraging: isDraging
   };
 };
 
@@ -2843,18 +2856,19 @@ var Sortable = function Sortable(props) {
       absY = _useSortable.absY,
       startPoint = _useSortable.startPoint,
       dnd = _useSortable.dnd,
-      comp = _useSortable.comp;
+      comp = _useSortable.comp,
+      isDraging = _useSortable.isDraging;
 
-  var moveStyle = {
+  var moveStyle = isDraging ? Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.move), {}, {
     transform: absX || absY ? "translate(" + absX + "px, " + absY + "px)" : null,
     left: startPoint === null || startPoint === void 0 ? void 0 : startPoint.elStartX,
     top: startPoint === null || startPoint === void 0 ? void 0 : startPoint.elStartY
-  };
+  }) : {};
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       padding: "2rem"
     }
-  }, "some thing", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_graph__WEBPACK_IMPORTED_MODULE_2__["DragAndDrop"], {
+  }, "some thing", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["List"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Item"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_graph__WEBPACK_IMPORTED_MODULE_2__["DragAndDrop"], {
     ref: dnd,
     onDrag: handler.drag,
     onDragEnd: handler.dragEnd,
@@ -2862,9 +2876,9 @@ var Sortable = function Sortable(props) {
       refCb: function refCb(el) {
         return comp.current = el;
       },
-      style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.move), moveStyle)
+      style: moveStyle
     }, "sort")
-  }));
+  })), _Item || (_Item = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Item"], null, "list 1")), _Item2 || (_Item2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Item"], null, "list 2"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Sortable);
@@ -3402,6 +3416,11 @@ var useTomato = function useTomato(countdown) {
   var lastActive = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
   var resetState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    return function () {
+      handler.stop();
+    };
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
     lastActive.current = {
       active: active,
@@ -3428,7 +3447,9 @@ var useTomato = function useTomato(countdown) {
   var updateAndRestore = function updateAndRestore(countdownKey, nextMinute, more) {
     var _resetState$current;
 
-    if (((_resetState$current = resetState.current) === null || _resetState$current === void 0 ? void 0 : _resetState$current.activeType) === countdownKey) {
+    var activeType = (_resetState$current = resetState.current) === null || _resetState$current === void 0 ? void 0 : _resetState$current.activeType;
+
+    if (countdownKey && activeType === countdownKey) {
       if (resetState.current.sec) {
         updateClock(nextMinute, resetState.current.sec, more);
       } else {
@@ -3484,16 +3505,29 @@ var useTomato = function useTomato(countdown) {
       }
     },
     clickProgress: function clickProgress() {
-      if (lastActive.current.active) {
-        handler.stop();
-      } else {
-        handler.start(lastActive.current.activeType)();
+      if (lastActive.current) {
+        if (lastActive.current.active) {
+          handler.stop();
+        } else {
+          var countdownKey = lastActive.current.activeType;
+
+          if (countdownKey) {
+            handler.start({
+              countdownKey: countdownKey
+            })();
+          }
+        }
       }
     },
-    start: function start(countdownKey, getModal) {
-      return function () {
+    start: function start(_temp) {
+      var _ref3 = _temp === void 0 ? {} : _temp,
+          countdownKey = _ref3.countdownKey,
+          getModal = _ref3.getModal;
+
+      return function (e) {
         var _countdown$countdownK;
 
+        countdownKey = (e === null || e === void 0 ? void 0 : e.currentTarget.id) || countdownKey;
         var setToMinute = (_countdown$countdownK = countdown[countdownKey]) === null || _countdown$countdownK === void 0 ? void 0 : _countdown$countdownK.minute;
 
         if (!timer.current) {
@@ -3503,35 +3537,35 @@ var useTomato = function useTomato(countdown) {
             activeType: countdownKey
           });
           setTimeout(function () {
-            return resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
-          });
-          timer.current = setInterval(function () {
-            setState(function (_ref3) {
-              var sec = _ref3.sec,
-                  prev = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, _excluded2);
+            resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+            timer.current = setInterval(function () {
+              setState(function (_ref4) {
+                var sec = _ref4.sec,
+                    prev = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref4, _excluded2);
 
-              if (sec <= 0) {
-                handler.stop();
-                return 0;
-              }
+                var lastTime = Object(get_object_value__WEBPACK_IMPORTED_MODULE_9__["default"])(lastActive.current, ["now"]);
 
-              var lastTime = Object(get_object_value__WEBPACK_IMPORTED_MODULE_9__["default"])(lastActive.current, ["now"]);
+                if (lastTime) {
+                  var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
+                  var queue = now - lastTime;
 
-              if (lastTime) {
-                var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
-                var queue = now - lastTime;
-
-                if (queue > 1000) {
-                  var queueSec = Math.floor(queue / 1000);
-                  sec -= queueSec;
+                  if (queue > 1000) {
+                    var queueSec = Math.floor(queue / 1000);
+                    sec -= queueSec;
+                  }
                 }
-              }
 
-              return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
-                sec: sec
+                if (sec <= 0 || isNaN(sec)) {
+                  handler.stop();
+                  sec = 0;
+                }
+
+                return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+                  sec: sec
+                });
               });
-            });
-          }, 100);
+            }, 100);
+          }, 200);
         } else {
           console.warn("Timer already running");
 
@@ -3655,7 +3689,9 @@ var TomatoApp = function TomatoApp(props) {
         }
       }
 
-      var handleStart = handler.start(key, getModal);
+      var handleStart = handler.start({
+        getModal: getModal
+      });
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
         key: key,
         id: key,
