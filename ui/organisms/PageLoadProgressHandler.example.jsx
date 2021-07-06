@@ -50,7 +50,7 @@ const PageLoadProgressHandlerExample = (props) => {
           rightLabel="%"
           refCb={(o) => (dInput = o)}
           button={"Go"}
-          buttonProps={{
+          actionProps={{
             onClick: () => {
               oLoad.start(dInput.value);
             },
