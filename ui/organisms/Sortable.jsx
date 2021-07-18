@@ -44,7 +44,8 @@ const useSortable = (props) => {
   return { handler, absX, absY, startPoint, dnd, comp, isDraging };
 };
 
-const Sortable = (props) => {
+const Sort = (props) => {
+  const {children} = props;
   const { handler, absX, absY, startPoint, dnd, comp, isDraging } =
     useSortable(props);
   const moveStyle = isDraging
@@ -55,23 +56,26 @@ const Sortable = (props) => {
         top: startPoint?.elStartY,
       }
     : {};
+  return (
+    <DragAndDrop
+      ref={dnd}
+      onDrag={handler.drag}
+      onDragEnd={handler.dragEnd}
+      component={
+        <SemanticUI refCb={(el) => (comp.current = el)} style={moveStyle}>
+          {children}
+        </SemanticUI>
+      }
+    />
+  );
+};
 
+const Sortable = (props) => {
   return (
     <div style={{ padding: "2rem" }}>
       some thing
       <List>
-        <Item>
-          <DragAndDrop
-            ref={dnd}
-            onDrag={handler.drag}
-            onDragEnd={handler.dragEnd}
-            component={
-              <SemanticUI refCb={(el) => (comp.current = el)} style={moveStyle}>
-                sort
-              </SemanticUI>
-            }
-          />
-        </Item>
+        <Sort>sort1</Sort>
         <Item>list 1</Item>
         <Item>list 2</Item>
       </List>
