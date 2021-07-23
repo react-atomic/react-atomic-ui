@@ -1,6 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useImperativeHandle,
+  forwardRef,
+} from "react";
 import { DragAndDrop } from "organism-react-graph";
-import { SemanticUI, List, Item } from "react-atomic-molecule";
+import {
+  build,
+  getChildMapping,
+  SemanticUI,
+  List,
+  Item,
+} from "react-atomic-molecule";
+import callfunc from "call-func";
+
+const keys = Object.keys;
 
 const useSortable = (props) => {
   const [state, setState] = useState(() => ({
@@ -9,15 +24,23 @@ const useSortable = (props) => {
     isDraging: false,
   }));
 
-  const { absX, absY, startPoint, isDraging } = state;
+  const { absX, absY, startPoint, isDraging, destTarget } = state;
 
   const _mount = useRef(true);
   const dnd = useRef();
   const comp = useRef();
+  const lastDestTarget = useRef();
 
   useEffect(() => () => (_mount.current = false), []);
+  useEffect(
+    () => () => {
+      lastDestTarget.current = destTarget;
+      console.log({destTarget});
+    },
+    [destTarget]
+  );
 
-  const move = ({ absX, absY, startPoint }) => {
+  const move = ({ absX, absY, startPoint, destTarget, ...other }) => {
     if (_mount.current) {
       setState((prev) => ({
         ...prev,
@@ -25,13 +48,14 @@ const useSortable = (props) => {
         absX,
         absY,
         startPoint,
+        destTarget,
       }));
     }
   };
 
   const handler = {
-    drag: ({ absX, absY, startPoint }) => {
-      move({ absX, absY, startPoint });
+    drag: (e) => {
+      move(e);
     },
     dragEnd: () => {
       setState((prev) => ({
@@ -41,13 +65,17 @@ const useSortable = (props) => {
     },
     getEl: () => {},
   };
-  return { handler, absX, absY, startPoint, dnd, comp, isDraging };
+  return { handler, absX, absY, startPoint, dnd, comp, isDraging, destTarget };
 };
 
-const Sort = (props) => {
-  const {children} = props;
-  const { handler, absX, absY, startPoint, dnd, comp, isDraging } =
+const Sort = forwardRef((props, ref) => {
+  const { handler, absX, absY, startPoint, dnd, comp, isDraging, destTarget } =
     useSortable(props);
+
+  useImperativeHandle(ref, () => ({
+    getDestTarget: () => {},
+  }));
+
   const moveStyle = isDraging
     ? {
         ...Styles.move,
@@ -56,30 +84,39 @@ const Sort = (props) => {
         top: startPoint?.elStartY,
       }
     : {};
-  return (
-    <DragAndDrop
-      ref={dnd}
-      onDrag={handler.drag}
-      onDragEnd={handler.dragEnd}
-      component={
-        <SemanticUI refCb={(el) => (comp.current = el)} style={moveStyle}>
-          {children}
-        </SemanticUI>
-      }
-    />
+  const item = build(
+    <SemanticUI {...props} data-type="sortable" refCb={(el) => (comp.current = el)} />
   );
+  const moveEl = isDraging ? item({ style: moveStyle }) : null;
+  const activeStyle = isDraging ? Styles.active : null;
+  return (
+    <>
+      <DragAndDrop
+        ref={dnd}
+        onDrag={handler.drag}
+        onDragEnd={handler.dragEnd}
+        component={item({ style: activeStyle })}
+      />
+      {moveEl}
+    </>
+  );
+});
+
+const SortList = (props) => {
+  const { children } = props;
+  const childList = getChildMapping(children, (child, key) => (
+    <Sort key={key} name={key}>{child}</Sort>
+  ));
+  return keys(childList).map((key) => childList[key]);
 };
 
 const Sortable = (props) => {
   return (
-    <div style={{ padding: "2rem" }}>
-      some thing
-      <List>
-        <Sort>sort1</Sort>
-        <Item>list 1</Item>
-        <Item>list 2</Item>
-      </List>
-    </div>
+    <SortList>
+      <Item>sort1</Item>
+      <Item>list 1</Item>
+      <Item>list 2</Item>
+    </SortList>
   );
 };
 
@@ -90,5 +127,8 @@ const Styles = {
     position: "absolute",
     width: 100,
     height: 100,
+  },
+  active: {
+    border: "2px dashed rgba(0, 0, 0, 0.2)",
   },
 };
