@@ -6,7 +6,7 @@ import React, {
   useImperativeHandle,
   forwardRef,
 } from "react";
-import { DragAndDrop } from "organism-react-graph";
+import { DDWraper } from "organism-react-graph";
 import query from "css-query-selector";
 import {
   build,
@@ -22,48 +22,48 @@ const keys = Object.keys;
 
 const useSortable = (props) => {
   const { setSortElement } = props;
-
-  const [state, setState] = useState(() => ({
-    absX: 0,
-    absY: 0,
-    isDraging: false,
-  }));
-
-  const { absX, absY, startPoint, isDraging, destTarget } = state;
-
-  const _mount = useRef(true);
-  const dnd = useRef();
+  const [isDraging, setIsDraging] = useState();
   const comp = useRef();
 
   const handleTarget = (targetEl, floatXY) => {
     const near = nearWhere(targetEl, floatXY);
     const sortEl = comp.current;
+    const nextId = targetEl.nextSibling?.getAttribute("name");
+    const prevId = targetEl.previousSibling?.getAttribute("name");
+    const sortId = sortEl?.getAttribute("name");
+
+    let reverse = (nextId === sortId || prevId === sortId) && near.top;
+    if (targetEl.getAttribute("data-first")) {
+      reverse = false;
+    } else if (targetEl.getAttribute("data-last")) {
+      reverse = near.top ? false : true;
+    }
+
     setSortElement({
       targetEl,
       targetId: targetEl.getAttribute("name"),
       sortEl,
-      sortId: sortEl.getAttribute("name"),
-      desc: near.top,
+      sortId,
+      reverse,
     });
   };
 
-  useEffect(() => () => (_mount.current = false), []);
-
-  const move = ({
-    absX,
-    absY,
-    startPoint,
-    destTarget,
-    clientX,
-    clientY,
-    ...other
-  }) => {
-    let sortTarget;
-    const floatXY = {
-      x: clientX,
-      y: clientY,
-    };
-    if (_mount.current) {
+  const handler = {
+    drag: (e) => {
+      if (!comp.current) {
+        return;
+      }
+      setIsDraging(true);
+      const {
+        destTarget,
+        clientX,
+        clientY,
+      } = e;
+      let sortTarget;
+      const floatXY = {
+        x: clientX,
+        y: clientY,
+      };
       const type = destTarget?.getAttribute("data-type");
       if (!type) {
         sortTarget = query.ancestor(destTarget, '[data-type="sortable"]');
@@ -75,58 +75,17 @@ const useSortable = (props) => {
           handleTarget(destTarget, floatXY);
         }
       }
-      setState((prev) => ({
-        ...prev,
-        isDraging: true,
-        absX,
-        absY,
-        startPoint,
-        destTarget,
-      }));
-    }
-  };
-
-  const handler = {
-    drag: (e) => {
-      move(e);
     },
-    dragEnd: () => {
-      setState((prev) => ({
-        ...prev,
-        isDraging: false,
-      }));
+    dragEnd: (e) => {
+      setIsDraging(false);
     },
-    getEl: () => {},
   };
-  return {
-    handler,
-    absX,
-    absY,
-    startPoint,
-    dnd,
-    comp,
-    isDraging,
-    destTarget,
-  };
+  return { isDraging, handler, comp };
 };
 
 const Sort = forwardRef((props, ref) => {
-  const { handler, absX, absY, startPoint, dnd, comp, isDraging, destTarget } =
-    useSortable(props);
+  const { handler, isDraging, comp } = useSortable(props);
   const { children, setSortElement, style: propsStyle, ...otherProps } = props;
-
-  useImperativeHandle(ref, () => ({
-    getDestTarget: () => {},
-  }));
-
-  const moveStyle = isDraging
-    ? {
-        ...Styles.move,
-        transform: absX || absY ? `translate(${absX}px, ${absY}px)` : null,
-        left: startPoint?.elStartX,
-        top: startPoint?.elStartY,
-      }
-    : {};
 
   const mergeStyle = (style) => {
     return {
@@ -147,37 +106,47 @@ const Sort = forwardRef((props, ref) => {
 
   const shadowEl = isDraging ? item({ style: mergeStyle(activeStyle) }) : null;
   const dragEl = item({
-    style: mergeStyle(moveStyle),
+    style: mergeStyle(),
     refCb: (el) => (comp.current = el),
   });
 
   return (
     <>
-      <DragAndDrop
-        ref={dnd}
-        onDrag={handler.drag}
-        onDragEnd={handler.dragEnd}
-        component={dragEl}
-      />
+      <DDWraper onDrag={handler.drag} onDragEnd={handler.dragEnd}>
+        {dragEl}
+      </DDWraper>
       {shadowEl}
     </>
   );
 });
 
-const useSortList = ({children}) => {
+const useSortList = ({ children }) => {
   const [sortElement, setSortElement] = useState();
   const childList = getChildMapping(children, (child, key) => (
     <Sort key={key} name={key} setSortElement={setSortElement}>
       {child}
     </Sort>
   ));
-  const { sortId, targetId, desc } = sortElement || {};
+
+  const { sortId, targetId, reverse } = sortElement || {};
+
   const lastSortOrder = useRef(
     (() => {
       return keys(childList).map((key) => childList[key]);
     })()
   );
   const sortOrder = [];
+  let bFirst;
+  let bLast;
+  const arrPush = (item) => {
+    if (!bFirst) {
+      bFirst = true;
+      sortOrder.push(build(item)({ "data-first": true }));
+    } else {
+      sortOrder.push(item);
+    }
+  };
+
   lastSortOrder.current.forEach((item) => {
     const key = item.props.name;
     if (sortId === key) {
@@ -185,15 +154,19 @@ const useSortList = ({children}) => {
         sortOrder.push(childList[key]);
       }
     } else if (targetId === key) {
-      if (desc) {
-        sortOrder.push(childList[sortId], childList[key]);
+      if (reverse) {
+        arrPush(childList[key]);
+        arrPush(childList[sortId]);
       } else {
-        sortOrder.push(childList[key], childList[sortId]);
+        arrPush(childList[sortId]);
+        arrPush(childList[key]);
       }
     } else {
-      sortOrder.push(childList[key]);
+      arrPush(childList[key]);
     }
   });
+  const lastIndex = sortOrder.length - 1;
+  sortOrder[lastIndex] = build(sortOrder[lastIndex])({ "data-last": true });
   lastSortOrder.current = sortOrder;
   return { sortOrder, setSortElement };
 };
@@ -203,15 +176,15 @@ const SortList = (props) => {
   return <SemanticUI style={Styles.itemList}>{sortOrder}</SemanticUI>;
 };
 
-const Sortable = (props) => {
-  return (
-    <SortList>
-      <Item style={Styles.item}>sort1</Item>
-      <Item style={Styles.item}>list 1</Item>
-      <Item style={Styles.item}>list 2</Item>
-    </SortList>
-  );
-};
+const Sortable = (props) => (
+  <SortList>
+    <Item style={Styles.item}>list 1</Item>
+    <Item style={Styles.item}>list 2</Item>
+    <Item style={Styles.item}>list 3</Item>
+    <Item style={Styles.item}>list 4</Item>
+    <Item style={Styles.item}>list 5</Item>
+  </SortList>
+);
 
 export default Sortable;
 
