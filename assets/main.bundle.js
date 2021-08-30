@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "bc1352132a822b18755a" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "7aa8289d7d9413f1aba2" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -2886,7 +2886,7 @@ var Sort = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])
       return comp.current = el;
     }
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_graph__WEBPACK_IMPORTED_MODULE_3__["DDWraper"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(organism_react_graph__WEBPACK_IMPORTED_MODULE_3__["DDWrapper"], {
     onDrag: handler.drag,
     onDragEnd: handler.dragEnd
   }, dragEl), shadowEl);

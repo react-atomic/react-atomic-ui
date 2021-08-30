@@ -6,7 +6,7 @@ import React, {
   useImperativeHandle,
   forwardRef,
 } from "react";
-import { DDWraper } from "organism-react-graph";
+import { DDWrapper } from "organism-react-graph";
 import query from "css-query-selector";
 import {
   build,
@@ -112,9 +112,9 @@ const Sort = forwardRef((props, ref) => {
 
   return (
     <>
-      <DDWraper onDrag={handler.drag} onDragEnd={handler.dragEnd}>
+      <DDWrapper onDrag={handler.drag} onDragEnd={handler.dragEnd}>
         {dragEl}
-      </DDWraper>
+      </DDWrapper>
       {shadowEl}
     </>
   );
