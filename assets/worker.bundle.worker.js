@@ -357,12 +357,26 @@ stringify.default = stringify
 stringify.stable = deterministicStringify
 stringify.stableStringify = deterministicStringify
 
+var LIMIT_REPLACE_NODE = '[...]'
+var CIRCULAR_REPLACE_NODE = '[Circular]'
+
 var arr = []
 var replacerStack = []
 
+function defaultOptions () {
+  return {
+    depthLimit: 10,
+    edgesLimit: 20
+  }
+}
+
 // Regular stringify
-function stringify (obj, replacer, spacer) {
-  decirc(obj, '', [], undefined)
+function stringify (obj, replacer, spacer, options) {
+  if (typeof options === 'undefined') {
+    options = defaultOptions()
+  }
+
+  decirc(obj, '', 0, [], undefined, 0, options)
   var res
   try {
     if (replacerStack.length === 0) {
@@ -384,37 +398,60 @@ function stringify (obj, replacer, spacer) {
   }
   return res
 }
-function decirc (val, k, stack, parent) {
+
+function setReplace (replace, val, k, parent) {
+  var propertyDescriptor = Object.getOwnPropertyDescriptor(parent, k)
+  if (propertyDescriptor.get !== undefined) {
+    if (propertyDescriptor.configurable) {
+      Object.defineProperty(parent, k, { value: replace })
+      arr.push([parent, k, val, propertyDescriptor])
+    } else {
+      replacerStack.push([val, k, replace])
+    }
+  } else {
+    parent[k] = replace
+    arr.push([parent, k, val])
+  }
+}
+
+function decirc (val, k, edgeIndex, stack, parent, depth, options) {
+  depth += 1
   var i
   if (typeof val === 'object' && val !== null) {
     for (i = 0; i < stack.length; i++) {
       if (stack[i] === val) {
-        var propertyDescriptor = Object.getOwnPropertyDescriptor(parent, k)
-        if (propertyDescriptor.get !== undefined) {
-          if (propertyDescriptor.configurable) {
-            Object.defineProperty(parent, k, { value: '[Circular]' })
-            arr.push([parent, k, val, propertyDescriptor])
-          } else {
-            replacerStack.push([val, k])
-          }
-        } else {
-          parent[k] = '[Circular]'
-          arr.push([parent, k, val])
-        }
+        setReplace(CIRCULAR_REPLACE_NODE, val, k, parent)
         return
       }
     }
+
+    if (
+      typeof options.depthLimit !== 'undefined' &&
+      depth > options.depthLimit
+    ) {
+      setReplace(LIMIT_REPLACE_NODE, val, k, parent)
+      return
+    }
+
+    if (
+      typeof options.edgesLimit !== 'undefined' &&
+      edgeIndex + 1 > options.edgesLimit
+    ) {
+      setReplace(LIMIT_REPLACE_NODE, val, k, parent)
+      return
+    }
+
     stack.push(val)
     // Optimize for Arrays. Big arrays could kill the performance otherwise!
     if (Array.isArray(val)) {
       for (i = 0; i < val.length; i++) {
-        decirc(val[i], i, stack, val)
+        decirc(val[i], i, i, stack, val, depth, options)
       }
     } else {
       var keys = Object.keys(val)
       for (i = 0; i < keys.length; i++) {
         var key = keys[i]
-        decirc(val[key], key, stack, val)
+        decirc(val[key], key, i, stack, val, depth, options)
       }
     }
     stack.pop()
@@ -432,8 +469,12 @@ function compareFunction (a, b) {
   return 0
 }
 
-function deterministicStringify (obj, replacer, spacer) {
-  var tmp = deterministicDecirc(obj, '', [], undefined) || obj
+function deterministicStringify (obj, replacer, spacer, options) {
+  if (typeof options === 'undefined') {
+    options = defaultOptions()
+  }
+
+  var tmp = deterministicDecirc(obj, '', 0, [], undefined, 0, options) || obj
   var res
   try {
     if (replacerStack.length === 0) {
@@ -457,23 +498,13 @@ function deterministicStringify (obj, replacer, spacer) {
   return res
 }
 
-function deterministicDecirc (val, k, stack, parent) {
+function deterministicDecirc (val, k, edgeIndex, stack, parent, depth, options) {
+  depth += 1
   var i
   if (typeof val === 'object' && val !== null) {
     for (i = 0; i < stack.length; i++) {
       if (stack[i] === val) {
-        var propertyDescriptor = Object.getOwnPropertyDescriptor(parent, k)
-        if (propertyDescriptor.get !== undefined) {
-          if (propertyDescriptor.configurable) {
-            Object.defineProperty(parent, k, { value: '[Circular]' })
-            arr.push([parent, k, val, propertyDescriptor])
-          } else {
-            replacerStack.push([val, k])
-          }
-        } else {
-          parent[k] = '[Circular]'
-          arr.push([parent, k, val])
-        }
+        setReplace(CIRCULAR_REPLACE_NODE, val, k, parent)
         return
       }
     }
@@ -484,11 +515,28 @@ function deterministicDecirc (val, k, stack, parent) {
     } catch (_) {
       return
     }
+
+    if (
+      typeof options.depthLimit !== 'undefined' &&
+      depth > options.depthLimit
+    ) {
+      setReplace(LIMIT_REPLACE_NODE, val, k, parent)
+      return
+    }
+
+    if (
+      typeof options.edgesLimit !== 'undefined' &&
+      edgeIndex + 1 > options.edgesLimit
+    ) {
+      setReplace(LIMIT_REPLACE_NODE, val, k, parent)
+      return
+    }
+
     stack.push(val)
     // Optimize for Arrays. Big arrays could kill the performance otherwise!
     if (Array.isArray(val)) {
       for (i = 0; i < val.length; i++) {
-        deterministicDecirc(val[i], i, stack, val)
+        deterministicDecirc(val[i], i, i, stack, val, depth, options)
       }
     } else {
       // Create a temporary object in the required way
@@ -496,10 +544,10 @@ function deterministicDecirc (val, k, stack, parent) {
       var keys = Object.keys(val).sort(compareFunction)
       for (i = 0; i < keys.length; i++) {
         var key = keys[i]
-        deterministicDecirc(val[key], key, stack, val)
+        deterministicDecirc(val[key], key, i, stack, val, depth, options)
         tmp[key] = val[key]
       }
-      if (parent !== undefined) {
+      if (typeof parent !== 'undefined') {
         arr.push([parent, k, val])
         parent[k] = tmp
       } else {
@@ -511,15 +559,20 @@ function deterministicDecirc (val, k, stack, parent) {
 }
 
 // wraps replacer function to handle values we couldn't replace
-// and mark them as [Circular]
+// and mark them as replaced value
 function replaceGetterValues (replacer) {
-  replacer = replacer !== undefined ? replacer : function (k, v) { return v }
+  replacer =
+    typeof replacer !== 'undefined'
+      ? replacer
+      : function (k, v) {
+        return v
+      }
   return function (key, val) {
     if (replacerStack.length > 0) {
       for (var i = 0; i < replacerStack.length; i++) {
         var part = replacerStack[i]
         if (part[1] === key && part[0] === val) {
-          val = '[Circular]'
+          val = part[2]
           replacerStack.splice(i, 1)
           break
         }
@@ -1240,7 +1293,7 @@ var parse = function parse(s) {
 /*!********************************************************!*\
   !*** ./node_modules/reshow-constant/build/es/index.js ***!
   \********************************************************/
-/*! exports provided: UNDEFINED, FUNCTION, OBJECT, DEFAULT, STRING, SYMBOL, SCRIPT */
+/*! exports provided: UNDEFINED, FUNCTION, OBJECT, DEFAULT, STRING, SYMBOL, SCRIPT, T_UNDEFINED, T_NULL, KEYS, IS_ARRAY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1252,13 +1305,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STRING", function() { return STRING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SYMBOL", function() { return SYMBOL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCRIPT", function() { return SCRIPT; });
-var UNDEFINED = 'undefined';
-var FUNCTION = 'function';
-var OBJECT = 'object';
-var DEFAULT = 'default';
-var STRING = 'string';
-var SYMBOL = 'symbol';
-var SCRIPT = 'script';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T_UNDEFINED", function() { return T_UNDEFINED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T_NULL", function() { return T_NULL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KEYS", function() { return KEYS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IS_ARRAY", function() { return IS_ARRAY; });
+var UNDEFINED = "undefined";
+var FUNCTION = "function";
+var OBJECT = "object";
+var DEFAULT = "default";
+var STRING = "string";
+var SYMBOL = "symbol";
+var SCRIPT = "script";
+var T_UNDEFINED = undefined;
+var T_NULL = null;
+var KEYS = Object.keys;
+var IS_ARRAY = Array.isArray;
 
 /***/ }),
 
