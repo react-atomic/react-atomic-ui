@@ -1,4 +1,3 @@
-import React from "react";
 import { ReshowMessage, Return } from "reshow";
 import { ClientRoute } from "reshow-url";
 import { PopupPool } from "organism-react-popup";

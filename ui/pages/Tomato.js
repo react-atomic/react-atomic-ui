@@ -1,5 +1,3 @@
-import React from "react";
-
 /*Base*/
 import BasePage from "../molecules/BasePage";
 

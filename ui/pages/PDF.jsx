@@ -1,4 +1,3 @@
-import React from "react";
 /*Base*/
 import CodeExample from "organism-react-code";
 import BasePage from "../molecules/BasePage";

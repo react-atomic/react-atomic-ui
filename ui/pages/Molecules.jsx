@@ -1,4 +1,3 @@
-import React from "react";
 import BasePage from "../molecules/BasePage";
 
 import { DividingHeader, Form, Field, InputBox } from "react-atomic-molecule";

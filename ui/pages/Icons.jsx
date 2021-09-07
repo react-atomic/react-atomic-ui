@@ -1,5 +1,3 @@
-import React from "react";
-
 import Account from "ricon/Account";
 import AccessTime from "ricon/AccessTime";
 import Add from "ricon/Add";

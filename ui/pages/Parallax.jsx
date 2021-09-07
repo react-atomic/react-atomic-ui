@@ -1,4 +1,3 @@
-import React from "react";
 import { lazyInject } from "react-atomic-molecule";
 
 /*Base*/
