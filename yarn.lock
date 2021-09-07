@@ -2620,9 +2620,9 @@ color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 colorette@^1.2.1, colorette@^1.2.2, colorette@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.3.0.tgz#ff45d2f0edb244069d3b772adeb04fed38d0a0af"
-  integrity sha512-ecORCqbSFP7Wm8Y6lyqMJjexBQqXSF7SSeaTyGGphogUjBlFP9m9o08wy86HL2uB7fMTxtOUzLMk7ogKcxMg1w==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.4.0.tgz#5190fbb87276259a86ad700bff2c6d6faa3fca40"
+  integrity sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==
 
 colorlib@*:
   version "0.0.0"
@@ -8517,9 +8517,9 @@ reshow-build@*:
     reshow-constant "*"
 
 reshow-constant@*:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/reshow-constant/-/reshow-constant-0.1.0.tgz#bfee4342c5e4bbe7ef68f3ff9a4e6ad72be34b17"
-  integrity sha512-GN8X/HgogVFw3ZUb1lKs+VqDXmNFcdxz3g4+TfJL7HhvzfkuO6I6y7xPL6gxenI9KOXtjMAngYP16b+BiSp+bw==
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/reshow-constant/-/reshow-constant-0.1.1.tgz#b0a776ca8cab7506f938ecbbd982cc1475b6082b"
+  integrity sha512-ld0m6u50OsdFZextCRZsa1wSz/Bt9pYrrVYlugdjYxv0VLllTnP7sefGB2PQ6E2RwXqXZolFArdLTomeK4Jv2g==
 
 reshow-flux-base@*:
   version "0.3.7"
@@ -8531,15 +8531,17 @@ reshow-flux-base@*:
     reshow-runtime "*"
 
 reshow-flux@*:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-1.0.2.tgz#063b2b61373bbcab498e519f717a47a579136f15"
-  integrity sha512-0f7hB3P/RNr3SJrQBPVmjD1/jIwhvJSorN2oq4xp2tzFp39mOI+kjF+AX+LurMFHAfmlWD0NGHI6Ec5r/nXNLQ==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-1.0.3.tgz#cfc1d053a62b52041b2035147a74e562128c8adc"
+  integrity sha512-tmG/OghNo4N4H8KpcELO9NABXlyF0ASLG3lWYB1C4fpJ4S85OB1pTVebDMRG9vBMttQUc7L5i9ucmOAe00mfkg==
   dependencies:
     array.dedup "*"
     get-object-value "*"
     immutable "*"
     reshow-build "*"
+    reshow-constant "*"
     reshow-flux-base "*"
+    reshow-hooks "*"
     reshow-runtime "*"
     setimmediate "*"
 

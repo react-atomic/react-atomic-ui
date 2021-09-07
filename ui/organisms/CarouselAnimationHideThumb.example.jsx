@@ -7,6 +7,7 @@ const CarouselAnimationExample = (props) => {
       carouselAttr={{
         style: Styles.carousel,
       }}
+      carouselListStyle={Styles.carouselList}
       style={Styles.container}
       hideThumb
     >
@@ -26,13 +27,18 @@ const CarouselAnimationExample = (props) => {
 
 export default CarouselAnimationExample;
 
+const height = 300;
+
 const Styles = {
   container: {
     margin: "0 10%",
   },
+  carouselList: {
+    minHeight: height,
+  },
   carousel: {
     width: "100%",
-    height: 300,
+    height,
     background: "#00558B",
   },
   img: {
