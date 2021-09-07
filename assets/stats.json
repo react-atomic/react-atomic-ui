@@ -3,13 +3,13 @@
     "main": [
       {
         "name": "main.bundle.js",
-        "publicPath": "./assets/main.bundle.js?6aaac69aa444490c129c"
+        "publicPath": "./assets/main.bundle.js?53d78615007c5e3917b5"
       }
     ],
     "vendor": [
       {
         "name": "vendor.bundle.js",
-        "publicPath": "./assets/vendor.bundle.js?6aaac69aa444490c129c"
+        "publicPath": "./assets/vendor.bundle.js?53d78615007c5e3917b5"
       }
     ]
   },

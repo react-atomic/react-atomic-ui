@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
+import React, { lazy, PureComponent } from "react";
 
 import { Cell, Column } from "pmvc_react_list";
-import Table from "pmvc_react_list/fixedDataTable";
+const Table = lazy(() => import('pmvc_react_list/fixedDataTable'));
 
 const rows = [
   ["a1", "b1", "c1"],
