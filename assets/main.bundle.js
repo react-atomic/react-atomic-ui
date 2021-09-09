@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "93a5f88264f5dbde9ad4" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "94d9335f4d1d75801267" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -815,7 +815,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
-var _Carousel, _Carousel2, _Carousel3, _Carousel4;
+var _Carousel, _Carousel2, _Carousel3;
 
 
 
@@ -835,15 +835,16 @@ var CarouselAnimationExample = function CarouselAnimationExample(props) {
         style: Styles.img,
         src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
       })
-    }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Image"], {
-        src: "https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg"
+        style: Styles.img,
+        src: "https://live.staticflickr.com/8359/8442153367_b3197910bf_k.jpg"
       })
-    })), _Carousel2 || (_Carousel2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+    }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: "3"
-    })), _Carousel3 || (_Carousel3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+    })), _Carousel2 || (_Carousel2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: "4"
-    })), _Carousel4 || (_Carousel4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+    })), _Carousel3 || (_Carousel3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: "5"
     }))]
   });
@@ -856,7 +857,7 @@ var Styles = {
     margin: "0 10%"
   },
   carouselList: {
-    minHeight: height
+    minHeight: height + 5
   },
   carousel: {
     width: "100%",
@@ -865,6 +866,7 @@ var Styles = {
   },
   img: {
     maxWidth: "100%",
+    maxHeight: "100%",
     verticalAlign: "bottom"
   }
 };
@@ -924,7 +926,7 @@ var Styles = {
     margin: "0 10%"
   },
   carouselList: {
-    minHeight: height
+    minHeight: height + 5
   },
   carousel: {
     width: "100%",
@@ -6377,7 +6379,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image src=\"https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg\" />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image\n          style={Styles.img}\n          src=\"https://live.staticflickr.com/8359/8442153367_b3197910bf_k.jpg\"\n        />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    maxHeight: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
 
 /***/ }),
 
@@ -6390,7 +6392,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n      hideThumb\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n      hideThumb\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
 
 /***/ }),
 

@@ -34,7 +34,7 @@ const Styles = {
     margin: "0 10%",
   },
   carouselList: {
-    minHeight: height,
+    minHeight: height + 5,
   },
   carousel: {
     width: "100%",

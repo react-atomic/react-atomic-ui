@@ -18,7 +18,10 @@ const CarouselAnimationExample = (props) => {
         />
       </Carousel>
       <Carousel>
-        <Image src="https://live.staticflickr.com/7883/47562596261_cc18fc91b6_b.jpg" />
+        <Image
+          style={Styles.img}
+          src="https://live.staticflickr.com/8359/8442153367_b3197910bf_k.jpg"
+        />
       </Carousel>
       <Carousel>3</Carousel>
       <Carousel>4</Carousel>
@@ -36,7 +39,7 @@ const Styles = {
     margin: "0 10%",
   },
   carouselList: {
-    minHeight: height,
+    minHeight: height + 5,
   },
   carousel: {
     width: "100%",
@@ -45,6 +48,7 @@ const Styles = {
   },
   img: {
     maxWidth: "100%",
+    maxHeight: "100%",
     verticalAlign: "bottom",
   },
 };
