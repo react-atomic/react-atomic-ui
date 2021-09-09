@@ -49,8 +49,9 @@ const D3UmlPerfExample = () => {
   let isDisableDel;
   let isDisableMove;
   return (
-    <div style={{height: "50vh"}}>
+    <div>
       <UMLGraph
+        style={{height: "50vh"}}
         onZoom={handleZoom}
         ref={handleUml}
         data={data}

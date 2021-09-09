@@ -7196,9 +7196,9 @@ organism-react-d3-piechart@*:
     react-atomic-molecule "*"
 
 organism-react-d3-uml@*:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.7.0.tgz#25636319ca070bb184773d60e4cae526e64d5159"
-  integrity sha512-3QJzJ9GXN64X5/K+uJvF7yNou7NttqbCyWoGGIZdl8WisKHexplOug3OirULIPiPkXrJkVcs7dxIs1LR52z44A==
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-uml/-/organism-react-d3-uml-0.7.1.tgz#fc8c7b3543bc71767b26d6cf6e9f560ae52dbb66"
+  integrity sha512-m+Ri7PReyNZWCYLGu3LndUMDVdk6/JDLAOdTB4efgc+8HWziSzyugoVsk0/6i55mclgotQxtuPtAQI7MwNIZqg==
   dependencies:
     array.merge "*"
     css-query-selector "*"
