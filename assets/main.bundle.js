@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "90e6ed06a861acea00d4" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "be7cd767649a521c19e3" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -838,7 +838,7 @@ var CarouselAnimationExample = function CarouselAnimationExample(props) {
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Image"], {
         style: Styles.img,
-        src: "https://live.staticflickr.com/8359/8442153367_b3197910bf_k.jpg"
+        src: "https://source.unsplash.com/random"
       })
     }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
       children: "3"
@@ -6379,7 +6379,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image\n          style={Styles.img}\n          src=\"https://live.staticflickr.com/8359/8442153367_b3197910bf_k.jpg\"\n        />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    maxHeight: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image\n          style={Styles.img}\n          src=\"https://source.unsplash.com/random\"\n        />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    maxHeight: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
 
 /***/ }),
 
