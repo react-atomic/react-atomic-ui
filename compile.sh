@@ -47,6 +47,7 @@ stop(){
     killBy ${DIR}/node_modules/.bin/babel 
     cat webpack.pid | xargs -I{} kill -9 {}
     npm run clean
+    echo "Stop done";
 }
 
 watch(){

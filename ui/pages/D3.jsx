@@ -37,12 +37,12 @@ class D3 extends BasePage {
           <D3LineChart />
         </CodeExample>
 
-        <CodeExample code={d3AreaChart} header="D3 Area Chart">
-          <D3AreaChart />
-        </CodeExample>
-
         <CodeExample code={d3BarChart} header="D3 Bar Chart">
           <D3BarChart />
+        </CodeExample>
+
+        <CodeExample code={d3AreaChart} header="D3 Area Chart">
+          <D3AreaChart />
         </CodeExample>
 
         <CodeExample code={d3PieChart} header="D3 Pie Chart">

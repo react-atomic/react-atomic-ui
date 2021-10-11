@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "be7cd767649a521c19e3" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "71745887823491496622" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -1196,7 +1196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var D3BarChart = function D3BarChart(props) {
-  var data = {
+  var data = [{
     values: [{
       x: "2013-01",
       y: 53
@@ -1207,7 +1207,7 @@ var D3BarChart = function D3BarChart(props) {
       x: "2013-03",
       y: 269
     }]
-  };
+  }];
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__["BarChart"], {
     data: data,
     style: {
@@ -4882,13 +4882,13 @@ var D3 = /*#__PURE__*/function (_BasePage) {
         header: "D3 Line Chart",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(_organisms_D3LineChart_example__WEBPACK_IMPORTED_MODULE_8__["default"], {})
       })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        code: _raw_loader_ui_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_11__["default"],
-        header: "D3 Area Chart",
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_10__["default"], {})
-      })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_2__["default"], {
         code: _raw_loader_ui_organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_7__["default"],
         header: "D3 Bar Chart",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(_organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+      })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        code: _raw_loader_ui_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_11__["default"],
+        header: "D3 Area Chart",
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_10__["default"], {})
       })), _CodeExample5 || (_CodeExample5 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_2__["default"], {
         code: _raw_loader_ui_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_5__["default"],
         header: "D3 Pie Chart",
@@ -6470,7 +6470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { BarChart } from \"organism-react-d3-axis-chart\";\n\nconst D3BarChart = (props) => {\n  let data = {\n    values: [\n      {\n        x: \"2013-01\",\n        y: 53,\n      },\n      {\n        x: \"2013-02\",\n        y: 165,\n      },\n      {\n        x: \"2013-03\",\n        y: 269,\n      },\n    ],\n  };\n\n  return <BarChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3BarChart;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { BarChart } from \"organism-react-d3-axis-chart\";\n\nconst D3BarChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: \"2013-01\",\n          y: 53,\n        },\n        {\n          x: \"2013-02\",\n          y: 165,\n        },\n        {\n          x: \"2013-03\",\n          y: 269,\n        },\n      ],\n    },\n  ];\n\n  return <BarChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3BarChart;\n");
 
 /***/ }),
 

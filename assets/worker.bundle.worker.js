@@ -1293,7 +1293,7 @@ var parse = function parse(s) {
 /*!********************************************************!*\
   !*** ./node_modules/reshow-constant/build/es/index.js ***!
   \********************************************************/
-/*! exports provided: UNDEFINED, FUNCTION, OBJECT, DEFAULT, STRING, SYMBOL, SCRIPT, T_UNDEFINED, T_NULL, T_TRUE, T_FALSE, KEYS, IS_ARRAY */
+/*! exports provided: UNDEFINED, FUNCTION, OBJECT, DEFAULT, STRING, SYMBOL, SCRIPT, TYPE_ERROR, T_UNDEFINED, T_NULL, T_TRUE, T_FALSE, KEYS, IS_ARRAY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1305,6 +1305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STRING", function() { return STRING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SYMBOL", function() { return SYMBOL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SCRIPT", function() { return SCRIPT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TYPE_ERROR", function() { return TYPE_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T_UNDEFINED", function() { return T_UNDEFINED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T_NULL", function() { return T_NULL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T_TRUE", function() { return T_TRUE; });
@@ -1318,6 +1319,7 @@ var DEFAULT = "default";
 var STRING = "string";
 var SYMBOL = "symbol";
 var SCRIPT = "script";
+var TYPE_ERROR = "TypeError";
 var T_UNDEFINED = undefined;
 var T_NULL = null;
 var T_TRUE = true;
