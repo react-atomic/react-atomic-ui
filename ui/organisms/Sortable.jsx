@@ -3,7 +3,6 @@ import React, {
   useState,
   useEffect,
   useRef,
-  useImperativeHandle,
   forwardRef,
 } from "react";
 import { DDWrapper } from "organism-react-graph";
