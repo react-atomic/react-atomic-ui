@@ -12,7 +12,6 @@ class BasePage extends Component {
         },
       });
       if (this.props.tplProps) {
-          console.log(this.props.tplProps);
           dispatch({tplProps: this.props.tplProps});
       }
     });

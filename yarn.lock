@@ -6361,9 +6361,9 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 marked@*:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-3.0.7.tgz#343aad9e91b96249b495c99c512ea09cfe06de1e"
-  integrity sha512-ctKqbnLuNbsHbI26cfMyOlKgXGfl1orOv1AvWWDX7AkgfMOwCWvmuYc+mVLeWhQ9W6hdWVBynOs96VkcscKo0Q==
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-3.0.8.tgz#2785f0dc79cbdc6034be4bb4f0f0a396bd3f8aeb"
+  integrity sha512-0gVrAjo5m0VZSJb4rpL59K1unJAMb/hm8HRXqasD8VeC8m91ytDPMritgFSlKonfdt+rRYYpP/JfLxgIX8yoSw==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -7008,9 +7008,9 @@ only@~0.0.2:
   integrity sha1-Kv3oTQPlC5qO3EROMGEKcCle37Q=
 
 open@^8.0.9:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.3.0.tgz#fdef1cdfe405e60dec8ebd18889e7e812f39c59f"
-  integrity sha512-7INcPWb1UcOwSQxAXTnBJ+FxVV4MPs/X++FWWBtgY69/J5lc+tCteMt/oFK1MnkyHC4VILLa9ntmwKTwDR4Q9w==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.4.0.tgz#345321ae18f8138f82565a910fdc6b39e8c244f8"
+  integrity sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
@@ -7292,9 +7292,9 @@ organism-react-navigation@*:
     to-percent-js "*"
 
 organism-react-parallax@*:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.0.10.tgz#be3d47adae767d4f15f1cda6af7ff5e9bac5ae02"
-  integrity sha512-FpraV7d96i3EPOHjKNbUtILBkJu9m5UZdqSlvXKR3r05zJTL1Q88dlcDpB/aEgHcJP6oTKkb7Q3ZSOUT2xlwcA==
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.1.0.tgz#31bb508e9949e15e561b58834499acc6138b892d"
+  integrity sha512-fNZ8POAiONey3wZPn+EybK5JoSnI97XpzBW68ILTx/HpleetQ6+UJzyMUSQRvvFXnMEpzTo8BY/WiXZsMtvvsw==
   dependencies:
     array.merge "*"
     easing-lib "*"
@@ -7327,13 +7327,14 @@ organism-react-popup@*:
     win-doc "*"
 
 organism-react-progress@*:
-  version "0.14.6"
-  resolved "https://registry.yarnpkg.com/organism-react-progress/-/organism-react-progress-0.14.6.tgz#8b52f9bcaa22e5cbd3e47a7fa555f75c0b006bc1"
-  integrity sha512-0wQ4Ml2nluF0oes2VX3skSSX3PbWS441J9Mfk88L7RbjCKb+JhGP6484EZIYSWd32F7WihlA42UTf0l88hq9dw==
+  version "0.14.7"
+  resolved "https://registry.yarnpkg.com/organism-react-progress/-/organism-react-progress-0.14.7.tgz#7841b734656a6437f7de396ea98d236e07e0cefe"
+  integrity sha512-oncK4bk9eCUbByXpaHIBh6sMunrxMMFswD5YQsM4S0DTJHat9MNtUJiRDTh9KzKn1LQnAw8bsM6/eZrniNTLtw==
   dependencies:
     organism-react-ajax "*"
     organism-react-popup "*"
     react-atomic-molecule "*"
+    reshow-hooks "*"
     reshow-return "*"
     setimmediate "^1.0.5"
 
@@ -7346,9 +7347,9 @@ organism-react-qq-video@*:
     organism-react-video "*"
 
 organism-react-scroll-nav@*:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.8.0.tgz#11e7af2d036547ace378b6c348ad6b5cbf4956e7"
-  integrity sha512-SYgr3okxwEdrkzhctNNj6IsSvS79dcj8Q5Hw3J6Uo+GpdarTJYpC6kVoiCzIx1JEV3kUo34bJZADm8SWMq9Uyg==
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/organism-react-scroll-nav/-/organism-react-scroll-nav-0.8.1.tgz#eb87e38391cf90316ed5f12db7100b9dcd4518d6"
+  integrity sha512-GkpraWsHThENxcQcMHK5OP9Ffxnsql7S8IGy4orEwm9ejABluEOyX7JWS6gabsXRtJH6L5lFDtvNzwn9ONyMcg==
   dependencies:
     call-func "*"
     get-object-value "*"
@@ -8074,9 +8075,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.8.3.tgz#8974bfc030f22a68cf9ad5013527f99bbae3be73"
-  integrity sha512-gpfkKOjupRJD8vKRRA75NpKzklbZUrfjSYwR/S0vRPOfR1538yMtzixQ8PdN7cva+usYzbHYIcM9tLL34fRDXA==
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.8.4.tgz#0d2218b9bba32b319ddb86396709bb9ce946bca7"
+  integrity sha512-2ljbjHLUA1hlHWd+57tYzp9dT6bExp5YhTNbzsuNEyrcPpDgXSJyunRTmoiJgizUZ1DCZIJ7qeL8BLvvCddDiQ==
   dependencies:
     array.merge "*"
     class-lib "*"
@@ -8527,9 +8528,9 @@ reshow-flux@*:
     setimmediate "*"
 
 reshow-hooks@*:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/reshow-hooks/-/reshow-hooks-0.0.3.tgz#461ea3888ee1fe1ef22d82e179da8fa81299d1ef"
-  integrity sha512-UAhXpHSkOy/VMtzktMheQZhHGx+k0twSfs7PuNMVAyAo/0xMM9hdeNAja1iUyOZcRgnC8G4F+oLJKjW+YZdcfQ==
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/reshow-hooks/-/reshow-hooks-0.0.7.tgz#ea7f3fc821d52f3d6378dcba99700d4d2fde361f"
+  integrity sha512-aZ3WNMaVjWO/vkZIPGkMDsvtHeL0nMwDiAFWVvGRxVsBNBZpDGgEPEjJY65wHD1mcwa8G5yvluRsQsgiaxJakw==
   dependencies:
     call-func "*"
 

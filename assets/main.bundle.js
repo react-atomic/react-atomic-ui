@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "fe2560c250245350a922" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "dc8dabbacfff4ee6ca8a" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -319,7 +319,6 @@ var BasePage = /*#__PURE__*/function (_Component) {
       });
 
       if (_this.props.tplProps) {
-        console.log(_this.props.tplProps);
         Object(reshow__WEBPACK_IMPORTED_MODULE_2__["dispatch"])({
           tplProps: _this.props.tplProps
         });
