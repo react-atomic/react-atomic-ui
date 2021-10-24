@@ -7292,9 +7292,9 @@ organism-react-navigation@*:
     to-percent-js "*"
 
 organism-react-parallax@*:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.1.1.tgz#97614fa5030329974e880ad9c0b8e04ed62d5c32"
-  integrity sha512-HwVHj27W8TRJGgEJvFTUQUon3F8b1HxZ/mb0dZxBA9HQsaNqJDVAoVg0/Pdj/deLE0D1xwSH6CloYd7UYUUACg==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/organism-react-parallax/-/organism-react-parallax-0.1.2.tgz#6f5d3917de8af8559bf61b4a52d19a6780508400"
+  integrity sha512-LKKHWerp3m7UAYdE6I/je+qkhAep+8b8TWTH4f7mBKOAc8kGeMp9ufIhAHp3r7QgFAVieD6sbjRrkyF86wNIhw==
   dependencies:
     array.merge "*"
     easing-lib "*"

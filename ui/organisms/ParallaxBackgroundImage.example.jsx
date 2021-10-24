@@ -14,7 +14,7 @@ export default ParallaxBackgroundImageExample;
 
 const Styles = {
   container: {
-    height: 300,
+    height: 600,
     color: "#fff",
     textAlign: "center",
     paddingTop: 200,
