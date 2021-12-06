@@ -17,7 +17,21 @@
 /******/ 		};
 /******/
 /******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		let cleanup = function NoOp() {};
+/******/
+/******/ 		if ('undefined' !== typeof window && window.$RefreshSetup$) {
+/******/ 		  cleanup = window.$RefreshSetup$(module.i);
+/******/ 		}
+/******/
+/******/ 		try {
+/******/
+/******/ 			modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		} finally {
+/******/ 		  cleanup();
+/******/ 		}
+/******/
 /******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
