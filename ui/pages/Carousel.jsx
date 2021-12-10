@@ -1,6 +1,5 @@
 import CodeExample from "organism-react-code";
-
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*example*/
 import CarouselAnimation from "../organisms/CarouselAnimation.example";
@@ -12,37 +11,33 @@ import carouselAnimationHideThumb from "!raw-loader!../../../../ui/organisms/Car
 import CarouselSlide from "../organisms/CarouselSlide.example";
 import carouselSlide from "!raw-loader!../../../../ui/organisms/CarouselSlide.example";
 
-class CarouselPage extends BasePage {
-  static defaultProps = {
-    pageName: "Carousel",
-  };
-  render() {
-    return (
-      <>
-        <CodeExample
-          code={carouselAnimation}
-          header="Carousel Animation"
-          git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
-          npm="organism-react-carousel"
-        >
-          <CarouselAnimation />
-        </CodeExample>
+const CarouselPage = (props) => {
+  usePage({ ...props, pageName: "Carousel" });
+  return (
+    <>
+      <CodeExample
+        code={carouselAnimation}
+        header="Carousel Animation"
+        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
+        npm="organism-react-carousel"
+      >
+        <CarouselAnimation />
+      </CodeExample>
 
-        <CodeExample
-          code={carouselAnimationHideThumb}
-          header="Carousel Animation Hide Thumb"
-          git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
-          npm="organism-react-carousel"
-        >
-          <CarouselAnimationHideThumb />
-        </CodeExample>
+      <CodeExample
+        code={carouselAnimationHideThumb}
+        header="Carousel Animation Hide Thumb"
+        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
+        npm="organism-react-carousel"
+      >
+        <CarouselAnimationHideThumb />
+      </CodeExample>
 
-        <CodeExample code={carouselSlide} header="Carousel Slide (WIP)">
-          <CarouselSlide />
-        </CodeExample>
-      </>
-    );
-  }
-}
+      <CodeExample code={carouselSlide} header="Carousel Slide (WIP)">
+        <CarouselSlide />
+      </CodeExample>
+    </>
+  );
+};
 
 export default CarouselPage;

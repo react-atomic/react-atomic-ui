@@ -1,13 +1,8 @@
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
-class Atoms extends BasePage {
-  static defaultProps = {
-    pageName: "Atoms",
-  };
-
-  render() {
-    return <>This is atom</>;
-  }
-}
+const Atoms = (props) => {
+  usePage({ ...props, pageName: "Atoms" });
+  return <>This is atom</>;
+};
 
 export default Atoms;

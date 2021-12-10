@@ -1,25 +1,20 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import HTMLToCanvansExample from "../organisms/HTMLToCanvans.example";
 import htmlToCanvansExample from "!raw-loader!../../../../ui/organisms/HTMLToCanvans.example";
 
-class PDF extends BasePage {
-  static defaultProps = {
-    pageName: "PDF",
-  };
-
-  render() {
-    return (
-      <>
-        <CodeExample code={htmlToCanvansExample} header="PDF Example">
-          <HTMLToCanvansExample />
-        </CodeExample>
-      </>
-    );
-  }
-}
+const PDF = (props) => {
+  usePage({ ...props, pageName: "PDF" });
+  return (
+    <>
+      <CodeExample code={htmlToCanvansExample} header="PDF Example">
+        <HTMLToCanvansExample />
+      </CodeExample>
+    </>
+  );
+};
 
 export default PDF;

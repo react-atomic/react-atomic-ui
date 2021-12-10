@@ -1,19 +1,15 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 
 import D3UmlPerfExample from "../organisms/D3UmlPerf.example";
 import d3UmlPerfExample from "!raw-loader!../../../../ui/organisms/D3UmlPerf.example";
 
-
-class D3UmlPerf extends BasePage {
-  static defaultProps = {
-    pageName: "D3UmlPerf",
-  };
-
-  render() {
+const D3UmlPerf = props =>
+{
+    usePage({ ...props, pageName: "D3UmlPerf" });
     return (
       <>
         <CodeExample code={d3UmlPerfExample} header="D3 Uml" id="d3-uml">
@@ -21,7 +17,6 @@ class D3UmlPerf extends BasePage {
         </CodeExample>
       </>
     );
-  }
 }
 
 export default D3UmlPerf;

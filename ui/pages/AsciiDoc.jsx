@@ -1,17 +1,13 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import AsciiDocExample from "../organisms/AsciiDoc.example";
 import asciiDocExample from "!raw-loader!../../../../ui/organisms/AsciiDoc.example";
 
-class AsciiDocPage extends BasePage {
-  static defaultProps = {
-    pageName: "AsciiDoc",
-  };
-
-  render() {
+const AsciiDocPage = props => {
+    usePage({...props, pageName: "AsciiDoc"});
     return (
       <>
         <CodeExample
@@ -24,7 +20,6 @@ class AsciiDocPage extends BasePage {
         </CodeExample>
       </>
     );
-  }
-}
+};
 
 export default AsciiDocPage;

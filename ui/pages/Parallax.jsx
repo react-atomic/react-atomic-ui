@@ -1,35 +1,27 @@
-import { lazyInject } from "react-atomic-molecule";
-
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
+
+import { useLazyInject } from "react-atomic-molecule";
 
 import ParallaxBackgroundImage from "../organisms/ParallaxBackgroundImage.example";
 import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/ParallaxBackgroundImage.example";
 
-class Parallax extends BasePage {
-  static defaultProps = {
+const Parallax = (props) => {
+  usePage({
+    ...props,
     pageName: "Parallax",
-    tplProps: {
-        className: "Parallax"
-    },
-  };
-
-  constructor(props) {
-    super(props);
-    injects = lazyInject(injects, InjectStyles);
-  }
-
-  render() {
-    return (
-      <>
-        <CodeExample code={parallaxBackgroundImage} header="Parallax Example">
-          <ParallaxBackgroundImage />
-        </CodeExample>
-      </>
-    );
-  }
-}
+    tplProps: { className: "Parallax" },
+  });
+  injects = useLazyInject(InjectStyles, injects);
+  return (
+    <>
+      <CodeExample code={parallaxBackgroundImage} header="Parallax Example">
+        <ParallaxBackgroundImage />
+      </CodeExample>
+    </>
+  );
+};
 
 export default Parallax;
 

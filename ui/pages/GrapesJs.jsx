@@ -1,6 +1,6 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import GrapesJsExample from "../organisms/GrapesJs.example";
@@ -9,12 +9,8 @@ import grapesJsExample from "!raw-loader!../../../../ui/organisms/GrapesJs.examp
 import RTEExample from "../organisms/RTE.example";
 import rteExample from "!raw-loader!../../../../ui/organisms/RTE.example";
 
-class GrapesJsPage extends BasePage {
-  static defaultProps = {
-    pageName: "GrapesJs",
-  };
-
-  render() {
+const GrapesJs = props => {
+    usePage({ ...props, pageName: "GrapesJs" });
     return (
       <>
         <CodeExample
@@ -31,7 +27,6 @@ class GrapesJsPage extends BasePage {
         </CodeExample>
       </>
     );
-  }
 }
 
-export default GrapesJsPage;
+export default GrapesJs;

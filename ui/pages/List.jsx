@@ -1,6 +1,6 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 
@@ -19,39 +19,34 @@ import fixedDataTableList from "!raw-loader!../../../../ui/organisms/FixedDataTa
 import Pagination from "../organisms/Pagination.example";
 import pagination from "!raw-loader!../../../../ui/organisms/Pagination.example";
 
-class List extends BasePage {
-  static defaultProps = {
-    pageName: "List",
-  };
+const List = (props) => {
+  usePage({ ...props, pageName: "List" });
+  return (
+    <>
+      <CodeExample code={gridList} header="Grid List">
+        <GridList />
+      </CodeExample>
 
-  render() {
-    return (
-      <>
-        <CodeExample code={gridList} header="Grid List">
-          <GridList />
-        </CodeExample>
+      <CodeExample code={htmlTableList} header="Html Table">
+        <HtmlTableList />
+      </CodeExample>
 
-        <CodeExample code={htmlTableList} header="Html Table">
-          <HtmlTableList />
-        </CodeExample>
+      <CodeExample
+        code={reactVirtualizedTableList}
+        header="React Virgualized Table"
+      >
+        <ReactVirtualizedTableList />
+      </CodeExample>
 
-        <CodeExample
-          code={reactVirtualizedTableList}
-          header="React Virgualized Table"
-        >
-          <ReactVirtualizedTableList />
-        </CodeExample>
+      <CodeExample code={fixedDataTableList} header="Fixed Data Table">
+        <FixedDataTableList />
+      </CodeExample>
 
-        <CodeExample code={fixedDataTableList} header="Fixed Data Table">
-          <FixedDataTableList />
-        </CodeExample>
-
-        <CodeExample code={pagination} header="Pagination">
-          <Pagination />
-        </CodeExample>
-      </>
-    );
-  }
-}
+      <CodeExample code={pagination} header="Pagination">
+        <Pagination />
+      </CodeExample>
+    </>
+  );
+};
 
 export default List;

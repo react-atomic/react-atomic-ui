@@ -1,25 +1,19 @@
 /*Base*/
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 
 import TomatoApp from "../organisms/TomatoApp";
 import Sortable from "../organisms/Sortable";
 
-
-class Tomato extends BasePage {
-  static defaultProps = {
-    pageName: "Tomato",
-  };
-
-  render() {
-    return (
-        <>
-        <TomatoApp />
-        <Sortable />
-        </>
-    );
-  }
-}
+const Tomato = (props) => {
+  usePage({ ...props, pageName: "Tomato" });
+  return (
+    <>
+      <TomatoApp />
+      <Sortable />
+    </>
+  );
+};
 
 export default Tomato;

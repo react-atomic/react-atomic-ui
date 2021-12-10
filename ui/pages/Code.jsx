@@ -1,17 +1,13 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 import CodeExampleExample from "../organisms/CodeExample.example";
 import CodeEditorExample from "../organisms/CodeEditor.example";
 import codeEditorExample from "!raw-loader!../../../../ui/organisms/CodeEditor.example";
 
-class Code extends BasePage {
-  static defaultProps = {
-    pageName: "Code",
-  };
-
-  render() {
+const Code = props => {
+    usePage({ ...props, pageName: "Code" });
     return (
       <>
         <CodeExampleExample />
@@ -21,7 +17,6 @@ class Code extends BasePage {
         </CodeExample>
       </>
     );
-  }
-}
+};
 
 export default Code;

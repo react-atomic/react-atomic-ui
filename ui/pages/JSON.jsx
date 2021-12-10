@@ -1,17 +1,13 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import QueryToJSON from "../organisms/QueryToJSON";
 import queryToJSON from "!raw-loader!../../../../ui/organisms/QueryToJSON";
 
-class JSON extends BasePage {
-  static defaultProps = {
-    pageName: "JSON",
-  };
-
-  render() {
+const JSON = props => {
+    usePage({ ...props, pageName: "JSON" });
     return (
       <>
         <CodeExample code={queryToJSON} header="Query To JSON">
@@ -19,7 +15,6 @@ class JSON extends BasePage {
         </CodeExample>
       </>
     );
-  }
-}
+};
 
 export default JSON;

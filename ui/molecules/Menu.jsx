@@ -1,4 +1,3 @@
-import React from "react";
 import { VerticalMenu } from "pmvc_react_admin";
 import { SideMenu } from "organism-react-navigation";
 import get from "get-object-value";

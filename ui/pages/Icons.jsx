@@ -1,3 +1,6 @@
+/*Base*/
+import usePage from "../../src/usePage";
+
 import Account from "ricon/Account";
 import AccessTime from "ricon/AccessTime";
 import Add from "ricon/Add";
@@ -60,8 +63,6 @@ import ZoomIn from "ricon/ZoomIn";
 // Alert
 import Error from "ricon/Error";
 import Warning from "ricon/Warning";
-
-import BasePage from "../molecules/BasePage";
 
 const icons = [
   ["Account", <Account />],
@@ -157,29 +158,25 @@ const icons = [
   ["Warning", <Warning />],
 ];
 
-class Icons extends BasePage {
-  static defaultProps = {
-    pageName: "Icons",
-  };
-  render() {
-    return (
-      <>
-        <div className="pure-g">
-          {icons.map((v, k) => (
-            <div
-              key={k}
-              className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-5"
-              style={Styles.grid}
-            >
-              <div style={Styles.icon}>{v[1]}</div>
-              <div>{v[0]}</div>
-            </div>
-          ))}
-        </div>
-      </>
-    );
-  }
-}
+const Icons = (props) => {
+  usePage({ ...props, pageName: "Icons" });
+  return (
+    <>
+      <div className="pure-g">
+        {icons.map((v, k) => (
+          <div
+            key={k}
+            className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-5"
+            style={Styles.grid}
+          >
+            <div style={Styles.icon}>{v[1]}</div>
+            <div>{v[0]}</div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default Icons;
 

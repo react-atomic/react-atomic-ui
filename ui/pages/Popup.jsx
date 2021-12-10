@@ -1,6 +1,6 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import PopupExample from "../organisms/Popup.example";
@@ -19,12 +19,8 @@ import windowOffsetExample from "!raw-loader!../../../../ui/organisms/WindowOffs
 import ReshowMessageExample from "../organisms/ReshowMessage.example";
 import reshowMessageExample from "!raw-loader!../../../../ui/organisms/ReshowMessage.example";
 
-class Popup extends BasePage {
-  static defaultProps = {
-    pageName: "Popup",
-  };
-
-  render() {
+const Popup = props => {
+    usePage({ ...props, pageName: "Popup" });
     return (
       <>
         <CodeExample code={popupExample} header="Popup Example">
@@ -62,7 +58,6 @@ class Popup extends BasePage {
         </CodeExample>
       </>
     );
-  }
-}
+};
 
 export default Popup;

@@ -1,6 +1,6 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import D3PieChart from "../organisms/D3PieChart.example";
@@ -21,12 +21,8 @@ import d3Uml from "!raw-loader!../../../../ui/organisms/D3Uml.example";
 import StockChart from "../organisms/StockChart.example";
 import stockChart from "!raw-loader!../../../../ui/organisms/StockChart.example";
 
-class D3 extends BasePage {
-  static defaultProps = {
-    pageName: "D3",
-  };
-
-  render() {
+const D3 = props => {
+    usePage({ ...props, pageName: "D3" });
     return (
       <>
         <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
@@ -54,7 +50,6 @@ class D3 extends BasePage {
         </CodeExample>
       </>
     );
-  }
-}
+};
 
 export default D3;

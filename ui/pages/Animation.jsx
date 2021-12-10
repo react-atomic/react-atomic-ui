@@ -1,6 +1,6 @@
 /*Base*/
 import CodeExample from "organism-react-code";
-import BasePage from "../molecules/BasePage";
+import usePage from "../../src/usePage";
 
 /*Sample*/
 import AnimationExample from "../organisms/Animation.example";
@@ -10,12 +10,8 @@ import animationReplaceExample from "!raw-loader!../../../../ui/organisms/Animat
 import AnimationDelayExample from "../organisms/AnimationDelay.example";
 import animationDelayExample from "!raw-loader!../../../../ui/organisms/AnimationDelay.example";
 
-class Animation extends BasePage {
-  static defaultProps = {
-    pageName: "Animation",
-  };
-
-  render() {
+const Animation = props => {
+    usePage({...props, pageName: "Animation"});
     return (
       <>
         <CodeExample code={animationExample} header="Animation Sample">
@@ -37,7 +33,6 @@ class Animation extends BasePage {
         </CodeExample>
       </>
     );
-  }
 }
 
 export default Animation;
