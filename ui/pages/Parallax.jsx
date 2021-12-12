@@ -29,6 +29,7 @@ let injects;
 const InjectStyles = {
   doc: [
     {
+      paddingTop: "300px !important",
       paddingBottom: "150vh !important",
     },
     "div#doc.Parallax",

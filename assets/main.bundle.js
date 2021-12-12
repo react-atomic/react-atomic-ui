@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "51b574541d087c4c5d52" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "455aa1ceba6ab4e5a48d" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -5660,6 +5660,7 @@ var Parallax = function Parallax(props) {
 var injects;
 var InjectStyles = {
   doc: [{
+    paddingTop: "300px !important",
     paddingBottom: "150vh !important"
   }, "div#doc.Parallax"]
 };
