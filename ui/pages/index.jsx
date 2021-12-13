@@ -47,19 +47,18 @@ const themes = {
 };
 
 const Index = (props) => (
-  <Return initStates={['tplProps']}>
-  {(props)=>{
-    const {tplProps} = props;
-    return (<Doc {...tplProps}>
-      <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
-      <PageLoadProgressHandler ajax={true} />
-      <I13nElement />
-      <ReshowMessage />
-      <PopupPool />
-    </Doc>
-    );
-    }
-  }
+  <Return initStates={["tplProps"]}>
+    {({ tplProps }) => {
+      return (
+        <Doc {...tplProps}>
+          <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
+          <PageLoadProgressHandler ajax={true} />
+          <I13nElement />
+          <ReshowMessage />
+          <PopupPool />
+        </Doc>
+      );
+    }}
   </Return>
 );
 
