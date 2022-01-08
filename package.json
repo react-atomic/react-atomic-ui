@@ -5,7 +5,11 @@
     "type": "git",
     "url": "https://github.com/react-atomic/react-atomic-ui"
   },
-  "keywords": ["react", "react-component", "atomic-ui"],
+  "keywords": [
+    "react",
+    "react-component",
+    "atomic-ui"
+  ],
   "author": "Hill <hill@kimo.com>",
   "license": "MIT",
   "dependencies": {

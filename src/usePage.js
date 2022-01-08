@@ -13,9 +13,7 @@ const usePage = (props) => {
           activeMenu: pageName,
         },
       });
-      if (tplProps) {
-        dispatch({ tplProps });
-      }
+      dispatch({ tplProps, pageName });
     });
     ajaxDispatch("ajaxGet", {
       url: "/data/env",

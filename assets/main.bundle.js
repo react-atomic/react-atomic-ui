@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "455aa1ceba6ab4e5a48d" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "5caca0a86678b40e25de" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -307,12 +307,10 @@ var usePage = function usePage(props) {
           activeMenu: pageName
         }
       });
-
-      if (tplProps) {
-        Object(reshow__WEBPACK_IMPORTED_MODULE_1__["dispatch"])({
-          tplProps: tplProps
-        });
-      }
+      Object(reshow__WEBPACK_IMPORTED_MODULE_1__["dispatch"])({
+        tplProps: tplProps,
+        pageName: pageName
+      });
     });
     Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])("ajaxGet", {
       url: "/data/env",
@@ -5944,10 +5942,12 @@ var themes = {
 
 var Index = function Index(props) {
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["Return"], {
-    initStates: ['tplProps'],
-    children: function children(props) {
-      var tplProps = props.tplProps;
+    initStates: ["tplProps", "pageName"],
+    children: function children(_ref) {
+      var tplProps = _ref.tplProps,
+          pageName = _ref.pageName;
       return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
+        className: pageName,
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
           themes: themes,
           defaultThemePath: "Atoms"

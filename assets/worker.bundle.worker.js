@@ -1554,36 +1554,42 @@ var _typeof = function _typeof(o) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unsafeSet", function() { return unsafeSet; });
-var isUnSafeKey = function isUnSafeKey(key) {
-  return key === "__proto__" || key === "constructor" || key === "prototype";
+var isPrototypePolluted = function isPrototypePolluted(arrPath) {
+  var joinPath = "|".concat(arrPath.join("|"), "|");
+  return ["__proto__", "constructor", "prototype"].some(function (key) {
+    return -1 !== joinPath.indexOf("|".concat(key, "|"));
+  });
 };
 
-var replaceValue = function replaceValue(obj, arrKey, val, isAppend, unSafe) {
-  if (!unSafe && arrKey.some(isUnSafeKey)) {
+var replaceValue = function replaceValue(obj, arrPath, val, isAppend, unSafe) {
+  if (!unSafe && isPrototypePolluted(arrPath)) {
     throw "Contain un-safe key.";
   }
 
-  var last = arrKey.pop();
-  arrKey.forEach(function (k) {
-    obj[k] = obj[k] || {};
-    obj = obj[k];
+  var last = arrPath.pop();
+  var linkObj = obj;
+  arrPath.forEach(function (k) {
+    var _linkObj$k;
+
+    linkObj[k] = (_linkObj$k = linkObj[k]) !== null && _linkObj$k !== void 0 ? _linkObj$k : Object.create(null);
+    linkObj = linkObj[k];
   });
 
-  if (isAppend && (!obj[last] || !obj[last].push)) {
-    if (!obj[last]) {
-      obj[last] = [val];
+  if (isAppend && (!linkObj[last] || !linkObj[last].push)) {
+    if (!linkObj[last]) {
+      linkObj[last] = [val];
     } else {
-      obj[last] = [obj[last], val];
+      linkObj[last] = [linkObj[last], val];
     }
-  } else if (isAppend && obj[last].push) {
-    obj[last].push(val);
+  } else if (isAppend && linkObj[last].push) {
+    linkObj[last].push(val);
   } else {
-    obj[last] = val;
+    linkObj[last] = val;
   }
 };
 
-var unsafeSet = function unsafeSet(obj, arrKey, val, isAppend) {
-  return replaceValue(obj, arrKey, val, isAppend, true);
+var unsafeSet = function unsafeSet(obj, arrPath, val, isAppend) {
+  return replaceValue(obj, arrPath, val, isAppend, true);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (replaceValue);
