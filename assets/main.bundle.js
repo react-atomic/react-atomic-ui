@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "5caca0a86678b40e25de" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "802db0392da62826c525" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -235,46 +235,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_app_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-app/client */ "./node_modules/reshow-app/client.js");
 /* harmony import */ var _ui_pages_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/pages/index */ "./build/es/ui/pages/index.js");
-/* harmony import */ var _i13n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./i13n */ "./build/es/src/i13n.js");
 
-
+ // import i13n from "./i13n";
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(reshow_app_client__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_pages_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
-
-/***/ }),
-
-/***/ "./build/es/src/i13n.js":
-/*!******************************!*\
-  !*** ./build/es/src/i13n.js ***!
-  \******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! organism-react-i13n */ "./node_modules/organism-react-i13n/build/es/src/index.js");
-
-
-var actionHandler = function actionHandler(state, action) {
-  console.log("action", action);
-  return state;
-};
-
-var impressionHandler = function impressionHandler(state, action) {
-  console.log("view", state.get("pvid"));
-  return state;
-};
-
-var initHandler = function initHandler(state, action) {
-  console.log("init", state);
-  return state;
-};
-
-Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])("config/set", {
-  initHandler: initHandler,
-  actionHandler: actionHandler,
-  impressionHandler: impressionHandler
-});
 
 /***/ }),
 
@@ -3455,16 +3419,14 @@ var Styles = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
-/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
-/* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var reshow_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-hooks */ "./node_modules/reshow-hooks/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -3472,86 +3434,61 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var StockChartExample = function StockChartExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      data = _useState[0],
+      setData = _useState[1];
 
-
-var StockChartExample = /*#__PURE__*/function (_PureComponent) {
-  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(StockChartExample, _PureComponent);
-
-  function StockChartExample() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
-      data: null
-    });
-
-    return _this;
-  }
-
-  var _proto = StockChartExample.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    var _this2 = this;
-
-    Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["ajaxDispatch"])({
+  var isMount = Object(reshow_hooks__WEBPACK_IMPORTED_MODULE_4__["useMounted"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])({
       type: "ajaxGet",
       params: {
         url: "//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
         callback: function callback(json) {
-          _this2.setState({
-            data: {
+          if (isMount()) {
+            setData({
               trades: json
-            }
-          });
+            });
+          }
         }
       }
     });
-  };
+  }, []);
 
-  _proto.render = function render() {
-    var data = this.state.data;
+  if (!data) {
+    return null;
+  }
 
-    if (!data) {
-      return null;
-    }
-
-    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_4__["FullScreenExample"], {
-      id: "full-page-stock-chart",
-      button: "open full screen",
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_5__["StockChartCompute"], {
-        data: data,
-        tradeRowsLocator: function tradeRowsLocator(d) {
-          return d.trades;
-        },
-        tradeHighLocator: function tradeHighLocator(d) {
-          return d.h;
-        },
-        tradeLowLocator: function tradeLowLocator(d) {
-          return d.l;
-        },
-        tradeOpenLocator: function tradeOpenLocator(d) {
-          return d.o;
-        },
-        tradeCloseLocator: function tradeCloseLocator(d) {
-          return d.c;
-        },
-        tradeVolumeLocator: function tradeVolumeLocator(d) {
-          return d.v;
-        },
-        tradeDateLocator: function tradeDateLocator(d) {
-          return d.t;
-        }
-      })
-    });
-  };
-
-  return StockChartExample;
-}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["FullScreenExample"], {
+    id: "full-page-stock-chart",
+    button: "open full screen",
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__["StockChartCompute"], {
+      data: data,
+      tradeRowsLocator: function tradeRowsLocator(d) {
+        return d.trades;
+      },
+      tradeHighLocator: function tradeHighLocator(d) {
+        return d.h;
+      },
+      tradeLowLocator: function tradeLowLocator(d) {
+        return d.l;
+      },
+      tradeOpenLocator: function tradeOpenLocator(d) {
+        return d.o;
+      },
+      tradeCloseLocator: function tradeCloseLocator(d) {
+        return d.c;
+      },
+      tradeVolumeLocator: function tradeVolumeLocator(d) {
+        return d.v;
+      },
+      tradeDateLocator: function tradeDateLocator(d) {
+        return d.t;
+      }
+    })
+  });
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (StockChartExample);
 
@@ -5867,32 +5804,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-url */ "./node_modules/reshow-url/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
-/* harmony import */ var organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-i13n */ "./node_modules/organism-react-i13n/build/es/src/index.js");
-/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../templates/Doc */ "./build/es/ui/templates/Doc.js");
-/* harmony import */ var _pages_Atoms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/Atoms */ "./build/es/ui/pages/Atoms.js");
-/* harmony import */ var _pages_Molecules__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/Molecules */ "./build/es/ui/pages/Molecules.js");
-/* harmony import */ var _pages_Organisms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/Organisms */ "./build/es/ui/pages/Organisms.js");
-/* harmony import */ var _pages_Icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/Icons */ "./build/es/ui/pages/Icons.js");
-/* harmony import */ var _pages_List__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/List */ "./build/es/ui/pages/List.js");
-/* harmony import */ var _pages_Carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/Carousel */ "./build/es/ui/pages/Carousel.js");
-/* harmony import */ var _pages_D3__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/D3 */ "./build/es/ui/pages/D3.js");
-/* harmony import */ var _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/D3UmlPerf */ "./build/es/ui/pages/D3UmlPerf.js");
-/* harmony import */ var _pages_Animation__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/Animation */ "./build/es/ui/pages/Animation.js");
-/* harmony import */ var _pages_Popup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/Popup */ "./build/es/ui/pages/Popup.js");
-/* harmony import */ var _pages_Video__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/Video */ "./build/es/ui/pages/Video.js");
-/* harmony import */ var _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/Parallax */ "./build/es/ui/pages/Parallax.js");
-/* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/Code */ "./build/es/ui/pages/Code.js");
-/* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/es/ui/pages/AsciiDoc.js");
-/* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/es/ui/pages/GrapesJs.js");
-/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/PDF */ "./build/es/ui/pages/PDF.js");
-/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/JSON */ "./build/es/ui/pages/JSON.js");
-/* harmony import */ var _pages_Tomato__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/Tomato */ "./build/es/ui/pages/Tomato.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../templates/Doc */ "./build/es/ui/templates/Doc.js");
+/* harmony import */ var _pages_Atoms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/Atoms */ "./build/es/ui/pages/Atoms.js");
+/* harmony import */ var _pages_Molecules__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/Molecules */ "./build/es/ui/pages/Molecules.js");
+/* harmony import */ var _pages_Organisms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/Organisms */ "./build/es/ui/pages/Organisms.js");
+/* harmony import */ var _pages_Icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/Icons */ "./build/es/ui/pages/Icons.js");
+/* harmony import */ var _pages_List__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/List */ "./build/es/ui/pages/List.js");
+/* harmony import */ var _pages_Carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/Carousel */ "./build/es/ui/pages/Carousel.js");
+/* harmony import */ var _pages_D3__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/D3 */ "./build/es/ui/pages/D3.js");
+/* harmony import */ var _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/D3UmlPerf */ "./build/es/ui/pages/D3UmlPerf.js");
+/* harmony import */ var _pages_Animation__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/Animation */ "./build/es/ui/pages/Animation.js");
+/* harmony import */ var _pages_Popup__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/Popup */ "./build/es/ui/pages/Popup.js");
+/* harmony import */ var _pages_Video__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/Video */ "./build/es/ui/pages/Video.js");
+/* harmony import */ var _pages_Parallax__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/Parallax */ "./build/es/ui/pages/Parallax.js");
+/* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/Code */ "./build/es/ui/pages/Code.js");
+/* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/es/ui/pages/AsciiDoc.js");
+/* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/es/ui/pages/GrapesJs.js");
+/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/PDF */ "./build/es/ui/pages/PDF.js");
+/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/JSON */ "./build/es/ui/pages/JSON.js");
+/* harmony import */ var _pages_Tomato__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/Tomato */ "./build/es/ui/pages/Tomato.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__);
 
 
-var _PageLoadProgressHand, _I13nElement, _ReshowMessage, _PopupPool;
-
+var _PageLoadProgressHand, _ReshowMessage, _PopupPool;
 
 
 
@@ -5920,40 +5855,40 @@ var _PageLoadProgressHand, _I13nElement, _ReshowMessage, _PopupPool;
 
 
 var themes = {
-  Atoms: _pages_Atoms__WEBPACK_IMPORTED_MODULE_7__["default"],
-  Molecules: _pages_Molecules__WEBPACK_IMPORTED_MODULE_8__["default"],
-  Organisms: _pages_Organisms__WEBPACK_IMPORTED_MODULE_9__["default"],
-  D3: _pages_D3__WEBPACK_IMPORTED_MODULE_13__["default"],
-  D3UmlPerf: _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_14__["default"],
-  Icons: _pages_Icons__WEBPACK_IMPORTED_MODULE_10__["default"],
-  List: _pages_List__WEBPACK_IMPORTED_MODULE_11__["default"],
-  Carousel: _pages_Carousel__WEBPACK_IMPORTED_MODULE_12__["default"],
-  Animation: _pages_Animation__WEBPACK_IMPORTED_MODULE_15__["default"],
-  Popup: _pages_Popup__WEBPACK_IMPORTED_MODULE_16__["default"],
-  Parallax: _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__["default"],
-  Video: _pages_Video__WEBPACK_IMPORTED_MODULE_17__["default"],
-  Code: _pages_Code__WEBPACK_IMPORTED_MODULE_19__["default"],
-  AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__["default"],
-  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__["default"],
-  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_22__["default"],
-  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_23__["default"],
-  Tomato: _pages_Tomato__WEBPACK_IMPORTED_MODULE_24__["default"]
+  Atoms: _pages_Atoms__WEBPACK_IMPORTED_MODULE_6__["default"],
+  Molecules: _pages_Molecules__WEBPACK_IMPORTED_MODULE_7__["default"],
+  Organisms: _pages_Organisms__WEBPACK_IMPORTED_MODULE_8__["default"],
+  D3: _pages_D3__WEBPACK_IMPORTED_MODULE_12__["default"],
+  D3UmlPerf: _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_13__["default"],
+  Icons: _pages_Icons__WEBPACK_IMPORTED_MODULE_9__["default"],
+  List: _pages_List__WEBPACK_IMPORTED_MODULE_10__["default"],
+  Carousel: _pages_Carousel__WEBPACK_IMPORTED_MODULE_11__["default"],
+  Animation: _pages_Animation__WEBPACK_IMPORTED_MODULE_14__["default"],
+  Popup: _pages_Popup__WEBPACK_IMPORTED_MODULE_15__["default"],
+  Parallax: _pages_Parallax__WEBPACK_IMPORTED_MODULE_17__["default"],
+  Video: _pages_Video__WEBPACK_IMPORTED_MODULE_16__["default"],
+  Code: _pages_Code__WEBPACK_IMPORTED_MODULE_18__["default"],
+  AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_19__["default"],
+  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_20__["default"],
+  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_21__["default"],
+  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_22__["default"],
+  Tomato: _pages_Tomato__WEBPACK_IMPORTED_MODULE_23__["default"]
 };
 
 var Index = function Index(props) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["Return"], {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["Return"], {
     initStates: ["tplProps", "pageName"],
     children: function children(_ref) {
       var tplProps = _ref.tplProps,
           pageName = _ref.pageName;
-      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
+      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_5__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
         className: pageName,
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
           themes: themes,
           defaultThemePath: "Atoms"
-        })), _PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["PageLoadProgressHandler"], {
+        })), _PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["PageLoadProgressHandler"], {
           ajax: true
-        })), _I13nElement || (_I13nElement = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__["I13nElement"], {})), _ReshowMessage || (_ReshowMessage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["ReshowMessage"], {})), _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_3__["PopupPool"], {}))]
+        })), _ReshowMessage || (_ReshowMessage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["ReshowMessage"], {})), _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_24__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_3__["PopupPool"], {}))]
       }));
     }
   });
@@ -6538,7 +6473,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\n\nclass StockChartExample extends PureComponent {\n  state = {\n    data: null,\n  };\n\n  componentDidMount() {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url:\n          \"//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          this.setState({ data: { trades: json } });\n        },\n      },\n    });\n  }\n\n  render() {\n    const { data } = this.state;\n    if (!data) {\n      return null;\n    }\n    return (\n      <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n        <StockChartCompute\n          data={data}\n          tradeRowsLocator={(d) => d.trades}\n          tradeHighLocator={(d) => d.h}\n          tradeLowLocator={(d) => d.l}\n          tradeOpenLocator={(d) => d.o}\n          tradeCloseLocator={(d) => d.c}\n          tradeVolumeLocator={(d) => d.v}\n          tradeDateLocator={(d) => d.t}\n        />\n      </FullScreen>\n    );\n  }\n}\n\nexport default StockChartExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
 
 /***/ }),
 

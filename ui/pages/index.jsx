@@ -2,7 +2,6 @@ import { ReshowMessage, Return } from "reshow";
 import { ClientRoute } from "reshow-url";
 import { PopupPool } from "organism-react-popup";
 import { PageLoadProgressHandler } from "organism-react-progress";
-import { I13nElement } from "organism-react-i13n";
 
 import Doc from "../templates/Doc";
 
@@ -53,7 +52,6 @@ const Index = (props) => (
         <Doc {...tplProps} className={pageName}>
           <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
           <PageLoadProgressHandler ajax={true} />
-          <I13nElement />
           <ReshowMessage />
           <PopupPool />
         </Doc>
