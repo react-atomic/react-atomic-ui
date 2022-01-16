@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "dec9cef02db815cada16" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "023b92de37d22990d8e3" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -325,7 +325,7 @@ var usePage = function usePage(props) {
         });
       });
     };
-  });
+  }, []);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (usePage);

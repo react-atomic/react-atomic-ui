@@ -28,7 +28,7 @@ const usePage = (props) => {
         });
       });
     };
-  });
+  }, []);
 };
 
 export default usePage;
