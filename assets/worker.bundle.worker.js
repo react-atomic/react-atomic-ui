@@ -589,7 +589,7 @@ function replaceGetterValues (replacer) {
 /*!*************************************************************!*\
   !*** ./node_modules/get-object-value/build/es/src/index.js ***!
   \*************************************************************/
-/*! exports provided: default, getDefault, toJS, toMap, toArray, toStringForOneArray, initMap */
+/*! exports provided: default, getDefault, toJS, toMap, initMap */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -597,15 +597,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDefault", function() { return getWebpack4Default; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toJS", function() { return toJS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toMap", function() { return toMap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toStringForOneArray", function() { return toStringForOneArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initMap", function() { return initMap; });
 /* harmony import */ var reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/typeof */ "./node_modules/reshow-runtime/es/helpers/typeof.js");
 /* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-constant */ "./node_modules/reshow-constant/build/es/index.js");
 
 
-var isArray = Array.isArray;
-var keys = Object.keys;
 
 var getWebpack4Default = function getWebpack4Default(o) {
   return get(o, [reshow_constant__WEBPACK_IMPORTED_MODULE_1__["DEFAULT"], reshow_constant__WEBPACK_IMPORTED_MODULE_1__["DEFAULT"]], function () {
@@ -615,6 +611,10 @@ var getWebpack4Default = function getWebpack4Default(o) {
   });
 };
 
+var getDefaultValue = function getDefaultValue(v, cur) {
+  return reshow_constant__WEBPACK_IMPORTED_MODULE_1__["FUNCTION"] === Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(v) ? v(cur) : v !== null && v !== void 0 ? v : cur;
+};
+
 var toJS = function toJS(v) {
   return v && v.toJS ? v.toJS() : v;
 };
@@ -622,30 +622,16 @@ var toJS = function toJS(v) {
 var toMap = function toMap(a, path) {
   var next = get(a, path, {});
   var nextMap = {};
-  keys(next).forEach(function (key) {
+  Object(reshow_constant__WEBPACK_IMPORTED_MODULE_1__["KEYS"])(next).forEach(function (key) {
     return nextMap[key] = toJS(next[key]);
   });
   return nextMap;
-};
-
-var toArray = function toArray(maybeString) {
-  return isArray(maybeString) ? maybeString : [maybeString];
-};
-
-var toStringForOneArray = function toStringForOneArray(arr) {
-  var _arr$;
-
-  return arr.length > 1 ? arr : (_arr$ = arr[0]) !== null && _arr$ !== void 0 ? _arr$ : undefined;
 };
 
 var initMap = function initMap(o) {
   return function (k, defaultValue) {
     return o[k] || (o[k] = getDefaultValue(defaultValue));
   };
-};
-
-var getDefaultValue = function getDefaultValue(v, cur) {
-  return reshow_constant__WEBPACK_IMPORTED_MODULE_1__["FUNCTION"] === Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(v) ? v(cur) : v !== null && v !== void 0 ? v : cur;
 };
 
 var get = function get(o, path, defaultValue) {
@@ -655,26 +641,29 @@ var get = function get(o, path, defaultValue) {
 
   var current = toJS(o);
 
-  if (!path || !isArray(path)) {
+  if (!path || !Object(reshow_constant__WEBPACK_IMPORTED_MODULE_1__["IS_ARRAY"])(path)) {
     return current;
   }
 
   try {
-    path.every(function (a) {
-      if (current && reshow_constant__WEBPACK_IMPORTED_MODULE_1__["UNDEFINED"] !== Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(current[a])) {
-        current = current[a];
+    var i = path.length;
+    var j = path.length - 1;
+
+    while (i--) {
+      var index = path[j - i];
+
+      if (current && reshow_constant__WEBPACK_IMPORTED_MODULE_1__["UNDEFINED"] !== Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(current[index])) {
+        current = current[index];
 
         if (null == current) {
           current = getDefaultValue(defaultValue, current);
-          return false;
-        } else {
-          return true;
+          break;
         }
       } else {
         current = getDefaultValue(defaultValue);
-        return false;
+        break;
       }
-    });
+    }
   } catch (e) {
     console.warn({
       e: e
