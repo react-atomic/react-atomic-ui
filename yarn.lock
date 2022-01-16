@@ -7216,9 +7216,9 @@ organism-react-carousel@*:
     ricon "*"
 
 organism-react-code@*:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.14.2.tgz#8718a0ee21d4b99606ed2c04940be42c5ea22f7f"
-  integrity sha512-2H/l5gUd70MzYbkXCnhqQ7b58AJpNq8sE8VvXE+TwOmYBlZeuGQZtKSE0YFkGsEOsXCt3JG518mopo+A2iveHA==
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.15.0.tgz#fdbd0681c8bacbefa4984942a1114073f1891f73"
+  integrity sha512-UQ3EeZxLHVeP6A+gBFtDCK3jNPiRA6GjdwoI3lwa9YK2JZ5ecTQDv/7sRRC1yTgt5sYSqoSbarXUXxHBz6CqZg==
   dependencies:
     call-func "*"
     marked "^4.x"
