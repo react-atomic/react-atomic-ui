@@ -10,6 +10,7 @@ const Menu = (props) => {
   const themes = pageStore.getMap("themes");
   keys(themes).forEach((item) => {
     thisMenus[item] = {
+      ajax: false,
       text: item,
       href: "#/" + item,
     };

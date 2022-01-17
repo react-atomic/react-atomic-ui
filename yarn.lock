@@ -7159,9 +7159,9 @@ ora@^5.x:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.2.tgz#dc35111f3b8b66414583f1d1ff1cf1daf5b0f845"
-  integrity sha512-9JRp0+sLjZrmCrQZlQzEtyiLeXaLVkx9jeD0BOJFQofmHB+mh04t4IsA0Zt4Hf7iweLiALTf5RnsIc19R21NfQ==
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.3.tgz#93ff1d3aee39477a529ae206a4012d1cb153f126"
+  integrity sha512-wLCWorAs840WSlCKhSaHAj16OVzckOOz0THbQg5fR8ZWroInrNwD65lbKg9R3VivHGK76xTP1SDOxi1xhrROcA==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -8576,14 +8576,15 @@ reshow-flux-base@*, reshow-flux-base@^0.16.0:
     reshow-runtime "^0.16.0"
 
 reshow-flux@*, reshow-flux@^0.16.0:
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-0.16.7.tgz#1e0acde31089d9897fd496bfe971fa33b7f19817"
-  integrity sha512-2fpIzIuzTbkiYAJPBB1xo8ZeMVUwsnQ0apbK9tz4xL4o5P7f3czIqd/tBjeP9/cl73FVBHFG5zgVFSVk+AVvdQ==
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-0.16.8.tgz#92f23e0e2d0b4970f270af7bfde40f0b6f89b9a0"
+  integrity sha512-hZ2tWjnWdIVqayCZtMRtfXgYWns/S5NtcApNPe4pWpiaVJCqVOFkHVZGoWc1+yyn+JT7Onbg5BfNL/Z3ZYCIrA==
   dependencies:
     array.dedup "*"
     array.merge "*"
     get-object-value "*"
     immutable "^3.x"
+    memoize-one "*"
     reshow-build "^0.16.0"
     reshow-constant "^0.16.0"
     reshow-flux-base "^0.16.0"
