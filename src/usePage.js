@@ -3,6 +3,8 @@ import { dispatch } from "reshow";
 import { navigationDispatch } from "organism-react-navigation";
 import { ajaxDispatch } from "organism-react-ajax";
 
+let init;
+
 const usePage = (props) => {
   const { pageName, tplProps } = props;
 
@@ -15,17 +17,18 @@ const usePage = (props) => {
       });
       dispatch({ tplProps, pageName });
     });
-    ajaxDispatch("ajaxGet", {
-      url: "/data/env",
-      ini: true,
-    });
+    if (!init) {
+      init = 1;
+      ajaxDispatch("ajaxGet", {
+        url: "/data/env",
+        ini: true,
+      });
+    }
     return () => {
-      setTimeout(() => {
-        navigationDispatch({
-          params: {
-            activeMenu: null,
-          },
-        });
+      navigationDispatch({
+        params: {
+          activeMenu: null,
+        },
       });
     };
   }, []);

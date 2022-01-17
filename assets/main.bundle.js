@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "faf8de58e44c25edb737" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "2c877d9a0e82b1772cf3" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -296,6 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var init;
 
 var usePage = function usePage(props) {
   var pageName = props.pageName,
@@ -312,17 +313,20 @@ var usePage = function usePage(props) {
         pageName: pageName
       });
     });
-    Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])("ajaxGet", {
-      url: "/data/env",
-      ini: true
-    });
+
+    if (!init) {
+      init = 1;
+      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])("ajaxGet", {
+        url: "/data/env",
+        ini: true
+      });
+    }
+
     return function () {
-      setTimeout(function () {
-        Object(organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__["navigationDispatch"])({
-          params: {
-            activeMenu: null
-          }
-        });
+      Object(organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__["navigationDispatch"])({
+        params: {
+          activeMenu: null
+        }
       });
     };
   }, []);
