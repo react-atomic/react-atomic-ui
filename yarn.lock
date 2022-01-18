@@ -7174,9 +7174,9 @@ ora@^5.x:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.15.7"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.7.tgz#f99dc9c1578dc0fe9ca2ea19d9218ca7ea1c732f"
-  integrity sha512-FJpl9NYF8nGkGz7QUw73v8hFgViYvUmptmskKSOzSgk2Q4fWJIsLHVhZ9CukkYUp84C1M0SP12H0CeZovu7/Ew==
+  version "0.15.8"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.8.tgz#7fb64d9beb6e5f1d6718a64c8481f204bbaff122"
+  integrity sha512-WCNwz+i9WQCvfvXT2Ai19sGRcnXPw9lYn+ylfmiyVdx9soexF9YCAooePJq66SPr/N5QDU4S/eg5lTCxY0gKQQ==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -7384,9 +7384,9 @@ organism-react-iframe@*, organism-react-iframe@>=0.8.1:
     win-doc "*"
 
 organism-react-navigation@*:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.2.tgz#9550c83a042e4f338a4d1d641268c8eae405ef39"
-  integrity sha512-0yggpH9jkvpYHlfbrP4F06RSE/yRsLWPS7jRVnl2pcYJNfrKqWZhpPEt/27zavFKaWdPOgdS1OyNyDRb5yvSig==
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.3.tgz#7625e8939fd216523a53bb6fd69ee985c0761d4c"
+  integrity sha512-ocDvWGalfbVpVFr1QpV8/umwKlDTNfwPLb8ZjD/bBN6MokUZBx/34gsjhAV+4e5Ha62P87AwNWH3FKuVCzx+sQ==
   dependencies:
     call-func "*"
     class-lib "*"
