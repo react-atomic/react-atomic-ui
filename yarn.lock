@@ -8156,9 +8156,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.9.4.tgz#5c573da6ad815e2819c323f85e047bff7d12cdca"
-  integrity sha512-2HsiZH8ypUYu8EPJ7jHsDnGS/Q1v2h2wkQNi8bY6AbMBabtFdHyVR58vNKcR2EFj+lE/TQTFYoe21Poeh0buFg==
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.9.5.tgz#fb5f48d1706e61df4ae7e863dacb8e98bc28b8d7"
+  integrity sha512-5uikESkcX0EEW0E6ZbdEBassbHhImL6r2dyCEXQAfPcI65pMkitnkv5lWuqArkg22d3iPIgjp2WYVTxPXKI21g==
   dependencies:
     array.merge "*"
     class-lib "*"
