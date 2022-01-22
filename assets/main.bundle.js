@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "d9206cc8930b834703d1" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "7d19ef5ffd48ce14a4de" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -6582,17 +6582,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { YoutubeRWD } from \"organism-react-video\";\n\nconst YouTubeRWDExample = () => <YoutubeRWD videoId=\"CjxugyZCfuw\" />;\n\nexport default YouTubeRWDExample;\n");
-
-/***/ }),
-
-/***/ "d3":
-/*!*********************!*\
-  !*** external "d3" ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = d3;
 
 /***/ })
 
