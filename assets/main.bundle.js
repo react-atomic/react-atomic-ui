@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "88799d39436ae17c558b" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "88243c8a742d682a2451" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -3485,7 +3485,7 @@ var StockChartExample = function StockChartExample(props) {
     Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])({
       type: "ajaxGet",
       params: {
-        url: "//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
+        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
         callback: function callback(json) {
           if (isMount()) {
             setData({
@@ -6516,7 +6516,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"//raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
 
 /***/ }),
 

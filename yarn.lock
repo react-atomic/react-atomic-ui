@@ -7271,9 +7271,9 @@ organism-react-codeeditor@*:
     ricon "*"
 
 organism-react-d3-axis-chart@*:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.4.2.tgz#05cbb5042979985fd6c9ede1110d27dc3a3ba004"
-  integrity sha512-2g0LFAP51bNb6APM8pnYPcW6qLGBZ0lGcjMcxWboFhjNN7OSaHzEbhEP/Fiv6BSllfMFnDZ7nCX/iGcPAsN+tw==
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/organism-react-d3-axis-chart/-/organism-react-d3-axis-chart-0.4.5.tgz#7f2dcc30a5666482585d4f5024f4e11767e5ec73"
+  integrity sha512-xnfJowMaOBuG5T0KgBKriD9ZUDUD+ti9E3gjQbVwpr6r4iP7Gd1XXhKki4XFan7yi2EUE5yZ863J8JkHI4/hGg==
   dependencies:
     call-func "*"
     d3-lib "*"
