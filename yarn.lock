@@ -6829,6 +6829,15 @@ nearley@^2.7.10:
     railroad-diagrams "^1.0.0"
     randexp "0.4.6"
 
+need-css@*:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/need-css/-/need-css-0.0.0.tgz#d2975216d1f9b65a667d3115c896d8489098459b"
+  integrity sha512-Gstrb9ZJY+J3u0OGkebQmdRG+gtgGApANV8XoMbFPH9tljMnzPSotMVviP0o90Cy9UjpwyTtTyQHs1U3EZ78jw==
+  dependencies:
+    create-el "*"
+    get-object-value "*"
+    win-doc "*"
+
 negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
@@ -7389,9 +7398,9 @@ organism-react-iframe@*, organism-react-iframe@>=0.8.1:
     win-doc "*"
 
 organism-react-navigation@*:
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.4.tgz#ec2be57f87357e973e182b30632ec29ba8f7c32d"
-  integrity sha512-Rx4s4/TPUzQx8v723fRGsRVFQ70R92VejeFJ98NumMsizRrc7YnD2+jBivP9lAXQPsLvHTTvVwoEsYwaAx9QRg==
+  version "0.15.6"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.6.tgz#15e174ae79172acf462200b9830f1e7f00157d7a"
+  integrity sha512-jZY8+vA8H6kfXAL9LsQtIIE3Mnd6IOVrtCQtFn6eNe2Jt5HG92LON3DHOXEF3L60wC0Oxg9BYexLX3Tcd5WyEQ==
   dependencies:
     call-func "*"
     class-lib "*"
@@ -7400,6 +7409,7 @@ organism-react-navigation@*:
     getoffset "*"
     react-atomic-molecule "*"
     reshow-flux "*"
+    reshow-hooks "*"
     reshow-return "*"
     ricon "*"
     to-percent-js "*"
@@ -7416,9 +7426,9 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.15.4.tgz#6fffb645044c54f1e28b068f0c64fb68f7aa6fb7"
-  integrity sha512-JUIi6Y0nlcjKDYCRDWmazwBFAZ4jhrnC9nk903Ax20MPlUIB3eZ1LpEro+fFhyNxXJa19Flf2xJerxf5EMV4nw==
+  version "0.15.8"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.15.8.tgz#d595f191b800be87cac536696049fe2151108064"
+  integrity sha512-hJclzQREAcLevtAwDLPkNjXGSMMrSP6nUkvJtkXDcF/Nwu0UCHdoF4l4amD9wivQ+HnqNryDPXir4P+eyhC2Lg==
   dependencies:
     array.merge "*"
     call-func "*"
@@ -7813,11 +7823,12 @@ pmvc_react_admin@*:
     react-atomic-organism "*"
 
 pmvc_react_list@*:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.3.5.tgz#19dea8d57d30359b9412aa2e7bc6ae2aa62f862f"
-  integrity sha512-cDrKhibvoS1EJ13VbPnMff1MRqiZIbSqQW50KOy4YDre7q64d/z1qu2qvE+MaCBU58gItruoyyoCQrZNK6hm6A==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/pmvc_react_list/-/pmvc_react_list-0.4.2.tgz#532aa7960c0678f1d7abac5baef81d9c6c4e71cf"
+  integrity sha512-SzXI7V3FfY+COvnYP0ShAVsDShxanZY6hGO5qNtE93rVANG7Bly5MouBVQxfEVjytQ3XMTrg8pAGrhIga14LQA==
   dependencies:
     get-object-value "*"
+    need-css "*"
     react-atomic-molecule "*"
 
 portfinder@^1.0.28:
@@ -8161,9 +8172,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.10.2.tgz#f1218f2709cb104abee1193f73a841074a7a3160"
-  integrity sha512-iaroWRYpD56VRpDcX+L85yYNkcleLhhJml8O2S/iMjEYL38vRfin6L6mVwhfeoHYzBCXzZEZOY02IHzFV3hLlw==
+  version "2.10.5"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-2.10.5.tgz#f635ea515b4a2a656e76cb3170b21b25fe2b6b0e"
+  integrity sha512-8PNdGD73ddvwwRuWZ+v7y7bQCVnItem5XYd8HtIPiyWG+IP2dEx+hvBZoPh8grt9XugAzWCvMp3ZAZklE4GUeA==
   dependencies:
     array.merge "*"
     class-lib "*"
@@ -8171,6 +8182,7 @@ react-atomic-molecule@*:
     css-query-selector "*"
     get-object-value "*"
     hyphenate-style-name "*"
+    need-css "*"
     react-atomic-atom "*"
     reshow-build "*"
     reshow-constant "*"
@@ -8179,9 +8191,9 @@ react-atomic-molecule@*:
     win-doc "*"
 
 react-atomic-organism@*:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.11.5.tgz#cd7ee67ea3d5774775f07aea0857b2562352b443"
-  integrity sha512-exmqskWGgNgqcKTmO9pu/hGn/W9FuhUfftqYeMMMxhNXg8njPkIQ9e90h1BhmoAWxqZ9MoZF/sZoSKSZ2s31ug==
+  version "0.11.6"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.11.6.tgz#07be5e061757330c736eea4fdd39e3d7e47e463b"
+  integrity sha512-Q8rjw5FMhPBPXJ/h4sAlY2+oadeOMYk4+UayMSgS03c97comGo7To/fS+/rQfLRH2BTdvn850FbmoSTljjsPUA==
   dependencies:
     array.merge "*"
     call-func "*"
@@ -9612,11 +9624,12 @@ symbol-tree@^3.2.4:
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
 syntax-colorer@*:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/syntax-colorer/-/syntax-colorer-0.0.1.tgz#83c63fb6d86b86a518da7b1fc5a47f8552de3b83"
-  integrity sha512-GjNj1GhPypodt8kfd5fXoFJCUzESPsRhCsPW33mdgpARCNmWFwSJYiV0uVe764+gsDNOwZux7YEzAwkpYFyPFw==
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/syntax-colorer/-/syntax-colorer-0.0.2.tgz#adcf72265bf1504ada711983972c1994755a2a4a"
+  integrity sha512-AvwAM/tNhzjKVE44CojIMd378kDqq8xbutobzPnZ9smg2uoEW/r8Qmu9G3vzu379FaUM9yUEl4qAKw2fIvT1qw==
   dependencies:
     get-object-value "*"
+    need-css "*"
     prismjs "^1.24.1"
     reshow-runtime "*"
 
