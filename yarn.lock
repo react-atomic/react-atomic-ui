@@ -1182,9 +1182,9 @@
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
 "@types/node@*":
-  version "17.0.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.10.tgz#616f16e9d3a2a3d618136b1be244315d95bd7cab"
-  integrity sha512-S/3xB4KzyFxYGCppyDt68yzBU9ysL88lSdIah4D6cptdcltc4NCPCAMc0+PCpg/lLIyC7IPvj2Z52OJWeIUkog==
+  version "17.0.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.11.tgz#e0630988ea4c75efde22d5b099360ecfe494160f"
+  integrity sha512-TgLsFcuinMobmML3PsILoRJq/h11/qS7UDlak1LUsazJcvJeKejEBuI1m5X2pBnMBF5T5HRAvtcnr4cV5nvc8Q==
 
 "@types/qs@*":
   version "6.9.7"
@@ -7187,9 +7187,9 @@ organism-react-animate@*:
     win-doc "*"
 
 organism-react-asciidoc@*:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/organism-react-asciidoc/-/organism-react-asciidoc-0.3.5.tgz#3b2979551a2a095d17d2beadfe801aef2e700797"
-  integrity sha512-+2fGAMCEbLdJ/AaDIfhTbLMpG90pY8F2gHqQ0aQa5rkypxzsCzQDEXRfwAUZIUMQW218jcL9KcvOUhU6oocoGA==
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/organism-react-asciidoc/-/organism-react-asciidoc-0.3.6.tgz#bbaad612ba40d16f475b4252055b4f4e5365de9b"
+  integrity sha512-zaow/Fl4efkse9jAgRhT7S2E6cnG/ttx71FT+wxrjfZAFo+9IzSplfHGqJVi2LBMywFfPFOiBtA6NDR8Tnig6Q==
   dependencies:
     call-func "*"
     css-query-selector ">=0.2.12"
