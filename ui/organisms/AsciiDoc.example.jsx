@@ -1,5 +1,3 @@
-import React, { PureComponent } from "react";
-
 import Asciidoc from "organism-react-asciidoc";
 
 const adoc = `
@@ -18,10 +16,8 @@ test
 - [*] option1
 `;
 
-class AsciidocDemo extends PureComponent {
-  render() {
-    return <Asciidoc options={{ doctype: "book" }}>{adoc}</Asciidoc>;
-  }
-}
+const AsciidocDemo = (props) => (
+  <Asciidoc options={{ doctype: "book" }}>{adoc}</Asciidoc>
+);
 
 export default AsciidocDemo;
