@@ -16,7 +16,7 @@ const CodeExampleExample = (props) => (
   <CodeExample
     code={code}
     header="Test Header"
-    git="react-atomic/react-atomic-organism/tree/master/packages/organism-react-code/"
+    git="react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/"
     npm="organism-react-code"
   >
     <div>Test Demo Area</div>

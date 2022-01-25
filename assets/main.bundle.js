@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "1e2d589518e023be14cd" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "c75e05fb7d39c65f15ba" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -224,210 +224,99 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../reshow/build/es/src/dispatch.js":
-/*!******************************************!*\
-  !*** ../reshow/build/es/src/dispatch.js ***!
-  \******************************************/
+/***/ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js":
+/*!***********************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-code/build/es/src/index.js ***!
+  \***********************************************************************************/
+/*! exports provided: default, FullScreenExample */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ui_organisms_CodeExample__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/organisms/CodeExample */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_organisms_CodeExample__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _ui_organisms_FullScreenExample__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/organisms/FullScreenExample */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FullScreenExample", function() { return _ui_organisms_FullScreenExample__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+// Default
+
+
+
+
+/***/ }),
+
+/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js":
+/*!************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js ***!
+  \************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/toConsumableArray */ "../reshow/node_modules/reshow-runtime/es/helpers/toConsumableArray.js");
-/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
-/* harmony import */ var _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
-/* harmony import */ var _stores_messageStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
-/* harmony import */ var _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/localStorageStore */ "../reshow/build/es/src/stores/localStorageStore.js");
-/* harmony import */ var _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./stores/sessionStorageStore */ "../reshow/build/es/src/stores/sessionStorageStore.js");
-/* harmony import */ var _stores_pageStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! marked */ "../react-atomic-organism/packages/organism-react-code/node_modules/marked/lib/marked.umd.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var syntax_colorer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! syntax-colorer */ "../react-atomic-organism/packages/organism-react-code/node_modules/syntax-colorer/build/es/src/index.js");
 
 
 
 
+var DEFAULT_LANG = "js";
+marked__WEBPACK_IMPORTED_MODULE_1__["marked"].setOptions({
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false,
+  highlight: syntax_colorer__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
 
-
-
-
-var dispatch = function dispatch() {
-  for (var _len = arguments.length, action = new Array(_len), _key = 0; _key < _len; _key++) {
-    action[_key] = arguments[_key];
-  }
-
-  action = reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["refineAction"].apply(void 0, Object(reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(action));
-
-  switch (action.type) {
-    case "dialog/start":
-    case "dialog/end":
-    case "alert/reset":
-    case "alert/del":
-    case "alert/add":
-      Object(_stores_messageStore__WEBPACK_IMPORTED_MODULE_3__["messageDispatch"])(action);
-      break;
-
-    case "realTime":
-      Object(_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_2__["realTimeDispatch"])(action);
-      break;
-
-    case "local":
-      Object(_stores_localStorageStore__WEBPACK_IMPORTED_MODULE_4__["localStorageDispatch"])(action);
-      break;
-
-    case "session":
-      Object(_stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_5__["sessionStorageDispatch"])(action);
-      break;
-
-    default:
-      Object(_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["pageDispatch"])(action);
-      break;
-  }
+var CodeBlock = function CodeBlock(props) {
+  var text = "```".concat(DEFAULT_LANG, "\n").concat(props.children, "\n```");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Unsafe"], null, Object(marked__WEBPACK_IMPORTED_MODULE_1__["marked"])(text));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (dispatch);
+_c = CodeBlock;
+/* harmony default export */ __webpack_exports__["default"] = (CodeBlock);
+
+var _c;
+
+$RefreshReg$(_c, "CodeBlock");
 
 /***/ }),
 
-/***/ "../reshow/build/es/src/index.js":
-/*!***************************************!*\
-  !*** ../reshow/build/es/src/index.js ***!
-  \***************************************/
-/*! exports provided: pageStore, realTimeStore, localStorageStore, sessionStorageStore, messageStore, dispatch, ReLink, ReForm, ReshowMessage, Return, RealTimeReturn, Section, default, update */
+/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js":
+/*!**************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _stores_pageStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageStore", function() { return _stores_pageStore__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "realTimeStore", function() { return _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-/* harmony import */ var _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stores/localStorageStore */ "../reshow/build/es/src/stores/localStorageStore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "localStorageStore", function() { return _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_2__["default"]; });
-
-/* harmony import */ var _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/sessionStorageStore */ "../reshow/build/es/src/stores/sessionStorageStore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sessionStorageStore", function() { return _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_3__["default"]; });
-
-/* harmony import */ var _stores_messageStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "messageStore", function() { return _stores_messageStore__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony import */ var _dispatch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dispatch */ "../reshow/build/es/src/dispatch.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dispatch", function() { return _dispatch__WEBPACK_IMPORTED_MODULE_5__["default"]; });
-
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReLink", function() { return organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["AjaxLink"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReForm", function() { return organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["AjaxForm"]; });
-
-/* harmony import */ var _ui_organisms_ReshowMessage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ui/organisms/ReshowMessage */ "../reshow/build/es/ui/organisms/ReshowMessage.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReshowMessage", function() { return _ui_organisms_ReshowMessage__WEBPACK_IMPORTED_MODULE_7__["default"]; });
-
-/* harmony import */ var _ui_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ui/molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Return", function() { return _ui_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_8__["Return"]; });
-
-/* harmony import */ var _ui_organisms_RealTimeReturn__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ui/organisms/RealTimeReturn */ "../reshow/build/es/ui/organisms/RealTimeReturn.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RealTimeReturn", function() { return _ui_organisms_RealTimeReturn__WEBPACK_IMPORTED_MODULE_9__["default"]; });
-
-/* harmony import */ var _ui_organisms_Section__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ui/organisms/Section */ "../reshow/build/es/ui/organisms/Section.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return _ui_organisms_Section__WEBPACK_IMPORTED_MODULE_10__["default"]; });
-
-/* harmony import */ var _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ui/molecules/Reshow */ "../reshow/build/es/ui/molecules/Reshow.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__["default"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "update", function() { return _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__["update"]; });
-
-// Stores
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ricon/Code */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Code.js");
+/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ricon_Code__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ricon/Git */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Git.js");
+/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ricon_Git__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ricon/Npm */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Npm.js");
+/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ricon_Npm__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ricon/Edit */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Edit.js");
+/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ricon_Edit__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _organisms_CodeBlock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/CodeBlock */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js");
+/* harmony import */ var _organisms_CodeReadme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../organisms/CodeReadme */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js");
 
 
-
-
- // dispatch
-
- // Ajax
-
- // Message Component
-
- // Component
-
-
-
- // Base Component
-
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/globalStore.js":
-/*!****************************************************!*\
-  !*** ../reshow/build/es/src/stores/globalStore.js ***!
-  \****************************************************/
-/*! exports provided: globalStore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalStore", function() { return globalStore; });
-/**
- * Global Store use in calculateState
- * when themePath and global path not sync will rollback to use prev state.
- *
- * https://github.com/react-atomic/reshow/blob/main/ui/molecules/ReshowComponent.jsx#L12-L19
- */
-var globalStore = {};
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/localStorageStore.js":
-/*!**********************************************************!*\
-  !*** ../reshow/build/es/src/stores/localStorageStore.js ***!
-  \**********************************************************/
-/*! exports provided: default, localStorageDispatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localStorageDispatch", function() { return localStorageDispatch; });
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
-
-
-
-
-
-var _createReducer = Object(reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(function (state, action) {
-  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(action, ["params"]);
-  return state.merge(params);
-}, new get_storage__WEBPACK_IMPORTED_MODULE_3__["Storage"](get_storage__WEBPACK_IMPORTED_MODULE_3__["localStorage"])),
-    _createReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_createReducer, 2),
-    store = _createReducer2[0],
-    localStorageDispatch = _createReducer2[1];
-
-/* harmony default export */ __webpack_exports__["default"] = (store);
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/messageStore.js":
-/*!*****************************************************!*\
-  !*** ../reshow/build/es/src/stores/messageStore.js ***!
-  \*****************************************************/
-/*! exports provided: default, messageDispatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "messageDispatch", function() { return messageDispatch; });
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../reshow/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
-/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../reshow/node_modules/reshow-runtime/es/helpers/createClass.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../reshow/node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/typeof */ "../reshow/node_modules/reshow-runtime/es/helpers/typeof.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! call-func */ "../reshow/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reshow-constant */ "../reshow/node_modules/reshow-constant/build/es/index.js");
-/* harmony import */ var _pageStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+var _GitIcon, _NpmIcon, _EditIcon, _CodeIcon;
 
 
 
@@ -438,371 +327,153 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var alertCount = 0;
+var CodeExample = function CodeExample(props) {
+  injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["useLazyInject"])(InjectStyles, injects);
+  var header = props.header,
+      children = props.children,
+      code = props.code,
+      git = props.git,
+      npm = props.npm,
+      edit = props.edit,
+      id = props.id;
 
-var toMessage = function toMessage(message) {
-  if (-1 !== "string|number".indexOf(Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_4__["default"])(message))) {
-    message = {
-      message: message
-    };
-  }
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
+    on: false
+  }),
+      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
+      state = _useState2[0],
+      setState = _useState2[1];
 
-  if (!message.id) {
-    message.id = "m-" + alertCount;
-    alertCount++;
-  }
-
-  return message;
-};
-
-var getMessage = function getMessage(action) {
-  return toMessage(Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "message"]));
-};
-
-var MessageStore = /*#__PURE__*/function () {
-  function MessageStore() {
-    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, MessageStore);
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "dialogCallback", reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"]);
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "alertMap", {});
-  }
-
-  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MessageStore, [{
-    key: "getAlertList",
-    value: function getAlertList() {
-      var _this = this;
-
-      return Object(reshow_constant__WEBPACK_IMPORTED_MODULE_8__["KEYS"])(this.alertMap).map(function (key) {
-        return _this.alertMap[key];
-      });
-    }
-  }, {
-    key: "dialogStart",
-    value: function dialogStart(state, action) {
-      var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"]);
-      var dialog = params.dialog,
-          dialogProps = params.dialogProps,
-          dialogTo = params.dialogTo,
-          callback = params.callback;
-      var next = {
-        dialog: dialog
+  var handleClick = function handleClick() {
+    return setState(function (_ref) {
+      var on = _ref.on;
+      return {
+        on: !on
       };
-
-      if (dialogProps) {
-        next.dialogProps = dialogProps;
-      }
-
-      if (dialogTo) {
-        next.dialogTo = dialogTo;
-      }
-
-      if (callback) {
-        this.dialogCallback = callback;
-      }
-
-      return state.merge(next);
-    }
-  }, {
-    key: "dialogEnd",
-    value: function dialogEnd(state, action) {
-      var dialogTo = state.get("dialogTo");
-
-      if (!dialogTo) {
-        dialogTo = "dialogReturn";
-      }
-
-      var value = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "value"]);
-
-      if (value != reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"]) {
-        Object(_pageStore__WEBPACK_IMPORTED_MODULE_9__["pageDispatch"])(Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])({}, dialogTo, value));
-      }
-
-      Object(call_func__WEBPACK_IMPORTED_MODULE_7__["default"])(this.dialogCallback, [value]);
-      this.dialogCallback = reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"];
-      return state["delete"]("dialog")["delete"]("dialogProps")["delete"]("dialogTo");
-    }
-  }, {
-    key: "alertReset",
-    value: function alertReset(state, action) {
-      var _this2 = this;
-
-      var alerts = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "alerts"]);
-      this.alertMap = {};
-
-      if (Object(reshow_constant__WEBPACK_IMPORTED_MODULE_8__["IS_ARRAY"])(alerts)) {
-        alerts.map(function (a) {
-          var message = toMessage(a);
-          _this2.alertMap[message.id] = message;
-        });
-      }
-
-      return state.set("alerts", this.getAlertList());
-    }
-  }, {
-    key: "alertDel",
-    value: function alertDel(state, action) {
-      var id = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "id"]);
-      delete this.alertMap[id];
-      return state.set("alerts", this.getAlertList());
-    }
-  }, {
-    key: "alertAdd",
-    value: function alertAdd(state, action) {
-      var alerts = state.get("alerts");
-      var message = getMessage(action);
-      var alertProps = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "alertProps"]);
-
-      if (alertProps) {
-        state = state.set("alertProps", alertProps);
-      }
-
-      this.alertMap[message.id] = message;
-      return state.set("alerts", this.getAlertList());
-    }
-  }]);
-
-  return MessageStore;
-}();
-
-var oMess = new MessageStore();
-
-var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_5__["ImmutableStore"])(function (state, action) {
-  switch (action.type) {
-    case "dialog/start":
-      return oMess.dialogStart(state, action);
-
-    case "dialog/end":
-      return oMess.dialogEnd(state, action);
-
-    case "alert/reset":
-      return oMess.alertReset(state, action);
-
-    case "alert/del":
-      return oMess.alertDel(state, action);
-
-    case "alert/add":
-      return oMess.alertAdd(state, action);
-
-    default:
-      return state;
-  }
-}),
-    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
-    store = _ImmutableStore2[0],
-    messageDispatch = _ImmutableStore2[1];
-
-/* harmony default export */ __webpack_exports__["default"] = (store);
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/pageStore.js":
-/*!**************************************************!*\
-  !*** ../reshow/build/es/src/stores/pageStore.js ***!
-  \**************************************************/
-/*! exports provided: default, pageDispatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDispatch", function() { return pageDispatch; });
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-constant */ "../reshow/node_modules/reshow-constant/build/es/index.js");
-
-
-
-
-var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["ImmutableStore"])(function (state, action) {
-  switch (action.type) {
-    case "config/set":
-      return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state, action.params);
-
-    case "config/reset":
-      return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state.clear(), action.params);
-
-    default:
-      if (Object(reshow_constant__WEBPACK_IMPORTED_MODULE_2__["KEYS"])(action).length) {
-        return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state, action);
-      } else {
-        return state;
-      }
-
-  }
-}),
-    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
-    store = _ImmutableStore2[0],
-    pageDispatch = _ImmutableStore2[1];
-
-/* harmony default export */ __webpack_exports__["default"] = (store);
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/realTimeStore.js":
-/*!******************************************************!*\
-  !*** ../reshow/build/es/src/stores/realTimeStore.js ***!
-  \******************************************************/
-/*! exports provided: default, realTimeDispatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "realTimeDispatch", function() { return realTimeDispatch; });
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-
-
-
-var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["ImmutableStore"])(function (state, action) {
-  switch (action.type) {
-    case "realTime":
-      return action.params || [];
-
-    default:
-      return [];
-  }
-}),
-    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
-    store = _ImmutableStore2[0],
-    realTimeDispatch = _ImmutableStore2[1];
-
-/* harmony default export */ __webpack_exports__["default"] = (store);
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/stores/sessionStorageStore.js":
-/*!************************************************************!*\
-  !*** ../reshow/build/es/src/stores/sessionStorageStore.js ***!
-  \************************************************************/
-/*! exports provided: default, sessionStorageDispatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sessionStorageDispatch", function() { return sessionStorageDispatch; });
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
-
-
-
-
-
-var _createReducer = Object(reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(function (state, action) {
-  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(action, ["params"]);
-  return state.merge(params);
-}, new get_storage__WEBPACK_IMPORTED_MODULE_3__["Storage"](get_storage__WEBPACK_IMPORTED_MODULE_3__["sessionStorage"])),
-    _createReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_createReducer, 2),
-    store = _createReducer2[0],
-    sessionStorageDispatch = _createReducer2[1];
-
-/* harmony default export */ __webpack_exports__["default"] = (store);
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/src/updateCanonicalUrl.js":
-/*!****************************************************!*\
-  !*** ../reshow/build/es/src/updateCanonicalUrl.js ***!
-  \****************************************************/
-/*! exports provided: default, initCanonicalUrl, getDocCanonicalUrl */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initCanonicalUrl", function() { return initCanonicalUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDocCanonicalUrl", function() { return getDocCanonicalUrl; });
-/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
-/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! win-doc */ "../reshow/node_modules/win-doc/build/es/src/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-
-
-
-
-var getDocCanonicalUrl = function getDocCanonicalUrl(oDoc) {
-  oDoc = oDoc || Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])();
-  var canonical = oDoc.querySelector('link[rel="canonical"]');
-  return canonical ? canonical.href : false;
-};
-
-var initCanonicalUrl = function initCanonicalUrl(props) {
-  var canonicalUrl = getDocCanonicalUrl();
-
-  if (-1 !== Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])().URL.indexOf("--disableCanonical")) {
-    Object(get_storage__WEBPACK_IMPORTED_MODULE_0__["sessionStorage"])("disableCanonical")(1);
-  } else if (canonicalUrl) {
-    updateCanonicalUrl(canonicalUrl, props);
-  }
-};
-
-var updateCanonicalUrl = function updateCanonicalUrl(url, props) {
-  var loc = Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])().location;
-
-  if (!loc || Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["disableCanonical"], function () {
-    return Object(get_storage__WEBPACK_IMPORTED_MODULE_0__["sessionStorage"])("disableCanonical")();
-  })) {
-    return;
-  }
-
-  url = url || getDocCanonicalUrl();
-
-  if (!url) {
-    return;
-  }
-
-  var newUrl = function newUrl(url) {
-    return url + loc.search + loc.hash;
+    });
   };
 
-  if (-1 !== url.indexOf(loc.hostname)) {
-    if (0 !== url.indexOf(loc.protocol)) {
-      var urlArr = url.split(":");
-      url = loc.protocol + urlArr[1];
-    }
+  var codeStyle = {};
+  var thisCode;
+  var thisReadme;
+  var thisGit;
+  var thisNpm;
+  var thisEdit;
 
-    history.replaceState && history.replaceState("", "", newUrl(url));
+  if (!state.on) {
+    codeStyle = Styles.hidden;
   } else {
-    loc.replace(newUrl(url));
+    thisCode = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_organisms_CodeBlock__WEBPACK_IMPORTED_MODULE_7__["default"], null, code);
   }
+
+  if (git) {
+    var readmeUrl = "https://raw.githubusercontent.com/" + git.replace(/(\/(blob|tree)\/(master|main)\/)/, "/$3/") + "README.md";
+    var gitUrl = "https://github.com/" + git;
+    thisReadme = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_organisms_CodeReadme__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      url: readmeUrl
+    });
+    thisGit = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+      atom: "a",
+      target: "_blank",
+      href: gitUrl,
+      style: Styles.icon
+    }, _GitIcon || (_GitIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Git__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
+  }
+
+  if (npm) {
+    var npmUrl = "https://www.npmjs.com/package/" + npm;
+    thisNpm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+      atom: "a",
+      target: "_blank",
+      href: npmUrl,
+      style: Styles.icon
+    }, _NpmIcon || (_NpmIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Npm__WEBPACK_IMPORTED_MODULE_5___default.a, null)));
+  }
+
+  if (edit) {
+    thisEdit = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+      atom: "a",
+      target: "_blank",
+      href: edit,
+      style: Styles.icon
+    }, _EditIcon || (_EditIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Edit__WEBPACK_IMPORTED_MODULE_6___default.a, null)));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
+    type: "segments",
+    id: id
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], {
+    className: "tertiary"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Header"], {
+    style: Styles.header,
+    className: "grey"
+  }, header), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], {
+    style: Styles.iconBlock
+  }, thisEdit, thisNpm, thisGit, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    onClick: handleClick,
+    style: Styles.icon
+  }, _CodeIcon || (_CodeIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Code__WEBPACK_IMPORTED_MODULE_3___default.a, null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], {
+    className: "secondary",
+    style: codeStyle,
+    styles: injects.code
+  }, thisCode), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], null, children), thisReadme);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (updateCanonicalUrl);
-
+/* harmony default export */ __webpack_exports__["default"] = (CodeExample);
+var Styles = {
+  header: {
+    margin: 0
+  },
+  hidden: {
+    maxHeight: 0,
+    padding: "0 16px",
+    margin: 0,
+    ovarflow: "hidden"
+  },
+  iconBlock: {
+    position: "absolute",
+    top: 16,
+    right: 6
+  },
+  icon: {
+    maxWidth: 24,
+    cursor: "pointer",
+    marginRight: 10
+  }
+};
+var injects;
+var InjectStyles = {
+  code: [{
+    transition: ["padding 500ms ease"]
+  }],
+  fitWidth: [{
+    whiteSpace: "break-spaces"
+  }, "code"]
+};
 
 /***/ }),
 
-/***/ "../reshow/build/es/ui/molecules/Reshow.js":
-/*!*************************************************!*\
-  !*** ../reshow/build/es/ui/molecules/Reshow.js ***!
-  \*************************************************/
-/*! exports provided: default, update */
+/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js":
+/*!*************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "update", function() { return update; });
-/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../reshow/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
-/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../reshow/node_modules/reshow-runtime/es/helpers/createClass.js");
-/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../reshow/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
-/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../reshow/node_modules/reshow-runtime/es/helpers/inherits.js");
-/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../reshow/node_modules/reshow-runtime/es/helpers/createSuper.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../reshow/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createSuper.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! marked */ "../react-atomic-organism/packages/organism-react-code/node_modules/marked/lib/marked.umd.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
-/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! win-doc */ "../reshow/node_modules/win-doc/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! call-func */ "../reshow/node_modules/call-func/build/es/src/index.js");
-/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var _src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/updateCanonicalUrl */ "../reshow/build/es/src/updateCanonicalUrl.js");
-/* harmony import */ var _src_dispatch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../src/dispatch */ "../reshow/build/es/src/dispatch.js");
-/* harmony import */ var _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/stores/globalStore */ "../reshow/build/es/src/stores/globalStore.js");
-/* harmony import */ var _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../src/stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
 
 
 
@@ -814,269 +485,95 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var CodeReadme = /*#__PURE__*/function (_Component) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(CodeReadme, _Component);
 
+  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(CodeReadme);
 
-
-
-
-
-var isArray = Array.isArray;
-var isInit;
-
-var update = function update(params) {
-  var realTimeData = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["--realTimeData--"]);
-  var reset = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["--reset--"]);
-  var type = realTimeData ? "realTime" : "config/" + (reset ? "re" : "") + "set";
-  Object(_src_dispatch__WEBPACK_IMPORTED_MODULE_14__["default"])(type, Object(reshow_flux__WEBPACK_IMPORTED_MODULE_12__["toJS"])(params));
-  var oDoc = Object(win_doc__WEBPACK_IMPORTED_MODULE_9__["doc"])();
-
-  if (oDoc.URL) {
-    var htmlTitle = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["htmlTitle"]);
-
-    if (htmlTitle) {
-      if (isArray(htmlTitle)) {
-        oDoc.title = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(htmlTitle, [0]);
-      } else {
-        oDoc.title = htmlTitle;
-      }
-    }
-
-    var canonical = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["data", "canonical"]);
-
-    if (canonical) {
-      Object(_src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__["default"])(canonical, params);
-    }
-  }
-};
-
-var Reshow = /*#__PURE__*/function (_PureComponent) {
-  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(Reshow, _PureComponent);
-
-  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(Reshow);
-
-  function Reshow(props) {
+  function CodeReadme(props) {
     var _this;
 
-    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Reshow);
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CodeReadme);
 
     _this = _super.call(this, props);
 
-    if (isInit) {
-      console.warn("The best practice is avoid multi Reshow Component.");
-      _this.state = {
-        hasError: true
-      };
-    } else {
-      update(props);
-      _this.state = {
-        hasError: false
-      };
-      isInit = 1;
-    }
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "_isMount", true);
 
-    _this.getPath = _this.getPath.bind(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this));
+    _this.state = {
+      text: ""
+    };
     return _this;
   }
 
-  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Reshow, [{
-    key: "getPath",
-    value: function getPath(stateThemePath) {
-      return stateThemePath || this.props.themePath;
-    }
-    /**
-     * @see globalStore https://github.com/react-atomic/reshow/blob/main/src/stores/globalStore.js
-     */
-
-  }, {
-    key: "resetGlobalPath",
-    value: function resetGlobalPath(path) {
-      var _this$props = this.props,
-          themes = _this$props.themes,
-          defaultThemePath = _this$props.defaultThemePath,
-          themePath = _this$props.themePath;
-
-      if (!themes[path]) {
-        path = defaultThemePath || themePath;
-      }
-
-      if (themes[path]) {
-        _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path = path;
-      } else {
-        return themePath;
-      }
-
-      return _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path;
-    }
-    /**
-     * @see globalStore https://github.com/react-atomic/reshow/blob/main/src/stores/globalStore.js
-     */
-
-  }, {
-    key: "getGlobalPath",
-    value: function getGlobalPath() {
-      return _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path;
-    }
-  }, {
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CodeReadme, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // Server site version also need update Canonical
-      Object(_src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__["initCanonicalUrl"])(this.props);
+      var _this2 = this;
+
+      var self = this;
+      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__["ajaxDispatch"])({
+        type: "ajaxGet",
+        params: {
+          url: this.props.url,
+          callback: function callback(json, text, o) {
+            if (!_this2._isMount) {
+              return false;
+            }
+
+            if (200 === o.status) {
+              self.setState({
+                text: text.replace(/(\<\!\-\-hidden\-\-\>)([\s\S]*?)(\<\!\-\-\/hidden\-\-\>)/g, "")
+              });
+            }
+          }
+        }
+      });
     }
   }, {
-    key: "componentDidCatch",
-    value: function componentDidCatch(error, info) {
-      var onError = this.props.onError;
-
-      if (onError) {
-        Object(call_func__WEBPACK_IMPORTED_MODULE_10__["default"])(onError, [error, info]);
-      } else {
-        console.error([error, info]);
-      }
-
-      this.setState({
-        hasError: true
-      });
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this._isMount = false;
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var text = this.state.text;
 
-      var hasError = this.state.hasError;
-
-      if (hasError) {
+      if (text) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__["Segment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__["Unsafe"], null, Object(marked__WEBPACK_IMPORTED_MODULE_7__["marked"])(text)));
+      } else {
         return null;
       }
-
-      var _this$props2 = this.props,
-          baseUrl = _this$props2.baseUrl,
-          staticVersion = _this$props2.staticVersion,
-          fallback = _this$props2.fallback,
-          themes = _this$props2.themes,
-          ajax = _this$props2.ajax,
-          webSocketUrl = _this$props2.webSocketUrl;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reshow_return__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        store: _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_16__["default"],
-        baseUrl: baseUrl,
-        staticVersion: staticVersion,
-        initStates: ["baseUrl", "staticVersion", "webSocketUrl", "themePath"]
-      }, function (data) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__["AjaxPage"], {
-          callback: update
-          /*State*/
-          ,
-          baseUrl: data.baseUrl,
-          staticVersion: data.staticVersion,
-          themePath: _this2.resetGlobalPath(_this2.getPath(data.themePath)),
-          webSocketUrl: data.webSocketUrl
-          /*Props*/
-          ,
-          fallback: fallback,
-          themes: themes,
-          ajax: ajax
-        });
-      });
-    }
-  }], [{
-    key: "getDerivedStateFromError",
-    value: function getDerivedStateFromError(error) {
-      return {
-        hasError: true
-      };
     }
   }]);
 
-  return Reshow;
-}(react__WEBPACK_IMPORTED_MODULE_6__["PureComponent"]);
+  return CodeReadme;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
-Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Reshow, "defaultProps", {
-  fallback: false
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Reshow);
-
+/* harmony default export */ __webpack_exports__["default"] = (CodeReadme);
 
 /***/ }),
 
-/***/ "../reshow/build/es/ui/molecules/ReshowComponent.js":
-/*!**********************************************************!*\
-  !*** ../reshow/build/es/ui/molecules/ReshowComponent.js ***!
-  \**********************************************************/
-/*! exports provided: connectOptions, Return */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "connectOptions", function() { return myConnectOptions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Return", function() { return ReshowReturn; });
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var reshow_build__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-build */ "../reshow/node_modules/reshow-build/build/es/src/index.js");
-/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
-/* harmony import */ var _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/globalStore */ "../reshow/build/es/src/stores/globalStore.js");
-
-
-
-
-
-
-
-
-
-var storeLocator = function storeLocator(props) {
-  return (props === null || props === void 0 ? void 0 : props.store) || Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(props, ["stores", 0]) || _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["default"];
-};
-
-var initStates = ["data", "I18N"];
-var pathStates = {
-  I13N: ["data", "I13N"]
-};
-
-var myConnectOptions = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, reshow_return__WEBPACK_IMPORTED_MODULE_3__["connectOptions"]), {}, {
-  shouldComponentUpdate: function shouldComponentUpdate() {
-    var thisThemePath = _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["default"].getState().get("themePath");
-
-    if (_src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__["globalStore"].path && _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__["globalStore"].path !== thisThemePath) {
-      return false;
-    } else {
-      return true;
-    }
-  },
-  initStates: initStates,
-  pathStates: pathStates,
-  storeLocator: storeLocator
-});
-
-var ReshowReturn = Object(reshow_return__WEBPACK_IMPORTED_MODULE_3__["getReturn"])({
-  useConnect: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["useConnect"])(myConnectOptions),
-  displayName: "ReshowReturn"
-});
-
-
-/***/ }),
-
-/***/ "../reshow/build/es/ui/organisms/RealTimeReturn.js":
-/*!*********************************************************!*\
-  !*** ../reshow/build/es/ui/organisms/RealTimeReturn.js ***!
-  \*********************************************************/
+/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js":
+/*!********************************************************************************************************!*\
+  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js ***!
+  \********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
-/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
-/* harmony import */ var _src_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createSuper.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-code/node_modules/call-func/build/es/src/index.js");
 
 
 
@@ -1085,237 +582,115 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var REAL_TIME_KEY = "--realTimeData--";
-var REAL_TIME_URL = "--realTimeUrl--";
-var keys = Object.keys;
 
-var calculateState = function calculateState(prevState, options) {
-  var path = options.realTimePath,
-      url = options.realTimeUrl,
-      realTimeReset = options.realTimeReset,
-      store = options.store;
-  var realTimeState = store.getState();
-  var data = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(realTimeState, path);
-  var wsUrl = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(realTimeState, [REAL_TIME_URL]);
 
-  if (data && (!url || url === wsUrl)) {
-    data[REAL_TIME_URL] = wsUrl;
-    return data;
-  } else {
-    if (realTimeReset) {
-      // Reset for when reconnection to new websocket server
-      // will not send duplicate data to client
-      var reset = {};
-      keys(prevState).forEach(function (key) {
-        return reset[key] = null;
-      });
-      return reset;
+
+var getLastHash = function getLastHash() {
+  var urls = document.URL.split("#");
+  var lastIndex = urls.length - 1;
+  var last = urls[lastIndex];
+  return last;
+};
+
+var updateUrl = function updateUrl(url) {
+  return history.pushState("", "", url);
+};
+
+var FullScreenExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(FullScreenExample, _PureComponent);
+
+  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(FullScreenExample);
+
+  function FullScreenExample() {
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FullScreenExample);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }
-};
 
-var storeLocator = function storeLocator(props) {
-  return props.store || _src_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_7__["default"];
-};
+    _this = _super.call.apply(_super, [this].concat(args));
 
-var myConnectOptions = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"]), {}, {
-  calculateState: calculateState,
-  realTimePath: [REAL_TIME_KEY],
-  realTimeUrl: null,
-  realTimeReset: false,
-  storeLocator: storeLocator
-});
-
-var RealTimeReturn = Object(reshow_return__WEBPACK_IMPORTED_MODULE_5__["getReturn"])({
-  cleanProps: ["realTimePath", "realTimeUrl", "realTimeReset"],
-  useConnect: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_3__["useConnect"])(myConnectOptions),
-  displayName: "RealTime"
-});
-/* harmony default export */ __webpack_exports__["default"] = (RealTimeReturn);
-
-/***/ }),
-
-/***/ "../reshow/build/es/ui/organisms/ReshowMessage.js":
-/*!********************************************************!*\
-  !*** ../reshow/build/es/ui/organisms/ReshowMessage.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
-/* harmony import */ var _src_stores_messageStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
-/* harmony import */ var _src_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../src/index */ "../reshow/build/es/src/index.js");
-
-
-
-
-
- // src
-
-
-
-
-
-var handleDismiss = function handleDismiss(e) {
-  var _e$data;
-
-  var id = e === null || e === void 0 ? void 0 : (_e$data = e.data) === null || _e$data === void 0 ? void 0 : _e$data.id;
-
-  if (id) {
-    Object(_src_index__WEBPACK_IMPORTED_MODULE_8__["dispatch"])("alert/del", {
-      id: id
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "state", {
+      showFullScreen: false
     });
-  }
-};
 
-var handleClick = function handleClick(dialog) {
-  return function (e) {
-    var value = Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(e, ["currentTarget", "value"]);
-    setTimeout(function () {
-      if (dialog) {
-        Object(_src_index__WEBPACK_IMPORTED_MODULE_8__["dispatch"])("dialog/end", {
-          value: value
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "handleClick", function () {
+      var id = _this.props.id;
+      var last = getLastHash();
+
+      if (id && id !== last) {
+        updateUrl(document.URL + "#" + id);
+      }
+
+      _this.setState({
+        showFullScreen: true
+      });
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "handleClose", function () {
+      var _this$props = _this.props,
+          id = _this$props.id,
+          onClose = _this$props.onClose;
+      var url = document.URL;
+      var idIndex = url.lastIndexOf("#" + id);
+
+      if (-1 !== idIndex) {
+        updateUrl(url.substring(0, idIndex));
+      }
+
+      Object(call_func__WEBPACK_IMPORTED_MODULE_9__["default"])(onClose);
+
+      _this.setState({
+        showFullScreen: false
+      });
+    });
+
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(FullScreenExample, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var id = this.props.id;
+      var last = getLastHash();
+
+      if (id === last) {
+        this.setState({
+          showFullScreen: true
         });
       }
-    });
-  };
-};
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          button = _this$props2.button,
+          children = _this$props2.children;
+      var showFullScreen = this.state.showFullScreen;
+      var thisFullScreen = null;
 
-var Body = function Body(props) {
-  var defaultAlertProps = props.defaultAlertProps,
-      defaultDialogProps = props.defaultDialogProps,
-      alerts = props.alerts,
-      alertProps = props.alertProps,
-      _props$alertComponent = props.alertComponent,
-      alertComponent = _props$alertComponent === void 0 ? organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["AlertsNotifier"] : _props$alertComponent,
-      dialog = props.dialog,
-      dialogProps = props.dialogProps,
-      _props$dialogComponen = props.dialogComponent,
-      dialogComponent = _props$dialogComponen === void 0 ? organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["Dialog"] : _props$dialogComponen;
-  var thisDialog = null;
+      if (showFullScreen) {
+        thisFullScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["FullScreen"], {
+          onClose: this.handleClose
+        }, children);
+      }
 
-  if (dialog) {
-    thisDialog = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["DisplayPopupEl"], null, Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["build"])(dialogComponent)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, defaultDialogProps), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(dialogProps)), {}, {
-      onClick: handleClick(dialog)
-    }), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(dialog)));
-  }
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+        onClick: this.handleClick
+      }, button), thisFullScreen);
+    }
+  }]);
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["SemanticUI"], null, thisDialog, Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["build"])(alertComponent)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, defaultAlertProps), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(alertProps)), {}, {
-    onDismiss: handleDismiss,
-    alerts: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(alerts)
-  })));
-};
+  return FullScreenExample;
+}(react__WEBPACK_IMPORTED_MODULE_6__["PureComponent"]);
 
-var ReshowMessage = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["Return"], {
-    store: _src_stores_messageStore__WEBPACK_IMPORTED_MODULE_7__["default"],
-    initStates: ["alerts", "alertProps", "dialog", "dialogProps"]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Body, props));
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(FullScreenExample, "defaultProps", {
+  button: "Open full screen"
 });
-ReshowMessage.displayName = "ReshowMessage";
-/* harmony default export */ __webpack_exports__["default"] = (ReshowMessage);
 
-/***/ }),
-
-/***/ "../reshow/build/es/ui/organisms/Section.js":
-/*!**************************************************!*\
-  !*** ../reshow/build/es/ui/organisms/Section.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../reshow/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
-/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
-
-
-var _excluded = ["immutable", "children"],
-    _excluded2 = ["section"],
-    _excluded3 = ["shouldRender"];
-
-
-
-
-
-
-var pathStates = _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"].pathStates,
-    otherOptions = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"], ["pathStates"]);
-
-otherOptions.initStates = ["section", "I18N"];
-
-var Section = function Section(props) {
-  var immutable = props.immutable,
-      children = props.children,
-      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
-
-  var _useConnect = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_5__["useConnect"])(otherOptions)(props),
-      section = _useConnect.section,
-      state = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_useConnect, _excluded2);
-
-  if (!section) {
-    return null;
-  }
-
-  var name = props.name;
-
-  var allParams = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"].reset(otherProps)), state);
-
-  if (immutable) {
-    var thisSection = section.get(name);
-
-    if (!thisSection) {
-      return null;
-    }
-
-    var shouldRender = thisSection.get("shouldRender");
-
-    if (!shouldRender) {
-      return null;
-    }
-
-    thisSection["delete"]("shouldRender").keySeq().forEach(function (key) {
-      allParams[key] = thisSection.get(key);
-    });
-  } else {
-    var _get = Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(section, [name], {}),
-        _shouldRender = _get.shouldRender,
-        others = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_get, _excluded3);
-
-    if (!_shouldRender) {
-      return null;
-    }
-
-    allParams = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, others), allParams);
-  }
-
-  var noName = children.every ? children.every(function (child) {
-    return !Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(child, ["props", "name"]);
-  }) : !Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(children, ["props", "name"]);
-
-  if (!noName) {
-    delete allParams["name"];
-  }
-
-  return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(children)(allParams);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Section);
+/* harmony default export */ __webpack_exports__["default"] = (FullScreenExample);
 
 /***/ }),
 
@@ -1384,7 +759,7 @@ Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])("config
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
 /* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
 
@@ -1443,7 +818,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pmvc_react_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pmvc_react_admin */ "./node_modules/pmvc_react_admin/build/es/src/index.js");
 /* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 var _VerticalMenu;
@@ -2155,7 +1530,7 @@ var CodeEditorExample = function CodeEditorExample(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _raw_loader_ui_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CodeExample.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeExample.example.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
@@ -2180,7 +1555,7 @@ var CodeExampleExample = function CodeExampleExample(props) {
   return _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
     code: _raw_loader_ui_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_2__["default"],
     header: "Test Header",
-    git: "react-atomic/react-atomic-organism/tree/master/packages/organism-react-code/",
+    git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/",
     npm: "organism-react-code",
     children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
       children: "Test Demo Area"
@@ -3046,7 +2421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -3468,7 +2843,7 @@ var _PageLoadProgressHand;
 
 
 var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(props) {
-  var url = "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md";
+  var url = "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md";
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
     children: [_PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_1__["PageLoadProgressHandler"], {
       ajax: true
@@ -4050,7 +3425,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
 
@@ -4429,7 +3804,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var organism_react_spotlight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-spotlight */ "./node_modules/organism-react-spotlight/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
@@ -4540,7 +3915,7 @@ var Styles = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
 /* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
 /* harmony import */ var reshow_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-hooks */ "./node_modules/reshow-hooks/build/es/src/index.js");
@@ -4563,7 +3938,7 @@ var StockChartExample = function StockChartExample(props) {
     Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])({
       type: "ajaxGet",
       params: {
-        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
+        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json",
         callback: function callback(json) {
           if (isMount()) {
             setData({
@@ -4882,7 +4257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
 /* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 /* harmony import */ var get_random_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! get-random-id */ "./node_modules/get-random-id/build/es/src/index.js");
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
@@ -5517,7 +4892,7 @@ var YouTubeRWDExample = function YouTubeRWDExample() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_Animation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Animation.example */ "./build/es/ui/organisms/Animation.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_Animation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Animation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Animation.example.jsx");
@@ -5582,7 +4957,7 @@ var Animation = function Animation(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/AsciiDoc.example */ "./build/es/ui/organisms/AsciiDoc.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AsciiDoc.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AsciiDoc.example.jsx");
@@ -5612,7 +4987,7 @@ var AsciiDocPage = function AsciiDocPage(props) {
       code: _raw_loader_ui_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_4__["default"],
       header: "Ascii Doc",
       edit: "https://codesandbox.io/s/8vj7x3m82",
-      git: "react-atomic/react-atomic-organism/tree/master/packages/organism-react-asciidoc/",
+      git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-asciidoc/",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     }))
   });
@@ -5663,7 +5038,7 @@ var Atoms = function Atoms(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CarouselAnimation.example */ "./build/es/ui/organisms/CarouselAnimation.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CarouselAnimation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimation.example.jsx");
@@ -5699,13 +5074,13 @@ var CarouselPage = function CarouselPage(props) {
     children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
       code: _raw_loader_ui_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_4__["default"],
       header: "Carousel Animation",
-      git: "react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",
       npm: "organism-react-carousel",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
       code: _raw_loader_ui_organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_6__["default"],
       header: "Carousel Animation Hide Thumb",
-      git: "react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",
       npm: "organism-react-carousel",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
     })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -5730,7 +5105,7 @@ var CarouselPage = function CarouselPage(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CodeExample.example */ "./build/es/ui/organisms/CodeExample.example.js");
 /* harmony import */ var _organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/CodeEditor.example */ "./build/es/ui/organisms/CodeEditor.example.js");
@@ -5779,7 +5154,7 @@ var Code = function Code(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3PieChart.example */ "./build/es/ui/organisms/D3PieChart.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3PieChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3PieChart.example.jsx");
@@ -5869,7 +5244,7 @@ var D3 = function D3(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3UmlPerf.example */ "./build/es/ui/organisms/D3UmlPerf.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3UmlPerf.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx");
@@ -5918,7 +5293,7 @@ var D3UmlPerf = function D3UmlPerf(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GrapesJs.example */ "./build/es/ui/organisms/GrapesJs.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GrapesJs.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GrapesJs.example.jsx");
@@ -5953,7 +5328,7 @@ var GrapesJs = function GrapesJs(props) {
       code: _raw_loader_ui_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_4__["default"],
       header: "GrapesJs Example",
       edit: "https://codesandbox.io/s/organism-react-grapesjs-04mo7",
-      git: "react-atomic/react-atomic-organism/tree/master/packages/organism-react-grapesjs/",
+      git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-grapesjs/",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
       code: _raw_loader_ui_organisms_RTE_example__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -6293,7 +5668,7 @@ var Styles = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/QueryToJSON */ "./build/es/ui/organisms/QueryToJSON.js");
 /* harmony import */ var _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/QueryToJSON */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx");
@@ -6341,7 +5716,7 @@ var JSON = function JSON(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_GridList_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GridList.example */ "./build/es/ui/organisms/GridList.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_GridList_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GridList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GridList.example.jsx");
@@ -6475,7 +5850,7 @@ var Molecules = function Molecules(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/PageLoadProgressHandler.example */ "./build/es/ui/organisms/PageLoadProgressHandler.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/PageLoadProgressHandler.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandler.example.jsx");
@@ -6558,7 +5933,7 @@ var Organisms = function Organisms(props) {
     })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
       code: _raw_loader_ui_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_4__["default"],
       header: "Page Load Progress",
-      git: "react-atomic/react-atomic-organism/blob/master/packages/organism-react-progress/",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-progress/",
       npm: "organism-react-progress",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -6577,7 +5952,7 @@ var Organisms = function Organisms(props) {
     })), _CodeExample7 || (_CodeExample7 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
       code: _raw_loader_ui_organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_12__["default"],
       header: "Facebook Like Button",
-      git: "react-atomic/react-atomic-organism/blob/master/packages/organism-react-facebook/",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-facebook/",
       npm: "organism-react-facebook",
       id: "organism-react-facebook",
       children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_11__["default"], {})
@@ -6624,7 +5999,7 @@ var Organisms = function Organisms(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/HTMLToCanvans.example */ "./build/es/ui/organisms/HTMLToCanvans.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/HTMLToCanvans.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx");
@@ -6672,7 +6047,7 @@ var PDF = function PDF(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var _organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/ParallaxBackgroundImage.example */ "./build/es/ui/organisms/ParallaxBackgroundImage.example.js");
@@ -6731,7 +6106,7 @@ var InjectStyles = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_Popup_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Popup.example */ "./build/es/ui/organisms/Popup.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_Popup_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Popup.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Popup.example.jsx");
@@ -6864,7 +6239,7 @@ var Tomato = function Tomato(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/YouTubeRWD.example */ "./build/es/ui/organisms/YouTubeRWD.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/YouTubeRWD.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/YouTubeRWD.example.jsx");
@@ -6919,7 +6294,7 @@ var Video = function Video(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
 /* harmony import */ var reshow_url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-url */ "./node_modules/reshow-url/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
@@ -7217,7 +6592,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\n/**\n * Production please use\n * import CodeExample from 'organism-react-code'\n */\nimport CodeExample from \"organism-react-code\";\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from \"!raw-loader!../../../../ui/organisms/CodeExample.example\";\n\nconst CodeExampleExample = (props) => (\n  <CodeExample\n    code={code}\n    header=\"Test Header\"\n    git=\"react-atomic/react-atomic-organism/tree/master/packages/organism-react-code/\"\n    npm=\"organism-react-code\"\n  >\n    <div>Test Demo Area</div>\n  </CodeExample>\n);\n\nexport default CodeExampleExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\n/**\n * Production please use\n * import CodeExample from 'organism-react-code'\n */\nimport CodeExample from \"organism-react-code\";\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from \"!raw-loader!../../../../ui/organisms/CodeExample.example\";\n\nconst CodeExampleExample = (props) => (\n  <CodeExample\n    code={code}\n    header=\"Test Header\"\n    git=\"react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/\"\n    npm=\"organism-react-code\"\n  >\n    <div>Test Demo Area</div>\n  </CodeExample>\n);\n\nexport default CodeExampleExample;\n");
 
 /***/ }),
 
@@ -7451,7 +6826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let url =\n    \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md\";\n  return (\n    <div>\n      <PageLoadProgressHandler ajax={true} />\n\n      <Button\n        onClick={() => {\n          ajaxDispatch({\n            type: \"ajaxGet\",\n            params: {\n              url: url,\n              callback: (json, text, o) => {\n                alert(text);\n              },\n            },\n          });\n        }}\n      >\n        Call Ajax\n      </Button>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let url =\n    \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md\";\n  return (\n    <div>\n      <PageLoadProgressHandler ajax={true} />\n\n      <Button\n        onClick={() => {\n          ajaxDispatch({\n            type: \"ajaxGet\",\n            params: {\n              url: url,\n              callback: (json, text, o) => {\n                alert(text);\n              },\n            },\n          });\n        }}\n      >\n        Call Ajax\n      </Button>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n");
 
 /***/ }),
 
@@ -7594,7 +6969,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
 
 /***/ }),
 

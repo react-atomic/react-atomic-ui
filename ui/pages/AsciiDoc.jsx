@@ -14,7 +14,7 @@ const AsciiDocPage = props => {
           code={asciiDocExample}
           header="Ascii Doc"
           edit="https://codesandbox.io/s/8vj7x3m82"
-          git="react-atomic/react-atomic-organism/tree/master/packages/organism-react-asciidoc/"
+          git="react-atomic/react-atomic-organism/tree/main/packages/organism-react-asciidoc/"
         >
           <AsciiDocExample />
         </CodeExample>

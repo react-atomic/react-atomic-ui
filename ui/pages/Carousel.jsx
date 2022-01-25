@@ -18,7 +18,7 @@ const CarouselPage = (props) => {
       <CodeExample
         code={carouselAnimation}
         header="Carousel Animation"
-        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
+        git="react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/"
         npm="organism-react-carousel"
       >
         <CarouselAnimation />
@@ -27,7 +27,7 @@ const CarouselPage = (props) => {
       <CodeExample
         code={carouselAnimationHideThumb}
         header="Carousel Animation Hide Thumb"
-        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-carousel/"
+        git="react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/"
         npm="organism-react-carousel"
       >
         <CarouselAnimationHideThumb />

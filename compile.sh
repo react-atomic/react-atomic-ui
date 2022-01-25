@@ -2,7 +2,7 @@
 
 conf='{'
 conf+='"assetsRoot":"./assets/",'
-conf+='"externals":{"d3": "d3"},'
+conf+='"externals":{},'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
 

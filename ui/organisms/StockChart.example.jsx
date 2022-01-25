@@ -11,7 +11,7 @@ const StockChartExample = (props) => {
     ajaxDispatch({
       type: "ajaxGet",
       params: {
-        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/data/stock.json",
+        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json",
         callback: (json) => {
           if (isMount()) {
             setData({ trades: json });

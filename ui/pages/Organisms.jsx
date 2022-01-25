@@ -53,7 +53,7 @@ const Organisms = (props) => {
       <CodeExample
         code={pageLoadProgressHandler}
         header="Page Load Progress"
-        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-progress/"
+        git="react-atomic/react-atomic-organism/blob/main/packages/organism-react-progress/"
         npm="organism-react-progress"
       >
         <PageLoadProgressHandler />
@@ -81,7 +81,7 @@ const Organisms = (props) => {
       <CodeExample
         code={fbLike}
         header="Facebook Like Button"
-        git="react-atomic/react-atomic-organism/blob/master/packages/organism-react-facebook/"
+        git="react-atomic/react-atomic-organism/blob/main/packages/organism-react-facebook/"
         npm="organism-react-facebook"
         id="organism-react-facebook"
       >

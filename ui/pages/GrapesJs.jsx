@@ -17,7 +17,7 @@ const GrapesJs = props => {
           code={grapesJsExample}
           header="GrapesJs Example"
           edit="https://codesandbox.io/s/organism-react-grapesjs-04mo7"
-          git="react-atomic/react-atomic-organism/tree/master/packages/organism-react-grapesjs/"
+          git="react-atomic/react-atomic-organism/tree/main/packages/organism-react-grapesjs/"
         >
           <GrapesJsExample />
         </CodeExample>

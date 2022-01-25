@@ -5,7 +5,7 @@ import { Button } from "react-atomic-molecule";
 
 const PageLoadProgressHandlerExample = (props) => {
   let url =
-    "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/master/README.md";
+    "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md";
   return (
     <div>
       <PageLoadProgressHandler ajax={true} />
