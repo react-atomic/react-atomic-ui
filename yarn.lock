@@ -1182,9 +1182,9 @@
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
 "@types/node@*":
-  version "17.0.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.11.tgz#e0630988ea4c75efde22d5b099360ecfe494160f"
-  integrity sha512-TgLsFcuinMobmML3PsILoRJq/h11/qS7UDlak1LUsazJcvJeKejEBuI1m5X2pBnMBF5T5HRAvtcnr4cV5nvc8Q==
+  version "17.0.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.12.tgz#f7aa331b27f08244888c47b7df126184bc2339c5"
+  integrity sha512-4YpbAsnJXWYK/fpTVFlMIcUIho2AYCi4wg5aNPrG1ng7fn/1/RZfCIpRCiBX+12RVa34RluilnvCqD+g3KiSiA==
 
 "@types/qs@*":
   version "6.9.7"
@@ -7392,9 +7392,9 @@ organism-react-parallax@*:
     react-atomic-molecule "*"
 
 organism-react-popup@*:
-  version "0.15.8"
-  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.15.8.tgz#d595f191b800be87cac536696049fe2151108064"
-  integrity sha512-hJclzQREAcLevtAwDLPkNjXGSMMrSP6nUkvJtkXDcF/Nwu0UCHdoF4l4amD9wivQ+HnqNryDPXir4P+eyhC2Lg==
+  version "0.15.9"
+  resolved "https://registry.yarnpkg.com/organism-react-popup/-/organism-react-popup-0.15.9.tgz#d835293b477bc1c4357ef353ffa8b9e019989ca6"
+  integrity sha512-Dd3KejBeAcgUpbDMTol10lmtL/7LbcCBvgkKXQYCZPQznN3tfU3eyqMQdb729EZjeA3zvYD0FPvVpU1F00JV2A==
   dependencies:
     array.merge "*"
     call-func "*"
@@ -8665,9 +8665,9 @@ reshow-worker@*:
     worker-loader "*"
 
 reshow@*:
-  version "0.16.3"
-  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.16.3.tgz#7faff3c0c6bb6073398d716ac0316f70d6af94e6"
-  integrity sha512-4zSJ/gGBZMCv1akN4C8nGiEaeItPyce2ybGEX0NTHgMcqLXfakayWpSOG0xBgPL3MAZNM4ArlWOgfwzcMn29qw==
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/reshow/-/reshow-0.16.4.tgz#49820b8ee56c77b07c067649202b41e535ebce7d"
+  integrity sha512-YrhS3zrfKxHRop1RaiL3V9lC4Ry/cF1TmQm21Wgqpw7Ss6vlNqZFK/1MyuuZt+dyC/O+qpqHFBbpHuBHUq2+4g==
   dependencies:
     call-func "*"
     get-storage "*"

@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "384e1aca502d36d24cea" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "1e2d589518e023be14cd" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -224,6 +224,1101 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../reshow/build/es/src/dispatch.js":
+/*!******************************************!*\
+  !*** ../reshow/build/es/src/dispatch.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/toConsumableArray */ "../reshow/node_modules/reshow-runtime/es/helpers/toConsumableArray.js");
+/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
+/* harmony import */ var _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
+/* harmony import */ var _stores_messageStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
+/* harmony import */ var _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/localStorageStore */ "../reshow/build/es/src/stores/localStorageStore.js");
+/* harmony import */ var _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./stores/sessionStorageStore */ "../reshow/build/es/src/stores/sessionStorageStore.js");
+/* harmony import */ var _stores_pageStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+
+
+
+
+
+
+
+
+var dispatch = function dispatch() {
+  for (var _len = arguments.length, action = new Array(_len), _key = 0; _key < _len; _key++) {
+    action[_key] = arguments[_key];
+  }
+
+  action = reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["refineAction"].apply(void 0, Object(reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(action));
+
+  switch (action.type) {
+    case "dialog/start":
+    case "dialog/end":
+    case "alert/reset":
+    case "alert/del":
+    case "alert/add":
+      Object(_stores_messageStore__WEBPACK_IMPORTED_MODULE_3__["messageDispatch"])(action);
+      break;
+
+    case "realTime":
+      Object(_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_2__["realTimeDispatch"])(action);
+      break;
+
+    case "local":
+      Object(_stores_localStorageStore__WEBPACK_IMPORTED_MODULE_4__["localStorageDispatch"])(action);
+      break;
+
+    case "session":
+      Object(_stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_5__["sessionStorageDispatch"])(action);
+      break;
+
+    default:
+      Object(_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["pageDispatch"])(action);
+      break;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (dispatch);
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/index.js":
+/*!***************************************!*\
+  !*** ../reshow/build/es/src/index.js ***!
+  \***************************************/
+/*! exports provided: pageStore, realTimeStore, localStorageStore, sessionStorageStore, messageStore, dispatch, ReLink, ReForm, ReshowMessage, Return, RealTimeReturn, Section, default, update */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _stores_pageStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "pageStore", function() { return _stores_pageStore__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "realTimeStore", function() { return _stores_realTimeStore__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./stores/localStorageStore */ "../reshow/build/es/src/stores/localStorageStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "localStorageStore", function() { return _stores_localStorageStore__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stores/sessionStorageStore */ "../reshow/build/es/src/stores/sessionStorageStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "sessionStorageStore", function() { return _stores_sessionStorageStore__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _stores_messageStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "messageStore", function() { return _stores_messageStore__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+/* harmony import */ var _dispatch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dispatch */ "../reshow/build/es/src/dispatch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "dispatch", function() { return _dispatch__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReLink", function() { return organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["AjaxLink"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReForm", function() { return organism_react_ajax__WEBPACK_IMPORTED_MODULE_6__["AjaxForm"]; });
+
+/* harmony import */ var _ui_organisms_ReshowMessage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ui/organisms/ReshowMessage */ "../reshow/build/es/ui/organisms/ReshowMessage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReshowMessage", function() { return _ui_organisms_ReshowMessage__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _ui_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ui/molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Return", function() { return _ui_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_8__["Return"]; });
+
+/* harmony import */ var _ui_organisms_RealTimeReturn__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ui/organisms/RealTimeReturn */ "../reshow/build/es/ui/organisms/RealTimeReturn.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RealTimeReturn", function() { return _ui_organisms_RealTimeReturn__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+/* harmony import */ var _ui_organisms_Section__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ui/organisms/Section */ "../reshow/build/es/ui/organisms/Section.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return _ui_organisms_Section__WEBPACK_IMPORTED_MODULE_10__["default"]; });
+
+/* harmony import */ var _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ui/molecules/Reshow */ "../reshow/build/es/ui/molecules/Reshow.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__["default"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "update", function() { return _ui_molecules_Reshow__WEBPACK_IMPORTED_MODULE_11__["update"]; });
+
+// Stores
+
+
+
+
+ // dispatch
+
+ // Ajax
+
+ // Message Component
+
+ // Component
+
+
+
+ // Base Component
+
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/globalStore.js":
+/*!****************************************************!*\
+  !*** ../reshow/build/es/src/stores/globalStore.js ***!
+  \****************************************************/
+/*! exports provided: globalStore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalStore", function() { return globalStore; });
+/**
+ * Global Store use in calculateState
+ * when themePath and global path not sync will rollback to use prev state.
+ *
+ * https://github.com/react-atomic/reshow/blob/main/ui/molecules/ReshowComponent.jsx#L12-L19
+ */
+var globalStore = {};
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/localStorageStore.js":
+/*!**********************************************************!*\
+  !*** ../reshow/build/es/src/stores/localStorageStore.js ***!
+  \**********************************************************/
+/*! exports provided: default, localStorageDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localStorageDispatch", function() { return localStorageDispatch; });
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
+
+
+
+
+
+var _createReducer = Object(reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(function (state, action) {
+  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(action, ["params"]);
+  return state.merge(params);
+}, new get_storage__WEBPACK_IMPORTED_MODULE_3__["Storage"](get_storage__WEBPACK_IMPORTED_MODULE_3__["localStorage"])),
+    _createReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_createReducer, 2),
+    store = _createReducer2[0],
+    localStorageDispatch = _createReducer2[1];
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/messageStore.js":
+/*!*****************************************************!*\
+  !*** ../reshow/build/es/src/stores/messageStore.js ***!
+  \*****************************************************/
+/*! exports provided: default, messageDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "messageDispatch", function() { return messageDispatch; });
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../reshow/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../reshow/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../reshow/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/typeof */ "../reshow/node_modules/reshow-runtime/es/helpers/typeof.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! call-func */ "../reshow/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reshow-constant */ "../reshow/node_modules/reshow-constant/build/es/index.js");
+/* harmony import */ var _pageStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+
+
+
+
+
+
+
+
+
+
+var alertCount = 0;
+
+var toMessage = function toMessage(message) {
+  if (-1 !== "string|number".indexOf(Object(reshow_runtime_es_helpers_typeof__WEBPACK_IMPORTED_MODULE_4__["default"])(message))) {
+    message = {
+      message: message
+    };
+  }
+
+  if (!message.id) {
+    message.id = "m-" + alertCount;
+    alertCount++;
+  }
+
+  return message;
+};
+
+var getMessage = function getMessage(action) {
+  return toMessage(Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "message"]));
+};
+
+var MessageStore = /*#__PURE__*/function () {
+  function MessageStore() {
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, MessageStore);
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "dialogCallback", reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"]);
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(this, "alertMap", {});
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MessageStore, [{
+    key: "getAlertList",
+    value: function getAlertList() {
+      var _this = this;
+
+      return Object(reshow_constant__WEBPACK_IMPORTED_MODULE_8__["KEYS"])(this.alertMap).map(function (key) {
+        return _this.alertMap[key];
+      });
+    }
+  }, {
+    key: "dialogStart",
+    value: function dialogStart(state, action) {
+      var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params"]);
+      var dialog = params.dialog,
+          dialogProps = params.dialogProps,
+          dialogTo = params.dialogTo,
+          callback = params.callback;
+      var next = {
+        dialog: dialog
+      };
+
+      if (dialogProps) {
+        next.dialogProps = dialogProps;
+      }
+
+      if (dialogTo) {
+        next.dialogTo = dialogTo;
+      }
+
+      if (callback) {
+        this.dialogCallback = callback;
+      }
+
+      return state.merge(next);
+    }
+  }, {
+    key: "dialogEnd",
+    value: function dialogEnd(state, action) {
+      var dialogTo = state.get("dialogTo");
+
+      if (!dialogTo) {
+        dialogTo = "dialogReturn";
+      }
+
+      var value = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "value"]);
+
+      if (value != reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"]) {
+        Object(_pageStore__WEBPACK_IMPORTED_MODULE_9__["pageDispatch"])(Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])({}, dialogTo, value));
+      }
+
+      Object(call_func__WEBPACK_IMPORTED_MODULE_7__["default"])(this.dialogCallback, [value]);
+      this.dialogCallback = reshow_constant__WEBPACK_IMPORTED_MODULE_8__["T_NULL"];
+      return state["delete"]("dialog")["delete"]("dialogProps")["delete"]("dialogTo");
+    }
+  }, {
+    key: "alertReset",
+    value: function alertReset(state, action) {
+      var _this2 = this;
+
+      var alerts = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "alerts"]);
+      this.alertMap = {};
+
+      if (Object(reshow_constant__WEBPACK_IMPORTED_MODULE_8__["IS_ARRAY"])(alerts)) {
+        alerts.map(function (a) {
+          var message = toMessage(a);
+          _this2.alertMap[message.id] = message;
+        });
+      }
+
+      return state.set("alerts", this.getAlertList());
+    }
+  }, {
+    key: "alertDel",
+    value: function alertDel(state, action) {
+      var id = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "id"]);
+      delete this.alertMap[id];
+      return state.set("alerts", this.getAlertList());
+    }
+  }, {
+    key: "alertAdd",
+    value: function alertAdd(state, action) {
+      var alerts = state.get("alerts");
+      var message = getMessage(action);
+      var alertProps = Object(get_object_value__WEBPACK_IMPORTED_MODULE_6__["default"])(action, ["params", "alertProps"]);
+
+      if (alertProps) {
+        state = state.set("alertProps", alertProps);
+      }
+
+      this.alertMap[message.id] = message;
+      return state.set("alerts", this.getAlertList());
+    }
+  }]);
+
+  return MessageStore;
+}();
+
+var oMess = new MessageStore();
+
+var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_5__["ImmutableStore"])(function (state, action) {
+  switch (action.type) {
+    case "dialog/start":
+      return oMess.dialogStart(state, action);
+
+    case "dialog/end":
+      return oMess.dialogEnd(state, action);
+
+    case "alert/reset":
+      return oMess.alertReset(state, action);
+
+    case "alert/del":
+      return oMess.alertDel(state, action);
+
+    case "alert/add":
+      return oMess.alertAdd(state, action);
+
+    default:
+      return state;
+  }
+}),
+    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
+    store = _ImmutableStore2[0],
+    messageDispatch = _ImmutableStore2[1];
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/pageStore.js":
+/*!**************************************************!*\
+  !*** ../reshow/build/es/src/stores/pageStore.js ***!
+  \**************************************************/
+/*! exports provided: default, pageDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageDispatch", function() { return pageDispatch; });
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var reshow_constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-constant */ "../reshow/node_modules/reshow-constant/build/es/index.js");
+
+
+
+
+var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["ImmutableStore"])(function (state, action) {
+  switch (action.type) {
+    case "config/set":
+      return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state, action.params);
+
+    case "config/reset":
+      return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state.clear(), action.params);
+
+    default:
+      if (Object(reshow_constant__WEBPACK_IMPORTED_MODULE_2__["KEYS"])(action).length) {
+        return Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["mergeMap"])(state, action);
+      } else {
+        return state;
+      }
+
+  }
+}),
+    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
+    store = _ImmutableStore2[0],
+    pageDispatch = _ImmutableStore2[1];
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/realTimeStore.js":
+/*!******************************************************!*\
+  !*** ../reshow/build/es/src/stores/realTimeStore.js ***!
+  \******************************************************/
+/*! exports provided: default, realTimeDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "realTimeDispatch", function() { return realTimeDispatch; });
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+
+
+
+var _ImmutableStore = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_1__["ImmutableStore"])(function (state, action) {
+  switch (action.type) {
+    case "realTime":
+      return action.params || [];
+
+    default:
+      return [];
+  }
+}),
+    _ImmutableStore2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ImmutableStore, 2),
+    store = _ImmutableStore2[0],
+    realTimeDispatch = _ImmutableStore2[1];
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/stores/sessionStorageStore.js":
+/*!************************************************************!*\
+  !*** ../reshow/build/es/src/stores/sessionStorageStore.js ***!
+  \************************************************************/
+/*! exports provided: default, sessionStorageDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sessionStorageDispatch", function() { return sessionStorageDispatch; });
+/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../reshow/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
+/* harmony import */ var reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-flux-base */ "../reshow/node_modules/reshow-flux-base/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
+
+
+
+
+
+var _createReducer = Object(reshow_flux_base__WEBPACK_IMPORTED_MODULE_1__["createReducer"])(function (state, action) {
+  var params = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(action, ["params"]);
+  return state.merge(params);
+}, new get_storage__WEBPACK_IMPORTED_MODULE_3__["Storage"](get_storage__WEBPACK_IMPORTED_MODULE_3__["sessionStorage"])),
+    _createReducer2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_createReducer, 2),
+    store = _createReducer2[0],
+    sessionStorageDispatch = _createReducer2[1];
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/src/updateCanonicalUrl.js":
+/*!****************************************************!*\
+  !*** ../reshow/build/es/src/updateCanonicalUrl.js ***!
+  \****************************************************/
+/*! exports provided: default, initCanonicalUrl, getDocCanonicalUrl */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initCanonicalUrl", function() { return initCanonicalUrl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDocCanonicalUrl", function() { return getDocCanonicalUrl; });
+/* harmony import */ var get_storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! get-storage */ "../reshow/node_modules/get-storage/build/es/src/index.js");
+/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! win-doc */ "../reshow/node_modules/win-doc/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+
+
+
+
+var getDocCanonicalUrl = function getDocCanonicalUrl(oDoc) {
+  oDoc = oDoc || Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])();
+  var canonical = oDoc.querySelector('link[rel="canonical"]');
+  return canonical ? canonical.href : false;
+};
+
+var initCanonicalUrl = function initCanonicalUrl(props) {
+  var canonicalUrl = getDocCanonicalUrl();
+
+  if (-1 !== Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])().URL.indexOf("--disableCanonical")) {
+    Object(get_storage__WEBPACK_IMPORTED_MODULE_0__["sessionStorage"])("disableCanonical")(1);
+  } else if (canonicalUrl) {
+    updateCanonicalUrl(canonicalUrl, props);
+  }
+};
+
+var updateCanonicalUrl = function updateCanonicalUrl(url, props) {
+  var loc = Object(win_doc__WEBPACK_IMPORTED_MODULE_1__["doc"])().location;
+
+  if (!loc || Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(props, ["disableCanonical"], function () {
+    return Object(get_storage__WEBPACK_IMPORTED_MODULE_0__["sessionStorage"])("disableCanonical")();
+  })) {
+    return;
+  }
+
+  url = url || getDocCanonicalUrl();
+
+  if (!url) {
+    return;
+  }
+
+  var newUrl = function newUrl(url) {
+    return url + loc.search + loc.hash;
+  };
+
+  if (-1 !== url.indexOf(loc.hostname)) {
+    if (0 !== url.indexOf(loc.protocol)) {
+      var urlArr = url.split(":");
+      url = loc.protocol + urlArr[1];
+    }
+
+    history.replaceState && history.replaceState("", "", newUrl(url));
+  } else {
+    loc.replace(newUrl(url));
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (updateCanonicalUrl);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/ui/molecules/Reshow.js":
+/*!*************************************************!*\
+  !*** ../reshow/build/es/ui/molecules/Reshow.js ***!
+  \*************************************************/
+/*! exports provided: default, update */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "update", function() { return update; });
+/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../reshow/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
+/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../reshow/node_modules/reshow-runtime/es/helpers/createClass.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../reshow/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../reshow/node_modules/reshow-runtime/es/helpers/inherits.js");
+/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../reshow/node_modules/reshow-runtime/es/helpers/createSuper.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../reshow/node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var win_doc__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! win-doc */ "../reshow/node_modules/win-doc/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! call-func */ "../reshow/node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var _src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/updateCanonicalUrl */ "../reshow/build/es/src/updateCanonicalUrl.js");
+/* harmony import */ var _src_dispatch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../src/dispatch */ "../reshow/build/es/src/dispatch.js");
+/* harmony import */ var _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../src/stores/globalStore */ "../reshow/build/es/src/stores/globalStore.js");
+/* harmony import */ var _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../src/stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var isArray = Array.isArray;
+var isInit;
+
+var update = function update(params) {
+  var realTimeData = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["--realTimeData--"]);
+  var reset = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["--reset--"]);
+  var type = realTimeData ? "realTime" : "config/" + (reset ? "re" : "") + "set";
+  Object(_src_dispatch__WEBPACK_IMPORTED_MODULE_14__["default"])(type, Object(reshow_flux__WEBPACK_IMPORTED_MODULE_12__["toJS"])(params));
+  var oDoc = Object(win_doc__WEBPACK_IMPORTED_MODULE_9__["doc"])();
+
+  if (oDoc.URL) {
+    var htmlTitle = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["htmlTitle"]);
+
+    if (htmlTitle) {
+      if (isArray(htmlTitle)) {
+        oDoc.title = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(htmlTitle, [0]);
+      } else {
+        oDoc.title = htmlTitle;
+      }
+    }
+
+    var canonical = Object(get_object_value__WEBPACK_IMPORTED_MODULE_7__["default"])(params, ["data", "canonical"]);
+
+    if (canonical) {
+      Object(_src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__["default"])(canonical, params);
+    }
+  }
+};
+
+var Reshow = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(Reshow, _PureComponent);
+
+  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(Reshow);
+
+  function Reshow(props) {
+    var _this;
+
+    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Reshow);
+
+    _this = _super.call(this, props);
+
+    if (isInit) {
+      console.warn("The best practice is avoid multi Reshow Component.");
+      _this.state = {
+        hasError: true
+      };
+    } else {
+      update(props);
+      _this.state = {
+        hasError: false
+      };
+      isInit = 1;
+    }
+
+    _this.getPath = _this.getPath.bind(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this));
+    return _this;
+  }
+
+  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Reshow, [{
+    key: "getPath",
+    value: function getPath(stateThemePath) {
+      return stateThemePath || this.props.themePath;
+    }
+    /**
+     * @see globalStore https://github.com/react-atomic/reshow/blob/main/src/stores/globalStore.js
+     */
+
+  }, {
+    key: "resetGlobalPath",
+    value: function resetGlobalPath(path) {
+      var _this$props = this.props,
+          themes = _this$props.themes,
+          defaultThemePath = _this$props.defaultThemePath,
+          themePath = _this$props.themePath;
+
+      if (!themes[path]) {
+        path = defaultThemePath || themePath;
+      }
+
+      if (themes[path]) {
+        _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path = path;
+      } else {
+        return themePath;
+      }
+
+      return _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path;
+    }
+    /**
+     * @see globalStore https://github.com/react-atomic/reshow/blob/main/src/stores/globalStore.js
+     */
+
+  }, {
+    key: "getGlobalPath",
+    value: function getGlobalPath() {
+      return _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_15__["globalStore"].path;
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Server site version also need update Canonical
+      Object(_src_updateCanonicalUrl__WEBPACK_IMPORTED_MODULE_13__["initCanonicalUrl"])(this.props);
+    }
+  }, {
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, info) {
+      var onError = this.props.onError;
+
+      if (onError) {
+        Object(call_func__WEBPACK_IMPORTED_MODULE_10__["default"])(onError, [error, info]);
+      } else {
+        console.error([error, info]);
+      }
+
+      this.setState({
+        hasError: true
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var hasError = this.state.hasError;
+
+      if (hasError) {
+        return null;
+      }
+
+      var _this$props2 = this.props,
+          baseUrl = _this$props2.baseUrl,
+          staticVersion = _this$props2.staticVersion,
+          fallback = _this$props2.fallback,
+          themes = _this$props2.themes,
+          ajax = _this$props2.ajax,
+          webSocketUrl = _this$props2.webSocketUrl;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reshow_return__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        store: _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_16__["default"],
+        baseUrl: baseUrl,
+        staticVersion: staticVersion,
+        initStates: ["baseUrl", "staticVersion", "webSocketUrl", "themePath"]
+      }, function (data) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__["AjaxPage"], {
+          callback: update
+          /*State*/
+          ,
+          baseUrl: data.baseUrl,
+          staticVersion: data.staticVersion,
+          themePath: _this2.resetGlobalPath(_this2.getPath(data.themePath)),
+          webSocketUrl: data.webSocketUrl
+          /*Props*/
+          ,
+          fallback: fallback,
+          themes: themes,
+          ajax: ajax
+        });
+      });
+    }
+  }], [{
+    key: "getDerivedStateFromError",
+    value: function getDerivedStateFromError(error) {
+      return {
+        hasError: true
+      };
+    }
+  }]);
+
+  return Reshow;
+}(react__WEBPACK_IMPORTED_MODULE_6__["PureComponent"]);
+
+Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Reshow, "defaultProps", {
+  fallback: false
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (Reshow);
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/ui/molecules/ReshowComponent.js":
+/*!**********************************************************!*\
+  !*** ../reshow/build/es/ui/molecules/ReshowComponent.js ***!
+  \**********************************************************/
+/*! exports provided: connectOptions, Return */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "connectOptions", function() { return myConnectOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Return", function() { return ReshowReturn; });
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var reshow_build__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-build */ "../reshow/node_modules/reshow-build/build/es/src/index.js");
+/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../src/stores/pageStore */ "../reshow/build/es/src/stores/pageStore.js");
+/* harmony import */ var _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/globalStore */ "../reshow/build/es/src/stores/globalStore.js");
+
+
+
+
+
+
+
+
+
+var storeLocator = function storeLocator(props) {
+  return (props === null || props === void 0 ? void 0 : props.store) || Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(props, ["stores", 0]) || _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["default"];
+};
+
+var initStates = ["data", "I18N"];
+var pathStates = {
+  I13N: ["data", "I13N"]
+};
+
+var myConnectOptions = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, reshow_return__WEBPACK_IMPORTED_MODULE_3__["connectOptions"]), {}, {
+  shouldComponentUpdate: function shouldComponentUpdate() {
+    var thisThemePath = _src_stores_pageStore__WEBPACK_IMPORTED_MODULE_6__["default"].getState().get("themePath");
+
+    if (_src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__["globalStore"].path && _src_stores_globalStore__WEBPACK_IMPORTED_MODULE_7__["globalStore"].path !== thisThemePath) {
+      return false;
+    } else {
+      return true;
+    }
+  },
+  initStates: initStates,
+  pathStates: pathStates,
+  storeLocator: storeLocator
+});
+
+var ReshowReturn = Object(reshow_return__WEBPACK_IMPORTED_MODULE_3__["getReturn"])({
+  useConnect: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["useConnect"])(myConnectOptions),
+  displayName: "ReshowReturn"
+});
+
+
+/***/ }),
+
+/***/ "../reshow/build/es/ui/organisms/RealTimeReturn.js":
+/*!*********************************************************!*\
+  !*** ../reshow/build/es/ui/organisms/RealTimeReturn.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var reshow_return__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-return */ "../reshow/node_modules/reshow-return/build/es/src/index.js");
+/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
+/* harmony import */ var _src_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/realTimeStore */ "../reshow/build/es/src/stores/realTimeStore.js");
+
+
+
+
+
+
+
+
+var REAL_TIME_KEY = "--realTimeData--";
+var REAL_TIME_URL = "--realTimeUrl--";
+var keys = Object.keys;
+
+var calculateState = function calculateState(prevState, options) {
+  var path = options.realTimePath,
+      url = options.realTimeUrl,
+      realTimeReset = options.realTimeReset,
+      store = options.store;
+  var realTimeState = store.getState();
+  var data = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(realTimeState, path);
+  var wsUrl = Object(get_object_value__WEBPACK_IMPORTED_MODULE_2__["default"])(realTimeState, [REAL_TIME_URL]);
+
+  if (data && (!url || url === wsUrl)) {
+    data[REAL_TIME_URL] = wsUrl;
+    return data;
+  } else {
+    if (realTimeReset) {
+      // Reset for when reconnection to new websocket server
+      // will not send duplicate data to client
+      var reset = {};
+      keys(prevState).forEach(function (key) {
+        return reset[key] = null;
+      });
+      return reset;
+    }
+  }
+};
+
+var storeLocator = function storeLocator(props) {
+  return props.store || _src_stores_realTimeStore__WEBPACK_IMPORTED_MODULE_7__["default"];
+};
+
+var myConnectOptions = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"]), {}, {
+  calculateState: calculateState,
+  realTimePath: [REAL_TIME_KEY],
+  realTimeUrl: null,
+  realTimeReset: false,
+  storeLocator: storeLocator
+});
+
+var RealTimeReturn = Object(reshow_return__WEBPACK_IMPORTED_MODULE_5__["getReturn"])({
+  cleanProps: ["realTimePath", "realTimeUrl", "realTimeReset"],
+  useConnect: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_3__["useConnect"])(myConnectOptions),
+  displayName: "RealTime"
+});
+/* harmony default export */ __webpack_exports__["default"] = (RealTimeReturn);
+
+/***/ }),
+
+/***/ "../reshow/build/es/ui/organisms/ReshowMessage.js":
+/*!********************************************************!*\
+  !*** ../reshow/build/es/ui/organisms/ReshowMessage.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
+/* harmony import */ var _src_stores_messageStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/stores/messageStore */ "../reshow/build/es/src/stores/messageStore.js");
+/* harmony import */ var _src_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../src/index */ "../reshow/build/es/src/index.js");
+
+
+
+
+
+ // src
+
+
+
+
+
+var handleDismiss = function handleDismiss(e) {
+  var _e$data;
+
+  var id = e === null || e === void 0 ? void 0 : (_e$data = e.data) === null || _e$data === void 0 ? void 0 : _e$data.id;
+
+  if (id) {
+    Object(_src_index__WEBPACK_IMPORTED_MODULE_8__["dispatch"])("alert/del", {
+      id: id
+    });
+  }
+};
+
+var handleClick = function handleClick(dialog) {
+  return function (e) {
+    var value = Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(e, ["currentTarget", "value"]);
+    setTimeout(function () {
+      if (dialog) {
+        Object(_src_index__WEBPACK_IMPORTED_MODULE_8__["dispatch"])("dialog/end", {
+          value: value
+        });
+      }
+    });
+  };
+};
+
+var Body = function Body(props) {
+  var defaultAlertProps = props.defaultAlertProps,
+      defaultDialogProps = props.defaultDialogProps,
+      alerts = props.alerts,
+      alertProps = props.alertProps,
+      _props$alertComponent = props.alertComponent,
+      alertComponent = _props$alertComponent === void 0 ? organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["AlertsNotifier"] : _props$alertComponent,
+      dialog = props.dialog,
+      dialogProps = props.dialogProps,
+      _props$dialogComponen = props.dialogComponent,
+      dialogComponent = _props$dialogComponen === void 0 ? organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["Dialog"] : _props$dialogComponen;
+  var thisDialog = null;
+
+  if (dialog) {
+    thisDialog = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["DisplayPopupEl"], null, Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["build"])(dialogComponent)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, defaultDialogProps), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(dialogProps)), {}, {
+      onClick: handleClick(dialog)
+    }), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(dialog)));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["SemanticUI"], null, thisDialog, Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["build"])(alertComponent)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, defaultAlertProps), Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(alertProps)), {}, {
+    onDismiss: handleDismiss,
+    alerts: Object(reshow_flux__WEBPACK_IMPORTED_MODULE_4__["toJS"])(alerts)
+  })));
+};
+
+var ReshowMessage = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(function (props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["Return"], {
+    store: _src_stores_messageStore__WEBPACK_IMPORTED_MODULE_7__["default"],
+    initStates: ["alerts", "alertProps", "dialog", "dialogProps"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Body, props));
+});
+ReshowMessage.displayName = "ReshowMessage";
+/* harmony default export */ __webpack_exports__["default"] = (ReshowMessage);
+
+/***/ }),
+
+/***/ "../reshow/build/es/ui/organisms/Section.js":
+/*!**************************************************!*\
+  !*** ../reshow/build/es/ui/organisms/Section.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "../reshow/node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutProperties */ "../reshow/node_modules/reshow-runtime/es/helpers/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! get-object-value */ "../reshow/node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "../reshow/node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var reshow_flux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-flux */ "../reshow/node_modules/reshow-flux/build/es/index.js");
+/* harmony import */ var _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../molecules/ReshowComponent */ "../reshow/build/es/ui/molecules/ReshowComponent.js");
+
+
+var _excluded = ["immutable", "children"],
+    _excluded2 = ["section"],
+    _excluded3 = ["shouldRender"];
+
+
+
+
+
+
+var pathStates = _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"].pathStates,
+    otherOptions = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"], ["pathStates"]);
+
+otherOptions.initStates = ["section", "I18N"];
+
+var Section = function Section(props) {
+  var immutable = props.immutable,
+      children = props.children,
+      otherProps = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
+
+  var _useConnect = Object(reshow_flux__WEBPACK_IMPORTED_MODULE_5__["useConnect"])(otherOptions)(props),
+      section = _useConnect.section,
+      state = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_useConnect, _excluded2);
+
+  if (!section) {
+    return null;
+  }
+
+  var name = props.name;
+
+  var allParams = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _molecules_ReshowComponent__WEBPACK_IMPORTED_MODULE_6__["connectOptions"].reset(otherProps)), state);
+
+  if (immutable) {
+    var thisSection = section.get(name);
+
+    if (!thisSection) {
+      return null;
+    }
+
+    var shouldRender = thisSection.get("shouldRender");
+
+    if (!shouldRender) {
+      return null;
+    }
+
+    thisSection["delete"]("shouldRender").keySeq().forEach(function (key) {
+      allParams[key] = thisSection.get(key);
+    });
+  } else {
+    var _get = Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(section, [name], {}),
+        _shouldRender = _get.shouldRender,
+        others = Object(reshow_runtime_es_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_get, _excluded3);
+
+    if (!_shouldRender) {
+      return null;
+    }
+
+    allParams = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, others), allParams);
+  }
+
+  var noName = children.every ? children.every(function (child) {
+    return !Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(child, ["props", "name"]);
+  }) : !Object(get_object_value__WEBPACK_IMPORTED_MODULE_3__["default"])(children, ["props", "name"]);
+
+  if (!noName) {
+    delete allParams["name"];
+  }
+
+  return Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["build"])(children)(allParams);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Section);
+
+/***/ }),
+
 /***/ "./build/es/src/client.js":
 /*!********************************!*\
   !*** ./build/es/src/client.js ***!
@@ -289,7 +1384,7 @@ Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])("config
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
 /* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
 /* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
 
@@ -348,7 +1443,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pmvc_react_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pmvc_react_admin */ "./node_modules/pmvc_react_admin/build/es/src/index.js");
 /* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 var _VerticalMenu;
@@ -2955,7 +4050,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
 
@@ -3787,7 +4882,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
 /* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 /* harmony import */ var get_random_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! get-random-id */ "./node_modules/get-random-id/build/es/src/index.js");
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
@@ -5824,7 +6919,7 @@ var Video = function Video(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "../reshow/build/es/src/index.js");
 /* harmony import */ var reshow_url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-url */ "./node_modules/reshow-url/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
 /* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
