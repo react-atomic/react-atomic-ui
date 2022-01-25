@@ -7187,9 +7187,9 @@ organism-react-animate@*:
     win-doc "*"
 
 organism-react-asciidoc@*:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/organism-react-asciidoc/-/organism-react-asciidoc-0.3.7.tgz#c5f940cdfc335627e44330f7b1e959361c22f758"
-  integrity sha512-sKsOMsuoOMchGusS0aLsrPEIh/2mzWhrhCW2eV1mmnTeLrpEFdCF6CEJ5gii1Tkte3m/hbzgZuihAzBigQiE3g==
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/organism-react-asciidoc/-/organism-react-asciidoc-0.3.9.tgz#e31248482d74c841a4889c8e67d86f437b5248ef"
+  integrity sha512-8ySihiR0Uhi+VOf8rkYDAr7/NK0S3ufKq78ap+v0mNP99cXZB0EJWUTpcKdKNXQCWkgHpTtJIygsMgIqHDCktQ==
   dependencies:
     call-func "*"
     css-query-selector ">=0.2.12"
