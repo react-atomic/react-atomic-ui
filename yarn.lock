@@ -7167,9 +7167,9 @@ ora@^5.x:
     wcwidth "^1.0.1"
 
 organism-react-ajax@*:
-  version "0.15.12"
-  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.12.tgz#3671c24e2adc94d491ef96b99caa4595a1ebd856"
-  integrity sha512-SCmdlaWHZ5LXgL/wu3Sqonql+G/StoWpeUKmbUQyqlK1ASuzdap4WiR3zNM/ATjt0yjlQCpPHA2AFSdn1pcsCA==
+  version "0.15.14"
+  resolved "https://registry.yarnpkg.com/organism-react-ajax/-/organism-react-ajax-0.15.14.tgz#9474db8994cce3d9007fb635761b8208134c6cb8"
+  integrity sha512-tEEfjQ+lMi1FylE7Xb50HhAoz7q3KBOkjfqnIIvRwjsAsFZMBGeYT0GGIRDK65dwfmW1ZBrUiauhgypTw6Ia1w==
   dependencies:
     call-func "*"
     es6-promise "4.2.5"
@@ -7225,9 +7225,9 @@ organism-react-carousel@*:
     ricon "*"
 
 organism-react-code@*:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.15.0.tgz#fdbd0681c8bacbefa4984942a1114073f1891f73"
-  integrity sha512-UQ3EeZxLHVeP6A+gBFtDCK3jNPiRA6GjdwoI3lwa9YK2JZ5ecTQDv/7sRRC1yTgt5sYSqoSbarXUXxHBz6CqZg==
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/organism-react-code/-/organism-react-code-0.15.1.tgz#2f92e97c93190f79ec4dd4a85f7cc4cde3756a2a"
+  integrity sha512-RPVl92NdzoREe0Aqys2AAWKsfAR0eCgFVN+BO9bMkyt/VNcsmEaXoQIJ9Fa2CpSD3PjeUVDrZMV+31EIEEZZ8A==
   dependencies:
     call-func "*"
     marked "^4.x"

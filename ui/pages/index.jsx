@@ -50,13 +50,15 @@ const Index = (props) => (
   <Return initStates={["tplProps", "pageName"]}>
     {({ tplProps, pageName }) => {
       return (
-        <Doc {...tplProps} className={pageName}>
-          <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
-          <PageLoadProgressHandler ajax={true} />
-          <I13nElement />
-          <ReshowMessage />
+        <>
+          <Doc {...tplProps} className={pageName}>
+            <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
+            <PageLoadProgressHandler ajax={true} />
+            <I13nElement />
+            <ReshowMessage />
+          </Doc>
           <PopupPool />
-        </Doc>
+        </>
       );
     }}
   </Return>

@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "c75e05fb7d39c65f15ba" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "6edb4f95fe9bb6999fa0" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -223,476 +223,6 @@
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js":
-/*!***********************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-code/build/es/src/index.js ***!
-  \***********************************************************************************/
-/*! exports provided: default, FullScreenExample */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ui_organisms_CodeExample__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ui/organisms/CodeExample */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ui_organisms_CodeExample__WEBPACK_IMPORTED_MODULE_0__["default"]; });
-
-/* harmony import */ var _ui_organisms_FullScreenExample__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/organisms/FullScreenExample */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FullScreenExample", function() { return _ui_organisms_FullScreenExample__WEBPACK_IMPORTED_MODULE_1__["default"]; });
-
-// Default
-
-
-
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js":
-/*!************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! marked */ "../react-atomic-organism/packages/organism-react-code/node_modules/marked/lib/marked.umd.js");
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var syntax_colorer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! syntax-colorer */ "../react-atomic-organism/packages/organism-react-code/node_modules/syntax-colorer/build/es/src/index.js");
-
-
-
-
-var DEFAULT_LANG = "js";
-marked__WEBPACK_IMPORTED_MODULE_1__["marked"].setOptions({
-  gfm: true,
-  tables: true,
-  breaks: false,
-  pedantic: false,
-  sanitize: false,
-  smartLists: true,
-  smartypants: false,
-  highlight: syntax_colorer__WEBPACK_IMPORTED_MODULE_3__["default"]
-});
-
-var CodeBlock = function CodeBlock(props) {
-  var text = "```".concat(DEFAULT_LANG, "\n").concat(props.children, "\n```");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Unsafe"], null, Object(marked__WEBPACK_IMPORTED_MODULE_1__["marked"])(text));
-};
-
-_c = CodeBlock;
-/* harmony default export */ __webpack_exports__["default"] = (CodeBlock);
-
-var _c;
-
-$RefreshReg$(_c, "CodeBlock");
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js":
-/*!**************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeExample.js ***!
-  \**************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/slicedToArray */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ricon/Code */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Code.js");
-/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ricon_Code__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ricon/Git */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Git.js");
-/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ricon_Git__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ricon/Npm */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Npm.js");
-/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ricon_Npm__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ricon/Edit */ "../react-atomic-organism/packages/organism-react-code/node_modules/ricon/Edit.js");
-/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ricon_Edit__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _organisms_CodeBlock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/CodeBlock */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeBlock.js");
-/* harmony import */ var _organisms_CodeReadme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../organisms/CodeReadme */ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js");
-
-
-var _GitIcon, _NpmIcon, _EditIcon, _CodeIcon;
-
-
-
-
-
-
-
-
-
-
-var CodeExample = function CodeExample(props) {
-  injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["useLazyInject"])(InjectStyles, injects);
-  var header = props.header,
-      children = props.children,
-      code = props.code,
-      git = props.git,
-      npm = props.npm,
-      edit = props.edit,
-      id = props.id;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
-    on: false
-  }),
-      _useState2 = Object(reshow_runtime_es_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
-      state = _useState2[0],
-      setState = _useState2[1];
-
-  var handleClick = function handleClick() {
-    return setState(function (_ref) {
-      var on = _ref.on;
-      return {
-        on: !on
-      };
-    });
-  };
-
-  var codeStyle = {};
-  var thisCode;
-  var thisReadme;
-  var thisGit;
-  var thisNpm;
-  var thisEdit;
-
-  if (!state.on) {
-    codeStyle = Styles.hidden;
-  } else {
-    thisCode = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_organisms_CodeBlock__WEBPACK_IMPORTED_MODULE_7__["default"], null, code);
-  }
-
-  if (git) {
-    var readmeUrl = "https://raw.githubusercontent.com/" + git.replace(/(\/(blob|tree)\/(master|main)\/)/, "/$3/") + "README.md";
-    var gitUrl = "https://github.com/" + git;
-    thisReadme = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_organisms_CodeReadme__WEBPACK_IMPORTED_MODULE_8__["default"], {
-      url: readmeUrl
-    });
-    thisGit = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-      atom: "a",
-      target: "_blank",
-      href: gitUrl,
-      style: Styles.icon
-    }, _GitIcon || (_GitIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Git__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
-  }
-
-  if (npm) {
-    var npmUrl = "https://www.npmjs.com/package/" + npm;
-    thisNpm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-      atom: "a",
-      target: "_blank",
-      href: npmUrl,
-      style: Styles.icon
-    }, _NpmIcon || (_NpmIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Npm__WEBPACK_IMPORTED_MODULE_5___default.a, null)));
-  }
-
-  if (edit) {
-    thisEdit = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-      atom: "a",
-      target: "_blank",
-      href: edit,
-      style: Styles.icon
-    }, _EditIcon || (_EditIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Edit__WEBPACK_IMPORTED_MODULE_6___default.a, null)));
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["List"], {
-    type: "segments",
-    id: id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], {
-    className: "tertiary"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Header"], {
-    style: Styles.header,
-    className: "grey"
-  }, header), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], {
-    style: Styles.iconBlock
-  }, thisEdit, thisNpm, thisGit, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    onClick: handleClick,
-    style: Styles.icon
-  }, _CodeIcon || (_CodeIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ricon_Code__WEBPACK_IMPORTED_MODULE_3___default.a, null))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], {
-    className: "secondary",
-    style: codeStyle,
-    styles: injects.code
-  }, thisCode), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Segment"], null, children), thisReadme);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (CodeExample);
-var Styles = {
-  header: {
-    margin: 0
-  },
-  hidden: {
-    maxHeight: 0,
-    padding: "0 16px",
-    margin: 0,
-    ovarflow: "hidden"
-  },
-  iconBlock: {
-    position: "absolute",
-    top: 16,
-    right: 6
-  },
-  icon: {
-    maxWidth: 24,
-    cursor: "pointer",
-    marginRight: 10
-  }
-};
-var injects;
-var InjectStyles = {
-  code: [{
-    transition: ["padding 500ms ease"]
-  }],
-  fitWidth: [{
-    whiteSpace: "break-spaces"
-  }, "code"]
-};
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js":
-/*!*************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/CodeReadme.js ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
-/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createClass.js");
-/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
-/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/inherits.js");
-/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createSuper.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! marked */ "../react-atomic-organism/packages/organism-react-code/node_modules/marked/lib/marked.umd.js");
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
-
-
-
-
-
-
-
-
-
-
-
-var CodeReadme = /*#__PURE__*/function (_Component) {
-  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(CodeReadme, _Component);
-
-  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(CodeReadme);
-
-  function CodeReadme(props) {
-    var _this;
-
-    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CodeReadme);
-
-    _this = _super.call(this, props);
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "_isMount", true);
-
-    _this.state = {
-      text: ""
-    };
-    return _this;
-  }
-
-  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CodeReadme, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      var self = this;
-      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_8__["ajaxDispatch"])({
-        type: "ajaxGet",
-        params: {
-          url: this.props.url,
-          callback: function callback(json, text, o) {
-            if (!_this2._isMount) {
-              return false;
-            }
-
-            if (200 === o.status) {
-              self.setState({
-                text: text.replace(/(\<\!\-\-hidden\-\-\>)([\s\S]*?)(\<\!\-\-\/hidden\-\-\>)/g, "")
-              });
-            }
-          }
-        }
-      });
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this._isMount = false;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var text = this.state.text;
-
-      if (text) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__["Segment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_9__["Unsafe"], null, Object(marked__WEBPACK_IMPORTED_MODULE_7__["marked"])(text)));
-      } else {
-        return null;
-      }
-    }
-  }]);
-
-  return CodeReadme;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (CodeReadme);
-
-/***/ }),
-
-/***/ "../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js":
-/*!********************************************************************************************************!*\
-  !*** ../react-atomic-organism/packages/organism-react-code/build/es/ui/organisms/FullScreenExample.js ***!
-  \********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/classCallCheck */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/classCallCheck.js");
-/* harmony import */ var reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/createClass */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createClass.js");
-/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
-/* harmony import */ var reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/inherits */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/inherits.js");
-/* harmony import */ var reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-runtime/es/helpers/createSuper */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/createSuper.js");
-/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "../react-atomic-organism/packages/organism-react-code/node_modules/reshow-runtime/es/helpers/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
-/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-atomic-molecule */ "../react-atomic-organism/packages/organism-react-code/node_modules/react-atomic-molecule/build/es/src/index.js");
-/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! call-func */ "../react-atomic-organism/packages/organism-react-code/node_modules/call-func/build/es/src/index.js");
-
-
-
-
-
-
-
-
-
-
-
-var getLastHash = function getLastHash() {
-  var urls = document.URL.split("#");
-  var lastIndex = urls.length - 1;
-  var last = urls[lastIndex];
-  return last;
-};
-
-var updateUrl = function updateUrl(url) {
-  return history.pushState("", "", url);
-};
-
-var FullScreenExample = /*#__PURE__*/function (_PureComponent) {
-  Object(reshow_runtime_es_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(FullScreenExample, _PureComponent);
-
-  var _super = Object(reshow_runtime_es_helpers_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(FullScreenExample);
-
-  function FullScreenExample() {
-    var _this;
-
-    Object(reshow_runtime_es_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, FullScreenExample);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "state", {
-      showFullScreen: false
-    });
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "handleClick", function () {
-      var id = _this.props.id;
-      var last = getLastHash();
-
-      if (id && id !== last) {
-        updateUrl(document.URL + "#" + id);
-      }
-
-      _this.setState({
-        showFullScreen: true
-      });
-    });
-
-    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "handleClose", function () {
-      var _this$props = _this.props,
-          id = _this$props.id,
-          onClose = _this$props.onClose;
-      var url = document.URL;
-      var idIndex = url.lastIndexOf("#" + id);
-
-      if (-1 !== idIndex) {
-        updateUrl(url.substring(0, idIndex));
-      }
-
-      Object(call_func__WEBPACK_IMPORTED_MODULE_9__["default"])(onClose);
-
-      _this.setState({
-        showFullScreen: false
-      });
-    });
-
-    return _this;
-  }
-
-  Object(reshow_runtime_es_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(FullScreenExample, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var id = this.props.id;
-      var last = getLastHash();
-
-      if (id === last) {
-        this.setState({
-          showFullScreen: true
-        });
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          button = _this$props2.button,
-          children = _this$props2.children;
-      var showFullScreen = this.state.showFullScreen;
-      var thisFullScreen = null;
-
-      if (showFullScreen) {
-        thisFullScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["FullScreen"], {
-          onClose: this.handleClose
-        }, children);
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__["SemanticUI"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_8__["Button"], {
-        onClick: this.handleClick
-      }, button), thisFullScreen);
-    }
-  }]);
-
-  return FullScreenExample;
-}(react__WEBPACK_IMPORTED_MODULE_6__["PureComponent"]);
-
-Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(FullScreenExample, "defaultProps", {
-  button: "Open full screen"
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (FullScreenExample);
-
-/***/ }),
 
 /***/ "./build/es/src/client.js":
 /*!********************************!*\
@@ -1530,7 +1060,7 @@ var CodeEditorExample = function CodeEditorExample(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _raw_loader_ui_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CodeExample.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeExample.example.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
@@ -2421,7 +1951,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -3804,7 +3334,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var organism_react_spotlight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-spotlight */ "./node_modules/organism-react-spotlight/build/es/src/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
@@ -3915,7 +3445,7 @@ var Styles = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
 /* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
 /* harmony import */ var reshow_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-hooks */ "./node_modules/reshow-hooks/build/es/src/index.js");
@@ -4892,7 +4422,7 @@ var YouTubeRWDExample = function YouTubeRWDExample() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_Animation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Animation.example */ "./build/es/ui/organisms/Animation.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_Animation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Animation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Animation.example.jsx");
@@ -4957,7 +4487,7 @@ var Animation = function Animation(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/AsciiDoc.example */ "./build/es/ui/organisms/AsciiDoc.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AsciiDoc.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AsciiDoc.example.jsx");
@@ -5038,7 +4568,7 @@ var Atoms = function Atoms(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CarouselAnimation.example */ "./build/es/ui/organisms/CarouselAnimation.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CarouselAnimation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimation.example.jsx");
@@ -5105,7 +4635,7 @@ var CarouselPage = function CarouselPage(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CodeExample.example */ "./build/es/ui/organisms/CodeExample.example.js");
 /* harmony import */ var _organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/CodeEditor.example */ "./build/es/ui/organisms/CodeEditor.example.js");
@@ -5154,7 +4684,7 @@ var Code = function Code(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3PieChart.example */ "./build/es/ui/organisms/D3PieChart.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3PieChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3PieChart.example.jsx");
@@ -5244,7 +4774,7 @@ var D3 = function D3(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3UmlPerf.example */ "./build/es/ui/organisms/D3UmlPerf.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3UmlPerf.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx");
@@ -5293,7 +4823,7 @@ var D3UmlPerf = function D3UmlPerf(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GrapesJs.example */ "./build/es/ui/organisms/GrapesJs.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GrapesJs.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GrapesJs.example.jsx");
@@ -5668,7 +5198,7 @@ var Styles = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/QueryToJSON */ "./build/es/ui/organisms/QueryToJSON.js");
 /* harmony import */ var _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/QueryToJSON */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx");
@@ -5716,7 +5246,7 @@ var JSON = function JSON(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_GridList_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GridList.example */ "./build/es/ui/organisms/GridList.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_GridList_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GridList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GridList.example.jsx");
@@ -5850,7 +5380,7 @@ var Molecules = function Molecules(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/PageLoadProgressHandler.example */ "./build/es/ui/organisms/PageLoadProgressHandler.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/PageLoadProgressHandler.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandler.example.jsx");
@@ -5999,7 +5529,7 @@ var Organisms = function Organisms(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/HTMLToCanvans.example */ "./build/es/ui/organisms/HTMLToCanvans.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/HTMLToCanvans.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx");
@@ -6047,7 +5577,7 @@ var PDF = function PDF(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
 /* harmony import */ var _organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/ParallaxBackgroundImage.example */ "./build/es/ui/organisms/ParallaxBackgroundImage.example.js");
@@ -6106,7 +5636,7 @@ var InjectStyles = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_Popup_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Popup.example */ "./build/es/ui/organisms/Popup.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_Popup_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Popup.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Popup.example.jsx");
@@ -6239,7 +5769,7 @@ var Tomato = function Tomato(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
-/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "../react-atomic-organism/packages/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
 /* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
 /* harmony import */ var _organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/YouTubeRWD.example */ "./build/es/ui/organisms/YouTubeRWD.example.js");
 /* harmony import */ var _raw_loader_ui_organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/YouTubeRWD.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/YouTubeRWD.example.jsx");
@@ -6350,6 +5880,7 @@ var _PageLoadProgressHand, _I13nElement, _ReshowMessage, _PopupPool;
 
 
 
+
 var themes = {
   Atoms: _pages_Atoms__WEBPACK_IMPORTED_MODULE_7__["default"],
   Molecules: _pages_Molecules__WEBPACK_IMPORTED_MODULE_8__["default"],
@@ -6377,15 +5908,17 @@ var Index = function Index(props) {
     children: function children(_ref) {
       var tplProps = _ref.tplProps,
           pageName = _ref.pageName;
-      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
-        className: pageName,
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
-          themes: themes,
-          defaultThemePath: "Atoms"
-        })), _PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["PageLoadProgressHandler"], {
-          ajax: true
-        })), _I13nElement || (_I13nElement = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__["I13nElement"], {})), _ReshowMessage || (_ReshowMessage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["ReshowMessage"], {})), _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_3__["PopupPool"], {}))]
-      }));
+      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["Fragment"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
+          className: pageName,
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+            themes: themes,
+            defaultThemePath: "Atoms"
+          })), _PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["PageLoadProgressHandler"], {
+            ajax: true
+          })), _I13nElement || (_I13nElement = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__["I13nElement"], {})), _ReshowMessage || (_ReshowMessage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["ReshowMessage"], {}))]
+        })), _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_3__["PopupPool"], {}))]
+      });
     }
   });
 };
