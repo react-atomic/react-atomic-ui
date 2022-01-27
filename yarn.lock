@@ -1143,9 +1143,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@sinonjs/samsam@^6.0.2":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-6.0.2.tgz#a0117d823260f282c04bff5f8704bdc2ac6910bb"
-  integrity sha512-jxPRPp9n93ci7b8hMfJOFDPRLFYadN6FSpeROFTR4UNF4i5b+EK6m4QXPO46BDhFgRy1JuS87zAnFOzCUwMJcQ==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-6.1.0.tgz#089e9436141f4db8119e4b4fc9dcddb60dded71d"
+  integrity sha512-ue6oFxsnGcvB46dUDu+EjyBxaqvDYMl6ufysVdGfYpCZwaQgZpHbtj7UxpNbEm8K7iGnwzworZAS6ylZsU5lgQ==
   dependencies:
     "@sinonjs/commons" "^1.6.0"
     lodash.get "^4.4.2"
@@ -2552,9 +2552,9 @@ camelcase@^6.0.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001302"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001302.tgz#da57ce61c51177ef3661eeed7faef392d3790aaa"
-  integrity sha512-YYTMO+tfwvgUN+1ZnRViE53Ma1S/oETg+J2lISsqi/ZTNThj3ZYBOKP2rHwJc37oCsPqAzJ3w2puZHn0xlLPPw==
+  version "1.0.30001303"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001303.tgz#9b168e4f43ccfc372b86f4bc5a551d9b909c95c9"
+  integrity sha512-/Mqc1oESndUNszJP0kx0UaQU9kEv9nNtJ7Kn8AdA0mNnH8eR1cj0kG+NbNuC1Wq/b21eA8prhKRA3bbkjONegQ==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -3870,9 +3870,9 @@ ejs@^3.1.6:
     jake "^10.6.1"
 
 electron-to-chromium@^1.4.17:
-  version "1.4.53"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.53.tgz#5d80a91c399b44952ef485857fb5b9d4387d2e60"
-  integrity sha512-rFveSKQczlcav+H3zkKqykU6ANseFwXwkl855jOIap5/0gnEcuIhv2ecz6aoTrXavF6I/CEBeRnBnkB51k06ew==
+  version "1.4.54"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.54.tgz#69005d39ed11542e1bcb65ec1a98e44d39527ba8"
+  integrity sha512-jRAoneRdSxnpRHO0ANpnEUtQHXxlgfVjrLOnQSisw1ryjXJXvS0pJaR/v2B7S++/tRjgEDp4Sjn5nmgb6uTySw==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -6658,9 +6658,9 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 marked@^4.x:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.11.tgz#dcd1a65b2639eb2e71f0222d00f4860ba09d7e24"
-  integrity sha512-xL2aJ5JDggqToKOqKHJWIDXaYk24XoGm1mNlhSPFP+0OKRCcKx+/hH7hlAr5LYqBKUzqCANylALgwNstVRgtCw==
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.12.tgz#2262a4e6fd1afd2f13557726238b69a48b982f7d"
+  integrity sha512-hgibXWrEDNBWgGiK18j/4lkS6ihTe9sxtV4Q1OQppb/0zzyPSzoFANBa5MfsG/zgsWklmNnhm0XACZOH/0HBiQ==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -8718,9 +8718,9 @@ reselect@^4.0.0:
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
 reshow-app@*:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.15.0.tgz#157a6ba3b9d77f37167eec0c8ed954fe1a706ead"
-  integrity sha512-hUW9eMPx9MC4qfybgel3564EiKJTBfLQF6FAbeerTaMTKHndp6hiydwFfBM6JqxfnW98hjifmGh9nIL3czBcHw==
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.15.1.tgz#e2ccad27ef251c69272e8b682f20ef8dec401605"
+  integrity sha512-8gUjlXuIq5d/Oy8s7T3Gnbml6KC6pTuWZnFJDursgxOdsDutc+A0BUrOBQtvdtWxOync68xUKnuMR3ZWbgeMLQ==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"

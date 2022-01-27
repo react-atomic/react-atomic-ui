@@ -22,6 +22,7 @@ const usePage = (props) => {
       ajaxDispatch("ajaxGet", {
         url: "/data/env",
         ini: true,
+        disableCacheBusting: true,
       });
     }
     return () => {
