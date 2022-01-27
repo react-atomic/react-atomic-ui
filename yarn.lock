@@ -3870,9 +3870,9 @@ ejs@^3.1.6:
     jake "^10.6.1"
 
 electron-to-chromium@^1.4.17:
-  version "1.4.54"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.54.tgz#69005d39ed11542e1bcb65ec1a98e44d39527ba8"
-  integrity sha512-jRAoneRdSxnpRHO0ANpnEUtQHXxlgfVjrLOnQSisw1ryjXJXvS0pJaR/v2B7S++/tRjgEDp4Sjn5nmgb6uTySw==
+  version "1.4.55"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.55.tgz#a7fa3b49b2c4cb0ae68505cf304a9666fdd8fd9f"
+  integrity sha512-AoCDEVElLY8mwe4TuDDkr1jxvSh/Ih5PFlEXCpmwFkq9JOXn4K58CScgBl+R1ghFW9cPJ7VeWo30nAHSRCe6rw==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -7579,9 +7579,9 @@ organism-react-iframe@*, organism-react-iframe@>=0.8.1:
     win-doc "*"
 
 organism-react-navigation@*:
-  version "0.15.7"
-  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.7.tgz#b1b4a4aa3ce3a78fb750822a2df699d83b88d0c4"
-  integrity sha512-Me2FU1xAFWsgaBJzwzj7soFRFa7ymku1K7DaIzYEzUDKcUu4XnVEVJgG5v/oHe/XEt4AvQNkFDaXm5nREWrhyw==
+  version "0.15.8"
+  resolved "https://registry.yarnpkg.com/organism-react-navigation/-/organism-react-navigation-0.15.8.tgz#302b53464e4939add100eebe81d6716904cd73c8"
+  integrity sha512-OTt+8pcI0ekkbIamJHcMFc9vXOFCHQi8zTF2hViJuaOq17dRptDD8B6Mydn38hd81m+h/MMquleZWjug623lhw==
   dependencies:
     call-func "*"
     class-lib "*"

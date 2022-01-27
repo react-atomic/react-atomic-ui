@@ -17,6 +17,7 @@ const Menu = (props) => {
   });
   return (
     <SideMenu
+      shrink
       menus={thisMenus}
       linkComponent={ReLink}
       component={<VerticalMenu />}

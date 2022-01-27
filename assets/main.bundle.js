@@ -1,1 +1,6577 @@
-!function(e){function webpackJsonpCallback(n){for(var r,a,c=n[0],i=n[1],s=n[2],u=0,d=[];u<c.length;u++)a=c[u],Object.prototype.hasOwnProperty.call(t,a)&&t[a]&&d.push(t[a][0]),t[a]=0;for(r in i)Object.prototype.hasOwnProperty.call(i,r)&&(e[r]=i[r]);for(l&&l(n);d.length;)d.shift()();return o.push.apply(o,s||[]),checkDeferredModules()}function checkDeferredModules(){for(var e,n=0;n<o.length;n++){for(var r=o[n],a=!0,c=1;c<r.length;c++){var l=r[c];0!==t[l]&&(a=!1)}a&&(o.splice(n--,1),e=__webpack_require__(__webpack_require__.s=r[0]))}return e}var n={},t={0:0},o=[];function __webpack_require__(t){if(n[t])return n[t].exports;var o=n[t]={i:t,l:!1,exports:{}};return e[t].call(o.exports,o,o.exports,__webpack_require__),o.l=!0,o.exports}__webpack_require__.e=function requireEnsure(e){var n=[],o=t[e];if(0!==o)if(o)n.push(o[2]);else{var r=new Promise((function(n,r){o=t[e]=[n,r]}));n.push(o[2]=r);var a,c=document.createElement("script");c.charset="utf-8",c.timeout=120,__webpack_require__.nc&&c.setAttribute("nonce",__webpack_require__.nc),c.src=function jsonpScriptSrc(e){return __webpack_require__.p+""+e+".d2c26c5a40ac459558cb.bundle.js"}(e);var l=new Error;a=function(n){c.onerror=c.onload=null,clearTimeout(i);var o=t[e];if(0!==o){if(o){var r=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;l.message="Loading chunk "+e+" failed.\n("+r+": "+a+")",l.name="ChunkLoadError",l.type=r,l.request=a,o[1](l)}t[e]=undefined}};var i=setTimeout((function(){a({type:"timeout",target:c})}),12e4);c.onerror=c.onload=a,document.head.appendChild(c)}return Promise.all(n)},__webpack_require__.m=e,__webpack_require__.c=n,__webpack_require__.d=function(e,n,t){__webpack_require__.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:t})},__webpack_require__.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},__webpack_require__.t=function(e,n){if(1&n&&(e=__webpack_require__(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(__webpack_require__.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var o in e)__webpack_require__.d(t,o,function(n){return e[n]}.bind(null,o));return t},__webpack_require__.n=function(e){var n=e&&e.__esModule?function getDefault(){return e["default"]}:function getModuleExports(){return e};return __webpack_require__.d(n,"a",n),n},__webpack_require__.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},__webpack_require__.p="/assets/",__webpack_require__.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],a=r.push.bind(r);r.push=webpackJsonpCallback,r=r.slice();for(var c=0;c<r.length;c++)webpackJsonpCallback(r[c]);var l=a;o.push([368,1]),checkDeferredModules()}({368:function(e,n,t){"use strict";t.r(n);for(var o,r,a,c,l,i,s,u,d,p,m,b,j,h,x,f,g,O,v,C,y,k,S,E,w,P,D,L,I,R,F,A,B,T,_,H,M,N,G,U,V,z,q,W,J,K,Y,Z,Q,X,$,ee,ne,te,oe,re,ae,ce,le,ie,se,ue,de,pe,me,be,je,he=t(235),xe=t(3),fe=t(41),ge=t(180),Oe=t(25),ve=t(83),Ce=t(76),ye=t(33),ke=t(0),Se=t(48),Ee=t(270),we=t(5),Pe=t(1),De=Object.keys,Le=function Menu(e){var n={},t=fe.f.getMap("themes");return De(t).forEach((function(e){n[e]={ajax:!1,text:e,href:"#/"+e}})),Object(Pe.jsx)(Se.d,{menus:n,linkComponent:fe.a,component:o||(o=Object(Pe.jsx)(Ee.a,{}))})},Ie=["children"],Re=Object(Se.g)({sideWidth:160,active:!0}),Fe=function Doc(e){var n=e.children,t=Object(ye.a)(e,Ie);return Object(Pe.jsx)(Re,Object(xe.a)(Object(xe.a)({},t),{},{body:n,menu:r||(r=Object(Pe.jsx)(Le,{}))}))},Ae=t(32),Be=function usePage(e){var n=e.pageName,t=e.tplProps;Object(ke.useEffect)((function(){return setTimeout((function(){Object(Se.h)({params:{activeMenu:n}}),Object(fe.e)({tplProps:t,pageName:n})})),a||(a=1,Object(Ae.d)("ajaxGet",{url:"/data/env",ini:!0,disableCacheBusting:!0})),function(){Object(Se.h)({params:{activeMenu:null}})}}),[])},Te=t(2),_e=t(29),He=t(21),Me=function PageLoadProgressHandlerExample(e){var n,t;return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(ve.a,{ref:function ref(e){return n=e}}),Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(Te.Button,{style:Ne.button,onClick:function onClick(){n.start(100,800)},children:"Start"}),Object(Pe.jsx)(Te.Button,{style:Ne.button,onClick:function onClick(){n.pause()},children:"Pause"}),Object(Pe.jsx)(Te.Button,{style:Ne.button,onClick:function onClick(){n.complete()},children:"Complete"}),Object(Pe.jsx)(Te.Button,{style:Ne.button,onClick:function onClick(){n.reset()},children:"Reset"})]}),Object(Pe.jsx)("div",{children:Object(Pe.jsx)(Te.InputBox,{leftLabel:"Pause @",rightLabel:"%",refCb:function refCb(e){return t=e},button:"Go",actionProps:{onClick:function onClick(){n.start(t.value)}},style:Ne.input})})]})},Ne={input:{width:20},button:{marginBottom:10}},Ge=function PageLoadProgressHandlerExample(e){return Object(Pe.jsxs)("div",{children:[m||(m=Object(Pe.jsx)(ve.a,{ajax:!0})),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){Object(Ae.d)({type:"ajaxGet",params:{url:"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md",callback:function callback(e,n,t){alert(n)}}})},children:"Call Ajax"})]})},Ue=t(276),Ve=function AjaxDownloadExample(e){var n="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg";return Object(Pe.jsx)(Te.Button,{onClick:function onClick(){Object(Ae.d)("ajaxGet",{responseType:["blob"],url:n,callback:function callback(e,t,o){Object(Ue.a)(o.body,n.split("/").splice(-1)[0])}})},children:"Ajax Download"})},ze=t(6),qe=t(24),We=t(4),Je=t(278),Ke=function(e){function DropzoneExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"state",{urls:[]}),Object(We.a)(Object(ze.a)(n),"handleClick",(function(){n.dropzone.openDialog()})),n}return Object(qe.a)(DropzoneExample,e),DropzoneExample.prototype.render=function render(){var e=this,n=this.state.urls;return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(Je.a,{ref:function ref(n){return e.dropzone=n},acceptedFiles:".png, .jpg",showFiletypeIcon:!0,postUrl:"https://file.io",djsConfig:{addRemoveLinks:!0},eventHandlers:{success:function success(n){e.setState((function(e){var t=e.urls,o=Object(we["default"])(n,["xhr","response"]);if(o){var r=JSON.parse(o);t.push(r.link)}return t}))}}}),Object(Pe.jsx)("ul",{children:n.map((function(e,n){return Object(Pe.jsx)("li",{children:Object(Pe.jsx)("a",{href:e,target:"_blank",children:e})},n)}))}),Object(Pe.jsx)("button",{onClick:this.handleClick,children:"open"})]})},DropzoneExample}(ke.PureComponent),Ye=t(136),Ze=function FBLikeExample(e){return b||(b=Object(Pe.jsx)(Ye.FBLike,{page:"https://www.facebook.com/react"}))},Qe=function FBPageExample(e){return j||(j=Object(Pe.jsx)(Ye.FBPage,{page:"react"}))},Xe=t(137),$e=t.n(Xe),en=function RightMenu(){return Object(Pe.jsx)(Te.Menu,{className:"right",ui:!1,children:Object(Pe.jsx)(Te.Item,{style:{boxSizing:"border-box"},children:h||(h=Object(Pe.jsx)(Te.InputBox,{icon:Object(Pe.jsx)($e.a,{}),transparent:!0,placeholder:"Search..."}))})})},nn=function TabViewExample(e){var n=Object(ke.useState)(),t=n[0],o=n[1];return Object(Pe.jsxs)(Te.SemanticUI,{children:[Object(Pe.jsxs)(Se.f,{selected:t,rightMenu:x||(x=Object(Pe.jsx)(en,{})),children:[f||(f=Object(Pe.jsxs)(Se.e,{children:[Object(Pe.jsx)("div",{children:"content1"}),Object(Pe.jsx)("div",{children:"menu1"})]})),g||(g=Object(Pe.jsxs)(Se.e,{children:[Object(Pe.jsx)("div",{children:"content2"}),Object(Pe.jsx)("div",{children:"menu2"})]}))]}),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){return o(0)},children:"to tab1"}),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){return o(1)},children:"to tab2"})]})},tn=[{label:"Boy",value:"boy"},{label:"Girl",value:"girl"}],on=function(e){function RadioGroupExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"state",{value:""}),Object(We.a)(Object(ze.a)(n),"handleChange",(function(){n.setState({value:n.radio.getValue()})})),n}return Object(qe.a)(RadioGroupExample,e),RadioGroupExample.prototype.render=function render(){var e=this,n=this.state.value;return Object(Pe.jsxs)(Te.Form,{children:[Object(Pe.jsx)(_e.e,{ref:function ref(n){return e.radio=n},inline:!1,label:"Sex: ",name:"sex",value:n,options:tn,onChange:this.handleChange}),Object(Pe.jsxs)("div",{children:["Current: ",n]}),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){return e.setState({value:"boy"})},children:"Set to Boy"}),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){return e.setState({value:"girl"})},children:"Set to Girl"})]})},RadioGroupExample}(ke.PureComponent),rn=function(e){function CheckboxExample(){return e.apply(this,arguments)||this}return Object(qe.a)(CheckboxExample,e),CheckboxExample.prototype.render=function render(){return O||(O=Object(Pe.jsxs)(Te.Form,{children:[Object(Pe.jsx)(_e.c,{}),Object(Pe.jsx)(_e.c,{type:"radio"}),Object(Pe.jsx)(_e.c,{toggle:!0}),Object(Pe.jsx)(_e.c,{slider:!0})]}))},CheckboxExample}(ke.PureComponent),an=["abc","abb","acc"],cn=function(e){function SuggestionExample1(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"state",{results:[]}),Object(We.a)(Object(ze.a)(n),"handleChange",(function(e,t){if(t.length){var o=[];an.forEach((function(e,n){t.length&&-1!==e.indexOf(t)&&o.push(e)})),n.setState({results:o})}else n.setState({results:an})})),Object(We.a)(Object(ze.a)(n),"handleItemClick",(function(e,t){n.suggestion.setValue(t)})),n}return Object(qe.a)(SuggestionExample1,e),SuggestionExample1.prototype.render=function render(){var e=this,n=this.state,t=n.results,o=n.myValue;return Object(Pe.jsxs)(Te.SemanticUI,{children:[Object(Pe.jsx)(_e.g,{ref:function ref(n){return e.suggestion=n},onChange:this.handleChange,results:t,onItemClick:this.handleItemClick,value:o}),Object(Pe.jsx)(Te.Button,{onClick:function onClick(){return e.setState({myValue:o?o+1:123})},children:"set"})]})},SuggestionExample1}(ke.PureComponent),ln=function SuggestionExample(){return v||(v=Object(Pe.jsxs)(Te.SemanticUI,{children:[Object(Pe.jsx)(cn,{}),"couldCreate: false",Object(Pe.jsx)(_e.g,{results:an,couldCreate:!1,filter:!0,preview:!0})]}))},sn=t(275),un=function TagInputExample(e){var n=Object(ke.useState)(!1),t=n[0],o=n[1];return Object(Pe.jsxs)(Te.Form,{children:[Object(Pe.jsx)(sn.a,{disabled:t}),Object(Pe.jsx)(Te.Field,{children:Object(Pe.jsx)(_e.c,{label:"Disable",toggle:!0,onChange:function handleDisable(e){o(!!e.checked)}})})]})},dn=[{label:"Boy",value:"boy"},{label:"Girl",value:"girl"}],pn=function DropdownExample(e){var n=Object(ke.useState)(),t=n[0],o=n[1],r=function MyList(e){return Object(Pe.jsxs)(Te.Menu,Object(xe.a)(Object(xe.a)({},e),{},{children:[Object(Pe.jsx)(Te.Item,{onClick:function onClick(){return o("Boy")},children:"Boy"}),Object(Pe.jsx)(Te.Item,{onClick:function onClick(){return o("Girl")},children:"Girl"})]}))};return Object(Pe.jsx)(Te.Field,Object(xe.a)(Object(xe.a)({},e),{},{inputComponent:Object(Pe.jsxs)(Se.a,{style:bn.dropdown,list:Object(Pe.jsx)(r,{}),children:["You-select ",t]})}))},mn=function ErrorFormExample(){var e=Object(ke.useState)(!1),n=e[0],t=e[1];return Object(Pe.jsx)(Te.SemanticUI,{children:Object(Pe.jsxs)(Te.Form,{messageType:n?"error":"",children:[Object(Pe.jsx)(pn,{messageType:n?"error":"",label:"Dropdown: "}),Object(Pe.jsx)(Se.c,{messageType:n?"error":"",label:"Selection: ",options:dn,placeholder:"not-select-yet"}),Object(Pe.jsx)(Te.Field,{children:Object(Pe.jsx)(_e.c,{label:"Error Style",toggle:!0,onChange:function handleChange(e){t(!!e.checked)}})})]})})},bn={dropdown:{marginLeft:10}},jn=t(143),hn=t.n(jn),xn=t(144),fn=t.n(xn),gn=t(117),On=t.n(gn),vn=t(237),Cn=t.n(vn),yn=t(238),kn=t.n(yn),Sn=t(239),En=t.n(Sn),wn=t(240),Pn=t.n(wn),Dn=t(138),Ln=t.n(Dn),In=t(131),Rn=t.n(In),Fn=t(241),An=t.n(Fn),Bn=t(242),Tn=t.n(Bn),_n=t(243),Hn=t.n(_n),Mn=t(102),Nn=t.n(Mn),Gn=t(71),Un=t.n(Gn),Vn=t(181),zn=t.n(Vn),qn=t(145),Wn=t.n(qn),Jn=t(134),Kn=t.n(Jn),Yn=t(244),Zn=t.n(Yn),Qn=t(245),Xn=t.n(Qn),$n=t(135),et=t.n($n),nt=t(178),tt=t.n(nt),ot=t(246),rt=t.n(ot),at=t(247),ct=t.n(at),lt=t(132),it=t.n(lt),st=t(248),ut=t.n(st),dt=t(177),pt=t.n(dt),mt=t(128),bt=t.n(mt),jt=t(129),ht=t.n(jt),xt=t(249),ft=t.n(xt),gt=t(179),Ot=t.n(gt),vt=t(182),Ct=t.n(vt),yt=t(118),kt=t.n(yt),St=t(133),Et=t.n(St),wt=t(105),Pt=t.n(wt),Dt=t(183),Lt=t.n(Dt),It=t(250),Rt=t.n(It),Ft=t(251),At=t.n(Ft),Bt=t(139),Tt=t.n(Bt),_t=t(252),Ht=t.n(_t),Mt=t(184),Nt=t.n(Mt),Gt=t(253),Ut=t.n(Gt),Vt=t(185),zt=t.n(Vt),qt=t(186),Wt=t.n(qt),Jt=t(254),Kt=t.n(Jt),Yt=t(130),Zt=t.n(Yt),Qt=t(255),Xt=t.n(Qt),$t=t(146),eo=t.n($t),no=t(256),to=t.n(no),oo=t(187),ro=t.n(oo),ao=t(257),co=t.n(ao),lo=t(258),io=t.n(lo),so=t(259),uo=t.n(so),po=t(260),mo=t.n(po),bo=t(261),jo=t.n(bo),ho=t(262),xo=t.n(ho),fo=t(100),go=t.n(fo),Oo=t(263),vo=t.n(Oo),Co=t(264),yo=t.n(Co),ko=t(265),So=t.n(ko),Eo=[["Account",Object(Pe.jsx)(hn.a,{})],["Account (circle)",Object(Pe.jsx)(hn.a,{type:"circle"})],["Account (supervisor)",Object(Pe.jsx)(hn.a,{type:"supervisor"})],["Add",Object(Pe.jsx)(On.a,{})],["Add (box)",Object(Pe.jsx)(On.a,{type:"box"})],["Add (circle)",Object(Pe.jsx)(On.a,{type:"circle"})],["Add (circleOutline)",Object(Pe.jsx)(On.a,{type:"circleOutline"})],["AccessTime",Object(Pe.jsx)(fn.a,{})],["AccessTime (fill)",Object(Pe.jsx)(fn.a,{type:"fill"})],["AccessTime (update)",Object(Pe.jsx)(fn.a,{type:"update"})],["BarChart",Object(Pe.jsx)(Cn.a,{})],["Build",Object(Pe.jsx)(kn.a,{})],["Blur",Object(Pe.jsx)(En.a,{})],["Calendar",Object(Pe.jsx)(Pn.a,{})],["ChevronRight",Object(Pe.jsx)(Ln.a,{})],["Code",Object(Pe.jsx)(Rn.a,{})],["CircleLoading",Object(Pe.jsx)(An.a,{})],["Dashboard",Object(Pe.jsx)(Tn.a,{})],["Delete",Object(Pe.jsx)(Wn.a,{})],["Delete (forever)",Object(Pe.jsx)(Wn.a,{type:"forever"})],["Delete (sweep)",Object(Pe.jsx)(Wn.a,{type:"sweep"})],["Device (desktop)",Object(Pe.jsx)(Nn.a,{type:"desktop"})],["Device (tablet)",Object(Pe.jsx)(Nn.a,{type:"tablet"})],["Device (phone)",Object(Pe.jsx)(Nn.a,{type:"phone"})],["Download",Object(Pe.jsx)(zn.a,{})],["Download (file)",Object(Pe.jsx)(zn.a,{type:"file"})],["Dropdown",Object(Pe.jsx)(Un.a,{})],["Dropdown (up)",Object(Pe.jsx)(Un.a,{type:"up"})],["Dropdown (right)",Object(Pe.jsx)(Un.a,{type:"right"})],["Dropdown (left)",Object(Pe.jsx)(Un.a,{type:"left"})],["Description",Object(Pe.jsx)(Hn.a,{})],["Edit",Object(Pe.jsx)(Kn.a,{})],["Email",Object(Pe.jsx)(Zn.a,{})],["Exit",Object(Pe.jsx)(Xn.a,{})],["File",Object(Pe.jsx)(et.a,{children:".js"})],["Facebook",Object(Pe.jsx)(tt.a,{})],["FacebookMessage",Object(Pe.jsx)(rt.a,{})],["FeaturedPlayList",Object(Pe.jsx)(ct.a,{})],["Git",Object(Pe.jsx)(it.a,{})],["Help",Object(Pe.jsx)(ut.a,{})],["Home",Object(Pe.jsx)(ft.a,{})],["Hamburger",Object(Pe.jsx)(pt.a,{})],["HamburgerToArrow",Object(Pe.jsx)(bt.a,{on:!0})],["HamburgerToX",Object(Pe.jsx)(ht.a,{on:!0})],["Link",Object(Pe.jsx)(Ot.a,{})],["Monetization",Object(Pe.jsx)(Ct.a,{})],["Monetization",Object(Pe.jsx)(Ct.a,{type:"sign"})],["MyLocation (fixed)",Object(Pe.jsx)(kt.a,{})],["MyLocation (off)",Object(Pe.jsx)(kt.a,{type:"off"})],["MyLocation (on)",Object(Pe.jsx)(kt.a,{type:"on"})],["MyLocation (loading)",Object(Pe.jsx)(kt.a,{loading:!0,type:"on"})],["Npm",Object(Pe.jsx)(Et.a,{})],["Notification",Object(Pe.jsx)(Pt.a,{})],["Notification (active)",Object(Pe.jsx)(Pt.a,{type:"active"})],["Notification (none)",Object(Pe.jsx)(Pt.a,{type:"none"})],["Notification (off)",Object(Pe.jsx)(Pt.a,{type:"off"})],["Notification (paused)",Object(Pe.jsx)(Pt.a,{type:"paused"})],["Person",Object(Pe.jsx)(Lt.a,{})],["Person (add)",Object(Pe.jsx)(Lt.a,{type:"add"})],["Phone",Object(Pe.jsx)(Rt.a,{})],["Pin",Object(Pe.jsx)(At.a,{})],["Pulse",Object(Pe.jsx)(Nt.a,{})],["Pulse (breath)",Object(Pe.jsx)(Nt.a,{animation:"breath"})],["Play",Object(Pe.jsx)(Tt.a,{})],["PlayListAdd",Object(Pe.jsx)(Ht.a,{})],["Refresh",Object(Pe.jsx)(Ut.a,{})],["Reply",Object(Pe.jsx)(zt.a,{})],["Reply (right)",Object(Pe.jsx)(zt.a,{type:"right"})],["Search",Object(Pe.jsx)($e.a,{})],["Settings",Object(Pe.jsx)(Wt.a,{})],["Settings",Object(Pe.jsx)(Wt.a,{type:"square"})],["ShoppingCart",Object(Pe.jsx)(Kt.a,{})],["Sort",Object(Pe.jsx)(Zt.a,{})],["Shopee",Object(Pe.jsx)(Xt.a,{})],["Sync",Object(Pe.jsx)(eo.a,{})],["Sync (disabled)",Object(Pe.jsx)(eo.a,{type:"disabled"})],["Sync (problem)",Object(Pe.jsx)(eo.a,{type:"problem"})],["TouchApp",Object(Pe.jsx)(to.a,{})],["Timer",Object(Pe.jsx)(ro.a,{})],["Timer (off)",Object(Pe.jsx)(ro.a,{type:"off"})],["VerifiedUser",Object(Pe.jsx)(co.a,{})],["Video",Object(Pe.jsx)(io.a,{})],["Visibility",Object(Pe.jsx)(uo.a,{})],["ViewModule",Object(Pe.jsx)(mo.a,{})],["Wifi",Object(Pe.jsx)(jo.a,{})],["Wallet",Object(Pe.jsx)(xo.a,{})],["X",Object(Pe.jsx)(go.a,{style:{position:"static"}})],["ZoomIn",Object(Pe.jsx)(vo.a,{})],["Error",Object(Pe.jsx)(yo.a,{})],["Warning",Object(Pe.jsx)(So.a,{})]],wo={grid:{textAlign:"center"},icon:{maxWidth:30,minHeight:30,maxHeight:30,margin:"0 auto 10px",position:"relative"}},Po=[["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"],["a4","b4","c4"],["a5","b5","c5"],["a6","b6","c6"]],Do=null,Lo=function(e){function GridListExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"state",{isLoad:!1}),n}Object(qe.a)(GridListExample,e);var n=GridListExample.prototype;return n.componentDidMount=function componentDidMount(){var e=this;Promise.resolve().then(t.t.bind(null,266,7)).then((function(n){var t=n.RVGrid;Do=t,e.setState({isLoad:!0})}))},n.render=function render(){var e=this.state.isLoad,n=null;return Do&&e&&(n=Object(Pe.jsx)(Do,{className:"grid",width:200,height:100,rows:Po,style:Io.container})),n},GridListExample}(ke.PureComponent),Io={container:{border:"1px solid #000"}},Ro=t(46),Fo=[["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"],["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"]],Ao=function(e){function HtmlTableListExample(){return e.apply(this,arguments)||this}return Object(qe.a)(HtmlTableListExample,e),HtmlTableListExample.prototype.render=function render(){return Object(Pe.jsxs)(Ro.c,{rows:Fo,children:[Object(Pe.jsx)(Ro.b,{header:A||(A=Object(Pe.jsx)(Ro.a,{children:"h1"})),cell:function cell(e){var n=e.rowIndex,t=e.columnIndex;return Fo[n][t]}}),Object(Pe.jsx)(Ro.b,{header:B||(B=Object(Pe.jsx)(Ro.a,{children:"h2"})),cell:function cell(e){var n=e.rowIndex,t=e.columnIndex;return Fo[n][t]}}),Object(Pe.jsx)(Ro.b,{header:T||(T=Object(Pe.jsx)(Ro.a,{children:"h3"})),cell:function cell(e){var n=e.rowIndex;return e.columnIndex,Fo[n][2]}})]})},HtmlTableListExample}(ke.PureComponent),Bo=t(266),To=t.n(Bo),_o=[["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"],["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"]],Ho=function(e){function ReactVirtualizedTableListExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"handleClick",(function(e){return function(n){alert(e)}})),n}return Object(qe.a)(ReactVirtualizedTableListExample,e),ReactVirtualizedTableListExample.prototype.render=function render(){var e=this;return Object(Pe.jsx)("div",{style:{width:"40%",height:150},children:Object(Pe.jsxs)(To.a,{rows:_o,children:[Object(Pe.jsx)(Ro.b,{header:_||(_=Object(Pe.jsx)(Ro.a,{children:"h1"})),cell:function cell(n){var t=n.rowIndex,o=n.columnIndex,r=n.style;return Object(Pe.jsx)("div",{style:r,onClick:e.handleClick(t),children:_o[t][o]})}}),Object(Pe.jsx)(Ro.b,{header:H||(H=Object(Pe.jsx)(Ro.a,{children:"h2"})),cell:function cell(n){var t=n.rowIndex,o=n.columnIndex,r=n.style;return Object(Pe.jsx)("div",{style:r,onClick:e.handleClick(t),children:_o[t][o]})}}),Object(Pe.jsx)(Ro.b,{header:M||(M=Object(Pe.jsx)(Ro.a,{children:"h3"})),cell:function cell(n){var t=n.rowIndex,o=n.columnIndex,r=n.style;return Object(Pe.jsx)("div",{style:r,onClick:e.handleClick(t),children:_o[t][o]})}})]})})},ReactVirtualizedTableListExample}(ke.PureComponent),Mo=Object(ke.lazy)((function(){return t.e(2).then(t.t.bind(null,629,7))})),No=[["a1","b1","c1"],["a2","b2","c2"],["a3","b3","c3"],["a4","b4","c4"],["a5","b5","c5"],["a6","b6","c6"]],Go=function(e){function FixedDataTableListExample(){return e.apply(this,arguments)||this}return Object(qe.a)(FixedDataTableListExample,e),FixedDataTableListExample.prototype.render=function render(){return Object(Pe.jsx)("div",{style:{width:350},children:Object(Pe.jsxs)(Mo,{rows:No,getColWidth:function getColWidth(){return 150},height:150,children:[Object(Pe.jsx)(Ro.b,{header:N||(N=Object(Pe.jsx)(Ro.a,{children:"h1"})),cell:function cell(e){var n=e.rowIndex,t=e.columnKey;return No[n][t]}}),Object(Pe.jsx)(Ro.b,{header:G||(G=Object(Pe.jsx)(Ro.a,{children:"h2"})),cell:function cell(e){var n=e.rowIndex,t=e.columnKey;return No[n][t]}}),Object(Pe.jsx)(Ro.b,{header:U||(U=Object(Pe.jsx)(Ro.a,{children:"h3"})),cell:function cell(e){var n=e.rowIndex,t=e.columnKey;return No[n][t]}})]})})},FixedDataTableListExample}(ke.PureComponent),Uo=function(e){function PaginationExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"handlePageChange",(function(e){var t=e.begin;n.setState({begin:t})})),n}return Object(qe.a)(PaginationExample,e),PaginationExample.prototype.render=function render(){var e=(this.state||{}).begin;return Object(Pe.jsx)(Se.b,{style:Vo.container,onPageChange:this.handlePageChange,total:500,begin:e})},PaginationExample}(ke.PureComponent),Vo={container:{textAlign:"center"}},zo=t(49),qo=function CarouselAnimationExample(e){return Object(Pe.jsxs)(zo.b,{carouselAttr:{style:Wo.carousel},carouselListStyle:Wo.carouselList,style:Wo.container,children:[Object(Pe.jsx)(zo.a,{children:Object(Pe.jsx)("img",{style:Wo.img,src:"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"})}),Object(Pe.jsx)(zo.a,{children:Object(Pe.jsx)(Te.Image,{style:Wo.img,src:"https://source.unsplash.com/random"})}),K||(K=Object(Pe.jsx)(zo.a,{children:"3"})),Y||(Y=Object(Pe.jsx)(zo.a,{children:"4"})),Z||(Z=Object(Pe.jsx)(zo.a,{children:"5"}))]})},Wo={container:{margin:"0 10%"},carouselList:{minHeight:305},carousel:{width:"100%",height:300,background:"#00558B"},img:{maxWidth:"100%",maxHeight:"100%",verticalAlign:"bottom"}},Jo=function CarouselAnimationExample(e){return Object(Pe.jsxs)(zo.b,{carouselAttr:{style:Ko.carousel},carouselListStyle:Ko.carouselList,style:Ko.container,hideThumb:!0,children:[Object(Pe.jsx)(zo.a,{children:Object(Pe.jsx)("img",{style:Ko.img,src:"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"})}),Q||(Q=Object(Pe.jsx)(zo.a,{children:"2"})),X||(X=Object(Pe.jsx)(zo.a,{children:"3"})),$||($=Object(Pe.jsx)(zo.a,{children:"4"})),ee||(ee=Object(Pe.jsx)(zo.a,{children:"5"}))]})},Ko={container:{margin:"0 10%"},carouselList:{minHeight:305},carousel:{width:"100%",height:300,background:"#00558B"},img:{maxWidth:"100%",verticalAlign:"bottom"}},Yo=function CarouselSlideExample(e){return Object(Pe.jsxs)(zo.c,{carouselAttr:{style:Zo.carousel},children:[Object(Pe.jsx)(zo.a,{children:Object(Pe.jsx)("img",{style:Zo.img,src:"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"})}),ne||(ne=Object(Pe.jsx)(zo.a,{children:"2"})),te||(te=Object(Pe.jsx)(zo.a,{children:"3"})),oe||(oe=Object(Pe.jsx)(zo.a,{children:"4"})),re||(re=Object(Pe.jsx)(zo.a,{children:"5"}))]})},Zo={carousel:{width:300,height:300,background:"#00558B"}},Qo=t(279),Xo=function D3PieChartExample(e){return Object(Pe.jsx)(Qo.a,{data:[{value:10,label:"xxx"},{value:30,label:"yyy"}],style:{maxWidth:300},unit:""})},$o=t(45),er=function D3BarChart(e){return Object(Pe.jsx)($o.b,{data:[{values:[{x:"2013-01",y:53},{x:"2013-02",y:165},{x:"2013-03",y:269}]}],style:{maxHeight:450}})},nr=function D3LineChart(e){return Object(Pe.jsx)($o.c,{data:[{values:[{x:"2013-01",y:100},{x:"2013-02",y:450},{x:"2013-01",y:450}]}],style:{maxHeight:450},hideAxis:!0,thresholds:[200]})},tr=[{values:[{x:"2019-01",y:100},{x:"2019-02",y:450},{x:"2019-03",y:450},{x:"2019-04",y:0},{x:"2019-05",y:0}]}],or=function D3AreaChart(e){return Object(Pe.jsx)($o.a,{data:tr,style:{maxHeight:450}})},rr=t(141),ar={tables:[{name:"table1",cols:["t1-col1","t1-col2"]},{name:"table2",cols:["t2-col1","t2-col2"]}],conns:[{from:{table:"table1",col:"t1-col1"},to:{table:"table2",col:"t2-col2"}}]},cr=function D3UmlExample(){var e,n,t=Object(ke.useRef)(),o=Object(ke.useState)(!1),r=o[0],a=o[1];return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(rr.a,{onZoom:function handleZoom(e){},ref:function handleUml(e){return t.current=e},data:ar,lineDefaultProps:{curve:!r},connsLocator:function connsLocator(e){return e.conns},connFromBoxGroupLocator:function connFromBoxGroupLocator(e){return e.from.table},connFromBoxLocator:function connFromBoxLocator(e){return e.from.col},connToBoxGroupLocator:function connToBoxGroupLocator(e){return e.to.table},connToBoxLocator:function connToBoxLocator(e){return e.to.col},onBoxWillDrag:function onBoxWillDrag(e){return!n.getChecked().input},onLineDel:function onLineDel(n){return console.log({e:n}),!e.getChecked().input}}),Object(Pe.jsxs)(Te.Form,{style:{boxSizing:"border-box"},className:"equal width",children:[ie||(ie=Object(Pe.jsxs)(Te.Field,{children:[Object(Pe.jsx)(Te.Field,{atom:"input",label:"x",name:"x"}),Object(Pe.jsx)(Te.Field,{atom:"input",label:"y",name:"y"}),Object(Pe.jsx)(Te.Field,{atom:"input",label:"k",name:"k"})]})),Object(Pe.jsxs)(Te.Field,{children:[Object(Pe.jsx)(_e.c,{toggle:!0,label:"disable curve",onChange:function onChange(e){var n=e.checked;a(n)}}),Object(Pe.jsx)(_e.c,{label:"disable line delete",ref:function ref(n){return e=n}}),Object(Pe.jsx)(_e.c,{label:"disable node move",ref:function ref(e){return n=e}})]}),Object(Pe.jsx)(Te.Button,{onClick:function handleUpdate(e){var n=(e.currentTarget||{}).form;t.current.zoom.setXYK({x:n.x.value||null,y:n.y.value||null,k:n.k.value||null})},children:"update"})]})]})},lr=t(273),ir=t(35),sr=function StockChartExample(e){var n=Object(ke.useState)(),t=n[0],o=n[1],r=Object(ir.b)();return Object(ke.useEffect)((function(){Object(Ae.d)({type:"ajaxGet",params:{url:"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json",callback:function callback(e){r()&&o({trades:e})}}})}),[]),t?Object(Pe.jsx)(He.a,{id:"full-page-stock-chart",button:"open full screen",children:Object(Pe.jsx)(lr.a,{data:t,tradeRowsLocator:function tradeRowsLocator(e){return e.trades},tradeHighLocator:function tradeHighLocator(e){return e.h},tradeLowLocator:function tradeLowLocator(e){return e.l},tradeOpenLocator:function tradeOpenLocator(e){return e.o},tradeCloseLocator:function tradeCloseLocator(e){return e.c},tradeVolumeLocator:function tradeVolumeLocator(e){return e.v},tradeDateLocator:function tradeDateLocator(e){return e.t}})}):null},ur={tables:[],conns:[{from:{table:"table1",col:"t1-col1"},to:{table:"table2",col:"t2-col2"}}]},dr=1;dr<300;dr++)ur.tables.push({name:"table"+dr,cols:["t"+dr+"-col1","t"+dr+"-col2"]});var pr,mr,br,jr,hr,xr,fr,gr,Or,vr,Cr,yr,kr,Sr,Er,wr,Pr,Dr,Lr,Ir,Rr,Fr,Ar,Br,Tr,_r,Hr,Mr,Nr,Gr,Ur,Vr,zr,qr=function D3UmlPerfExample(){var e,n,t=Object(ke.useRef)(),o=Object(ke.useState)(!1),r=o[0],a=o[1];return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(rr.a,{style:{height:"50vh"},onZoom:function handleZoom(e){},ref:function handleUml(e){return t.current=e},data:ur,lineDefaultProps:{curve:!r},connsLocator:function connsLocator(e){return e.conns},connFromBoxGroupLocator:function connFromBoxGroupLocator(e){return e.from.table},connFromBoxLocator:function connFromBoxLocator(e){return e.from.col},connToBoxGroupLocator:function connToBoxGroupLocator(e){return e.to.table},connToBoxLocator:function connToBoxLocator(e){return e.to.col},onBoxWillDrag:function onBoxWillDrag(e){return!n.getChecked().input},onLineDel:function onLineDel(n){return console.log({e:n}),!e.getChecked().input}}),Object(Pe.jsxs)(Te.Form,{style:{boxSizing:"border-box"},className:"equal width",children:[je||(je=Object(Pe.jsxs)(Te.Field,{children:[Object(Pe.jsx)(Te.Field,{atom:"input",label:"x",name:"x"}),Object(Pe.jsx)(Te.Field,{atom:"input",label:"y",name:"y"}),Object(Pe.jsx)(Te.Field,{atom:"input",label:"k",name:"k"})]})),Object(Pe.jsxs)(Te.Field,{children:[Object(Pe.jsx)(_e.c,{toggle:!0,label:"disable curve",onChange:function onChange(e){var n=e.checked;a(n)}}),Object(Pe.jsx)(_e.c,{label:"disable line delete",ref:function ref(n){return e=n}}),Object(Pe.jsx)(_e.c,{label:"disable node move",ref:function ref(e){return n=e}})]}),Object(Pe.jsx)(Te.Button,{onClick:function handleUpdate(e){var n=(e.currentTarget||{}).form;t.current.zoom.setXYK({x:n.x.value||null,y:n.y.value||null,k:n.k.value||null})},children:"update"})]})]})},Wr=t(66),Jr=Object(Pe.jsx)("div",{children:"Hello world!!"}),Kr=function(e){function AnimationExample(n){var t;return(t=e.call(this,n)||this).state={dom:Jr},t}return Object(qe.a)(AnimationExample,e),AnimationExample.prototype.render=function render(){var e=this;return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(Wr.c,{appear:"fadeInRight-3000",enter:"fadeInRight-3000",leave:"fadeOutRight-1000",children:this.state.dom}),Object(Pe.jsx)("a",{href:"#",style:{marginLeft:"10px"},onClick:function(n){n.preventDefault(),e.setState({dom:null})}.bind(this),children:"leave"}),Object(Pe.jsx)("a",{href:"#",style:{marginLeft:"10px"},onClick:function(n){n.preventDefault(),e.setState({dom:Jr})}.bind(this),children:"enter"})]})},AnimationExample}(ke.Component),Yr=function(e){function AnimationReplaceExample(){return e.apply(this,arguments)||this}return Object(qe.a)(AnimationReplaceExample,e),AnimationReplaceExample.prototype.render=function render(){return Object(Pe.jsxs)(Wr.b,{enter:"fadeInRight-2000",leave:"fadeOutRight-1000",style:{minHeight:30,overflow:"hidden"},children:[Object(Pe.jsx)("div",{style:{background:"#f4cc70"},children:"1"}),Object(Pe.jsx)("div",{style:{background:"#de7a22"},children:"2"}),Object(Pe.jsx)("div",{style:{background:"#20948b"},children:"3"})]})},AnimationReplaceExample}(ke.PureComponent),Zr=Object(Pe.jsx)("div",{children:"Hello"}),Qr=Object(Pe.jsx)("div",{children:"world!!"}),Xr=function(e){function AnimationDelayExample(n){var t;return(t=e.call(this,n)||this).state={foo:Zr,bar:Qr},t}return Object(qe.a)(AnimationDelayExample,e),AnimationDelayExample.prototype.render=function render(){var e=this;return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(Wr.c,{appear:"fadeInRight-3000",enter:"fadeInRight-3000",leave:"fadeOutRight-1000",children:this.state.foo}),Object(Pe.jsx)(Wr.c,{appear:"fadeInRight-3000-500",enter:"fadeInRight-3000-500",leave:"fadeOutRight-1000-500",children:this.state.bar}),Object(Pe.jsx)("a",{href:"#",style:{marginLeft:"10px"},onClick:function(n){n.preventDefault(),e.setState({foo:null,bar:null})}.bind(this),children:"leave"}),Object(Pe.jsx)("a",{href:"#",style:{marginLeft:"10px"},onClick:function(n){n.preventDefault(),e.setState({foo:Zr,bar:Qr})}.bind(this),children:"enter"})]})},AnimationDelayExample}(ke.PureComponent),$r=function PopupExample(){var e,n=Object(ke.useState)(!1),t=n[0],o=n[1];return Object(Pe.jsxs)("div",{children:[Object(Pe.jsx)(Oe.e,{style:ea.click,popup:function popup(){return e||(e=Object(Pe.jsx)(Oe.h,{backgroundScroll:t,children:"xxx"}))},component:hr||(hr=Object(Pe.jsx)("a",{})),children:"show modal"}),Object(Pe.jsx)(Oe.e,{style:{marginLeft:5},popup:Object(Pe.jsx)(Oe.b,{backgroundScroll:t,header:"Test Header",children:"Test Dialog"}),component:xr||(xr=Object(Pe.jsx)(Te.Button,{})),children:"show dialog"}),Object(Pe.jsx)(_e.c,{toggle:!0,label:"Background scrollable",onChange:function onChange(e){var n=e.checked;o(n)}})]})},ea={click:{color:"blue",textDecoration:"underline"}},na=function(e){function FullScreenExample(){return e.apply(this,arguments)||this}return Object(qe.a)(FullScreenExample,e),FullScreenExample.prototype.render=function render(){return fr||(fr=Object(Pe.jsx)(He.a,{id:"full-screen-example",button:"open full screen",children:"test"}))},FullScreenExample}(ke.PureComponent),ta=t(274),oa=function(e){function SpotlightExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"state",{spotlight:!1}),n}return Object(qe.a)(SpotlightExample,e),SpotlightExample.prototype.render=function render(){var e=this,n=null;return this.state.spotlight&&(n=Object(Pe.jsx)(ta.a,{toPool:"spotlight-pool",targetEl:this.spot,onClose:function onClose(){e.setState({spotlight:null})}})),Object(Pe.jsxs)(He.a,{button:"open full screen",onClose:function onClose(){return e.setState({spotlight:null})},children:[Object(Pe.jsx)("div",{ref:function ref(n){return e.spot=n},style:ra.el,children:"Spotlight"}),Object(Pe.jsx)("div",{children:Object(Pe.jsx)(Te.Button,{onClick:function onClick(){e.setState({spotlight:!0})},children:"Try it."})}),n,gr||(gr=Object(Pe.jsx)(Oe.i,{name:"spotlight-pool"}))]})},SpotlightExample}(ke.PureComponent),ra={el:{display:"inline-block",width:100,height:200,margin:10}},aa=function(e){function AlertsNotifierExample(){return e.apply(this,arguments)||this}return Object(qe.a)(AlertsNotifierExample,e),AlertsNotifierExample.prototype.render=function render(){return Object(Pe.jsx)(Oe.e,{style:ca.click,popup:function popup(){return Object(Pe.jsx)(Oe.a,{position:"bottom",alerts:[{type:"info",message:"test"}]})},component:Or||(Or=Object(Pe.jsx)("a",{})),children:"alert"})},AlertsNotifierExample}(ke.PureComponent),ca={click:{color:"blue",textDecoration:"underline"}},la=function(e){function WindowOffsetExample(){for(var n,o=arguments.length,r=new Array(o),a=0;a<o;a++)r[a]=arguments[a];return n=e.call.apply(e,[this].concat(r))||this,Object(We.a)(Object(ze.a)(n),"handleClick",(function(e){var n=e.currentTarget;Promise.resolve().then(t.bind(null,72)).then((function(e){var t=(0,e["default"])(n);console.log(t)}))})),n}return Object(qe.a)(WindowOffsetExample,e),WindowOffsetExample.prototype.render=function render(){return Object(Pe.jsxs)("div",{children:[Object(Pe.jsxs)("div",{style:ia.row,children:[Object(Pe.jsx)(Oe.g,{popup:"1",isKeep:!0,children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col1),onClick:this.handleClick,children:"1"})}),Object(Pe.jsx)(Oe.g,{popup:"2",isKeep:!0,children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col2),onClick:this.handleClick,children:"2"})}),Object(Pe.jsx)(Oe.g,{popup:"3",isKeep:!0,children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col3),onClick:this.handleClick,children:"3"})})]}),Object(Pe.jsxs)("div",{style:ia.row,children:[Object(Pe.jsx)(Oe.g,{popup:"4",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col1),onClick:this.handleClick,children:"4"})}),Object(Pe.jsx)(Oe.g,{popup:"5",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col2),onClick:this.handleClick,children:"5"})}),Object(Pe.jsx)(Oe.g,{popup:"6",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col3),onClick:this.handleClick,children:"6"})})]}),Object(Pe.jsxs)("div",{style:{width:60},children:[Object(Pe.jsx)(Oe.g,{popup:"7",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col1),onClick:this.handleClick,children:"7"})}),Object(Pe.jsx)(Oe.g,{popup:"8",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col2),onClick:this.handleClick,children:"8"})}),Object(Pe.jsx)(Oe.g,{popup:"9",children:Object(Pe.jsx)("div",{style:Object(xe.a)(Object(xe.a)({},ia.col),ia.col3),onClick:this.handleClick,children:"9"})})]})]})},WindowOffsetExample}(ke.Component),ia={row:{justifyContent:"space-around",display:"flex",marginBottom:100},col:{width:60,height:60,lineHeight:"60px",textAlign:"center",color:"#fff"},col1:{background:"#c00"},col2:{background:"#095"},col3:{background:"#059"}},sa=function DialogResult(e){var n=e.dialogReturn;return void 0!==n?"Dialog: "+n:null},ua=function(e){function ReshowMessageExample(){for(var n,t=arguments.length,o=new Array(t),r=0;r<t;r++)o[r]=arguments[r];return n=e.call.apply(e,[this].concat(o))||this,Object(We.a)(Object(ze.a)(n),"handleAddAlert",(function(e){Object(fe.e)("alert/add",{message:"test"})})),Object(We.a)(Object(ze.a)(n),"handleResetAlert",(function(e){Object(fe.e)("alert/reset",{alerts:[1,2,3]})})),Object(We.a)(Object(ze.a)(n),"handleCleanAlert",(function(e){Object(fe.e)("alert/reset",{alerts:null})})),Object(We.a)(Object(ze.a)(n),"handleOpenDialog",(function(e){Object(fe.e)("dialog/start",{dialog:"how are u"})})),n}return Object(qe.a)(ReshowMessageExample,e),ReshowMessageExample.prototype.render=function render(){return Object(Pe.jsxs)("div",{children:[Object(Pe.jsxs)("p",{children:[Object(Pe.jsx)(Te.Button,{onClick:this.handleAddAlert,children:"Add alert"}),Object(Pe.jsx)(Te.Button,{onClick:this.handleResetAlert,children:"Reset alert"}),Object(Pe.jsx)(Te.Button,{onClick:this.handleCleanAlert,children:"Clean all alerts"})]}),Object(Pe.jsxs)("p",{children:[Object(Pe.jsx)(Te.Button,{onClick:this.handleOpenDialog,children:"Open Dialog"}),Object(Pe.jsx)(fe.c,{initStates:["dialogReturn"],children:vr||(vr=Object(Pe.jsx)(sa,{}))})]})]})},ReshowMessageExample}(ke.PureComponent),da=t(104),pa=function YouTubeRWDExample(){return Pr||(Pr=Object(Pe.jsx)(da.d,{videoId:"CjxugyZCfuw"}))},ma=t(280),ba=function QQVideoExample(){return Dr||(Dr=Object(Pe.jsx)(ma.a,{videoId:"j0792wzb6v8"}))},ja=t(272),ha=function ParallaxBackgroundImageExample(){return Object(Pe.jsx)(ja.a,{style:xa.container,backgroundImage:"https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg",children:"test"})},xa={container:{height:600,color:"#fff",textAlign:"center",paddingTop:200}},fa={doc:[{paddingTop:"300px !important",paddingBottom:"150vh !important"},"div#doc.Parallax"]},ga=function CodeExampleExample(e){return Ar||(Ar=Object(Pe.jsx)(He.b,{code:'import React from "react";\n\n/**\n * Production please use\n * import CodeExample from \'organism-react-code\'\n */\nimport CodeExample from "organism-react-code";\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from "!raw-loader!../../../../ui/organisms/CodeExample.example";\n\nconst CodeExampleExample = (props) => (\n  <CodeExample\n    code={code}\n    header="Test Header"\n    git="react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/"\n    npm="organism-react-code"\n  >\n    <div>Test Demo Area</div>\n  </CodeExample>\n);\n\nexport default CodeExampleExample;\n',header:"Test Header",git:"react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/",npm:"organism-react-code",children:Object(Pe.jsx)("div",{children:"Test Demo Area"})}))},Oa=t(101),va=function CodeEditorExample(e){return Object(Pe.jsx)("button",{onClick:function onClick(){return Object(Oa.a)()},children:"open"})},Ca=t(281),ya=function AsciidocDemo(e){return Object(Pe.jsx)(Ca.a,{options:{doctype:"book"},children:"\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n"})},ka=t(271),Sa=function GrapesJsExample(){return Object(Pe.jsx)(ka.a,{style:Ea.container,debug:!0})},Ea={container:{minHeight:600}},wa=function Editor(){return Hr||(Hr=Object(Pe.jsx)("div",{}))},Pa=function RTEExample(){return Mr||(Mr=Object(Pe.jsx)(wa,{}))},Da=t(277),La=function HTMLToCanvansExample(e){var n=Object(ke.useState)(""),t=n[0],o=n[1],r=Object(ke.useRef)();return Object(Pe.jsxs)("div",{children:[Object(Pe.jsxs)(Te.Form,{className:"equal width",style:{boxSizing:"border-box"},children:[Object(Pe.jsx)(Te.Field,{atom:"textarea",onInput:function handleInput(e){var n=e.currentTarget.value;o(n)}}),Object(Pe.jsx)(Te.Button,{onClick:function handleClick(e){r&&r.current&&r.current.download()},children:"Download"})]}),Object(Pe.jsx)(Da.a,{preview:!0,autoGenCanvas:!0,ref:function handlePdf(e){return r.current=e},children:Object(Pe.jsx)(Te.Unsafe,{children:t})})]})},Ia=t(47),Ra=t(269),Fa=t.n(Ra),Aa=function QueryToJSON(e){var n=Object(ke.useState)(""),t=n[0],o=n[1];return Object(Pe.jsx)("div",{children:Object(Pe.jsxs)(Te.Form,{className:"equal width",style:{boxSizing:"border-box"},children:[Object(Pe.jsx)(Te.Field,{ui:!0,atom:"textarea",onInput:function handleInput(e){var n=e.currentTarget.value,t=Object(Ia.a)(new URLSearchParams(n)),r=[];t.forEach((function(e){var n;r.push(((n={})[e[0]]=e[1],n))})),o(r)}}),Object(Pe.jsx)(_e.d,{atom:"div",children:Fa.a.render(t)})]})})},Ba=t(43),Ta=t(62),_a=["col1","col2"],Ha=["sec"],Ma=Object.keys,Na=function secToMin(e){var n=e%60;return Math.floor(e/60)+":"+(10>n?"0"+n:n)},Ga=function Tip(){return Object(Pe.jsx)(fe.c,{initStates:["pomodoro"],children:function children(e){var n=e.pomodoro;return n?Object(Pe.jsx)(Te.List,{atom:"ol",children:n.tip.map((function(e,n){return Object(Pe.jsx)(Te.Item,{children:e},n)}))}):null}})},Ua=function ActionSegment(e){var n=e.col1;return e.col2,Object(ye.a)(e,_a),Object(Pe.jsx)(Te.Segment,{children:Object(Pe.jsx)(Te.Row,{children:Object(Pe.jsx)(Te.Column,{className:"pure-u-md-1-2",children:n})})})},Va=function TomatoApp(e){var n=e.countdown,t=e.useTomato;Object(ke.useEffect)((function(){za=Object(Te.lazyInject)(za,$a)}),[]);var o=t(n),r=o.sec,a=o.active,c=o.preview,l=o.activeType,i=o.handler,s=o.modal,u=o.resetInput,d=o.TotalSec,p=function getModal(e){return Object(Pe.jsxs)(Oe.h,{basic:!0,ref:s,contentStyle:{textAlign:"center"},children:[Object(Pe.jsx)(Te.Button,{className:"inverted",onClick:i.stop,children:"Pause"}),Object(Pe.jsx)(Te.InputBox,{refCb:u,style:Xa.resetInput,defaultValue:e,inputStyle:Xa.reset,className:"inverted transparent",leftLabel:"Resst to:",rightLabel:"min",button:"Reset",actionProps:{className:"inverted",onClick:i.reset}})]})};return Object(Pe.jsxs)(Te.SemanticUI,{children:[Object(ke.useMemo)((function(){var e,t,o=Object(Ba.a)(r/d),s=Object(Te.mixClass)("big Pomodoro",((t={})[null===(e=n[l])||void 0===e?void 0:e.colorName]=a||c,t));return Object(Pe.jsx)(ve.b,{onClick:i.clickProgress,className:s,style:Xa.progress,percent:o,barLabel:Na(r),barLabelProps:{styles:Object(Te.reactStyle)({transform:"translate("+(100-o)+"%, 0)"},!1,!1)}})}),[r,a,c]),Object(Pe.jsx)(Ua,{col1:Object(Pe.jsx)(Te.List,{style:Xa.buttonList,children:Ma(n).map((function(e){var t=n[e],o=null;if(e===l)o=t.colorName;else if(a)return null;var r=i.start({getModal:p});return Object(Pe.jsx)(Te.Button,{id:e,className:o,onClick:r,onMouseEnter:i.btnMouseIn,onMouseLeave:i.btnMouseOut,children:t.label},e)}))})}),zr||(zr=Object(Pe.jsx)(Ga,{}))]})};Va.defaultProps={countdown:{POMODORO:{minute:25,label:"Pomodoro",colorName:"red"},SHORT_BREAK:{minute:5,label:"Short Break",colorName:"teal"},LONG_BREAK:{minute:15,label:"Long Break",colorName:"blue"}},useTomato:function useTomato(e){var n=Object(ke.useRef)(25),t=60*n.current,o=Object(ke.useState)({activeType:"POMODORO",sec:t}),r=o[0],a=o[1],c=r.sec,l=r.preview,i=r.active,s=r.activeType,u=Object(ke.useRef)(),d=Object(ke.useRef)(),p=Object(ke.useRef)(),m=Object(ke.useRef)(),b=Object(ke.useRef)();Object(ke.useEffect)((function(){return function(){x.stop()}}),[]),Object(ke.useEffect)((function(){var e=Object(Ta.c)();m.current={active:i,activeType:s,now:e,sec:c}}),[i,s,c]);var j=function updateClock(e,t,o){var r;e&&(t=null!=(r=t)?r:60*e,a((function(e){return Object(xe.a)(Object(xe.a)(Object(xe.a)({},e),o),{},{sec:t})})),n.current=e)},h=function updateAndRestore(e,n,t){var o,r=null===(o=b.current)||void 0===o?void 0:o.activeType;e&&r===e&&b.current.sec?j(n,b.current.sec,t):j(n,null,t)},x={btnMouseIn:function btnMouseIn(n){var t,o,r;if(null===(t=m.current)||void 0===t||!t.active){b.current||(b.current=Object(xe.a)({},m.current));var a=null==n||null===(o=n.currentTarget)||void 0===o?void 0:o.id,c=null===(r=e[a])||void 0===r?void 0:r.minute;h(a,c,{activeType:a,preview:!0})}},btnMouseOut:function btnMouseOut(n){var t,o;if(null===(t=m.current)||void 0===t||!t.active){n.currentTarget,null==n||null===(o=n.currentTarget)||void 0===o||o.id;var r=b.current.activeType;r?h(r,e[r].minute,{activeType:r,preview:!1}):a((function(e){return Object(xe.a)(Object(xe.a)({},e),{},{activeType:r,preview:!1})}))}},clickProgress:function clickProgress(){if(m.current)if(m.current.active)x.stop();else{var e=m.current.activeType;e&&x.start({countdownKey:e})()}},start:function start(n){var t=void 0===n?{}:n,o=t.countdownKey,r=t.getModal;return function(n){var t;o=(null==n?void 0:n.currentTarget.id)||o;var c=null===(t=e[o])||void 0===t?void 0:t.minute;u.current?(console.warn("Timer already running"),r&&Object(Oe.j)("dom/update",{popup:r(c)})):(m.current=null,h(o,c,{active:!0,activeType:o}),setTimeout((function(){b.current=Object(xe.a)({},m.current),u.current=setInterval((function(){a((function(e){var n=e.sec,t=Object(ye.a)(e,Ha),o=Object(we["default"])(m.current,["now"]);if(o){var r=Object(Ta.c)()-o;r>1e3&&(n-=Math.floor(r/1e3))}return(n<=0||isNaN(n))&&(x.stop(),n=0),Object(xe.a)(Object(xe.a)({},t),{},{sec:n})}))}),100)}),200))}},stop:function stop(){b.current=Object(xe.a)({},m.current),d.current&&d.current.close(),u.current&&(clearInterval(u.current),u.current=null),a((function(e){return Object(xe.a)(Object(xe.a)({},e),{},{active:!1,preview:!1})}))},reset:function reset(){m.current=null,x.stop(),j(p.current.value)}};return{sec:c,active:i,preview:l,activeType:s,TotalSec:t,handler:x,modal:d,resetInput:p}}};var za,qa,Wa,Ja,Ka,Ya,Za,Qa=Va,Xa={progress:{cursor:"pointer"},buttonList:{textAlign:"center"},resetInput:{marginLeft:20},reset:{width:20}},$a={barLabel:[{fontSize:"7rem"},".ui.progress.Pomodoro .bar>.progress"]},ec=t(34),nc=t(44),tc=(t(8),t(72)),oc=["children","setSortElement","style"],rc=Object.keys,ac=Object(ke.forwardRef)((function(e,n){var t=function useSortable(e){var n=e.setSortElement,t=Object(ke.useState)(),o=t[0],r=t[1],a=Object(ke.useRef)(),c=function handleTarget(e,t){var o,r,c=Object(tc.nearWhere)(e,t),l=a.current,i=null===(o=e.nextSibling)||void 0===o?void 0:o.getAttribute("name"),s=null===(r=e.previousSibling)||void 0===r?void 0:r.getAttribute("name"),u=null==l?void 0:l.getAttribute("name"),d=(i===u||s===u)&&c.top;e.getAttribute("data-first")?d=!1:e.getAttribute("data-last")&&(d=!c.top),n({targetEl:e,targetId:e.getAttribute("name"),sortEl:l,sortId:u,reverse:d})};return{isDraging:o,handler:{drag:function drag(e){if(a.current){r(!0);var n,t=e.destTarget,o={x:e.clientX,y:e.clientY},l=null==t?void 0:t.getAttribute("data-type");l?"sortable"===l&&c(t,o):(n=nc.a.ancestor(t,'[data-type="sortable"]'))&&c(n,o)}},dragEnd:function dragEnd(e){r(!1)}},comp:a}}(e),o=t.handler,r=t.isDraging,a=t.comp,c=e.children,l=(e.setSortElement,e.style),i=Object(ye.a)(e,oc),s=function mergeStyle(e){var n;return Object(xe.a)(Object(xe.a)(Object(xe.a)({},l),null===(n=c.props)||void 0===n?void 0:n.style),e)},u=Object(Te.build)(Object(Te.build)(c)(Object(xe.a)(Object(xe.a)({},i),{},{"data-type":"sortable"}))),d=r?ic.active:null,p=r?u({style:s(d)}):null,m=u({style:s(),refCb:function refCb(e){return a.current=e}});return Object(Pe.jsxs)(Pe.Fragment,{children:[Object(Pe.jsx)(ec.b,{onDrag:o.drag,onDragEnd:o.dragEnd,children:m}),p]})})),cc=function SortList(e){var n=function useSortList(e){var n,t=e.children,o=Object(ke.useState)(),r=o[0],a=o[1],c=Object(Te.getChildMapping)(t,(function(e,n){return Object(Pe.jsx)(ac,{name:n,setSortElement:a,children:e},n)})),l=r||{},i=l.sortId,s=l.targetId,u=l.reverse,d=Object(ke.useRef)(rc(c).map((function(e){return c[e]}))),p=[],m=function arrPush(e){n?p.push(e):(n=!0,p.push(Object(Te.build)(e)({"data-first":!0})))};d.current.forEach((function(e){var n=e.props.name;i===n?i===s&&p.push(c[n]):s===n?u?(m(c[n]),m(c[i])):(m(c[i]),m(c[n])):m(c[n])}));var b=p.length-1;return p[b]=Object(Te.build)(p[b])({"data-last":!0}),d.current=p,{sortOrder:p,setSortElement:a}}(e).sortOrder;return Object(Pe.jsx)(Te.SemanticUI,{style:ic.itemList,children:n})},lc=function Sortable(e){return Object(Pe.jsxs)(cc,{children:[Object(Pe.jsx)(Te.Item,{style:ic.item,children:"list 1"}),Object(Pe.jsx)(Te.Item,{style:ic.item,children:"list 2"}),Object(Pe.jsx)(Te.Item,{style:ic.item,children:"list 3"}),Object(Pe.jsx)(Te.Item,{style:ic.item,children:"list 4"}),Object(Pe.jsx)(Te.Item,{style:ic.item,children:"list 5"})]})},ic={move:{position:"absolute",pointerEvents:"none"},active:{border:"2px dashed rgba(0, 0, 0, 0.2)"},itemList:{margin:"0 auto",width:100},item:{width:100,height:50,border:"1px solid rgba(0, 0, 0, 0.5)"}},sc={Atoms:function Atoms(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Atoms"})),Object(Pe.jsx)(Pe.Fragment,{children:"This is atom"})},Molecules:function Molecules(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Molecules"})),Object(Pe.jsxs)(Pe.Fragment,{children:[c||(c=Object(Pe.jsx)(Te.DividingHeader,{children:"Input box"})),l||(l=Object(Pe.jsx)("div",{children:"Inputbox"})),i||(i=Object(Pe.jsx)(Te.Form,{children:Object(Pe.jsx)(Te.Field,{atom:"input"})})),s||(s=Object(Pe.jsx)("div",{children:"Inputbox with button"})),u||(u=Object(Pe.jsx)(Te.InputBox,{})),d||(d=Object(Pe.jsx)("div",{children:"Search Box"})),p||(p=Object(Pe.jsx)(_e.f,{}))]})},Organisms:function Organisms(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Organisms"})),Object(Pe.jsxs)(Pe.Fragment,{children:[C||(C=Object(Pe.jsx)(He.b,{code:'import React, { useState } from "react";\nimport { TagsField } from "organism-react-tag-input";\nimport { Form, Field, SemanticUI } from "react-atomic-molecule";\nimport { Checkbox } from "react-atomic-organism";\n\nconst TagInputExample = (props) => {\n  const [isDisable, setIsDisable] = useState(false);\n\n  const handleDisable = (e) => {\n    setIsDisable(e.checked ? true : false);\n  };\n\n  return (\n    <Form>\n      <TagsField disabled={isDisable} />\n      <Field>\n        <Checkbox label="Disable" toggle onChange={handleDisable} />\n      </Field>\n    </Form>\n  );\n};\n\nexport default TagInputExample;\n',header:"Tag input",id:"tag-input",children:Object(Pe.jsx)(un,{})})),y||(y=Object(Pe.jsx)(He.b,{code:'import React, { useState } from "react";\nimport { SemanticUI, Form, Field, Menu, Item } from "react-atomic-molecule";\n\nimport { Dropdown, Select, SelectField } from "organism-react-navigation";\nimport { Checkbox } from "react-atomic-organism";\n\nconst options = [\n  {\n    label: "Boy",\n    value: "boy",\n  },\n  {\n    label: "Girl",\n    value: "girl",\n  },\n];\n\nconst DropdownExample = (props) => {\n  const [value, setValue] = useState();\n\n  const MyList = (props) => (\n    <Menu {...props}>\n      <Item onClick={() => setValue("Boy")}>Boy</Item>\n      <Item onClick={() => setValue("Girl")}>Girl</Item>\n    </Menu>\n  );\n\n  return (\n    <Field\n      {...props}\n      inputComponent={\n        <Dropdown style={Styles.dropdown} list={<MyList />}>\n          You-select {value}\n        </Dropdown>\n      }\n    />\n  );\n};\n\nconst ErrorFormExample = () => {\n  const [isError, setIsError] = useState(false);\n\n  const handleChange = (e) => {\n    setIsError(e.checked ? true : false);\n  };\n\n  return (\n    <SemanticUI>\n      <Form messageType={isError ? "error" : ""}>\n        <DropdownExample\n          messageType={isError ? "error" : ""}\n          label="Dropdown: "\n        />\n        <SelectField\n          messageType={isError ? "error" : ""}\n          label="Selection: "\n          options={options}\n          placeholder={"not-select-yet"}\n        />\n        <Field>\n          <Checkbox label="Error Style" toggle onChange={handleChange} />\n        </Field>\n      </Form>\n    </SemanticUI>\n  );\n};\n\nexport default ErrorFormExample;\n\nconst Styles = {\n  dropdown: {\n    marginLeft: 10,\n  },\n};\n',header:"Error Form",id:"errorForm",children:Object(Pe.jsx)(mn,{})})),k||(k=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { PageLoadProgressHandler } from "organism-react-progress";\nimport { Button, InputBox } from "react-atomic-molecule";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let oLoad;\n  let dInput;\n  return (\n    <div>\n      <PageLoadProgressHandler ref={(o) => (oLoad = o)} />\n\n      <div>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.start(100, 800);\n          }}\n        >\n          Start\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.pause();\n          }}\n        >\n          Pause\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.complete();\n          }}\n        >\n          Complete\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.reset();\n          }}\n        >\n          Reset\n        </Button>\n      </div>\n\n      <div>\n        <InputBox\n          leftLabel="Pause @"\n          rightLabel="%"\n          refCb={(o) => (dInput = o)}\n          button={"Go"}\n          actionProps={{\n            onClick: () => {\n              oLoad.start(dInput.value);\n            },\n          }}\n          style={Styles.input}\n        />\n      </div>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n\nconst Styles = {\n  input: {\n    width: 20,\n  },\n  button: {\n    marginBottom: 10,\n  },\n};\n',header:"Page Load Progress",git:"react-atomic/react-atomic-organism/blob/main/packages/organism-react-progress/",npm:"organism-react-progress",children:Object(Pe.jsx)(Me,{})})),S||(S=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { PageLoadProgressHandler } from "organism-react-progress";\nimport { ajaxDispatch } from "organism-react-ajax";\nimport { Button } from "react-atomic-molecule";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let url =\n    "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md";\n  return (\n    <div>\n      <PageLoadProgressHandler ajax={true} />\n\n      <Button\n        onClick={() => {\n          ajaxDispatch({\n            type: "ajaxGet",\n            params: {\n              url: url,\n              callback: (json, text, o) => {\n                alert(text);\n              },\n            },\n          });\n        }}\n      >\n        Call Ajax\n      </Button>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n',header:"Page Load Progress With Ajax",children:Object(Pe.jsx)(Ge,{})})),E||(E=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { PageLoadProgressHandler } from "organism-react-progress";\nimport { ajaxDispatch } from "organism-react-ajax";\nimport { Button } from "react-atomic-molecule";\nimport { download } from "ajax-save";\n\nconst AjaxDownloadExample = (props) => {\n  const url =\n    "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg";\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch("ajaxGet", {\n          responseType: ["blob"],\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split("/").splice(-1)[0]);\n          },\n        });\n      }}\n    >\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n',id:"ajax-save",header:"Ajax Save (Downloader)",children:Object(Pe.jsx)(Ve,{})})),w||(w=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\nimport Dropzone from "organism-react-dropzone";\nimport get from "get-object-value";\n\nclass DropzoneExample extends PureComponent {\n  state = {\n    urls: [],\n  };\n\n  handleClick = () => {\n    this.dropzone.openDialog();\n  };\n\n  render() {\n    const { urls } = this.state;\n    return (\n      <div>\n        <Dropzone\n          ref={(el) => (this.dropzone = el)}\n          acceptedFiles=".png, .jpg"\n          showFiletypeIcon={true}\n          postUrl="https://file.io"\n          djsConfig={{\n            addRemoveLinks: true,\n          }}\n          eventHandlers={{\n            success: (file) => {\n              this.setState(({ urls }) => {\n                const req = get(file, ["xhr", "response"]);\n                if (req) {\n                  const json = JSON.parse(req);\n                  urls.push(json.link);\n                }\n                return urls;\n              });\n            },\n          }}\n        />\n        <ul>\n          {urls.map((url, key) => (\n            <li key={key}>\n              <a href={url} target="_blank">\n                {url}\n              </a>\n            </li>\n          ))}\n        </ul>\n        <button onClick={this.handleClick}>open</button>\n      </div>\n    );\n  }\n}\n\nexport default DropzoneExample;\n',header:"Dropzone",children:Object(Pe.jsx)(Ke,{})})),P||(P=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { FBLike } from "organism-react-facebook";\n\nconst FBLikeExample = (props) => (\n  <FBLike page="https://www.facebook.com/react" />\n);\n\nexport default FBLikeExample;\n',header:"Facebook Like Button",git:"react-atomic/react-atomic-organism/blob/main/packages/organism-react-facebook/",npm:"organism-react-facebook",id:"organism-react-facebook",children:Object(Pe.jsx)(Ze,{})})),D||(D=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { FBPage } from "organism-react-facebook";\n\nconst FBPageExample = (props) => {\n  return <FBPage page="react" />;\n};\n\nexport default FBPageExample;\n',header:"Facebook Page Plugin",children:Object(Pe.jsx)(Qe,{})})),L||(L=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Button, SemanticUI } from "react-atomic-molecule";\n\nimport { Suggestion } from "react-atomic-organism";\n\nconst data = ["abc", "abb", "acc"];\n\nclass SuggestionExample1 extends PureComponent {\n  state = {\n    results: [],\n  };\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({ results: data });\n      return;\n    }\n    const results = [];\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v);\n      }\n    });\n    this.setState({ results });\n  };\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item);\n  };\n\n  render() {\n    const { results, myValue } = this.state;\n    return (\n      <SemanticUI>\n        <Suggestion\n          ref={(el) => (this.suggestion = el)}\n          onChange={this.handleChange}\n          results={results}\n          onItemClick={this.handleItemClick}\n          value={myValue}\n        />\n        <Button\n          onClick={() =>\n            this.setState({ myValue: myValue ? myValue + 1 : 123 })\n          }\n        >\n          set\n        </Button>\n      </SemanticUI>\n    );\n  }\n}\n\nconst SuggestionExample = () => (\n  <SemanticUI>\n    <SuggestionExample1 />\n    couldCreate: false\n    <Suggestion results={data} couldCreate={false} filter preview />\n  </SemanticUI>\n);\n\nexport default SuggestionExample;\n',header:"Suggestion",id:"suggestion",children:Object(Pe.jsx)(ln,{})})),I||(I=Object(Pe.jsx)(He.b,{code:'import React, {useState} from "react";\n\nimport {\n  SemanticUI,\n  Menu,\n  Item,\n  InputBox,\n  Button,\n} from "react-atomic-molecule";\nimport SearchIcon from "ricon/Search";\n\nimport { TabView, Tab } from "organism-react-navigation";\n\nconst RightMenu = () => (\n  <Menu className="right" ui={false}>\n    <Item style={{ boxSizing: "border-box" }}>\n      <InputBox icon={<SearchIcon />} transparent placeholder="Search..." />\n    </Item>\n  </Menu>\n);\n\nconst TabViewExample = (props) => {\n  const [selected, setSelected] = useState();\n  return (\n    <SemanticUI>\n      <TabView selected={selected} rightMenu={<RightMenu />}>\n        <Tab>\n          <div>content1</div>\n          <div>menu1</div>\n        </Tab>\n        <Tab>\n          <div>content2</div>\n          <div>menu2</div>\n        </Tab>\n      </TabView>\n      <Button onClick={()=>setSelected(0)}>to tab1</Button>\n      <Button onClick={()=>setSelected(1)}>to tab2</Button>\n    </SemanticUI>\n  );\n};\n\nexport default TabViewExample;\n',header:"Tab View",id:"tab",children:Object(Pe.jsx)(nn,{})})),R||(R=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Form, Button } from "react-atomic-molecule";\nimport { RadioGroup } from "react-atomic-organism";\n\nconst options = [\n  {\n    label: "Boy",\n    value: "boy",\n  },\n  {\n    label: "Girl",\n    value: "girl",\n  },\n];\n\nclass RadioGroupExample extends PureComponent {\n  state = {\n    value: "",\n  };\n  handleChange = () => {\n    this.setState({ value: this.radio.getValue() });\n  };\n\n  render() {\n    const { value } = this.state;\n    return (\n      <Form>\n        <RadioGroup\n          ref={(el) => (this.radio = el)}\n          inline={false}\n          label="Sex: "\n          name="sex"\n          value={value}\n          options={options}\n          onChange={this.handleChange}\n        />\n        <div>Current: {value}</div>\n        <Button onClick={() => this.setState({ value: "boy" })}>\n          Set to Boy\n        </Button>\n        <Button onClick={() => this.setState({ value: "girl" })}>\n          Set to Girl\n        </Button>\n      </Form>\n    );\n  }\n}\n\nexport default RadioGroupExample;\n',header:"Radio Group",id:"radioGroup",edit:"https://codesandbox.io/embed/jjq8ko2krv?module=%2Fsrc%2FradioGroup.js&moduleview=1",children:Object(Pe.jsx)(on,{})})),F||(F=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Form } from "react-atomic-molecule";\nimport { Checkbox } from "react-atomic-organism";\n\nclass CheckboxExample extends PureComponent {\n  render() {\n    return (\n      <Form>\n        <Checkbox />\n        <Checkbox type="radio" />\n        <Checkbox toggle />\n        <Checkbox slider />\n      </Form>\n    );\n  }\n}\n\nexport default CheckboxExample;\n',header:"Checkbox",id:"checkbox",children:Object(Pe.jsx)(rn,{})}))]})},D3:function D3(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"D3"})),Object(Pe.jsxs)(Pe.Fragment,{children:[se||(se=Object(Pe.jsx)(He.b,{code:'import React, { useRef, useState } from "react";\n\nimport { UMLGraph } from "organism-react-d3-uml";\nimport { Form, Field, Button } from "react-atomic-molecule";\nimport { Checkbox } from "react-atomic-organism";\n\nconst data = {\n  tables: [\n    {\n      name: "table1",\n      cols: ["t1-col1", "t1-col2"],\n    },\n    {\n      name: "table2",\n      cols: ["t2-col1", "t2-col2"],\n    },\n  ],\n  conns: [\n    {\n      from: {\n        table: "table1",\n        col: "t1-col1",\n      },\n      to: {\n        table: "table2",\n        col: "t2-col2",\n      },\n    },\n  ],\n};\n\nconst D3UmlExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: "border-box" }} className="equal width">\n        <Field>\n          <Field atom="input" label="x" name="x" />\n          <Field atom="input" label="y" name="y" />\n          <Field atom="input" label="k" name="k" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label="disable curve"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label="disable line delete"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label="disable node move"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlExample;\n',header:"D3 Uml",id:"d3-uml",children:Object(Pe.jsx)(cr,{})})),ue||(ue=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { LineChart } from "organism-react-d3-axis-chart";\n\nconst D3LineChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: "2013-01",\n          y: 100,\n        },\n        {\n          x: "2013-02",\n          y: 450,\n        },\n        {\n          x: "2013-01",\n          y: 450,\n        },\n      ],\n    },\n  ];\n  return (\n    <LineChart\n      data={data}\n      style={{ maxHeight: 450 }}\n      hideAxis={true}\n      thresholds={[200]}\n    />\n  );\n};\n\nexport default D3LineChart;\n',header:"D3 Line Chart",children:Object(Pe.jsx)(nr,{})})),de||(de=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { BarChart } from "organism-react-d3-axis-chart";\n\nconst D3BarChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: "2013-01",\n          y: 53,\n        },\n        {\n          x: "2013-02",\n          y: 165,\n        },\n        {\n          x: "2013-03",\n          y: 269,\n        },\n      ],\n    },\n  ];\n\n  return <BarChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3BarChart;\n',header:"D3 Bar Chart",children:Object(Pe.jsx)(er,{})})),pe||(pe=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { AreaChart } from "organism-react-d3-axis-chart";\n\nconst data = [\n  {\n    values: [\n      {\n        x: "2019-01",\n        y: 100,\n      },\n      {\n        x: "2019-02",\n        y: 450,\n      },\n      {\n        x: "2019-03",\n        y: 450,\n      },\n      {\n        x: "2019-04",\n        y: 0,\n      },\n      {\n        x: "2019-05",\n        y: 0,\n      },\n    ],\n  },\n];\n\nconst D3AreaChart = (props) => {\n  return <AreaChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3AreaChart;\n',header:"D3 Area Chart",children:Object(Pe.jsx)(or,{})})),me||(me=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport PieChart from "organism-react-d3-piechart";\n\nconst D3PieChartExample = (props) => {\n  let data = [\n    { value: 10, label: "xxx" },\n    { value: 30, label: "yyy" },\n  ];\n  return <PieChart data={data} style={{ maxWidth: 300 }} unit="" />;\n};\n\nexport default D3PieChartExample;\n',header:"D3 Pie Chart",children:Object(Pe.jsx)(Xo,{})})),be||(be=Object(Pe.jsx)(He.b,{code:'import React, { useEffect, useState } from "react";\nimport { FullScreenExample as FullScreen } from "organism-react-code";\nimport { StockChartCompute } from "organism-react-stockcharts";\nimport { ajaxDispatch } from "organism-react-ajax";\nimport { useMounted } from "reshow-hooks";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: "ajaxGet",\n      params: {\n        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id="full-page-stock-chart" button="open full screen">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n',header:"Stock Chart",children:Object(Pe.jsx)(sr,{})}))]})},D3UmlPerf:function D3UmlPerf(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"D3UmlPerf"})),Object(Pe.jsx)(Pe.Fragment,{children:pr||(pr=Object(Pe.jsx)(He.b,{code:'import React, { useRef, useState } from "react";\n\nimport { UMLGraph } from "organism-react-d3-uml";\nimport { Form, Field, Button } from "react-atomic-molecule";\nimport { Checkbox } from "react-atomic-organism";\n\nconst data = {\n  tables: [\n  ],\n  conns: [\n    {\n      from: {\n        table: "table1",\n        col: "t1-col1",\n      },\n      to: {\n        table: "table2",\n        col: "t2-col2",\n      },\n    },\n  ],\n};\n\nfor (let i = 1; i < 300; i++) {\n  data.tables.push(\n    {\n      name: `table${i}`,\n      cols: [`t${i}-col1`, `t${i}-col2`],\n    },\n  );\n}\n\nconst D3UmlPerfExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        style={{height: "50vh"}}\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: "border-box" }} className="equal width">\n        <Field>\n          <Field atom="input" label="x" name="x" />\n          <Field atom="input" label="y" name="y" />\n          <Field atom="input" label="k" name="k" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label="disable curve"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label="disable line delete"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label="disable node move"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlPerfExample;\n',header:"D3 Uml",id:"d3-uml",children:Object(Pe.jsx)(qr,{})}))})},Icons:function Icons(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Icons"})),Object(Pe.jsx)(Pe.Fragment,{children:Object(Pe.jsx)("div",{className:"pure-g",children:Eo.map((function(e,n){return Object(Pe.jsxs)("div",{className:"pure-u-1 pure-u-md-1-3 pure-u-lg-1-5",style:wo.grid,children:[Object(Pe.jsx)("div",{style:wo.icon,children:e[1]}),Object(Pe.jsx)("div",{children:e[0]})]},n)}))})})},List:function List(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"List"})),Object(Pe.jsxs)(Pe.Fragment,{children:[V||(V=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nconst rows = [\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n  ["a4", "b4", "c4"],\n  ["a5", "b5", "c5"],\n  ["a6", "b6", "c6"],\n];\n\nlet RVGrid = null;\n\nclass GridListExample extends PureComponent {\n  state = {\n    isLoad: false,\n  };\n\n  componentDidMount() {\n    import("pmvc_react_list/rv").then(({ RVGrid: rvGrid }) => {\n      RVGrid = rvGrid;\n      this.setState({ isLoad: true });\n    });\n  }\n\n  render() {\n    const { isLoad } = this.state;\n    let grid = null;\n    if (RVGrid && isLoad) {\n      const className = "grid"; // hack for disable const element\n      grid = (\n        <RVGrid\n          className={className}\n          width={200}\n          height={100}\n          rows={rows}\n          style={Styles.container}\n        />\n      );\n    }\n    return grid;\n  }\n}\n\nexport default GridListExample;\n\nconst Styles = {\n  container: {\n    border: "1px solid #000",\n  },\n};\n',header:"Grid List",children:Object(Pe.jsx)(Lo,{})})),z||(z=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Table, Cell, Column } from "pmvc_react_list";\n\nconst rows = [\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n];\n\nclass HtmlTableListExample extends PureComponent {\n  render() {\n    return (\n      <Table rows={rows}>\n        <Column\n          header={<Cell>h1</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h2</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h3</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][2];\n          }}\n        />\n      </Table>\n    );\n  }\n}\n\nexport default HtmlTableListExample;\n\nconst Styles = {\n  col: {\n    height: 40,\n  },\n};\n',header:"Html Table",children:Object(Pe.jsx)(Ao,{})})),q||(q=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Cell, Column } from "pmvc_react_list";\nimport Table from "pmvc_react_list/rv";\n\nconst rows = [\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n];\n\nclass ReactVirtualizedTableListExample extends PureComponent {\n  handleClick = (rowIndex) => (ev) => {\n    alert(rowIndex);\n  };\n\n  render() {\n    return (\n      <div style={{ width: "40%", height: 150 }}>\n        <Table rows={rows}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default ReactVirtualizedTableListExample;\n',header:"React Virgualized Table",children:Object(Pe.jsx)(Ho,{})})),W||(W=Object(Pe.jsx)(He.b,{code:'import React, { lazy, PureComponent } from "react";\n\nimport { Cell, Column } from "pmvc_react_list";\nconst Table = lazy(() => import(\'pmvc_react_list/fixedDataTable\'));\n\nconst rows = [\n  ["a1", "b1", "c1"],\n  ["a2", "b2", "c2"],\n  ["a3", "b3", "c3"],\n  ["a4", "b4", "c4"],\n  ["a5", "b5", "c5"],\n  ["a6", "b6", "c6"],\n];\n\nclass FixedDataTableListExample extends PureComponent {\n  render() {\n    return (\n      <div style={{ width: 350 }}>\n        <Table rows={rows} getColWidth={() => 150} height={150}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default FixedDataTableListExample;\n',header:"Fixed Data Table",children:Object(Pe.jsx)(Go,{})})),J||(J=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { PaginationController } from "organism-react-navigation";\n\nclass PaginationExample extends PureComponent {\n  handlePageChange = ({ begin }) => {\n    this.setState({ begin });\n  };\n\n  render() {\n    const { begin } = this.state || {};\n    return (\n      <PaginationController\n        style={Styles.container}\n        onPageChange={this.handlePageChange}\n        total={500}\n        begin={begin}\n      />\n    );\n  }\n}\n\nexport default PaginationExample;\n\nconst Styles = {\n  container: {\n    textAlign: "center",\n  },\n};\n',header:"Pagination",children:Object(Pe.jsx)(Uo,{})}))]})},Carousel:function CarouselPage(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Carousel"})),Object(Pe.jsxs)(Pe.Fragment,{children:[ae||(ae=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { Image } from "react-atomic-molecule";\nimport { Carousel, CarouselAnimation } from "organism-react-carousel";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src="https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"\n        />\n      </Carousel>\n      <Carousel>\n        <Image\n          style={Styles.img}\n          src="https://source.unsplash.com/random"\n        />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: "0 10%",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: "100%",\n    height,\n    background: "#00558B",\n  },\n  img: {\n    maxWidth: "100%",\n    maxHeight: "100%",\n    verticalAlign: "bottom",\n  },\n};\n',header:"Carousel Animation",git:"react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",npm:"organism-react-carousel",children:Object(Pe.jsx)(qo,{})})),ce||(ce=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { Carousel, CarouselAnimation } from "organism-react-carousel";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n      hideThumb\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src="https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: "0 10%",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: "100%",\n    height,\n    background: "#00558B",\n  },\n  img: {\n    maxWidth: "100%",\n    verticalAlign: "bottom",\n  },\n};\n',header:"Carousel Animation Hide Thumb",git:"react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",npm:"organism-react-carousel",children:Object(Pe.jsx)(Jo,{})})),le||(le=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { Carousel, CarouselSlide } from "organism-react-carousel";\n\nconst CarouselSlideExample = (props) => {\n  return (\n    <CarouselSlide\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src="https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselSlide>\n  );\n};\n\nexport default CarouselSlideExample;\n\nconst Styles = {\n  carousel: {\n    width: 300,\n    height: 300,\n    background: "#00558B",\n  },\n};\n',header:"Carousel Slide (WIP)",children:Object(Pe.jsx)(Yo,{})}))]})},Animation:function Animation(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Animation"})),Object(Pe.jsxs)(Pe.Fragment,{children:[mr||(mr=Object(Pe.jsx)(He.b,{code:'import React, { Component, cloneElement } from "react";\nimport Animate from "organism-react-animate";\n\nconst hello = <div>Hello world!!</div>;\n\nclass AnimationExample extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      dom: hello,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear="fadeInRight-3000"\n          enter="fadeInRight-3000"\n          leave="fadeOutRight-1000"\n        >\n          {this.state.dom}\n        </Animate>\n        <a\n          href="#"\n          style={{ marginLeft: "10px" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href="#"\n          style={{ marginLeft: "10px" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: hello,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationExample;\n',header:"Animation Sample",children:Object(Pe.jsx)(Kr,{})})),br||(br=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\n/**\n * Production please use\n * import Animate from "organism-react-animate"\n */\nimport { Replace } from "organism-react-animate";\n\nclass AnimationReplaceExample extends PureComponent {\n  render() {\n    return (\n      <Replace\n        enter="fadeInRight-2000"\n        leave="fadeOutRight-1000"\n        style={{ minHeight: 30, overflow: "hidden" }}\n      >\n        <div style={{ background: "#f4cc70" }}>1</div>\n        <div style={{ background: "#de7a22" }}>2</div>\n        <div style={{ background: "#20948b" }}>3</div>\n      </Replace>\n    );\n  }\n}\n\nexport default AnimationReplaceExample;\n',header:"Animation Replace Sample",children:Object(Pe.jsx)(Yr,{})})),jr||(jr=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\nimport Animate from "organism-react-animate";\n\nconst foo = <div>Hello</div>;\nconst bar = <div>world!!</div>;\n\nclass AnimationDelayExample extends PureComponent {\n  constructor(props) {\n    super(props);\n    this.state = {\n      foo,\n      bar,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear="fadeInRight-3000"\n          enter="fadeInRight-3000"\n          leave="fadeOutRight-1000"\n        >\n          {this.state.foo}\n        </Animate>\n        <Animate\n          appear="fadeInRight-3000-500"\n          enter="fadeInRight-3000-500"\n          leave="fadeOutRight-1000-500"\n        >\n          {this.state.bar}\n        </Animate>\n        <a\n          href="#"\n          style={{ marginLeft: "10px" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo: null,\n              bar: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href="#"\n          style={{ marginLeft: "10px" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo,\n              bar,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationDelayExample;\n',header:"Animation Delay Sample",children:Object(Pe.jsx)(Xr,{})}))]})},Popup:function Popup(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Popup"})),Object(Pe.jsxs)(Pe.Fragment,{children:[Cr||(Cr=Object(Pe.jsx)(He.b,{code:'import React, { useState } from "react";\nimport { Checkbox } from "react-atomic-organism";\n\n/**\n * Production please use\n * import {...xxx} from "organism-react-popup"\n */\nimport { Dialog, PopupModal, PopupClick } from "organism-react-popup";\n\nimport { Button } from "react-atomic-molecule";\n\nconst PopupExample = () => {\n  const [backgroundScrollAble, setBackgroundScrollAble] = useState(false);\n  return (\n    <div>\n      <PopupClick\n        style={Styles.click}\n        popup={() => {\n          return <PopupModal backgroundScroll={backgroundScrollAble}>xxx</PopupModal>;\n        }}\n        component={<a />}\n      >\n        show modal\n      </PopupClick>\n\n      <PopupClick\n        style={{ marginLeft: 5 }}\n        popup={<Dialog backgroundScroll={backgroundScrollAble} header="Test Header">Test Dialog</Dialog>}\n        component={<Button />}\n      >\n        show dialog\n      </PopupClick>\n      <Checkbox\n        toggle\n        label="Background scrollable"\n        onChange={({ checked }) => {\n          setBackgroundScrollAble(checked);\n        }}\n      />\n    </div>\n  );\n};\n\nexport default PopupExample;\n\nconst Styles = {\n  click: {\n    color: "blue",\n    textDecoration: "underline",\n  },\n};\n',header:"Popup Example",children:Object(Pe.jsx)($r,{})})),yr||(yr=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\nimport get from "get-object-value";\n\nimport { FullScreenExample as FullScreen } from "organism-react-code";\n\nclass FullScreenExample extends PureComponent {\n  render() {\n    return (\n      <FullScreen id="full-screen-example" button="open full screen">\n        test\n      </FullScreen>\n    );\n  }\n}\n\nexport default FullScreenExample;\n',header:"Full Screen Example",children:Object(Pe.jsx)(na,{})})),kr||(kr=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { AlertsNotifier, PopupClick } from "organism-react-popup";\n\nclass AlertsNotifierExample extends PureComponent {\n  render() {\n    return (\n      <PopupClick\n        style={Styles.click}\n        popup={() => (\n          <AlertsNotifier\n            position="bottom"\n            alerts={[\n              {\n                type: "info",\n                message: "test",\n              },\n            ]}\n          />\n        )}\n        component={<a />}\n      >\n        alert\n      </PopupClick>\n    );\n  }\n}\n\nexport default AlertsNotifierExample;\n\nconst Styles = {\n  click: {\n    color: "blue",\n    textDecoration: "underline",\n  },\n};\n',header:"Alerts Notifier Example",children:Object(Pe.jsx)(aa,{})})),Sr||(Sr=Object(Pe.jsx)(He.b,{code:'import React, { Component } from "react";\nimport { PopupHover, PopupOverlay } from "organism-react-popup";\n\nclass WindowOffsetExample extends Component {\n  handleClick = (e) => {\n    const target = e.currentTarget;\n    import("get-window-offset").then(({ default: getWindowOffset }) => {\n      const info = getWindowOffset(target);\n      console.log(info);\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <div style={Styles.row}>\n          <PopupHover popup="1" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              1\n            </div>\n          </PopupHover>\n          <PopupHover popup="2" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              2\n            </div>\n          </PopupHover>\n          <PopupHover popup="3" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              3\n            </div>\n          </PopupHover>\n        </div>\n        <div style={Styles.row}>\n          <PopupHover popup="4">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              4\n            </div>\n          </PopupHover>\n          <PopupHover popup="5">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              5\n            </div>\n          </PopupHover>\n          <PopupHover popup="6">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              6\n            </div>\n          </PopupHover>\n        </div>\n        <div style={{ width: 60 }}>\n          <PopupHover popup="7">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              7\n            </div>\n          </PopupHover>\n          <PopupHover popup="8">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              8\n            </div>\n          </PopupHover>\n          <PopupHover popup="9">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              9\n            </div>\n          </PopupHover>\n        </div>\n      </div>\n    );\n  }\n}\n\nexport default WindowOffsetExample;\n\nconst Styles = {\n  row: {\n    justifyContent: "space-around",\n    display: "flex",\n    marginBottom: 100,\n  },\n  col: {\n    width: 60,\n    height: 60,\n    lineHeight: "60px",\n    textAlign: "center",\n    color: "#fff",\n  },\n  col1: {\n    background: "#c00",\n  },\n  col2: {\n    background: "#095",\n  },\n  col3: {\n    background: "#059",\n  },\n};\n',header:"Detect Window Offset Example",id:"get-window-offset",children:Object(Pe.jsx)(la,{})})),Er||(Er=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Button } from "react-atomic-molecule";\n\nimport { PopupPool } from "organism-react-popup";\n\nimport { FullScreenExample } from "organism-react-code";\n\nimport Spotlight from "organism-react-spotlight";\n\nclass SpotlightExample extends PureComponent {\n  state = {\n    spotlight: false,\n  };\n\n  render() {\n    const { spotlight } = this.state;\n    let thisSpotlight = null;\n    if (spotlight) {\n      thisSpotlight = (\n        <Spotlight\n          toPool="spotlight-pool"\n          targetEl={this.spot}\n          onClose={() => {\n            this.setState({ spotlight: null });\n          }}\n        />\n      );\n    }\n    return (\n      <FullScreenExample\n        button="open full screen"\n        onClose={() => this.setState({ spotlight: null })}\n      >\n        <div ref={(el) => (this.spot = el)} style={Styles.el}>\n          Spotlight\n        </div>\n        <div>\n          <Button\n            onClick={() => {\n              this.setState({\n                spotlight: true,\n              });\n            }}\n          >\n            Try it.\n          </Button>\n        </div>\n        {thisSpotlight}\n        <PopupPool name="spotlight-pool" />\n      </FullScreenExample>\n    );\n  }\n}\n\nexport default SpotlightExample;\n\nconst Styles = {\n  el: {\n    display: "inline-block",\n    width: 100,\n    height: 200,\n    margin: 10,\n  },\n};\n',header:"Spotlight Example",children:Object(Pe.jsx)(oa,{})})),wr||(wr=Object(Pe.jsx)(He.b,{code:'import React, { PureComponent } from "react";\n\nimport { Button } from "react-atomic-molecule";\nimport { dispatch, Return } from "reshow";\n\nconst DialogResult = ({ dialogReturn }) =>\n  "undefined" !== typeof dialogReturn ? "Dialog: " + dialogReturn : null;\n\nclass ReshowMessageExample extends PureComponent {\n  handleAddAlert = (e) => {\n    dispatch("alert/add", {\n      message: "test",\n    });\n  };\n\n  handleResetAlert = (e) => {\n    dispatch("alert/reset", {\n      alerts: [1, 2, 3],\n    });\n  };\n\n  handleCleanAlert = (e) => {\n    dispatch("alert/reset", {\n      alerts: null,\n    });\n  };\n\n  handleOpenDialog = (e) => {\n    dispatch("dialog/start", {\n      dialog: "how are u",\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <p>\n          <Button onClick={this.handleAddAlert}>Add alert</Button>\n          <Button onClick={this.handleResetAlert}>Reset alert</Button>\n          <Button onClick={this.handleCleanAlert}>Clean all alerts</Button>\n        </p>\n        <p>\n          <Button onClick={this.handleOpenDialog}>Open Dialog</Button>\n          <Return initStates={["dialogReturn"]}>\n            <DialogResult />\n          </Return>\n        </p>\n      </div>\n    );\n  }\n}\n\nexport default ReshowMessageExample;\n',header:"Reshow Message Example",children:Object(Pe.jsx)(ua,{})}))]})},Parallax:function Parallax(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Parallax",tplProps:{className:"Parallax"}})),Fr=Object(Te.useLazyInject)(fa,Fr),Object(Pe.jsx)(Pe.Fragment,{children:Rr||(Rr=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { ParallaxBackgroundImage } from "organism-react-parallax";\n\nconst ParallaxBackgroundImageExample = () => (\n  <ParallaxBackgroundImage\n    style={Styles.container}\n    backgroundImage="https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg"\n  >\n    test\n  </ParallaxBackgroundImage>\n);\n\nexport default ParallaxBackgroundImageExample;\n\nconst Styles = {\n  container: {\n    height: 600,\n    color: "#fff",\n    textAlign: "center",\n    paddingTop: 200,\n  },\n};\n',header:"Parallax Example",children:Object(Pe.jsx)(ha,{})}))})},Video:function Video(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Video"})),Object(Pe.jsxs)(Pe.Fragment,{children:[Lr||(Lr=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { YoutubeRWD } from "organism-react-video";\n\nconst YouTubeRWDExample = () => <YoutubeRWD videoId="CjxugyZCfuw" />;\n\nexport default YouTubeRWDExample;\n',header:"YouTube RWD player",children:Object(Pe.jsx)(pa,{})})),Ir||(Ir=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport QQVideo from "organism-react-qq-video";\n\nconst QQVideoExample = () => <QQVideo videoId="j0792wzb6v8" />;\n\nexport default QQVideoExample;\n',header:"v.qq.com player",children:Object(Pe.jsx)(ba,{})}))]})},Code:function Code(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Code"})),Object(Pe.jsxs)(Pe.Fragment,{children:[Br||(Br=Object(Pe.jsx)(ga,{})),Tr||(Tr=Object(Pe.jsx)(He.b,{code:'import React from "react";\n\nimport { openCodeEditor } from "organism-react-codeeditor";\n\nconst CodeEditorExample = (props) => {\n  return <button onClick={() => openCodeEditor()}>open</button>;\n};\n\nexport default CodeEditorExample;\n',header:"Codemirror Example",children:Object(Pe.jsx)(va,{})}))]})},AsciiDoc:function AsciiDocPage(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"AsciiDoc"})),Object(Pe.jsx)(Pe.Fragment,{children:_r||(_r=Object(Pe.jsx)(He.b,{code:'import Asciidoc from "organism-react-asciidoc";\n\nconst adoc = `\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n`;\n\nconst AsciidocDemo = (props) => (\n  <Asciidoc options={{ doctype: "book" }}>{adoc}</Asciidoc>\n);\n\nexport default AsciidocDemo;\n',header:"Ascii Doc",edit:"https://codesandbox.io/s/8vj7x3m82",git:"react-atomic/react-atomic-organism/tree/main/packages/organism-react-asciidoc/",children:Object(Pe.jsx)(ya,{})}))})},GrapesJs:function GrapesJs(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"GrapesJs"})),Object(Pe.jsxs)(Pe.Fragment,{children:[Nr||(Nr=Object(Pe.jsx)(He.b,{code:'import React from "react";\nimport { GrapesJsController } from "organism-react-grapesjs";\n\nconst GrapesJsExample = () => (\n  <GrapesJsController style={Styles.container} debug />\n);\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600,\n  },\n};\n',header:"GrapesJs Example",edit:"https://codesandbox.io/s/organism-react-grapesjs-04mo7",git:"react-atomic/react-atomic-organism/tree/main/packages/organism-react-grapesjs/",children:Object(Pe.jsx)(Sa,{})})),Gr||(Gr=Object(Pe.jsx)(He.b,{code:'import React from "react";\n// import { Editor } from "organism-react-rte-writer";\nconst Editor = () => <div />;\n\nconst RTEExample = () => {\n  return <Editor />;\n};\n\nexport default RTEExample;\n\nconst Styles = {};\n',header:"RTE Example",children:Object(Pe.jsx)(Pa,{})}))]})},PDF:function PDF(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"PDF"})),Object(Pe.jsx)(Pe.Fragment,{children:Ur||(Ur=Object(Pe.jsx)(He.b,{code:'import React, { useState, useRef } from "react";\nimport { Unsafe, Field, Form, Button } from "react-atomic-molecule";\n\nimport { HTMLToPDF } from "organism-react-html2canvas";\n\nconst HTMLToCanvansExample = (props) => {\n  const [html, setHtml] = useState("");\n\n  const pdf = useRef();\n\n  const handleInput = (e) => {\n    const v = e.currentTarget.value;\n    setHtml(v);\n  };\n\n  const handleClick = (e) => {\n    if (pdf && pdf.current) {\n      pdf.current.download();\n    }\n  };\n\n  const handlePdf = (el) => (pdf.current = el);\n  return (\n    <div>\n      <Form className="equal width" style={{ boxSizing: "border-box" }}>\n        <Field atom="textarea" onInput={handleInput} />\n        <Button onClick={handleClick}>Download</Button>\n      </Form>\n      <HTMLToPDF preview autoGenCanvas ref={handlePdf}>\n        <Unsafe>{html}</Unsafe>\n      </HTMLToPDF>\n    </div>\n  );\n};\n\nexport default HTMLToCanvansExample;\n',header:"PDF Example",children:Object(Pe.jsx)(La,{})}))})},JSON:function JSON(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"JSON"})),Object(Pe.jsx)(Pe.Fragment,{children:Vr||(Vr=Object(Pe.jsx)(He.b,{code:'import React, { useState } from "react";\nimport prettyjson from "prettyjson";\n\nimport { Field, Form } from "react-atomic-molecule";\n\nimport { FormattedJSON } from "react-atomic-organism";\n\nconst QueryToJSON = (props) => {\n  const [json, setJson] = useState("");\n\n  const handleInput = (e) => {\n    const v = e.currentTarget.value;\n    const vArr = [...new URLSearchParams(v)];\n    const nextArr = [];\n    vArr.forEach((item) => {\n      nextArr.push({ [item[0]]: item[1] });\n    });\n    setJson(nextArr);\n  };\n\n  return (\n    <div>\n      <Form className="equal width" style={{ boxSizing: "border-box" }}>\n        <Field ui atom="textarea" onInput={handleInput} />\n        <FormattedJSON atom="div">{prettyjson.render(json)}</FormattedJSON>\n      </Form>\n    </div>\n  );\n};\n\nexport default QueryToJSON;\n',header:"Query To JSON",children:Object(Pe.jsx)(Aa,{})}))})},Tomato:function Tomato(e){return Be(Object(xe.a)(Object(xe.a)({},e),{},{pageName:"Tomato"})),Object(Pe.jsxs)(Pe.Fragment,{children:[qa||(qa=Object(Pe.jsx)(Qa,{})),Wa||(Wa=Object(Pe.jsx)(lc,{}))]})}};Object(Ce.b)("config/set",{initHandler:function initHandler(e,n){return console.log("init",e),e},actionHandler:function actionHandler(e,n){return console.log("action",n),e},impressionHandler:function impressionHandler(e,n){return console.log("view",e.get("pvid")),e}}),n["default"]=Object(he.a)((function Index(e){return Object(Pe.jsx)(fe.c,{initStates:["tplProps","pageName"],children:function children(n){var t=n.tplProps,o=n.pageName;return Object(Pe.jsxs)(Pe.Fragment,{children:[Object(Pe.jsxs)(Fe,Object(xe.a)(Object(xe.a)({},t),{},{className:o,children:[Object(Pe.jsx)(ge.a,Object(xe.a)(Object(xe.a)({},e),{},{themes:sc,defaultThemePath:"Atoms"})),Ja||(Ja=Object(Pe.jsx)(ve.a,{ajax:!0})),Ka||(Ka=Object(Pe.jsx)(Ce.a,{})),Ya||(Ya=Object(Pe.jsx)(fe.b,{}))]})),Za||(Za=Object(Pe.jsx)(Oe.i,{}))]})}})}))}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/
+/******/ 		return result;
+/******/ 	}
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		"main": 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
+/******/
+/******/ 	// script path function
+/******/ 	function jsonpScriptSrc(chunkId) {
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "55a43fd7cecfc011d4b7" + ".bundle.js"
+/******/ 	}
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		var promises = [];
+/******/
+/******/
+/******/ 		// JSONP chunk loading for javascript
+/******/
+/******/ 		var installedChunkData = installedChunks[chunkId];
+/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
+/******/
+/******/ 			// a Promise means "currently loading".
+/******/ 			if(installedChunkData) {
+/******/ 				promises.push(installedChunkData[2]);
+/******/ 			} else {
+/******/ 				// setup Promise in chunk cache
+/******/ 				var promise = new Promise(function(resolve, reject) {
+/******/ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
+/******/ 				});
+/******/ 				promises.push(installedChunkData[2] = promise);
+/******/
+/******/ 				// start chunk loading
+/******/ 				var script = document.createElement('script');
+/******/ 				var onScriptComplete;
+/******/
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.src = jsonpScriptSrc(chunkId);
+/******/
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
+/******/ 				onScriptComplete = function (event) {
+/******/ 					// avoid mem leaks in IE.
+/******/ 					script.onerror = script.onload = null;
+/******/ 					clearTimeout(timeout);
+/******/ 					var chunk = installedChunks[chunkId];
+/******/ 					if(chunk !== 0) {
+/******/ 						if(chunk) {
+/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 							var realSrc = event && event.target && event.target.src;
+/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
+/******/ 							error.type = errorType;
+/******/ 							error.request = realSrc;
+/******/ 							chunk[1](error);
+/******/ 						}
+/******/ 						installedChunks[chunkId] = undefined;
+/******/ 					}
+/******/ 				};
+/******/ 				var timeout = setTimeout(function(){
+/******/ 					onScriptComplete({ type: 'timeout', target: script });
+/******/ 				}, 120000);
+/******/ 				script.onerror = script.onload = onScriptComplete;
+/******/ 				document.head.appendChild(script);
+/******/ 			}
+/******/ 		}
+/******/ 		return Promise.all(promises);
+/******/ 	};
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/assets/";
+/******/
+/******/ 	// on error function for async loading
+/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
+/******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
+/******/
+/******/
+/******/ 	// add entry module to deferred list
+/******/ 	deferredModules.push(["./build/es/src/client.js","vendor"]);
+/******/ 	// run deferred modules when ready
+/******/ 	return checkDeferredModules();
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./build/es/src/client.js":
+/*!********************************!*\
+  !*** ./build/es/src/client.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_app_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-app/client */ "./node_modules/reshow-app/client.js");
+/* harmony import */ var _ui_pages_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/pages/index */ "./build/es/ui/pages/index.js");
+/* harmony import */ var _i13n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./i13n */ "./build/es/src/i13n.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(reshow_app_client__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_pages_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./build/es/src/i13n.js":
+/*!******************************!*\
+  !*** ./build/es/src/i13n.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! organism-react-i13n */ "./node_modules/organism-react-i13n/build/es/src/index.js");
+
+
+var actionHandler = function actionHandler(state, action) {
+  console.log("action", action);
+  return state;
+};
+
+var impressionHandler = function impressionHandler(state, action) {
+  console.log("view", state.get("pvid"));
+  return state;
+};
+
+var initHandler = function initHandler(state, action) {
+  console.log("init", state);
+  return state;
+};
+
+Object(organism_react_i13n__WEBPACK_IMPORTED_MODULE_0__["i13nDispatch"])("config/set", {
+  initHandler: initHandler,
+  actionHandler: actionHandler,
+  impressionHandler: impressionHandler
+});
+
+/***/ }),
+
+/***/ "./build/es/src/usePage.js":
+/*!*********************************!*\
+  !*** ./build/es/src/usePage.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+
+
+
+
+var init;
+
+var usePage = function usePage(props) {
+  var pageName = props.pageName,
+      tplProps = props.tplProps;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setTimeout(function () {
+      Object(organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__["navigationDispatch"])({
+        params: {
+          activeMenu: pageName
+        }
+      });
+      Object(reshow__WEBPACK_IMPORTED_MODULE_1__["dispatch"])({
+        tplProps: tplProps,
+        pageName: pageName
+      });
+    });
+
+    if (!init) {
+      init = 1;
+      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])("ajaxGet", {
+        url: "/data/env",
+        ini: true,
+        disableCacheBusting: true
+      });
+    }
+
+    return function () {
+      Object(organism_react_navigation__WEBPACK_IMPORTED_MODULE_2__["navigationDispatch"])({
+        params: {
+          activeMenu: null
+        }
+      });
+    };
+  }, []);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (usePage);
+
+/***/ }),
+
+/***/ "./build/es/ui/molecules/Menu.js":
+/*!***************************************!*\
+  !*** ./build/es/ui/molecules/Menu.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var pmvc_react_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pmvc_react_admin */ "./node_modules/pmvc_react_admin/build/es/src/index.js");
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _VerticalMenu;
+
+
+
+
+
+
+var keys = Object.keys;
+
+var Menu = function Menu(props) {
+  var thisMenus = {};
+  var themes = reshow__WEBPACK_IMPORTED_MODULE_3__["pageStore"].getMap("themes");
+  keys(themes).forEach(function (item) {
+    thisMenus[item] = {
+      ajax: false,
+      text: item,
+      href: "#/" + item
+    };
+  });
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_1__["SideMenu"], {
+    shrink: true,
+    menus: thisMenus,
+    linkComponent: reshow__WEBPACK_IMPORTED_MODULE_3__["ReLink"],
+    component: _VerticalMenu || (_VerticalMenu = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(pmvc_react_admin__WEBPACK_IMPORTED_MODULE_0__["VerticalMenu"], {}))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Menu);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/AjaxDownload.example.js":
+/*!*******************************************************!*\
+  !*** ./build/es/ui/organisms/AjaxDownload.example.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var ajax_save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ajax-save */ "./node_modules/ajax-save/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+var AjaxDownloadExample = function AjaxDownloadExample(props) {
+  var url = "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg";
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+    onClick: function onClick() {
+      Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])("ajaxGet", {
+        responseType: ["blob"],
+        url: url,
+        callback: function callback(json, text, o) {
+          Object(ajax_save__WEBPACK_IMPORTED_MODULE_4__["download"])(o.body, url.split("/").splice(-1)[0]);
+        }
+      });
+    },
+    children: "Ajax Download"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AjaxDownloadExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/AlertsNotifier.example.js":
+/*!*********************************************************!*\
+  !*** ./build/es/ui/organisms/AlertsNotifier.example.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _a;
+
+
+
+
+
+var AlertsNotifierExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(AlertsNotifierExample, _PureComponent);
+
+  function AlertsNotifierExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = AlertsNotifierExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["PopupClick"], {
+      style: Styles.click,
+      popup: function popup() {
+        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["AlertsNotifier"], {
+          position: "bottom",
+          alerts: [{
+            type: "info",
+            message: "test"
+          }]
+        });
+      },
+      component: _a || (_a = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {})),
+      children: "alert"
+    });
+  };
+
+  return AlertsNotifierExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AlertsNotifierExample);
+var Styles = {
+  click: {
+    color: "blue",
+    textDecoration: "underline"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Animation.example.js":
+/*!****************************************************!*\
+  !*** ./build/es/ui/organisms/Animation.example.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+var hello = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+  children: "Hello world!!"
+});
+
+var AnimationExample = /*#__PURE__*/function (_Component) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(AnimationExample, _Component);
+
+  function AnimationExample(props) {
+    var _this;
+
+    _this = _Component.call(this, props) || this;
+    _this.state = {
+      dom: hello
+    };
+    return _this;
+  }
+
+  var _proto = AnimationExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_animate__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        appear: "fadeInRight-3000",
+        enter: "fadeInRight-3000",
+        leave: "fadeOutRight-1000",
+        children: this.state.dom
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+        href: "#",
+        style: {
+          marginLeft: "10px"
+        },
+        onClick: function (e) {
+          e.preventDefault();
+
+          _this2.setState({
+            dom: null
+          });
+        }.bind(this),
+        children: "leave"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+        href: "#",
+        style: {
+          marginLeft: "10px"
+        },
+        onClick: function (e) {
+          e.preventDefault();
+
+          _this2.setState({
+            dom: hello
+          });
+        }.bind(this),
+        children: "enter"
+      })]
+    });
+  };
+
+  return AnimationExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AnimationExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/AnimationDelay.example.js":
+/*!*********************************************************!*\
+  !*** ./build/es/ui/organisms/AnimationDelay.example.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+var foo = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+  children: "Hello"
+});
+
+var bar = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+  children: "world!!"
+});
+
+var AnimationDelayExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(AnimationDelayExample, _PureComponent);
+
+  function AnimationDelayExample(props) {
+    var _this;
+
+    _this = _PureComponent.call(this, props) || this;
+    _this.state = {
+      foo: foo,
+      bar: bar
+    };
+    return _this;
+  }
+
+  var _proto = AnimationDelayExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_animate__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        appear: "fadeInRight-3000",
+        enter: "fadeInRight-3000",
+        leave: "fadeOutRight-1000",
+        children: this.state.foo
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_animate__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        appear: "fadeInRight-3000-500",
+        enter: "fadeInRight-3000-500",
+        leave: "fadeOutRight-1000-500",
+        children: this.state.bar
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+        href: "#",
+        style: {
+          marginLeft: "10px"
+        },
+        onClick: function (e) {
+          e.preventDefault();
+
+          _this2.setState({
+            foo: null,
+            bar: null
+          });
+        }.bind(this),
+        children: "leave"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("a", {
+        href: "#",
+        style: {
+          marginLeft: "10px"
+        },
+        onClick: function (e) {
+          e.preventDefault();
+
+          _this2.setState({
+            foo: foo,
+            bar: bar
+          });
+        }.bind(this),
+        children: "enter"
+      })]
+    });
+  };
+
+  return AnimationDelayExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AnimationDelayExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/AnimationReplace.example.js":
+/*!***********************************************************!*\
+  !*** ./build/es/ui/organisms/AnimationReplace.example.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var organism_react_animate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-animate */ "./node_modules/organism-react-animate/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+/**
+ * Production please use
+ * import Animate from "organism-react-animate"
+ */
+
+
+
+
+
+var AnimationReplaceExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(AnimationReplaceExample, _PureComponent);
+
+  function AnimationReplaceExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = AnimationReplaceExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])(organism_react_animate__WEBPACK_IMPORTED_MODULE_2__["Replace"], {
+      enter: "fadeInRight-2000",
+      leave: "fadeOutRight-1000",
+      style: {
+        minHeight: 30,
+        overflow: "hidden"
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+        style: {
+          background: "#f4cc70"
+        },
+        children: "1"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+        style: {
+          background: "#de7a22"
+        },
+        children: "2"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+        style: {
+          background: "#20948b"
+        },
+        children: "3"
+      })]
+    });
+  };
+
+  return AnimationReplaceExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AnimationReplaceExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/AsciiDoc.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/AsciiDoc.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var organism_react_asciidoc__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! organism-react-asciidoc */ "./node_modules/organism-react-asciidoc/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var adoc = "\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n";
+
+var AsciidocDemo = function AsciidocDemo(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])(organism_react_asciidoc__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    options: {
+      doctype: "book"
+    },
+    children: adoc
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AsciidocDemo);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/CarouselAnimation.example.js":
+/*!************************************************************!*\
+  !*** ./build/es/ui/organisms/CarouselAnimation.example.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+var _Carousel, _Carousel2, _Carousel3;
+
+
+
+
+
+
+
+var CarouselAnimationExample = function CarouselAnimationExample(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["CarouselAnimation"], {
+    carouselAttr: {
+      style: Styles.carousel
+    },
+    carouselListStyle: Styles.carouselList,
+    style: Styles.container,
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("img", {
+        style: Styles.img,
+        src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
+      })
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+        style: Styles.img,
+        src: "https://source.unsplash.com/random"
+      })
+    }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+      children: "3"
+    })), _Carousel2 || (_Carousel2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+      children: "4"
+    })), _Carousel3 || (_Carousel3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"], {
+      children: "5"
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselAnimationExample);
+var height = 300;
+var Styles = {
+  container: {
+    margin: "0 10%"
+  },
+  carouselList: {
+    minHeight: height + 5
+  },
+  carousel: {
+    width: "100%",
+    height: height,
+    background: "#00558B"
+  },
+  img: {
+    maxWidth: "100%",
+    maxHeight: "100%",
+    verticalAlign: "bottom"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/CarouselAnimationHideThumb.example.js":
+/*!*********************************************************************!*\
+  !*** ./build/es/ui/organisms/CarouselAnimationHideThumb.example.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _Carousel, _Carousel2, _Carousel3, _Carousel4;
+
+
+
+
+
+
+var CarouselAnimationExample = function CarouselAnimationExample(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["CarouselAnimation"], {
+    carouselAttr: {
+      style: Styles.carousel
+    },
+    carouselListStyle: Styles.carouselList,
+    style: Styles.container,
+    hideThumb: true,
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
+        style: Styles.img,
+        src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
+      })
+    }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "2"
+    })), _Carousel2 || (_Carousel2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "3"
+    })), _Carousel3 || (_Carousel3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "4"
+    })), _Carousel4 || (_Carousel4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "5"
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselAnimationExample);
+var height = 300;
+var Styles = {
+  container: {
+    margin: "0 10%"
+  },
+  carouselList: {
+    minHeight: height + 5
+  },
+  carousel: {
+    width: "100%",
+    height: height,
+    background: "#00558B"
+  },
+  img: {
+    maxWidth: "100%",
+    verticalAlign: "bottom"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/CarouselSlide.example.js":
+/*!********************************************************!*\
+  !*** ./build/es/ui/organisms/CarouselSlide.example.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-carousel */ "./node_modules/organism-react-carousel/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _Carousel, _Carousel2, _Carousel3, _Carousel4;
+
+
+
+
+
+
+var CarouselSlideExample = function CarouselSlideExample(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["CarouselSlide"], {
+    carouselAttr: {
+      style: Styles.carousel
+    },
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("img", {
+        style: Styles.img,
+        src: "https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg"
+      })
+    }), _Carousel || (_Carousel = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "2"
+    })), _Carousel2 || (_Carousel2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "3"
+    })), _Carousel3 || (_Carousel3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "4"
+    })), _Carousel4 || (_Carousel4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_carousel__WEBPACK_IMPORTED_MODULE_1__["Carousel"], {
+      children: "5"
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselSlideExample);
+var Styles = {
+  carousel: {
+    width: 300,
+    height: 300,
+    background: "#00558B"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Checkbox.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/Checkbox.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _Form;
+
+
+
+
+
+
+
+var CheckboxExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(CheckboxExample, _PureComponent);
+
+  function CheckboxExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = CheckboxExample.prototype;
+
+  _proto.render = function render() {
+    return _Form || (_Form = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+        type: "radio"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+        toggle: true
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+        slider: true
+      })]
+    }));
+  };
+
+  return CheckboxExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (CheckboxExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/CodeEditor.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/CodeEditor.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_codeeditor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-codeeditor */ "./node_modules/organism-react-codeeditor/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var CodeEditorExample = function CodeEditorExample(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("button", {
+    onClick: function onClick() {
+      return Object(organism_react_codeeditor__WEBPACK_IMPORTED_MODULE_1__["openCodeEditor"])();
+    },
+    children: "open"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CodeEditorExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/CodeExample.example.js":
+/*!******************************************************!*\
+  !*** ./build/es/ui/organisms/CodeExample.example.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _raw_loader_ui_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CodeExample.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeExample.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+var _CodeExample;
+
+
+/**
+ * Production please use
+ * import CodeExample from 'organism-react-code'
+ */
+
+
+/**
+ * Your source code.
+ * npm i raw-loader
+ */
+
+
+
+
+var CodeExampleExample = function CodeExampleExample(props) {
+  return _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    code: _raw_loader_ui_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_2__["default"],
+    header: "Test Header",
+    git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/",
+    npm: "organism-react-code",
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      children: "Test Demo Area"
+    })
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CodeExampleExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3AreaChart.example.js":
+/*!******************************************************!*\
+  !*** ./build/es/ui/organisms/D3AreaChart.example.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-axis-chart */ "./node_modules/organism-react-d3-axis-chart/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var data = [{
+  values: [{
+    x: "2019-01",
+    y: 100
+  }, {
+    x: "2019-02",
+    y: 450
+  }, {
+    x: "2019-03",
+    y: 450
+  }, {
+    x: "2019-04",
+    y: 0
+  }, {
+    x: "2019-05",
+    y: 0
+  }]
+}];
+
+var D3AreaChart = function D3AreaChart(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__["AreaChart"], {
+    data: data,
+    style: {
+      maxHeight: 450
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3AreaChart);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3BarChart.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/D3BarChart.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-axis-chart */ "./node_modules/organism-react-d3-axis-chart/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var D3BarChart = function D3BarChart(props) {
+  var data = [{
+    values: [{
+      x: "2013-01",
+      y: 53
+    }, {
+      x: "2013-02",
+      y: 165
+    }, {
+      x: "2013-03",
+      y: 269
+    }]
+  }];
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__["BarChart"], {
+    data: data,
+    style: {
+      maxHeight: 450
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3BarChart);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3LineChart.example.js":
+/*!******************************************************!*\
+  !*** ./build/es/ui/organisms/D3LineChart.example.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-axis-chart */ "./node_modules/organism-react-d3-axis-chart/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var D3LineChart = function D3LineChart(props) {
+  var data = [{
+    values: [{
+      x: "2013-01",
+      y: 100
+    }, {
+      x: "2013-02",
+      y: 450
+    }, {
+      x: "2013-01",
+      y: 450
+    }]
+  }];
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_d3_axis_chart__WEBPACK_IMPORTED_MODULE_1__["LineChart"], {
+    data: data,
+    style: {
+      maxHeight: 450
+    },
+    hideAxis: true,
+    thresholds: [200]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3LineChart);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3PieChart.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/D3PieChart.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_piechart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-piechart */ "./node_modules/organism-react-d3-piechart/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var D3PieChartExample = function D3PieChartExample(props) {
+  var data = [{
+    value: 10,
+    label: "xxx"
+  }, {
+    value: 30,
+    label: "yyy"
+  }];
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_d3_piechart__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: data,
+    style: {
+      maxWidth: 300
+    },
+    unit: ""
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3PieChartExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3Uml.example.js":
+/*!************************************************!*\
+  !*** ./build/es/ui/organisms/D3Uml.example.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-uml */ "./node_modules/organism-react-d3-uml/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _Field;
+
+
+
+
+
+
+
+var data = {
+  tables: [{
+    name: "table1",
+    cols: ["t1-col1", "t1-col2"]
+  }, {
+    name: "table2",
+    cols: ["t2-col1", "t2-col2"]
+  }],
+  conns: [{
+    from: {
+      table: "table1",
+      col: "t1-col1"
+    },
+    to: {
+      table: "table2",
+      col: "t2-col2"
+    }
+  }]
+};
+
+var D3UmlExample = function D3UmlExample() {
+  var uml = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDisableCurve = _useState[0],
+      setIsDisableCurve = _useState[1];
+
+  var handleUml = function handleUml(el) {
+    return uml.current = el;
+  };
+
+  var handleUpdate = function handleUpdate(e) {
+    var t = e.currentTarget || {};
+    var fm = t.form;
+    uml.current.zoom.setXYK({
+      x: fm.x.value || null,
+      y: fm.y.value || null,
+      k: fm.k.value || null
+    });
+  };
+
+  var handleZoom = function handleZoom(e) {//  console.log(e.zoom.getXYK());
+  };
+
+  var isDisableDel;
+  var isDisableMove;
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__["UMLGraph"], {
+      onZoom: handleZoom,
+      ref: handleUml,
+      data: data,
+      lineDefaultProps: {
+        curve: !isDisableCurve
+      },
+      connsLocator: function connsLocator(d) {
+        return d.conns;
+      },
+      connFromBoxGroupLocator: function connFromBoxGroupLocator(d) {
+        return d.from.table;
+      },
+      connFromBoxLocator: function connFromBoxLocator(d) {
+        return d.from.col;
+      },
+      connToBoxGroupLocator: function connToBoxGroupLocator(d) {
+        return d.to.table;
+      },
+      connToBoxLocator: function connToBoxLocator(d) {
+        return d.to.col;
+      },
+      onBoxWillDrag: function onBoxWillDrag(e) {
+        return !isDisableMove.getChecked().input;
+      },
+      onLineDel: function onLineDel(e) {
+        console.log({
+          e: e
+        });
+        return !isDisableDel.getChecked().input;
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      style: {
+        boxSizing: "border-box"
+      },
+      className: "equal width",
+      children: [_Field || (_Field = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "x",
+          name: "x"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "y",
+          name: "y"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "k",
+          name: "k"
+        })]
+      })), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          toggle: true,
+          label: "disable curve",
+          onChange: function onChange(_ref) {
+            var checked = _ref.checked;
+            setIsDisableCurve(checked);
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          label: "disable line delete",
+          ref: function ref(el) {
+            return isDisableDel = el;
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          label: "disable node move",
+          ref: function ref(el) {
+            return isDisableMove = el;
+          }
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        onClick: handleUpdate,
+        children: "update"
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3UmlExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/D3UmlPerf.example.js":
+/*!****************************************************!*\
+  !*** ./build/es/ui/organisms/D3UmlPerf.example.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-d3-uml */ "./node_modules/organism-react-d3-uml/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _Field;
+
+
+
+
+
+
+
+var data = {
+  tables: [],
+  conns: [{
+    from: {
+      table: "table1",
+      col: "t1-col1"
+    },
+    to: {
+      table: "table2",
+      col: "t2-col2"
+    }
+  }]
+};
+
+for (var i = 1; i < 300; i++) {
+  data.tables.push({
+    name: "table" + i,
+    cols: ["t" + i + "-col1", "t" + i + "-col2"]
+  });
+}
+
+var D3UmlPerfExample = function D3UmlPerfExample() {
+  var uml = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDisableCurve = _useState[0],
+      setIsDisableCurve = _useState[1];
+
+  var handleUml = function handleUml(el) {
+    return uml.current = el;
+  };
+
+  var handleUpdate = function handleUpdate(e) {
+    var t = e.currentTarget || {};
+    var fm = t.form;
+    uml.current.zoom.setXYK({
+      x: fm.x.value || null,
+      y: fm.y.value || null,
+      k: fm.k.value || null
+    });
+  };
+
+  var handleZoom = function handleZoom(e) {//  console.log(e.zoom.getXYK());
+  };
+
+  var isDisableDel;
+  var isDisableMove;
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_d3_uml__WEBPACK_IMPORTED_MODULE_1__["UMLGraph"], {
+      style: {
+        height: "50vh"
+      },
+      onZoom: handleZoom,
+      ref: handleUml,
+      data: data,
+      lineDefaultProps: {
+        curve: !isDisableCurve
+      },
+      connsLocator: function connsLocator(d) {
+        return d.conns;
+      },
+      connFromBoxGroupLocator: function connFromBoxGroupLocator(d) {
+        return d.from.table;
+      },
+      connFromBoxLocator: function connFromBoxLocator(d) {
+        return d.from.col;
+      },
+      connToBoxGroupLocator: function connToBoxGroupLocator(d) {
+        return d.to.table;
+      },
+      connToBoxLocator: function connToBoxLocator(d) {
+        return d.to.col;
+      },
+      onBoxWillDrag: function onBoxWillDrag(e) {
+        return !isDisableMove.getChecked().input;
+      },
+      onLineDel: function onLineDel(e) {
+        console.log({
+          e: e
+        });
+        return !isDisableDel.getChecked().input;
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      style: {
+        boxSizing: "border-box"
+      },
+      className: "equal width",
+      children: [_Field || (_Field = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "x",
+          name: "x"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "y",
+          name: "y"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+          atom: "input",
+          label: "k",
+          name: "k"
+        })]
+      })), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          toggle: true,
+          label: "disable curve",
+          onChange: function onChange(_ref) {
+            var checked = _ref.checked;
+            setIsDisableCurve(checked);
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          label: "disable line delete",
+          ref: function ref(el) {
+            return isDisableDel = el;
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+          label: "disable node move",
+          ref: function ref(el) {
+            return isDisableMove = el;
+          }
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        onClick: handleUpdate,
+        children: "update"
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3UmlPerfExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Dropzone.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/Dropzone.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var organism_react_dropzone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-dropzone */ "./node_modules/organism-react-dropzone/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+
+var DropzoneExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(DropzoneExample, _PureComponent);
+
+  function DropzoneExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
+      urls: []
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleClick", function () {
+      _this.dropzone.openDialog();
+    });
+
+    return _this;
+  }
+
+  var _proto = DropzoneExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var urls = this.state.urls;
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_dropzone__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        ref: function ref(el) {
+          return _this2.dropzone = el;
+        },
+        acceptedFiles: ".png, .jpg",
+        showFiletypeIcon: true,
+        postUrl: "https://file.io",
+        djsConfig: {
+          addRemoveLinks: true
+        },
+        eventHandlers: {
+          success: function success(file) {
+            _this2.setState(function (_ref) {
+              var urls = _ref.urls;
+              var req = Object(get_object_value__WEBPACK_IMPORTED_MODULE_5__["default"])(file, ["xhr", "response"]);
+
+              if (req) {
+                var json = JSON.parse(req);
+                urls.push(json.link);
+              }
+
+              return urls;
+            });
+          }
+        }
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("ul", {
+        children: urls.map(function (url, key) {
+          return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("li", {
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("a", {
+              href: url,
+              target: "_blank",
+              children: url
+            })
+          }, key);
+        })
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("button", {
+        onClick: this.handleClick,
+        children: "open"
+      })]
+    });
+  };
+
+  return DropzoneExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (DropzoneExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/ErrorForm.example.js":
+/*!****************************************************!*\
+  !*** ./build/es/ui/organisms/ErrorForm.example.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+var options = [{
+  label: "Boy",
+  value: "boy"
+}, {
+  label: "Girl",
+  value: "girl"
+}];
+
+var DropdownExample = function DropdownExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(),
+      value = _useState[0],
+      setValue = _useState[1];
+
+  var MyList = function MyList(props) {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Menu"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Item"], {
+        onClick: function onClick() {
+          return setValue("Boy");
+        },
+        children: "Boy"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Item"], {
+        onClick: function onClick() {
+          return setValue("Girl");
+        },
+        children: "Girl"
+      })]
+    }));
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    inputComponent: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["Dropdown"], {
+      style: Styles.dropdown,
+      list: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(MyList, {}),
+      children: ["You-select ", value]
+    })
+  }));
+};
+
+var ErrorFormExample = function ErrorFormExample() {
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      isError = _useState2[0],
+      setIsError = _useState2[1];
+
+  var handleChange = function handleChange(e) {
+    setIsError(e.checked ? true : false);
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["SemanticUI"], {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      messageType: isError ? "error" : "",
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(DropdownExample, {
+        messageType: isError ? "error" : "",
+        label: "Dropdown: "
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["SelectField"], {
+        messageType: isError ? "error" : "",
+        label: "Selection: ",
+        options: options,
+        placeholder: "not-select-yet"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_4__["Checkbox"], {
+          label: "Error Style",
+          toggle: true,
+          onChange: handleChange
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ErrorFormExample);
+var Styles = {
+  dropdown: {
+    marginLeft: 10
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/FBLike.example.js":
+/*!*************************************************!*\
+  !*** ./build/es/ui/organisms/FBLike.example.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-facebook */ "./node_modules/organism-react-facebook/build/src/index.js");
+/* harmony import */ var organism_react_facebook__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _FBLike;
+
+
+
+
+
+var FBLikeExample = function FBLikeExample(props) {
+  return _FBLike || (_FBLike = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__["FBLike"], {
+    page: "https://www.facebook.com/react"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FBLikeExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/FBPage.example.js":
+/*!*************************************************!*\
+  !*** ./build/es/ui/organisms/FBPage.example.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-facebook */ "./node_modules/organism-react-facebook/build/src/index.js");
+/* harmony import */ var organism_react_facebook__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _FBPage;
+
+
+
+
+
+var FBPageExample = function FBPageExample(props) {
+  return _FBPage || (_FBPage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_facebook__WEBPACK_IMPORTED_MODULE_1__["FBPage"], {
+    page: "react"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FBPageExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/FixedDataTableList.example.js":
+/*!*************************************************************!*\
+  !*** ./build/es/ui/organisms/FixedDataTableList.example.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pmvc_react_list */ "./node_modules/pmvc_react_list/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _Cell, _Cell2, _Cell3;
+
+
+
+
+
+var Table = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__["lazy"])(function () {
+  return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! pmvc_react_list/fixedDataTable */ "./node_modules/pmvc_react_list/fixedDataTable.js", 7));
+});
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a4", "b4", "c4"], ["a5", "b5", "c5"], ["a6", "b6", "c6"]];
+
+var FixedDataTableListExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(FixedDataTableListExample, _PureComponent);
+
+  function FixedDataTableListExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = FixedDataTableListExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      style: {
+        width: 350
+      },
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])(Table, {
+        rows: rows,
+        getColWidth: function getColWidth() {
+          return 150;
+        },
+        height: 150,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+          header: _Cell || (_Cell = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+            children: "h1"
+          })),
+          cell: function cell(_ref) {
+            var rowIndex = _ref.rowIndex,
+                columnIndex = _ref.columnKey;
+            return rows[rowIndex][columnIndex];
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+          header: _Cell2 || (_Cell2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+            children: "h2"
+          })),
+          cell: function cell(_ref2) {
+            var rowIndex = _ref2.rowIndex,
+                columnIndex = _ref2.columnKey;
+            return rows[rowIndex][columnIndex];
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+          header: _Cell3 || (_Cell3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+            children: "h3"
+          })),
+          cell: function cell(_ref3) {
+            var rowIndex = _ref3.rowIndex,
+                columnIndex = _ref3.columnKey;
+            return rows[rowIndex][columnIndex];
+          }
+        })]
+      })
+    });
+  };
+
+  return FixedDataTableListExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (FixedDataTableListExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/FullScreen.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/FullScreen.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _FullScreen;
+
+
+
+
+
+
+var FullScreenExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(FullScreenExample, _PureComponent);
+
+  function FullScreenExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = FullScreenExample.prototype;
+
+  _proto.render = function render() {
+    return _FullScreen || (_FullScreen = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_3__["FullScreenExample"], {
+      id: "full-screen-example",
+      button: "open full screen",
+      children: "test"
+    }));
+  };
+
+  return FullScreenExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (FullScreenExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/GrapesJs.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/GrapesJs.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_grapesjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-grapesjs */ "./node_modules/organism-react-grapesjs/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var GrapesJsExample = function GrapesJsExample() {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_grapesjs__WEBPACK_IMPORTED_MODULE_1__["GrapesJsController"], {
+    style: Styles.container,
+    debug: true
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (GrapesJsExample);
+var Styles = {
+  container: {
+    minHeight: 600
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/GridList.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/GridList.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a4", "b4", "c4"], ["a5", "b5", "c5"], ["a6", "b6", "c6"]];
+var RVGrid = null;
+
+var GridListExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(GridListExample, _PureComponent);
+
+  function GridListExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
+      isLoad: false
+    });
+
+    return _this;
+  }
+
+  var _proto = GridListExample.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
+    Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! pmvc_react_list/rv */ "./node_modules/pmvc_react_list/rv.js", 7)).then(function (_ref) {
+      var rvGrid = _ref.RVGrid;
+      RVGrid = rvGrid;
+
+      _this2.setState({
+        isLoad: true
+      });
+    });
+  };
+
+  _proto.render = function render() {
+    var isLoad = this.state.isLoad;
+    var grid = null;
+
+    if (RVGrid && isLoad) {
+      var className = "grid"; // hack for disable const element
+
+      grid = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(RVGrid, {
+        className: className,
+        width: 200,
+        height: 100,
+        rows: rows,
+        style: Styles.container
+      });
+    }
+
+    return grid;
+  };
+
+  return GridListExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (GridListExample);
+var Styles = {
+  container: {
+    border: "1px solid #000"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/HTMLToCanvans.example.js":
+/*!********************************************************!*\
+  !*** ./build/es/ui/organisms/HTMLToCanvans.example.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_html2canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-html2canvas */ "./node_modules/organism-react-html2canvas/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+var HTMLToCanvansExample = function HTMLToCanvansExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      html = _useState[0],
+      setHtml = _useState[1];
+
+  var pdf = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  var handleInput = function handleInput(e) {
+    var v = e.currentTarget.value;
+    setHtml(v);
+  };
+
+  var handleClick = function handleClick(e) {
+    if (pdf && pdf.current) {
+      pdf.current.download();
+    }
+  };
+
+  var handlePdf = function handlePdf(el) {
+    return pdf.current = el;
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+      className: "equal width",
+      style: {
+        boxSizing: "border-box"
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Field"], {
+        atom: "textarea",
+        onInput: handleInput
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        onClick: handleClick,
+        children: "Download"
+      })]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_html2canvas__WEBPACK_IMPORTED_MODULE_2__["HTMLToPDF"], {
+      preview: true,
+      autoGenCanvas: true,
+      ref: handlePdf,
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Unsafe"], {
+        children: html
+      })
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HTMLToCanvansExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/HtmlTableList.example.js":
+/*!********************************************************!*\
+  !*** ./build/es/ui/organisms/HtmlTableList.example.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pmvc_react_list */ "./node_modules/pmvc_react_list/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _Cell, _Cell2, _Cell3;
+
+
+
+
+
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"]];
+
+var HtmlTableListExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(HtmlTableListExample, _PureComponent);
+
+  function HtmlTableListExample() {
+    return _PureComponent.apply(this, arguments) || this;
+  }
+
+  var _proto = HtmlTableListExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Table"], {
+      rows: rows,
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+        header: _Cell || (_Cell = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+          children: "h1"
+        })),
+        cell: function cell(_ref) {
+          var rowIndex = _ref.rowIndex,
+              columnIndex = _ref.columnIndex;
+          return rows[rowIndex][columnIndex];
+        }
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+        header: _Cell2 || (_Cell2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+          children: "h2"
+        })),
+        cell: function cell(_ref2) {
+          var rowIndex = _ref2.rowIndex,
+              columnIndex = _ref2.columnIndex;
+          return rows[rowIndex][columnIndex];
+        }
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+        header: _Cell3 || (_Cell3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_2__["Cell"], {
+          children: "h3"
+        })),
+        cell: function cell(_ref3) {
+          var rowIndex = _ref3.rowIndex,
+              columnIndex = _ref3.columnIndex;
+          return rows[rowIndex][2];
+        }
+      })]
+    });
+  };
+
+  return HtmlTableListExample;
+}(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (HtmlTableListExample);
+var Styles = {
+  col: {
+    height: 40
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/PageLoadProgressHandler.example.js":
+/*!******************************************************************!*\
+  !*** ./build/es/ui/organisms/PageLoadProgressHandler.example.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(props) {
+  var oLoad;
+  var dInput;
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_1__["PageLoadProgressHandler"], {
+      ref: function ref(o) {
+        return oLoad = o;
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        style: Styles.button,
+        onClick: function onClick() {
+          oLoad.start(100, 800);
+        },
+        children: "Start"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        style: Styles.button,
+        onClick: function onClick() {
+          oLoad.pause();
+        },
+        children: "Pause"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        style: Styles.button,
+        onClick: function onClick() {
+          oLoad.complete();
+        },
+        children: "Complete"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        style: Styles.button,
+        onClick: function onClick() {
+          oLoad.reset();
+        },
+        children: "Reset"
+      })]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["InputBox"], {
+        leftLabel: "Pause @",
+        rightLabel: "%",
+        refCb: function refCb(o) {
+          return dInput = o;
+        },
+        button: "Go",
+        actionProps: {
+          onClick: function onClick() {
+            oLoad.start(dInput.value);
+          }
+        },
+        style: Styles.input
+      })
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PageLoadProgressHandlerExample);
+var Styles = {
+  input: {
+    width: 20
+  },
+  button: {
+    marginBottom: 10
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/PageLoadProgressHandlerWithAjax.example.js":
+/*!**************************************************************************!*\
+  !*** ./build/es/ui/organisms/PageLoadProgressHandlerWithAjax.example.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _PageLoadProgressHand;
+
+
+
+
+
+
+
+
+var PageLoadProgressHandlerExample = function PageLoadProgressHandlerExample(props) {
+  var url = "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md";
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: [_PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_1__["PageLoadProgressHandler"], {
+      ajax: true
+    })), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+      onClick: function onClick() {
+        Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_2__["ajaxDispatch"])({
+          type: "ajaxGet",
+          params: {
+            url: url,
+            callback: function callback(json, text, o) {
+              alert(text);
+            }
+          }
+        });
+      },
+      children: "Call Ajax"
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PageLoadProgressHandlerExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Pagination.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/Pagination.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+var PaginationExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(PaginationExample, _PureComponent);
+
+  function PaginationExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handlePageChange", function (_ref) {
+      var begin = _ref.begin;
+
+      _this.setState({
+        begin: begin
+      });
+    });
+
+    return _this;
+  }
+
+  var _proto = PaginationExample.prototype;
+
+  _proto.render = function render() {
+    var _ref2 = this.state || {},
+        begin = _ref2.begin;
+
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_4__["PaginationController"], {
+      style: Styles.container,
+      onPageChange: this.handlePageChange,
+      total: 500,
+      begin: begin
+    });
+  };
+
+  return PaginationExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (PaginationExample);
+var Styles = {
+  container: {
+    textAlign: "center"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/ParallaxBackgroundImage.example.js":
+/*!******************************************************************!*\
+  !*** ./build/es/ui/organisms/ParallaxBackgroundImage.example.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_parallax__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-parallax */ "./node_modules/organism-react-parallax/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ParallaxBackgroundImageExample = function ParallaxBackgroundImageExample() {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_parallax__WEBPACK_IMPORTED_MODULE_1__["ParallaxBackgroundImage"], {
+    style: Styles.container,
+    backgroundImage: "https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg",
+    children: "test"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ParallaxBackgroundImageExample);
+var Styles = {
+  container: {
+    height: 600,
+    color: "#fff",
+    textAlign: "center",
+    paddingTop: 200
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Popup.example.js":
+/*!************************************************!*\
+  !*** ./build/es/ui/organisms/Popup.example.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _a, _Button;
+
+
+
+/**
+ * Production please use
+ * import {...xxx} from "organism-react-popup"
+ */
+
+
+
+
+
+
+var PopupExample = function PopupExample() {
+  var _PopupModal;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      backgroundScrollAble = _useState[0],
+      setBackgroundScrollAble = _useState[1];
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["PopupClick"], {
+      style: Styles.click,
+      popup: function popup() {
+        return _PopupModal || (_PopupModal = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["PopupModal"], {
+          backgroundScroll: backgroundScrollAble,
+          children: "xxx"
+        }));
+      },
+      component: _a || (_a = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("a", {})),
+      children: "show modal"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["PopupClick"], {
+      style: {
+        marginLeft: 5
+      },
+      popup: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_2__["Dialog"], {
+        backgroundScroll: backgroundScrollAble,
+        header: "Test Header",
+        children: "Test Dialog"
+      }),
+      component: _Button || (_Button = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {})),
+      children: "show dialog"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_1__["Checkbox"], {
+      toggle: true,
+      label: "Background scrollable",
+      onChange: function onChange(_ref) {
+        var checked = _ref.checked;
+        setBackgroundScrollAble(checked);
+      }
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PopupExample);
+var Styles = {
+  click: {
+    color: "blue",
+    textDecoration: "underline"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/QQVideo.example.js":
+/*!**************************************************!*\
+  !*** ./build/es/ui/organisms/QQVideo.example.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_qq_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-qq-video */ "./node_modules/organism-react-qq-video/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _QQVideo;
+
+
+
+
+
+var QQVideoExample = function QQVideoExample() {
+  return _QQVideo || (_QQVideo = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_qq_video__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    videoId: "j0792wzb6v8"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (QQVideoExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/QueryToJSON.js":
+/*!**********************************************!*\
+  !*** ./build/es/ui/organisms/QueryToJSON.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/toConsumableArray */ "./node_modules/reshow-runtime/es/helpers/toConsumableArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prettyjson__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prettyjson */ "./node_modules/prettyjson/lib/prettyjson.js");
+/* harmony import */ var prettyjson__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prettyjson__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+var QueryToJSON = function QueryToJSON(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(""),
+      json = _useState[0],
+      setJson = _useState[1];
+
+  var handleInput = function handleInput(e) {
+    var v = e.currentTarget.value;
+
+    var vArr = Object(reshow_runtime_es_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(new URLSearchParams(v));
+
+    var nextArr = [];
+    vArr.forEach(function (item) {
+      var _nextArr$push;
+
+      nextArr.push((_nextArr$push = {}, _nextArr$push[item[0]] = item[1], _nextArr$push));
+    });
+    setJson(nextArr);
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Form"], {
+      className: "equal width",
+      style: {
+        boxSizing: "border-box"
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Field"], {
+        ui: true,
+        atom: "textarea",
+        onInput: handleInput
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_4__["FormattedJSON"], {
+        atom: "div",
+        children: prettyjson__WEBPACK_IMPORTED_MODULE_2___default.a.render(json)
+      })]
+    })
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (QueryToJSON);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/RTE.example.js":
+/*!**********************************************!*\
+  !*** ./build/es/ui/organisms/RTE.example.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+var _div, _Editor;
+
+ // import { Editor } from "organism-react-rte-writer";
+
+
+
+var Editor = function Editor() {
+  return _div || (_div = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {}));
+};
+
+var RTEExample = function RTEExample() {
+  return _Editor || (_Editor = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])(Editor, {}));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RTEExample);
+var Styles = {};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/RadioGroup.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/RadioGroup.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+var options = [{
+  label: "Boy",
+  value: "boy"
+}, {
+  label: "Girl",
+  value: "girl"
+}];
+
+var RadioGroupExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(RadioGroupExample, _PureComponent);
+
+  function RadioGroupExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
+      value: ""
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleChange", function () {
+      _this.setState({
+        value: _this.radio.getValue()
+      });
+    });
+
+    return _this;
+  }
+
+  var _proto = RadioGroupExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var value = this.state.value;
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Form"], {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_5__["RadioGroup"], {
+        ref: function ref(el) {
+          return _this2.radio = el;
+        },
+        inline: false,
+        label: "Sex: ",
+        name: "sex",
+        value: value,
+        options: options,
+        onChange: this.handleChange
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+        children: ["Current: ", value]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+        onClick: function onClick() {
+          return _this2.setState({
+            value: "boy"
+          });
+        },
+        children: "Set to Boy"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+        onClick: function onClick() {
+          return _this2.setState({
+            value: "girl"
+          });
+        },
+        children: "Set to Girl"
+      })]
+    });
+  };
+
+  return RadioGroupExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (RadioGroupExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/ReactVirtualizedTableList.example.js":
+/*!********************************************************************!*\
+  !*** ./build/es/ui/organisms/ReactVirtualizedTableList.example.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! pmvc_react_list */ "./node_modules/pmvc_react_list/build/es/src/index.js");
+/* harmony import */ var pmvc_react_list_rv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! pmvc_react_list/rv */ "./node_modules/pmvc_react_list/rv.js");
+/* harmony import */ var pmvc_react_list_rv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(pmvc_react_list_rv__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+var _Cell, _Cell2, _Cell3;
+
+
+
+
+
+
+var rows = [["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"], ["a1", "b1", "c1"], ["a2", "b2", "c2"], ["a3", "b3", "c3"]];
+
+var ReactVirtualizedTableListExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactVirtualizedTableListExample, _PureComponent);
+
+  function ReactVirtualizedTableListExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleClick", function (rowIndex) {
+      return function (ev) {
+        alert(rowIndex);
+      };
+    });
+
+    return _this;
+  }
+
+  var _proto = ReactVirtualizedTableListExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+      style: {
+        width: "40%",
+        height: 150
+      },
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])(pmvc_react_list_rv__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        rows: rows,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Column"], {
+          header: _Cell || (_Cell = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Cell"], {
+            children: "h1"
+          })),
+          cell: function cell(_ref) {
+            var rowIndex = _ref.rowIndex,
+                columnIndex = _ref.columnIndex,
+                style = _ref.style;
+            return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+              style: style,
+              onClick: _this2.handleClick(rowIndex),
+              children: rows[rowIndex][columnIndex]
+            });
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Column"], {
+          header: _Cell2 || (_Cell2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Cell"], {
+            children: "h2"
+          })),
+          cell: function cell(_ref2) {
+            var rowIndex = _ref2.rowIndex,
+                columnIndex = _ref2.columnIndex,
+                style = _ref2.style;
+            return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+              style: style,
+              onClick: _this2.handleClick(rowIndex),
+              children: rows[rowIndex][columnIndex]
+            });
+          }
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Column"], {
+          header: _Cell3 || (_Cell3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(pmvc_react_list__WEBPACK_IMPORTED_MODULE_4__["Cell"], {
+            children: "h3"
+          })),
+          cell: function cell(_ref3) {
+            var rowIndex = _ref3.rowIndex,
+                columnIndex = _ref3.columnIndex,
+                style = _ref3.style;
+            return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+              style: style,
+              onClick: _this2.handleClick(rowIndex),
+              children: rows[rowIndex][columnIndex]
+            });
+          }
+        })]
+      })
+    });
+  };
+
+  return ReactVirtualizedTableListExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ReactVirtualizedTableListExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/ReshowMessage.example.js":
+/*!********************************************************!*\
+  !*** ./build/es/ui/organisms/ReshowMessage.example.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+var _DialogResult;
+
+
+
+
+
+
+
+var DialogResult = function DialogResult(_ref) {
+  var dialogReturn = _ref.dialogReturn;
+  return "undefined" !== typeof dialogReturn ? "Dialog: " + dialogReturn : null;
+};
+
+var ReshowMessageExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(ReshowMessageExample, _PureComponent);
+
+  function ReshowMessageExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleAddAlert", function (e) {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/add", {
+        message: "test"
+      });
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleResetAlert", function (e) {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/reset", {
+        alerts: [1, 2, 3]
+      });
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleCleanAlert", function (e) {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("alert/reset", {
+        alerts: null
+      });
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleOpenDialog", function (e) {
+      Object(reshow__WEBPACK_IMPORTED_MODULE_5__["dispatch"])("dialog/start", {
+        dialog: "how are u"
+      });
+    });
+
+    return _this;
+  }
+
+  var _proto = ReshowMessageExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("p", {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          onClick: this.handleAddAlert,
+          children: "Add alert"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          onClick: this.handleResetAlert,
+          children: "Reset alert"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          onClick: this.handleCleanAlert,
+          children: "Clean all alerts"
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("p", {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          onClick: this.handleOpenDialog,
+          children: "Open Dialog"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_5__["Return"], {
+          initStates: ["dialogReturn"],
+          children: _DialogResult || (_DialogResult = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(DialogResult, {}))
+        })]
+      })]
+    });
+  };
+
+  return ReshowMessageExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ReshowMessageExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Sortable.js":
+/*!*******************************************!*\
+  !*** ./build/es/ui/organisms/Sortable.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_graph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-graph */ "./node_modules/organism-react-graph/build/es/src/index.js");
+/* harmony import */ var css_query_selector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! css-query-selector */ "./node_modules/css-query-selector/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var call_func__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! call-func */ "./node_modules/call-func/build/es/src/index.js");
+/* harmony import */ var get_window_offset__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! get-window-offset */ "./node_modules/get-window-offset/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
+
+
+var _excluded = ["children", "setSortElement", "style"];
+
+
+
+
+
+
+
+
+
+var keys = Object.keys;
+
+var useSortable = function useSortable(props) {
+  var setSortElement = props.setSortElement;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      isDraging = _useState[0],
+      setIsDraging = _useState[1];
+
+  var comp = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+
+  var handleTarget = function handleTarget(targetEl, floatXY) {
+    var _targetEl$nextSibling, _targetEl$previousSib;
+
+    var near = Object(get_window_offset__WEBPACK_IMPORTED_MODULE_7__["nearWhere"])(targetEl, floatXY);
+    var sortEl = comp.current;
+    var nextId = (_targetEl$nextSibling = targetEl.nextSibling) === null || _targetEl$nextSibling === void 0 ? void 0 : _targetEl$nextSibling.getAttribute("name");
+    var prevId = (_targetEl$previousSib = targetEl.previousSibling) === null || _targetEl$previousSib === void 0 ? void 0 : _targetEl$previousSib.getAttribute("name");
+    var sortId = sortEl === null || sortEl === void 0 ? void 0 : sortEl.getAttribute("name");
+    var reverse = (nextId === sortId || prevId === sortId) && near.top;
+
+    if (targetEl.getAttribute("data-first")) {
+      reverse = false;
+    } else if (targetEl.getAttribute("data-last")) {
+      reverse = near.top ? false : true;
+    }
+
+    setSortElement({
+      targetEl: targetEl,
+      targetId: targetEl.getAttribute("name"),
+      sortEl: sortEl,
+      sortId: sortId,
+      reverse: reverse
+    });
+  };
+
+  var handler = {
+    drag: function drag(e) {
+      if (!comp.current) {
+        return;
+      }
+
+      setIsDraging(true);
+      var destTarget = e.destTarget,
+          clientX = e.clientX,
+          clientY = e.clientY;
+      var sortTarget;
+      var floatXY = {
+        x: clientX,
+        y: clientY
+      };
+      var type = destTarget === null || destTarget === void 0 ? void 0 : destTarget.getAttribute("data-type");
+
+      if (!type) {
+        sortTarget = css_query_selector__WEBPACK_IMPORTED_MODULE_4__["default"].ancestor(destTarget, '[data-type="sortable"]');
+
+        if (sortTarget) {
+          handleTarget(sortTarget, floatXY);
+        }
+      } else {
+        if ("sortable" === type) {
+          handleTarget(destTarget, floatXY);
+        }
+      }
+    },
+    dragEnd: function dragEnd(e) {
+      setIsDraging(false);
+    }
+  };
+  return {
+    isDraging: isDraging,
+    handler: handler,
+    comp: comp
+  };
+};
+
+var Sort = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function (props, ref) {
+  var _useSortable = useSortable(props),
+      handler = _useSortable.handler,
+      isDraging = _useSortable.isDraging,
+      comp = _useSortable.comp;
+
+  var children = props.children,
+      setSortElement = props.setSortElement,
+      propsStyle = props.style,
+      otherProps = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
+
+  var mergeStyle = function mergeStyle(style) {
+    var _children$props;
+
+    return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, propsStyle), (_children$props = children.props) === null || _children$props === void 0 ? void 0 : _children$props.style), style);
+  };
+
+  var item = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(children)(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps), {}, {
+    "data-type": "sortable"
+  })));
+  var activeStyle = isDraging ? Styles.active : null;
+  var shadowEl = isDraging ? item({
+    style: mergeStyle(activeStyle)
+  }) : null;
+  var dragEl = item({
+    style: mergeStyle(),
+    refCb: function refCb(el) {
+      return comp.current = el;
+    }
+  });
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["Fragment"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(organism_react_graph__WEBPACK_IMPORTED_MODULE_3__["DDWrapper"], {
+      onDrag: handler.drag,
+      onDragEnd: handler.dragEnd,
+      children: dragEl
+    }), shadowEl]
+  });
+});
+
+var useSortList = function useSortList(_ref) {
+  var children = _ref.children;
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      sortElement = _useState2[0],
+      setSortElement = _useState2[1];
+
+  var childList = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["getChildMapping"])(children, function (child, key) {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(Sort, {
+      name: key,
+      setSortElement: setSortElement,
+      children: child
+    }, key);
+  });
+
+  var _ref2 = sortElement || {},
+      sortId = _ref2.sortId,
+      targetId = _ref2.targetId,
+      reverse = _ref2.reverse;
+
+  var lastSortOrder = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(function () {
+    return keys(childList).map(function (key) {
+      return childList[key];
+    });
+  }());
+  var sortOrder = [];
+  var bFirst;
+  var bLast;
+
+  var arrPush = function arrPush(item) {
+    if (!bFirst) {
+      bFirst = true;
+      sortOrder.push(Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(item)({
+        "data-first": true
+      }));
+    } else {
+      sortOrder.push(item);
+    }
+  };
+
+  lastSortOrder.current.forEach(function (item) {
+    var key = item.props.name;
+
+    if (sortId === key) {
+      if (sortId === targetId) {
+        sortOrder.push(childList[key]);
+      }
+    } else if (targetId === key) {
+      if (reverse) {
+        arrPush(childList[key]);
+        arrPush(childList[sortId]);
+      } else {
+        arrPush(childList[sortId]);
+        arrPush(childList[key]);
+      }
+    } else {
+      arrPush(childList[key]);
+    }
+  });
+  var lastIndex = sortOrder.length - 1;
+  sortOrder[lastIndex] = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["build"])(sortOrder[lastIndex])({
+    "data-last": true
+  });
+  lastSortOrder.current = sortOrder;
+  return {
+    sortOrder: sortOrder,
+    setSortElement: setSortElement
+  };
+};
+
+var SortList = function SortList(props) {
+  var _useSortList = useSortList(props),
+      sortOrder = _useSortList.sortOrder;
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["SemanticUI"], {
+    style: Styles.itemList,
+    children: sortOrder
+  });
+};
+
+var Sortable = function Sortable(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])(SortList, {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["Item"], {
+      style: Styles.item,
+      children: "list 1"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["Item"], {
+      style: Styles.item,
+      children: "list 2"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["Item"], {
+      style: Styles.item,
+      children: "list 3"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["Item"], {
+      style: Styles.item,
+      children: "list 4"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_5__["Item"], {
+      style: Styles.item,
+      children: "list 5"
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Sortable);
+var Styles = {
+  move: {
+    position: "absolute",
+    pointerEvents: "none"
+  },
+  active: {
+    border: "2px dashed rgba(0, 0, 0, 0.2)"
+  },
+  itemList: {
+    margin: "0 auto",
+    width: 100
+  },
+  item: {
+    width: 100,
+    height: 50,
+    border: "1px solid rgba(0, 0, 0, 0.5)"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Spotlight.example.js":
+/*!****************************************************!*\
+  !*** ./build/es/ui/organisms/Spotlight.example.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_spotlight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-spotlight */ "./node_modules/organism-react-spotlight/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+var _PopupPool;
+
+
+
+
+
+
+
+
+
+var SpotlightExample = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(SpotlightExample, _PureComponent);
+
+  function SpotlightExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
+      spotlight: false
+    });
+
+    return _this;
+  }
+
+  var _proto = SpotlightExample.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var spotlight = this.state.spotlight;
+    var thisSpotlight = null;
+
+    if (spotlight) {
+      thisSpotlight = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(organism_react_spotlight__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        toPool: "spotlight-pool",
+        targetEl: this.spot,
+        onClose: function onClose() {
+          _this2.setState({
+            spotlight: null
+          });
+        }
+      });
+    }
+
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxs"])(organism_react_code__WEBPACK_IMPORTED_MODULE_6__["FullScreenExample"], {
+      button: "open full screen",
+      onClose: function onClose() {
+        return _this2.setState({
+          spotlight: null
+        });
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
+        ref: function ref(el) {
+          return _this2.spot = el;
+        },
+        style: Styles.el,
+        children: "Spotlight"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          onClick: function onClick() {
+            _this2.setState({
+              spotlight: true
+            });
+          },
+          children: "Try it."
+        })
+      }), thisSpotlight, _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupPool"], {
+        name: "spotlight-pool"
+      }))]
+    });
+  };
+
+  return SpotlightExample;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (SpotlightExample);
+var Styles = {
+  el: {
+    display: "inline-block",
+    width: 100,
+    height: 200,
+    margin: 10
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/StockChart.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/StockChart.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! organism-react-stockcharts */ "./node_modules/organism-react-stockcharts/build/es/src/index.js");
+/* harmony import */ var organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-ajax */ "./node_modules/organism-react-ajax/build/es/src/index.js");
+/* harmony import */ var reshow_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reshow-hooks */ "./node_modules/reshow-hooks/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+var StockChartExample = function StockChartExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      data = _useState[0],
+      setData = _useState[1];
+
+  var isMount = Object(reshow_hooks__WEBPACK_IMPORTED_MODULE_4__["useMounted"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(organism_react_ajax__WEBPACK_IMPORTED_MODULE_3__["ajaxDispatch"])({
+      type: "ajaxGet",
+      params: {
+        url: "https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json",
+        callback: function callback(json) {
+          if (isMount()) {
+            setData({
+              trades: json
+            });
+          }
+        }
+      }
+    });
+  }, []);
+
+  if (!data) {
+    return null;
+  }
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["FullScreenExample"], {
+    id: "full-page-stock-chart",
+    button: "open full screen",
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_stockcharts__WEBPACK_IMPORTED_MODULE_2__["StockChartCompute"], {
+      data: data,
+      tradeRowsLocator: function tradeRowsLocator(d) {
+        return d.trades;
+      },
+      tradeHighLocator: function tradeHighLocator(d) {
+        return d.h;
+      },
+      tradeLowLocator: function tradeLowLocator(d) {
+        return d.l;
+      },
+      tradeOpenLocator: function tradeOpenLocator(d) {
+        return d.o;
+      },
+      tradeCloseLocator: function tradeCloseLocator(d) {
+        return d.c;
+      },
+      tradeVolumeLocator: function tradeVolumeLocator(d) {
+        return d.v;
+      },
+      tradeDateLocator: function tradeDateLocator(d) {
+        return d.t;
+      }
+    })
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (StockChartExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/Suggestion.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/Suggestion.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+var _SemanticUI;
+
+
+
+
+
+
+var data = ["abc", "abb", "acc"];
+
+var SuggestionExample1 = /*#__PURE__*/function (_PureComponent) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(SuggestionExample1, _PureComponent);
+
+  function SuggestionExample1() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _PureComponent.call.apply(_PureComponent, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "state", {
+      results: []
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleChange", function (e, value) {
+      if (!value.length) {
+        _this.setState({
+          results: data
+        });
+
+        return;
+      }
+
+      var results = [];
+      data.forEach(function (v, k) {
+        if (value.length && -1 !== v.indexOf(value)) {
+          results.push(v);
+        }
+      });
+
+      _this.setState({
+        results: results
+      });
+    });
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this), "handleItemClick", function (e, item) {
+      _this.suggestion.setValue(item);
+    });
+
+    return _this;
+  }
+
+  var _proto = SuggestionExample1.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var _this$state = this.state,
+        results = _this$state.results,
+        myValue = _this$state.myValue;
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["SemanticUI"], {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_5__["Suggestion"], {
+        ref: function ref(el) {
+          return _this2.suggestion = el;
+        },
+        onChange: this.handleChange,
+        results: results,
+        onItemClick: this.handleItemClick,
+        value: myValue
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+        onClick: function onClick() {
+          return _this2.setState({
+            myValue: myValue ? myValue + 1 : 123
+          });
+        },
+        children: "set"
+      })]
+    });
+  };
+
+  return SuggestionExample1;
+}(react__WEBPACK_IMPORTED_MODULE_3__["PureComponent"]);
+
+var SuggestionExample = function SuggestionExample() {
+  return _SemanticUI || (_SemanticUI = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_4__["SemanticUI"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(SuggestionExample1, {}), "couldCreate: false", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_5__["Suggestion"], {
+      results: data,
+      couldCreate: false,
+      filter: true,
+      preview: true
+    })]
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SuggestionExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/TabView.example.js":
+/*!**************************************************!*\
+  !*** ./build/es/ui/organisms/TabView.example.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var ricon_Search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ricon/Search */ "./node_modules/ricon/Search.js");
+/* harmony import */ var ricon_Search__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ricon_Search__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _InputBox, _RightMenu, _Tab, _Tab2;
+
+
+
+
+
+
+
+
+var RightMenu = function RightMenu() {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Menu"], {
+    className: "right",
+    ui: false,
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Item"], {
+      style: {
+        boxSizing: "border-box"
+      },
+      children: _InputBox || (_InputBox = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["InputBox"], {
+        icon: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(ricon_Search__WEBPACK_IMPORTED_MODULE_2___default.a, {}),
+        transparent: true,
+        placeholder: "Search..."
+      }))
+    })
+  });
+};
+
+var TabViewExample = function TabViewExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      selected = _useState[0],
+      setSelected = _useState[1];
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["SemanticUI"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["TabView"], {
+      selected: selected,
+      rightMenu: _RightMenu || (_RightMenu = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(RightMenu, {})),
+      children: [_Tab || (_Tab = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["Tab"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+          children: "content1"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+          children: "menu1"
+        })]
+      })), _Tab2 || (_Tab2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["Tab"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+          children: "content2"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+          children: "menu2"
+        })]
+      }))]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      onClick: function onClick() {
+        return setSelected(0);
+      },
+      children: "to tab1"
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      onClick: function onClick() {
+        return setSelected(1);
+      },
+      children: "to tab2"
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TabViewExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/TagInput.example.js":
+/*!***************************************************!*\
+  !*** ./build/es/ui/organisms/TagInput.example.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_tag_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-tag-input */ "./node_modules/organism-react-tag-input/build/es/src/index.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+
+var TagInputExample = function TagInputExample(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDisable = _useState[0],
+      setIsDisable = _useState[1];
+
+  var handleDisable = function handleDisable(e) {
+    setIsDisable(e.checked ? true : false);
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(organism_react_tag_input__WEBPACK_IMPORTED_MODULE_1__["TagsField"], {
+      disabled: isDisable
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["Checkbox"], {
+        label: "Disable",
+        toggle: true,
+        onChange: handleDisable
+      })
+    })]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TagInputExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/TomatoApp.js":
+/*!********************************************!*\
+  !*** ./build/es/ui/organisms/TomatoApp.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var to_percent_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! to-percent-js */ "./node_modules/to-percent-js/build/es/src/index.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var get_random_id__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! get-random-id */ "./node_modules/get-random-id/build/es/src/index.js");
+/* harmony import */ var get_object_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! get-object-value */ "./node_modules/get-object-value/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__);
+
+
+
+var _Tip;
+
+var _excluded = ["col1", "col2"],
+    _excluded2 = ["sec"];
+
+
+
+
+
+
+
+
+
+
+var POMODORO = "POMODORO";
+var SHORT_BREAK = "SHORT_BREAK";
+var LONG_BREAK = "LONG_BREAK";
+var keys = Object.keys;
+
+var secToMin = function secToMin(sec) {
+  var min = Math.floor(sec / 60);
+  var remainSec = sec % 60;
+  return min + ":" + (10 > remainSec ? "0" + remainSec : remainSec);
+};
+
+var Tip = function Tip() {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_6__["Return"], {
+    initStates: ["pomodoro"],
+    children: function children(_ref) {
+      var pomodoro = _ref.pomodoro;
+
+      if (!pomodoro) {
+        return null;
+      }
+
+      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["List"], {
+        atom: "ol",
+        children: pomodoro.tip.map(function (item, key) {
+          return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Item"], {
+            children: item
+          }, key);
+        })
+      });
+    }
+  });
+};
+
+var ActionSegment = function ActionSegment(_ref2) {
+  var col1 = _ref2.col1,
+      col2 = _ref2.col2,
+      props = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, _excluded);
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Segment"], {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Row"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+        className: "pure-u-md-1-2",
+        children: col1
+      })
+    })
+  });
+};
+
+var useTomato = function useTomato(countdown) {
+  var TotalMin = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(25);
+  var TotalSec = TotalMin.current * 60;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
+    activeType: POMODORO,
+    sec: TotalSec
+  }),
+      state = _useState[0],
+      setState = _useState[1];
+
+  var sec = state.sec,
+      preview = state.preview,
+      active = state.active,
+      activeType = state.activeType;
+  var timer = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var modal = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var resetInput = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var lastActive = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  var resetState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    return function () {
+      handler.stop();
+    };
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
+    lastActive.current = {
+      active: active,
+      activeType: activeType,
+      now: now,
+      sec: sec
+    };
+  }, [active, activeType, sec]);
+
+  var updateClock = function updateClock(setToMinute, totalSec, more) {
+    if (setToMinute) {
+      var _totalSec;
+
+      totalSec = (_totalSec = totalSec) != null ? _totalSec : setToMinute * 60;
+      setState(function (prev) {
+        return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), more), {}, {
+          sec: totalSec
+        });
+      });
+      TotalMin.current = setToMinute;
+    }
+  };
+
+  var updateAndRestore = function updateAndRestore(countdownKey, nextMinute, more) {
+    var _resetState$current;
+
+    var activeType = (_resetState$current = resetState.current) === null || _resetState$current === void 0 ? void 0 : _resetState$current.activeType;
+
+    if (countdownKey && activeType === countdownKey) {
+      if (resetState.current.sec) {
+        updateClock(nextMinute, resetState.current.sec, more);
+      } else {
+        updateClock(nextMinute, null, more);
+      }
+    } else {
+      updateClock(nextMinute, null, more);
+    }
+  };
+
+  var handler = {
+    btnMouseIn: function btnMouseIn(e) {
+      var _lastActive$current, _e$currentTarget, _countdown$id;
+
+      if ((_lastActive$current = lastActive.current) !== null && _lastActive$current !== void 0 && _lastActive$current.active) {
+        return;
+      }
+
+      if (!resetState.current) {
+        resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+      }
+
+      var id = e === null || e === void 0 ? void 0 : (_e$currentTarget = e.currentTarget) === null || _e$currentTarget === void 0 ? void 0 : _e$currentTarget.id;
+      var setToMinute = (_countdown$id = countdown[id]) === null || _countdown$id === void 0 ? void 0 : _countdown$id.minute;
+      updateAndRestore(id, setToMinute, {
+        activeType: id,
+        preview: true
+      });
+    },
+    btnMouseOut: function btnMouseOut(e) {
+      var _lastActive$current2, _e$currentTarget2;
+
+      if ((_lastActive$current2 = lastActive.current) !== null && _lastActive$current2 !== void 0 && _lastActive$current2.active) {
+        return;
+      }
+
+      var target = e.currentTarget;
+      var id = e === null || e === void 0 ? void 0 : (_e$currentTarget2 = e.currentTarget) === null || _e$currentTarget2 === void 0 ? void 0 : _e$currentTarget2.id;
+      var origActiveType = resetState.current.activeType;
+
+      if (origActiveType) {
+        updateAndRestore(origActiveType, countdown[origActiveType].minute, {
+          activeType: origActiveType,
+          preview: false
+        });
+      } else {
+        setState(function (prev) {
+          return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+            activeType: origActiveType,
+            preview: false
+          });
+        });
+      }
+    },
+    clickProgress: function clickProgress() {
+      if (lastActive.current) {
+        if (lastActive.current.active) {
+          handler.stop();
+        } else {
+          var countdownKey = lastActive.current.activeType;
+
+          if (countdownKey) {
+            handler.start({
+              countdownKey: countdownKey
+            })();
+          }
+        }
+      }
+    },
+    start: function start(_temp) {
+      var _ref3 = _temp === void 0 ? {} : _temp,
+          countdownKey = _ref3.countdownKey,
+          getModal = _ref3.getModal;
+
+      return function (e) {
+        var _countdown$countdownK;
+
+        countdownKey = (e === null || e === void 0 ? void 0 : e.currentTarget.id) || countdownKey;
+        var setToMinute = (_countdown$countdownK = countdown[countdownKey]) === null || _countdown$countdownK === void 0 ? void 0 : _countdown$countdownK.minute;
+
+        if (!timer.current) {
+          lastActive.current = null;
+          updateAndRestore(countdownKey, setToMinute, {
+            active: true,
+            activeType: countdownKey
+          });
+          setTimeout(function () {
+            resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+            timer.current = setInterval(function () {
+              setState(function (_ref4) {
+                var sec = _ref4.sec,
+                    prev = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref4, _excluded2);
+
+                var lastTime = Object(get_object_value__WEBPACK_IMPORTED_MODULE_9__["default"])(lastActive.current, ["now"]);
+
+                if (lastTime) {
+                  var now = Object(get_random_id__WEBPACK_IMPORTED_MODULE_8__["getTimestamp"])();
+                  var queue = now - lastTime;
+
+                  if (queue > 1000) {
+                    var queueSec = Math.floor(queue / 1000);
+                    sec -= queueSec;
+                  }
+                }
+
+                if (sec <= 0 || isNaN(sec)) {
+                  handler.stop();
+                  sec = 0;
+                }
+
+                return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+                  sec: sec
+                });
+              });
+            }, 100);
+          }, 200);
+        } else {
+          console.warn("Timer already running");
+
+          if (getModal) {
+            Object(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["popupDispatch"])("dom/update", {
+              popup: getModal(setToMinute)
+            });
+          }
+        }
+      };
+    },
+    stop: function stop() {
+      resetState.current = Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, lastActive.current);
+
+      if (modal.current) {
+        modal.current.close();
+      }
+
+      if (timer.current) {
+        clearInterval(timer.current);
+        timer.current = null;
+      }
+
+      setState(function (prev) {
+        return Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prev), {}, {
+          active: false,
+          preview: false
+        });
+      });
+    },
+    reset: function reset() {
+      lastActive.current = null;
+      handler.stop();
+      updateClock(resetInput.current.value);
+    }
+  };
+  return {
+    sec: sec,
+    active: active,
+    preview: preview,
+    activeType: activeType,
+    TotalSec: TotalSec,
+    handler: handler,
+    modal: modal,
+    resetInput: resetInput
+  };
+};
+
+var TomatoApp = function TomatoApp(props) {
+  var countdown = props.countdown,
+      useTomato = props.useTomato;
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["lazyInject"])(injects, InjectStyles);
+  }, []);
+
+  var _useTomato = useTomato(countdown),
+      sec = _useTomato.sec,
+      active = _useTomato.active,
+      preview = _useTomato.preview,
+      activeType = _useTomato.activeType,
+      handler = _useTomato.handler,
+      modal = _useTomato.modal,
+      resetInput = _useTomato.resetInput,
+      TotalSec = _useTomato.TotalSec;
+
+  var getModal = function getModal(defaultValue) {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxs"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_7__["PopupModal"], {
+      basic: true,
+      ref: modal,
+      contentStyle: {
+        textAlign: "center"
+      },
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        className: "inverted",
+        onClick: handler.stop,
+        children: "Pause"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["InputBox"], {
+        refCb: resetInput,
+        style: Styles.resetInput,
+        defaultValue: defaultValue,
+        inputStyle: Styles.reset,
+        className: "inverted transparent",
+        leftLabel: "Resst to:",
+        rightLabel: "min",
+        button: "Reset",
+        actionProps: {
+          className: "inverted",
+          onClick: handler.reset
+        }
+      })]
+    });
+  };
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxs"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["SemanticUI"], {
+    children: [Object(react__WEBPACK_IMPORTED_MODULE_2__["useMemo"])(function () {
+      var _countdown$activeType, _mixClass;
+
+      var percentNum = Object(to_percent_js__WEBPACK_IMPORTED_MODULE_5__["percent"])(sec / TotalSec);
+      var classes = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["mixClass"])("big Pomodoro", (_mixClass = {}, _mixClass[(_countdown$activeType = countdown[activeType]) === null || _countdown$activeType === void 0 ? void 0 : _countdown$activeType.colorName] = active || preview, _mixClass));
+      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["ProgressBar"], {
+        onClick: handler.clickProgress,
+        className: classes,
+        style: Styles.progress,
+        percent: percentNum,
+        barLabel: secToMin(sec),
+        barLabelProps: {
+          styles: Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["reactStyle"])({
+            transform: "translate(" + (100 - percentNum) + "%, 0)"
+          }, false, false)
+        }
+      });
+    }, [sec, active, preview]), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(ActionSegment, {
+      col1: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["List"], {
+        style: Styles.buttonList,
+        children: keys(countdown).map(function (key) {
+          var count = countdown[key];
+          var thisClass = null;
+
+          if (key === activeType) {
+            thisClass = count.colorName;
+          } else {
+            if (active) {
+              return null;
+            }
+          }
+
+          var handleStart = handler.start({
+            getModal: getModal
+          });
+          return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+            id: key,
+            className: thisClass,
+            onClick: handleStart,
+            onMouseEnter: handler.btnMouseIn,
+            onMouseLeave: handler.btnMouseOut,
+            children: count.label
+          }, key);
+        })
+      })
+    }), _Tip || (_Tip = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__["jsx"])(Tip, {}))]
+  });
+};
+
+TomatoApp.defaultProps = {
+  countdown: {
+    POMODORO: {
+      minute: 25,
+      label: "Pomodoro",
+      colorName: "red"
+    },
+    SHORT_BREAK: {
+      minute: 5,
+      label: "Short Break",
+      colorName: "teal"
+    },
+    LONG_BREAK: {
+      minute: 15,
+      label: "Long Break",
+      colorName: "blue"
+    }
+  },
+  useTomato: useTomato
+};
+/* harmony default export */ __webpack_exports__["default"] = (TomatoApp);
+var Styles = {
+  progress: {
+    cursor: "pointer"
+  },
+  buttonList: {
+    textAlign: "center"
+  },
+  resetInput: {
+    marginLeft: 20
+  },
+  reset: {
+    width: 20
+  }
+};
+var injects;
+var InjectStyles = {
+  barLabel: [{
+    fontSize: "7rem"
+  }, ".ui.progress.Pomodoro .bar>.progress"]
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/WindowOffset.example.js":
+/*!*******************************************************!*\
+  !*** ./build/es/ui/organisms/WindowOffset.example.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/assertThisInitialized */ "./node_modules/reshow-runtime/es/helpers/assertThisInitialized.js");
+/* harmony import */ var reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-runtime/es/helpers/inheritsLoose */ "./node_modules/reshow-runtime/es/helpers/inheritsLoose.js");
+/* harmony import */ var reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reshow-runtime/es/helpers/defineProperty */ "./node_modules/reshow-runtime/es/helpers/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+
+var WindowOffsetExample = /*#__PURE__*/function (_Component) {
+  Object(reshow_runtime_es_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(WindowOffsetExample, _Component);
+
+  function WindowOffsetExample() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+
+    Object(reshow_runtime_es_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(reshow_runtime_es_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(_this), "handleClick", function (e) {
+      var target = e.currentTarget;
+      Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! get-window-offset */ "./node_modules/get-window-offset/build/es/src/index.js")).then(function (_ref) {
+        var getWindowOffset = _ref["default"];
+        var info = getWindowOffset(target);
+        console.log(info);
+      });
+    });
+
+    return _this;
+  }
+
+  var _proto = WindowOffsetExample.prototype;
+
+  _proto.render = function render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+        style: Styles.row,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "1",
+          isKeep: true,
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col1),
+            onClick: this.handleClick,
+            children: "1"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "2",
+          isKeep: true,
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col2),
+            onClick: this.handleClick,
+            children: "2"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "3",
+          isKeep: true,
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col3),
+            onClick: this.handleClick,
+            children: "3"
+          })
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+        style: Styles.row,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "4",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col1),
+            onClick: this.handleClick,
+            children: "4"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "5",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col2),
+            onClick: this.handleClick,
+            children: "5"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "6",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col3),
+            onClick: this.handleClick,
+            children: "6"
+          })
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
+        style: {
+          width: 60
+        },
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "7",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col1),
+            onClick: this.handleClick,
+            children: "7"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "8",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col2),
+            onClick: this.handleClick,
+            children: "8"
+          })
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_5__["PopupHover"], {
+          popup: "9",
+          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+            style: Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Styles.col), Styles.col3),
+            onClick: this.handleClick,
+            children: "9"
+          })
+        })]
+      })]
+    });
+  };
+
+  return WindowOffsetExample;
+}(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (WindowOffsetExample);
+var Styles = {
+  row: {
+    justifyContent: "space-around",
+    display: "flex",
+    marginBottom: 100
+  },
+  col: {
+    width: 60,
+    height: 60,
+    lineHeight: "60px",
+    textAlign: "center",
+    color: "#fff"
+  },
+  col1: {
+    background: "#c00"
+  },
+  col2: {
+    background: "#095"
+  },
+  col3: {
+    background: "#059"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/organisms/YouTubeRWD.example.js":
+/*!*****************************************************!*\
+  !*** ./build/es/ui/organisms/YouTubeRWD.example.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var organism_react_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-video */ "./node_modules/organism-react-video/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+var _YoutubeRWD;
+
+
+
+
+
+var YouTubeRWDExample = function YouTubeRWDExample() {
+  return _YoutubeRWD || (_YoutubeRWD = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(organism_react_video__WEBPACK_IMPORTED_MODULE_1__["YoutubeRWD"], {
+    videoId: "CjxugyZCfuw"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (YouTubeRWDExample);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Animation.js":
+/*!****************************************!*\
+  !*** ./build/es/ui/pages/Animation.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_Animation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Animation.example */ "./build/es/ui/organisms/Animation.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Animation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Animation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Animation.example.jsx");
+/* harmony import */ var _organisms_AnimationReplace_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/AnimationReplace.example */ "./build/es/ui/organisms/AnimationReplace.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_AnimationReplace_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AnimationReplace.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationReplace.example.jsx");
+/* harmony import */ var _organisms_AnimationDelay_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/AnimationDelay.example */ "./build/es/ui/organisms/AnimationDelay.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_AnimationDelay_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AnimationDelay.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationDelay.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+
+
+
+
+var Animation = function Animation(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Animation"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Animation_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Animation Sample",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_Animation_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_AnimationReplace_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "Animation Replace Sample",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_AnimationReplace_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_AnimationDelay_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      header: "Animation Delay Sample",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_AnimationDelay_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Animation);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/AsciiDoc.js":
+/*!***************************************!*\
+  !*** ./build/es/ui/pages/AsciiDoc.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/AsciiDoc.example */ "./build/es/ui/organisms/AsciiDoc.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AsciiDoc.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AsciiDoc.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _CodeExample;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+var AsciiDocPage = function AsciiDocPage(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "AsciiDoc"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
+    children: _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Ascii Doc",
+      edit: "https://codesandbox.io/s/8vj7x3m82",
+      git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-asciidoc/",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_organisms_AsciiDoc_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AsciiDocPage);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Atoms.js":
+/*!************************************!*\
+  !*** ./build/es/ui/pages/Atoms.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+
+var Atoms = function Atoms(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Atoms"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
+    children: "This is atom"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Atoms);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Carousel.js":
+/*!***************************************!*\
+  !*** ./build/es/ui/pages/Carousel.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CarouselAnimation.example */ "./build/es/ui/organisms/CarouselAnimation.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CarouselAnimation.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimation.example.jsx");
+/* harmony import */ var _organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/CarouselAnimationHideThumb.example */ "./build/es/ui/organisms/CarouselAnimationHideThumb.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CarouselAnimationHideThumb.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimationHideThumb.example.jsx");
+/* harmony import */ var _organisms_CarouselSlide_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/CarouselSlide.example */ "./build/es/ui/organisms/CarouselSlide.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_CarouselSlide_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CarouselSlide.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselSlide.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3;
+
+
+
+/*example*/
+
+
+
+
+
+
+
+
+
+
+
+var CarouselPage = function CarouselPage(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Carousel"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Carousel Animation",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",
+      npm: "organism-react-carousel",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_CarouselAnimation_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "Carousel Animation Hide Thumb",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-carousel/",
+      npm: "organism-react-carousel",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_CarouselAnimationHideThumb_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_CarouselSlide_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      header: "Carousel Slide (WIP)",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_organisms_CarouselSlide_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CarouselPage);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Code.js":
+/*!***********************************!*\
+  !*** ./build/es/ui/pages/Code.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/CodeExample.example */ "./build/es/ui/organisms/CodeExample.example.js");
+/* harmony import */ var _organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/CodeEditor.example */ "./build/es/ui/organisms/CodeEditor.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/CodeEditor.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeEditor.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+var _CodeExampleExample, _CodeExample;
+/*Base*/
+
+
+
+
+
+
+
+
+
+
+
+var Code = function Code(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Code"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["Fragment"], {
+    children: [_CodeExampleExample || (_CodeExampleExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_organisms_CodeExample_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})), _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_5__["default"],
+      header: "Codemirror Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_organisms_CodeEditor_example__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Code);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/D3.js":
+/*!*********************************!*\
+  !*** ./build/es/ui/pages/D3.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3PieChart.example */ "./build/es/ui/organisms/D3PieChart.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3PieChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3PieChart.example.jsx");
+/* harmony import */ var _organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/D3BarChart.example */ "./build/es/ui/organisms/D3BarChart.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3BarChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3BarChart.example.jsx");
+/* harmony import */ var _organisms_D3LineChart_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/D3LineChart.example */ "./build/es/ui/organisms/D3LineChart.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3LineChart_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3LineChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3LineChart.example.jsx");
+/* harmony import */ var _organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../organisms/D3AreaChart.example */ "./build/es/ui/organisms/D3AreaChart.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3AreaChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3AreaChart.example.jsx");
+/* harmony import */ var _organisms_D3Uml_example__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../organisms/D3Uml.example */ "./build/es/ui/organisms/D3Uml.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3Uml_example__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3Uml.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3Uml.example.jsx");
+/* harmony import */ var _organisms_StockChart_example__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../organisms/StockChart.example */ "./build/es/ui/organisms/StockChart.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_StockChart_example__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/StockChart.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/StockChart.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3, _CodeExample4, _CodeExample5, _CodeExample6;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var D3 = function D3(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "D3"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3Uml_example__WEBPACK_IMPORTED_MODULE_12__["default"],
+      header: "D3 Uml",
+      id: "d3-uml",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_D3Uml_example__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3LineChart_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      header: "D3 Line Chart",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_D3LineChart_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "D3 Bar Chart",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_D3BarChart_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_10__["default"],
+      header: "D3 Area Chart",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_D3AreaChart_example__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+    })), _CodeExample5 || (_CodeExample5 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "D3 Pie Chart",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_D3PieChart_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample6 || (_CodeExample6 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_StockChart_example__WEBPACK_IMPORTED_MODULE_14__["default"],
+      header: "Stock Chart",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_StockChart_example__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/D3UmlPerf.js":
+/*!****************************************!*\
+  !*** ./build/es/ui/pages/D3UmlPerf.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/D3UmlPerf.example */ "./build/es/ui/organisms/D3UmlPerf.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/D3UmlPerf.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _CodeExample;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+var D3UmlPerf = function D3UmlPerf(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "D3UmlPerf"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
+    children: _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "D3 Uml",
+      id: "d3-uml",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_organisms_D3UmlPerf_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (D3UmlPerf);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/GrapesJs.js":
+/*!***************************************!*\
+  !*** ./build/es/ui/pages/GrapesJs.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GrapesJs.example */ "./build/es/ui/organisms/GrapesJs.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GrapesJs.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GrapesJs.example.jsx");
+/* harmony import */ var _organisms_RTE_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/RTE.example */ "./build/es/ui/organisms/RTE.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_RTE_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/RTE.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RTE.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+
+
+var _CodeExample, _CodeExample2;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+
+
+var GrapesJs = function GrapesJs(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "GrapesJs"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "GrapesJs Example",
+      edit: "https://codesandbox.io/s/organism-react-grapesjs-04mo7",
+      git: "react-atomic/react-atomic-organism/tree/main/packages/organism-react-grapesjs/",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_organisms_GrapesJs_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_RTE_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "RTE Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_organisms_RTE_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (GrapesJs);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Icons.js":
+/*!************************************!*\
+  !*** ./build/es/ui/pages/Icons.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var ricon_Account__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ricon/Account */ "./node_modules/ricon/Account.js");
+/* harmony import */ var ricon_Account__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ricon_Account__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ricon/AccessTime */ "./node_modules/ricon/AccessTime.js");
+/* harmony import */ var ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var ricon_Add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ricon/Add */ "./node_modules/ricon/Add.js");
+/* harmony import */ var ricon_Add__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(ricon_Add__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var ricon_BarChart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ricon/BarChart */ "./node_modules/ricon/BarChart.js");
+/* harmony import */ var ricon_BarChart__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ricon_BarChart__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var ricon_Build__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ricon/Build */ "./node_modules/ricon/Build.js");
+/* harmony import */ var ricon_Build__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ricon_Build__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var ricon_Blur__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ricon/Blur */ "./node_modules/ricon/Blur.js");
+/* harmony import */ var ricon_Blur__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(ricon_Blur__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var ricon_Calendar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ricon/Calendar */ "./node_modules/ricon/Calendar.js");
+/* harmony import */ var ricon_Calendar__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ricon_Calendar__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ricon/ChevronRight */ "./node_modules/ricon/ChevronRight.js");
+/* harmony import */ var ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ricon/Code */ "./node_modules/ricon/Code.js");
+/* harmony import */ var ricon_Code__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ricon_Code__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ricon/CircleLoading */ "./node_modules/ricon/CircleLoading.js");
+/* harmony import */ var ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var ricon_Dashboard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ricon/Dashboard */ "./node_modules/ricon/Dashboard.js");
+/* harmony import */ var ricon_Dashboard__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(ricon_Dashboard__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var ricon_Description__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ricon/Description */ "./node_modules/ricon/Description.js");
+/* harmony import */ var ricon_Description__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(ricon_Description__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var ricon_Device__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ricon/Device */ "./node_modules/ricon/Device.js");
+/* harmony import */ var ricon_Device__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ricon_Device__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ricon/Dropdown */ "./node_modules/ricon/Dropdown.js");
+/* harmony import */ var ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var ricon_Download__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ricon/Download */ "./node_modules/ricon/Download.js");
+/* harmony import */ var ricon_Download__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(ricon_Download__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var ricon_Delete__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ricon/Delete */ "./node_modules/ricon/Delete.js");
+/* harmony import */ var ricon_Delete__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(ricon_Delete__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ricon/Edit */ "./node_modules/ricon/Edit.js");
+/* harmony import */ var ricon_Edit__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(ricon_Edit__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var ricon_Email__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ricon/Email */ "./node_modules/ricon/Email.js");
+/* harmony import */ var ricon_Email__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(ricon_Email__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var ricon_Exit__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ricon/Exit */ "./node_modules/ricon/Exit.js");
+/* harmony import */ var ricon_Exit__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(ricon_Exit__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var ricon_File__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ricon/File */ "./node_modules/ricon/File.js");
+/* harmony import */ var ricon_File__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(ricon_File__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var ricon_Facebook__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ricon/Facebook */ "./node_modules/ricon/Facebook.js");
+/* harmony import */ var ricon_Facebook__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(ricon_Facebook__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ricon/FacebookMessage */ "./node_modules/ricon/FacebookMessage.js");
+/* harmony import */ var ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ricon/FeaturedPlayList */ "./node_modules/ricon/FeaturedPlayList.js");
+/* harmony import */ var ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ricon/Git */ "./node_modules/ricon/Git.js");
+/* harmony import */ var ricon_Git__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(ricon_Git__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var ricon_Help__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ricon/Help */ "./node_modules/ricon/Help.js");
+/* harmony import */ var ricon_Help__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(ricon_Help__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var ricon_Hamburger__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ricon/Hamburger */ "./node_modules/ricon/Hamburger.js");
+/* harmony import */ var ricon_Hamburger__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(ricon_Hamburger__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ricon/HamburgerToArrow */ "./node_modules/ricon/HamburgerToArrow.js");
+/* harmony import */ var ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ricon/HamburgerToX */ "./node_modules/ricon/HamburgerToX.js");
+/* harmony import */ var ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var ricon_Home__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ricon/Home */ "./node_modules/ricon/Home.js");
+/* harmony import */ var ricon_Home__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(ricon_Home__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var ricon_Link__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ricon/Link */ "./node_modules/ricon/Link.js");
+/* harmony import */ var ricon_Link__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(ricon_Link__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var ricon_Monetization__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ricon/Monetization */ "./node_modules/ricon/Monetization.js");
+/* harmony import */ var ricon_Monetization__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(ricon_Monetization__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ricon/MyLocation */ "./node_modules/ricon/MyLocation.js");
+/* harmony import */ var ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ricon/Npm */ "./node_modules/ricon/Npm.js");
+/* harmony import */ var ricon_Npm__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(ricon_Npm__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var ricon_Notification__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ricon/Notification */ "./node_modules/ricon/Notification.js");
+/* harmony import */ var ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(ricon_Notification__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var ricon_Person__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ricon/Person */ "./node_modules/ricon/Person.js");
+/* harmony import */ var ricon_Person__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(ricon_Person__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var ricon_Phone__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ricon/Phone */ "./node_modules/ricon/Phone.js");
+/* harmony import */ var ricon_Phone__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(ricon_Phone__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var ricon_Pin__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ricon/Pin */ "./node_modules/ricon/Pin.js");
+/* harmony import */ var ricon_Pin__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(ricon_Pin__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var ricon_Play__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ricon/Play */ "./node_modules/ricon/Play.js");
+/* harmony import */ var ricon_Play__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(ricon_Play__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ricon/PlayListAdd */ "./node_modules/ricon/PlayListAdd.js");
+/* harmony import */ var ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var ricon_Pulse__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ricon/Pulse */ "./node_modules/ricon/Pulse.js");
+/* harmony import */ var ricon_Pulse__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(ricon_Pulse__WEBPACK_IMPORTED_MODULE_41__);
+/* harmony import */ var ricon_Refresh__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ricon/Refresh */ "./node_modules/ricon/Refresh.js");
+/* harmony import */ var ricon_Refresh__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(ricon_Refresh__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var ricon_Reply__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ricon/Reply */ "./node_modules/ricon/Reply.js");
+/* harmony import */ var ricon_Reply__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(ricon_Reply__WEBPACK_IMPORTED_MODULE_43__);
+/* harmony import */ var ricon_Search__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ricon/Search */ "./node_modules/ricon/Search.js");
+/* harmony import */ var ricon_Search__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(ricon_Search__WEBPACK_IMPORTED_MODULE_44__);
+/* harmony import */ var ricon_Settings__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ricon/Settings */ "./node_modules/ricon/Settings.js");
+/* harmony import */ var ricon_Settings__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(ricon_Settings__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ricon/ShoppingCart */ "./node_modules/ricon/ShoppingCart.js");
+/* harmony import */ var ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_46__);
+/* harmony import */ var ricon_Sort__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ricon/Sort */ "./node_modules/ricon/Sort.js");
+/* harmony import */ var ricon_Sort__WEBPACK_IMPORTED_MODULE_47___default = /*#__PURE__*/__webpack_require__.n(ricon_Sort__WEBPACK_IMPORTED_MODULE_47__);
+/* harmony import */ var ricon_Shopee__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ricon/Shopee */ "./node_modules/ricon/Shopee.js");
+/* harmony import */ var ricon_Shopee__WEBPACK_IMPORTED_MODULE_48___default = /*#__PURE__*/__webpack_require__.n(ricon_Shopee__WEBPACK_IMPORTED_MODULE_48__);
+/* harmony import */ var ricon_Sync__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ricon/Sync */ "./node_modules/ricon/Sync.js");
+/* harmony import */ var ricon_Sync__WEBPACK_IMPORTED_MODULE_49___default = /*#__PURE__*/__webpack_require__.n(ricon_Sync__WEBPACK_IMPORTED_MODULE_49__);
+/* harmony import */ var ricon_TouchApp__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ricon/TouchApp */ "./node_modules/ricon/TouchApp.js");
+/* harmony import */ var ricon_TouchApp__WEBPACK_IMPORTED_MODULE_50___default = /*#__PURE__*/__webpack_require__.n(ricon_TouchApp__WEBPACK_IMPORTED_MODULE_50__);
+/* harmony import */ var ricon_Timer__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ricon/Timer */ "./node_modules/ricon/Timer.js");
+/* harmony import */ var ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default = /*#__PURE__*/__webpack_require__.n(ricon_Timer__WEBPACK_IMPORTED_MODULE_51__);
+/* harmony import */ var ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ricon/VerifiedUser */ "./node_modules/ricon/VerifiedUser.js");
+/* harmony import */ var ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52___default = /*#__PURE__*/__webpack_require__.n(ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52__);
+/* harmony import */ var ricon_Video__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ricon/Video */ "./node_modules/ricon/Video.js");
+/* harmony import */ var ricon_Video__WEBPACK_IMPORTED_MODULE_53___default = /*#__PURE__*/__webpack_require__.n(ricon_Video__WEBPACK_IMPORTED_MODULE_53__);
+/* harmony import */ var ricon_Visibility__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ricon/Visibility */ "./node_modules/ricon/Visibility.js");
+/* harmony import */ var ricon_Visibility__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(ricon_Visibility__WEBPACK_IMPORTED_MODULE_54__);
+/* harmony import */ var ricon_ViewModule__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ricon/ViewModule */ "./node_modules/ricon/ViewModule.js");
+/* harmony import */ var ricon_ViewModule__WEBPACK_IMPORTED_MODULE_55___default = /*#__PURE__*/__webpack_require__.n(ricon_ViewModule__WEBPACK_IMPORTED_MODULE_55__);
+/* harmony import */ var ricon_Wifi__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ricon/Wifi */ "./node_modules/ricon/Wifi.js");
+/* harmony import */ var ricon_Wifi__WEBPACK_IMPORTED_MODULE_56___default = /*#__PURE__*/__webpack_require__.n(ricon_Wifi__WEBPACK_IMPORTED_MODULE_56__);
+/* harmony import */ var ricon_Wallet__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ricon/Wallet */ "./node_modules/ricon/Wallet.js");
+/* harmony import */ var ricon_Wallet__WEBPACK_IMPORTED_MODULE_57___default = /*#__PURE__*/__webpack_require__.n(ricon_Wallet__WEBPACK_IMPORTED_MODULE_57__);
+/* harmony import */ var ricon_X__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ricon/X */ "./node_modules/ricon/X.js");
+/* harmony import */ var ricon_X__WEBPACK_IMPORTED_MODULE_58___default = /*#__PURE__*/__webpack_require__.n(ricon_X__WEBPACK_IMPORTED_MODULE_58__);
+/* harmony import */ var ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ricon/ZoomIn */ "./node_modules/ricon/ZoomIn.js");
+/* harmony import */ var ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_59___default = /*#__PURE__*/__webpack_require__.n(ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_59__);
+/* harmony import */ var ricon_Error__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ricon/Error */ "./node_modules/ricon/Error.js");
+/* harmony import */ var ricon_Error__WEBPACK_IMPORTED_MODULE_60___default = /*#__PURE__*/__webpack_require__.n(ricon_Error__WEBPACK_IMPORTED_MODULE_60__);
+/* harmony import */ var ricon_Warning__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ricon/Warning */ "./node_modules/ricon/Warning.js");
+/* harmony import */ var ricon_Warning__WEBPACK_IMPORTED_MODULE_61___default = /*#__PURE__*/__webpack_require__.n(ricon_Warning__WEBPACK_IMPORTED_MODULE_61__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__);
+
+/*Base*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Alert
+
+
+
+
+
+
+var icons = [["Account", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Account__WEBPACK_IMPORTED_MODULE_2___default.a, {})], ["Account (circle)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Account__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  type: "circle"
+})], ["Account (supervisor)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Account__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  type: "supervisor"
+})], ["Add", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Add__WEBPACK_IMPORTED_MODULE_4___default.a, {})], ["Add (box)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Add__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  type: "box"
+})], ["Add (circle)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Add__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  type: "circle"
+})], ["Add (circleOutline)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Add__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  type: "circleOutline"
+})], ["AccessTime", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3___default.a, {})], ["AccessTime (fill)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  type: "fill"
+})], ["AccessTime (update)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_AccessTime__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  type: "update"
+})], ["BarChart", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_BarChart__WEBPACK_IMPORTED_MODULE_5___default.a, {})], ["Build", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Build__WEBPACK_IMPORTED_MODULE_6___default.a, {})], ["Blur", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Blur__WEBPACK_IMPORTED_MODULE_7___default.a, {})], ["Calendar", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Calendar__WEBPACK_IMPORTED_MODULE_8___default.a, {})], ["ChevronRight", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_ChevronRight__WEBPACK_IMPORTED_MODULE_9___default.a, {})], ["Code", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Code__WEBPACK_IMPORTED_MODULE_10___default.a, {})], ["CircleLoading", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_CircleLoading__WEBPACK_IMPORTED_MODULE_11___default.a, {})], ["Dashboard", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Dashboard__WEBPACK_IMPORTED_MODULE_12___default.a, {})], ["Delete", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Delete__WEBPACK_IMPORTED_MODULE_17___default.a, {})], ["Delete (forever)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Delete__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  type: "forever"
+})], ["Delete (sweep)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Delete__WEBPACK_IMPORTED_MODULE_17___default.a, {
+  type: "sweep"
+})], ["Device (desktop)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Device__WEBPACK_IMPORTED_MODULE_14___default.a, {
+  type: "desktop"
+})], ["Device (tablet)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Device__WEBPACK_IMPORTED_MODULE_14___default.a, {
+  type: "tablet"
+})], ["Device (phone)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Device__WEBPACK_IMPORTED_MODULE_14___default.a, {
+  type: "phone"
+})], ["Download", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Download__WEBPACK_IMPORTED_MODULE_16___default.a, {})], ["Download (file)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Download__WEBPACK_IMPORTED_MODULE_16___default.a, {
+  type: "file"
+})], ["Dropdown", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15___default.a, {})], ["Dropdown (up)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15___default.a, {
+  type: "up"
+})], ["Dropdown (right)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15___default.a, {
+  type: "right"
+})], ["Dropdown (left)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Dropdown__WEBPACK_IMPORTED_MODULE_15___default.a, {
+  type: "left"
+})], ["Description", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Description__WEBPACK_IMPORTED_MODULE_13___default.a, {})], ["Edit", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Edit__WEBPACK_IMPORTED_MODULE_18___default.a, {})], ["Email", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Email__WEBPACK_IMPORTED_MODULE_19___default.a, {})], ["Exit", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Exit__WEBPACK_IMPORTED_MODULE_20___default.a, {})], ["File", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_File__WEBPACK_IMPORTED_MODULE_21___default.a, {
+  children: ".js"
+})], ["Facebook", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Facebook__WEBPACK_IMPORTED_MODULE_22___default.a, {})], ["FacebookMessage", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_FacebookMessage__WEBPACK_IMPORTED_MODULE_23___default.a, {})], ["FeaturedPlayList", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_FeaturedPlayList__WEBPACK_IMPORTED_MODULE_24___default.a, {})], ["Git", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Git__WEBPACK_IMPORTED_MODULE_25___default.a, {})], ["Help", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Help__WEBPACK_IMPORTED_MODULE_26___default.a, {})], ["Home", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Home__WEBPACK_IMPORTED_MODULE_30___default.a, {})], ["Hamburger", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Hamburger__WEBPACK_IMPORTED_MODULE_27___default.a, {})], ["HamburgerToArrow", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_HamburgerToArrow__WEBPACK_IMPORTED_MODULE_28___default.a, {
+  on: true
+})], ["HamburgerToX", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_HamburgerToX__WEBPACK_IMPORTED_MODULE_29___default.a, {
+  on: true
+})], ["Link", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Link__WEBPACK_IMPORTED_MODULE_31___default.a, {})], ["Monetization", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Monetization__WEBPACK_IMPORTED_MODULE_32___default.a, {})], ["Monetization", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Monetization__WEBPACK_IMPORTED_MODULE_32___default.a, {
+  type: "sign"
+})], ["MyLocation (fixed)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33___default.a, {})], ["MyLocation (off)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33___default.a, {
+  type: "off"
+})], ["MyLocation (on)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33___default.a, {
+  type: "on"
+})], ["MyLocation (loading)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_MyLocation__WEBPACK_IMPORTED_MODULE_33___default.a, {
+  loading: true,
+  type: "on"
+})], ["Npm", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Npm__WEBPACK_IMPORTED_MODULE_34___default.a, {})], ["Notification", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default.a, {})], ["Notification (active)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default.a, {
+  type: "active"
+})], ["Notification (none)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default.a, {
+  type: "none"
+})], ["Notification (off)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default.a, {
+  type: "off"
+})], ["Notification (paused)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Notification__WEBPACK_IMPORTED_MODULE_35___default.a, {
+  type: "paused"
+})], ["Person", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Person__WEBPACK_IMPORTED_MODULE_36___default.a, {})], ["Person (add)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Person__WEBPACK_IMPORTED_MODULE_36___default.a, {
+  type: "add"
+})], ["Phone", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Phone__WEBPACK_IMPORTED_MODULE_37___default.a, {})], ["Pin", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Pin__WEBPACK_IMPORTED_MODULE_38___default.a, {})], ["Pulse", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Pulse__WEBPACK_IMPORTED_MODULE_41___default.a, {})], ["Pulse (breath)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Pulse__WEBPACK_IMPORTED_MODULE_41___default.a, {
+  animation: "breath"
+})], ["Play", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Play__WEBPACK_IMPORTED_MODULE_39___default.a, {})], ["PlayListAdd", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_PlayListAdd__WEBPACK_IMPORTED_MODULE_40___default.a, {})], ["Refresh", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Refresh__WEBPACK_IMPORTED_MODULE_42___default.a, {})], ["Reply", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Reply__WEBPACK_IMPORTED_MODULE_43___default.a, {})], ["Reply (right)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Reply__WEBPACK_IMPORTED_MODULE_43___default.a, {
+  type: "right"
+})], ["Search", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Search__WEBPACK_IMPORTED_MODULE_44___default.a, {})], ["Settings", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Settings__WEBPACK_IMPORTED_MODULE_45___default.a, {})], ["Settings", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Settings__WEBPACK_IMPORTED_MODULE_45___default.a, {
+  type: "square"
+})], ["ShoppingCart", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_ShoppingCart__WEBPACK_IMPORTED_MODULE_46___default.a, {})], ["Sort", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Sort__WEBPACK_IMPORTED_MODULE_47___default.a, {})], ["Shopee", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Shopee__WEBPACK_IMPORTED_MODULE_48___default.a, {})], ["Sync", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Sync__WEBPACK_IMPORTED_MODULE_49___default.a, {})], ["Sync (disabled)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Sync__WEBPACK_IMPORTED_MODULE_49___default.a, {
+  type: "disabled"
+})], ["Sync (problem)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Sync__WEBPACK_IMPORTED_MODULE_49___default.a, {
+  type: "problem"
+})], ["TouchApp", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_TouchApp__WEBPACK_IMPORTED_MODULE_50___default.a, {})], ["Timer", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, {})], ["Timer (off)", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Timer__WEBPACK_IMPORTED_MODULE_51___default.a, {
+  type: "off"
+})], ["VerifiedUser", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_VerifiedUser__WEBPACK_IMPORTED_MODULE_52___default.a, {})], ["Video", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Video__WEBPACK_IMPORTED_MODULE_53___default.a, {})], ["Visibility", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Visibility__WEBPACK_IMPORTED_MODULE_54___default.a, {})], ["ViewModule", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_ViewModule__WEBPACK_IMPORTED_MODULE_55___default.a, {})], ["Wifi", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Wifi__WEBPACK_IMPORTED_MODULE_56___default.a, {})], ["Wallet", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Wallet__WEBPACK_IMPORTED_MODULE_57___default.a, {})], ["X", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_X__WEBPACK_IMPORTED_MODULE_58___default.a, {
+  style: {
+    position: "static"
+  }
+})], ["ZoomIn", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_ZoomIn__WEBPACK_IMPORTED_MODULE_59___default.a, {})], // Alert
+["Error", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Error__WEBPACK_IMPORTED_MODULE_60___default.a, {})], ["Warning", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(ricon_Warning__WEBPACK_IMPORTED_MODULE_61___default.a, {})]];
+
+var Icons = function Icons(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Icons"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["Fragment"], {
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])("div", {
+      className: "pure-g",
+      children: icons.map(function (v, k) {
+        return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsxs"])("div", {
+          className: "pure-u-1 pure-u-md-1-3 pure-u-lg-1-5",
+          style: Styles.grid,
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])("div", {
+            style: Styles.icon,
+            children: v[1]
+          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_62__["jsx"])("div", {
+            children: v[0]
+          })]
+        }, k);
+      })
+    })
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Icons);
+var Styles = {
+  grid: {
+    textAlign: "center"
+  },
+  icon: {
+    maxWidth: 30,
+    minHeight: 30,
+    maxHeight: 30,
+    margin: "0 auto 10px",
+    position: "relative"
+  }
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/JSON.js":
+/*!***********************************!*\
+  !*** ./build/es/ui/pages/JSON.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/QueryToJSON */ "./build/es/ui/organisms/QueryToJSON.js");
+/* harmony import */ var _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/QueryToJSON */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _CodeExample;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+var JSON = function JSON(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "JSON"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
+    children: _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Query To JSON",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_organisms_QueryToJSON__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (JSON);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/List.js":
+/*!***********************************!*\
+  !*** ./build/es/ui/pages/List.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_GridList_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/GridList.example */ "./build/es/ui/organisms/GridList.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_GridList_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/GridList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GridList.example.jsx");
+/* harmony import */ var _organisms_HtmlTableList_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/HtmlTableList.example */ "./build/es/ui/organisms/HtmlTableList.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_HtmlTableList_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/HtmlTableList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HtmlTableList.example.jsx");
+/* harmony import */ var _organisms_ReactVirtualizedTableList_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/ReactVirtualizedTableList.example */ "./build/es/ui/organisms/ReactVirtualizedTableList.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_ReactVirtualizedTableList_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/ReactVirtualizedTableList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReactVirtualizedTableList.example.jsx");
+/* harmony import */ var _organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../organisms/FixedDataTableList.example */ "./build/es/ui/organisms/FixedDataTableList.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/FixedDataTableList.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FixedDataTableList.example.jsx");
+/* harmony import */ var _organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../organisms/Pagination.example */ "./build/es/ui/organisms/Pagination.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Pagination.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Pagination.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3, _CodeExample4, _CodeExample5;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var List = function List(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "List"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_GridList_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Grid List",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_organisms_GridList_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_HtmlTableList_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "Html Table",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_organisms_HtmlTableList_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_ReactVirtualizedTableList_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      header: "React Virgualized Table",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_organisms_ReactVirtualizedTableList_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_10__["default"],
+      header: "Fixed Data Table",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_organisms_FixedDataTableList_example__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+    })), _CodeExample5 || (_CodeExample5 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_12__["default"],
+      header: "Pagination",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_organisms_Pagination_example__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (List);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Molecules.js":
+/*!****************************************!*\
+  !*** ./build/es/ui/pages/Molecules.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-organism */ "./node_modules/react-atomic-organism/build/es/src/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _DividingHeader, _div, _Form, _div2, _InputBox, _div3, _SearchBox;
+/*Base*/
+
+
+
+
+
+
+
+
+
+var Molecules = function Molecules(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Molecules"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+    children: [_DividingHeader || (_DividingHeader = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["DividingHeader"], {
+      children: "Input box"
+    })), _div || (_div = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+      children: "Inputbox"
+    })), _Form || (_Form = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["Field"], {
+        atom: "input"
+      })
+    })), _div2 || (_div2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+      children: "Inputbox with button"
+    })), _InputBox || (_InputBox = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_2__["InputBox"], {})), _div3 || (_div3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])("div", {
+      children: "Search Box"
+    })), _SearchBox || (_SearchBox = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(react_atomic_organism__WEBPACK_IMPORTED_MODULE_3__["SearchBox"], {}))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Molecules);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Organisms.js":
+/*!****************************************!*\
+  !*** ./build/es/ui/pages/Organisms.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/PageLoadProgressHandler.example */ "./build/es/ui/organisms/PageLoadProgressHandler.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/PageLoadProgressHandler.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandler.example.jsx");
+/* harmony import */ var _organisms_PageLoadProgressHandlerWithAjax_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/PageLoadProgressHandlerWithAjax.example */ "./build/es/ui/organisms/PageLoadProgressHandlerWithAjax.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_PageLoadProgressHandlerWithAjax_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/PageLoadProgressHandlerWithAjax.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandlerWithAjax.example.jsx");
+/* harmony import */ var _organisms_AjaxDownload_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/AjaxDownload.example */ "./build/es/ui/organisms/AjaxDownload.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_AjaxDownload_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AjaxDownload.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AjaxDownload.example.jsx");
+/* harmony import */ var _organisms_Dropzone_example__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../organisms/Dropzone.example */ "./build/es/ui/organisms/Dropzone.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Dropzone_example__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Dropzone.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Dropzone.example.jsx");
+/* harmony import */ var _organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../organisms/FBLike.example */ "./build/es/ui/organisms/FBLike.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/FBLike.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBLike.example.jsx");
+/* harmony import */ var _organisms_FBPage_example__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../organisms/FBPage.example */ "./build/es/ui/organisms/FBPage.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_FBPage_example__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/FBPage.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBPage.example.jsx");
+/* harmony import */ var _organisms_TabView_example__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../organisms/TabView.example */ "./build/es/ui/organisms/TabView.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_TabView_example__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/TabView.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TabView.example.jsx");
+/* harmony import */ var _organisms_RadioGroup_example__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../organisms/RadioGroup.example */ "./build/es/ui/organisms/RadioGroup.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_RadioGroup_example__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/RadioGroup.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RadioGroup.example.jsx");
+/* harmony import */ var _organisms_Checkbox_example__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../organisms/Checkbox.example */ "./build/es/ui/organisms/Checkbox.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Checkbox_example__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Checkbox.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Checkbox.example.jsx");
+/* harmony import */ var _organisms_Suggestion_example__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../organisms/Suggestion.example */ "./build/es/ui/organisms/Suggestion.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Suggestion_example__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Suggestion.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Suggestion.example.jsx");
+/* harmony import */ var _organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../organisms/TagInput.example */ "./build/es/ui/organisms/TagInput.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/TagInput.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TagInput.example.jsx");
+/* harmony import */ var _organisms_ErrorForm_example__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../organisms/ErrorForm.example */ "./build/es/ui/organisms/ErrorForm.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_ErrorForm_example__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/ErrorForm.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ErrorForm.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3, _CodeExample4, _CodeExample5, _CodeExample6, _CodeExample7, _CodeExample8, _CodeExample9, _CodeExample10, _CodeExample11, _CodeExample12;
+/*Base*/
+
+
+
+ // example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Organisms = function Organisms(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Organisms"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_24__["default"],
+      header: "Tag input",
+      id: "tag-input",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_TagInput_example__WEBPACK_IMPORTED_MODULE_23__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_ErrorForm_example__WEBPACK_IMPORTED_MODULE_26__["default"],
+      header: "Error Form",
+      id: "errorForm",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_ErrorForm_example__WEBPACK_IMPORTED_MODULE_25__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Page Load Progress",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-progress/",
+      npm: "organism-react-progress",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_PageLoadProgressHandler_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_PageLoadProgressHandlerWithAjax_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "Page Load Progress With Ajax",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_PageLoadProgressHandlerWithAjax_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample5 || (_CodeExample5 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_AjaxDownload_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      id: "ajax-save",
+      header: "Ajax Save (Downloader)",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_AjaxDownload_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    })), _CodeExample6 || (_CodeExample6 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Dropzone_example__WEBPACK_IMPORTED_MODULE_10__["default"],
+      header: "Dropzone",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_Dropzone_example__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+    })), _CodeExample7 || (_CodeExample7 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_12__["default"],
+      header: "Facebook Like Button",
+      git: "react-atomic/react-atomic-organism/blob/main/packages/organism-react-facebook/",
+      npm: "organism-react-facebook",
+      id: "organism-react-facebook",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_FBLike_example__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+    })), _CodeExample8 || (_CodeExample8 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_FBPage_example__WEBPACK_IMPORTED_MODULE_14__["default"],
+      header: "Facebook Page Plugin",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_FBPage_example__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+    })), _CodeExample9 || (_CodeExample9 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Suggestion_example__WEBPACK_IMPORTED_MODULE_22__["default"],
+      header: "Suggestion",
+      id: "suggestion",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_Suggestion_example__WEBPACK_IMPORTED_MODULE_21__["default"], {})
+    })), _CodeExample10 || (_CodeExample10 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_TabView_example__WEBPACK_IMPORTED_MODULE_16__["default"],
+      header: "Tab View",
+      id: "tab",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_TabView_example__WEBPACK_IMPORTED_MODULE_15__["default"], {})
+    })), _CodeExample11 || (_CodeExample11 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_RadioGroup_example__WEBPACK_IMPORTED_MODULE_18__["default"],
+      header: "Radio Group",
+      id: "radioGroup",
+      edit: "https://codesandbox.io/embed/jjq8ko2krv?module=%2Fsrc%2FradioGroup.js&moduleview=1",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_RadioGroup_example__WEBPACK_IMPORTED_MODULE_17__["default"], {})
+    })), _CodeExample12 || (_CodeExample12 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Checkbox_example__WEBPACK_IMPORTED_MODULE_20__["default"],
+      header: "Checkbox",
+      id: "checkbox",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__["jsx"])(_organisms_Checkbox_example__WEBPACK_IMPORTED_MODULE_19__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Organisms);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/PDF.js":
+/*!**********************************!*\
+  !*** ./build/es/ui/pages/PDF.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/HTMLToCanvans.example */ "./build/es/ui/organisms/HTMLToCanvans.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/HTMLToCanvans.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+var _CodeExample;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+var PDF = function PDF(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "PDF"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
+    children: _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "PDF Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_organisms_HTMLToCanvans_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PDF);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Parallax.js":
+/*!***************************************!*\
+  !*** ./build/es/ui/pages/Parallax.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-atomic-molecule */ "./node_modules/react-atomic-molecule/build/es/src/index.js");
+/* harmony import */ var _organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../organisms/ParallaxBackgroundImage.example */ "./build/es/ui/organisms/ParallaxBackgroundImage.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/ParallaxBackgroundImage.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ParallaxBackgroundImage.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
+
+var _CodeExample;
+/*Base*/
+
+
+
+
+
+
+
+
+
+
+var Parallax = function Parallax(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Parallax",
+    tplProps: {
+      className: "Parallax"
+    }
+  }));
+  injects = Object(react_atomic_molecule__WEBPACK_IMPORTED_MODULE_3__["useLazyInject"])(InjectStyles, injects);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["Fragment"], {
+    children: _CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_5__["default"],
+      header: "Parallax Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_organisms_ParallaxBackgroundImage_example__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }))
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Parallax);
+var injects;
+var InjectStyles = {
+  doc: [{
+    paddingTop: "300px !important",
+    paddingBottom: "150vh !important"
+  }, "div#doc.Parallax"]
+};
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Popup.js":
+/*!************************************!*\
+  !*** ./build/es/ui/pages/Popup.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_Popup_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Popup.example */ "./build/es/ui/organisms/Popup.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Popup_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Popup.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Popup.example.jsx");
+/* harmony import */ var _organisms_FullScreen_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/FullScreen.example */ "./build/es/ui/organisms/FullScreen.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_FullScreen_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/FullScreen.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FullScreen.example.jsx");
+/* harmony import */ var _organisms_Spotlight_example__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../organisms/Spotlight.example */ "./build/es/ui/organisms/Spotlight.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_Spotlight_example__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/Spotlight.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Spotlight.example.jsx");
+/* harmony import */ var _organisms_AlertsNotifier_example__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../organisms/AlertsNotifier.example */ "./build/es/ui/organisms/AlertsNotifier.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_AlertsNotifier_example__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/AlertsNotifier.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AlertsNotifier.example.jsx");
+/* harmony import */ var _organisms_WindowOffset_example__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../organisms/WindowOffset.example */ "./build/es/ui/organisms/WindowOffset.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_WindowOffset_example__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/WindowOffset.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/WindowOffset.example.jsx");
+/* harmony import */ var _organisms_ReshowMessage_example__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../organisms/ReshowMessage.example */ "./build/es/ui/organisms/ReshowMessage.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_ReshowMessage_example__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/ReshowMessage.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReshowMessage.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__);
+
+
+var _CodeExample, _CodeExample2, _CodeExample3, _CodeExample4, _CodeExample5, _CodeExample6;
+/*Base*/
+
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Popup = function Popup(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Popup"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Popup_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "Popup Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_Popup_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_FullScreen_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "Full Screen Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_FullScreen_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    })), _CodeExample3 || (_CodeExample3 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_AlertsNotifier_example__WEBPACK_IMPORTED_MODULE_10__["default"],
+      header: "Alerts Notifier Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_AlertsNotifier_example__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+    })), _CodeExample4 || (_CodeExample4 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_WindowOffset_example__WEBPACK_IMPORTED_MODULE_12__["default"],
+      header: "Detect Window Offset Example",
+      id: "get-window-offset",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_WindowOffset_example__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+    })), _CodeExample5 || (_CodeExample5 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_Spotlight_example__WEBPACK_IMPORTED_MODULE_8__["default"],
+      header: "Spotlight Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_Spotlight_example__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    })), _CodeExample6 || (_CodeExample6 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_ReshowMessage_example__WEBPACK_IMPORTED_MODULE_14__["default"],
+      header: "Reshow Message Example",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__["jsx"])(_organisms_ReshowMessage_example__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Popup);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Tomato.js":
+/*!*************************************!*\
+  !*** ./build/es/ui/pages/Tomato.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_TomatoApp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../organisms/TomatoApp */ "./build/es/ui/organisms/TomatoApp.js");
+/* harmony import */ var _organisms_Sortable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/Sortable */ "./build/es/ui/organisms/Sortable.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+var _TomatoApp, _Sortable;
+/*Base*/
+
+
+
+/*Sample*/
+
+
+
+
+
+
+
+var Tomato = function Tomato(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Tomato"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+    children: [_TomatoApp || (_TomatoApp = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_organisms_TomatoApp__WEBPACK_IMPORTED_MODULE_2__["default"], {})), _Sortable || (_Sortable = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_organisms_Sortable__WEBPACK_IMPORTED_MODULE_3__["default"], {}))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Tomato);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/Video.js":
+/*!************************************!*\
+  !*** ./build/es/ui/pages/Video.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var organism_react_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! organism-react-code */ "./node_modules/organism-react-code/build/es/src/index.js");
+/* harmony import */ var _src_usePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../src/usePage */ "./build/es/src/usePage.js");
+/* harmony import */ var _organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../organisms/YouTubeRWD.example */ "./build/es/ui/organisms/YouTubeRWD.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/YouTubeRWD.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/YouTubeRWD.example.jsx");
+/* harmony import */ var _organisms_QQVideo_example__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../organisms/QQVideo.example */ "./build/es/ui/organisms/QQVideo.example.js");
+/* harmony import */ var _raw_loader_ui_organisms_QQVideo_example__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! raw-loader!../../../../ui/organisms/QQVideo.example */ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QQVideo.example.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+
+
+var _CodeExample, _CodeExample2;
+/*Base*/
+
+
+
+
+
+
+
+
+
+
+
+
+var Video = function Video(props) {
+  Object(_src_usePage__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    pageName: "Video"
+  }));
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["Fragment"], {
+    children: [_CodeExample || (_CodeExample = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_4__["default"],
+      header: "YouTube RWD player",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_organisms_YouTubeRWD_example__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })), _CodeExample2 || (_CodeExample2 = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(organism_react_code__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      code: _raw_loader_ui_organisms_QQVideo_example__WEBPACK_IMPORTED_MODULE_6__["default"],
+      header: "v.qq.com player",
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_organisms_QQVideo_example__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    }))]
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Video);
+
+/***/ }),
+
+/***/ "./build/es/ui/pages/index.js":
+/*!************************************!*\
+  !*** ./build/es/ui/pages/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow */ "./node_modules/reshow/build/es/src/index.js");
+/* harmony import */ var reshow_url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reshow-url */ "./node_modules/reshow-url/build/es/src/index.js");
+/* harmony import */ var organism_react_popup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-popup */ "./node_modules/organism-react-popup/build/es/src/index.js");
+/* harmony import */ var organism_react_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! organism-react-progress */ "./node_modules/organism-react-progress/build/es/src/index.js");
+/* harmony import */ var organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! organism-react-i13n */ "./node_modules/organism-react-i13n/build/es/src/index.js");
+/* harmony import */ var _templates_Doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../templates/Doc */ "./build/es/ui/templates/Doc.js");
+/* harmony import */ var _pages_Atoms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/Atoms */ "./build/es/ui/pages/Atoms.js");
+/* harmony import */ var _pages_Molecules__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/Molecules */ "./build/es/ui/pages/Molecules.js");
+/* harmony import */ var _pages_Organisms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/Organisms */ "./build/es/ui/pages/Organisms.js");
+/* harmony import */ var _pages_Icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/Icons */ "./build/es/ui/pages/Icons.js");
+/* harmony import */ var _pages_List__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/List */ "./build/es/ui/pages/List.js");
+/* harmony import */ var _pages_Carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/Carousel */ "./build/es/ui/pages/Carousel.js");
+/* harmony import */ var _pages_D3__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../pages/D3 */ "./build/es/ui/pages/D3.js");
+/* harmony import */ var _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/D3UmlPerf */ "./build/es/ui/pages/D3UmlPerf.js");
+/* harmony import */ var _pages_Animation__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../pages/Animation */ "./build/es/ui/pages/Animation.js");
+/* harmony import */ var _pages_Popup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/Popup */ "./build/es/ui/pages/Popup.js");
+/* harmony import */ var _pages_Video__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/Video */ "./build/es/ui/pages/Video.js");
+/* harmony import */ var _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/Parallax */ "./build/es/ui/pages/Parallax.js");
+/* harmony import */ var _pages_Code__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/Code */ "./build/es/ui/pages/Code.js");
+/* harmony import */ var _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/AsciiDoc */ "./build/es/ui/pages/AsciiDoc.js");
+/* harmony import */ var _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/GrapesJs */ "./build/es/ui/pages/GrapesJs.js");
+/* harmony import */ var _pages_PDF__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/PDF */ "./build/es/ui/pages/PDF.js");
+/* harmony import */ var _pages_JSON__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/JSON */ "./build/es/ui/pages/JSON.js");
+/* harmony import */ var _pages_Tomato__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/Tomato */ "./build/es/ui/pages/Tomato.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__);
+
+
+var _PageLoadProgressHand, _I13nElement, _ReshowMessage, _PopupPool;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var themes = {
+  Atoms: _pages_Atoms__WEBPACK_IMPORTED_MODULE_7__["default"],
+  Molecules: _pages_Molecules__WEBPACK_IMPORTED_MODULE_8__["default"],
+  Organisms: _pages_Organisms__WEBPACK_IMPORTED_MODULE_9__["default"],
+  D3: _pages_D3__WEBPACK_IMPORTED_MODULE_13__["default"],
+  D3UmlPerf: _pages_D3UmlPerf__WEBPACK_IMPORTED_MODULE_14__["default"],
+  Icons: _pages_Icons__WEBPACK_IMPORTED_MODULE_10__["default"],
+  List: _pages_List__WEBPACK_IMPORTED_MODULE_11__["default"],
+  Carousel: _pages_Carousel__WEBPACK_IMPORTED_MODULE_12__["default"],
+  Animation: _pages_Animation__WEBPACK_IMPORTED_MODULE_15__["default"],
+  Popup: _pages_Popup__WEBPACK_IMPORTED_MODULE_16__["default"],
+  Parallax: _pages_Parallax__WEBPACK_IMPORTED_MODULE_18__["default"],
+  Video: _pages_Video__WEBPACK_IMPORTED_MODULE_17__["default"],
+  Code: _pages_Code__WEBPACK_IMPORTED_MODULE_19__["default"],
+  AsciiDoc: _pages_AsciiDoc__WEBPACK_IMPORTED_MODULE_20__["default"],
+  GrapesJs: _pages_GrapesJs__WEBPACK_IMPORTED_MODULE_21__["default"],
+  PDF: _pages_PDF__WEBPACK_IMPORTED_MODULE_22__["default"],
+  JSON: _pages_JSON__WEBPACK_IMPORTED_MODULE_23__["default"],
+  Tomato: _pages_Tomato__WEBPACK_IMPORTED_MODULE_24__["default"]
+};
+
+var Index = function Index(props) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["Return"], {
+    initStates: ["tplProps", "pageName"],
+    children: function children(_ref) {
+      var tplProps = _ref.tplProps,
+          pageName = _ref.pageName;
+      return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["Fragment"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsxs"])(_templates_Doc__WEBPACK_IMPORTED_MODULE_6__["default"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, tplProps), {}, {
+          className: pageName,
+          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow_url__WEBPACK_IMPORTED_MODULE_2__["ClientRoute"], Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+            themes: themes,
+            defaultThemePath: "Atoms"
+          })), _PageLoadProgressHand || (_PageLoadProgressHand = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_progress__WEBPACK_IMPORTED_MODULE_4__["PageLoadProgressHandler"], {
+            ajax: true
+          })), _I13nElement || (_I13nElement = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_i13n__WEBPACK_IMPORTED_MODULE_5__["I13nElement"], {})), _ReshowMessage || (_ReshowMessage = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(reshow__WEBPACK_IMPORTED_MODULE_1__["ReshowMessage"], {}))]
+        })), _PopupPool || (_PopupPool = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_25__["jsx"])(organism_react_popup__WEBPACK_IMPORTED_MODULE_3__["PopupPool"], {}))]
+      });
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./build/es/ui/templates/Doc.js":
+/*!**************************************!*\
+  !*** ./build/es/ui/templates/Doc.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectSpread2 */ "./node_modules/reshow-runtime/es/helpers/objectSpread2.js");
+/* harmony import */ var reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reshow-runtime/es/helpers/objectWithoutPropertiesLoose */ "./node_modules/reshow-runtime/es/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! organism-react-navigation */ "./node_modules/organism-react-navigation/build/es/src/index.js");
+/* harmony import */ var _molecules_Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../molecules/Menu */ "./build/es/ui/molecules/Menu.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+var _Menu;
+
+var _excluded = ["children"];
+
+
+
+
+var DocTemplate = Object(organism_react_navigation__WEBPACK_IMPORTED_MODULE_3__["getDocTemplate"])({
+  sideWidth: 160,
+  active: true
+});
+
+var Doc = function Doc(_ref) {
+  var children = _ref.children,
+      props = Object(reshow_runtime_es_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
+
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(DocTemplate, Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(reshow_runtime_es_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props), {}, {
+    body: children,
+    menu: _Menu || (_Menu = /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_molecules_Menu__WEBPACK_IMPORTED_MODULE_4__["default"], {}))
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Doc);
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AjaxDownload.example.jsx":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AjaxDownload.example.jsx ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\nimport { download } from \"ajax-save\";\n\nconst AjaxDownloadExample = (props) => {\n  const url =\n    \"https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg\";\n  return (\n    <Button\n      onClick={() => {\n        ajaxDispatch(\"ajaxGet\", {\n          responseType: [\"blob\"],\n          url,\n          callback: (json, text, o) => {\n            download(o.body, url.split(\"/\").splice(-1)[0]);\n          },\n        });\n      }}\n    >\n      Ajax Download\n    </Button>\n  );\n};\n\nexport default AjaxDownloadExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AlertsNotifier.example.jsx":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AlertsNotifier.example.jsx ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { AlertsNotifier, PopupClick } from \"organism-react-popup\";\n\nclass AlertsNotifierExample extends PureComponent {\n  render() {\n    return (\n      <PopupClick\n        style={Styles.click}\n        popup={() => (\n          <AlertsNotifier\n            position=\"bottom\"\n            alerts={[\n              {\n                type: \"info\",\n                message: \"test\",\n              },\n            ]}\n          />\n        )}\n        component={<a />}\n      >\n        alert\n      </PopupClick>\n    );\n  }\n}\n\nexport default AlertsNotifierExample;\n\nconst Styles = {\n  click: {\n    color: \"blue\",\n    textDecoration: \"underline\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Animation.example.jsx":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Animation.example.jsx ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { Component, cloneElement } from \"react\";\nimport Animate from \"organism-react-animate\";\n\nconst hello = <div>Hello world!!</div>;\n\nclass AnimationExample extends Component {\n  constructor(props) {\n    super(props);\n    this.state = {\n      dom: hello,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear=\"fadeInRight-3000\"\n          enter=\"fadeInRight-3000\"\n          leave=\"fadeOutRight-1000\"\n        >\n          {this.state.dom}\n        </Animate>\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              dom: hello,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationDelay.example.jsx":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationDelay.example.jsx ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport Animate from \"organism-react-animate\";\n\nconst foo = <div>Hello</div>;\nconst bar = <div>world!!</div>;\n\nclass AnimationDelayExample extends PureComponent {\n  constructor(props) {\n    super(props);\n    this.state = {\n      foo,\n      bar,\n    };\n  }\n\n  render() {\n    return (\n      <div>\n        <Animate\n          appear=\"fadeInRight-3000\"\n          enter=\"fadeInRight-3000\"\n          leave=\"fadeOutRight-1000\"\n        >\n          {this.state.foo}\n        </Animate>\n        <Animate\n          appear=\"fadeInRight-3000-500\"\n          enter=\"fadeInRight-3000-500\"\n          leave=\"fadeOutRight-1000-500\"\n        >\n          {this.state.bar}\n        </Animate>\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo: null,\n              bar: null,\n            });\n          }).bind(this)}\n        >\n          leave\n        </a>\n\n        <a\n          href=\"#\"\n          style={{ marginLeft: \"10px\" }}\n          onClick={((e) => {\n            e.preventDefault();\n            this.setState({\n              foo,\n              bar,\n            });\n          }).bind(this)}\n        >\n          enter\n        </a>\n      </div>\n    );\n  }\n}\n\nexport default AnimationDelayExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationReplace.example.jsx":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AnimationReplace.example.jsx ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\n/**\n * Production please use\n * import Animate from \"organism-react-animate\"\n */\nimport { Replace } from \"organism-react-animate\";\n\nclass AnimationReplaceExample extends PureComponent {\n  render() {\n    return (\n      <Replace\n        enter=\"fadeInRight-2000\"\n        leave=\"fadeOutRight-1000\"\n        style={{ minHeight: 30, overflow: \"hidden\" }}\n      >\n        <div style={{ background: \"#f4cc70\" }}>1</div>\n        <div style={{ background: \"#de7a22\" }}>2</div>\n        <div style={{ background: \"#20948b\" }}>3</div>\n      </Replace>\n    );\n  }\n}\n\nexport default AnimationReplaceExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AsciiDoc.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/AsciiDoc.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import Asciidoc from \"organism-react-asciidoc\";\n\nconst adoc = `\n:toc:\n:toc-placement!:\ntoc::[]\n\n= h1 - test\ntest\n\n== h2 - test2\n* Hello *world*\n\n== h2 - test3\n- [ ] option1\n- [*] option1\n`;\n\nconst AsciidocDemo = (props) => (\n  <Asciidoc options={{ doctype: \"book\" }}>{adoc}</Asciidoc>\n);\n\nexport default AsciidocDemo;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimation.example.jsx":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimation.example.jsx ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Image } from \"react-atomic-molecule\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>\n        <Image\n          style={Styles.img}\n          src=\"https://source.unsplash.com/random\"\n        />\n      </Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    maxHeight: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimationHideThumb.example.jsx":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselAnimationHideThumb.example.jsx ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselAnimation } from \"organism-react-carousel\";\n\nconst CarouselAnimationExample = (props) => {\n  return (\n    <CarouselAnimation\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n      carouselListStyle={Styles.carouselList}\n      style={Styles.container}\n      hideThumb\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselAnimation>\n  );\n};\n\nexport default CarouselAnimationExample;\n\nconst height = 300;\n\nconst Styles = {\n  container: {\n    margin: \"0 10%\",\n  },\n  carouselList: {\n    minHeight: height + 5,\n  },\n  carousel: {\n    width: \"100%\",\n    height,\n    background: \"#00558B\",\n  },\n  img: {\n    maxWidth: \"100%\",\n    verticalAlign: \"bottom\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselSlide.example.jsx":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CarouselSlide.example.jsx ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { Carousel, CarouselSlide } from \"organism-react-carousel\";\n\nconst CarouselSlideExample = (props) => {\n  return (\n    <CarouselSlide\n      carouselAttr={{\n        style: Styles.carousel,\n      }}\n    >\n      <Carousel>\n        <img\n          style={Styles.img}\n          src=\"https://c1.staticflickr.com/9/8567/16584613141_d984a3680a_b.jpg\"\n        />\n      </Carousel>\n      <Carousel>2</Carousel>\n      <Carousel>3</Carousel>\n      <Carousel>4</Carousel>\n      <Carousel>5</Carousel>\n    </CarouselSlide>\n  );\n};\n\nexport default CarouselSlideExample;\n\nconst Styles = {\n  carousel: {\n    width: 300,\n    height: 300,\n    background: \"#00558B\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Checkbox.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Checkbox.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Form } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nclass CheckboxExample extends PureComponent {\n  render() {\n    return (\n      <Form>\n        <Checkbox />\n        <Checkbox type=\"radio\" />\n        <Checkbox toggle />\n        <Checkbox slider />\n      </Form>\n    );\n  }\n}\n\nexport default CheckboxExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeEditor.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeEditor.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\nimport { openCodeEditor } from \"organism-react-codeeditor\";\n\nconst CodeEditorExample = (props) => {\n  return <button onClick={() => openCodeEditor()}>open</button>;\n};\n\nexport default CodeEditorExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeExample.example.jsx":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/CodeExample.example.jsx ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n\n/**\n * Production please use\n * import CodeExample from 'organism-react-code'\n */\nimport CodeExample from \"organism-react-code\";\n\n/**\n * Your source code.\n * npm i raw-loader\n */\nimport code from \"!raw-loader!../../../../ui/organisms/CodeExample.example\";\n\nconst CodeExampleExample = (props) => (\n  <CodeExample\n    code={code}\n    header=\"Test Header\"\n    git=\"react-atomic/react-atomic-organism/tree/main/packages/organism-react-code/\"\n    npm=\"organism-react-code\"\n  >\n    <div>Test Demo Area</div>\n  </CodeExample>\n);\n\nexport default CodeExampleExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3AreaChart.example.jsx":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3AreaChart.example.jsx ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { AreaChart } from \"organism-react-d3-axis-chart\";\n\nconst data = [\n  {\n    values: [\n      {\n        x: \"2019-01\",\n        y: 100,\n      },\n      {\n        x: \"2019-02\",\n        y: 450,\n      },\n      {\n        x: \"2019-03\",\n        y: 450,\n      },\n      {\n        x: \"2019-04\",\n        y: 0,\n      },\n      {\n        x: \"2019-05\",\n        y: 0,\n      },\n    ],\n  },\n];\n\nconst D3AreaChart = (props) => {\n  return <AreaChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3AreaChart;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3BarChart.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3BarChart.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { BarChart } from \"organism-react-d3-axis-chart\";\n\nconst D3BarChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: \"2013-01\",\n          y: 53,\n        },\n        {\n          x: \"2013-02\",\n          y: 165,\n        },\n        {\n          x: \"2013-03\",\n          y: 269,\n        },\n      ],\n    },\n  ];\n\n  return <BarChart data={data} style={{ maxHeight: 450 }} />;\n};\n\nexport default D3BarChart;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3LineChart.example.jsx":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3LineChart.example.jsx ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { LineChart } from \"organism-react-d3-axis-chart\";\n\nconst D3LineChart = (props) => {\n  let data = [\n    {\n      values: [\n        {\n          x: \"2013-01\",\n          y: 100,\n        },\n        {\n          x: \"2013-02\",\n          y: 450,\n        },\n        {\n          x: \"2013-01\",\n          y: 450,\n        },\n      ],\n    },\n  ];\n  return (\n    <LineChart\n      data={data}\n      style={{ maxHeight: 450 }}\n      hideAxis={true}\n      thresholds={[200]}\n    />\n  );\n};\n\nexport default D3LineChart;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3PieChart.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3PieChart.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport PieChart from \"organism-react-d3-piechart\";\n\nconst D3PieChartExample = (props) => {\n  let data = [\n    { value: 10, label: \"xxx\" },\n    { value: 30, label: \"yyy\" },\n  ];\n  return <PieChart data={data} style={{ maxWidth: 300 }} unit=\"\" />;\n};\n\nexport default D3PieChartExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3Uml.example.jsx":
+/*!******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3Uml.example.jsx ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useRef, useState } from \"react\";\n\nimport { UMLGraph } from \"organism-react-d3-uml\";\nimport { Form, Field, Button } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst data = {\n  tables: [\n    {\n      name: \"table1\",\n      cols: [\"t1-col1\", \"t1-col2\"],\n    },\n    {\n      name: \"table2\",\n      cols: [\"t2-col1\", \"t2-col2\"],\n    },\n  ],\n  conns: [\n    {\n      from: {\n        table: \"table1\",\n        col: \"t1-col1\",\n      },\n      to: {\n        table: \"table2\",\n        col: \"t2-col2\",\n      },\n    },\n  ],\n};\n\nconst D3UmlExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: \"border-box\" }} className=\"equal width\">\n        <Field>\n          <Field atom=\"input\" label=\"x\" name=\"x\" />\n          <Field atom=\"input\" label=\"y\" name=\"y\" />\n          <Field atom=\"input\" label=\"k\" name=\"k\" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label=\"disable curve\"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label=\"disable line delete\"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label=\"disable node move\"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/D3UmlPerf.example.jsx ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useRef, useState } from \"react\";\n\nimport { UMLGraph } from \"organism-react-d3-uml\";\nimport { Form, Field, Button } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst data = {\n  tables: [\n  ],\n  conns: [\n    {\n      from: {\n        table: \"table1\",\n        col: \"t1-col1\",\n      },\n      to: {\n        table: \"table2\",\n        col: \"t2-col2\",\n      },\n    },\n  ],\n};\n\nfor (let i = 1; i < 300; i++) {\n  data.tables.push(\n    {\n      name: `table${i}`,\n      cols: [`t${i}-col1`, `t${i}-col2`],\n    },\n  );\n}\n\nconst D3UmlPerfExample = () => {\n  const uml = useRef();\n  const [isDisableCurve, setIsDisableCurve] = useState(false);\n  const handleUml = (el) => (uml.current = el);\n  const handleUpdate = (e) => {\n    const t = e.currentTarget || {};\n    const fm = t.form;\n    uml.current.zoom.setXYK({\n      x: fm.x.value || null,\n      y: fm.y.value || null,\n      k: fm.k.value || null,\n    });\n  };\n  const handleZoom = (e) => {\n    //  console.log(e.zoom.getXYK());\n  };\n  let isDisableDel;\n  let isDisableMove;\n  return (\n    <div>\n      <UMLGraph\n        style={{height: \"50vh\"}}\n        onZoom={handleZoom}\n        ref={handleUml}\n        data={data}\n        lineDefaultProps={{curve: !isDisableCurve}}\n        connsLocator={(d) => d.conns}\n        connFromBoxGroupLocator={(d) => d.from.table}\n        connFromBoxLocator={(d) => d.from.col}\n        connToBoxGroupLocator={(d) => d.to.table}\n        connToBoxLocator={(d) => d.to.col}\n        onBoxWillDrag={(e) => {\n          return !isDisableMove.getChecked().input;\n        }}\n        onLineDel={(e) => {\n          console.log({ e });\n          return !isDisableDel.getChecked().input;\n        }}\n      />\n      <Form style={{ boxSizing: \"border-box\" }} className=\"equal width\">\n        <Field>\n          <Field atom=\"input\" label=\"x\" name=\"x\" />\n          <Field atom=\"input\" label=\"y\" name=\"y\" />\n          <Field atom=\"input\" label=\"k\" name=\"k\" />\n        </Field>\n        <Field>\n          <Checkbox\n            toggle\n            label=\"disable curve\"\n            onChange={({checked}) => {setIsDisableCurve(checked)}}\n          />\n          <Checkbox\n            label=\"disable line delete\"\n            ref={(el) => (isDisableDel = el)}\n          />\n          <Checkbox\n            label=\"disable node move\"\n            ref={(el) => (isDisableMove = el)}\n          />\n        </Field>\n        <Button onClick={handleUpdate}>update</Button>\n      </Form>\n    </div>\n  );\n};\n\nexport default D3UmlPerfExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Dropzone.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Dropzone.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport Dropzone from \"organism-react-dropzone\";\nimport get from \"get-object-value\";\n\nclass DropzoneExample extends PureComponent {\n  state = {\n    urls: [],\n  };\n\n  handleClick = () => {\n    this.dropzone.openDialog();\n  };\n\n  render() {\n    const { urls } = this.state;\n    return (\n      <div>\n        <Dropzone\n          ref={(el) => (this.dropzone = el)}\n          acceptedFiles=\".png, .jpg\"\n          showFiletypeIcon={true}\n          postUrl=\"https://file.io\"\n          djsConfig={{\n            addRemoveLinks: true,\n          }}\n          eventHandlers={{\n            success: (file) => {\n              this.setState(({ urls }) => {\n                const req = get(file, [\"xhr\", \"response\"]);\n                if (req) {\n                  const json = JSON.parse(req);\n                  urls.push(json.link);\n                }\n                return urls;\n              });\n            },\n          }}\n        />\n        <ul>\n          {urls.map((url, key) => (\n            <li key={key}>\n              <a href={url} target=\"_blank\">\n                {url}\n              </a>\n            </li>\n          ))}\n        </ul>\n        <button onClick={this.handleClick}>open</button>\n      </div>\n    );\n  }\n}\n\nexport default DropzoneExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ErrorForm.example.jsx":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ErrorForm.example.jsx ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\nimport { SemanticUI, Form, Field, Menu, Item } from \"react-atomic-molecule\";\n\nimport { Dropdown, Select, SelectField } from \"organism-react-navigation\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst options = [\n  {\n    label: \"Boy\",\n    value: \"boy\",\n  },\n  {\n    label: \"Girl\",\n    value: \"girl\",\n  },\n];\n\nconst DropdownExample = (props) => {\n  const [value, setValue] = useState();\n\n  const MyList = (props) => (\n    <Menu {...props}>\n      <Item onClick={() => setValue(\"Boy\")}>Boy</Item>\n      <Item onClick={() => setValue(\"Girl\")}>Girl</Item>\n    </Menu>\n  );\n\n  return (\n    <Field\n      {...props}\n      inputComponent={\n        <Dropdown style={Styles.dropdown} list={<MyList />}>\n          You-select {value}\n        </Dropdown>\n      }\n    />\n  );\n};\n\nconst ErrorFormExample = () => {\n  const [isError, setIsError] = useState(false);\n\n  const handleChange = (e) => {\n    setIsError(e.checked ? true : false);\n  };\n\n  return (\n    <SemanticUI>\n      <Form messageType={isError ? \"error\" : \"\"}>\n        <DropdownExample\n          messageType={isError ? \"error\" : \"\"}\n          label=\"Dropdown: \"\n        />\n        <SelectField\n          messageType={isError ? \"error\" : \"\"}\n          label=\"Selection: \"\n          options={options}\n          placeholder={\"not-select-yet\"}\n        />\n        <Field>\n          <Checkbox label=\"Error Style\" toggle onChange={handleChange} />\n        </Field>\n      </Form>\n    </SemanticUI>\n  );\n};\n\nexport default ErrorFormExample;\n\nconst Styles = {\n  dropdown: {\n    marginLeft: 10,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBLike.example.jsx":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBLike.example.jsx ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { FBLike } from \"organism-react-facebook\";\n\nconst FBLikeExample = (props) => (\n  <FBLike page=\"https://www.facebook.com/react\" />\n);\n\nexport default FBLikeExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBPage.example.jsx":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FBPage.example.jsx ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { FBPage } from \"organism-react-facebook\";\n\nconst FBPageExample = (props) => {\n  return <FBPage page=\"react\" />;\n};\n\nexport default FBPageExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FixedDataTableList.example.jsx":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FixedDataTableList.example.jsx ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { lazy, PureComponent } from \"react\";\n\nimport { Cell, Column } from \"pmvc_react_list\";\nconst Table = lazy(() => import('pmvc_react_list/fixedDataTable'));\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a4\", \"b4\", \"c4\"],\n  [\"a5\", \"b5\", \"c5\"],\n  [\"a6\", \"b6\", \"c6\"],\n];\n\nclass FixedDataTableListExample extends PureComponent {\n  render() {\n    return (\n      <div style={{ width: 350 }}>\n        <Table rows={rows} getColWidth={() => 150} height={150}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnKey: columnIndex }) => {\n              return rows[rowIndex][columnIndex];\n            }}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default FixedDataTableListExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FullScreen.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/FullScreen.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\nimport get from \"get-object-value\";\n\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\n\nclass FullScreenExample extends PureComponent {\n  render() {\n    return (\n      <FullScreen id=\"full-screen-example\" button=\"open full screen\">\n        test\n      </FullScreen>\n    );\n  }\n}\n\nexport default FullScreenExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GrapesJs.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GrapesJs.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { GrapesJsController } from \"organism-react-grapesjs\";\n\nconst GrapesJsExample = () => (\n  <GrapesJsController style={Styles.container} debug />\n);\n\nexport default GrapesJsExample;\n\nconst Styles = {\n  container: {\n    minHeight: 600,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GridList.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/GridList.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a4\", \"b4\", \"c4\"],\n  [\"a5\", \"b5\", \"c5\"],\n  [\"a6\", \"b6\", \"c6\"],\n];\n\nlet RVGrid = null;\n\nclass GridListExample extends PureComponent {\n  state = {\n    isLoad: false,\n  };\n\n  componentDidMount() {\n    import(\"pmvc_react_list/rv\").then(({ RVGrid: rvGrid }) => {\n      RVGrid = rvGrid;\n      this.setState({ isLoad: true });\n    });\n  }\n\n  render() {\n    const { isLoad } = this.state;\n    let grid = null;\n    if (RVGrid && isLoad) {\n      const className = \"grid\"; // hack for disable const element\n      grid = (\n        <RVGrid\n          className={className}\n          width={200}\n          height={100}\n          rows={rows}\n          style={Styles.container}\n        />\n      );\n    }\n    return grid;\n  }\n}\n\nexport default GridListExample;\n\nconst Styles = {\n  container: {\n    border: \"1px solid #000\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HTMLToCanvans.example.jsx ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState, useRef } from \"react\";\nimport { Unsafe, Field, Form, Button } from \"react-atomic-molecule\";\n\nimport { HTMLToPDF } from \"organism-react-html2canvas\";\n\nconst HTMLToCanvansExample = (props) => {\n  const [html, setHtml] = useState(\"\");\n\n  const pdf = useRef();\n\n  const handleInput = (e) => {\n    const v = e.currentTarget.value;\n    setHtml(v);\n  };\n\n  const handleClick = (e) => {\n    if (pdf && pdf.current) {\n      pdf.current.download();\n    }\n  };\n\n  const handlePdf = (el) => (pdf.current = el);\n  return (\n    <div>\n      <Form className=\"equal width\" style={{ boxSizing: \"border-box\" }}>\n        <Field atom=\"textarea\" onInput={handleInput} />\n        <Button onClick={handleClick}>Download</Button>\n      </Form>\n      <HTMLToPDF preview autoGenCanvas ref={handlePdf}>\n        <Unsafe>{html}</Unsafe>\n      </HTMLToPDF>\n    </div>\n  );\n};\n\nexport default HTMLToCanvansExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HtmlTableList.example.jsx":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/HtmlTableList.example.jsx ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Table, Cell, Column } from \"pmvc_react_list\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n];\n\nclass HtmlTableListExample extends PureComponent {\n  render() {\n    return (\n      <Table rows={rows}>\n        <Column\n          header={<Cell>h1</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h2</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][columnIndex];\n          }}\n        />\n        <Column\n          header={<Cell>h3</Cell>}\n          cell={({ rowIndex, columnIndex }) => {\n            return rows[rowIndex][2];\n          }}\n        />\n      </Table>\n    );\n  }\n}\n\nexport default HtmlTableListExample;\n\nconst Styles = {\n  col: {\n    height: 40,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandler.example.jsx":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandler.example.jsx ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { Button, InputBox } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let oLoad;\n  let dInput;\n  return (\n    <div>\n      <PageLoadProgressHandler ref={(o) => (oLoad = o)} />\n\n      <div>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.start(100, 800);\n          }}\n        >\n          Start\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.pause();\n          }}\n        >\n          Pause\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.complete();\n          }}\n        >\n          Complete\n        </Button>\n        <Button\n          style={Styles.button}\n          onClick={() => {\n            oLoad.reset();\n          }}\n        >\n          Reset\n        </Button>\n      </div>\n\n      <div>\n        <InputBox\n          leftLabel=\"Pause @\"\n          rightLabel=\"%\"\n          refCb={(o) => (dInput = o)}\n          button={\"Go\"}\n          actionProps={{\n            onClick: () => {\n              oLoad.start(dInput.value);\n            },\n          }}\n          style={Styles.input}\n        />\n      </div>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n\nconst Styles = {\n  input: {\n    width: 20,\n  },\n  button: {\n    marginBottom: 10,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandlerWithAjax.example.jsx":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/PageLoadProgressHandlerWithAjax.example.jsx ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { PageLoadProgressHandler } from \"organism-react-progress\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { Button } from \"react-atomic-molecule\";\n\nconst PageLoadProgressHandlerExample = (props) => {\n  let url =\n    \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/README.md\";\n  return (\n    <div>\n      <PageLoadProgressHandler ajax={true} />\n\n      <Button\n        onClick={() => {\n          ajaxDispatch({\n            type: \"ajaxGet\",\n            params: {\n              url: url,\n              callback: (json, text, o) => {\n                alert(text);\n              },\n            },\n          });\n        }}\n      >\n        Call Ajax\n      </Button>\n    </div>\n  );\n};\n\nexport default PageLoadProgressHandlerExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Pagination.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Pagination.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { PaginationController } from \"organism-react-navigation\";\n\nclass PaginationExample extends PureComponent {\n  handlePageChange = ({ begin }) => {\n    this.setState({ begin });\n  };\n\n  render() {\n    const { begin } = this.state || {};\n    return (\n      <PaginationController\n        style={Styles.container}\n        onPageChange={this.handlePageChange}\n        total={500}\n        begin={begin}\n      />\n    );\n  }\n}\n\nexport default PaginationExample;\n\nconst Styles = {\n  container: {\n    textAlign: \"center\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ParallaxBackgroundImage.example.jsx":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ParallaxBackgroundImage.example.jsx ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { ParallaxBackgroundImage } from \"organism-react-parallax\";\n\nconst ParallaxBackgroundImageExample = () => (\n  <ParallaxBackgroundImage\n    style={Styles.container}\n    backgroundImage=\"https://c1.staticflickr.com/9/8621/16732897815_4705c08fe6_h.jpg\"\n  >\n    test\n  </ParallaxBackgroundImage>\n);\n\nexport default ParallaxBackgroundImageExample;\n\nconst Styles = {\n  container: {\n    height: 600,\n    color: \"#fff\",\n    textAlign: \"center\",\n    paddingTop: 200,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Popup.example.jsx":
+/*!******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Popup.example.jsx ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\nimport { Checkbox } from \"react-atomic-organism\";\n\n/**\n * Production please use\n * import {...xxx} from \"organism-react-popup\"\n */\nimport { Dialog, PopupModal, PopupClick } from \"organism-react-popup\";\n\nimport { Button } from \"react-atomic-molecule\";\n\nconst PopupExample = () => {\n  const [backgroundScrollAble, setBackgroundScrollAble] = useState(false);\n  return (\n    <div>\n      <PopupClick\n        style={Styles.click}\n        popup={() => {\n          return <PopupModal backgroundScroll={backgroundScrollAble}>xxx</PopupModal>;\n        }}\n        component={<a />}\n      >\n        show modal\n      </PopupClick>\n\n      <PopupClick\n        style={{ marginLeft: 5 }}\n        popup={<Dialog backgroundScroll={backgroundScrollAble} header=\"Test Header\">Test Dialog</Dialog>}\n        component={<Button />}\n      >\n        show dialog\n      </PopupClick>\n      <Checkbox\n        toggle\n        label=\"Background scrollable\"\n        onChange={({ checked }) => {\n          setBackgroundScrollAble(checked);\n        }}\n      />\n    </div>\n  );\n};\n\nexport default PopupExample;\n\nconst Styles = {\n  click: {\n    color: \"blue\",\n    textDecoration: \"underline\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QQVideo.example.jsx":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QQVideo.example.jsx ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport QQVideo from \"organism-react-qq-video\";\n\nconst QQVideoExample = () => <QQVideo videoId=\"j0792wzb6v8\" />;\n\nexport default QQVideoExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx":
+/*!****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/QueryToJSON.jsx ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\nimport prettyjson from \"prettyjson\";\n\nimport { Field, Form } from \"react-atomic-molecule\";\n\nimport { FormattedJSON } from \"react-atomic-organism\";\n\nconst QueryToJSON = (props) => {\n  const [json, setJson] = useState(\"\");\n\n  const handleInput = (e) => {\n    const v = e.currentTarget.value;\n    const vArr = [...new URLSearchParams(v)];\n    const nextArr = [];\n    vArr.forEach((item) => {\n      nextArr.push({ [item[0]]: item[1] });\n    });\n    setJson(nextArr);\n  };\n\n  return (\n    <div>\n      <Form className=\"equal width\" style={{ boxSizing: \"border-box\" }}>\n        <Field ui atom=\"textarea\" onInput={handleInput} />\n        <FormattedJSON atom=\"div\">{prettyjson.render(json)}</FormattedJSON>\n      </Form>\n    </div>\n  );\n};\n\nexport default QueryToJSON;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RTE.example.jsx":
+/*!****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RTE.example.jsx ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\n// import { Editor } from \"organism-react-rte-writer\";\nconst Editor = () => <div />;\n\nconst RTEExample = () => {\n  return <Editor />;\n};\n\nexport default RTEExample;\n\nconst Styles = {};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RadioGroup.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/RadioGroup.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Form, Button } from \"react-atomic-molecule\";\nimport { RadioGroup } from \"react-atomic-organism\";\n\nconst options = [\n  {\n    label: \"Boy\",\n    value: \"boy\",\n  },\n  {\n    label: \"Girl\",\n    value: \"girl\",\n  },\n];\n\nclass RadioGroupExample extends PureComponent {\n  state = {\n    value: \"\",\n  };\n  handleChange = () => {\n    this.setState({ value: this.radio.getValue() });\n  };\n\n  render() {\n    const { value } = this.state;\n    return (\n      <Form>\n        <RadioGroup\n          ref={(el) => (this.radio = el)}\n          inline={false}\n          label=\"Sex: \"\n          name=\"sex\"\n          value={value}\n          options={options}\n          onChange={this.handleChange}\n        />\n        <div>Current: {value}</div>\n        <Button onClick={() => this.setState({ value: \"boy\" })}>\n          Set to Boy\n        </Button>\n        <Button onClick={() => this.setState({ value: \"girl\" })}>\n          Set to Girl\n        </Button>\n      </Form>\n    );\n  }\n}\n\nexport default RadioGroupExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReactVirtualizedTableList.example.jsx":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReactVirtualizedTableList.example.jsx ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Cell, Column } from \"pmvc_react_list\";\nimport Table from \"pmvc_react_list/rv\";\n\nconst rows = [\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n  [\"a1\", \"b1\", \"c1\"],\n  [\"a2\", \"b2\", \"c2\"],\n  [\"a3\", \"b3\", \"c3\"],\n];\n\nclass ReactVirtualizedTableListExample extends PureComponent {\n  handleClick = (rowIndex) => (ev) => {\n    alert(rowIndex);\n  };\n\n  render() {\n    return (\n      <div style={{ width: \"40%\", height: 150 }}>\n        <Table rows={rows}>\n          <Column\n            header={<Cell>h1</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h2</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n          <Column\n            header={<Cell>h3</Cell>}\n            cell={({ rowIndex, columnIndex, style }) => (\n              <div style={style} onClick={this.handleClick(rowIndex)}>\n                {rows[rowIndex][columnIndex]}\n              </div>\n            )}\n          />\n        </Table>\n      </div>\n    );\n  }\n}\n\nexport default ReactVirtualizedTableListExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReshowMessage.example.jsx":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/ReshowMessage.example.jsx ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button } from \"react-atomic-molecule\";\nimport { dispatch, Return } from \"reshow\";\n\nconst DialogResult = ({ dialogReturn }) =>\n  \"undefined\" !== typeof dialogReturn ? \"Dialog: \" + dialogReturn : null;\n\nclass ReshowMessageExample extends PureComponent {\n  handleAddAlert = (e) => {\n    dispatch(\"alert/add\", {\n      message: \"test\",\n    });\n  };\n\n  handleResetAlert = (e) => {\n    dispatch(\"alert/reset\", {\n      alerts: [1, 2, 3],\n    });\n  };\n\n  handleCleanAlert = (e) => {\n    dispatch(\"alert/reset\", {\n      alerts: null,\n    });\n  };\n\n  handleOpenDialog = (e) => {\n    dispatch(\"dialog/start\", {\n      dialog: \"how are u\",\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <p>\n          <Button onClick={this.handleAddAlert}>Add alert</Button>\n          <Button onClick={this.handleResetAlert}>Reset alert</Button>\n          <Button onClick={this.handleCleanAlert}>Clean all alerts</Button>\n        </p>\n        <p>\n          <Button onClick={this.handleOpenDialog}>Open Dialog</Button>\n          <Return initStates={[\"dialogReturn\"]}>\n            <DialogResult />\n          </Return>\n        </p>\n      </div>\n    );\n  }\n}\n\nexport default ReshowMessageExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Spotlight.example.jsx":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Spotlight.example.jsx ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button } from \"react-atomic-molecule\";\n\nimport { PopupPool } from \"organism-react-popup\";\n\nimport { FullScreenExample } from \"organism-react-code\";\n\nimport Spotlight from \"organism-react-spotlight\";\n\nclass SpotlightExample extends PureComponent {\n  state = {\n    spotlight: false,\n  };\n\n  render() {\n    const { spotlight } = this.state;\n    let thisSpotlight = null;\n    if (spotlight) {\n      thisSpotlight = (\n        <Spotlight\n          toPool=\"spotlight-pool\"\n          targetEl={this.spot}\n          onClose={() => {\n            this.setState({ spotlight: null });\n          }}\n        />\n      );\n    }\n    return (\n      <FullScreenExample\n        button=\"open full screen\"\n        onClose={() => this.setState({ spotlight: null })}\n      >\n        <div ref={(el) => (this.spot = el)} style={Styles.el}>\n          Spotlight\n        </div>\n        <div>\n          <Button\n            onClick={() => {\n              this.setState({\n                spotlight: true,\n              });\n            }}\n          >\n            Try it.\n          </Button>\n        </div>\n        {thisSpotlight}\n        <PopupPool name=\"spotlight-pool\" />\n      </FullScreenExample>\n    );\n  }\n}\n\nexport default SpotlightExample;\n\nconst Styles = {\n  el: {\n    display: \"inline-block\",\n    width: 100,\n    height: 200,\n    margin: 10,\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/StockChart.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/StockChart.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useEffect, useState } from \"react\";\nimport { FullScreenExample as FullScreen } from \"organism-react-code\";\nimport { StockChartCompute } from \"organism-react-stockcharts\";\nimport { ajaxDispatch } from \"organism-react-ajax\";\nimport { useMounted } from \"reshow-hooks\";\n\nconst StockChartExample = (props) => {\n  const [data, setData] = useState();\n  const isMount = useMounted();\n  useEffect(() => {\n    ajaxDispatch({\n      type: \"ajaxGet\",\n      params: {\n        url: \"https://raw.githubusercontent.com/react-atomic/react-atomic-ui/main/data/stock.json\",\n        callback: (json) => {\n          if (isMount()) {\n            setData({ trades: json });\n          }\n        },\n      },\n    });\n  }, []);\n  if (!data) {\n    return null;\n  }\n  return (\n    <FullScreen id=\"full-page-stock-chart\" button=\"open full screen\">\n      <StockChartCompute\n        data={data}\n        tradeRowsLocator={(d) => d.trades}\n        tradeHighLocator={(d) => d.h}\n        tradeLowLocator={(d) => d.l}\n        tradeOpenLocator={(d) => d.o}\n        tradeCloseLocator={(d) => d.c}\n        tradeVolumeLocator={(d) => d.v}\n        tradeDateLocator={(d) => d.t}\n      />\n    </FullScreen>\n  );\n};\n\nexport default StockChartExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Suggestion.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/Suggestion.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { PureComponent } from \"react\";\n\nimport { Button, SemanticUI } from \"react-atomic-molecule\";\n\nimport { Suggestion } from \"react-atomic-organism\";\n\nconst data = [\"abc\", \"abb\", \"acc\"];\n\nclass SuggestionExample1 extends PureComponent {\n  state = {\n    results: [],\n  };\n\n  handleChange = (e, value) => {\n    if (!value.length) {\n      this.setState({ results: data });\n      return;\n    }\n    const results = [];\n    data.forEach((v, k) => {\n      if (value.length && -1 !== v.indexOf(value)) {\n        results.push(v);\n      }\n    });\n    this.setState({ results });\n  };\n\n  handleItemClick = (e, item) => {\n    this.suggestion.setValue(item);\n  };\n\n  render() {\n    const { results, myValue } = this.state;\n    return (\n      <SemanticUI>\n        <Suggestion\n          ref={(el) => (this.suggestion = el)}\n          onChange={this.handleChange}\n          results={results}\n          onItemClick={this.handleItemClick}\n          value={myValue}\n        />\n        <Button\n          onClick={() =>\n            this.setState({ myValue: myValue ? myValue + 1 : 123 })\n          }\n        >\n          set\n        </Button>\n      </SemanticUI>\n    );\n  }\n}\n\nconst SuggestionExample = () => (\n  <SemanticUI>\n    <SuggestionExample1 />\n    couldCreate: false\n    <Suggestion results={data} couldCreate={false} filter preview />\n  </SemanticUI>\n);\n\nexport default SuggestionExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TabView.example.jsx":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TabView.example.jsx ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, {useState} from \"react\";\n\nimport {\n  SemanticUI,\n  Menu,\n  Item,\n  InputBox,\n  Button,\n} from \"react-atomic-molecule\";\nimport SearchIcon from \"ricon/Search\";\n\nimport { TabView, Tab } from \"organism-react-navigation\";\n\nconst RightMenu = () => (\n  <Menu className=\"right\" ui={false}>\n    <Item style={{ boxSizing: \"border-box\" }}>\n      <InputBox icon={<SearchIcon />} transparent placeholder=\"Search...\" />\n    </Item>\n  </Menu>\n);\n\nconst TabViewExample = (props) => {\n  const [selected, setSelected] = useState();\n  return (\n    <SemanticUI>\n      <TabView selected={selected} rightMenu={<RightMenu />}>\n        <Tab>\n          <div>content1</div>\n          <div>menu1</div>\n        </Tab>\n        <Tab>\n          <div>content2</div>\n          <div>menu2</div>\n        </Tab>\n      </TabView>\n      <Button onClick={()=>setSelected(0)}>to tab1</Button>\n      <Button onClick={()=>setSelected(1)}>to tab2</Button>\n    </SemanticUI>\n  );\n};\n\nexport default TabViewExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TagInput.example.jsx":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/TagInput.example.jsx ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { useState } from \"react\";\nimport { TagsField } from \"organism-react-tag-input\";\nimport { Form, Field, SemanticUI } from \"react-atomic-molecule\";\nimport { Checkbox } from \"react-atomic-organism\";\n\nconst TagInputExample = (props) => {\n  const [isDisable, setIsDisable] = useState(false);\n\n  const handleDisable = (e) => {\n    setIsDisable(e.checked ? true : false);\n  };\n\n  return (\n    <Form>\n      <TagsField disabled={isDisable} />\n      <Field>\n        <Checkbox label=\"Disable\" toggle onChange={handleDisable} />\n      </Field>\n    </Form>\n  );\n};\n\nexport default TagInputExample;\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/WindowOffset.example.jsx":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/WindowOffset.example.jsx ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React, { Component } from \"react\";\nimport { PopupHover, PopupOverlay } from \"organism-react-popup\";\n\nclass WindowOffsetExample extends Component {\n  handleClick = (e) => {\n    const target = e.currentTarget;\n    import(\"get-window-offset\").then(({ default: getWindowOffset }) => {\n      const info = getWindowOffset(target);\n      console.log(info);\n    });\n  };\n\n  render() {\n    return (\n      <div>\n        <div style={Styles.row}>\n          <PopupHover popup=\"1\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              1\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"2\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              2\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"3\" isKeep={true}>\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              3\n            </div>\n          </PopupHover>\n        </div>\n        <div style={Styles.row}>\n          <PopupHover popup=\"4\">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              4\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"5\">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              5\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"6\">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              6\n            </div>\n          </PopupHover>\n        </div>\n        <div style={{ width: 60 }}>\n          <PopupHover popup=\"7\">\n            <div\n              style={{ ...Styles.col, ...Styles.col1 }}\n              onClick={this.handleClick}\n            >\n              7\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"8\">\n            <div\n              style={{ ...Styles.col, ...Styles.col2 }}\n              onClick={this.handleClick}\n            >\n              8\n            </div>\n          </PopupHover>\n          <PopupHover popup=\"9\">\n            <div\n              style={{ ...Styles.col, ...Styles.col3 }}\n              onClick={this.handleClick}\n            >\n              9\n            </div>\n          </PopupHover>\n        </div>\n      </div>\n    );\n  }\n}\n\nexport default WindowOffsetExample;\n\nconst Styles = {\n  row: {\n    justifyContent: \"space-around\",\n    display: \"flex\",\n    marginBottom: 100,\n  },\n  col: {\n    width: 60,\n    height: 60,\n    lineHeight: \"60px\",\n    textAlign: \"center\",\n    color: \"#fff\",\n  },\n  col1: {\n    background: \"#c00\",\n  },\n  col2: {\n    background: \"#095\",\n  },\n  col3: {\n    background: \"#059\",\n  },\n};\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ui/organisms/YouTubeRWD.example.jsx":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ui/organisms/YouTubeRWD.example.jsx ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("import React from \"react\";\nimport { YoutubeRWD } from \"organism-react-video\";\n\nconst YouTubeRWDExample = () => <YoutubeRWD videoId=\"CjxugyZCfuw\" />;\n\nexport default YouTubeRWDExample;\n");
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=main.bundle.js.map
