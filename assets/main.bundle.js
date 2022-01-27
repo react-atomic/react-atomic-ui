@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "6edb4f95fe9bb6999fa0" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "e406804eac1268bd2517" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -203,7 +203,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./assets/";
+/******/ 	__webpack_require__.p = "/assets/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };

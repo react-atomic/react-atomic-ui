@@ -1,7 +1,7 @@
 #!/bin/sh
 
 conf='{'
-conf+='"assetsRoot":"./assets/",'
+conf+='"assetsRoot":"/assets/",'
 conf+='"externals":{},'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
