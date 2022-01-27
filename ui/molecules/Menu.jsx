@@ -8,13 +8,15 @@ const keys = Object.keys;
 const Menu = (props) => {
   const thisMenus = {};
   const themes = pageStore.getMap("themes");
-  keys(themes).forEach((item) => {
-    thisMenus[item] = {
-      ajax: false,
-      text: item,
-      href: "#/" + item,
-    };
-  });
+  keys(themes)
+    .sort()
+    .forEach((item) => {
+      thisMenus[item] = {
+        ajax: false,
+        text: item,
+        href: "#/" + item,
+      };
+    });
   return (
     <SideMenu
       shrink

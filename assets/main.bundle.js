@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + "." + "55a43fd7cecfc011d4b7" + ".bundle.js"
+/******/ 		return __webpack_require__.p + "" + chunkId + "." + "0ff43fe221f627013f93" + ".bundle.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -364,7 +364,7 @@ var keys = Object.keys;
 var Menu = function Menu(props) {
   var thisMenus = {};
   var themes = reshow__WEBPACK_IMPORTED_MODULE_3__["pageStore"].getMap("themes");
-  keys(themes).forEach(function (item) {
+  keys(themes).sort().forEach(function (item) {
     thisMenus[item] = {
       ajax: false,
       text: item,
