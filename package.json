@@ -56,7 +56,7 @@
     "webpack": "webpack",
     "start": "ws",
     "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.jsx'",
-    "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
+    "clean": "find ./build ./assets -name '*.*' | xargs rm -rf && rm -rf workbox-*.js",
     "build:ui": "BABEL_ENV=es babel ui -d build/es/ui --ignore /**/__tests__",
     "build:src": "BABEL_ENV=es babel src -d build/es/src --ignore /**/__tests__",
     "build": "npm run clean && npm run build:ui && npm run build:src",

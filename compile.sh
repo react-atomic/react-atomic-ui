@@ -1,13 +1,18 @@
 #!/bin/sh
+DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 conf='{'
 conf+='"assetsRoot":"/assets/",'
 conf+='"externals":{},'
+conf+='"indexTpl":"'${DIR}/index.tpl'",'
+conf+='"indexHtml":"'${DIR}/index.html'",'
+conf+='"swDest":"'${DIR}/service-worker.js'",'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
 
-PWD=`dirname $0`
-cd $PWD
+echo $conf;
+
+cd $DIR
 webpack='npm run webpack --'
 
 production(){
@@ -30,7 +35,6 @@ develop(){
 }
 
 startServer(){
-    DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/ws
     yarn
     port=${port-3000}
@@ -43,7 +47,6 @@ killBy(){
 }
 
 stop(){
-    DIR="$( cd "$(dirname "$0")" ; pwd -P )"
     killBy ${DIR}/node_modules/.bin/babel 
     cat webpack.pid | xargs -I{} kill -9 {}
     npm run clean
