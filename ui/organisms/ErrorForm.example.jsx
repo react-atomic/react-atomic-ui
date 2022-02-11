@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SemanticUI, Form, Field, Menu, Item } from "react-atomic-molecule";
 
-import { Dropdown, Select, SelectField } from "organism-react-navigation";
+import { Dropdown, SelectField } from "organism-react-navigation";
 import { Checkbox } from "react-atomic-organism";
 
 const options = [
