@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{620:function(e,o,t){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o["default"]=void 0;o["default"]={fadeInUpBig:[[{opacity:.5,transform:["translate3d(0, 2000px, 0)"]},{opacity:1,transform:["none"]}],["@keyframes fadeInUpBig","from","to"]]},e.exports=o["default"]}}]);

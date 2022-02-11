@@ -7,6 +7,7 @@ conf+='"externals":{},'
 conf+='"indexTpl":"'${DIR}/index.tpl'",'
 conf+='"indexHtml":"'${DIR}/index.html'",'
 conf+='"swDest":"'${DIR}/service-worker.js'",'
+# conf+='"swDebug":true,'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
 
