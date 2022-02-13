@@ -22,6 +22,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
 <![endif]-->
 <link rel="icon" href="data:,">
+<script defer src="/simple.js?id=UA-124534784-1"></script>
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/combine/npm/purecss@2.0.6/build/grids-min.css,npm/purecss@2.0.6/build/grids-min.css,npm/purecss@2.0.6/build/grids-responsive-min.css">
