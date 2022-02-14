@@ -8,8 +8,8 @@ import carouselAnimation from "!raw-loader!../../../../ui/organisms/CarouselAnim
 import CarouselAnimationHideThumb from "../organisms/CarouselAnimationHideThumb.example";
 import carouselAnimationHideThumb from "!raw-loader!../../../../ui/organisms/CarouselAnimationHideThumb.example";
 
-import CarouselSlide from "../organisms/CarouselSlide.example";
-import carouselSlide from "!raw-loader!../../../../ui/organisms/CarouselSlide.example";
+import CarouselHorizontalScroll from "../organisms/CarouselHorizontalScroll.example";
+import carouselHorizontalScroll from "!raw-loader!../../../../ui/organisms/CarouselHorizontalScroll.example";
 
 const CarouselPage = (props) => {
   usePage({ ...props, pageName: "Carousel" });
@@ -33,8 +33,8 @@ const CarouselPage = (props) => {
         <CarouselAnimationHideThumb />
       </CodeExample>
 
-      <CodeExample code={carouselSlide} header="Carousel Slide (WIP)">
-        <CarouselSlide />
+      <CodeExample code={carouselHorizontalScroll} header="Carousel Horizontal Scroll">
+        <CarouselHorizontalScroll />
       </CodeExample>
     </>
   );

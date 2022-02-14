@@ -1,9 +1,9 @@
 import React from "react";
-import { Carousel, CarouselSlide } from "organism-react-carousel";
+import { Carousel, HorizontalScroll } from "organism-react-carousel";
 
-const CarouselSlideExample = (props) => {
+const CarouselHorizontalScrollExample = (props) => {
   return (
-    <CarouselSlide
+    <HorizontalScroll
       carouselAttr={{
         style: Styles.carousel,
       }}
@@ -18,16 +18,17 @@ const CarouselSlideExample = (props) => {
       <Carousel>3</Carousel>
       <Carousel>4</Carousel>
       <Carousel>5</Carousel>
-    </CarouselSlide>
+    </HorizontalScroll>
   );
 };
 
-export default CarouselSlideExample;
+export default CarouselHorizontalScrollExample;
 
 const Styles = {
   carousel: {
     width: 300,
     height: 300,
     background: "#00558B",
+    fontSize: "5rem",
   },
 };
