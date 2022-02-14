@@ -2621,9 +2621,9 @@ camelcase@^6.0.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001311"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001311.tgz#682ef3f4e617f1a177ad943de59775ed3032e511"
-  integrity sha512-mleTFtFKfykEeW34EyfhGIFjGCqzhh38Y0LhdQ9aWF+HorZTtdgKV/1hEE0NlFkG2ubvisPV6l400tlbPys98A==
+  version "1.0.30001312"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001312.tgz#e11eba4b87e24d22697dae05455d5aea28550d5f"
+  integrity sha512-Wiz1Psk2MEK0pX3rUzWaunLTZzqS2JYZFzNKqAiJGiuxIjRPLgV6+VDPOg6lQOUxmDwhTlh198JsTTi8Hzw6aQ==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -3147,11 +3147,12 @@ create-ecdh@^4.0.0:
     elliptic "^6.5.3"
 
 create-el@*:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/create-el/-/create-el-0.1.10.tgz#3723b103d09b0db77b77c041209087349e583cef"
-  integrity sha512-GtF6jBIffsmLV+UHnLXqlp4zBXeKoioCk4CtYopm64poq0KCrUh/iK7fI1d+vVyfpaI2qjnMr6r22RkR2rTKRw==
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/create-el/-/create-el-0.1.11.tgz#29511ca1dd702820f61cbfe1f02d1361d02c517e"
+  integrity sha512-N398YvySkTGW68tgAE0uYC5cpAWTS9DZx4X5spKTOUzisIljmyRl+8WRd6PqcPFNXWB/1QumE1ZAIx97egyb9w==
   dependencies:
     call-func "*"
+    reshow-constant "*"
     reshow-runtime "*"
     win-doc "*"
 
@@ -5436,9 +5437,9 @@ hyphenate-style-name@*:
   integrity sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==
 
 i13n@*:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/i13n/-/i13n-1.6.1.tgz#b8ecedf0adf7da7c0664c6abae24b75d60163773"
-  integrity sha512-W5CQtz4lySumKGJvcwgthZdxwKGgC38PaewhP3V98K8bYE4nPbrz1eF92+TKdea0eIPBkBsGXoHwyqCFlTLflQ==
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/i13n/-/i13n-1.6.2.tgz#c82a5019c67db866ab6cdde8393451cc3aca6a3f"
+  integrity sha512-3tBZqQANE3vxxh191JHd7Cf7VnWAyfjvsdCkWfOD7wjUoeHPtxuOGbWa0dZ1CJNICCawxLx4HrXPmxrRdn/8dg==
   dependencies:
     get-object-value "*"
     get-random-id "*"
@@ -6954,9 +6955,9 @@ minimatch@3.0.4:
     brace-expansion "^1.1.7"
 
 minimatch@^3.0.4:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.5.tgz#4da8f1290ee0f0f8e83d60ca69f8f134068604a3"
-  integrity sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.1.tgz#879ad447200773912898b46cd516a7abbb5e50b0"
+  integrity sha512-reLxBcKUPNBnc/sVtAbxgRVFSegoGeLaSjmphNhcwcolhYLRgtJscn5mRl6YRZNQv40Y7P6JM2YhSIsbL9OB5A==
   dependencies:
     brace-expansion "^1.1.7"
 
@@ -7660,9 +7661,9 @@ organism-react-facebook@*:
     ricon "*"
 
 organism-react-grapesjs@*:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/organism-react-grapesjs/-/organism-react-grapesjs-0.5.6.tgz#b2ce619bffceffca13f15115a475694ba2b40efe"
-  integrity sha512-dgVxgiRTn07gT1Jpw+9MayKRIPSjjJDf8cfWKt4dCUT34XpFbUR28N9QMeEvkeJ/9O6ZcjuBJs18Lc3ViI4Xng==
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/organism-react-grapesjs/-/organism-react-grapesjs-0.6.0.tgz#af247f7a112d2b93e621f4e9fe48225cb1270259"
+  integrity sha512-ZLNqteCImmVO4MjV2eW4BNFMyR2DK6IvaaGc+x5bT4r/KEMAeWzHudwFZ9GLYDvdLcj/F2zrWMcWZjZuq/p1dw==
   dependencies:
     call-func "*"
     fix-html "*"
@@ -8955,9 +8956,9 @@ reshow-constant@*, reshow-constant@^0.16.0:
   integrity sha512-AKrU8A6EdFw7L5zHs8W8WNsdXbZwpgimvY92ZwobLhH5wC6mVG+L6H6zzS6/Y/DBqWXcuCsRGTg5hT1ahwZ6pQ==
 
 reshow-flux-base@*, reshow-flux-base@^0.16.0:
-  version "0.16.10"
-  resolved "https://registry.yarnpkg.com/reshow-flux-base/-/reshow-flux-base-0.16.10.tgz#cca0b4082ceb826250e42c74d2ac0282e03e5c1e"
-  integrity sha512-8J5IoMc5wFjHoP57tT2OJUbxQj8JvDpNkk+CTfqUDs0we1OQde/GRa2cXXPflNS7oZ6Tkj5GW+iF8PAZAvvdRg==
+  version "0.16.11"
+  resolved "https://registry.yarnpkg.com/reshow-flux-base/-/reshow-flux-base-0.16.11.tgz#df3076ed308a034895fb06b0c0c514f7e451020b"
+  integrity sha512-js0UYhy11GkO3e21gZfKxChcgD3eCO+z1lUcQxzjjIE6brAEH0gfAjwSOau9qWceTlvQxqzoE9Zai3tPI47Jcw==
   dependencies:
     call-func "^0.1.5"
     reshow-constant "^0.16.0"
@@ -9000,9 +9001,9 @@ reshow-return@*:
     reshow-runtime "^0.16.0"
 
 reshow-runtime@*, reshow-runtime@^0.16.0:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/reshow-runtime/-/reshow-runtime-0.16.1.tgz#ffbc3fe298721f7e8e97d9234b3d65efa44db193"
-  integrity sha512-mnAv9nq/mucGETEdVxKInY3r+4ekMy6WjFaL84MW1pYhqaUBS826R+p/j5FfF93FFoi7mjgrlqxTnT9lpBqm0g==
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/reshow-runtime/-/reshow-runtime-0.16.2.tgz#6195cb45d6d0a62b3b254a5557fb1d99a9d0af4f"
+  integrity sha512-vd/re6CFo15pP9xiXcsTrXork4rkgC9ybNUI4fqUandGdvgwE2zvXlpSGU3zJG1BG9R7bik5j6OMdesfHjZX4g==
   dependencies:
     regenerator-runtime "^0.13.4"
     reshow-constant "*"
@@ -9743,9 +9744,9 @@ ssri@^6.0.1:
     figgy-pudding "^3.5.1"
 
 stackframe@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.2.0.tgz#52429492d63c62eb989804c11552e3d22e779303"
-  integrity sha512-GrdeshiRmS1YLMYgzF16olf2jJ/IzxXY9lhKOskuVziubpTYcYqyOwYeJKzQkwy7uN0fYSsbsC4RQaXf9LCrYA==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.2.1.tgz#1033a3473ee67f08e2f2fc8eba6aef4f845124e1"
+  integrity sha512-h88QkzREN/hy8eRdyNhhsO7RSJ5oyTqxxmmn0dzBIMUclZsjpfmrsg81vp8mjjAs2vAZ72nyWxRUwSwmh0e4xg==
 
 static-extend@^0.1.1:
   version "0.1.2"
@@ -10903,9 +10904,9 @@ wildcard@^2.0.0:
   integrity sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw==
 
 win-doc@*:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/win-doc/-/win-doc-0.0.9.tgz#6356a2ef94b1cf86446c068898a6e86d58b2a9dd"
-  integrity sha512-kIpJiEPvkMeU9b7Bn3JRVxGZYcXnTtKQBZuXvEIfZFYjhRcTGNTkOTOG/nsfizgyPaL2V7Bkdx7kBABKYWqWgw==
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/win-doc/-/win-doc-0.1.0.tgz#cd9bce7c2f8b9932d6cc64fdf1f1275f79109296"
+  integrity sha512-WL4FwHd/StznoFzg7JCSvuYnTxcEmrAh4Nter/27Y1uYOlmRNbm/QP/I/+ozOZ5AMOf+0DHzAqzPxcCRYgvjPw==
   dependencies:
     reshow-constant "*"
     reshow-runtime "*"
