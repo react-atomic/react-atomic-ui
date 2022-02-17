@@ -27,7 +27,7 @@
           "reshow-transform-runtime",
           {
             "regenerator": true,
-            "version": "7.5.0"
+            "version": "7.17.0"
           }
         ],
         "@babel/plugin-proposal-optional-chaining",
@@ -51,8 +51,8 @@
         [
           "@babel/preset-env",
           {
-            "loose": true,
             "modules": false,
+            "loose": true,
             "targets": ["last 2 versions", "ie >= 8"]
           }
         ],
@@ -72,7 +72,7 @@
           {
             "regenerator": false,
             "useESModules": true,
-            "version": "7.5.0"
+            "version": "7.17.0"
           }
         ],
         "@babel/plugin-proposal-optional-chaining",

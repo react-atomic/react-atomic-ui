@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{627:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]=void 0;t["default"]={fadeOutDown:[[{opacity:1},{opacity:0,transform:["translate3d(0, 100%, 0)"]}],["@keyframes fadeOutDown","from","to"]]},e.exports=t["default"]}}]);
