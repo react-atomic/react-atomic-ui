@@ -7620,9 +7620,9 @@ organism-react-code@*:
     syntax-colorer "*"
 
 organism-react-codeeditor@*:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/organism-react-codeeditor/-/organism-react-codeeditor-0.1.3.tgz#fbdda23a514c4657ddbf23ecf71f553146e10841"
-  integrity sha512-Kxr1oc8+jGBrTQYxVud45XBtuWl/DxwqOUA7hWu2wC07ZjdMGOmlOB4DcbPNHz8uSOD8CiTcc75ViKq/yQ+Rkw==
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/organism-react-codeeditor/-/organism-react-codeeditor-0.1.5.tgz#51c139783b89b345b4c28fa2763faa811ad6857f"
+  integrity sha512-FMF/8P6u20Rr5mUGwY14qKRedMwkhL+V5cO8D+G6QOAcZX5tf3u4Tt+KK7inlPBExMf3qVN84of73Qmj/Krjzw==
   dependencies:
     call-func "*"
     fix-html "*"
