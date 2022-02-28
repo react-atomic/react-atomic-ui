@@ -1,12 +1,13 @@
 #!/bin/sh
 DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+SWJS=${DIR}/service-worker.js
 
 conf='{'
 conf+='"assetsRoot":"/assets/",'
 conf+='"externals":{},'
 conf+='"indexTpl":"'${DIR}/index.tpl'",'
 conf+='"indexHtml":"'${DIR}/index.html'",'
-conf+='"swDest":"'${DIR}/service-worker.js'",'
+conf+='"swDest":"'${SWJS}'",'
 # conf+='"swDebug":true,'
 conf+='"devPort": "'${hotPort:-8080}'"'
 conf+='}'
@@ -71,7 +72,8 @@ watchTest(){
 }
 
 hot(){
-    stop 
+    stop
+    rm $SWJS 
     echo "Hot Mode";
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
