@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{619:function(n,a,o){"use strict";o.r(a),a["default"]={fadeInUpBig:[[{opacity:.5,transform:["translate3d(0, 2000px, 0)"]},{opacity:1,transform:["none"]}],["@keyframes fadeInUpBig","from","to"]]}}}]);

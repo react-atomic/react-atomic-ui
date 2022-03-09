@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import {
   mixClass,
-  lazyInject,
+  useLazyInject,
   reactStyle,
   SemanticUI,
   Button,
@@ -218,9 +218,7 @@ const useTomato = (countdown) => {
 
 const TomatoApp = (props) => {
   const { countdown, useTomato } = props;
-  useEffect(() => {
-    injects = lazyInject(injects, InjectStyles);
-  }, []);
+  injects = useLazyInject(InjectStyles, injects);
 
   const {
     sec,
