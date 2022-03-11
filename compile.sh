@@ -20,7 +20,7 @@ webpack='npm run webpack --'
 production(){
     echo "Production Mode";
     npm run build
-    CONFIG=$conf NODE_ENV=production $webpack --mode=production 
+    CONFIG=$conf NODE_ENV=production $webpack
 }
 
 analyzer(){
