@@ -7816,16 +7816,15 @@ organism-react-popup@*:
     win-doc "*"
 
 organism-react-progress@*:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/organism-react-progress/-/organism-react-progress-0.15.2.tgz#9d2c19c87f2b36e5408faffbccd9e837471a4fb9"
-  integrity sha512-WFd2V3vWhpbglr7q/sqpN8U7s/r90U3xlvv3zj2Pv4UNN5XB7M6KZB6HiY2ORNUA92rx14E2kdIF41+smPAACg==
+  version "0.15.5"
+  resolved "https://registry.yarnpkg.com/organism-react-progress/-/organism-react-progress-0.15.5.tgz#abaabd0c9ee1823868213f04bcc02192213f2cb2"
+  integrity sha512-kS9PIWt/bJauQeOA4xzVY53Jv7+kx8BVZ/PaDbLv4M71fDaYaEY9YKEd9m0wGEpK7pF4BYJf5FG3RRjKDn35UQ==
   dependencies:
     organism-react-ajax "*"
     organism-react-popup "*"
     react-atomic-molecule "*"
     reshow-hooks "*"
     reshow-return "*"
-    setimmediate "^1.0.5"
 
 organism-react-qq-video@*:
   version "0.0.2"
