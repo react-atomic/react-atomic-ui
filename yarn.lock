@@ -8924,9 +8924,9 @@ reselect@^4.0.0:
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
 reshow-app@*:
-  version "0.15.26"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.15.26.tgz#5dcea946647b175208f0b6a171cd9fe3a2cd4300"
-  integrity sha512-vHOVsaqTuPXoVgjOOx+YtxhhOA/Nc0Qrs5/nl2XwP6kIekrdl1qQ+HPu3A4X8csB0Mx1Ar8BocCjpGQ9sfLCnA==
+  version "0.15.27"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.15.27.tgz#8904ac030f35559289dd2b10f8381ed019f2b908"
+  integrity sha512-HhCcm13vd0cPjYvXqU+3Fms6uY+6/VrIJ7vtNCOCBUM/OQbvNjXHQKrdYEnzt55mlKE57QW6LHtF+AFk6Ud85A==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"
