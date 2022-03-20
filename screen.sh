@@ -16,7 +16,7 @@ exec() {
 
 case "$1" in
     enter)
-        screen -r $SCREEN_NAME 
+        screen -rd $SCREEN_NAME 
         ;;
     stopall)
         screen -X -S ${SCREEN_NAME} quit

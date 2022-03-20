@@ -31,26 +31,16 @@ checkBabel(){
   fi
 }
 
-production(){
-    echo "Production Mode";
-    checkBabel
-    npm run build
-    CONFIG=$conf NODE_ENV=production $webpack
+killBy(){
+    ps -eo pid,args | grep $1 | grep -v grep | awk '{print $1}' | xargs -I{} kill -9 {}
 }
 
-analyzer(){
-    echo "Analyzer Mode";
-    checkBabel
-    npm run build
-    HOT_UPDATE=0 CONFIG=$conf BUNDLE='{}' $webpack
-}
-
-develop(){
-    stop
-    echo "Develop Mode";
-    checkBabel
-    npm run build
-    HOT_UPDATE=0 CONFIG=$conf $webpack
+stop(){
+    killBy ${DIR}/node_modules/.bin/babel 
+    cat webpack.pid | xargs -I{} kill -9 {}
+    npm run clean
+    rm $SWJS
+    echo "Stop done";
 }
 
 stopServer(){
@@ -75,15 +65,28 @@ startServer(){
     fi
 }
 
-killBy(){
-    ps -eo pid,args | grep $1 | grep -v grep | awk '{print $1}' | xargs -I{} kill -9 {}
+production(){
+    stop
+    echo "Production Mode";
+    checkBabel
+    npm run build
+    ENABLE_SW=1 CONFIG=$conf NODE_ENV=production $webpack
 }
 
-stop(){
-    killBy ${DIR}/node_modules/.bin/babel 
-    cat webpack.pid | xargs -I{} kill -9 {}
-    npm run clean
-    echo "Stop done";
+analyzer(){
+    stop
+    echo "Analyzer Mode";
+    checkBabel
+    npm run build
+    CONFIG=$conf BUNDLE='{}' $webpack
+}
+
+develop(){
+    stop
+    echo "Develop Mode";
+    checkBabel
+    npm run build
+    CONFIG=$conf $webpack
 }
 
 watch(){
@@ -93,7 +96,7 @@ watch(){
     npm run build:ui -- --watch &
     npm run build:src -- --watch &
     sleep 10 
-    HOT_UPDATE=0 CONFIG=$conf $webpack --watch &
+    CONFIG=$conf $webpack --watch &
 }
 
 watchTest(){
