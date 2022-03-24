@@ -1,7 +1,7 @@
-import React, { lazy, PureComponent } from "react";
+import React, { lazy } from "react";
 
 import { Cell, Column } from "pmvc_react_list";
-const Table = lazy(() => import('pmvc_react_list/fixedDataTable'));
+const Table = lazy(() => import("pmvc_react_list/fixedDataTable"));
 
 const rows = [
   ["a1", "b1", "c1"],
@@ -12,33 +12,29 @@ const rows = [
   ["a6", "b6", "c6"],
 ];
 
-class FixedDataTableListExample extends PureComponent {
-  render() {
-    return (
-      <div style={{ width: 350 }}>
-        <Table rows={rows} getColWidth={() => 150} height={150}>
-          <Column
-            header={<Cell>h1</Cell>}
-            cell={({ rowIndex, columnKey: columnIndex }) => {
-              return rows[rowIndex][columnIndex];
-            }}
-          />
-          <Column
-            header={<Cell>h2</Cell>}
-            cell={({ rowIndex, columnKey: columnIndex }) => {
-              return rows[rowIndex][columnIndex];
-            }}
-          />
-          <Column
-            header={<Cell>h3</Cell>}
-            cell={({ rowIndex, columnKey: columnIndex }) => {
-              return rows[rowIndex][columnIndex];
-            }}
-          />
-        </Table>
-      </div>
-    );
-  }
-}
+const FixedDataTableListExample = (props) => (
+  <div style={{ width: 350 }}>
+    <Table rows={rows} getColWidth={() => 150} height={150}>
+      <Column
+        header={<Cell>h1</Cell>}
+        cell={({ rowIndex, columnKey: columnIndex }) => {
+          return rows[rowIndex][columnIndex];
+        }}
+      />
+      <Column
+        header={<Cell>h2</Cell>}
+        cell={({ rowIndex, columnKey: columnIndex }) => {
+          return rows[rowIndex][columnIndex];
+        }}
+      />
+      <Column
+        header={<Cell>h3</Cell>}
+        cell={({ rowIndex, columnKey: columnIndex }) => {
+          return rows[rowIndex][columnIndex];
+        }}
+      />
+    </Table>
+  </div>
+);
 
 export default FixedDataTableListExample;
