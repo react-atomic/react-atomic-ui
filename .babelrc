@@ -65,7 +65,6 @@
       ],
       "plugins": [
         "transform-react-pure-class-to-function",
-        ["transform-react-remove-prop-types", { "mode": "wrap" }],
         "reshow-object-to-json-parse",
         [
           "reshow-transform-runtime",
