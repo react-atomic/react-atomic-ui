@@ -17,6 +17,7 @@
     "fixed-data-table-2": "*",
     "get-object-value": "*",
     "get-scroll-info": "*",
+    "organism-react-ajax": "*",
     "organism-react-animate": "*",
     "organism-react-asciidoc": "*",
     "organism-react-carousel": "*",
@@ -44,22 +45,26 @@
     "react": "^16.x",
     "react-dom": "^16.x",
     "react-virtualized": "*",
-    "ricon": "*"
-  },
-  "devDependencies": {
-    "organism-react-ajax": "*",
     "raw-loader": "*",
     "reshow-app": "*",
-    "reshow-url": "*"
+    "reshow-url": "*",
+    "ricon": "*"
   },
   "scripts": {
     "webpack": "webpack",
     "start": "ws",
     "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.jsx'",
     "clean": "find ./build ./assets -name '*.*' | xargs rm -rf && rm -rf workbox-*.js",
-    "build:ui": "BABEL_ENV=es babel ui -d build/es/ui --ignore /**/__tests__",
-    "build:src": "BABEL_ENV=es babel src -d build/es/src --ignore /**/__tests__",
-    "build": "npm run clean && npm run build:ui && npm run build:src",
-    "prepublishOnly": "npm run build"
+    "build:cjs:src": "BABEL_ENV=cjs babel src -d build/cjs/src",
+    "build:cjs:ui": "BABEL_ENV=cjs babel ui -d build/cjs/ui",
+    "build:cjs": "npm run build:cjs:src && npm run build:cjs:ui",
+    "build:es:src": "BABEL_ENV=es babel src -d build/es/src --ignore /**/__tests__",
+    "build:es:ui": "BABEL_ENV=es babel ui -d build/es/ui --ignore /**/__tests__",
+    "build:es": "npm run build:es:src && npm run build:es:ui",
+    "build": "npm run clean && npm run build:cjs && npm run build:es",
+    "mochaFor": "mocha -r jsdom-global/register",
+    "mocha": "npm run mochaFor -- 'build/cjs/**/__tests__/*.js'",
+    "test": "npm run build && npm run mocha",
+    "prepublishOnly": "exit 1;"
   }
 }
