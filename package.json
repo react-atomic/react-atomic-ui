@@ -42,10 +42,10 @@
     "pmvc_react_admin": "*",
     "pmvc_react_list": "*",
     "prettyjson": "1.2.1",
+    "raw-loader": "*",
     "react": "^16.x",
     "react-dom": "^16.x",
     "react-virtualized": "*",
-    "raw-loader": "*",
     "reshow-app": "*",
     "reshow-url": "*",
     "ricon": "*"

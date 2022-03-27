@@ -93,8 +93,8 @@ watch(){
     stop 
     echo "Watch Mode";
     checkBabel
-    npm run build:ui -- --watch &
-    npm run build:src -- --watch &
+    npm run build:es:ui -- --watch &
+    npm run build:es:src -- --watch &
     sleep 10 
     CONFIG=$conf $webpack --watch &
 }
@@ -103,8 +103,8 @@ watchTest(){
     stop 
     echo "Watch Test";
     checkBabel
-    npm run build:test:ui -- --watch &
-    npm run build:test:src -- --watch &
+    npm run build:cjs:ui -- --watch &
+    npm run build:cjs:src -- --watch &
 }
 
 hot(){
@@ -112,8 +112,8 @@ hot(){
     rm $SWJS 
     echo "Hot Mode";
     checkBabel
-    npm run build:ui -- --watch &
-    npm run build:src -- --watch &
+    npm run build:es:ui -- --watch &
+    npm run build:es:src -- --watch &
     sleep 5
     HOT_UPDATE=1 CONFIG=$conf $webpack serve &
 }

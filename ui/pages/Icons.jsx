@@ -1,40 +1,45 @@
 /*Base*/
 import usePage from "../../src/usePage";
 
-import Account from "ricon/Account";
 import AccessTime from "ricon/AccessTime";
+import Account from "ricon/Account";
 import Add from "ricon/Add";
 import BarChart from "ricon/BarChart";
-import Build from "ricon/Build";
 import Blur from "ricon/Blur";
+import Build from "ricon/Build";
 import Calendar from "ricon/Calendar";
 import ChevronRight from "ricon/ChevronRight";
-import Code from "ricon/Code";
 import CircleLoading from "ricon/CircleLoading";
+import Code from "ricon/Code";
 import Dashboard from "ricon/Dashboard";
+import Delete from "ricon/Delete";
 import Description from "ricon/Description";
 import Device from "ricon/Device";
-import Dropdown from "ricon/Dropdown";
 import Download from "ricon/Download";
-import Delete from "ricon/Delete";
+import Dropdown from "ricon/Dropdown";
 import Edit from "ricon/Edit";
 import Email from "ricon/Email";
+
+// Alert
+import Error from "ricon/Error";
+import Warning from "ricon/Warning";
+
 import Exit from "ricon/Exit";
-import File from "ricon/File";
 import Facebook from "ricon/Facebook";
 import FacebookMessage from "ricon/FacebookMessage";
 import FeaturedPlayList from "ricon/FeaturedPlayList";
+import File from "ricon/File";
 import Git from "ricon/Git";
-import Help from "ricon/Help";
 import Hamburger from "ricon/Hamburger";
 import HamburgerToArrow from "ricon/HamburgerToArrow";
 import HamburgerToX from "ricon/HamburgerToX";
+import Help from "ricon/Help";
 import Home from "ricon/Home";
 import Link from "ricon/Link";
 import Monetization from "ricon/Monetization";
 import MyLocation from "ricon/MyLocation";
-import Npm from "ricon/Npm";
 import Notification from "ricon/Notification";
+import Npm from "ricon/Npm";
 import Person from "ricon/Person";
 import Phone from "ricon/Phone";
 import Pin from "ricon/Pin";
@@ -45,26 +50,25 @@ import Refresh from "ricon/Refresh";
 import Reply from "ricon/Reply";
 import Search from "ricon/Search";
 import Settings from "ricon/Settings";
+import Shopee from "ricon/Shopee";
 import ShoppingCart from "ricon/ShoppingCart";
 import Sort from "ricon/Sort";
-import Shopee from "ricon/Shopee";
 import Sync from "ricon/Sync";
-import TouchApp from "ricon/TouchApp";
 import Timer from "ricon/Timer";
+import TouchApp from "ricon/TouchApp";
 import VerifiedUser from "ricon/VerifiedUser";
 import Video from "ricon/Video";
-import Visibility from "ricon/Visibility";
 import ViewModule from "ricon/ViewModule";
-import Wifi from "ricon/Wifi";
+import Visibility from "ricon/Visibility";
 import Wallet from "ricon/Wallet";
+import Wifi from "ricon/Wifi";
 import X from "ricon/X";
 import ZoomIn from "ricon/ZoomIn";
 
-// Alert
-import Error from "ricon/Error";
-import Warning from "ricon/Warning";
-
 const icons = [
+  ["AccessTime", <AccessTime />],
+  ["AccessTime (fill)", <AccessTime type="fill" />],
+  ["AccessTime (update)", <AccessTime type="update" />],
   ["Account", <Account />],
   ["Account (circle)", <Account type="circle" />],
   ["Account (supervisor)", <Account type="supervisor" />],
@@ -72,20 +76,18 @@ const icons = [
   ["Add (box)", <Add type="box" />],
   ["Add (circle)", <Add type="circle" />],
   ["Add (circleOutline)", <Add type="circleOutline" />],
-  ["AccessTime", <AccessTime />],
-  ["AccessTime (fill)", <AccessTime type="fill" />],
-  ["AccessTime (update)", <AccessTime type="update" />],
   ["BarChart", <BarChart />],
-  ["Build", <Build />],
   ["Blur", <Blur />],
+  ["Build", <Build />],
   ["Calendar", <Calendar />],
   ["ChevronRight", <ChevronRight />],
-  ["Code", <Code />],
   ["CircleLoading", <CircleLoading />],
+  ["Code", <Code />],
   ["Dashboard", <Dashboard />],
   ["Delete", <Delete />],
   ["Delete (forever)", <Delete type="forever" />],
   ["Delete (sweep)", <Delete type="sweep" />],
+  ["Description", <Description />],
   ["Device (desktop)", <Device type="desktop" />],
   ["Device (tablet)", <Device type="tablet" />],
   ["Device (phone)", <Device type="phone" />],
@@ -95,20 +97,24 @@ const icons = [
   ["Dropdown (up)", <Dropdown type="up" />],
   ["Dropdown (right)", <Dropdown type="right" />],
   ["Dropdown (left)", <Dropdown type="left" />],
-  ["Description", <Description />],
   ["Edit", <Edit />],
   ["Email", <Email />],
+
+  // Alert
+  ["Error", <Error />],
+  ["Warning", <Warning />],
+
   ["Exit", <Exit />],
-  ["File", <File>.js</File>],
   ["Facebook", <Facebook />],
   ["FacebookMessage", <FacebookMessage />],
   ["FeaturedPlayList", <FeaturedPlayList />],
+  ["File", <File>.js</File>],
   ["Git", <Git />],
-  ["Help", <Help />],
-  ["Home", <Home />],
   ["Hamburger", <Hamburger />],
   ["HamburgerToArrow", <HamburgerToArrow on={true} />],
   ["HamburgerToX", <HamburgerToX on={true} />],
+  ["Help", <Help />],
+  ["Home", <Home />],
   ["Link", <Link />],
   ["Monetization", <Monetization />],
   ["Monetization", <Monetization type="sign" />],
@@ -116,46 +122,44 @@ const icons = [
   ["MyLocation (off)", <MyLocation type="off" />],
   ["MyLocation (on)", <MyLocation type="on" />],
   ["MyLocation (loading)", <MyLocation loading={true} type="on" />],
-  ["Npm", <Npm />],
   ["Notification", <Notification />],
   ["Notification (active)", <Notification type="active" />],
   ["Notification (none)", <Notification type="none" />],
   ["Notification (off)", <Notification type="off" />],
   ["Notification (paused)", <Notification type="paused" />],
+  ["Npm", <Npm />],
   ["Person", <Person />],
   ["Person (add)", <Person type="add" />],
   ["Phone", <Phone />],
   ["Pin", <Pin />],
-  ["Pulse", <Pulse />],
-  ["Pulse (breath)", <Pulse animation="breath" />],
+  ["Pin (label=\"A\")", <Pin label="A" />],
   ["Play", <Play />],
   ["PlayListAdd", <PlayListAdd />],
+  ["Pulse", <Pulse />],
+  ["Pulse (breath)", <Pulse animation="breath" />],
   ["Refresh", <Refresh />],
   ["Reply", <Reply />],
   ["Reply (right)", <Reply type="right" />],
   ["Search", <Search />],
   ["Settings", <Settings />],
   ["Settings", <Settings type="square" />],
+  ["Shopee", <Shopee />],
   ["ShoppingCart", <ShoppingCart />],
   ["Sort", <Sort />],
-  ["Shopee", <Shopee />],
   ["Sync", <Sync />],
   ["Sync (disabled)", <Sync type="disabled" />],
   ["Sync (problem)", <Sync type="problem" />],
-  ["TouchApp", <TouchApp />],
   ["Timer", <Timer />],
   ["Timer (off)", <Timer type="off" />],
+  ["TouchApp", <TouchApp />],
   ["VerifiedUser", <VerifiedUser />],
   ["Video", <Video />],
-  ["Visibility", <Visibility />],
   ["ViewModule", <ViewModule />],
-  ["Wifi", <Wifi />],
+  ["Visibility", <Visibility />],
   ["Wallet", <Wallet />],
+  ["Wifi", <Wifi />],
   ["X", <X style={{ position: "static" }} />],
   ["ZoomIn", <ZoomIn />],
-  // Alert
-  ["Error", <Error />],
-  ["Warning", <Warning />],
 ];
 
 const Icons = (props) => {
