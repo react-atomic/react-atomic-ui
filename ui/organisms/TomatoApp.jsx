@@ -262,6 +262,14 @@ const TomatoApp = (props) => {
         const classes = mixClass("big Pomodoro", {
           [countdown[activeType]?.colorName]: active || preview,
         });
+        const barLabelProps = {};
+        if (percentNum > 50) {
+          barLabelProps.styles = reactStyle(
+            { transform: `translate(${100 - percentNum}%, 0)` },
+            false,
+            false
+          );
+        }
         return (
           <ProgressBar
             onClick={handler.clickProgress}
@@ -269,13 +277,7 @@ const TomatoApp = (props) => {
             style={Styles.progress}
             percent={percentNum}
             barLabel={secToMin(sec)}
-            barLabelProps={{
-              styles: reactStyle(
-                { transform: `translate(${100 - percentNum}%, 0)` },
-                false,
-                false
-              ),
-            }}
+            barLabelProps={barLabelProps}
           />
         );
       }, [sec, active, preview])}
@@ -354,6 +356,12 @@ const Styles = {
 
 let injects;
 const InjectStyles = {
+  bar: [
+    {
+      overflow: "inherit",
+    },
+    ".ui.progress.Pomodoro .bar",
+  ],
   barLabel: [
     {
       fontSize: "7rem",
