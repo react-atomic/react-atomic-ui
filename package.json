@@ -43,10 +43,10 @@
     "pmvc_react_list": "*",
     "prettyjson": "1.2.1",
     "raw-loader": "*",
-    "react": "^16.x",
-    "react-dom": "^16.x",
+    "react": "^18.x",
+    "react-dom": "^18.x",
     "react-virtualized": "*",
-    "reshow-app": "*",
+    "reshow-app": "^0.17.x",
     "reshow-url": "*",
     "ricon": "*"
   },
@@ -62,7 +62,7 @@
     "build:es:ui": "BABEL_ENV=es babel ui -d build/es/ui --ignore /**/__tests__",
     "build:es": "npm run build:es:src && npm run build:es:ui",
     "build": "npm run clean && npm run build:cjs && npm run build:es",
-    "mochaFor": "mocha -r jsdom-global/register",
+    "mochaFor": "mocha -r global-jsdom/register",
     "mocha": "npm run mochaFor -- 'build/cjs/**/__tests__/*.js'",
     "test": "npm run build && npm run mocha",
     "prepublishOnly": "exit 1;"
