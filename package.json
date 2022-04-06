@@ -46,7 +46,7 @@
     "react": "^18.x",
     "react-dom": "^18.x",
     "react-virtualized": "*",
-    "reshow-app": "^0.17.x",
+    "reshow-app": "0.17.3",
     "reshow-url": "*",
     "ricon": "*"
   },
