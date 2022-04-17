@@ -4,20 +4,20 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import PopupExample from "../organisms/Popup.example";
-import popupExample from "!raw-loader!../../../../ui/organisms/Popup.example";
+import popupExample from "../../../../ui/organisms/Popup.example.jsx?raw";
 import FullScreenExample from "../organisms/FullScreen.example";
-import fullScreenExample from "!raw-loader!../../../../ui/organisms/FullScreen.example";
+import fullScreenExample from "../../../../ui/organisms/FullScreen.example.jsx?raw";
 import SpotlightExample from "../organisms/Spotlight.example";
-import spotlightExample from "!raw-loader!../../../../ui/organisms/Spotlight.example";
+import spotlightExample from "../../../../ui/organisms/Spotlight.example.jsx?raw";
 
 import AlertsNotifierExample from "../organisms/AlertsNotifier.example";
-import alertsNotifierExample from "!raw-loader!../../../../ui/organisms/AlertsNotifier.example";
+import alertsNotifierExample from "../../../../ui/organisms/AlertsNotifier.example.jsx?raw";
 
 import WindowOffsetExample from "../organisms/WindowOffset.example";
-import windowOffsetExample from "!raw-loader!../../../../ui/organisms/WindowOffset.example";
+import windowOffsetExample from "../../../../ui/organisms/WindowOffset.example.jsx?raw";
 
 import ReshowMessageExample from "../organisms/ReshowMessage.example";
-import reshowMessageExample from "!raw-loader!../../../../ui/organisms/ReshowMessage.example";
+import reshowMessageExample from "../../../../ui/organisms/ReshowMessage.example.jsx?raw";
 
 const Popup = props => {
     usePage({ ...props, pageName: "Popup" });

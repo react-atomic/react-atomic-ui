@@ -4,7 +4,7 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import AsciiDocExample from "../organisms/AsciiDoc.example";
-import asciiDocExample from "!raw-loader!../../../../ui/organisms/AsciiDoc.example";
+import asciiDocExample from "../../../../ui/organisms/AsciiDoc.example.jsx?raw";
 
 const AsciiDocPage = props => {
     usePage({...props, pageName: "AsciiDoc"});

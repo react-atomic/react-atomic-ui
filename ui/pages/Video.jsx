@@ -3,10 +3,10 @@ import CodeExample from "organism-react-code";
 import usePage from "../../src/usePage";
 
 import YouTubeRWD from "../organisms/YouTubeRWD.example";
-import youTubeRWD from "!raw-loader!../../../../ui/organisms/YouTubeRWD.example";
+import youTubeRWD from "../../../../ui/organisms/YouTubeRWD.example.jsx?raw";
 
 import QQVideo from "../organisms/QQVideo.example";
-import qQVideo from "!raw-loader!../../../../ui/organisms/QQVideo.example";
+import qqVideo from "../../../../ui/organisms/QQVideo.example.jsx?raw";
 
 const Video = (props) => {
   usePage({ ...props, pageName: "Video" });
@@ -16,7 +16,7 @@ const Video = (props) => {
         <YouTubeRWD />
       </CodeExample>
 
-      <CodeExample code={qQVideo} header="v.qq.com player">
+      <CodeExample code={qqVideo} header="v.qq.com player">
         <QQVideo />
       </CodeExample>
     </>

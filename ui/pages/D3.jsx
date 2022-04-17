@@ -4,22 +4,22 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import D3PieChart from "../organisms/D3PieChart.example";
-import d3PieChart from "!raw-loader!../../../../ui/organisms/D3PieChart.example";
+import d3PieChart from "../../../../ui/organisms/D3PieChart.example.jsx?raw";
 
 import D3BarChart from "../organisms/D3BarChart.example";
-import d3BarChart from "!raw-loader!../../../../ui/organisms/D3BarChart.example";
+import d3BarChart from "../../../../ui/organisms/D3BarChart.example.jsx?raw";
 
 import D3LineChart from "../organisms/D3LineChart.example";
-import d3LineChart from "!raw-loader!../../../../ui/organisms/D3LineChart.example";
+import d3LineChart from "../../../../ui/organisms/D3LineChart.example.jsx?raw";
 
 import D3AreaChart from "../organisms/D3AreaChart.example";
-import d3AreaChart from "!raw-loader!../../../../ui/organisms/D3AreaChart.example";
+import d3AreaChart from "../../../../ui/organisms/D3AreaChart.example.jsx?raw";
 
 import D3Uml from "../organisms/D3Uml.example";
-import d3Uml from "!raw-loader!../../../../ui/organisms/D3Uml.example";
+import d3Uml from "../../../../ui/organisms/D3Uml.example.jsx?raw";
 
 import StockChart from "../organisms/StockChart.example";
-import stockChart from "!raw-loader!../../../../ui/organisms/StockChart.example";
+import stockChart from "../../../../ui/organisms/StockChart.example.jsx?raw";
 
 const D3 = props => {
     usePage({ ...props, pageName: "D3" });

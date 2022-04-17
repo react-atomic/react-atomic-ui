@@ -7,7 +7,7 @@ import {
   InputBox,
   Button,
 } from "react-atomic-molecule";
-import SearchIcon from "ricon/Search";
+import SearchIcon from "ricon/Search.js";
 
 import { TabView, Tab } from "organism-react-navigation";
 

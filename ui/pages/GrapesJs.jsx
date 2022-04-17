@@ -4,10 +4,10 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import GrapesJsExample from "../organisms/GrapesJs.example";
-import grapesJsExample from "!raw-loader!../../../../ui/organisms/GrapesJs.example";
+import grapesJsExample from "../../../../ui/organisms/GrapesJs.example.jsx?raw";
 
 import RTEExample from "../organisms/RTE.example";
-import rteExample from "!raw-loader!../../../../ui/organisms/RTE.example";
+import rteExample from "../../../../ui/organisms/RTE.example.jsx?raw";
 
 const GrapesJs = props => {
     usePage({ ...props, pageName: "GrapesJs" });

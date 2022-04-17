@@ -5,7 +5,7 @@ import usePage from "../../src/usePage";
 /*Sample*/
 
 import D3UmlPerfExample from "../organisms/D3UmlPerf.example";
-import d3UmlPerfExample from "!raw-loader!../../../../ui/organisms/D3UmlPerf.example";
+import d3UmlPerfExample from "../../../../ui/organisms/D3UmlPerf.example.jsx?raw";
 
 const D3UmlPerf = props =>
 {

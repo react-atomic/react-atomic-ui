@@ -4,39 +4,39 @@ import usePage from "../../src/usePage";
 
 // example
 import PageLoadProgressHandler from "../organisms/PageLoadProgressHandler.example";
-import pageLoadProgressHandler from "!raw-loader!../../../../ui/organisms/PageLoadProgressHandler.example";
+import pageLoadProgressHandler from "../../../../ui/organisms/PageLoadProgressHandler.example.jsx?raw";
 
 import PageLoadProgressHandlerWithAjax from "../organisms/PageLoadProgressHandlerWithAjax.example";
-import pageLoadProgressHandlerWithAjax from "!raw-loader!../../../../ui/organisms/PageLoadProgressHandlerWithAjax.example";
+import pageLoadProgressHandlerWithAjax from "../../../../ui/organisms/PageLoadProgressHandlerWithAjax.example.jsx?raw";
 
 import AjaxDownload from "../organisms/AjaxDownload.example";
-import ajaxDownload from "!raw-loader!../../../../ui/organisms/AjaxDownload.example";
+import ajaxDownload from "../../../../ui/organisms/AjaxDownload.example.jsx?raw";
 
 import Dropzone from "../organisms/Dropzone.example";
-import dropzone from "!raw-loader!../../../../ui/organisms/Dropzone.example";
+import dropzone from "../../../../ui/organisms/Dropzone.example.jsx?raw";
 
 import FBLike from "../organisms/FBLike.example";
-import fbLike from "!raw-loader!../../../../ui/organisms/FBLike.example";
+import fbLike from "../../../../ui/organisms/FBLike.example.jsx?raw";
 import FBPage from "../organisms/FBPage.example";
-import fbPage from "!raw-loader!../../../../ui/organisms/FBPage.example";
+import fbPage from "../../../../ui/organisms/FBPage.example.jsx?raw";
 
 import TabView from "../organisms/TabView.example";
-import tabView from "!raw-loader!../../../../ui/organisms/TabView.example";
+import tabView from "../../../../ui/organisms/TabView.example.jsx?raw";
 
 import RadioGroup from "../organisms/RadioGroup.example";
-import radioGroup from "!raw-loader!../../../../ui/organisms/RadioGroup.example";
+import radioGroup from "../../../../ui/organisms/RadioGroup.example.jsx?raw";
 
 import Checkbox from "../organisms/Checkbox.example";
-import checkbox from "!raw-loader!../../../../ui/organisms/Checkbox.example";
+import checkbox from "../../../../ui/organisms/Checkbox.example.jsx?raw";
 
 import Suggestion from "../organisms/Suggestion.example";
-import suggestion from "!raw-loader!../../../../ui/organisms/Suggestion.example";
+import suggestion from "../../../../ui/organisms/Suggestion.example.jsx?raw";
 
 import TagInput from "../organisms/TagInput.example";
-import tagInput from "!raw-loader!../../../../ui/organisms/TagInput.example";
+import tagInput from "../../../../ui/organisms/TagInput.example.jsx?raw";
 
 import ErrorForm from "../organisms/ErrorForm.example";
-import errorForm from "!raw-loader!../../../../ui/organisms/ErrorForm.example";
+import errorForm from "../../../../ui/organisms/ErrorForm.example.jsx?raw";
 
 const Organisms = (props) => {
   usePage({ ...props, pageName: "Organisms" });

@@ -4,7 +4,7 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import QueryToJSON from "../organisms/QueryToJSON";
-import queryToJSON from "!raw-loader!../../../../ui/organisms/QueryToJSON";
+import queryToJSON from "../../../../ui/organisms/QueryToJSON.jsx?raw";
 
 const JSON = props => {
     usePage({ ...props, pageName: "JSON" });

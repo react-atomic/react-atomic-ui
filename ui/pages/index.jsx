@@ -24,7 +24,6 @@ import GrapesJs from "../pages/GrapesJs";
 import PDF from "../pages/PDF";
 import JSON from "../pages/JSON";
 import Tomato from "../pages/Tomato";
-
 const themes = {
   Atoms,
   Molecules,

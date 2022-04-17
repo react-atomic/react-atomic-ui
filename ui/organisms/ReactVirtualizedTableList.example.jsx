@@ -1,5 +1,4 @@
-import React, { lazy } from "react";
-
+import { lazy } from "react";
 import { Cell, Column } from "pmvc_react_list";
 const Table = lazy(() => import("pmvc_react_list/rv"));
 

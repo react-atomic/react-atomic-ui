@@ -4,7 +4,7 @@ import usePage from "../../src/usePage";
 
 import CodeExampleExample from "../organisms/CodeExample.example";
 import CodeEditorExample from "../organisms/CodeEditor.example";
-import codeEditorExample from "!raw-loader!../../../../ui/organisms/CodeEditor.example";
+import codeEditorExample from "../../../../ui/organisms/CodeEditor.example.jsx?raw";
 
 const Code = props => {
     usePage({ ...props, pageName: "Code" });

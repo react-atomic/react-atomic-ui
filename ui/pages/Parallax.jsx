@@ -5,7 +5,7 @@ import usePage from "../../src/usePage";
 import { useLazyInject } from "react-atomic-molecule";
 
 import ParallaxBackgroundImage from "../organisms/ParallaxBackgroundImage.example";
-import parallaxBackgroundImage from "!raw-loader!../../../../ui/organisms/ParallaxBackgroundImage.example";
+import parallaxBackgroundImage from "../../../../ui/organisms/ParallaxBackgroundImage.example.jsx?raw";
 
 const Parallax = (props) => {
   usePage({

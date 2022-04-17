@@ -4,11 +4,11 @@ import usePage from "../../src/usePage";
 
 /*Sample*/
 import AnimationExample from "../organisms/Animation.example";
-import animationExample from "!raw-loader!../../../../ui/organisms/Animation.example";
+import animationExample from "../../../../ui/organisms/Animation.example.jsx?raw";
 import AnimationReplaceExample from "../organisms/AnimationReplace.example";
-import animationReplaceExample from "!raw-loader!../../../../ui/organisms/AnimationReplace.example";
+import animationReplaceExample from "../../../../ui/organisms/AnimationReplace.example.jsx?raw";
 import AnimationDelayExample from "../organisms/AnimationDelay.example";
-import animationDelayExample from "!raw-loader!../../../../ui/organisms/AnimationDelay.example";
+import animationDelayExample from "../../../../ui/organisms/AnimationDelay.example.jsx?raw";
 
 const Animation = props => {
     usePage({...props, pageName: "Animation"});

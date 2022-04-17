@@ -3,13 +3,13 @@ import usePage from "../../src/usePage";
 
 /*example*/
 import CarouselAnimation from "../organisms/CarouselAnimation.example";
-import carouselAnimation from "!raw-loader!../../../../ui/organisms/CarouselAnimation.example";
+import carouselAnimation from "../../../../ui/organisms/CarouselAnimation.example.jsx?raw";
 
 import CarouselAnimationHideThumb from "../organisms/CarouselAnimationHideThumb.example";
-import carouselAnimationHideThumb from "!raw-loader!../../../../ui/organisms/CarouselAnimationHideThumb.example";
+import carouselAnimationHideThumb from "../../../../ui/organisms/CarouselAnimationHideThumb.example.jsx?raw";
 
 import CarouselHorizontalScroll from "../organisms/CarouselHorizontalScroll.example";
-import carouselHorizontalScroll from "!raw-loader!../../../../ui/organisms/CarouselHorizontalScroll.example";
+import carouselHorizontalScroll from "../../../../ui/organisms/CarouselHorizontalScroll.example.jsx?raw";
 
 const CarouselPage = (props) => {
   usePage({ ...props, pageName: "Carousel" });
