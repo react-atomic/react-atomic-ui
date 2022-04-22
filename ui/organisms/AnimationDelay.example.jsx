@@ -1,65 +1,47 @@
-import React, { PureComponent } from "react";
+import { useState } from "react";
 import Animate from "organism-react-animate";
 
-const foo = <div>Hello</div>;
-const bar = <div>world!!</div>;
+const Hello = () => <div>Hello</div>;
+const World = () => <div>world!!</div>;
+const Button = ({ setIsShow, action, children }) => (
+  <a
+    href="#"
+    style={{ marginLeft: "10px" }}
+    onClick={(e) => {
+      e.preventDefault();
+      setIsShow(action);
+    }}
+  >
+    {children}
+  </a>
+);
 
-class AnimationDelayExample extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      foo,
-      bar,
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Animate
-          appear="fadeInRight-3000"
-          enter="fadeInRight-3000"
-          leave="fadeOutRight-1000"
-        >
-          {this.state.foo}
-        </Animate>
-        <Animate
-          appear="fadeInRight-3000-500"
-          enter="fadeInRight-3000-500"
-          leave="fadeOutRight-1000-500"
-        >
-          {this.state.bar}
-        </Animate>
-        <a
-          href="#"
-          style={{ marginLeft: "10px" }}
-          onClick={((e) => {
-            e.preventDefault();
-            this.setState({
-              foo: null,
-              bar: null,
-            });
-          }).bind(this)}
-        >
-          leave
-        </a>
-
-        <a
-          href="#"
-          style={{ marginLeft: "10px" }}
-          onClick={((e) => {
-            e.preventDefault();
-            this.setState({
-              foo,
-              bar,
-            });
-          }).bind(this)}
-        >
-          enter
-        </a>
-      </div>
-    );
-  }
-}
+const AnimationDelayExample = () => {
+  const [isShow, setIsShow] = useState(true);
+  return (
+    <>
+      <Animate
+        appear="fadeInRight-3000"
+        enter="fadeInRight-3000"
+        leave="fadeOutRight-1000"
+      >
+        {isShow && <Hello />}
+      </Animate>
+      <Animate
+        appear="fadeInRight-3000-500"
+        enter="fadeInRight-3000-500"
+        leave="fadeOutRight-1000-500"
+      >
+        {isShow && <World />}
+      </Animate>
+      <Button setIsShow={setIsShow} action={false}>
+        leave
+      </Button>
+      <Button setIsShow={setIsShow} action={true}>
+        enter
+      </Button>
+    </>
+  );
+};
 
 export default AnimationDelayExample;
