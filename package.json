@@ -45,11 +45,12 @@
     "react": "^18.x",
     "react-dom": "^18.x",
     "react-virtualized": "*",
-    "reshow-app": "^0.17.35-beta",
+    "reshow-app": "*",
     "reshow-url": "*",
     "ricon": "*"
   },
   "scripts": {
+    "update-compile-sh": "yo reshow:compile-sh",
     "webpack": "webpack",
     "start": "ws",
     "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.jsx'",

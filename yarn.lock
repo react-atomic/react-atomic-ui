@@ -592,7 +592,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.16.7"
 
-"@babel/plugin-transform-classes@^7.16.7":
+"@babel/plugin-transform-classes@*", "@babel/plugin-transform-classes@^7.16.7":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-classes/-/plugin-transform-classes-7.16.7.tgz#8f4b9562850cd973de3b498f1218796eb181ce00"
   integrity sha512-WY7og38SFAGYRe64BrjKf8OrE6ulEHtr5jEYaZMwox9KebgqPi67Zqz8K53EKk1fFEJgm96r32rkKZ3qA2nCWQ==
@@ -1053,9 +1053,9 @@
   integrity sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==
 
 "@jridgewell/resolve-uri@^3.0.3":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.0.5.tgz#68eb521368db76d040a6315cdb24bf2483037b9c"
-  integrity sha512-VPeQ7+wH0itvQxnG+lIzWgkysKIr3L9sslimFW55rHMdGu/qCQ5z5h9zq4gI8uBtqkpHhsF4Z/OwExufUCThew==
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.0.6.tgz#4ac237f4dabc8dd93330386907b97591801f7352"
+  integrity sha512-R7xHtBSNm+9SyvpJkdQl+qrM3Hm2fea3Ef197M3mUug+v+yR+Rhfbs7PBtcBUVnIWJ4JcAdjvij+c8hXS9p5aw==
 
 "@jridgewell/sourcemap-codec@^1.4.10":
   version "1.4.11"
@@ -2350,9 +2350,9 @@ call-bind@^1.0.0, call-bind@^1.0.2:
     get-intrinsic "^1.0.2"
 
 call-func@*:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/call-func/-/call-func-0.2.4.tgz#3102db698884154ae994a56533fbb3d5f1691992"
-  integrity sha512-IAIwYKqq17RKQMG5FWOfXbQRU9v+akFeVb2S9JwwQIlN8obhja8lo4b31m5WMzLfmLsRi19QC1LcJix05ZjDEg==
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/call-func/-/call-func-0.2.5.tgz#cc6f5dacb9bbdeeeac10d7683183dcde2ce8e8dd"
+  integrity sha512-/gGC2quWRcpB9fESLm7fxAWBBmI5oJNVPmvg9bSGoUL/zY8aAKRn3SEZWcU6FW+VN5X1QHux6+kzFYYQH6hrIw==
   dependencies:
     css-query-selector "*"
     get-object-value "*"
@@ -6798,9 +6798,9 @@ prettier-eslint-cli@*:
     yargs "^13.2.4"
 
 prettier-eslint@*:
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-14.0.0.tgz#8dda304bead34a6a5a4d0fbd4e9ef37d3ac16d6f"
-  integrity sha512-VygtEufm7F0iQAAPzDM3pz4mbRa9JNIfAA0NRNuZCYZWP+Kyv5mK8PvCVEqec44T9ll6xuKOgyGm9pWjWzYhUw==
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-14.0.1.tgz#982ebc5a314bcf63d068e81ce1d00d6acc33c5ec"
+  integrity sha512-crsXH/dZ2uWxUZI43md0euicqGAJcojUamdMHJolotF/+BV8g2ULKpisiROGCvQXWtjNF869qFElcqnvO6fZdQ==
   dependencies:
     "@typescript-eslint/parser" "^5.10.0"
     common-tags "^1.4.0"
@@ -7004,9 +7004,9 @@ raw-body@^2.3.3:
     unpipe "1.0.0"
 
 react-atomic-atom@*:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.2.9.tgz#ab1f8b5a6ad4f7edc40066b9b2086893dabc0f22"
-  integrity sha512-eI/f3VNohMnwxWlQ11kf2HnoPERPA42cIzYsFQEmTbxs4+Pv7jjCXGs7jsvysZk/2nkC2lbk6DH6JTsaZCzR+g==
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/react-atomic-atom/-/react-atomic-atom-2.2.11.tgz#4dad14d521f814a363fad0fac544b5e97df443b3"
+  integrity sha512-KNTN6uXy79aWHTi0IIWLjs3Da0Ik45ADk2hxS8g/jLGRrCbB4EcBVXER++bjOvWncvewf16aHjGPHFfjpmqsAg==
   dependencies:
     "@babel/cli" "^7.x"
     "@babel/core" "^7.x"
@@ -7019,6 +7019,7 @@ react-atomic-atom@*:
     "@babel/plugin-proposal-private-property-in-object" "*"
     "@babel/plugin-syntax-dynamic-import" "*"
     "@babel/plugin-transform-arrow-functions" "*"
+    "@babel/plugin-transform-classes" "*"
     "@babel/plugin-transform-object-assign" "*"
     "@babel/plugin-transform-react-constant-elements" "*"
     "@babel/plugin-transform-spread" "*"
@@ -7306,10 +7307,10 @@ reselect@^4.0.0:
   resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.5.tgz#852c361247198da6756d07d9296c2b51eddb79f6"
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
-reshow-app@^0.17.35-beta:
-  version "0.17.41"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.41.tgz#ef3b2892d1331809516383704022d7d3bca5c430"
-  integrity sha512-uSEHSld8zRjRzOGvL3+QjY+JRC0sxAYUcLXSDFu0LnbP/FPSCdy0MCfI3Dj/cN1FvGah4kbhyMZtxg/F9bsBjQ==
+reshow-app@*:
+  version "0.17.42"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.42.tgz#44fa7d726c9a995445c34a83053ae239c93ceaac"
+  integrity sha512-+bJgxFqETkMJ6WAFo2KYDvuPWp8ph9iS6jkqlOsUEcq9z+2MwchDStx0H2NVezlkmBA3Y2hgtYotr0uPrFBPwA==
   dependencies:
     "@swc/core" "1.2.165"
     ansi-html-community "0.0.8"
