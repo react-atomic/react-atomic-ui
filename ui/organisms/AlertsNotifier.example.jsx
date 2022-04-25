@@ -14,6 +14,7 @@ class AlertsNotifierExample extends PureComponent {
               {
                 type: "info",
                 message: "test",
+                "data-date": new Date(),
               },
             ]}
           />
