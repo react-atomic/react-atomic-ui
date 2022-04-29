@@ -38,11 +38,18 @@ import tagInput from "../../../../ui/organisms/TagInput.example.jsx?raw";
 import ErrorForm from "../organisms/ErrorForm.example";
 import errorForm from "../../../../ui/organisms/ErrorForm.example.jsx?raw";
 
+import ConstraintForm from "../organisms/ConstraintForm.example";
+import constraintForm from "../../../../ui/organisms/ConstraintForm.example.jsx?raw";
+
 const Organisms = (props) => {
   usePage({ ...props, pageName: "Organisms" });
   return (
     <>
-      <CodeExample code={tagInput} header="Tag input" id="tag-input">
+      <CodeExample code={constraintForm} header="Constraint Form" id="constraintForm">
+        <ConstraintForm />
+      </CodeExample>
+
+      <CodeExample code={tagInput} header="Tag input" id="tagInput">
         <TagInput />
       </CodeExample>
 
