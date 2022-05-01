@@ -7332,9 +7332,9 @@ reselect@^4.0.0:
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
 reshow-app@*:
-  version "0.17.49"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.49.tgz#458a53c6a967b26839ed2e1677846f8136c762bf"
-  integrity sha512-KDIG4+H6Lch1uF2RwBXqKaibxZaFCyG6fkBcP7//Fp8u7BzNhZWBheg0rOEAXipM1BnTxgw2K8FpcrkFlyDaew==
+  version "0.17.54"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.54.tgz#f3fde657193a9e300fbeaf583f2c60074feb224d"
+  integrity sha512-VuHDmAqyLEHdU6PCdvDXz1aJu9Wu/HN3gY6TJ6ynkIUPC2ZHTrEosFL26MPhfiOwpO8zjNB4FuxYyP7KowfHfQ==
   dependencies:
     "@swc/core" "1.2.173"
     ansi-html-community "0.0.8"
@@ -7380,9 +7380,9 @@ reshow-app@*:
     workbox-webpack-plugin "*"
 
 reshow-build@*, reshow-build@^0.17.x:
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/reshow-build/-/reshow-build-0.17.8.tgz#0d2422c7dce8815962afffb587ad2031735a4f8c"
-  integrity sha512-01aSJofwV5CssjyIf/zTFGlCuH6kIDRSTMG5R+7ESJ7zcc5N+f69FHOpF92dmWYE1gRvuJBfAuZQTp2p5+xQyg==
+  version "0.17.9"
+  resolved "https://registry.yarnpkg.com/reshow-build/-/reshow-build-0.17.9.tgz#c8ffe1da7b119c361bc00b0e983096890f3ae362"
+  integrity sha512-3pthnjO3PJ9jvwYK2WvbcpriX7K8h1nr0S3OjqNki0e86vOrQCS7SGshBwKJtJbObBf6b7HD5OboJg3JMc37Vw==
   dependencies:
     array.merge "*"
     reshow-constant "*"
@@ -7489,9 +7489,9 @@ reshow-url@*, reshow-url@^0.17.x:
     reshow-runtime "*"
 
 reshow-worker@*:
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/reshow-worker/-/reshow-worker-0.17.3.tgz#49e2a9fe53390d47db08c159efefd07e5803ec24"
-  integrity sha512-kVzoTG5ojCgzX9dVTtYLP5qkxBorLglrBJilj/ldQYNMOZd2WcLjEpo3EIW2sHwaPWBduZw8sASijf0uKv3gOQ==
+  version "0.17.4"
+  resolved "https://registry.yarnpkg.com/reshow-worker/-/reshow-worker-0.17.4.tgz#77e4727463fdd19a9db4a28c913f2775a8e3ef82"
+  integrity sha512-hWeu7f7P7lZZ9a6P41/tPaloPPJPNPvnxqb0t81MqiFvJtW4TrrlHVjAFJ98UGi9SgB2fYCsoT01DbFa1Sm61A==
   dependencies:
     get-object-value "*"
     organism-react-ajax "*"
