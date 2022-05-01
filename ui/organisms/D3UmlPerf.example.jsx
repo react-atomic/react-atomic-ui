@@ -21,7 +21,7 @@ const data = {
   ],
 };
 
-for (let i = 1; i < 500; i++) {
+for (let i = 1; i < 999; i++) {
   data.tables.push(
     {
       name: `table${i}`,
@@ -49,7 +49,7 @@ const D3UmlPerfExample = () => {
   let isDisableDel;
   let isDisableMove;
   return (
-    <div>
+    <>
       <UMLGraph
         style={{height: "50vh"}}
         onZoom={handleZoom}
@@ -92,7 +92,7 @@ const D3UmlPerfExample = () => {
         </Field>
         <Button onClick={handleUpdate}>update</Button>
       </Form>
-    </div>
+    </>
   );
 };
 

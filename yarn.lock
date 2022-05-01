@@ -7332,9 +7332,9 @@ reselect@^4.0.0:
   integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
 
 reshow-app@*:
-  version "0.17.48"
-  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.48.tgz#e6debd32c98dce2625cc30056ce86f67fe26c9b0"
-  integrity sha512-wW8uPW9QULJ2mLehpGuYErBBJK8df4SSflP7XHq9slee/CuDJk7n550jbodcjWSMVYpOE5ErrQFwYU+XVezdfA==
+  version "0.17.49"
+  resolved "https://registry.yarnpkg.com/reshow-app/-/reshow-app-0.17.49.tgz#458a53c6a967b26839ed2e1677846f8136c762bf"
+  integrity sha512-KDIG4+H6Lch1uF2RwBXqKaibxZaFCyG6fkBcP7//Fp8u7BzNhZWBheg0rOEAXipM1BnTxgw2K8FpcrkFlyDaew==
   dependencies:
     "@swc/core" "1.2.173"
     ansi-html-community "0.0.8"
@@ -7380,9 +7380,9 @@ reshow-app@*:
     workbox-webpack-plugin "*"
 
 reshow-build@*, reshow-build@^0.17.x:
-  version "0.17.7"
-  resolved "https://registry.yarnpkg.com/reshow-build/-/reshow-build-0.17.7.tgz#4fba7070cd8b7138839bcc47d589fb7203701036"
-  integrity sha512-v6amFuSzQGpWKvzft/PWdXJzqtx/MJXu3/1naM7FYEYhIaofAT4QSpkZMUDH92BvAO38NxmliMsEAnyxtTecLg==
+  version "0.17.8"
+  resolved "https://registry.yarnpkg.com/reshow-build/-/reshow-build-0.17.8.tgz#0d2422c7dce8815962afffb587ad2031735a4f8c"
+  integrity sha512-01aSJofwV5CssjyIf/zTFGlCuH6kIDRSTMG5R+7ESJ7zcc5N+f69FHOpF92dmWYE1gRvuJBfAuZQTp2p5+xQyg==
   dependencies:
     array.merge "*"
     reshow-constant "*"
@@ -7425,9 +7425,9 @@ reshow-hooks@*:
     call-func "*"
 
 reshow-return@*:
-  version "0.17.12"
-  resolved "https://registry.yarnpkg.com/reshow-return/-/reshow-return-0.17.12.tgz#595aab4273c79ab66d34ed23d398eb9c64a8be68"
-  integrity sha512-FUMKPSCP6LOt+fSXL+AIIc3ZltfGR9KXSX02E6eVSqK3TWdEWBUuSx7XXSoAKBLwVAHsgsgO3O9ad/PcSB677w==
+  version "0.17.14"
+  resolved "https://registry.yarnpkg.com/reshow-return/-/reshow-return-0.17.14.tgz#b3e3be219e905cfc5aafab46aa5bcc67f03f37dc"
+  integrity sha512-YTuw6PLAvT33vgPmRyVJAvcHRp0Dmteh3S8TqnDAsVxztBAWROGK1DZj9Nw9toMWfvwYeCwXW4KnwdEuwJIzUQ==
   dependencies:
     call-func "*"
     get-object-value "*"
@@ -7622,9 +7622,9 @@ rollup-plugin-terser@^7.0.0:
     terser "^5.0.0"
 
 rollup@^2.43.1:
-  version "2.71.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.71.0.tgz#d61e26b95481867d796da255a43fffeadb754cfd"
-  integrity sha512-kZWB4FA9N/iZU/O9tVp08pPdxLM0i2iUDvcS77XT92DI81s3wYQcU/cA2FCXWj+HgJj8RUC2M0dXECwoOfDBYA==
+  version "2.71.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.71.1.tgz#82b259af7733dfd1224a8171013aaaad02971a22"
+  integrity sha512-lMZk3XfUBGjrrZQpvPSoXcZSfKcJ2Bgn+Z0L1MoW2V8Wh7BVM+LOBJTPo16yul2MwL59cXedzW1ruq3rCjSRgw==
   optionalDependencies:
     fsevents "~2.3.2"
 

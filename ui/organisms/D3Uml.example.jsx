@@ -48,12 +48,12 @@ const D3UmlExample = () => {
   let isDisableDel;
   let isDisableMove;
   return (
-    <div>
+    <>
       <UMLGraph
         onZoom={handleZoom}
         ref={handleUml}
         data={data}
-        lineDefaultProps={{curve: !isDisableCurve}}
+        lineDefaultProps={{ curve: !isDisableCurve }}
         connsLocator={(d) => d.conns}
         connFromBoxGroupLocator={(d) => d.from.table}
         connFromBoxLocator={(d) => d.from.col}
@@ -77,7 +77,9 @@ const D3UmlExample = () => {
           <Checkbox
             toggle
             label="disable curve"
-            onChange={({checked}) => {setIsDisableCurve(checked)}}
+            onChange={({ checked }) => {
+              setIsDisableCurve(checked);
+            }}
           />
           <Checkbox
             label="disable line delete"
@@ -90,7 +92,7 @@ const D3UmlExample = () => {
         </Field>
         <Button onClick={handleUpdate}>update</Button>
       </Form>
-    </div>
+    </>
   );
 };
 
