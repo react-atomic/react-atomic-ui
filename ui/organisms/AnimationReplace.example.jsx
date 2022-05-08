@@ -14,7 +14,7 @@ class AnimationReplaceExample extends PureComponent {
         leave="fadeOutRight-1000"
         style={{ minHeight: 30, overflow: "hidden" }}
       >
-        <div style={{ background: "#f4cc70" }}>1</div>
+        <div style={{ background: "#9467bd" }}>1</div>
         <div style={{ background: "#de7a22" }}>2</div>
         <div style={{ background: "#20948b" }}>3</div>
       </Replace>

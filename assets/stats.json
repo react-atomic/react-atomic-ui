@@ -3,19 +3,19 @@
     "main": [
       {
         "name": "main.bundle.js",
-        "publicPath": "/assets/main.bundle.js?378db78"
+        "publicPath": "/assets/main.bundle.js?0209a41"
       }
     ],
     "lib": [
       {
         "name": "lib.bundle.js",
-        "publicPath": "/assets/lib.bundle.js?378db78"
+        "publicPath": "/assets/lib.bundle.js?0209a41"
       }
     ],
     "vendor": [
       {
         "name": "vendor.bundle.js",
-        "publicPath": "/assets/vendor.bundle.js?378db78"
+        "publicPath": "/assets/vendor.bundle.js?0209a41"
       }
     ]
   },
