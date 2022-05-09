@@ -6248,9 +6248,9 @@ organism-react-ajax@*:
     win-doc "*"
 
 organism-react-animate@*:
-  version "0.10.13"
-  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.10.13.tgz#6b37ad386ee7089ed14ef2b7a15a0c771240de67"
-  integrity sha512-GS3hfGU891H4qX5MO5I0qmJTS/wbvwB4p6DrAjFY0Elel/isQ/iHECCzWSFUlWgACtZCvVxewz3hcgS6CKAgsQ==
+  version "0.10.15"
+  resolved "https://registry.yarnpkg.com/organism-react-animate/-/organism-react-animate-0.10.15.tgz#6c8dd66b27f61485285c68483d35455e8803c647"
+  integrity sha512-lO8yp+OoRk8FjJdMDovBYTZYpiEOxFeObb4N61nmhxbsCftTH0Y4od3OwMtKeoTBtSMGpiM2weAgmQ+TFgJo0Q==
   dependencies:
     call-func "*"
     get-object-value "*"
@@ -7399,9 +7399,9 @@ reshow-flux-base@*:
     reshow-runtime "*"
 
 reshow-flux@*, reshow-flux@^0.17.x:
-  version "0.17.17"
-  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-0.17.17.tgz#b0415ff86a1628c4507452ba24779f01372c8c36"
-  integrity sha512-BIAopmJIyqqVnY9gmlnaE6AMSi5O/4W/HJN+QFl6Z6m+/YRN4SJpJjXUxIU1/oY5luF4AEaLJBg279wRykukLg==
+  version "0.17.19"
+  resolved "https://registry.yarnpkg.com/reshow-flux/-/reshow-flux-0.17.19.tgz#14ece9a6986b5f3a32edbaba003d7fb3694807ee"
+  integrity sha512-XZ9sSiUZqXDmtQJmWCz5ln3PVNmGr4MD8nkK4IUG0BX5H3CS6a7MLpLmles5YJz7uvgn6nog+Refj1z1qp5t+Q==
   dependencies:
     array.dedup "*"
     array.merge "*"
