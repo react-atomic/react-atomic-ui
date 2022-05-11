@@ -19,45 +19,42 @@ import windowOffsetExample from "../../../../ui/organisms/WindowOffset.example.j
 import ReshowMessageExample from "../organisms/ReshowMessage.example";
 import reshowMessageExample from "../../../../ui/organisms/ReshowMessage.example.jsx?raw";
 
-const Popup = props => {
-    usePage({ ...props, pageName: "Popup" });
-    return (
-      <>
-        <CodeExample code={popupExample} header="Popup Example">
-          <PopupExample />
-        </CodeExample>
+const Popup = (props) => {
+  usePage({ ...props, pageName: "Popup" });
+  return (
+    <>
+      <CodeExample code={popupExample} header="Popup Example">
+        <PopupExample />
+      </CodeExample>
 
-        <CodeExample code={fullScreenExample} header="Full Screen Example">
-          <FullScreenExample />
-        </CodeExample>
+      <CodeExample code={fullScreenExample} header="Full Screen Example">
+        <FullScreenExample />
+      </CodeExample>
 
-        <CodeExample
-          code={alertsNotifierExample}
-          header="Alerts Notifier Example"
-        >
-          <AlertsNotifierExample />
-        </CodeExample>
+      <CodeExample
+        code={alertsNotifierExample}
+        header="Alerts Notifier Example"
+      >
+        <AlertsNotifierExample />
+      </CodeExample>
 
-        <CodeExample
-          code={windowOffsetExample}
-          header="Detect Window Offset Example"
-          id="get-window-offset"
-        >
-          <WindowOffsetExample />
-        </CodeExample>
+      <CodeExample
+        code={windowOffsetExample}
+        header="Detect Window Offset Example"
+        id="get-window-offset"
+      >
+        <WindowOffsetExample />
+      </CodeExample>
 
-        <CodeExample code={spotlightExample} header="Spotlight Example">
-          <SpotlightExample />
-        </CodeExample>
+      <CodeExample code={spotlightExample} header="Spotlight Example">
+        <SpotlightExample />
+      </CodeExample>
 
-        <CodeExample
-          code={reshowMessageExample}
-          header="Reshow Message Example"
-        >
-          <ReshowMessageExample />
-        </CodeExample>
-      </>
-    );
+      <CodeExample code={reshowMessageExample} header="Reshow Message Example">
+        <ReshowMessageExample />
+      </CodeExample>
+    </>
+  );
 };
 
 export default Popup;

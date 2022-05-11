@@ -5,9 +5,9 @@ import { useLocalStorage } from "reshow";
 const StorageExample = () => {
   const lastEl = useRef();
   const [state, storageDispatch] = useLocalStorage(["foo"]);
-  console.log({state});
+  console.log({ state });
   const handleClick = () => {
-    storageDispatch({foo: lastEl.current.value});
+    storageDispatch({ foo: lastEl.current.value });
   };
   return (
     <InputBox

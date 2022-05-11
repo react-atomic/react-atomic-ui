@@ -1,5 +1,5 @@
 import { i13nDispatch } from "organism-react-i13n";
-import {win} from "win-doc";
+import { win } from "win-doc";
 import callfunc from "call-func";
 
 let init;
@@ -11,7 +11,7 @@ const actionHandler = (state, action) => {
 
 const impressionHandler = (state, action) => {
   if (init) {
-    callfunc(win().i13n?.dispatch, ['impression']);
+    callfunc(win().i13n?.dispatch, ["impression"]);
   } else {
     init = true;
   }

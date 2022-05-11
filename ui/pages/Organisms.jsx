@@ -45,7 +45,11 @@ const Organisms = (props) => {
   usePage({ ...props, pageName: "Organisms" });
   return (
     <>
-      <CodeExample code={constraintForm} header="Constraint Form" id="constraintForm">
+      <CodeExample
+        code={constraintForm}
+        header="Constraint Form"
+        id="constraintForm"
+      >
         <ConstraintForm />
       </CodeExample>
 

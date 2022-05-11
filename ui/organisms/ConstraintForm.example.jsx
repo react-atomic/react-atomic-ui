@@ -4,10 +4,13 @@ import { Button } from "react-atomic-molecule";
 const ConstraintFormExample = () => {
   let form;
   return (
-    <ConstraintForm ref={el=>form=el} onSubmit={(e)=>{
-      alert("Make a submit.");
-      return false;
-    }}>
+    <ConstraintForm
+      ref={(el) => (form = el)}
+      onSubmit={(e) => {
+        alert("Make a submit.");
+        return false;
+      }}
+    >
       <ConstraintField
         atom="input"
         label="Native check"
@@ -20,7 +23,7 @@ const ConstraintFormExample = () => {
         label="Custom check"
         name="name"
         placeholder="Your Name (Custom)"
-        onValidate={({el, setState})=>{
+        onValidate={({ el, setState }) => {
           if (!el.value.length) {
             setState("you need provide content");
             return false;
@@ -28,9 +31,14 @@ const ConstraintFormExample = () => {
         }}
       />
       <Button type="submit">Native Submit</Button>
-      <Button type="button" onClick={()=>{
-        form.submit();
-      }}>Simulate Submit</Button>
+      <Button
+        type="button"
+        onClick={() => {
+          form.submit();
+        }}
+      >
+        Simulate Submit
+      </Button>
     </ConstraintForm>
   );
 };

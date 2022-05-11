@@ -10,29 +10,26 @@ import animationReplaceExample from "../../../../ui/organisms/AnimationReplace.e
 import AnimationDelayExample from "../organisms/AnimationDelay.example";
 import animationDelayExample from "../../../../ui/organisms/AnimationDelay.example.jsx?raw";
 
-const Animation = props => {
-    usePage({...props, pageName: "Animation"});
-    return (
-      <>
-        <CodeExample code={animationExample} header="Animation Sample">
-          <AnimationExample />
-        </CodeExample>
+const Animation = (props) => {
+  usePage({ ...props, pageName: "Animation" });
+  return (
+    <>
+      <CodeExample code={animationExample} header="Animation Sample">
+        <AnimationExample />
+      </CodeExample>
 
-        <CodeExample
-          code={animationReplaceExample}
-          header="Animation Replace Sample"
-        >
-          <AnimationReplaceExample />
-        </CodeExample>
+      <CodeExample
+        code={animationReplaceExample}
+        header="Animation Replace Sample"
+      >
+        <AnimationReplaceExample />
+      </CodeExample>
 
-        <CodeExample
-          code={animationDelayExample}
-          header="Animation Delay Sample"
-        >
-          <AnimationDelayExample />
-        </CodeExample>
-      </>
-    );
-}
+      <CodeExample code={animationDelayExample} header="Animation Delay Sample">
+        <AnimationDelayExample />
+      </CodeExample>
+    </>
+  );
+};
 
 export default Animation;

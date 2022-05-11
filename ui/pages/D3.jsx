@@ -21,35 +21,35 @@ import d3Uml from "../../../../ui/organisms/D3Uml.example.jsx?raw";
 import StockChart from "../organisms/StockChart.example";
 import stockChart from "../../../../ui/organisms/StockChart.example.jsx?raw";
 
-const D3 = props => {
-    usePage({ ...props, pageName: "D3" });
-    return (
-      <>
-        <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
-          <D3Uml />
-        </CodeExample>
+const D3 = (props) => {
+  usePage({ ...props, pageName: "D3" });
+  return (
+    <>
+      <CodeExample code={d3Uml} header="D3 Uml" id="d3-uml">
+        <D3Uml />
+      </CodeExample>
 
-        <CodeExample code={d3LineChart} header="D3 Line Chart">
-          <D3LineChart />
-        </CodeExample>
+      <CodeExample code={d3LineChart} header="D3 Line Chart">
+        <D3LineChart />
+      </CodeExample>
 
-        <CodeExample code={d3BarChart} header="D3 Bar Chart">
-          <D3BarChart />
-        </CodeExample>
+      <CodeExample code={d3BarChart} header="D3 Bar Chart">
+        <D3BarChart />
+      </CodeExample>
 
-        <CodeExample code={d3AreaChart} header="D3 Area Chart">
-          <D3AreaChart />
-        </CodeExample>
+      <CodeExample code={d3AreaChart} header="D3 Area Chart">
+        <D3AreaChart />
+      </CodeExample>
 
-        <CodeExample code={d3PieChart} header="D3 Pie Chart">
-          <D3PieChart />
-        </CodeExample>
+      <CodeExample code={d3PieChart} header="D3 Pie Chart">
+        <D3PieChart />
+      </CodeExample>
 
-        <CodeExample code={stockChart} header="Stock Chart">
-          <StockChart />
-        </CodeExample>
-      </>
-    );
+      <CodeExample code={stockChart} header="Stock Chart">
+        <StockChart />
+      </CodeExample>
+    </>
+  );
 };
 
 export default D3;

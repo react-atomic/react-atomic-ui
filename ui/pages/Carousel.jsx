@@ -33,7 +33,10 @@ const CarouselPage = (props) => {
         <CarouselAnimationHideThumb />
       </CodeExample>
 
-      <CodeExample code={carouselHorizontalScroll} header="Carousel Horizontal Scroll">
+      <CodeExample
+        code={carouselHorizontalScroll}
+        header="Carousel Horizontal Scroll"
+      >
         <CarouselHorizontalScroll />
       </CodeExample>
     </>

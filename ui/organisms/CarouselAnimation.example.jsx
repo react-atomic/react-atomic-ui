@@ -18,10 +18,7 @@ const CarouselAnimationExample = (props) => {
         />
       </Carousel>
       <Carousel>
-        <Image
-          style={Styles.img}
-          src="https://source.unsplash.com/random"
-        />
+        <Image style={Styles.img} src="https://source.unsplash.com/random" />
       </Carousel>
       <Carousel>3</Carousel>
       <Carousel>4</Carousel>

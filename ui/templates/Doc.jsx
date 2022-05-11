@@ -4,7 +4,7 @@ import Menu from "../molecules/Menu";
 
 const DocTemplate = getDocTemplate({
   sideWidth: 160,
-  active: true
+  active: true,
 });
 
 const Doc = ({ children, ...props }) => (

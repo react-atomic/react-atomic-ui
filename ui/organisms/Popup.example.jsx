@@ -16,7 +16,9 @@ const PopupExample = () => {
       <PopupClick
         style={Styles.click}
         popup={() => {
-          return <PopupModal backgroundScroll={backgroundScrollAble}>xxx</PopupModal>;
+          return (
+            <PopupModal backgroundScroll={backgroundScrollAble}>xxx</PopupModal>
+          );
         }}
         component={<a />}
       >
@@ -25,7 +27,11 @@ const PopupExample = () => {
 
       <PopupClick
         style={{ marginLeft: 5 }}
-        popup={<Dialog backgroundScroll={backgroundScrollAble} header="Test Header">Test Dialog</Dialog>}
+        popup={
+          <Dialog backgroundScroll={backgroundScrollAble} header="Test Header">
+            Test Dialog
+          </Dialog>
+        }
         component={<Button />}
       >
         show dialog

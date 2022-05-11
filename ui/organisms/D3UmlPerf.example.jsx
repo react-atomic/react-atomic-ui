@@ -5,8 +5,7 @@ import { Form, Field, Button } from "react-atomic-molecule";
 import { Checkbox } from "react-atomic-organism";
 
 const data = {
-  tables: [
-  ],
+  tables: [],
   conns: [
     {
       from: {
@@ -22,12 +21,10 @@ const data = {
 };
 
 for (let i = 1; i < 999; i++) {
-  data.tables.push(
-    {
-      name: `table${i}`,
-      cols: [`t${i}-col1`, `t${i}-col2`],
-    },
-  );
+  data.tables.push({
+    name: `table${i}`,
+    cols: [`t${i}-col1`, `t${i}-col2`],
+  });
 }
 
 const D3UmlPerfExample = () => {
@@ -51,11 +48,11 @@ const D3UmlPerfExample = () => {
   return (
     <>
       <UMLGraph
-        style={{height: "50vh"}}
+        style={{ height: "50vh" }}
         onZoom={handleZoom}
         ref={handleUml}
         data={data}
-        lineDefaultProps={{curve: !isDisableCurve}}
+        lineDefaultProps={{ curve: !isDisableCurve }}
         connsLocator={(d) => d.conns}
         connFromBoxGroupLocator={(d) => d.from.table}
         connFromBoxLocator={(d) => d.from.col}
@@ -79,7 +76,9 @@ const D3UmlPerfExample = () => {
           <Checkbox
             toggle
             label="disable curve"
-            onChange={({checked}) => {setIsDisableCurve(checked)}}
+            onChange={({ checked }) => {
+              setIsDisableCurve(checked);
+            }}
           />
           <Checkbox
             label="disable line delete"

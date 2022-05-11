@@ -53,11 +53,7 @@ const useSortable = (props) => {
         return;
       }
       setIsDraging(true);
-      const {
-        destTarget,
-        clientX,
-        clientY,
-      } = e;
+      const { destTarget, clientX, clientY } = e;
       let sortTarget;
       const floatXY = {
         x: clientX,

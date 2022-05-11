@@ -132,7 +132,7 @@ const icons = [
   ["Person (add)", <Person type="add" />],
   ["Phone", <Phone />],
   ["Pin", <Pin />],
-  ["Pin (label=\"A\")", <Pin label="A" />],
+  ['Pin (label="A")', <Pin label="A" />],
   ["Play", <Play />],
   ["PlayListAdd", <PlayListAdd />],
   ["Pulse", <Pulse />],

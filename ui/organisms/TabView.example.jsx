@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import {
   SemanticUI,
@@ -33,8 +33,8 @@ const TabViewExample = (props) => {
           <div>menu2</div>
         </Tab>
       </TabView>
-      <Button onClick={()=>setSelected(0)}>to tab1</Button>
-      <Button onClick={()=>setSelected(1)}>to tab2</Button>
+      <Button onClick={() => setSelected(0)}>to tab1</Button>
+      <Button onClick={() => setSelected(1)}>to tab2</Button>
     </SemanticUI>
   );
 };
