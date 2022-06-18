@@ -54,7 +54,7 @@
     "update-compile-sh": "yo reshow:compile-sh",
     "webpack": "webpack",
     "start": "ws",
-    "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.jsx'",
+    "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.js*'",
     "clean:webpack": "find ./assets -name '*.*' | xargs rm -rf && rm -rf workbox-*.js",
     "clean": "find ./build -name '*.*' | xargs rm -rf",
     "build:es:src": "BABEL_ENV=es babel src -d build/es/src --out-file-extension .mjs",
