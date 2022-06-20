@@ -41,7 +41,7 @@ killBy() {
 stop() {
   killBy ${DIR}/node_modules/.bin/babel
   cat webpack.pid | xargs -I{} kill -9 {}
-  npm run clean
+  npm run clean:webpack
   rm $SWJS
   echo "Stop done"
 }
@@ -73,7 +73,6 @@ production() {
   echo "Production Mode"
   checkBabel
   npm run build
-  npm run clean:webpack
   ENABLE_SW=1 CONFIG=$conf NODE_ENV=production $webpack
 }
 
@@ -82,7 +81,6 @@ analyzer() {
   echo "Analyzer Mode"
   checkBabel
   npm run build
-  npm run clean:webpack
   CONFIG=$conf BUNDLE='{}' $webpack
 }
 
@@ -91,7 +89,6 @@ develop() {
   echo "Develop Mode"
   checkBabel
   npm run build
-  npm run clean:webpack
   CONFIG=$conf $webpack
 }
 
@@ -102,7 +99,6 @@ watch() {
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
   sleep 10
-  npm run clean:webpack
   CONFIG=$conf $webpack --watch &
 }
 
@@ -122,7 +118,6 @@ hot() {
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
   sleep 10
-  npm run clean:webpack
   HOT_UPDATE=1 CONFIG=$conf $webpack serve &
 }
 
