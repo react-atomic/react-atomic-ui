@@ -5,8 +5,7 @@ import Atoms from "../Atoms";
 
 describe("Atoms page Test", () => {
   it("basic test", () => {
-    const vDom = <Atoms />;
-    const wrap = render(vDom);
+    const wrap = render(<Atoms />);
     const html = wrap.html();
     expect(html).to.have.string("This is atom");
   });

@@ -6,6 +6,7 @@ DIR=$(
 )
 cd $DIR
 SWJS=${DIR}/service-worker.js
+webpackEnabled=$(awk -F "=" '/^webpackEnabled/ {print $2}' $DIR/.yo)
 
 conf='{'
 conf+='"assetsRoot":"/assets/",'
@@ -22,7 +23,7 @@ if [ -z "$OPEN" ]; then
   OPEN="open"
 fi
 
-if [ "xon" == "xon" ]; then
+if [ "x$webpackEnabled" == "xon" ]; then
   webpack='npm run webpack --'
 fi
 
@@ -40,8 +41,10 @@ killBy() {
 
 stop() {
   killBy ${DIR}/node_modules/.bin/babel
-  cat webpack.pid | xargs -I{} kill -9 {}
-  npm run clean:webpack
+  if [ ! -z "$webpack" ]; then
+    cat webpack.pid | xargs -I{} kill -9 {}
+    npm run clean:webpack
+  fi
   rm $SWJS
   echo "Stop done"
 }
@@ -73,7 +76,9 @@ production() {
   echo "Production Mode"
   checkBabel
   npm run build
-  ENABLE_SW=1 CONFIG=$conf NODE_ENV=production $webpack
+  if [ ! -z "$webpack" ]; then
+    ENABLE_SW=1 CONFIG=$conf NODE_ENV=production $webpack
+  fi
 }
 
 analyzer() {
@@ -81,7 +86,7 @@ analyzer() {
   echo "Analyzer Mode"
   checkBabel
   npm run build
-  CONFIG=$conf BUNDLE='{}' $webpack
+  [ ! -z "$webpack" ] && CONFIG=$conf BUNDLE='{}' $webpack
 }
 
 develop() {
@@ -89,7 +94,7 @@ develop() {
   echo "Develop Mode"
   checkBabel
   npm run build
-  CONFIG=$conf $webpack
+  [ ! -z "$webpack" ] && CONFIG=$conf $webpack
 }
 
 watch() {
@@ -98,16 +103,6 @@ watch() {
   checkBabel
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
-  sleep 10
-  CONFIG=$conf $webpack --watch &
-}
-
-watchTest() {
-  stop
-  echo "Watch Test"
-  checkBabel
-  npm run build:cjs:ui -- --watch &
-  npm run build:cjs:src -- --watch &
 }
 
 hot() {
@@ -117,8 +112,7 @@ hot() {
   checkBabel
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
-  sleep 10
-  HOT_UPDATE=1 CONFIG=$conf $webpack serve &
+  [ ! -z "$webpack" ] && sleep 10 && HOT_UPDATE=1 CONFIG=$conf $webpack serve &
 }
 
 case "$1" in
@@ -139,9 +133,6 @@ case "$1" in
     ;;
   watch)
     watch
-    ;;
-  watchTest)
-    watchTest
     ;;
   stop)
     stop

@@ -4,14 +4,14 @@ import usePage from "../../src/usePage";
 /*Sample*/
 
 import TomatoApp from "../organisms/TomatoApp";
-import Sortable from "../organisms/Sortable";
+import TomatoSortable from "../organisms/TomatoSortable";
 
 const Tomato = (props) => {
   usePage({ ...props, pageName: "Tomato" });
   return (
     <>
       <TomatoApp />
-      <Sortable />
+      <TomatoSortable />
     </>
   );
 };
