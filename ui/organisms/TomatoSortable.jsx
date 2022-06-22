@@ -10,15 +10,14 @@ import {
 } from "react-atomic-molecule";
 import callfunc from "call-func";
 import { nearWhere } from "get-window-offset";
+import { KEYS } from "reshow-constant";
 
-const keys = Object.keys;
-
-const useSortable = ({ setSortElement }) => {
+const useSortable = ({ setSortElement, fixedX, fixedY }) => {
   const [isDraging, setIsDraging] = useState();
   const comp = useRef();
 
-  const handleTarget = (targetEl, floatXY) => {
-    const near = nearWhere(targetEl, floatXY);
+  const handleTarget = (targetEl, pointXY) => {
+    const near = nearWhere(targetEl, pointXY);
     const sortEl = comp.current;
     const nextId = targetEl.nextSibling?.getAttribute("name");
     const prevId = targetEl.previousSibling?.getAttribute("name");
@@ -48,23 +47,36 @@ const useSortable = ({ setSortElement }) => {
         return;
       }
       setIsDraging(true);
-      const { destTarget, destPoint } = e;
-      let sortTarget;
-      let dragEl = destTarget();
-      const floatPoint = destPoint();
-      const floatXY = {
-        x: floatPoint[0],
-        y: floatPoint[1],
+      const { getPointerTarget, getClientPointerTarget, clientX, clientY } = e;
+      let pointerTarget;
+      if (fixedX) {
+        pointerTarget = getClientPointerTarget({ x: e.start.offset.x });
+      } else if (fixedY) {
+        pointerTarget = getClientPointerTarget({ y: e.start.offset.y });
+      } else {
+        pointerTarget = getPointerTarget();
+      }
+
+      if (!pointerTarget) {
+        return;
+      }
+      const pointXY = {
+        x: pointerTarget.pointXY[0],
+        y: pointerTarget.pointXY[1],
       };
-      const type = dragEl?.getAttribute("data-type");
+
+      const type = pointerTarget?.getAttribute("data-type");
       if (!type) {
-        sortTarget = query.ancestor(dragEl, '[data-type="sortable"]');
+        const sortTarget = query.ancestor(
+          pointerTarget,
+          '[data-type="sortable"]'
+        );
         if (sortTarget) {
-          handleTarget(sortTarget, floatXY);
+          handleTarget(sortTarget, pointXY);
         }
       } else {
         if ("sortable" === type) {
-          handleTarget(dragEl, floatXY);
+          handleTarget(pointerTarget, pointXY);
         }
       }
     },
@@ -124,13 +136,13 @@ const useSortList = ({ children }) => {
 
   const lastSortOrder = useRef(
     (() => {
-      return keys(childList).map((key) => childList[key]);
+      return KEYS(childList).map((key) => childList[key]);
     })()
   );
   const sortOrder = [];
   let bFirst;
   let bLast;
-  const arrPush = (item) => {
+  const sortOrderPush = (item) => {
     if (!bFirst) {
       bFirst = true;
       sortOrder.push(build(item)({ "data-first": true }));
@@ -147,14 +159,14 @@ const useSortList = ({ children }) => {
       }
     } else if (targetId === key) {
       if (reverse) {
-        arrPush(childList[key]);
-        arrPush(childList[sortId]);
+        sortOrderPush(childList[key]);
+        sortOrderPush(childList[sortId]);
       } else {
-        arrPush(childList[sortId]);
-        arrPush(childList[key]);
+        sortOrderPush(childList[sortId]);
+        sortOrderPush(childList[key]);
       }
     } else {
-      arrPush(childList[key]);
+      sortOrderPush(childList[key]);
     }
   });
   const lastIndex = sortOrder.length - 1;
