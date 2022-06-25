@@ -9,7 +9,7 @@ SWJS=${DIR}/service-worker.js
 webpackEnabled=$(awk -F "=" '/^webpackEnabled/ {print $2}' $DIR/.yo)
 
 conf='{'
-conf+='"assetsRoot":"/assets/",'
+conf+='"assetsRoot":"./assets/",'
 conf+='"externals":{},'
 conf+='"indexTpl":"'${DIR}/index.tpl'",'
 conf+='"indexHtml":"'${DIR}/index.html'",'
