@@ -27,14 +27,6 @@ if [ "x$webpackEnabled" == "xon" ]; then
   webpack='npm run webpack --'
 fi
 
-checkBabel() {
-  if [ ! -e ".babelrc" ] && [ ! -e "../../packages" ]; then
-    if [ -e ${DIR}/node_modules/reshow-app/.babelrc ]; then
-      cp ${DIR}/node_modules/reshow-app/.babelrc ${DIR}/.babelrc
-    fi
-  fi
-}
-
 killBy() {
   ps -eo pid,args | grep $1 | grep -v grep | awk '{print $1}' | xargs -I{} kill -9 {}
 }
@@ -74,7 +66,6 @@ startServer() {
 production() {
   stop
   echo "Production Mode"
-  checkBabel
   npm run build
   if [ ! -z "$webpack" ]; then
     ENABLE_SW=1 CONFIG=$conf NODE_ENV=production $webpack
@@ -84,7 +75,6 @@ production() {
 analyzer() {
   stop
   echo "Analyzer Mode"
-  checkBabel
   npm run build
   [ ! -z "$webpack" ] && CONFIG=$conf BUNDLE='{}' $webpack
 }
@@ -92,15 +82,12 @@ analyzer() {
 develop() {
   stop
   echo "Develop Mode"
-  checkBabel
   npm run build
   [ ! -z "$webpack" ] && CONFIG=$conf $webpack
 }
 
 watch() {
-  stop
   echo "Watch Mode"
-  checkBabel
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
 }
@@ -109,7 +96,6 @@ hot() {
   stop
   rm $SWJS
   echo "Hot Mode"
-  checkBabel
   npm run build:es:ui -- --watch &
   npm run build:es:src -- --watch &
   [ ! -z "$webpack" ] && sleep 10 && HOT_UPDATE=1 CONFIG=$conf $webpack serve &
