@@ -1,0 +1,48 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.1
+
+jobs:
+  test:
+    parameters:
+      test-dir:
+        type: string
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install:
+          node-version: "14"
+          install-yarn: true
+      - run:
+          name: "Display information"
+          command: |
+            echo "## Date: "
+            date
+            echo ""
+            echo "## Node Version: "
+            node -v
+            echo ""
+            echo "## NPM Version: "
+            npm -v
+            echo ""
+            echo "## YARN Version: "
+            yarn -v
+      - run:
+          name: Run YARN tests
+          command: |
+            npm config set scripts-prepend-node-path auto \
+            && yarn --ignore-engines \
+            && cd << parameters.test-dir >> \
+            && yarn --ignore-engines \
+            && yarn test
+
+workflows:
+  run-node-tests:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              test-dir:
+                - "./"
