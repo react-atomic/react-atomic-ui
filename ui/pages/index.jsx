@@ -28,7 +28,8 @@ const themes = {
   Tomato: lazy(() => import("../pages/Tomato")),
 };
 
-const Index = (props) => (
+const Index = (props) => {
+  return (
   <Return initStates={["tplProps", "pageName"]}>
     {({ tplProps, pageName }) => {
       return (
@@ -44,6 +45,7 @@ const Index = (props) => (
       );
     }}
   </Return>
-);
+  );
+};
 
 export default Index;

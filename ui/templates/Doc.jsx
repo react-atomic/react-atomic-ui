@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import { lazy } from "react";
 import { getDocTemplate } from "organism-react-navigation";
-import Menu from "../molecules/Menu";
+const Menu = lazy(() => import("../molecules/Menu"));
 
 const DocTemplate = getDocTemplate({
   sideWidth: 160,
@@ -8,7 +8,7 @@ const DocTemplate = getDocTemplate({
 });
 
 const Doc = ({ children, ...props }) => (
-  <DocTemplate {...props} body={children} menu={<Menu />} />
+  <DocTemplate {...props} body={children} menu={Menu} />
 );
 
 export default Doc;

@@ -24,6 +24,7 @@ const AnimationDelayExample = () => {
         appear="fadeInRight-3000"
         enter="fadeInRight-3000"
         leave="fadeOutRight-1000"
+        style={{ overflow: "hidden" }}
       >
         {isShow && <Hello />}
       </Animate>
@@ -31,6 +32,7 @@ const AnimationDelayExample = () => {
         appear="fadeInRight-3000-500"
         enter="fadeInRight-3000-500"
         leave="fadeOutRight-1000-500"
+        style={{ overflow: "hidden" }}
       >
         {isShow && <World />}
       </Animate>

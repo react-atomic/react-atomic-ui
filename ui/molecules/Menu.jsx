@@ -1,14 +1,12 @@
 import { VerticalMenu } from "pmvc_react_admin";
 import { SideMenu } from "organism-react-navigation";
-import get from "get-object-value";
 import { pageStore, ReLink } from "reshow";
-
-const keys = Object.keys;
+import { KEYS } from "reshow-constant";
 
 const Menu = (props) => {
   const thisMenus = {};
   const themes = pageStore.getMap("themes");
-  keys(themes)
+  KEYS(themes)
     .sort()
     .forEach((item) => {
       thisMenus[item] = {

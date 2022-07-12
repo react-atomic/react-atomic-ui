@@ -23,6 +23,7 @@ const AnimationExample = () => {
         appear="fadeInRight-3000"
         enter="fadeInRight-3000"
         leave="fadeOutRight-1000"
+        style={{ overflow: "hidden" }}
       >
         {isShow && <Hello />}
       </Animate>
