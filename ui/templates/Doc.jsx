@@ -8,7 +8,7 @@ const DocTemplate = getDocTemplate({
 });
 
 const Doc = ({ children, ...props }) => (
-  <DocTemplate {...props} body={children} menu={Menu} />
+  <DocTemplate {...props} body={children} menu={Menu} key="doc" />
 );
 
 export default Doc;
