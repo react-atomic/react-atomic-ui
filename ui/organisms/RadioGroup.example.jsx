@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
+import { useState, useRef } from "react";
 
 import { Form, Button } from "react-atomic-molecule";
-import { RadioGroup } from "react-atomic-organism";
+import { RadioGroup, Checkbox } from "react-atomic-organism";
 
 const options = [
   {
@@ -14,37 +14,35 @@ const options = [
   },
 ];
 
-class RadioGroupExample extends PureComponent {
-  state = {
-    value: "",
-  };
-  handleChange = () => {
-    this.setState({ value: this.radio.getValue() });
+const RadioGroupExample = (props) => {
+  const isOkChange = useRef();
+  const [value, setValue] = useState();
+
+  const handleChange = (nextValue, e) => {
+    if (isOkChange.current.getChecked().state) {
+      setValue(nextValue);
+    } else {
+      console.log("change is deny.");
+      return false;
+    }
   };
 
-  render() {
-    const { value } = this.state;
-    return (
-      <Form>
-        <RadioGroup
-          ref={(el) => (this.radio = el)}
-          inline={false}
-          label="Sex: "
-          name="sex"
-          value={value}
-          options={options}
-          onChange={this.handleChange}
-        />
-        <div>Current: {value}</div>
-        <Button onClick={() => this.setState({ value: "boy" })}>
-          Set to Boy
-        </Button>
-        <Button onClick={() => this.setState({ value: "girl" })}>
-          Set to Girl
-        </Button>
-      </Form>
-    );
-  }
-}
+  return (
+    <Form>
+      <Checkbox toggle label="Enable Change" checked ref={isOkChange} />
+      <RadioGroup
+        inline={false}
+        label="Sex: "
+        name="sex"
+        value={value}
+        options={options}
+        onChange={handleChange}
+      />
+      <div>Current: {value}</div>
+      <Button onClick={() => setValue("boy")}>Set to Boy</Button>
+      <Button onClick={() => setValue("girl")}>Set to Girl</Button>
+    </Form>
+  );
+};
 
 export default RadioGroupExample;
