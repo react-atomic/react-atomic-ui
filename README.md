@@ -11,3 +11,21 @@ Documentation and some examples for react-atomic-ui
 
 ## Design Concept
 
+## React Folder Structure
+```
+react-app/ 
+├─ node_modules/ 
+├─ assets/ 
+├─ ui/ 
+│ ├─ molecules 
+│ ├─ organisms 
+│ ├─ templates 
+│ ├─ pages 
+├─ src/ 
+│ ├─ stores/ 
+├─ .gitignore
+├─ package.json 
+├─ README.md 
+├─ index.html 
+├─ index.tpl
+```
