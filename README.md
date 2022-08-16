@@ -11,6 +11,9 @@ Documentation and some examples for react-atomic-ui
 
 ## Design Concept
 
+## UI Framework: `Reshow`
+* https://github.com/react-atomic/reshow
+
 ## React Folder Structure
 ```
 react-app/ 
