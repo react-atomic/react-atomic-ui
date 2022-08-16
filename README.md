@@ -26,7 +26,10 @@ react-app/
 │ ├─ lib/
 │ ├─ stores/
 ├─ .gitignore
-├─ package.json 
+├─ webpack.config.js
+├─ babel.config.js
+├─ compile.sh
+├─ package.json
 ├─ README.md 
 ├─ index.html 
 ├─ index.tpl
