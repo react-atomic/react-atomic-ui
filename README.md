@@ -21,8 +21,10 @@ react-app/
 │ ├─ organisms 
 │ ├─ templates 
 │ ├─ pages 
-├─ src/ 
-│ ├─ stores/ 
+├─ src/
+│ ├─ config/
+│ ├─ lib/
+│ ├─ stores/
 ├─ .gitignore
 ├─ package.json 
 ├─ README.md 
