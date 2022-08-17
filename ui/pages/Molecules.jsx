@@ -15,7 +15,7 @@ const Molecules = (props) => {
         <Field atom="input" />
       </Form>
       <div>Inputbox with button</div>
-      <InputBox />
+      <InputBox button="Go!" />
       <div>Search Box</div>
       <SearchBox />
     </>

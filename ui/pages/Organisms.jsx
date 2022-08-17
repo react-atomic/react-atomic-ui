@@ -12,8 +12,6 @@ import pageLoadProgressHandlerWithAjax from "../../../../ui/organisms/PageLoadPr
 import AjaxDownload from "../organisms/AjaxDownload.example";
 import ajaxDownload from "../../../../ui/organisms/AjaxDownload.example.jsx?raw";
 
-import Dropzone from "../organisms/Dropzone.example";
-import dropzone from "../../../../ui/organisms/Dropzone.example.jsx?raw";
 
 import FBLike from "../organisms/FBLike.example";
 import fbLike from "../../../../ui/organisms/FBLike.example.jsx?raw";
@@ -23,43 +21,11 @@ import fbPage from "../../../../ui/organisms/FBPage.example.jsx?raw";
 import TabView from "../organisms/TabView.example";
 import tabView from "../../../../ui/organisms/TabView.example.jsx?raw";
 
-import RadioGroup from "../organisms/RadioGroup.example";
-import radioGroup from "../../../../ui/organisms/RadioGroup.example.jsx?raw";
-
-import Checkbox from "../organisms/Checkbox.example";
-import checkbox from "../../../../ui/organisms/Checkbox.example.jsx?raw";
-
-import Suggestion from "../organisms/Suggestion.example";
-import suggestion from "../../../../ui/organisms/Suggestion.example.jsx?raw";
-
-import TagInput from "../organisms/TagInput.example";
-import tagInput from "../../../../ui/organisms/TagInput.example.jsx?raw";
-
-import ErrorForm from "../organisms/ErrorForm.example";
-import errorForm from "../../../../ui/organisms/ErrorForm.example.jsx?raw";
-
-import ConstraintForm from "../organisms/ConstraintForm.example";
-import constraintForm from "../../../../ui/organisms/ConstraintForm.example.jsx?raw";
 
 const Organisms = (props) => {
   usePage({ ...props, pageName: "Organisms" });
   return (
     <>
-      <CodeExample
-        code={constraintForm}
-        header="Constraint Form"
-        id="constraintForm"
-      >
-        <ConstraintForm />
-      </CodeExample>
-
-      <CodeExample code={tagInput} header="Tag input" id="tagInput">
-        <TagInput />
-      </CodeExample>
-
-      <CodeExample code={errorForm} header="Error Form" id="errorForm">
-        <ErrorForm />
-      </CodeExample>
 
       <CodeExample
         code={pageLoadProgressHandler}
@@ -85,9 +51,6 @@ const Organisms = (props) => {
         <AjaxDownload />
       </CodeExample>
 
-      <CodeExample code={dropzone} header="Dropzone">
-        <Dropzone />
-      </CodeExample>
 
       <CodeExample
         code={fbLike}
@@ -98,30 +61,15 @@ const Organisms = (props) => {
       >
         <FBLike />
       </CodeExample>
+
       <CodeExample code={fbPage} header="Facebook Page Plugin">
         <FBPage />
-      </CodeExample>
-
-      <CodeExample code={suggestion} header="Suggestion" id="suggestion">
-        <Suggestion />
       </CodeExample>
 
       <CodeExample code={tabView} header="Tab View" id="tab">
         <TabView />
       </CodeExample>
 
-      <CodeExample
-        code={radioGroup}
-        header="Radio Group"
-        id="radioGroup"
-        edit="https://codesandbox.io/embed/jjq8ko2krv?module=%2Fsrc%2FradioGroup.js&moduleview=1"
-      >
-        <RadioGroup />
-      </CodeExample>
-
-      <CodeExample code={checkbox} header="Checkbox" id="checkbox">
-        <Checkbox />
-      </CodeExample>
     </>
   );
 };

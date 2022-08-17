@@ -1,63 +1,61 @@
-import React, { PureComponent } from "react";
+import { useState, useRef, useEffect } from "react";
 
-import { Button, SemanticUI } from "react-atomic-molecule";
+import { Button } from "react-atomic-molecule";
 
 import { Suggestion } from "react-atomic-organism";
 
 const data = ["abc", "abb", "acc"];
 
-class SuggestionExample1 extends PureComponent {
-  state = {
-    results: [],
-  };
+const SuggestionExample = () => {
+  const [results, setResults] = useState();
+  const [myValue, setMyValue] = useState();
+  const lastSuggestion = useRef();
 
-  handleChange = (e, value) => {
-    if (!value.length) {
-      this.setState({ results: data });
-      return;
-    }
-    const results = [];
-    data.forEach((v, k) => {
-      if (value.length && -1 !== v.indexOf(value)) {
-        results.push(v);
+  const handler = {
+    itemClick: (e) => {
+      setMyValue(e.item);
+    },
+    change: (e) => {
+      const value = e.value;
+      setMyValue(value);
+      if (!value.length) {
+        setResults(data);
+        return;
       }
-    });
-    this.setState({ results });
+      const results = [];
+      data.forEach((v, k) => {
+        if (value.length && -1 !== v.indexOf(value)) {
+          results.push(v);
+        }
+      });
+      setResults(results);
+    },
   };
 
-  handleItemClick = (e, item) => {
-    this.suggestion.setValue(item);
-  };
-
-  render() {
-    const { results, myValue } = this.state;
-    return (
-      <SemanticUI>
-        <Suggestion
-          ref={(el) => (this.suggestion = el)}
-          onChange={this.handleChange}
-          results={results}
-          onItemClick={this.handleItemClick}
-          value={myValue}
-        />
+  useEffect(() => {
+    lastSuggestion.current.setValue(myValue);
+  }, [myValue]);
+  return (
+    <>
+      <Suggestion
+        ref={lastSuggestion}
+        onChange={handler.change}
+        results={results}
+        onItemClick={handler.itemClick}
+      >
         <Button
           onClick={() =>
-            this.setState({ myValue: myValue ? myValue + 1 : 123 })
+            setMyValue((prev) =>
+              prev ? (!isNaN(prev) ? prev * 1 : prev) + 1 : 123
+            )
           }
+          style={{ marginLeft: 10 }}
         >
           set
         </Button>
-      </SemanticUI>
-    );
-  }
-}
-
-const SuggestionExample = () => (
-  <SemanticUI>
-    <SuggestionExample1 />
-    couldCreate: false
-    <Suggestion results={data} couldCreate={false} filter preview />
-  </SemanticUI>
-);
+      </Suggestion>
+    </>
+  );
+};
 
 export default SuggestionExample;

@@ -11,6 +11,7 @@ const themes = {
   Atoms: lazy(() => import("../pages/Atoms")),
   Molecules: lazy(() => import("../pages/Molecules")),
   Organisms: lazy(() => import("../pages/Organisms")),
+  Suggestion: lazy(() => import("../pages/Suggestion")),
   D3: lazy(() => import("../pages/D3")),
   D3UmlPerf: lazy(() => import("../pages/D3UmlPerf")),
   Icons: lazy(() => import("../pages/Icons")),
@@ -26,6 +27,7 @@ const themes = {
   PDF: lazy(() => import("../pages/PDF")),
   JSON: lazy(() => import("../pages/JSON")),
   Tomato: lazy(() => import("../pages/Tomato")),
+  Form: lazy(() => import("../pages/Form")),
 };
 
 const Index = (props) => {
