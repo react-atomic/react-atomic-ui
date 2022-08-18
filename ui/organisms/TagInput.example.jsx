@@ -5,6 +5,7 @@ import { Checkbox } from "react-atomic-organism";
 
 const TagInputExample = (props) => {
   const [isDisable, setIsDisable] = useState(false);
+  const [limit, setLimit] = useState(-1);
 
   const handleDisable = (e) => {
     setIsDisable(e.checked ? true : false);
@@ -12,10 +13,11 @@ const TagInputExample = (props) => {
 
   return (
     <Form>
-      <TagsField disabled={isDisable} />
+      <TagsField disabled={isDisable} maxTags={limit} />
       <Field>
         <Checkbox label="Disable" toggle onChange={handleDisable} />
       </Field>
+      <Field label="Limit tags" atom="input" type="number" inline defaultValue="-1" onChange={(e)=>{setLimit(e.currentTarget.value)}} min="-1"/>
     </Form>
   );
 };
