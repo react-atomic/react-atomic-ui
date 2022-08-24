@@ -39,6 +39,7 @@
     "organism-react-select-filter": "*",
     "organism-react-spotlight": "*",
     "organism-react-stockcharts": "*",
+    "organism-react-tag-highlight": "*",
     "organism-react-tag-input": "*",
     "organism-react-video": "*",
     "pmvc_react_admin": "*",

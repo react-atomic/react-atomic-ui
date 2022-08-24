@@ -19,15 +19,15 @@ Documentation and some examples for react-atomic-ui
 react-app/ 
 ├─ node_modules/ 
 ├─ assets/ 
-├─ ui/ 
-│ ├─ molecules 
-│ ├─ organisms 
-│ ├─ templates 
-│ ├─ pages 
 ├─ src/
 │ ├─ config/
 │ ├─ lib/
 │ ├─ stores/
+| ├─ ui/ 
+| │ ├─ molecules 
+| │ ├─ organisms 
+| │ ├─ templates 
+| │ ├─ pages 
 ├─ .gitignore
 ├─ webpack.config.js
 ├─ babel.config.js

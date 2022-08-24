@@ -21,12 +21,19 @@ import selectFilter from "../../../../../src/ui/organisms/SelectFilter.example.j
 import ErrorForm from "../organisms/ErrorForm.example";
 import errorForm from "../../../../../src/ui/organisms/ErrorForm.example.jsx?raw";
 
+import TagHighlight from "../organisms/TagHighlight.example";
+import tagHighlight from "../../../../../src/ui/organisms/TagHighlight.example.jsx?raw";
+
 const SuggestionPage = (props) => {
   usePage({ ...props, pageName: "Suggestion" });
   return (
     <>
       <CodeExample code={commandPalette} header="Command Palette" id="command-palette">
         <CommandPalette />
+      </CodeExample>
+
+      <CodeExample code={tagHighlight} header="Tag Highlight" id="tag-highlight">
+        <TagHighlight />
       </CodeExample>
 
       <CodeExample code={selectFilter} header="Select Filter" id="select-filter">
