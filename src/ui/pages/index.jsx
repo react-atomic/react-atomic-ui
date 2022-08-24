@@ -30,24 +30,20 @@ const themes = {
   Form: lazy(() => import("../pages/Form")),
 };
 
-const Index = (props) => {
-  return (
-  <Return initStates={["tplProps", "pageName"]}>
-    {({ tplProps, pageName }) => {
-      return (
-        <>
-          <Doc {...tplProps} className={pageName}>
-            <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
-            <PageLoadProgressHandler ajax={true} />
-            <I13nElement />
-            <ReshowMessage />
-          </Doc>
-          <PopupPool />
-        </>
-      );
-    }}
-  </Return>
-  );
-};
+const Index = (props) => (
+  <>
+    <Return initStates={["tplProps", "pageName"]}>
+      {({ tplProps, pageName }) => (
+        <Doc {...tplProps} className={pageName}>
+          <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
+          <PageLoadProgressHandler ajax={true} />
+          <I13nElement />
+          <ReshowMessage />
+        </Doc>
+      )}
+    </Return>
+    <PopupPool />
+  </>
+);
 
 export default Index;
