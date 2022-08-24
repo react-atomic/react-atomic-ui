@@ -6,7 +6,7 @@ DIR=$(
 )
 cd $DIR
 SWJS=${DIR}/service-worker.js
-webpackEnabled=$(awk -F "=" '/^webpackEnabled/ {print $2}' $DIR/.yo)
+webpackEnabled=$([ -e "$DIR/.yo" ] && awk -F "=" '/^webpackEnabled/ {print $2}' $DIR/.yo)
 
 conf='{'
 conf+='"assetsRoot":"./assets/",'
@@ -37,7 +37,7 @@ stop() {
     cat webpack.pid | xargs -I{} kill -9 {}
     npm run clean:webpack
   fi
-  rm $SWJS
+  [ -e "$SWJS" ] && rm $SWJS
   echo "Stop done"
 }
 
@@ -88,16 +88,13 @@ develop() {
 
 watch() {
   echo "Watch Mode"
-  npm run build:es:ui -- --watch &
-  npm run build:es:src -- --watch &
+  npm run build:es -- --watch &
 }
 
 hot() {
   stop
-  rm $SWJS
   echo "Hot Mode"
-  npm run build:es:ui -- --watch &
-  npm run build:es:src -- --watch &
+  npm run build:es -- --watch &
   [ ! -z "$webpack" ] && sleep 10 && HOT_UPDATE=1 CONFIG=$conf $webpack serve &
 }
 
@@ -125,7 +122,7 @@ case "$1" in
     ;;
   *)
     develop
-    exit
+    exit 0
     ;;
 esac
 
