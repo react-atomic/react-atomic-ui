@@ -23,7 +23,7 @@
 <script defer src="/simple.js?id=UA-124534784-1"></script>
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/combine/npm/purecss@2.0.6/build/grids-min.css,npm/purecss@2.0.6/build/grids-min.css,npm/purecss@2.0.6/build/grids-responsive-min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/combine/npm/purecss@2.1.0/build/base-min.css,npm/purecss@2.1.0/build/grids-min.css,npm/purecss@2.1.0/build/grids-responsive-min.css">
 <div id="app"></div>
 </body>
 </html>
