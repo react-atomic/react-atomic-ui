@@ -6445,9 +6445,9 @@ organism-react-tag-highlight@*:
     react-atomic-molecule "*"
 
 organism-react-tag-input@*:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/organism-react-tag-input/-/organism-react-tag-input-0.4.2.tgz#e4c3dc56ea919818cd4fc8bd4bcda0f71edc53ab"
-  integrity sha512-METyt2Ev+wII/eHbiHUCizRTE3EfCysKvuw4Yn8AKzEjDqiEEVaq+jP9fzuKN7H3+LWAUWDWX0LrTmZA/mJSkg==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/organism-react-tag-input/-/organism-react-tag-input-0.4.3.tgz#9e138463884cd5f1e1d916c3b72f1d8a9de28b1a"
+  integrity sha512-L+RmIB3r2elfsyW+QcJ+F+TD77puBwT3PIotQ8bRrnBisUbprrLNuWs/TMIfdgfi2mIVGBWBXX22pA4g/QPspA==
   dependencies:
     array.dedup "*"
     call-func "*"
@@ -6915,9 +6915,9 @@ react-atomic-molecule@*:
     win-doc "*"
 
 react-atomic-organism@*:
-  version "0.16.9"
-  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.16.9.tgz#c12ad1928c08e7a087aaba1157133e9b45c00cd0"
-  integrity sha512-8QDCMBYHrWlErw52e7EtUjbgEriY0WitJZzqn/bE+TbzSRvdy6Lja49XL1k4c3B9/POOIwCPPNEp0c56OSfpDg==
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/react-atomic-organism/-/react-atomic-organism-0.16.10.tgz#50ca2c86833ea7b0030390461728c4ac10fe2970"
+  integrity sha512-8rMkeOEPJHQtw91akMXqgwIJyLmA/Whh6RxzJKQDWd8GGKhfaPRj6GY2HjDUFyNFv5bTFe/er+JwP7OrTT/GcQ==
   dependencies:
     array.merge "*"
     call-func "*"
