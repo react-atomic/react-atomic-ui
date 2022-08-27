@@ -2079,9 +2079,9 @@ array-union@^2.1.0:
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
 array.dedup@*:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/array.dedup/-/array.dedup-0.0.2.tgz#24c82d0b8297f17211d56bb97a8ab14773043f9c"
-  integrity sha512-f3wen2zEsoH0HzvpFXkORzLCyNzmeXuyrVqbqphh0ORMqF7x1cyunY4R2IGViMqr7cP/z2Fkf9Y+NWXnhwNX1g==
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/array.dedup/-/array.dedup-0.1.0.tgz#12947005ccfcea054dc1b38d3e35deefede1b6f7"
+  integrity sha512-l84ZpOclI/n/xvZqo1s3fLLgKQhDfm4tRxi+xVeWRzhJAKZuXJEt+B7SMcYrRImxTi/jA36rp/9xWf9QD6TEzQ==
 
 array.merge@*:
   version "0.1.4"
@@ -6445,9 +6445,9 @@ organism-react-tag-highlight@*:
     react-atomic-molecule "*"
 
 organism-react-tag-input@*:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/organism-react-tag-input/-/organism-react-tag-input-0.4.3.tgz#9e138463884cd5f1e1d916c3b72f1d8a9de28b1a"
-  integrity sha512-L+RmIB3r2elfsyW+QcJ+F+TD77puBwT3PIotQ8bRrnBisUbprrLNuWs/TMIfdgfi2mIVGBWBXX22pA4g/QPspA==
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/organism-react-tag-input/-/organism-react-tag-input-0.4.4.tgz#6f8b7dd1b1f5414eeb92c424abfe254301e23326"
+  integrity sha512-eeR57F9ZZgQi6y5h8IbbaqnyvvUII1h4+n+hyWL8NyB1QGk89LFWnbwI+DRnnIbXIQNQPcsFLFkV8A1z3S3J3A==
   dependencies:
     array.dedup "*"
     call-func "*"
