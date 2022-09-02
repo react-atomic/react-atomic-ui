@@ -1,6 +1,9 @@
 import get from "get-object-value";
 
-import { FullScreenExample as FullScreen } from "organism-react-code";
+import {
+  FullScreenExample as FullScreen,
+  FullScreenUrl,
+} from "organism-react-code";
 
 const FullScreenExample = () => (
   <>
@@ -15,48 +18,58 @@ const FullScreenExample = () => (
         id="full-screen-scroll-example"
         button="open full screen with scroll"
       >
-        <p>test1--->Start</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test2--->End</p>
+        <>
+          <p>test1--->Start</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test</p>
+          <p>test2--->End</p>
+        </>
       </FullScreen>
+    </p>
+    <p>
+      <FullScreenUrl
+        id="full-screen-with-url"
+        button="open full screen with url"
+      >
+        test with url
+      </FullScreenUrl>
     </p>
   </>
 );

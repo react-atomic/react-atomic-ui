@@ -3,7 +3,7 @@ import { YoutubeRWD } from "organism-react-video";
 import { Checkbox } from "react-atomic-organism";
 
 const YouTubeRWDExample = () => {
-  const [controls, setControls] = useState(1);
+  const [controls, setControls] = useState();
   const handleControls = (e) => setControls(e.checked ? 1 : 0);
   return (
     <>
