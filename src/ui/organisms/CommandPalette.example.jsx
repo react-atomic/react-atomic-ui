@@ -1,4 +1,4 @@
-import { CommandPalette } from "organism-react-select-filter";
+import { CommandPalette, switchPage, clipboardCopy, openLink } from "organism-react-select-filter";
 import Link from "ricon/Link";
 import Email from "ricon/Email";
 import Code from "ricon/Code";
@@ -12,6 +12,9 @@ const commands = [
     label: "Copy Link",
     header: "General",
     icon: Link,
+    command: () => {
+      clipboardCopy(document.URL);
+    }
   },
   {
     label: "Send Email",
@@ -22,11 +25,17 @@ const commands = [
     label: "View Source",
     header: "General",
     icon: Code,
+    command: () => {
+      openLink("https://github.com/react-atomic/react-atomic-ui", true);
+    }
   },
   {
     label: "Home",
     header: "Go To",
     icon: Home,
+    command: () => {
+      switchPage("#/Atoms");
+    }
   },
   {
     label: "About",
