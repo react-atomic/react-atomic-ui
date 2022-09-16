@@ -57,7 +57,7 @@
     "webpack": "webpack",
     "start": "ws",
     "format": "prettier-eslint --write 'src/**/*.js' 'ui/**/*.js*'",
-    "clean:webpack": "find ./assets -name '*.*' | xargs rm -rf && rm -rf workbox-*.js",
+    "clean:webpack": "find ./assets -name '*.*' | xargs rm -rf",
     "clean": "find ./build -name '*.*' | xargs rm -rf",
     "build:es": "BABEL_ENV=es babel src -d build/es/src --out-file-extension .mjs",
     "build": "npm run clean && npm run build:es",
