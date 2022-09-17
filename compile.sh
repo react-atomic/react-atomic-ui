@@ -24,6 +24,7 @@ else
   if [ -z "$serverEnabled" ]; then
     conf+='"indexTpl":"'${DIR}/index.tpl'",'
     conf+='"indexHtml":"'${DIR}/index.html'",'
+    conf+='"bustMode":"name",'
   fi
   conf+='"swDest":"'${SWJS}'",'
   # conf+='"swDebug":true,'
