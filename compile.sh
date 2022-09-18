@@ -103,7 +103,7 @@ develop() {
   stop
   echo "Develop Mode"
   npm run build
-  [ ! -z "$webpack" ] && CONFIG=$conf $webpack && [ ! -z "$serverEnabled" ] CONFIG=$conf $webpack $WEBPACK_SERVER_CONFIG
+  [ ! -z "$webpack" ] && CONFIG=$conf $webpack && [ ! -z "$serverEnabled" ] && CONFIG=$conf $webpack $WEBPACK_SERVER_CONFIG
 }
 
 watch() {
@@ -119,13 +119,18 @@ hot() {
 }
 
 nodeTest(){
-    echo '{"themePath":"hello"}' | node ./server.js
+    theme=$1
+    if [ -z "$theme" ]; then
+      theme="Hello"
+    fi
+    echo "Theme Path: ${theme}"
+    echo '{"themePath":"'${theme}'"}' | node ./server.js
     echo ""
 }
 
 case "$1" in
   node)
-    nodeTest
+    nodeTest $2
     ;;
   p)
     production
