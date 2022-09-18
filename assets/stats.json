@@ -1,30 +1,30 @@
 {
   "chunks": {
     "main": [
-      "main.9701086.bundle.js"
+      "main.5e40e63.bundle.js"
     ],
     "lib": [
-      "lib.9701086.bundle.js"
+      "lib.5e40e63.bundle.js"
     ],
     "vendor": [
-      "vendor.9701086.bundle.js"
+      "vendor.5e40e63.bundle.js"
     ]
   },
   "assets": {
-    "main.9701086.bundle.js": {
-      "name": "main.9701086.bundle.js",
-      "publicPath": "./assets/main.9701086.bundle.js?9701086",
-      "path": "/Users/hill/git/react-atomic-ui/assets/main.9701086.bundle.js"
+    "main.5e40e63.bundle.js": {
+      "name": "main.5e40e63.bundle.js",
+      "publicPath": "./assets/main.5e40e63.bundle.js?5e40e63",
+      "path": "/Users/hill/git/react-atomic-ui/assets/main.5e40e63.bundle.js"
     },
-    "lib.9701086.bundle.js": {
-      "name": "lib.9701086.bundle.js",
-      "publicPath": "./assets/lib.9701086.bundle.js?9701086",
-      "path": "/Users/hill/git/react-atomic-ui/assets/lib.9701086.bundle.js"
+    "lib.5e40e63.bundle.js": {
+      "name": "lib.5e40e63.bundle.js",
+      "publicPath": "./assets/lib.5e40e63.bundle.js?5e40e63",
+      "path": "/Users/hill/git/react-atomic-ui/assets/lib.5e40e63.bundle.js"
     },
-    "vendor.9701086.bundle.js": {
-      "name": "vendor.9701086.bundle.js",
-      "publicPath": "./assets/vendor.9701086.bundle.js?9701086",
-      "path": "/Users/hill/git/react-atomic-ui/assets/vendor.9701086.bundle.js"
+    "vendor.5e40e63.bundle.js": {
+      "name": "vendor.5e40e63.bundle.js",
+      "publicPath": "./assets/vendor.5e40e63.bundle.js?5e40e63",
+      "path": "/Users/hill/git/react-atomic-ui/assets/vendor.5e40e63.bundle.js"
     }
   },
   "publicPath": "./assets/",

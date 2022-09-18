@@ -12,14 +12,14 @@ WEBPACK_SERVER_CONFIG="--config webpack.server.mjs"
 cd $DIR
 webpackEnabled=$([ -e "$YO_CONFIG" ] && awk -F "=" '/^webpackEnabled/ {print $2}' $YO_CONFIG)
 serverEnabled=$([ -e "$YO_CONFIG" ] && awk -F "=" '/^serverEnabled/ {print $2}' $YO_CONFIG)
+assetsRoot=$([ -e "$YO_CONFIG" ] && awk -F "=" '/^assetsRoot/ {print $2}' $YO_CONFIG)
 HTDOCS=${DIR}$([ -e "$YO_CONFIG" ] && awk -F "=" '/^HTDOCS/ {print $2}' $YO_CONFIG)
 SWJS=${HTDOCS}/service-worker.js
-
 if [ ! -z "$CHK_PHP" ] && [ -s "$PHP_CONFIG" ]; then
   conf=`DUMP=cli php -r "include('$PHP_CONFIG');"`
 else
   conf='{'
-  conf+='"assetsRoot":"./assets/",'
+  conf+='"assetsRoot":"'${assetsRoot:-"./assets/"}'",'
   conf+='"externals":{},'
   if [ -z "$serverEnabled" ]; then
     conf+='"indexTpl":"'${DIR}/index.tpl'",'
