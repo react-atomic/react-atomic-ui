@@ -3461,9 +3461,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.251:
-  version "1.4.264"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.264.tgz#2f68a062c38b7a04bf57f3e6954b868672fbdcd3"
-  integrity sha512-AZ6ZRkucHOQT8wke50MktxtmcWZr67kE17X/nAXFf62NIdMdgY6xfsaJD5Szoy84lnkuPWH+4tTNE3s2+bPCiw==
+  version "1.4.265"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.265.tgz#45630ae190228f945ff79c060b99574b1347e5a7"
+  integrity sha512-38KaYBNs0oCzWCpr6j7fY/W9vF0vSp4tKFIshQTgdZMhUpkxgotkQgjJP6iGMdmlsgMs3i0/Hkko4UXLTrkYVQ==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -6898,9 +6898,9 @@ react-atomic-atom@*:
     reshow-runtime "*"
 
 react-atomic-molecule@*:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-5.1.0.tgz#5fd20410d4d7e7090d1fa6d810eb810cac281c2e"
-  integrity sha512-g/tqMFqddU3iYTUyfnTjwkb5WG2UwE7WZ28Lua1G/EPL3Nf1McJAgvZ5KWJrDZAOHfBqgdllPFM8DObapeQ1LQ==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-atomic-molecule/-/react-atomic-molecule-5.1.1.tgz#28ee4146a80d7f757d51b5c0d2179731ab1c5124"
+  integrity sha512-liVjkiAjEAWnFWE3nTU3WeAESOsHvPv8Gt8xgham+hcgr9d6ZeYz07sTUqs53XS5ZIavhstdZMcXabi+lhXAcQ==
   dependencies:
     array.merge "*"
     call-func "*"

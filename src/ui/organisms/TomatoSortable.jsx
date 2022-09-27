@@ -78,10 +78,6 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
       if (!pointerTarget) {
         return;
       }
-      const pointXY = {
-        x: pointerTarget.pointXY[0],
-        y: pointerTarget.pointXY[1],
-      };
 
       let sortTarget = handleSortTarget(pointerTarget);
       if (!sortTarget) {
@@ -97,6 +93,10 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
         });
       }
       if (sortTarget) {
+        const pointXY = {
+          x: pointerTarget.pointXY[0],
+          y: pointerTarget.pointXY[1],
+        };
         handleSortElement(sortTarget, pointXY);
       }
     },
