@@ -16,7 +16,7 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
   const [isDraging, setIsDraging] = useState();
   const comp = useRef();
 
-  const handleTarget = (targetEl, pointXY) => {
+  const handleSortElement = (targetEl, pointXY) => {
     const near = nearWhere(targetEl, pointXY);
     const sortEl = comp.current;
     const nextId = targetEl.nextSibling?.getAttribute("name");
@@ -41,13 +41,33 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
     });
   };
 
+  const handleSortTarget = (pointerTarget) => {
+    if (!pointerTarget) {
+      return false;
+    }
+    const type = pointerTarget.getAttribute("data-type");
+    if (!type) {
+      const sortTarget = query.ancestor(
+        pointerTarget,
+        '[data-type="sortable"]'
+      );
+      if (sortTarget) {
+        return sortTarget;
+      }
+    } else {
+      if ("sortable" === type) {
+        return pointerTarget;
+      }
+    }
+  };
+
   const handler = {
     drag: (e) => {
       if (!comp.current) {
         return;
       }
       setIsDraging(true);
-      const { getPointerTarget, getClientPointerTarget, clientX, clientY } = e;
+      const { getPointerTarget, getClientPointerTarget, getAllPointer } = e;
       let pointerTarget;
       if (fixedX) {
         pointerTarget = getClientPointerTarget({ x: e.start.offset.x });
@@ -65,19 +85,21 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
         y: pointerTarget.pointXY[1],
       };
 
-      const type = pointerTarget?.getAttribute("data-type");
-      if (!type) {
-        const sortTarget = query.ancestor(
-          pointerTarget,
-          '[data-type="sortable"]'
-        );
-        if (sortTarget) {
-          handleTarget(sortTarget, pointXY);
-        }
-      } else {
-        if ("sortable" === type) {
-          handleTarget(pointerTarget, pointXY);
-        }
+      let sortTarget = handleSortTarget(pointerTarget);
+      if (!sortTarget) {
+        const allPointer = getAllPointer();
+        ["tr", "br", "bl"].some((key) => {
+          pointerTarget = getPointerTarget(allPointer[key]);
+          sortTarget = handleSortTarget(pointerTarget);
+          if (sortTarget) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      }
+      if (sortTarget) {
+        handleSortElement(sortTarget, pointXY);
       }
     },
     dragEnd: (e) => {
