@@ -1,14 +1,12 @@
-import { useCallback, useState, useEffect, useRef, forwardRef } from "react";
+import { useState, useRef } from "react";
 import { DDWrapper } from "organism-react-graph";
 import query from "css-query-selector";
 import {
   build,
   getChildMapping,
   SemanticUI,
-  List,
   Item,
 } from "react-atomic-molecule";
-import callfunc from "call-func";
 import { nearWhere } from "get-window-offset";
 import { KEYS } from "reshow-constant";
 
@@ -109,7 +107,7 @@ const useSortable = ({ setSortElement, fixedX, fixedY }) => {
   return { isDraging, handler, comp };
 };
 
-const Sort = forwardRef((props, ref) => {
+const Sort = (props) => {
   const { handler, isDraging, comp } = useSortable(props);
   const { children, setSortElement, style: propsStyle, ...otherProps } = props;
 
@@ -144,7 +142,7 @@ const Sort = forwardRef((props, ref) => {
       {shadowEl}
     </>
   );
-});
+};
 
 const useSortList = ({ children }) => {
   const [sortElement, setSortElement] = useState();
@@ -163,7 +161,6 @@ const useSortList = ({ children }) => {
   );
   const sortOrder = [];
   let bFirst;
-  let bLast;
   const sortOrderPush = (item) => {
     if (!bFirst) {
       bFirst = true;
