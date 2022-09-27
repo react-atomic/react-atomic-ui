@@ -145,20 +145,8 @@ const Sort = (props) => {
 };
 
 const useSortList = ({ children }) => {
-  const [sortElement, setSortElement] = useState();
-  const childList = getChildMapping(children, (child, key) => (
-    <Sort key={key} name={key} setSortElement={setSortElement}>
-      {child}
-    </Sort>
-  ));
-
-  const { sortId, targetId, reverse } = sortElement || {};
-
-  const lastSortOrder = useRef(
-    (() => {
-      return KEYS(childList).map((key) => childList[key]);
-    })()
-  );
+  const [{ sortId, targetId, reverse }, setSortElement] = useState({});
+  const lastSortOrder = useRef();
   const sortOrder = [];
   let bFirst;
   const sortOrderPush = (item) => {
@@ -170,6 +158,14 @@ const useSortList = ({ children }) => {
     }
   };
 
+  const childList = getChildMapping(children, (child, key) => (
+    <Sort key={key} name={key} setSortElement={setSortElement}>
+      {child}
+    </Sort>
+  ));
+  if (!lastSortOrder.current) {
+    lastSortOrder.current = KEYS(childList).map((key) => childList[key]);
+  }
   lastSortOrder.current.forEach((item) => {
     const key = item.props.name;
     if (sortId === key) {
