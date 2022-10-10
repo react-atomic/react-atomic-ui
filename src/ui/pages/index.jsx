@@ -36,12 +36,12 @@ const Index = (props) => (
       {({ tplProps, pageName }) => (
         <Doc {...tplProps} className={pageName}>
           <ClientRoute {...props} themes={themes} defaultThemePath="Atoms" />
-          <PageLoadProgressHandler ajax={true} />
-          <I13nElement />
-          <ReshowMessage />
         </Doc>
       )}
     </Return>
+    <PageLoadProgressHandler ajax={true} />
+    <I13nElement />
+    <ReshowMessage />
     <PopupPool />
   </>
 );

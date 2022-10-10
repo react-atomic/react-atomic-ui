@@ -12,10 +12,20 @@ import animationReplaceExample from "../../../../../src/ui/organisms/AnimationRe
 import AnimationDelayExample from "../organisms/AnimationDelay.example";
 import animationDelayExample from "../../../../../src/ui/organisms/AnimationDelay.example.jsx?raw";
 
+import AnimationChangeStyleExample from "../organisms/AnimationChangeStyle.example";
+import animationChangeStyleExample from "../../../../../src/ui/organisms/AnimationChangeStyle.example.jsx?raw";
+
 const Animation = (props) => {
   usePage({ ...props, pageName: "Animation" });
   return (
     <>
+      <CodeExample
+        code={animationChangeStyleExample}
+        header="Animation Change Style Sample"
+      >
+        <AnimationChangeStyleExample />
+      </CodeExample>
+
       <CodeExample code={animationExample} header="Animation Sample">
         <AnimationExample />
       </CodeExample>
