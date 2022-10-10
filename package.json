@@ -61,7 +61,7 @@
     "clean": "find ./build -name '*.*' | xargs rm -rf",
     "build:es": "BABEL_ENV=es babel src -d build/es/src --out-file-extension .mjs",
     "build": "npm run clean && npm run build:es",
-    "mochaFor": "mocha -r global-jsdom/register",
+    "mochaFor": "STRICT_MODE=on mocha -r global-jsdom/register",
     "mocha": "npm run mochaFor -- 'build/es/**/__tests__/*.mjs'",
     "test": "npm run build && npm run mocha",
     "prepublishOnly": "exit 1;"
