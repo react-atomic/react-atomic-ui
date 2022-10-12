@@ -1,3 +1,4 @@
+// @ts-check
 /*Base*/
 import usePage from "../../usePage";
 
@@ -66,6 +67,9 @@ import Wifi from "ricon/Wifi";
 import X from "ricon/X";
 import ZoomIn from "ricon/ZoomIn";
 
+/**
+ * @type {[string, React.ReactElement][]}
+*/
 const icons = [
   ["AccessTime", <AccessTime />],
   ["AccessTime (fill)", <AccessTime type="fill" />],
@@ -166,6 +170,9 @@ const icons = [
   ["ZoomIn", <ZoomIn />],
 ];
 
+/**
+ * @param {Object} props
+ */
 const Icons = (props) => {
   usePage({ ...props, pageName: "Icons" });
   return (
@@ -188,6 +195,9 @@ const Icons = (props) => {
 
 export default Icons;
 
+/**
+ * @type {Object}
+*/
 const Styles = {
   grid: {
     textAlign: "center",

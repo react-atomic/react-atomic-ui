@@ -7416,9 +7416,9 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 ricon@*:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.5.2.tgz#b451ad90b82ea15522c550d9bfcb0d1fbbde1375"
-  integrity sha512-bWyaPS8SJk2+iOYDmGPQI9W3HzaqZlReEm9cILpTbihsM1Ol5UmAAYv9K4NftR11zyNIlKG+nyh2pZIko7UGRg==
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/ricon/-/ricon-0.5.3.tgz#e19686c861e9c4cf51aba2f49f23baabc49f7ab0"
+  integrity sha512-zS8xEcBvBzsRGLPHX9mBRQHGyLwRXqywDWGcfNBn1zBtzpHiFY+LXQ5moLhkZMMEk0aNsShHmznCM07A0I8Uvw==
   dependencies:
     keyframe-css "*"
     react-atomic-molecule "*"
