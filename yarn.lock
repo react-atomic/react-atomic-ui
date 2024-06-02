@@ -1199,7 +1199,7 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@prettier/eslint@npm:prettier-eslint@^15.0.1", prettier-eslint@*:
+"@prettier/eslint@npm:prettier-eslint@^15.0.1":
   version "15.0.1"
   resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-15.0.1.tgz#2543a43e9acec2a9767ad6458165ce81f353db9c"
   integrity sha512-mGOWVHixSvpZWARqSDXbdtTL54mMBxc5oQYQ6RAqy8jecuNJBgN3t9E5a81G66F8x8fsKNiR1HWaBV66MJDOpg==
@@ -3452,9 +3452,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 ejs@^3.1.6:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.8.tgz#758d32910c78047585c7ef1f92f9ee041c1c190b"
-  integrity sha512-/sXZeMlhS0ArkfX2Aw780gJzXSMPnKjtspYZv+f3NiKLlubezAHDU5+9xz6gd3/NhG3txQCo6xlglmTS+oTGEQ==
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.10.tgz#69ab8358b14e896f80cc39e62087b88500c3ac3b"
+  integrity sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA==
   dependencies:
     jake "^10.8.5"
 
@@ -6708,6 +6708,26 @@ prettier-eslint-cli@*:
     loglevel-colored-level-prefix "^1.0.0"
     rxjs "^7.5.6"
     yargs "^13.1.1"
+
+prettier-eslint@*:
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-15.0.1.tgz#2543a43e9acec2a9767ad6458165ce81f353db9c"
+  integrity sha512-mGOWVHixSvpZWARqSDXbdtTL54mMBxc5oQYQ6RAqy8jecuNJBgN3t9E5a81G66F8x8fsKNiR1HWaBV66MJDOpg==
+  dependencies:
+    "@types/eslint" "^8.4.2"
+    "@types/prettier" "^2.6.0"
+    "@typescript-eslint/parser" "^5.10.0"
+    common-tags "^1.4.0"
+    dlv "^1.1.0"
+    eslint "^8.7.0"
+    indent-string "^4.0.0"
+    lodash.merge "^4.6.0"
+    loglevel-colored-level-prefix "^1.0.0"
+    prettier "^2.5.1"
+    pretty-format "^23.0.1"
+    require-relative "^0.8.7"
+    typescript "^4.5.4"
+    vue-eslint-parser "^8.0.1"
 
 prettier@*, prettier@^2.5.1:
   version "2.7.1"
